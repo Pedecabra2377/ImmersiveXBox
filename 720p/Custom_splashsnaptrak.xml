@@ -1,0 +1,27 @@
+<!-- Foundation -->
+<window type="dialog" id="1129">
+
+	<zorder>2</zorder>
+	<onload>AlarmClock(welcome,Dialog.Close(1129),00:03,silent,)</onload>
+
+
+<onload>Dialog.Close(1122)</onload>
+		<onload>AlarmClock(welcome2,ReplaceWindow(58),00:01,silent,)</onload>								
+	<controls>
+																<control type="image">
+																	
+							 <posx>0</posx>
+      <posy>0</posy>
+      <width>1280</width>
+      <height>720</height>
+								<texture>$INFO[Window(58).Property(Fanart)]</texture>
+				 <aspectratio>stretch</aspectratio>
+            <align>center</align>
+						<include>Common_Animation_vid3</include>
+							</control>
+			
+	
+	
+	</controls>
+
+</window>

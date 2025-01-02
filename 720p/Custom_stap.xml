@@ -1,0 +1,1756 @@
+<window id="919">
+
+	<defaultcontrol always="true">1</defaultcontrol>
+	
+	<zorder>2</zorder>
+	
+
+	
+	<!--Splash Screen-->
+
+	
+	
+		<onload>Skin.SetString(snapwindow, 919)</onload>
+<onload condition="!Skin.HasSetting(snapie)">Skin.ToggleSetting(snapie)</onload>
+<onload condition="Skin.HasSetting(gaming)">Skin.ToggleSetting(gaming)</onload>
+<onload>Skin.SetString(snap, demo/sna/store.jpg,0)</onload>
+<onload>Skin.SetString(sn,Apps Store)</onload>
+	
+	<onload condition="Skin.HasSetting(SnapFeature) + Skin.HasSetting(SnapAlways)">Skin.SetString(snap, C:\Assistance\Snap\Pic\Item.jpg,0)</onload>
+<onload condition="Skin.HasSetting(SnapFeature) + Skin.HasSetting(SnapAlways)">AlarmClock(startsnap,RunScript(special://skin/system/Snap.py),00:01,silent)</onload>
+	
+	<onload>Skin.SetString(tube,Search)</onload>
+	
+	<controls>
+<include>Common_Animation_Window</include>
+		<!--Background Area-->
+
+		
+
+									<!--Top Area-->
+
+			
+			<!--Content Area-->
+		
+																							<control type="image">
+							
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1280</width>
+								<height>720</height>
+								<texture>demo\store2\bg3.png</texture>
+						
+							</control>	
+
+						<control type="group">
+			
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+				
+				<!--Animation-->
+	
+				
+				<control type="grouplist">
+		
+					<include>Common_Content_Grouplist_store</include>
+			
+				
+									
+						
+							
+							
+							<control type="group">
+							  <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="500" />
+                        <effect type="slide" start="60" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+					
+																					<control type="image">
+							
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1208</width>
+								<height>720</height>
+								<texture>demo\store2\app.png</texture>
+						
+							</control>
+						<posx>0</posx>
+								<posy>0</posy>
+								<width>1000</width>
+								<height>720</height>
+							
+								
+								<control type="panel" id="1">
+				
+<posx>60</posx>
+                                                <posy>191</posy>
+<onup>1</onup>
+				<onright>222</onright>
+		<onleft>1</onleft>
+		<ondown>1</ondown>
+						<include>Common_AltHome_Panel383-golden</include>
+					
+
+
+
+
+						
+						
+						<content>
+						
+
+							
+										<item id="1">
+								<description>Games</description>
+								<label>All apps</label>
+								<thumb></thumb>
+													
+										<onclick>ReplaceWindow(10001,"addons://sources/executable/")</onclick>
+									
+														
+							</item>
+							
+								<item id="2">
+								<description>Games</description>
+								<label>Search</label>
+								<thumb></thumb>
+													
+								<onclick condition="!Skin.HasSetting(GlobalD) + System.InternetState">Skin.SetString(tube)</onclick>
+<onclick condition="!Skin.HasSetting(Searching) + !Skin.HasSetting(GlobalD) + System.InternetState">Skin.ToggleSetting(Searching)</onclick>
+<onclick condition="!Skin.HasSetting(GlobalD) + System.InternetState">ActivateWindow(10025,&quot;plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=$INFO[Skin.String(tube)]&quot;,return)</onclick>
+ <onclick condition="!System.InternetState + !Skin.HasSetting(GlobalD)">ActivateWindow(5525)</onclick>
+
+<onclick condition="Skin.HasSetting(GlobalD">RunScript(script.globalsearch)</onclick>
+                              						
+							</item>
+							<item id="3">
+								<description>Games</description>
+								<label>Use a code</label>
+									<thumb></thumb>	
+								<onclick>-</onclick>						
+							</item>
+						
+					
+
+												
+
+
+								</content>
+
+					</control>
+								
+								
+					
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+		<control type="group">								
+			<posx>320</posx>						
+
+<control type="label">
+                                    <posx>5</posx>
+                                                                
+								<posy>170</posy>
+                                                                <width min="20" max="250">auto</width>
+                                                                <height>20</height>
+                                                                <label>PRESENTEADO</label>
+                                                                <font>Home-Tile-Header</font>
+                                                                <textcolor>Tile_Text</textcolor>
+                                                                <aligny>center</aligny>
+                                                              
+                                                        </control>
+					
+				
+										<control type="panel" id="222">
+	
+                                         
+				<posy>191</posy>
+                                                <width>700</width>
+                                                <height>1385</height>
+													
+                                              <onleft>1</onleft>
+
+							<ondown>10007</ondown>
+							<onright>ActivateWindow(1157)</onright>
+                                          
+	<onright>1110</onright>
+			
+                                     
+                                    
+                                            	<pagecontrol>81</pagecontrol>
+					<viewtype label="535">list</viewtype>
+					<scrolltime tween="cubic" easing="out">600</scrolltime>
+					<preloaditems>2</preloaditems>
+                                              
+												  
+                                                <itemlayout width="450" height="310">
+
+                                                   <control type="image">
+                                                        
+                                                                <posx>5</posx>
+                                                                <posy>2</posy>
+                                                                <width>430</width>
+                                                                <height>290</height>
+                                                                <texture>colors/color_black.png</texture>
+                                                     
+                                                                
+                                                        </control>
+                                                        
+                                                        <control type="image">
+                                                        
+                                                                <posx>5</posx>
+                                                                <posy>2</posy>
+                                                                <width>430</width>
+                                                                <height>298</height>
+                                                                <texture>$INFO[ListItem.icon]</texture>
+                                                                <aspectratio>scale</aspectratio>
+                                                               
+                                                        </control>
+												
+																									
+				    <control type="image">
+                                                      
+                                                                <posx>5</posx>
+                                                                <posy>227</posy>
+                                                                <width>430</width>
+                                                                <height>73</height>
+                                                                <texture>black.png</texture>
+                                                     
+                                                                
+                                                        </control>
+                                                        
+                                                        <control type="label">
+                                                        
+                                                                <posx>15</posx>
+                                                                <posy>220</posy>
+                                                                <width min="20" max="350">auto</width>
+                                                                <height>65</height>
+                                                                <label>$INFO[Listitem.Label]</label>
+                                                                <font>Home-Tile-Header-bg</font>
+                                                                <textcolor>Tile_Text</textcolor>
+                                                                <aligny>center</aligny>
+                                                                
+                                                        </control>
+														  <control type="label">
+                                                        
+                                                                <posx>15</posx>
+                                                                <posy>250</posy>
+                                                                <width min="20" max="350">auto</width>
+                                                                <height>65</height>
+                                                                <label>$INFO[Listitem.Label2]</label>
+                                                                <font>Home-Tile-Header</font>
+                                                                <textcolor>Tile_Text</textcolor>
+                                                                <aligny>center</aligny>
+                                                                
+                                                        </control>
+                                                        
+                                                      
+                                                        
+                                                </itemlayout>
+
+                                                <focusedlayout width="450" height="310">
+
+                                                        <control type="image">
+                                                        
+                                                                <posx>5</posx>
+                                                                <posy>2</posy>
+                                                                <width>430</width>
+                                                                <height>295</height>
+                                                                <texture>colors/color_black.png</texture>
+                                                               
+                                                                
+                                                        </control>
+														          <control type="image">
+                                                        
+                                                                <posx>2.5</posx>
+                                                                <posy>-1.3</posy>
+                                                                <width>435</width>
+                                                                <height>303.5</height>
+                                                                <texture>colors/color_white.png</texture>
+																<visible>Control.HasFocus(222)</visible>
+                                                                    <include>Common_Animation_tiledash</include>
+                                                                
+                                                        </control>
+                                                        
+                                                        <control type="image">
+                                                        
+                                                                <posx>5</posx>
+                                                                <posy>2</posy>
+                                                                <width>430</width>
+                                                                <height>298</height>
+                                                                <texture>$INFO[ListItem.icon]</texture>
+                                                                <aspectratio>scale</aspectratio>
+                                                                
+                                                        </control>
+				
+				
+                                                       <control type="image">
+                                                      
+                                                                <posx>5</posx>
+                                                                <posy>227</posy>
+                                                                <width>430</width>
+                                                                <height>73</height>
+                                                                <texture>black.png</texture>
+                                                     
+                                                                
+                                                        </control>
+                                                        
+                                                        <control type="label">
+                                                        
+                                                                <posx>15</posx>
+                                                                <posy>220</posy>
+                                                                <width min="20" max="350">auto</width>
+                                                                <height>65</height>
+                                                                <label>$INFO[Listitem.Label]</label>
+                                                                <font>Home-Tile-Header-bg</font>
+                                                                <textcolor>Tile_Text</textcolor>
+                                                                <aligny>center</aligny>
+                                                                
+                                                        </control>
+														  <control type="label">
+                                                        
+                                                                <posx>15</posx>
+                                                                <posy>250</posy>
+                                                                <width min="20" max="350">auto</width>
+                                                                <height>65</height>
+                                                                <label>$INFO[Listitem.Label2]</label>
+                                                                <font>Home-Tile-Header</font>
+                                                                <textcolor>Tile_Text</textcolor>
+                                                                <aligny>center</aligny>
+                                                                
+                                                        </control>
+                                                        
+                                                        <control type="group">
+                                                        
+                                                                <control type="image">
+                                                        
+                                                                        <posx>0</posx>
+                                                                        <posy>0</posy>
+                                                                        <width>380</width>
+                                                                        <height>425</height>
+                                                                        <texture>colors/color_white.png</texture>
+                                                                        <colordiffuse>Background_Normal</colordiffuse>
+                                                                        
+                                                                        <visible>false</visible>
+                                                                
+                                                                        <animation type="Visible" reversible="false" loop="true">
+                                                                                <effect type="fade" start="0" end="100" time="400" />
+                                                                                <effect type="zoom" start="100,0" end="100,100" center="90,0" time="400" />
+                                                                                <effect type="zoom" start="100,100" end="100,0" center="90,0" time="400" delay="5000" />
+                                                                                <effect type="fade" start="100" end="0" time="400" delay="5200" />
+                                                                        </animation>
+                                                                        
+                                                                </control>
+                                                                
+                                                                <control type="textbox">
+                                                                
+                                                                        <posx>20</posx>
+                                                                        <posy>20</posy>
+                                                                        <width>300</width>
+                                                                        <height>305</height>
+                                                                        <label></label>
+                                                                        <font>Home-Tile-Detail</font>
+                                                                        <textcolor>Label_Normal</textcolor>
+                                                                        <aligny>top</aligny>
+                                                                        <wrapmultiline>true</wrapmultiline>
+                                                                        <shadowcolor>00FFFFFF</shadowcolor>
+                                                                        <autoscroll>false</autoscroll>
+                                                                        
+                                                                        <visible>false</visible>
+                                                                        
+                                                                        <animation type="Visible" reversible="false" loop="true">
+                                                                                <effect type="fade" start="0" end="100" time="400" delay="800" />
+                                                                                <effect type="fade" start="100" end="0" time="400" delay="5000" />
+                                                                        </animation>
+                                                                        
+                                                                </control>
+                                                                
+                                                        </control>        
+                                                        
+                                                </focusedlayout>
+                                                
+                                                <content>
+                                                
+  
+                            
+												    <item id="1">
+                                <label fallback="No internet connection!">Youtube</label>
+								<label2 fallback="No internet connection!">Check out the latest videos on the internet!</label2>
+                                <icon fallback="demo\connection.png">demo\store2\youtube.png</icon>
+                            
+								
+                            	
+				<onclick>RunScript(special://skin/system/youtube.py)</onclick>
+								
+                             
+                            </item>	
+					
+                                                
+
+									
+						
+
+                                                </content>
+
+                                        </control>
+	
+			
+			
+			
+				
+										
+										
+										<control type="panel" id="10007">
+
+                                               
+                                          
+				<posy>495</posy>
+                                                <width>365</width>
+                                                <height>462</height>
+                                                   
+							
+							<onright>10006</onright>
+				                    <onleft>1</onleft>
+<onup>222</onup>
+						
+						
+                                     
+                                    
+                                            	<pagecontrol>81</pagecontrol>
+					<viewtype label="535">list</viewtype>
+					<scrolltime tween="cubic" easing="out">600</scrolltime>
+					<preloaditems>2</preloaditems>
+                                              
+												  
+                                                <itemlayout width="220" height="135">
+
+                                                   <control type="image">
+                                                        
+                                                                <posx>5</posx>
+                                                                <posy>2</posy>
+                                                                <width>210</width>
+                                                                <height>127</height>
+                                                                <texture>colors/color_black.png</texture>
+                                                     
+                                                                
+                                                        </control>
+                                                        
+                                                        <control type="image">
+                                                        
+                                                                <posx>5</posx>
+                                                                <posy>2</posy>
+                                                                <width>210</width>
+                                                                <height>128</height>
+                                                                <texture>$INFO[ListItem.icon]</texture>
+                                                                <aspectratio>scale</aspectratio>
+                                                            
+                                                        </control>
+												
+																									
+				     <control type="image">
+                                                      
+                                                                <posx>5</posx>
+                                                                <posy>100</posy>
+                                                                <width>210</width>
+                                                                <height>30.5</height>
+                                                                <texture>black.png</texture>
+                                                     
+                                                                
+                                                        </control>
+                                                        
+                                                        <control type="label">
+                                                        
+                                                                <posx>15</posx>
+                                                                <posy>90</posy>
+                                                                <width min="20" max="350">auto</width>
+                                                                <height>65</height>
+                                                                <label>$INFO[Listitem.Label]</label>
+                                                                <font>Home-Tile-Header-bg2</font>
+                                                                <textcolor>Tile_Text</textcolor>
+                                                                <aligny>center</aligny>
+                                                                
+                                                        </control>
+														  <control type="label">
+                                                        
+                                                                <posx>15</posx>
+                                                                <posy>80</posy>
+                                                                <width min="20" max="195">auto</width>
+                                                                <height>65</height>
+                                                                <label>$INFO[Listitem.Label2]</label>
+                                                                <font>Home-Tile-Header</font>
+                                                                <textcolor>Tile_Text</textcolor>
+                                                                <aligny>center</aligny>
+                                                                
+                                                        </control>
+                                                        
+                                                        <control type="textbox">
+                                                                
+                                                                <posx>5</posx>
+                                                                <posy>12</posy>
+                                                                <width>340</width>
+                                                                <height>305</height>
+                                                                <label></label>
+                                                                <font>Home-Featured</font>
+                                                                <textcolor>80FFFFFF</textcolor>
+                                                                <align>left</align>
+                                                                <aligny>top</aligny>
+                                                                
+                                                                <visible>StringCompare(ListItem.Label,Now playing) + !VideoPlayer.HasMenu</visible>
+                                                                
+                                                        </control>
+                                                        
+                                                </itemlayout>
+
+                                                <focusedlayout width="220" height="135">
+
+                                                        <control type="image">
+                                                        
+                                                                <posx>5</posx>
+                                                                <posy>2</posy>
+                                                                <width>210</width>
+                                                                <height>127</height>
+                                                                <texture>colors/color_black.png</texture>
+                                                               
+                                                                
+                                                        </control>
+														          <control type="image">
+                                                        
+                                                                <posx>2.5</posx>
+                                                                <posy>-1.3</posy>
+                                                                <width>215.5</width>
+                                                                <height>134.5</height>
+                                                                <texture>colors/color_white.png</texture>
+																
+                                                                    <include>Common_Animation_tiledash</include>
+                                                                
+                                                        </control>
+                                                        
+                                                          <control type="image">
+                                                        
+                                                                <posx>5</posx>
+                                                                <posy>2</posy>
+                                                                <width>210</width>
+                                                                <height>128</height>
+                                                                <texture>$INFO[ListItem.icon]</texture>
+                                                                <aspectratio>scale</aspectratio>
+                                                               
+                                                        </control>
+				
+				
+                                                        
+														    <control type="image">
+                                                      
+                                                                <posx>5</posx>
+                                                                <posy>100</posy>
+                                                                <width>210</width>
+                                                                <height>30.5</height>
+                                                                <texture>black.png</texture>
+                                                     
+                                                                
+                                                        </control>
+                                                        
+                                                        <control type="label">
+                                                        
+                                                                <posx>15</posx>
+                                                                <posy>90</posy>
+                                                                <width min="20" max="350">auto</width>
+                                                                <height>65</height>
+                                                                <label>$INFO[Listitem.Label]</label>
+                                                                <font>Home-Tile-Header-bg2</font>
+                                                                <textcolor>Tile_Text</textcolor>
+                                                                <aligny>center</aligny>
+                                                                
+                                                        </control>
+														  <control type="label">
+                                                        
+                                                                <posx>15</posx>
+                                                                <posy>80</posy>
+                                                                <width min="20" max="195">auto</width>
+                                                                <height>65</height>
+                                                                <label>$INFO[Listitem.Label2]</label>
+                                                                <font>Home-Tile-Header</font>
+                                                                <textcolor>Tile_Text</textcolor>
+                                                                <aligny>center</aligny>
+                                                                
+                                                        </control>
+                                                        
+                                                     
+                                                     
+                                                        
+                                                        <control type="group">
+                                                        
+                                                                <control type="image">
+                                                        
+                                                                        <posx>0</posx>
+                                                                        <posy>0</posy>
+                                                                        <width>380</width>
+                                                                        <height>425</height>
+                                                                        <texture>colors/color_white.png</texture>
+                                                                        <colordiffuse>Background_Normal</colordiffuse>
+                                                                        
+                                                                        <visible>false</visible>
+                                                                
+                                                                        <animation type="Visible" reversible="false" loop="true">
+                                                                                <effect type="fade" start="0" end="100" time="400" />
+                                                                                <effect type="zoom" start="100,0" end="100,100" center="90,0" time="400" />
+                                                                                <effect type="zoom" start="100,100" end="100,0" center="90,0" time="400" delay="5000" />
+                                                                                <effect type="fade" start="100" end="0" time="400" delay="5200" />
+                                                                        </animation>
+                                                                        
+                                                                </control>
+                                                                
+                                                                <control type="textbox">
+                                                                
+                                                                        <posx>20</posx>
+                                                                        <posy>20</posy>
+                                                                        <width>300</width>
+                                                                        <height>305</height>
+                                                                        <label></label>
+                                                                        <font>Home-Tile-Detail</font>
+                                                                        <textcolor>Label_Normal</textcolor>
+                                                                        <aligny>top</aligny>
+                                                                        <wrapmultiline>true</wrapmultiline>
+                                                                        <shadowcolor>00FFFFFF</shadowcolor>
+                                                                        <autoscroll>false</autoscroll>
+                                                                        
+                                                                        <visible>false</visible>
+                                                                        
+                                                                        <animation type="Visible" reversible="false" loop="true">
+                                                                                <effect type="fade" start="0" end="100" time="400" delay="800" />
+                                                                                <effect type="fade" start="100" end="0" time="400" delay="5000" />
+                                                                        </animation>
+                                                                        
+                                                                </control>
+                                                                
+                                                        </control>        
+                                                        
+                                                </focusedlayout>
+                                                
+                                                <content>
+                                                
+  
+                            
+												   																								<item id="1">
+								<description>Games</description>
+						
+								
+								
+											<onclick condition="!Skin.HasSetting(Logger)">ActivateWindow(1213)</onclick>												
+		<onclick condition="Skin.HasSetting(Logger)">ReplaceWindow(9899)</onclick>
+		<onclick condition="Skin.HasSetting(Logger)">Dialog.Close(999)</onclick>
+						<label2>Skype</label2>
+						<icon>home/home_skype.png</icon>
+						
+						
+						
+							</item>
+									   
+					
+									
+						
+
+                                                </content>
+
+                                        </control>
+									
+											<control type="panel" id="10006">
+
+                                               
+                                               <posx>218.7</posx>
+				<posy>495</posy>
+                                                <width>365</width>
+                                                <height>462</height>
+                                            <onleft>10007</onleft>
+
+							
+						
+				
+						<onup>222</onup>
+						                   
+							<onright>ActivateWindow(1157)</onright>
+                                          
+	<onright>1110</onright>
+                                     
+                                    
+                                            	<pagecontrol>81</pagecontrol>
+					<viewtype label="535">list</viewtype>
+					<scrolltime tween="cubic" easing="out">600</scrolltime>
+					<preloaditems>2</preloaditems>
+                                              
+												  
+                                                <itemlayout width="220" height="135">
+
+                                                   <control type="image">
+                                                        
+                                                                <posx>5</posx>
+                                                                <posy>2</posy>
+                                                                <width>210</width>
+                                                                <height>127</height>
+                                                                <texture>colors/color_black.png</texture>
+                                                     
+                                                                
+                                                        </control>
+                                                        
+                                                        <control type="image">
+                                                        
+                                                                <posx>5</posx>
+                                                                <posy>2</posy>
+                                                                <width>210</width>
+                                                                <height>128</height>
+                                                                <texture>$INFO[ListItem.icon]</texture>
+                                                                <aspectratio>scale</aspectratio>
+                                                            
+                                                        </control>
+												
+																									
+				     <control type="image">
+                                                      
+                                                                <posx>5</posx>
+                                                                <posy>100</posy>
+                                                                <width>210</width>
+                                                                <height>30.5</height>
+                                                                <texture>black.png</texture>
+                                                     
+                                                                
+                                                        </control>
+                                                        
+                                                        <control type="label">
+                                                        
+                                                                <posx>15</posx>
+                                                                <posy>90</posy>
+                                                                <width min="20" max="350">auto</width>
+                                                                <height>65</height>
+                                                                <label>$INFO[Listitem.Label]</label>
+                                                                <font>Home-Tile-Header-bg2</font>
+                                                                <textcolor>Tile_Text</textcolor>
+                                                                <aligny>center</aligny>
+                                                                
+                                                        </control>
+														  <control type="label">
+                                                        
+                                                                <posx>15</posx>
+                                                                <posy>80</posy>
+                                                                <width min="20" max="195">auto</width>
+                                                                <height>65</height>
+                                                                <label>$INFO[Listitem.Label2]</label>
+                                                                <font>Home-Tile-Header</font>
+                                                                <textcolor>Tile_Text</textcolor>
+                                                                <aligny>center</aligny>
+                                                                
+                                                        </control>
+                                                        
+                                                        <control type="textbox">
+                                                                
+                                                                <posx>5</posx>
+                                                                <posy>12</posy>
+                                                                <width>340</width>
+                                                                <height>305</height>
+                                                                <label></label>
+                                                                <font>Home-Featured</font>
+                                                                <textcolor>80FFFFFF</textcolor>
+                                                                <align>left</align>
+                                                                <aligny>top</aligny>
+                                                                
+                                                                <visible>StringCompare(ListItem.Label,Now playing) + !VideoPlayer.HasMenu</visible>
+                                                                
+                                                        </control>
+                                                        
+                                                </itemlayout>
+
+                                                <focusedlayout width="220" height="135">
+
+                                                        <control type="image">
+                                                        
+                                                                <posx>5</posx>
+                                                                <posy>2</posy>
+                                                                <width>210</width>
+                                                                <height>127</height>
+                                                                <texture>colors/color_black.png</texture>
+                                                               
+                                                                
+                                                        </control>
+														          <control type="image">
+                                                        
+                                                                <posx>2.5</posx>
+                                                                <posy>-1.3</posy>
+                                                                <width>215.5</width>
+                                                                <height>134.5</height>
+                                                                <texture>colors/color_white.png</texture>
+																
+                                                                    <include>Common_Animation_tiledash</include>
+                                                                
+                                                        </control>
+                                                        
+                                                          <control type="image">
+                                                        
+                                                                <posx>5</posx>
+                                                                <posy>2</posy>
+                                                                <width>210</width>
+                                                                <height>128</height>
+                                                                <texture>$INFO[ListItem.icon]</texture>
+                                                                <aspectratio>scale</aspectratio>
+                                                               
+                                                        </control>
+				
+				
+                                                        
+														    <control type="image">
+                                                      
+                                                                <posx>5</posx>
+                                                                <posy>100</posy>
+                                                                <width>210</width>
+                                                                <height>30.5</height>
+                                                                <texture>black.png</texture>
+                                                     
+                                                                
+                                                        </control>
+                                                        
+                                                        <control type="label">
+                                                        
+                                                                <posx>15</posx>
+                                                                <posy>90</posy>
+                                                                <width min="20" max="350">auto</width>
+                                                                <height>65</height>
+                                                                <label>$INFO[Listitem.Label]</label>
+                                                                <font>Home-Tile-Header-bg2</font>
+                                                                <textcolor>Tile_Text</textcolor>
+                                                                <aligny>center</aligny>
+                                                                
+                                                        </control>
+														  <control type="label">
+                                                        
+                                                                <posx>15</posx>
+                                                                <posy>80</posy>
+                                                                <width min="20" max="195">auto</width>
+                                                                <height>65</height>
+                                                                <label>$INFO[Listitem.Label2]</label>
+                                                                <font>Home-Tile-Header</font>
+                                                                <textcolor>Tile_Text</textcolor>
+                                                                <aligny>center</aligny>
+                                                                
+                                                        </control>
+                                                        
+                                                     
+                                                     
+                                                        
+                                                        <control type="group">
+                                                        
+                                                                <control type="image">
+                                                        
+                                                                        <posx>0</posx>
+                                                                        <posy>0</posy>
+                                                                        <width>380</width>
+                                                                        <height>425</height>
+                                                                        <texture>colors/color_white.png</texture>
+                                                                        <colordiffuse>Background_Normal</colordiffuse>
+                                                                        
+                                                                        <visible>false</visible>
+                                                                
+                                                                        <animation type="Visible" reversible="false" loop="true">
+                                                                                <effect type="fade" start="0" end="100" time="400" />
+                                                                                <effect type="zoom" start="100,0" end="100,100" center="90,0" time="400" />
+                                                                                <effect type="zoom" start="100,100" end="100,0" center="90,0" time="400" delay="5000" />
+                                                                                <effect type="fade" start="100" end="0" time="400" delay="5200" />
+                                                                        </animation>
+                                                                        
+                                                                </control>
+                                                                
+                                                                <control type="textbox">
+                                                                
+                                                                        <posx>20</posx>
+                                                                        <posy>20</posy>
+                                                                        <width>300</width>
+                                                                        <height>305</height>
+                                                                        <label></label>
+                                                                        <font>Home-Tile-Detail</font>
+                                                                        <textcolor>Label_Normal</textcolor>
+                                                                        <aligny>top</aligny>
+                                                                        <wrapmultiline>true</wrapmultiline>
+                                                                        <shadowcolor>00FFFFFF</shadowcolor>
+                                                                        <autoscroll>false</autoscroll>
+                                                                        
+                                                                        <visible>false</visible>
+                                                                        
+                                                                        <animation type="Visible" reversible="false" loop="true">
+                                                                                <effect type="fade" start="0" end="100" time="400" delay="800" />
+                                                                                <effect type="fade" start="100" end="0" time="400" delay="5000" />
+                                                                        </animation>
+                                                                        
+                                                                </control>
+                                                                
+                                                        </control>        
+                                                        
+                                                </focusedlayout>
+                                                
+                                                <content>
+                                                
+  
+                            
+												   																								<item id="1">
+								<description>Games</description>
+							
+								
+						
+						
+						
+										
+					<onclick condition="Skin.HasSetting(Logger)">ReplaceWindow(8861)</onclick>
+					
+                                                                <icon>demo\appi\onedrive.jpg</icon>
+                                                                <label2>OneDrive</label2>
+						
+								
+								</item>
+									   
+					
+									
+						
+
+                                                </content>
+
+                                        </control>
+										
+										</control>
+										</control>
+										
+										
+										
+										
+						<control type="group">
+							
+						<posx>0</posx>
+								<posy>0</posy>
+								<width>1280</width>
+								<height>720</height>
+							
+																							<control type="image">
+							
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1280</width>
+								<height>720</height>
+								<texture>demo\store2\bg3.png</texture>
+						
+							</control>	
+							
+							
+							
+							
+							
+							<control type="label">
+									  <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="500" />
+                        <effect type="slide" start="60" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+                                    <posx>15</posx>
+                                                                
+								<posy>160</posy>
+                                                                <width min="20" max="250">auto</width>
+                                                                <height>20</height>
+                                                                <label>POPULAR ON XBOX</label>
+                                                                <font>Home-Tile-Header</font>
+                                                                <textcolor>Tile_Text</textcolor>
+                                                                <aligny>center</aligny>
+                                                              
+                                                        </control>
+						<control type="panel" id="1110">
+
+             	  <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="500" />
+                        <effect type="slide" start="60" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+                
+				 <posx>05</posx>
+                                                <posy>150</posy>
+                                                <width>1280</width>
+                                                <height>280</height>
+												<onleft>ActivateWindow(1157)</onleft>
+                                               <onleft>222</onleft>
+                                             <ondown>11101</ondown>
+				<viewtype label="Square">wrap</viewtype>
+				<orientation>horizontal</orientation>
+				<pagecontrol>64</pagecontrol>
+				<scrolltime tween="cubic" easing="out">500</scrolltime>
+				<preloaditems>4</preloaditems>
+		
+								
+				<itemlayout width="220" height="220">
+
+
+					
+					<control type="group">
+		
+						<posx>5</posx>
+						<posy>40</posy>
+						<width>210</width>
+						<height>210</height>
+						
+						<control type="image">
+						
+							<posx>5</posx>
+							<posy>0</posy>
+							<width>210</width>
+							<height>210</height>
+							<texture>colors/color_keyboard_dark.png</texture>
+							<aspectratio>scale</aspectratio>
+							
+						</control>
+					
+						<control type="image">
+						
+							<posx>5</posx>
+							<posy>0</posy>
+							<width>210</width>
+							<height>210</height>
+							<texture>colors\color_white.png</texture>
+							<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+							<aspectratio>scale</aspectratio>
+							
+						</control>
+					<control type="image">
+						
+							<posx>5</posx>
+							<posy>0</posy>
+							<width>210</width>
+							<height>210</height>
+							<texture>$INFO[ListItem.Thumb]</texture>
+						
+							<aspectratio>scale</aspectratio>
+							
+						</control>
+						
+			
+							
+					
+					
+					</control>
+					
+				</itemlayout>
+
+				<focusedlayout width="220" height="220">
+				
+
+				
+					<control type="group">
+						
+						<posx>5</posx>
+						<posy>40</posy>
+						<width>210</width>
+						<height>210</height>
+					
+				
+						
+						<control type="image">
+						
+							<posx>5</posx>
+							<posy>0</posy>
+							<width>210</width>
+							<height>210</height>
+							<texture>colors/color_keyboard_dark.png</texture>
+							<aspectratio>scale</aspectratio>
+							
+						</control>
+												<control type="image">
+						
+							<posx>3</posx>
+							<posy>-2</posy>
+							<width>214</width>
+							<height>214</height>
+							<texture>colors/color_white.png</texture>
+							<aspectratio>scale</aspectratio>
+							     <include>Common_Animation_tiledash</include>
+						</control>
+					
+						<control type="image">
+						
+							<posx>5</posx>
+							<posy>0</posy>
+							<width>210</width>
+							<height>210</height>
+							<texture>colors\color_white.png</texture>
+							<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+							<aspectratio>scale</aspectratio>
+							
+						</control>
+					
+						<control type="image">
+						
+							<posx>5</posx>
+							<posy>0</posy>
+							<width>210</width>
+							<height>210</height>
+							<texture>$INFO[ListItem.Thumb]</texture>
+						
+							<aspectratio>scale</aspectratio>
+							
+						</control>
+						
+						<control type="image">
+						<include>Common_Animation_Pini</include>
+							<posx>5</posx>
+							<posy>150</posy>
+							<width>210</width>
+							<height>60</height>
+							<texture>colors/color_white.png</texture>
+							<colordiffuse>FanartDiffuse</colordiffuse>
+							
+						</control>
+							
+						<control type="label">
+							
+							<posx>15</posx>
+							<posy>168</posy>
+							<width>190</width>
+							<height>20</height>
+							<textcolor>Label_Normal</textcolor>
+							<font>Menu-Square-Header</font>
+							<aligny>top</aligny>
+							<label>$VAR[Square_Header]</label>
+						
+						</control>
+						
+						<control type="label">
+							
+							<posx>15</posx>
+							<posy>178</posy>
+							<width>190</width>
+							<height>20</height>
+							<textcolor>Label_Normal</textcolor>
+							<font>Menu-Square-Detail</font>
+							<aligny>top</aligny>
+							<label></label>
+						
+						</control>
+
+					</control>
+					
+					<!--Back Side Info-->
+					<control type="group">
+					
+						<posx>0</posx>
+						<posy>40</posy>
+						<width>210</width>
+						<height>210</height>
+						
+						
+						
+						<control type="image">
+						
+							<include>Common_LiveTile_Rating</include>
+							<visible>false</visible>
+							
+						</control>
+						
+						<control type="textbox">
+							
+							<include>Common_LiveTile_Description</include>
+							<label>$VAR[Tile_Description]</label>
+							<visible>false</visible>
+				
+						</control>
+						
+					</control>
+					
+				</focusedlayout>
+			<content target="video">addons://sources/video</content>
+
+		</control>
+												
+										
+										
+										
+										
+										
+										
+					<control type="label">
+							  <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="500" />
+                        <effect type="slide" start="60" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+                                    <posx>15</posx>
+                                                                
+								<posy>400</posy>
+                                                                <width min="20" max="250">auto</width>
+                                                                <height>20</height>
+                                                                <label>NEW RELEASES</label>
+                                                                <font>Home-Tile-Header</font>
+                                                                <textcolor>Tile_Text</textcolor>
+                                                                <aligny>center</aligny>
+                                                              
+                                                        </control>
+						<control type="panel" id="11101">
+
+             	  <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="500" />
+                        <effect type="slide" start="60" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+                
+				 <posx>05</posx>
+                                                <posy>390</posy>
+                                                <width>1280</width>
+                                                <height>280</height>
+												<onleft>ActivateWindow(1157)</onleft>
+                                               <onleft>222</onleft>
+                                              <onup>1110</onup>
+				<viewtype label="Square">wrap</viewtype>
+				<orientation>horizontal</orientation>
+				<pagecontrol>64</pagecontrol>
+				<scrolltime tween="cubic" easing="out">500</scrolltime>
+				<preloaditems>4</preloaditems>
+		
+								
+				<itemlayout width="220" height="220">
+
+
+					
+					<control type="group">
+		
+						<posx>5</posx>
+						<posy>40</posy>
+						<width>210</width>
+						<height>210</height>
+						
+						<control type="image">
+						
+							<posx>5</posx>
+							<posy>0</posy>
+							<width>210</width>
+							<height>210</height>
+							<texture>colors/color_keyboard_dark.png</texture>
+							<aspectratio>scale</aspectratio>
+							
+						</control>
+					
+						<control type="image">
+						
+							<posx>5</posx>
+							<posy>0</posy>
+							<width>210</width>
+							<height>210</height>
+							<texture>colors\color_white.png</texture>
+							<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+							<aspectratio>scale</aspectratio>
+							
+						</control>
+					<control type="image">
+						
+							<posx>70</posx>
+							<posy>60</posy>
+							<width>70</width>
+							<height>70</height>
+							<texture background="true" fallback="colors/color_keyboard_dark.png">$VAR[Square_Image]</texture>
+							<aspectratio>scale</aspectratio>
+							
+						</control>
+						<control type="image">
+						
+							<posx>5</posx>
+							<posy>0</posy>
+							<width>210</width>
+							<height>210</height>
+							<texture>$INFO[ListItem.Label2]</texture>
+					
+							<aspectratio>scale</aspectratio>
+							
+						</control>
+						
+			
+							
+					
+					
+					</control>
+					
+				</itemlayout>
+
+				<focusedlayout width="220" height="220">
+				
+
+				
+					<control type="group">
+						
+						<posx>5</posx>
+						<posy>40</posy>
+						<width>210</width>
+						<height>210</height>
+					
+				
+						
+						<control type="image">
+						
+							<posx>5</posx>
+							<posy>0</posy>
+							<width>210</width>
+							<height>210</height>
+							<texture>colors/color_keyboard_dark.png</texture>
+							<aspectratio>scale</aspectratio>
+							
+						</control>
+												<control type="image">
+						
+							<posx>3</posx>
+							<posy>-2</posy>
+							<width>214</width>
+							<height>214</height>
+							<texture>colors/color_white.png</texture>
+							<aspectratio>scale</aspectratio>
+							     <include>Common_Animation_tiledash</include>
+						</control>
+					
+						<control type="image">
+						
+							<posx>5</posx>
+							<posy>0</posy>
+							<width>210</width>
+							<height>210</height>
+							<texture>colors\color_white.png</texture>
+							<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+							<aspectratio>scale</aspectratio>
+							
+						</control>
+					
+						<control type="image">
+						
+							<posx>70</posx>
+							<posy>60</posy>
+							<width>70</width>
+							<height>70</height>
+							<texture background="true" fallback="colors/color_keyboard_dark.png">$VAR[Square_Image]</texture>
+							<aspectratio>scale</aspectratio>
+							
+						</control>
+						<control type="image">
+						
+							<posx>5</posx>
+							<posy>0</posy>
+							<width>210</width>
+							<height>210</height>
+							<texture>$INFO[ListItem.Label2]</texture>
+					
+							<aspectratio>scale</aspectratio>
+							
+						</control>
+						
+						<control type="image">
+						<include>Common_Animation_Pini</include>
+							<posx>5</posx>
+							<posy>150</posy>
+							<width>210</width>
+							<height>60</height>
+							<texture>colors/color_white.png</texture>
+							<colordiffuse>FanartDiffuse</colordiffuse>
+							
+						</control>
+							
+						<control type="label">
+							
+							<posx>15</posx>
+							<posy>168</posy>
+							<width>190</width>
+							<height>20</height>
+							<textcolor>Label_Normal</textcolor>
+							<font>Menu-Square-Header</font>
+							<aligny>top</aligny>
+							<label>$VAR[Square_Header]</label>
+						
+						</control>
+						
+						<control type="label">
+							
+							<posx>15</posx>
+							<posy>178</posy>
+							<width>190</width>
+							<height>20</height>
+							<textcolor>Label_Normal</textcolor>
+							<font>Menu-Square-Detail</font>
+							<aligny>top</aligny>
+							<label></label>
+						
+						</control>
+
+					</control>
+					
+					<!--Back Side Info-->
+					<control type="group">
+					
+						<posx>0</posx>
+						<posy>40</posy>
+						<width>210</width>
+						<height>210</height>
+						
+						
+						
+						<control type="image">
+						
+							<include>Common_LiveTile_Rating</include>
+							<visible>false</visible>
+							
+						</control>
+						
+						<control type="textbox">
+							
+							<include>Common_LiveTile_Description</include>
+							<label>$VAR[Tile_Description]</label>
+							<visible>false</visible>
+				
+						</control>
+						
+					</control>
+					
+				</focusedlayout>
+			<content>
+				
+			<item id="1">
+																			
+						<onclick>ReplaceWindow(866)</onclick>
+						<onclick>Dialog.Close(999)</onclick>
+						<label>Alarm Clock</label>
+						<thumb>home/alarm.png</thumb>
+					</item>
+																			<item id="2">
+																			
+						<onclick>ReplaceWindow(6507)</onclick>
+						<onclick>Dialog.Close(999)</onclick>
+						<label>Preview Dashboard</label>
+						<thumb>home/key.png</thumb>
+					</item>
+																<item id="3">
+																
+						<onclick>ReplaceWindow(2600)</onclick>
+						<onclick>Dialog.Close(999)</onclick>
+						<label>Bing Weather</label>
+						<label2>home/home_weathers.png</label2>
+					</item>
+					
+															<item id="4">
+		<onclick>ActivateWindow(7342)</onclick>
+		<onclick>Dialog.Close(999)</onclick>
+						<label>Blu-ray player</label>
+						<label2>home/home_bluray.png</label2>
+						
+					</item>
+														<item id="4">
+															
+		<onclick>PlayDVD</onclick>
+		<onclick>Dialog.Close(999)</onclick>
+						<label>Blu-ray player</label>
+						<label2>home/home_bluray.png</label2>
+						<visible>false</visible>
+					</item>
+																					<item id="5">
+																
+								<onclick>RunScript(special://skin/system/youtube.py)</onclick>
+					
+						<label>Youtube</label>
+						<label2>home/home_youtube.png</label2>
+					</item>
+																						<item id="6">
+												
+						<onclick>ReplaceWindow(668)</onclick>
+					
+						<label>Vevo</label>
+						<label2>home/home_vevo.png</label2>
+					</item>
+																								<item id="7">
+								
+					<onclick>ReplaceWindow(864)</onclick>
+				
+						<label>Wikipedia</label>
+						<label2>home/home_wiki.png</label2>
+					</item>
+																								<item id="8">
+								
+					<onclick>ReplaceWindow(8861)</onclick>
+		
+						<label>Onedrive</label>
+						<label2>demo\sky.png</label2>
+					</item>
+			
+						<item id="9">
+
+				<onclick>ReplaceWindow(665)</onclick>
+				
+						<label>Steam</label>
+						<label2>home/home_steam.png</label2>
+					</item>
+									<item id="10">
+						
+			<onclick>ReplaceWindow(666)</onclick>
+		
+						<label>Internet Explorer</label>
+						<label2>home/home_ie.png</label2>
+						<visible>!Skin.HasSetting(AltBrowser) + !Skin.HasSetting(KyloBrowser)</visible>
+					</item>
+					<item id="10">
+<onclick>RunScript(special://skin/system/InternetExplorer.py)</onclick>
+						<label>Internet Explorer</label>
+						<label2>home/home_ie.png</label2>
+						<visible>Skin.HasSetting(AltBrowser) + !Skin.HasSetting(KyloBrowser)</visible>
+					</item>
+						<item id="10">
+	<onclick>ActivateWindow(1899)</onclick>
+						<label>Internet Explorer</label>
+						<label2>home/home_ie.png</label2>
+						<visible>!Skin.HasSetting(AltBrowser) + Skin.HasSetting(KyloBrowser)</visible>
+					</item>
+					
+					
+				
+																																						<item id="11">
+<onclick>ReplaceWindow(863)</onclick>											
+		<onclick>Dialog.Close(999)</onclick>
+						<label>Bing Search</label>
+						<label2>demo\appi\bing.jpg</label2>
+					</item>
+				
+																			<item id="12">
+																				
+<onclick>ReplaceWindow(661)</onclick>											
+		<onclick>Dialog.Close(999)</onclick>
+						<label>Cocktail Flow</label>
+						<label2>home/cocktail.png</label2>
+					</item>
+					
+					
+					
+					
+																	<item id="13">
+
+																	
+	<onclick>ReplaceWindow(181)</onclick>
+
+						<label>Upload Studio</label>
+						<label2>home/home_upload.png</label2>
+					</item>
+																				<item id="14">
+																					
+															
+		<onclick>ReplaceWindow(818)</onclick>
+		
+						<label>Twitch</label>
+						<label2>home/home_twitch.png</label2>
+					</item>
+																								<item id="15">
+															
+		<onclick condition="Skin.HasSetting(Logger)">ReplaceWindow(9899)</onclick>
+
+						<label>Skype</label>
+						<label2>home/home_skype.png</label2>
+					</item>
+	
+																			          <item id="16">
+                                                                <onclick>ReplaceWindow(7500)</onclick>
+																<onclick>Dialog.Close(999)</onclick>
+                                                                <label2>demo\appi\notepad.png</label2>
+                                                                <label>Notepad</label>
+                                                         
+                                                        </item>	
+				
+				
+				</content>
+
+		</control>
+										</control>							
+										
+										
+										
+		
+			
+			<!--Scrollbar-->
+					
+								
+		</control>
+			</control>
+			<control type="image">
+				<visible>!Skin.HasSetting(disableprofilepic)</visible>
+																																															<include condition="Skin.HasSetting(on)">Common_Animation_dashboard_pic</include>
+														<include condition="!Skin.HasSetting(on)">Common_Animation_Windows8</include>	
+				<posx>77</posx>
+				<posy>22</posy>
+				<width>49</width>
+				<height>49</height>
+
+								<texture>colors\color_white.png</texture>
+			<visible>Control.HasFocus(91919)</visible>
+			</control>
+
+<control type="image">
+				<visible>!Skin.HasSetting(disableprofilepic)</visible>
+																																																				<include condition="Skin.HasSetting(on)">Common_Animation_dashboard_pic</include>
+														<include condition="!Skin.HasSetting(on)">Common_Animation_Windows8</include>	
+				<posx>79</posx>
+				<posy>24</posy>
+				<width>45</width>
+				<height>45</height>
+
+								<texture>colors\color_white.png</texture>
+			<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+			</control>
+		<control type="image">
+				<visible>!Skin.HasSetting(disableprofilepic)</visible>
+																																																									<include condition="Skin.HasSetting(on)">Common_Animation_dashboard_pic</include>
+														<include condition="!Skin.HasSetting(on)">Common_Animation_Windows8</include>	
+				<posx>82</posx>
+				<posy>29</posy>
+				<width>40</width>
+				<height>34</height>
+
+								<texture>demo\prof.png</texture>
+			
+			</control>
+			
+			<control type="image">
+				<visible>!Skin.HasSetting(gamertag) + !Skin.HasSetting(disableprofilepic) + !Skin.HasSetting(gpic) + Skin.HasSetting(Logger)</visible>
+																																				<include condition="Skin.HasSetting(on)">Common_Animation_dashboard_pic</include>
+														<include condition="!Skin.HasSetting(on)">Common_Animation_Windows8</include>	
+				<posx>126</posx>
+				<posy>24</posy>
+				<width>46</width>
+				<height>45</height>
+
+								<texture background="true" fallback="overlays/defa.jpg">$INFO[System.ProfileThumb]</texture>
+				
+			</control>
+						<control type="image">
+				<visible>!Skin.HasSetting(gamertag) + !Skin.HasSetting(disableprofilepic) + Skin.HasSetting(gpic) + Skin.HasSetting(Logger)</visible>
+																																					<include condition="Skin.HasSetting(on)">Common_Animation_dashboard_pic</include>
+														<include condition="!Skin.HasSetting(on)">Common_Animation_Windows8</include>	
+				<posx>126</posx>
+				<posy>24</posy>
+				<width>46</width>
+				<height>45</height>
+
+								<texture background="true" fallback="overlays/defa.jpg">$INFO[Skin.String(gamerpic)]</texture>
+				
+			</control>
+			
+			
+			
+				<control type="image">
+				<visible>!Skin.HasSetting(gamertag) + !Skin.HasSetting(disableprofilepic) + !Skin.HasSetting(gpic) + !Skin.HasSetting(Logger)</visible>
+																																					<include condition="Skin.HasSetting(on)">Common_Animation_dashboard_pic</include>
+														<include condition="!Skin.HasSetting(on)">Common_Animation_Windows8</include>	
+				<posx>126</posx>
+				<posy>24</posy>
+				<width>46</width>
+				<height>45</height>
+
+								<texture background="true" fallback="overlays/default95.png">overlays/defa.jpg</texture>
+				
+			</control>
+						<control type="image">
+				<visible>!Skin.HasSetting(gamertag) + !Skin.HasSetting(disableprofilepic) + Skin.HasSetting(gpic) + !Skin.HasSetting(Logger)</visible>
+																																					<include condition="Skin.HasSetting(on)">Common_Animation_dashboard_pic</include>
+														<include condition="!Skin.HasSetting(on)">Common_Animation_Windows8</include>	
+				<posx>126</posx>
+				<posy>24</posy>
+				<width>46</width>
+				<height>45</height>
+
+								<texture background="true" fallback="overlays/default95.png">overlays/defa.jpg</texture>
+				
+			</control>
+			
+						
+					
+			
+			
+			
+
+			
+			
+			
+			
+						<control type="image">
+							<visible>Skin.HasSetting(gamertag) + !Skin.HasSetting(gpic) + !Skin.HasSetting(disableprofilepic) + Skin.HasSetting(Logger)</visible>
+																																							<include condition="Skin.HasSetting(on)">Common_Animation_dashboard_pic</include>
+														<include condition="!Skin.HasSetting(on)">Common_Animation_Windows8</include>	
+				<posx>126</posx>
+				<posy>24</posy>
+				<width>46</width>
+				<height>45</height>
+
+								<texture background="true" fallback="overlays/defa.jpg">$INFO[Skin.String(XBoxLive.Gamer.Picture)]</texture>
+				
+			</control>
+							<control type="image">
+							<visible>Skin.HasSetting(gamertag) + !Skin.HasSetting(gpic) + !Skin.HasSetting(disableprofilepic) + !Skin.HasSetting(Logger)</visible>
+																																						<include condition="Skin.HasSetting(on)">Common_Animation_dashboard_pic</include>
+														<include condition="!Skin.HasSetting(on)">Common_Animation_Windows8</include>	
+				<posx>126</posx>
+				<posy>24</posy>
+				<width>46</width>
+				<height>45</height>
+
+								<texture background="true" fallback="overlays/defa.jpg">overlays/defa.jpg</texture>
+				
+			</control>
+			
+			
+						<control type="image">
+							
+																																									<include condition="Skin.HasSetting(on)">Common_Animation_dashboard_pic</include>
+														<include condition="!Skin.HasSetting(on)">Common_Animation_Windows8</include>	
+				<posx>126</posx>
+				<posy>65</posy>
+				<width>46</width>
+				<height>4</height>
+
+								<texture>colors/color_white.png</texture>
+								<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+				<visible>!Skin.HasSetting(disableprofilepic)</visible>
+			</control>
+			
+				<control type="label">
+				 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="150" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+			
+					<posx>77</posx>
+					<posy>70</posy>
+					<width>550</width>
+					<height>48</height>
+					<label>Apps</label>
+					<font>Charms-Date4</font>
+					<textcolor>Label_Normal</textcolor>
+					<aligny>center</aligny>
+						<alignx>center</alignx>
+				</control>
+				
+<include>Xbox_Logo</include>
+	<include>Snapped_Content</include>		
+	</controls>	
+		
+</window>

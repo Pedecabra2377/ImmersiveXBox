@@ -1,0 +1,1179 @@
+<window id="665">
+
+	<defaultcontrol always="true">3</defaultcontrol>
+	
+	<zorder>2</zorder>
+
+	
+	
+	<!--Splash Screen-->
+	
+<onload condition="Container(20).HasFocus(2)">Control.Move(20,-1)</onload>
+<onload condition="Container(20).HasFocus(3)">Control.Move(20,-2)</onload>
+<onload>Skin.SetString(utube,Search Steam)</onload>
+	
+
+	<onload>Skin.SetString(snapwindow, 665)</onload>
+<onload condition="!Skin.HasSetting(snapie)">Skin.ToggleSetting(snapie)</onload>
+<onload condition="Skin.HasSetting(gaming)">Skin.ToggleSetting(gaming)</onload>
+<onload>Skin.SetString(snap, demo/sna/Steam.jpg,0)</onload>
+<onload>Skin.SetString(sn,Steam)</onload>
+	<onload condition="Skin.HasSetting(SnapFeature) + Skin.HasSetting(SnapAlways)">Skin.SetString(snap, C:\Assistance\Snap\Pic\Item.jpg,0)</onload>
+<onload condition="Skin.HasSetting(SnapFeature) + Skin.HasSetting(SnapAlways)">AlarmClock(startsnap,RunScript(special://skin/system/Snap.py),00:01,silent)</onload>
+	<controls>
+
+		<!--Background Area-->
+																							<control type="image">
+											
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1280</width>
+								<height>720</height>
+								<texture>colors\color_black.png</texture>
+
+							</control>	
+									<control type="multiimage">
+				<include>Common_Dimensions</include>
+				<imagepath background="true">demo\app\steamstore\feat\</imagepath>
+				<timeperimage>5000</timeperimage>
+				<randomize>true</randomize>
+				<fadetime>1000</fadetime>
+				<visible>Skin.HasSetting(ShowFanartBackground)</visible>
+			</control>
+														<control type="image">
+			
+				<include>Common_Dimensions</include>
+				<texture background="true">colors/color_white.png</texture>
+				<colordiffuse>FanartDiffuse</colordiffuse>
+				
+				<visible>Skin.HasSetting(ShowFanartBackground)</visible>
+				
+			</control>
+			
+							
+							
+							
+							
+		
+			  		<control type="image">
+	<posx>970</posx>
+	<posy>-60</posy>
+	<width>268</width>
+	<height>268</height>
+			<texture>demo\app\steam\logo.png</texture>
+			<aspectratio>stretch</aspectratio>
+		 <include condition="!Window.Previous(Home)">Common_Animation_Window</include>
+					  <include condition="Window.Previous(Home)">Common_Animation_apps_dash</include> 
+		</control>	
+		
+
+	
+										<control type="grouplist">
+			<visible>true</visible>
+													<!--Animation-->
+			 <include condition="!Window.Previous(Home)">Common_Animation_Window</include>
+					  <include condition="Window.Previous(Home)">Common_Animation_apps_dash</include> 	
+				<posx>128</posx>
+				<posy>100</posy>
+				<width>1100</width>
+				<height>100</height>
+				<orientation>horizontal</orientation>
+				<itemgap>20</itemgap>
+												<control type="label">
+						<visible>true</visible>
+					<width min="0" max="400">auto</width>
+					<height>100</height>
+					<label>Featured</label>
+					<font>Content-Label</font>
+					<textcolor>FF333333</textcolor>
+					<aligny>top</aligny>
+<animation effect="zoom" end="108" center="auto" time="200" condition="Container(20).HasFocus(1) + Skin.HasSetting(textview)">Conditional</animation>
+				</control>
+				
+				<control type="label">
+						<visible>true</visible>
+					<width min="0" max="400">auto</width>
+					<height>100</height>
+					<label>Genres</label>
+					<font>Content-Label</font>
+					<textcolor>FF333333</textcolor>
+					<aligny>top</aligny>
+<animation effect="zoom" end="108" center="auto" time="200" condition="Container(20).HasFocus(2) + Skin.HasSetting(textview)">Conditional</animation>
+				</control>
+								<control type="label">
+						<visible>true</visible>
+					<width min="0" max="400">auto</width>
+					<height>100</height>
+					<label>Store</label>
+					<font>Content-Label</font>
+					<textcolor>FF333333</textcolor>
+					<aligny>top</aligny>
+<animation effect="zoom" end="108" center="auto" time="200" condition="Container(20).HasFocus(3) + Skin.HasSetting(textview)">Conditional</animation>
+				</control>
+				
+
+				
+
+				</control>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+										<control type="grouplist">
+			<visible>true</visible>
+													<!--Animation-->
+		 <include condition="!Window.Previous(Home)">Common_Animation_Window</include>
+					  <include condition="Window.Previous(Home)">Common_Animation_apps_dash</include> 
+				<posx>128</posx>
+				<posy>100</posy>
+				<width>1100</width>
+				<height>100</height>
+				<orientation>horizontal</orientation>
+				<itemgap>20</itemgap>
+												<control type="label">
+						<visible>true</visible>
+					<width min="0" max="400">auto</width>
+					<height>100</height>
+					<label>Featured</label>
+					<font>Content-Label</font>
+					<textcolor>FFFFFFFF</textcolor>
+					<aligny>top</aligny>
+					<animation effect="zoom" end="108" center="auto" time="200" condition="Container(20).HasFocus(1) + Skin.HasSetting(textview)">Conditional</animation>
+                       <animation effect="fade" start="0" end="100" time="200" tween="cubic" easing="inout" condition="Container(20).HasFocus(1)">Conditional</animation>
+                <animation effect="fade" start="100" end="0" time="200" tween="cubic" easing="inout" condition="!Container(20).HasFocus(1)">Conditional</animation>
+				</control>
+				
+				<control type="label">
+						<visible>true</visible>
+					<width min="0" max="400">auto</width>
+					<height>100</height>
+					<label>Genres</label>
+					<font>Content-Label</font>
+					<textcolor>FFFFFFFF</textcolor>
+					<aligny>top</aligny>
+								 <animation effect="zoom" end="108" center="auto" time="200" condition="Container(20).HasFocus(2) + Skin.HasSetting(textview)">Conditional</animation>
+                              <animation effect="fade" start="0" end="100" time="200" tween="cubic" easing="inout" condition="Container(20).HasFocus(2)">Conditional</animation>
+                <animation effect="fade" start="100" end="0" time="200" tween="cubic" easing="inout" condition="!Container(20).HasFocus(2)">Conditional</animation>
+				</control>
+								<control type="label">
+						<visible>true</visible>
+					<width min="0" max="400">auto</width>
+					<height>100</height>
+					<label>Store</label>
+					<font>Content-Label</font>
+					<textcolor>FFFFFFFF</textcolor>
+					<aligny>top</aligny>
+								 <animation effect="zoom" end="108" center="auto" time="200" condition="Container(20).HasFocus(3) + Skin.HasSetting(textview)">Conditional</animation>
+                              <animation effect="fade" start="0" end="100" time="200" tween="cubic" easing="inout" condition="Container(20).HasFocus(3)">Conditional</animation>
+                <animation effect="fade" start="100" end="0" time="200" tween="cubic" easing="inout" condition="!Container(20).HasFocus(3)">Conditional</animation>
+				</control>
+				
+				
+	
+
+
+				</control>
+				
+		
+				        <control type="wraplist" id="20">
+            <description>Control list</description>
+            <posx>0</posx>
+            <posy>0</posy>
+            <height>2</height>
+            <width>2</width>
+            <onup>21</onup>
+            <orientation>horizontal</orientation>
+            <scrolltime>0</scrolltime>
+            <viewtype>list</viewtype>
+	    <defaultcontrol>2</defaultcontrol>
+            <itemlayout width="2" height="2"/>
+           	<focusedlayout width="2" height="2"/>
+            <content>
+            	<item id="1">
+            		<label>My Pins</label>
+            		<onclick>-</onclick>
+            	</item>
+            	<item id="2">
+            		<label>Home</label>
+            		<onclick>-</onclick>
+            	</item>
+				            	<item id="3">
+            		<label>Home</label>
+            		<onclick>-</onclick>
+            	</item>
+
+
+            </content>
+        </control>
+	
+
+
+
+				
+	
+
+
+			
+
+		<control type="group">
+		
+			<include>Common_Dimensions</include>
+		 <include condition="!Window.Previous(Home)">Common_Animation_Window</include>
+					  <include condition="Window.Previous(Home)">Common_Animation_apps_dash</include> 
+		
+			<!--Top Area-->
+			<include>Common_Breadcrumb</include>
+						<include>Common_Overlay</include>
+			
+			<!--Content Area-->
+			<control type="group">
+			
+				<posx>0</posx>
+				<posy>100</posy>
+				<width>1280</width>
+				<height>480</height>
+				
+				<!--Animation-->
+			
+				
+				<control type="grouplist">
+		
+					<include condition="!Skin.HasSetting(Linear) + !Skin.HasSetting(Sine) + !Skin.HasSetting(Quadric) + !Skin.HasSetting(Cubic)">Common_Content_Grouplist2</include>
+				<include condition="Skin.HasSetting(Linear) + !Skin.HasSetting(Sine) + !Skin.HasSetting(Quadric) + !Skin.HasSetting(Cubic)">Common_Content_Grouplist3</include>
+				<include condition="!Skin.HasSetting(Linear) + Skin.HasSetting(Sine) + !Skin.HasSetting(Quadric) + !Skin.HasSetting(Cubic)">Common_Content_Grouplist4</include>
+				<include condition="!Skin.HasSetting(Linear) + !Skin.HasSetting(Sine) + Skin.HasSetting(Quadric) + !Skin.HasSetting(Cubic)">Common_Content_Grouplist5</include>
+				<include condition="!Skin.HasSetting(Linear) + !Skin.HasSetting(Sine) + !Skin.HasSetting(Quadric) + Skin.HasSetting(Cubic)">Common_Content_Grouplist6</include>
+					
+					
+					
+					
+					
+					<control type="group" id="8000">
+
+						<posx>50</posx>
+						<posy>0</posy>
+						<width>1200</width>
+						<height>720</height>
+
+						<control type="panel" id="11">
+<posx>1065</posx>
+						<posy>345</posy>
+
+						
+						<include>Common_AltHome_Panel3</include>
+						<onleft>Control.Move(20,-1)</onleft>
+<onleft>33</onleft>
+<onright>Control.Move(20,1)</onright>
+						<onright>22</onright>
+						<ondown>3</ondown>
+						<pagecontrol>7017</pagecontrol>
+						
+						<content>
+						
+
+							
+																					<item id="1">
+								<description>Games</description>
+								<label>Games</label>
+								<thumb>SHORT\ICO\Games.png</thumb>
+								<onclick>Control.Setfocus(3)</onclick>
+														
+							</item>
+							
+
+
+								</content>
+
+					</control>
+					<control type="list" id="3">
+					
+						<include>Common_AltHome_List</include>
+
+						<onright>9000</onright>
+						<ondown>33</ondown>
+						<onup>11</onup>
+						<itemlayout width="600" height="240">
+						
+							<control type="image">
+							
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>440</width>
+								<height>220</height>
+								<texture>demo/lololo.png</texture>
+								
+							</control>
+							
+							<include>Common_AltHome_Thumb</include>
+							
+						</itemlayout>
+
+						<focusedlayout width="600" height="240">
+						
+							<control type="image">
+							
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>440</width>
+								<height>220</height>
+								<texture>demo/lololo.png</texture>
+								
+								<visible>!Control.HasFocus(8083)</visible>
+								
+							</control>
+						
+							<control type="image">
+							
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>440</width>
+								<height>220</height>
+								<texture>demo/lololo.png</texture>
+
+								
+								<visible>Control.HasFocus(8083)</visible>
+								
+							</control>
+							
+							<include>Common_AltHome_Thumb</include>
+							
+						</focusedlayout>
+						
+						<content>
+
+							<item id="1">
+								<description>trending</description>
+								<label>trending</label>
+								<thumb>lolololo.jpg</thumb>
+							<include>Common_TraktTV_ClearProperties</include>
+							<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.steam/?mode=1&amp;name=Newest%20Videos&amp;url&quot;,return)</onclick>
+
+			
+							</item>
+
+							
+						</content>
+
+					</control>
+					
+		
+						<control type="panel" id="9000">
+<include>Common_Animation_dashboard_tab</include>
+							<posx>900</posx>
+							<posy>60</posy>
+							<width>400</width>
+							<height>480</height>
+							<onleft>3</onleft>
+							
+							<onup>11</onup>
+							<ondown>9000</ondown>
+							<pagecontrol>9020</pagecontrol>
+							<viewtype label="535">list</viewtype>
+							<scrolltime tween="cubic" easing="out">600</scrolltime>
+							<preloaditems>2</preloaditems>
+
+							<itemlayout width="400" height="80">
+
+								<control type="image">
+
+									<posx>0</posx>
+									<posy>0</posy>
+									<width>60</width>
+									<height>60</height>
+									<texture>colors/color_keyboard_dark.png</texture>
+
+								</control>
+
+								<control type="image">
+
+									<include>Common_Control_Image</include>
+									<texture>$INFO[ListItem.Thumb]</texture>
+
+								</control>
+
+								<control type="label">
+
+									<width min="20" max="380">auto</width>
+									<label>$INFO[ListItem.Label]</label>
+									<textcolor>Label_Normal</textcolor>
+									<include>Common_Control_Label</include>
+
+								</control>
+
+							</itemlayout>
+
+							<focusedlayout width="400" height="80">
+
+								<control type="image">
+
+									<posx>0</posx>
+									<posy>0</posy>
+									<width>60</width>
+									<height>60</height>
+									<texture>colors/color_white.png</texture>
+									<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+									<visible>!Control.HasFocus(9000)</visible>
+
+								</control>
+
+								<control type="image">
+
+									<posx>0</posx>
+									<posy>0</posy>
+									<width>60</width>
+									<height>60</height>
+									<texture>colors/color_white.png</texture>
+									<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+
+									<visible>Control.HasFocus(9000)</visible>
+
+								</control>
+
+								<control type="image">
+
+									<include>Common_Control_Image</include>
+									<texture>$INFO[ListItem.Thumb]</texture>
+
+								</control>
+
+								<control type="image">
+
+									<posx>0</posx>
+									<posy>0</posy>
+									<width>60</width>
+									<height>60</height>
+									<texture>button_unfocus.png</texture>
+									<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+
+									<visible>Control.HasFocus(9000)</visible>
+
+								</control>
+
+								<control type="label">
+
+									<width min="20" max="380">auto</width>
+									<label>$INFO[ListItem.Label]</label>
+									<textcolor>Label_Normal</textcolor>
+									<include>Common_Control_Label</include>
+
+								</control>
+
+							</focusedlayout>
+
+							<content>
+
+								<item>
+									
+									<description>Under £4</description>
+									<label>Under £4</label>
+									<thumb>dialoginfo/dialoginfo_install.png</thumb>
+									<onclick>RunPlugin(plugin://plugin.program.webbrowser/?mode=showSite&amp;showPopups=no&amp;stopPlayback=yes&amp;url=http%3a%2f%2fstore.steampowered.com/browse/under4)</onclick>
+								</item>
+																<item>
+									<description>Under £7</description>
+									<label>Under £7</label>
+									<thumb>dialoginfo/dialoginfo_install.png</thumb>
+									<onclick>RunPlugin(plugin://plugin.program.webbrowser/?mode=showSite&amp;showPopups=no&amp;stopPlayback=yes&amp;url=http%3a%2f%2fstore.steampowered.com/browse/under7)</onclick>
+								</item>
+
+
+								<item>
+									<description>Newest Videos</description>
+									<label>Newest Videos</label>
+									<thumb>hub/hub_years_small.png</thumb>
+									<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.steam/?mode=1&amp;name=Newest%20Videos&amp;url&quot;,return)</onclick>
+								</item>
+
+								<item>
+									<description>Most Watched</description>
+									<label>Most Watched</label>
+									<thumb>hub/hub_actors_small.png</thumb>
+									<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.steam/?mode=3&amp;name=Most%20Watched%20(past%2048%20hours)&amp;url&quot;,return)</onclick>
+								</item>
+
+								<item>
+									<description>Search</description>
+									<label>Search</label>
+									<thumb>charms/charm_search.png</thumb>
+															<onclick>Skin.SetString(utube)</onclick>
+<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=$INFO[Skin.String(utube)]&quot;,return)</onclick>
+								</item>
+
+						
+							</content>
+							</control>
+																			<control type="image">
+															<include>Common_Animation_dashboard_pic</include>
+
+								<posx>47</posx>
+								<posy>57</posy>
+								<width>776</width>
+								<height>466</height>
+								<texture>demo\trend2.png</texture>
+								<visible>Control.Hasfocus(3)</visible>
+
+
+
+					
+				</control>
+									<control type="image">
+										<include>Common_Animation_dashboard_pic</include>
+														<include>Common_TraktTV_ClearProperties</include>
+								<posx>50</posx>
+								<posy>60</posy>
+								<width>770</width>
+								<height>460</height>
+								<texture>demo\app\steam\state.jpg</texture>
+
+							</control>
+
+							
+													<control type="image">
+														<include>Common_Animation_dashboard_pic</include>
+																															
+			<posx>50</posx>
+			<posy>395</posy>
+		<width>770</width>
+		<height>125</height>
+								<texture>demo/fade.png</texture>
+									
+							</control>
+																									<control type="textbox">
+																										<include>Common_Animation_dashboard_pic</include>
+																				
+							
+			<posx>105</posx>
+			<posy>447</posy>
+			<label>State Of Decay - Available Now!</label>
+
+		<width>650</width>
+		<height>50</height>
+		<font>Settings-Menu-Header</font>
+			<textcolor>Label_Normal</textcolor>
+			<scrollspeed>0</scrollspeed>
+			<autoscroll>false</autoscroll>
+			<wrapmultiline>true</wrapmultiline>
+							
+		</control>
+
+						
+						</control>
+		
+				
+
+				
+				
+				
+				
+				
+				
+				
+					<control type="group" id="121">
+					
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>1200</width>
+						<height>720</height>
+												<control type="panel" id="22">
+<posx>1065</posx>
+						<posy>345</posy>
+
+						
+						<include>Common_AltHome_Panel3</include>
+						<onleft>Control.Move(20,-1)</onleft>
+<onleft>11</onleft>
+<onright>Control.Move(20,1)</onright>
+						<onright>33</onright>
+						<ondown>4</ondown>
+						<pagecontrol>7017</pagecontrol>
+						
+						<content>
+						
+
+							
+																					<item id="1">
+								<description>Games</description>
+								<label>Games</label>
+								<thumb>SHORT\ICO\Games.png</thumb>
+								<onclick>Control.Setfocus(4)</onclick>
+														
+							</item>
+							
+
+
+								</content>
+
+					</control>
+							<control type="list" id="4">
+					
+						<include>Common_AltHome_List</include>
+
+						<onright>104</onright>
+						<ondown>33</ondown>
+						<onup>22</onup>
+						<itemlayout width="600" height="240">
+						
+							<control type="image">
+							
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>440</width>
+								<height>220</height>
+								<texture>demo/lololo.png</texture>
+								
+							</control>
+							
+							<include>Common_AltHome_Thumb</include>
+							
+						</itemlayout>
+
+						<focusedlayout width="600" height="240">
+						
+							<control type="image">
+							
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>440</width>
+								<height>220</height>
+								<texture>demo/lololo.png</texture>
+								
+								<visible>!Control.HasFocus(8083)</visible>
+								
+							</control>
+						
+							<control type="image">
+							
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>440</width>
+								<height>220</height>
+								<texture>demo/lololo.png</texture>
+
+								
+								<visible>Control.HasFocus(8083)</visible>
+								
+							</control>
+							
+							<include>Common_AltHome_Thumb</include>
+							
+						</focusedlayout>
+						
+						<content>
+
+							<item id="1">
+								<description>trending</description>
+								<label>trending</label>
+								<thumb>lolololo.jpg</thumb>
+							<include>Common_TraktTV_ClearProperties</include>
+							<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.steam/?mode=1&amp;name=Newest%20Videos&amp;url&quot;,return)</onclick>
+
+				
+							</item>
+
+							
+						</content>
+
+					</control>
+					
+														<control type="image">
+
+								<posx>47</posx>
+								<posy>57</posy>
+								<width>776</width>
+								<height>466</height>
+								<texture>demo\trend2.png</texture>
+								<visible>Control.Hasfocus(4)</visible>
+
+
+
+					
+				</control>
+									<control type="image">
+														<include>Common_TraktTV_ClearProperties</include>
+								<posx>50</posx>
+								<posy>60</posy>
+								<width>770</width>
+								<height>460</height>
+								<texture>demo\app\steam\take.jpg</texture>
+
+							</control>
+
+							
+													<control type="image">
+																															
+			<posx>50</posx>
+			<posy>395</posy>
+		<width>770</width>
+		<height>125</height>
+								<texture>demo/fade.png</texture>
+									
+							</control>
+																									<control type="textbox">
+																				
+							
+			<posx>105</posx>
+			<posy>447</posy>
+			<label>Takedown Red Sabre - Available Now!</label>
+
+		<width>650</width>
+		<height>50</height>
+		<font>Settings-Menu-Header</font>
+			<textcolor>Label_Normal</textcolor>
+			<scrollspeed>0</scrollspeed>
+			<autoscroll>false</autoscroll>
+			<wrapmultiline>true</wrapmultiline>
+			
+		</control>
+															<control type="panel" id="104">
+
+							<posx>892</posx>
+							<posy>60</posy>
+							<width>400</width>
+							<height>480</height>
+							<onleft>4</onleft>
+						
+<onup>22</onup>
+							<pagecontrol>9020</pagecontrol>
+							<viewtype label="535">list</viewtype>
+							<scrolltime tween="cubic" easing="out">600</scrolltime>
+							<preloaditems>2</preloaditems>
+
+							<itemlayout width="400" height="80">
+
+								<control type="image">
+
+									<posx>0</posx>
+									<posy>0</posy>
+									<width>60</width>
+									<height>60</height>
+									<texture>colors/color_keyboard_dark.png</texture>
+
+								</control>
+
+								<control type="image">
+
+									<include>Common_Control_Image</include>
+									<texture>$INFO[ListItem.Thumb]</texture>
+
+								</control>
+
+								<control type="label">
+
+									<width min="20" max="380">auto</width>
+									<label>$INFO[ListItem.Label]</label>
+									<textcolor>Label_Normal</textcolor>
+									<include>Common_Control_Label</include>
+
+								</control>
+
+							</itemlayout>
+
+							<focusedlayout width="400" height="80">
+
+								<control type="image">
+
+									<posx>0</posx>
+									<posy>0</posy>
+									<width>60</width>
+									<height>60</height>
+									<texture>colors/color_white.png</texture>
+									<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+									<visible>!Control.HasFocus(9000)</visible>
+
+								</control>
+
+								<control type="image">
+
+									<posx>0</posx>
+									<posy>0</posy>
+									<width>60</width>
+									<height>60</height>
+									<texture>colors/color_white.png</texture>
+									<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+
+									<visible>Control.HasFocus(9000)</visible>
+
+								</control>
+
+								<control type="image">
+
+									<include>Common_Control_Image</include>
+									<texture>$INFO[ListItem.Thumb]</texture>
+
+								</control>
+
+								<control type="image">
+
+									<posx>0</posx>
+									<posy>0</posy>
+									<width>60</width>
+									<height>60</height>
+									<texture>button_unfocus.png</texture>
+									<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+
+									<visible>Control.HasFocus(9000)</visible>
+
+								</control>
+
+								<control type="label">
+
+									<width min="20" max="380">auto</width>
+									<label>$INFO[ListItem.Label]</label>
+									<textcolor>Label_Normal</textcolor>
+									<include>Common_Control_Label</include>
+
+								</control>
+
+							</focusedlayout>
+
+							<content>
+
+
+
+								<item>
+									<description>Free to play</description>
+									<label>Free to play</label>
+				<thumb>home/home_games_small.png</thumb>
+									<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.steam/?mode=4&amp;name=Free%20to%20Play&amp;url=http%3a%2f%2fstore.steampowered.com%2fsearch%2f%3fgenre%3dFree%2520to%2520Play%26sort_by%3d%26category1%3d999&quot;,return)</onclick>
+								</item>
+
+								<item>
+									<description>Early access</description>
+									<label>Early access</label>
+							<thumb>home/home_games_small.png</thumb>
+									<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.steam/?mode=4&amp;name=Early%20Access&amp;url=http%3a%2f%2fstore.steampowered.com%2fsearch%2f%3fgenre%3dEarly%2520Access%26sort_by%3d%26category1%3d999&quot;,return)</onclick>
+								</item>
+
+								<item>
+									<description>Action</description>
+									<label>Action</label>
+								<thumb>home/home_games_small.png</thumb>
+									<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.steam/?mode=4&amp;name=Action&amp;url=http%3a%2f%2fstore.steampowered.com%2fsearch%2f%3fgenre%3dAction%26sort_by%3d%26category1%3d999&quot;,return)</onclick>
+								</item>
+
+								<item>
+									<description>Adventure</description>
+									<label>Adventure</label>
+								<thumb>home/home_games_small.png</thumb>
+									<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.steam/?mode=4&amp;name=Adventure&amp;url=http%3a%2f%2fstore.steampowered.com%2fsearch%2f%3fgenre%3dAdventure%26sort_by%3d%26category1%3d999&quot;,return)</onclick>
+								</item>
+
+								<item>
+									<description>Strategy</description>
+									<label>Strategy</label>
+						<thumb>home/home_games_small.png</thumb>
+									<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.steam/?mode=4&amp;name=Strategy&amp;url=http%3a%2f%2fstore.steampowered.com%2fsearch%2f%3fgenre%3dStrategy%26sort_by%3d%26category1%3d999&quot;,return)</onclick>
+								</item>
+
+								<item>
+									<description>RPG</description>
+									<label>RPG</label>
+								<thumb>home/home_games_small.png</thumb>
+									<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.steam/?mode=4&amp;name=RPG&amp;url=http%3a%2f%2fstore.steampowered.com%2fsearch%2f%3fgenre%3dRPG%26sort_by%3d%26category1%3d999&quot;,return)</onclick>
+								</item>
+
+								<item>
+									<description>Indie</description>
+									<label>Indie</label>
+						<thumb>home/home_games_small.png</thumb>
+									<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.steam/?mode=4&amp;name=Indie&amp;url=http%3a%2f%2fstore.steampowered.com%2fsearch%2f%3fgenre%3dIndie%26sort_by%3d%26category1%3d999&quot;,return)</onclick>
+								</item>
+
+								<item>
+									<description>Multiplayer</description>
+									<label>Multiplayer</label>
+									<thumb>home/home_games_small.png</thumb>
+									<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.steam/?mode=4&amp;name=Massively%20Multiplayer&amp;url=http%3a%2f%2fstore.steampowered.com%2fsearch%2f%3fgenre%3dMassively%2520Multiplayer%26sort_by%3d%26category1%3d999&quot;,return)</onclick>
+								</item>
+
+								<item>
+									<description>Casual</description>
+									<label>Casual</label>
+									<thumb>home/home_games_small.png</thumb>
+									<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.steam/?mode=4&amp;name=Casual&amp;url=http%3a%2f%2fstore.steampowered.com%2fsearch%2f%3fgenre%3dCasual%26sort_by%3d%26category1%3d999&quot;,return)</onclick>
+								</item>
+								
+												<item>
+									<description>Simulation</description>
+									<label>Simulation</label>
+								<thumb>home/home_games_small.png</thumb>
+									<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.steam/?mode=4&amp;name=Simulation&amp;url=http%3a%2f%2fstore.steampowered.com%2fsearch%2f%3fgenre%3dSimulation%26sort_by%3d%26category1%3d999&quot;,return)</onclick>
+								</item>
+								
+												<item>
+									<description>Racing</description>
+									<label>Racing</label>
+									<thumb>home/home_games_small.png</thumb>
+									<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.steam/?mode=4&amp;name=Racing&amp;url=http%3a%2f%2fstore.steampowered.com%2fsearch%2f%3fgenre%3dRacing%26sort_by%3d%26category1%3d999&quot;,return)</onclick>
+								</item>
+								
+												<item>
+									<description>Sports</description>
+									<label>Sports</label>
+					<thumb>home/home_games_small.png</thumb>
+									<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.steam/?mode=4&amp;name=Sports&amp;url=http%3a%2f%2fstore.steampowered.com%2fsearch%2f%3fgenre%3dSports%26sort_by%3d%26category1%3d999&quot;,return)</onclick>
+								</item>
+								
+												<item>
+									<description>Mac OS X</description>
+									<label>Mac OS X</label>
+								<thumb>home/home_games_small.png</thumb>
+									<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.steam/?mode=4&amp;name=Mac%20OS%20X&amp;url=http%3a%2f%2fstore.steampowered.com%2fsearch%2f%3fgenre%3dMac%2520OS%2520X%26sort_by%3d%26category1%3d999&quot;,return)</onclick>
+								</item>
+								
+																<item>
+									<description>Linux</description>
+									<label>Linux</label>
+								<thumb>home/home_games_small.png</thumb>
+									<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.steam/?mode=4&amp;name=Linux&amp;url=http%3a%2f%2fstore.steampowered.com%2fsearch%2f%3fgenre%3dLinux%26sort_by%3d%26category1%3d999&quot;,return)</onclick>
+								</item>
+
+							</content>
+							
+						</control>
+						
+
+					
+
+				
+
+				
+	
+					
+				</control>	
+				<control type="group" id="122">
+					
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>1200</width>
+						<height>720</height>
+				
+				
+																<control type="panel" id="33">
+<posx>1065</posx>
+						<posy>345</posy>
+
+						
+						<include>Common_AltHome_Panel3</include>
+						<onleft>Control.Move(20,-1)</onleft>
+<onleft>22</onleft>
+<onright>Control.Move(20,1)</onright>
+						<onright>11</onright>
+						<ondown>5000</ondown>
+						<pagecontrol>7017</pagecontrol>
+						
+						<content>
+						
+
+							
+																					<item id="1">
+								<description>Games</description>
+								<label>Games</label>
+								<thumb>SHORT\ICO\Games.png</thumb>
+								<onclick>Control.Setfocus(5000)</onclick>
+														
+							</item>
+							
+
+
+								</content>
+
+					</control>
+					
+					
+					
+					
+					
+																				<control type="panel" id="5000">
+
+							<posx>292</posx>
+							<posy>60</posy>
+							<width>400</width>
+							<height>480</height>
+						
+						
+<onup>33</onup>
+							<pagecontrol>9020</pagecontrol>
+							<viewtype label="535">list</viewtype>
+							<scrolltime tween="cubic" easing="out">600</scrolltime>
+							<preloaditems>2</preloaditems>
+
+							<itemlayout width="400" height="80">
+
+								<control type="image">
+
+									<posx>0</posx>
+									<posy>0</posy>
+									<width>60</width>
+									<height>60</height>
+									<texture>colors/color_keyboard_dark.png</texture>
+
+								</control>
+
+								<control type="image">
+
+									<include>Common_Control_Image</include>
+									<texture>$INFO[ListItem.Thumb]</texture>
+
+								</control>
+
+								<control type="label">
+
+									<width min="20" max="380">auto</width>
+									<label>$INFO[ListItem.Label]</label>
+									<textcolor>Label_Normal</textcolor>
+									<include>Common_Control_Label</include>
+
+								</control>
+
+							</itemlayout>
+
+							<focusedlayout width="400" height="80">
+
+								<control type="image">
+
+									<posx>0</posx>
+									<posy>0</posy>
+									<width>60</width>
+									<height>60</height>
+									<texture>colors/color_white.png</texture>
+									<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+									<visible>!Control.HasFocus(9000)</visible>
+
+								</control>
+
+								<control type="image">
+
+									<posx>0</posx>
+									<posy>0</posy>
+									<width>60</width>
+									<height>60</height>
+									<texture>colors/color_white.png</texture>
+									<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+
+									<visible>Control.HasFocus(9000)</visible>
+
+								</control>
+
+								<control type="image">
+
+									<include>Common_Control_Image</include>
+									<texture>$INFO[ListItem.Thumb]</texture>
+
+								</control>
+
+								<control type="image">
+
+									<posx>0</posx>
+									<posy>0</posy>
+									<width>60</width>
+									<height>60</height>
+									<texture>button_unfocus.png</texture>
+									<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+
+									<visible>Control.HasFocus(9000)</visible>
+
+								</control>
+
+								<control type="label">
+
+									<width min="20" max="380">auto</width>
+									<label>$INFO[ListItem.Label]</label>
+									<textcolor>Label_Normal</textcolor>
+									<include>Common_Control_Label</include>
+
+								</control>
+
+							</focusedlayout>
+
+							<content>
+
+
+
+								<item>
+									<description>View Store</description>
+									<label>View Store</label>
+				<thumb>home/home_games_small.png</thumb>
+									<onclick>ActivateWindow(4321)</onclick>
+								</item>
+						
+			
+
+
+							</content>
+							
+						</control>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+				
+				
+				
+				
+				
+				</control>	
+				
+				
+				
+				</control>
+										</control>
+				
+						
+						<!--Scrollbar-->
+
+					
+					</control>
+					
+					<include>ViewList_RootMenu_Featured</include>
+					<include>ViewList_RootMenu_RecentlyAdded</include>
+					<include>ViewList_RootMenu_AiringToday</include>
+					<include>ViewList_RootMenu_InCinemas</include>
+					<include>ViewList_RootMenu_NearbyEvents</include>
+					<include>ViewList_RootMenu_History</include>
+					<include>ViewList_RootMenu_Trakt</include>
+					
+			
+				
+<include>Snapped_Content</include>	
+			<include>Xbox_Logo</include>
+			<!--Scrollbar-->
+
+
+
+	
+		
+	</controls>	
+		
+</window>

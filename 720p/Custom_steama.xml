@@ -1,0 +1,870 @@
+<window id="4322">
+
+	<defaultcontrol always="true">10000</defaultcontrol>
+	
+ <include condition="!Window.Previous(Home)">Common_Animation_Window</include>
+					  <include condition="Window.Previous(Home)">Common_Animation_apps_dash</include> 
+	
+	
+
+ <onload condition="System.HasAddon(script.extendedinfo)">RunScript(script.extendedinfo,info=TrendingMovies)</onload>
+	<onload condition="System.HasAddon(script.extendedinfo)">RunScript(script.extendedinfo,info=TrendingShows)</onload>
+	<onload condition="System.HasAddon(script.extendedinfo)">RunScript(script.extendedinfo,info=PremiereShows)</onload>
+	<onload condition="System.HasAddon(script.extendedinfo)">RunScript(script.extendedinfo,info=AiringShows)</onload>
+	
+	<onload condition="Skin.HasSetting(SnapFeature) + Skin.HasSetting(SnapAlways)">Skin.SetString(snap, C:\Assistance\Snap\Pic\Item.jpg,0)</onload>
+<onload condition="Skin.HasSetting(SnapFeature) + Skin.HasSetting(SnapAlways)">AlarmClock(startsnap,RunScript(special://skin/system/Snap.py),00:01,silent)</onload>
+	
+		<onload>Skin.SetString(snapwindow, 4322)</onload>
+<onload condition="!Skin.HasSetting(snapie)">Skin.ToggleSetting(snapie)</onload>
+<onload condition="Skin.HasSetting(gaming)">Skin.ToggleSetting(gaming)</onload>
+<onload>Skin.SetString(snap, demo/sna/steam.jpg,0)</onload>
+<onload>Skin.SetString(sn,Steam)</onload>
+	
+	
+	<controls>
+	
+		<!--Background-->
+																									<control type="image">
+											
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1280</width>
+								<height>720</height>
+								<texture>colors\color_black.png</texture>
+
+							</control>	
+									<control type="multiimage">
+				<include>Common_Dimensions</include>
+				<imagepath background="true">demo\app\steamstore\feat\</imagepath>
+				<timeperimage>5000</timeperimage>
+				<randomize>true</randomize>
+				<fadetime>1000</fadetime>
+				<visible>Skin.HasSetting(ShowFanartBackground)</visible>
+			</control>
+														<control type="image">
+			
+				<include>Common_Dimensions</include>
+				<texture background="true">colors/color_white.png</texture>
+				<colordiffuse>FanartDiffuse</colordiffuse>
+				
+				<visible>Skin.HasSetting(ShowFanartBackground)</visible>
+				
+			</control>
+
+		
+
+	
+		<!--Top Area-->
+		<control type="group">
+		
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>120</height>
+			
+			<control type="grouplist">
+			
+				<posx>60</posx>
+				<posy>20</posy>
+				<width>1100</width>
+				<height>100</height>
+				<orientation>horizontal</orientation>
+				<itemgap>20</itemgap>
+				<usecontrolcoords>true</usecontrolcoords>
+				
+				<control type="button">
+					
+					<posy>12</posy>
+					<width>48</width>
+					<height>48</height>
+					<texturefocus aligny="center">breadcrumb/breadcrumb_backarrow_focus.png</texturefocus>
+					<texturenofocus aligny="center">breadcrumb/breadcrumb_backarrow.png</texturenofocus>
+					<colordiffuse>Label_Dark</colordiffuse>
+					<aspectratio>keep</aspectratio>
+					<onclick>back</onclick>
+					
+				</control>
+				
+		
+				
+			</control>
+													<control type="grouplist">
+			<visible>true</visible>
+														<include>Common_Animation_dashboard_tab</include>
+				<posx>128</posx>
+				<posy>100</posy>
+				<width>1100</width>
+				<height>100</height>
+				<orientation>horizontal</orientation>
+				<itemgap>20</itemgap>
+												<control type="label">
+						<visible>true</visible>
+					<width min="0" max="400">auto</width>
+					<height>100</height>
+					<label>Recommended</label>
+					<font>Content-Label</font>
+					<textcolor>FF333333</textcolor>
+					<aligny>top</aligny>
+<animation effect="zoom" end="108" center="auto" time="200" condition="ControlGroup(10000).HasFocus(10001) + Skin.HasSetting(textview)">Conditional</animation>
+				</control>
+				
+				<control type="label">
+						<visible>true</visible>
+					<width min="0" max="400">auto</width>
+					<height>100</height>
+					<label>Trending Games</label>
+					<font>Content-Label</font>
+					<textcolor>FF333333</textcolor>
+					<aligny>top</aligny>
+<animation effect="zoom" end="108" center="auto" time="200" condition="ControlGroup(10000).HasFocus(10002) + Skin.HasSetting(textview)">Conditional</animation>
+				</control>
+				
+				<control type="label">
+						<visible>true</visible>
+					<width min="0" max="400">auto</width>
+					<height>100</height>
+					<label>New Releases</label>
+					<font>Content-Label</font>
+					<textcolor>FF333333</textcolor>
+					<aligny>top</aligny>
+<animation effect="zoom" end="108" center="auto" time="200" condition="ControlGroup(10000).HasFocus(10003) + Skin.HasSetting(textview)">Conditional</animation>
+				</control>
+				
+
+				
+
+				</control>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+										<control type="grouplist">
+			<visible>true</visible>
+														<include>Common_Animation_dashboard_tab</include>
+				<posx>128</posx>
+				<posy>100</posy>
+				<width>1100</width>
+				<height>100</height>
+				<orientation>horizontal</orientation>
+				<itemgap>20</itemgap>
+												<control type="label">
+						<visible>true</visible>
+					<width min="0" max="400">auto</width>
+					<height>100</height>
+					<label>Recommended</label>
+					<font>Content-Label</font>
+					<textcolor>FFFFFFFF</textcolor>
+					<aligny>top</aligny>
+					<animation effect="zoom" end="108" center="auto" time="200" condition="ControlGroup(10000).HasFocus(10001) + Skin.HasSetting(textview)">Conditional</animation>
+                <animation effect="fade" start="0" end="100" time="200" tween="cubic" easing="inout" condition="ControlGroup(10000).HasFocus(10001)">Conditional</animation>
+                <animation effect="fade" start="100" end="0" time="200" tween="cubic" easing="inout" condition="!ControlGroup(10000).HasFocus(10001)">Conditional</animation>
+				</control>
+				
+				<control type="label">
+						<visible>true</visible>
+					<width min="0" max="400">auto</width>
+					<height>100</height>
+					<label>Trending Games</label>
+					<font>Content-Label</font>
+					<textcolor>FFFFFFFF</textcolor>
+					<aligny>top</aligny>
+					<animation effect="zoom" end="108" center="auto" time="200" condition="ControlGroup(10000).HasFocus(10002) + Skin.HasSetting(textview)">Conditional</animation>
+                <animation effect="fade" start="0" end="100" time="200" tween="cubic" easing="inout" condition="ControlGroup(10000).HasFocus(10002)">Conditional</animation>
+                <animation effect="fade" start="100" end="0" time="200" tween="cubic" easing="inout" condition="!ControlGroup(10000).HasFocus(10002)">Conditional</animation>
+				</control>
+				
+				<control type="label">
+						<visible>true</visible>
+					<width min="0" max="400">auto</width>
+					<height>100</height>
+					<label>New Releases</label>
+					<font>Content-Label</font>
+					<textcolor>FFFFFFFF</textcolor>
+					<aligny>top</aligny>
+					<animation effect="zoom" end="108" center="auto" time="200" condition="ControlGroup(10000).HasFocus(10003) + Skin.HasSetting(textview)">Conditional</animation>
+                <animation effect="fade" start="0" end="100" time="200" tween="cubic" easing="inout" condition="ControlGroup(10000).HasFocus(10003)">Conditional</animation>
+                <animation effect="fade" start="100" end="0" time="200" tween="cubic" easing="inout" condition="!ControlGroup(10000).HasFocus(10003)">Conditional</animation>
+				</control>
+				
+	
+
+
+				</control>
+			
+			<control type="grouplist" id="10000">
+			
+				<posx>126</posx>
+				<posy>90</posy>
+				<width>1100</width>
+				<height>100</height>
+				<orientation>horizontal</orientation>
+				<ondown condition="ControlGroup(10000).HasFocus(10001)">571</ondown>
+				<ondown condition="ControlGroup(10000).HasFocus(10002)">572</ondown>
+				<ondown condition="ControlGroup(10000).HasFocus(10003)">573</ondown>
+			
+				
+				<visible allowhiddenfocus="true">false</visible>
+				
+				<!--Trending movies-->
+				<control type="button" id="10001">
+				
+					<width>20</width>
+					<height>20</height>
+					
+				</control>	
+				
+				<!--Trending shows-->
+				<control type="button" id="10002">
+				
+					<width>20</width>
+					<height>20</height>
+					
+				</control>	
+				
+				<!--Airing shows-->
+				<control type="button" id="10003">
+				
+					<width>20</width>
+					<height>20</height>
+					
+				</control>	
+				
+		
+				
+					
+			</control>	
+			
+
+
+		</control>
+		
+		<!--Content Area-->
+		<control type="group">
+		
+			<posx>0</posx>
+			<posy>100</posy>
+			<width>1280</width>
+			<height>480</height>
+			
+			<include>Common_Animation_Content</include>
+			
+			<control type="group">
+		
+				<posx>60</posx>
+				<posy>0</posy>
+				
+				<include>Common_Animation_View</include>
+				
+				<control type="panel" id="571">
+						
+					<posx>68</posx>
+					<posy>60</posy>
+					<width>1160</width>
+					<height>520</height>
+					<onleft>571</onleft>
+					<onright>571</onright>
+					<onup>10000</onup>
+					<pagecontrol>81</pagecontrol>
+					<viewtype label="535">list</viewtype>
+					<scrolltime tween="cubic" easing="out">600</scrolltime>
+					<preloaditems>2</preloaditems>
+					<orientation>horizontal</orientation>
+					
+					<visible>ControlGroup(10000).HasFocus(10001)</visible>
+				
+					<include>Common_Animation_ShowListing</include>
+					
+					<itemlayout width="190" height="260">
+
+						<control type="image">
+							<animation effect="zoom" end="115" center="auto" time="230">Focus</animation>
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>170</width>
+							<height>240</height>
+							<texture background="true" fallback="colors/color_keyboard_dark.png">$INFO[ListItem.Thumb]</texture>
+							<aspectratio>stretch</aspectratio>
+							
+						</control>
+
+					</itemlayout>
+
+					<focusedlayout width="190" height="260">
+
+						<control type="image">
+							<animation effect="zoom" end="115" center="auto" time="230">Focus</animation>
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>170</width>
+							<height>240</height>
+							<texture background="true" fallback="colors/color_keyboard_dark.png">$INFO[ListItem.Thumb]</texture>
+							<aspectratio>stretch</aspectratio>
+							
+						</control>
+						
+						<control type="image">
+							<animation effect="zoom" end="115" center="auto" time="230">Focus</animation>
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>170</width>
+							<height>240</height>
+							<texture background="true">button_selected_tall.png</texture>
+							<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+							
+						</control>
+						
+
+
+					</focusedlayout>
+					
+					<content>
+					
+						<item id="1">
+							<thumb>demo\app\recogam\reco\gta5.jpg</thumb>
+							
+							<include>Common_TraktTV_ClearProperties</include>
+
+	<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=gta v&quot;,return)</onclick>
+						</item>
+						
+						<item id="2">
+							<thumb>demo\app\recogam\reco\bf4.jpg</thumb>
+							
+							<include>Common_TraktTV_ClearProperties</include>
+
+	<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=battlefield 4&quot;,return)</onclick>
+						</item>
+						
+						<item id="3">
+							<thumb>demo\app\recogam\reco\dl.jpg</thumb>
+							
+							<include>Common_TraktTV_ClearProperties</include>
+
+		<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=dying light&quot;,return)</onclick>
+						</item>
+						
+						<item id="4">
+							<thumb>demo\app\recogam\reco\dr3.jpg</thumb>
+							
+							<include>Common_TraktTV_ClearProperties</include>
+
+		<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=dead rising 3&quot;,return)</onclick>
+						</item>
+						
+						<item id="5">
+							<thumb>demo\app\recogam\reco\codg.jpg</thumb>
+							
+							<include>Common_TraktTV_ClearProperties</include>
+<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=call of duty ghosts&quot;,return)</onclick>
+						</item>
+						
+						<item id="6">
+							<thumb>demo\app\recogam\reco\r6p.jpg</thumb>
+							
+							<include>Common_TraktTV_ClearProperties</include>
+
+	<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=rainbow six patriots&quot;,return)</onclick>
+						</item>
+						
+						<item id="7">
+							<thumb>demo\app\recogam\reco\t.jpg</thumb>
+							
+							<include>Common_TraktTV_ClearProperties</include>
+
+		<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=tinfall&quot;,return)</onclick>
+						</item>
+						
+						<item id="8">
+							<thumb>demo\app\recogam\reco\tcd.jpg</thumb>
+							
+							<include>Common_TraktTV_ClearProperties</include>
+
+	<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=the division&quot;,return)</onclick>
+						</item>
+						
+						<item id="9">
+							<thumb>demo\app\recogam\reco\wd.jpg</thumb>
+							
+							<include>Common_TraktTV_ClearProperties</include>
+
+							<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=watch dogs&quot;,return)</onclick>
+						</item>
+						
+						<item id="10">
+							<thumb>demo\app\recogam\reco\qb.jpg</thumb>
+							
+							<include>Common_TraktTV_ClearProperties</include>
+
+							<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=quantum break&quot;,return)</onclick>
+						</item>
+						
+					
+					
+					</content>	
+
+				</control>
+				
+				<control type="panel" id="572">
+						
+					<posx>68</posx>
+					<posy>60</posy>
+					<width>1160</width>
+					<height>520</height>
+					<onleft>572</onleft>
+					<onright>572</onright>
+					<onup>10000</onup>
+					<pagecontrol>81</pagecontrol>
+					<viewtype label="535">list</viewtype>
+					<scrolltime tween="cubic" easing="out">600</scrolltime>
+					<preloaditems>2</preloaditems>
+					<orientation>horizontal</orientation>
+					
+					<visible>ControlGroup(10000).HasFocus(10002)</visible>
+					
+					<include>Common_Animation_ShowListing</include>
+					
+					<itemlayout width="190" height="260">
+
+						<control type="image">
+						<animation effect="zoom" end="115" center="auto" time="230">Focus</animation>
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>170</width>
+							<height>240</height>
+							<texture background="true" fallback="colors/color_keyboard_dark.png">$INFO[ListItem.Thumb]</texture>
+							<aspectratio>stretch</aspectratio>
+							
+						</control>
+
+					</itemlayout>
+
+					<focusedlayout width="190" height="260">
+
+						<control type="image">
+						<animation effect="zoom" end="115" center="auto" time="230">Focus</animation>
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>170</width>
+							<height>240</height>
+							<texture background="true" fallback="colors/color_keyboard_dark.png">$INFO[ListItem.Thumb]</texture>
+							<aspectratio>stretch</aspectratio>
+							
+						</control>
+						
+						<control type="image">
+						<animation effect="zoom" end="115" center="auto" time="230">Focus</animation>
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>170</width>
+							<height>240</height>
+							<texture background="true">button_selected_tall.png</texture>
+							<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+							
+						</control>
+						
+	
+
+					</focusedlayout>
+					
+					<content>
+					
+						<item id="1">
+							<thumb>demo\app\recogam\trend\sriv.jpg</thumb>
+							
+							<include>Common_TraktTV_ClearProperties</include>
+	
+<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=saints row iv&quot;,return)</onclick>
+						</item>
+						
+						<item id="2">
+							<thumb>demo\app\recogam\trend\tb.jpg</thumb>
+							
+							<include>Common_TraktTV_ClearProperties</include>
+
+<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=the bureau&quot;,return)</onclick>
+						</item>
+						
+						<item id="3">
+							<thumb>demo\app\recogam\trend\d3.jpg</thumb>
+							
+							<include>Common_TraktTV_ClearProperties</include>
+
+<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=dirt 2&quot;,return)</onclick>
+						</item>
+						
+						<item id="4">
+							<thumb>demo\app\recogam\trend\p.jpg</thumb>
+							
+							<include>Common_TraktTV_ClearProperties</include>
+				
+<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=prototype&quot;,return)</onclick>
+						</item>
+						
+						<item id="5">
+							<thumb>demo\app\recogam\trend\p2.jpg</thumb>
+							
+							<include>Common_TraktTV_ClearProperties</include>
+				
+<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=portal 2&quot;,return)</onclick>
+						</item>
+						
+						<item id="6">
+							<thumb>demo\app\recogam\trend\border.jpg</thumb>
+							
+							<include>Common_TraktTV_ClearProperties</include>
+		
+<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=borderlands&quot;,return)</onclick>
+						</item>
+						
+						<item id="7">
+							<thumb>demo\app\recogam\trend\gtaiv.jpg</thumb>
+							
+							<include>Common_TraktTV_ClearProperties</include>
+				
+<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=gta iv&quot;,return)</onclick>
+						</item>
+						
+						<item id="8">
+							<thumb>demo\app\recogam\trend\aw.jpg</thumb>
+							
+							<include>Common_TraktTV_ClearProperties</include>
+		
+<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=alan wake&quot;,return)</onclick>
+						</item>
+						
+						<item id="9">
+							<thumb>demo\app\recogam\trend\bf3.jpg</thumb>
+							
+							<include>Common_TraktTV_ClearProperties</include>
+				
+		<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=battlefield 3&quot;,return)</onclick>
+						</item>
+						
+						<item id="10">
+							<thumb>demo\app\recogam\trend\mgp.jpg</thumb>
+							
+							<include>Common_TraktTV_ClearProperties</include>
+		
+							<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=moto gp 13&quot;,return)</onclick>
+						</item>
+						
+					
+					
+					</content>	
+
+				</control>
+				
+				<control type="panel" id="573">
+						
+					<posx>68</posx>
+					<posy>60</posy>
+					<width>1160</width>
+					<height>520</height>
+					<onleft>573</onleft>
+					<onright>573</onright>
+					<onup>10000</onup>
+					<pagecontrol>83</pagecontrol>
+					<viewtype label="535">list</viewtype>
+					<scrolltime tween="cubic" easing="out">600</scrolltime>
+					<preloaditems>2</preloaditems>
+					<orientation>horizontal</orientation>
+					
+					<visible>ControlGroup(10000).HasFocus(10003)</visible>
+					
+					<include>Common_Animation_ShowListing</include>
+					
+					<itemlayout width="190" height="260">
+
+						<control type="image">
+						<animation effect="zoom" end="115" center="auto" time="230">Focus</animation>
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>170</width>
+							<height>240</height>
+							<texture background="true" fallback="colors/color_keyboard_dark.png">$INFO[ListItem.Thumb]</texture>
+							<aspectratio>stretch</aspectratio>
+							
+						</control>
+
+					</itemlayout>
+
+					<focusedlayout width="190" height="260">
+
+						<control type="image">
+						<animation effect="zoom" end="115" center="auto" time="230">Focus</animation>
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>170</width>
+							<height>240</height>
+							<texture background="true" fallback="colors/color_keyboard_dark.png">$INFO[ListItem.Thumb]</texture>
+							<aspectratio>stretch</aspectratio>
+							
+						</control>
+						
+						<control type="image">
+						<animation effect="zoom" end="115" center="auto" time="230">Focus</animation>
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>170</width>
+							<height>240</height>
+							<texture background="true">button_selected_tall.png</texture>
+							<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+							
+						</control>
+						
+				
+
+					</focusedlayout>
+					
+					<content>
+					
+						<item id="1">
+							<thumb>demo\app\recogam\trend2\hm.jpg</thumb>
+							
+							<include>Common_TraktTV_ClearProperties</include>
+		
+							<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=hitman absolution&quot;,return)</onclick>
+						</item>
+						
+						<item id="2">
+							<thumb>demo\app\recogam\trend2\acb.jpg</thumb>
+							
+							<include>Common_TraktTV_ClearProperties</include>
+		
+	<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=asassins creed black flag&quot;,return)</onclick>
+						</item>
+						
+						<item id="3">
+							<thumb>demo\app\recogam\trend2\nb4.jpg</thumb>
+							
+							<include>Common_TraktTV_ClearProperties</include>
+				
+				<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=nba 2k14&quot;,return)</onclick>
+						</item>
+						
+						<item id="4">
+							<thumb>demo\app\recogam\trend2\w4.jpg</thumb>
+							
+							<include>Common_TraktTV_ClearProperties</include>
+		
+	<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=w2k14&quot;,return)</onclick>
+						</item>
+						
+						<item id="5">
+							<thumb>demo\app\recogam\trend2\lg.jpg</thumb>
+							
+							<include>Common_TraktTV_ClearProperties</include>
+			
+			<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=lego star wars&quot;,return)</onclick>
+						</item>
+						
+						<item id="6">
+							<thumb>demo\app\recogam\trend2\f14.jpg</thumb>
+							
+							<include>Common_TraktTV_ClearProperties</include>
+		
+			<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=fifa 14&quot;,return)</onclick>
+						</item>
+						
+						<item id="7">
+							<thumb>demo\app\recogam\trend2\rl.jpg</thumb>
+							
+							<include>Common_TraktTV_ClearProperties</include>
+	
+	<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=rayman legends&quot;,return)</onclick>
+						</item>
+						
+						<item id="8">
+							<thumb>demo\app\recogam\trend2\sk.jpg</thumb>
+							
+							<include>Common_TraktTV_ClearProperties</include>
+	
+<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=skyrim&quot;,return)</onclick>
+						</item>
+						
+						<item id="9">
+							<thumb>demo\app\recogam\trend2\tr.jpg</thumb>
+							
+							<include>Common_TraktTV_ClearProperties</include>
+		
+<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=tomb raider&quot;,return)</onclick>
+						</item>
+						
+						<item id="10">
+							<thumb>demo\app\recogam\trend2\mw3.jpg</thumb>
+							
+							<include>Common_TraktTV_ClearProperties</include>
+		
+<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=modern warfare 3&quot;,return)</onclick>
+						</item>
+						
+					
+					
+					</content>	
+
+				</control>
+				
+				<control type="panel" id="574">
+						
+					<posx>68</posx>
+					<posy>60</posy>
+					<width>1160</width>
+					<height>520</height>
+					<onleft>574</onleft>
+					<onright>574</onright>
+					<onup>10000</onup>
+					<pagecontrol>81</pagecontrol>
+					<viewtype label="535">list</viewtype>
+					<scrolltime tween="cubic" easing="out">600</scrolltime>
+					<preloaditems>2</preloaditems>
+					<orientation>horizontal</orientation>
+					
+					<visible>ControlGroup(10000).HasFocus(10004)</visible>
+					
+					<include>Common_Animation_ShowListing</include>
+					
+					<itemlayout width="190" height="260">
+
+						<control type="image">
+						<animation effect="zoom" end="115" center="auto" time="230">Focus</animation>
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>170</width>
+							<height>240</height>
+							<texture background="true" fallback="colors/color_keyboard_dark.png">$INFO[ListItem.Thumb]</texture>
+							<aspectratio>stretch</aspectratio>
+							
+						</control>
+
+					</itemlayout>
+
+					<focusedlayout width="190" height="260">
+
+						<control type="image">
+						<animation effect="zoom" end="115" center="auto" time="230">Focus</animation>
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>170</width>
+							<height>240</height>
+							<texture background="true" fallback="colors/color_keyboard_dark.png">$INFO[ListItem.Thumb]</texture>
+							<aspectratio>stretch</aspectratio>
+							
+						</control>
+						
+						<control type="image">
+						<animation effect="zoom" end="115" center="auto" time="230">Focus</animation>
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>170</width>
+							<height>240</height>
+							<texture background="true">button_selected_tall.png</texture>
+							<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+							
+						</control>
+						
+				
+
+					</focusedlayout>
+					
+					<content>
+					
+						<item id="1">
+							<thumb>$INFO[Window(Home).Property(PremiereShows.1.Art(poster))]</thumb>
+							
+							<include>Common_TraktTV_ClearProperties</include>
+	
+							<onclick>ActivateWindow(58,return)</onclick>
+						</item>
+						
+						<item id="2">
+							<thumb>$INFO[Window(Home).Property(PremiereShows.2.Art(poster))]</thumb>
+							
+							<include>Common_TraktTV_ClearProperties</include>
+				
+							<onclick>ActivateWindow(58)</onclick>
+						</item>
+						
+						<item id="3">
+							<thumb>$INFO[Window(Home).Property(PremiereShows.3.Art(poster))]</thumb>
+							
+							<include>Common_TraktTV_ClearProperties</include>
+
+							<onclick>ActivateWindow(58)</onclick>
+						</item>
+						
+						<item id="4">
+							<thumb>$INFO[Window(Home).Property(PremiereShows.4.Art(poster))]</thumb>
+							
+							<include>Common_TraktTV_ClearProperties</include>
+	
+							<onclick>ActivateWindow(58)</onclick>
+						</item>
+						
+						<item id="5">
+							<thumb>$INFO[Window(Home).Property(PremiereShows.5.Art(poster))]</thumb>
+							
+							<include>Common_TraktTV_ClearProperties</include>
+		
+							<onclick>ActivateWindow(58)</onclick>
+						</item>
+						
+						<item id="6">
+							<thumb>$INFO[Window(Home).Property(PremiereShows.6.Art(poster))]</thumb>
+							
+							<include>Common_TraktTV_ClearProperties</include>
+
+							<onclick>ActivateWindow(58)</onclick>
+						</item>
+						
+						<item id="7">
+							<thumb>$INFO[Window(Home).Property(PremiereShows.7.Art(poster))]</thumb>
+							
+							<include>Common_TraktTV_ClearProperties</include>
+		
+							<onclick>ActivateWindow(58)</onclick>
+						</item>
+						
+						<item id="8">
+							<thumb>$INFO[Window(Home).Property(PremiereShows.8.Art(poster))]</thumb>
+							
+							<include>Common_TraktTV_ClearProperties</include>
+
+							<onclick>ActivateWindow(58)</onclick>
+						</item>
+						
+						<item id="9">
+							<thumb>$INFO[Window(Home).Property(PremiereShows.9.Art(poster))]</thumb>
+							
+							<include>Common_TraktTV_ClearProperties</include>
+			
+							<onclick>ActivateWindow(58)</onclick>
+						</item>
+						
+						<item id="10">
+							<thumb>$INFO[Window(Home).Property(PremiereShows.10.Art(poster))]</thumb>
+							
+							<include>Common_TraktTV_ClearProperties</include>
+
+							<onclick>ActivateWindow(58)</onclick>
+						</item>
+						
+						
+					
+					</content>	
+
+				</control>
+				
+			</control>
+			
+		</control>
+		<include>Xbox_Logo</include>
+		<include>Snapped_Content</include>	
+	</controls>
+	
+</window>	

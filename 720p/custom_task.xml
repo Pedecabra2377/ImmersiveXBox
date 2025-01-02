@@ -1,0 +1,489 @@
+<!-- Foundation -->
+<window id="8131">
+
+	<defaultcontrol always="true">54</defaultcontrol>
+	<onload condition="Window.Previous(929)">Skin.SetString(Game0Countdown, )</onload>
+	
+	<onload condition="Window.Previous(929)">Skin.SetString(Game1Countdown, )</onload>
+	
+	<onload condition="Window.Previous(929)">Skin.SetString(Game2Countdown, )</onload>
+	
+	<onload condition="Window.Previous(929)">Skin.SetString(Game3Countdown, )</onload>
+	
+	<onload condition="Window.Previous(929)">Skin.SetString(Game4Countdown, )</onload>
+	
+	<onload condition="Window.Previous(929)">Skin.SetString(Game5Countdown, )</onload>
+	
+	<onload condition="Window.Previous(929)">Skin.SetString(Game6Countdown, )</onload>
+	<zorder>2</zorder>
+
+		
+
+	<controls>
+ <include condition="!Window.Previous(Home)">Common_Animation_Window</include>
+					  <include condition="Window.Previous(Home)">Common_Animation_apps_dash</include> 
+		<include>Common_Background_Fade</include>
+
+
+			
+						<control type="image">
+			 <include condition="!Window.Previous(Home)">Common_Animation_Window</include>
+					  <include condition="Window.Previous(Home)">Common_Animation_apps_dash</include> 
+				<posy>0</posy>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+				<texture background="true">demo/friend.jpg</texture>
+
+<visible>!Window.Previous(929)</visible>
+			</control>
+					<control type="image">
+			 <include condition="!Window.Previous(Home)">Common_Animation_Window</include>
+					  <include condition="Window.Previous(Home)">Common_Animation_apps_dash</include> 
+				<posy>0</posy>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+				<texture background="true">demo\app\info\fanart\deadrising3.jpg</texture>
+
+<visible>Window.Previous(929)</visible>
+			</control>
+			<control type="image">
+		
+			<include>Common_Dimensions</include>
+			<texture background="true">colors/color_white.png</texture>
+			<colordiffuse>FanartDiffuse</colordiffuse>
+			
+			<include>Common_Animation_Window_Dark</include>
+		<visible>Window.Previous(929)</visible>
+		</control>
+			
+					<control type="group">
+		
+			<posx>60</posx>
+			<posy>100</posy>
+		
+			
+			
+		 <include condition="!Window.Previous(Home)">Common_Animation_Window</include>
+					  <include condition="Window.Previous(Home)">Common_Animation_apps_dash</include> 
+			
+		
+			<control type="label">
+					
+				<label></label>
+				<include>Common_Section_Label</include>
+				
+			</control>
+			
+			<control type="panel" id="54">
+ <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="60" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+				<posx>0</posx>
+				<posy>20</posy>
+				<width>1200</width>
+				<height>485</height>
+				<onup>10000</onup>
+				<ondown>1</ondown>
+				<onleft>54</onleft>
+				<onright>54</onright>
+				<viewtype label="Thumb">wrap</viewtype>
+				<orientation>horizontal</orientation>
+				<pagecontrol>66</pagecontrol>
+				<scrolltime tween="cubic" easing="out">400</scrolltime>
+				<preloaditems>4</preloaditems>
+
+				<visible>!Window.Previous(929)</visible>
+				
+				<itemlayout width="220" height="230">
+
+					<control type="group">
+		
+						<posx>0</posx>
+						<posy>40</posy>
+						<width>200</width>
+						<height>210</height>
+						
+						<control type="image">
+					
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>200</width>
+							<height>210</height>
+							<texture>colors/color_keyboard_dark.png</texture>
+							
+						</control>
+						
+						<control type="image">
+					
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>200</width>
+							<height>210</height>
+							<texture background="true" fallback="colors/color_keyboard_dark.png">$INFO[ListItem.Thumb]</texture>
+							<aspectratio>scale</aspectratio>
+							
+						</control>
+						
+						<control type="image">
+					
+							<posx>0</posx>
+							<posy>150</posy>
+							<width>200</width>
+							<height>60</height>
+							<texture>colors/color_white.png</texture>
+							<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+						</control>
+						
+						<control type="label">
+							
+							<posx>10</posx>
+							<posy>158</posy>
+							<width>180</width>
+							<height>20</height>
+							<textcolor>Label_Normal</textcolor>
+							<font>Menu-Thumbnail-Header</font>
+							<aligny>top</aligny>
+							<label>$VAR[ExtendedList_Header]</label>
+						
+						</control>
+						
+						<control type="label">
+							
+							<posx>10</posx>
+							<posy>178</posy>
+							<width>180</width>
+							<height>20</height>
+							<textcolor>Label_Normal</textcolor>
+							<font>Menu-Thumbnail-Detail</font>
+							<aligny>top</aligny>
+							<label>$VAR[ExtendedList_Detail]</label>
+							
+						</control>
+						
+						<control type="group">
+						
+							<posx>0</posx>
+							<posy>118</posy>
+							<width>32</width>
+							<height>32</height>
+		
+							<include>Common_View_Overlay</include>
+		
+						</control>
+						
+					</control>
+					
+				</itemlayout>
+
+				<focusedlayout width="220" height="230">
+				
+					<control type="group">
+		
+						<posx>0</posx>
+						<posy>40</posy>
+						<width>200</width>
+						<height>210</height>
+						
+						<control type="image">
+					
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>200</width>
+							<height>210</height>
+							<texture>colors/color_keyboard_dark.png</texture>
+							
+						</control>
+						
+						<control type="image">
+					
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>200</width>
+							<height>210</height>
+							<texture background="true" fallback="colors/color_keyboard_dark.png">$INFO[ListItem.Thumb]</texture>
+							<aspectratio>scale</aspectratio>
+							
+						</control>
+						
+						<control type="image">
+					
+							<posx>0</posx>
+							<posy>150</posy>
+							<width>200</width>
+							<height>60</height>
+							<texture>colors/color_white.png</texture>
+							<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+							
+						</control>
+						
+						<control type="label">
+							
+							<posx>10</posx>
+							<posy>158</posy>
+							<width>180</width>
+							<height>20</height>
+							<textcolor>Label_Normal</textcolor>
+							<font>Menu-Thumbnail-Header</font>
+							<aligny>top</aligny>
+							<label>$VAR[ExtendedList_Header]</label>
+						
+						</control>
+						
+						<control type="label">
+							
+							<posx>10</posx>
+							<posy>178</posy>
+							<width>180</width>
+							<height>20</height>
+							<textcolor>Label_Normal</textcolor>
+							<font>Menu-Thumbnail-Detail</font>
+							<aligny>top</aligny>
+							<label>$VAR[ExtendedList_Detail]</label>
+							
+						</control>
+
+						<control type="group">
+						
+							<posx>0</posx>
+							<posy>118</posy>
+							<width>32</width>
+							<height>32</height>
+		
+							<include>Common_View_Overlay</include>
+		
+						</control>						
+						
+					</control>
+					
+				</focusedlayout>
+<content>
+					<item id="1">
+		<onclick>Skin.Setstring(Email1)</onclick>
+		<onclick>Skin.SetImage(Email1Image)</onclick>
+<onclick condition="!Skin.HasSetting(Friend1)">Skin.ToggleSetting(Friend1)</onclick>
+						<label>Adicionar nota</label>
+						<thumb></thumb>
+						<visible>!Skin.HasSetting(Friend1)</visible>
+					</item>
+										
+					
+				</content>
+			</control>
+			
+			
+			<!--Scrollbar-->
+		<control type="panel" id="54">
+ <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="60" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+				<posx>0</posx>
+				<posy>50</posy>
+				<width>1200</width>
+				<height>485</height>
+				<onup>10000</onup>
+				<ondown>1</ondown>
+				<onleft>54</onleft>
+				<onright>54</onright>
+				<viewtype label="Details">panel</viewtype>
+				<orientation>horizontal</orientation>
+				<pagecontrol>69</pagecontrol>
+				<focusposition>0</focusposition>
+				<scrolltime tween="cubic" easing="out">500</scrolltime>
+				<preloaditems>4</preloaditems>
+<visible>Window.Previous(929)</visible>
+			
+				
+				<itemlayout width="440" height="115">
+				
+					<control type="image">
+							<posx>2</posx>
+							<posy>2</posy>
+						<width>420</width>
+						<height>95</height>
+						<texture border="2">colors/color_white.png</texture>
+						<colordiffuse>FanartDiffuse</colordiffuse>
+						
+					</control>
+			
+					<include>Common_View_Details2</include>
+					
+				</itemlayout>
+
+				<focusedlayout width="440" height="115">
+
+					<control type="image">
+							<posx>2</posx>
+							<posy>2</posy>
+						<width>420</width>
+						<height>95</height>
+						<texture border="2">colors/color_white.png</texture>
+						<colordiffuse>FanartDiffuse</colordiffuse>
+						
+						<visible>!Control.HasFocus(54)</visible>
+
+					</control>
+				<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+						<width>424</width>
+						<height>99</height>
+						<texture border="2">colors/color_white.png</texture>
+						
+						
+						<visible>Control.HasFocus(54)</visible>
+
+					</control>
+					<control type="image">
+							<posx>2</posx>
+							<posy>2</posy>
+						<width>420</width>
+						<height>95</height>
+						<texture border="2">colors/butt.png</texture>
+						
+						
+						<visible>Control.HasFocus(54)</visible>
+
+					</control>
+
+					<include>Common_View_Details2</include>
+
+				</focusedlayout>
+<content>
+					<item>
+		<onclick>RunScript(special://skin/system/gamecount.py)</onclick>
+		
+						<label>The Division</label>
+						<label2 fallback="TBC 2015">$INFO[Skin.String(Game0Countdown)]</label2>
+						<thumb>https://farm6.staticflickr.com/5278/14391631636_f591effc5e.jpg</thumb>
+						
+					</item>
+					<item>
+		<onclick>RunScript(special://skin/system/gamecount.py)</onclick>
+		
+						<label>Far Cry 4</label>
+						<label2 fallback="18/11/2014">$INFO[Skin.String(Game1Countdown)]</label2>
+						<thumb>http://assets.vg247.com/current//2014/05/far_cry_4.jpg</thumb>
+						
+					</item>
+					<item>
+		<onclick>RunScript(special://skin/system/gamecount.py)</onclick>
+		
+						<label>Grand Theft Auto V</label>
+						<label2 fallback="27/01/2015">$INFO[Skin.String(Game1Countdown)]</label2>
+						<thumb>http://media.rockstargames.com/rockstargames/img/global/news/upload/actual_1364906194.jpg</thumb>
+						
+					</item>
+					<item>
+	<onclick>RunScript(special://skin/system/gamecount.py)</onclick>
+		
+						<label>Assassins Creed Unity</label>
+						<label2 fallback="14/11/2014">$INFO[Skin.String(Game2Countdown)]</label2>
+						<thumb>http://www.instant-gaming.com/images/products/568/271x377/568.jpg</thumb>
+						
+					</item>
+					<item>
+		<onclick>RunScript(special://skin/system/gamecount.py)</onclick>
+		
+						<label>The Crew</label>
+						<label2 fallback="02/12/2014">$INFO[Skin.String(Game3Countdown)]</label2>
+						<thumb>http://progame.info/uploads/posts/2013-10/1383169368_jaquette-the-crew-xbox-one-cover-avant-g-1370908508_enl.jpg</thumb>
+						
+					</item>
+					<item>
+		<onclick>RunScript(special://skin/system/gamecount.py)</onclick>
+		
+						<label>Dying Light</label>
+						<label2 fallback="30/01/2015">$INFO[Skin.String(Game4Countdown)]</label2>
+						<thumb>http://upload.wikimedia.org/wikipedia/en/c/c0/Dying_Light_cover.jpg</thumb>
+						
+					</item>
+					<item>
+		<onclick>RunScript(special://skin/system/gamecount.py)</onclick>
+		
+						<label>Evolve</label>
+						<label2 fallback="10/02/2015">$INFO[Skin.String(Game5Countdown)]</label2>
+						<thumb>http://upload.wikimedia.org/wikipedia/ru/1/11/Evolve_Box_Art.png</thumb>
+						
+					</item>
+					<item>
+		<onclick>RunScript(special://skin/system/gamecount.py)</onclick>
+		
+						<label>Project Cars</label>
+						<label2 fallback="20/03/2015">$INFO[Skin.String(Game6Countdown)]</label2>
+						<thumb>http://inthegame.jjmedia.netdna-cdn.com/wp-content/uploads/2014/08/ProjectCARS_CoverFinal.jpg</thumb>
+						
+					</item>
+					<item>
+		<onclick>RunScript(special://skin/system/gamecount.py)</onclick>
+		
+						<label>Battlefield Hardline</label>
+						<label2 fallback="20/03/2015">$INFO[Skin.String(Game6Countdown)]</label2>
+						<thumb>http://img.game.co.uk/ml2/3/0/0/1/300113_xb1_b.png</thumb>
+						
+					</item>
+					<item>
+		<onclick>RunScript(special://skin/system/gamecount.py)</onclick>
+		
+						<label>Rainbow Six Seige</label>
+					<label2 fallback="TBC 2015">$INFO[Skin.String(Game0Countdown)]</label2>
+						<thumb>http://www.gamingdragons.com/images/game_img/siege.jpg</thumb>
+						
+					</item>
+						<item>
+		<onclick>RunScript(special://skin/system/gamecount.py)</onclick>
+		
+						<label>Dead Island 2</label>
+					<label2 fallback="TBC 2015">$INFO[Skin.String(Game0Countdown)]</label2>
+						<thumb>http://upload.wikimedia.org/wikipedia/en/0/08/Dead_Island_2_cover_art.jpg</thumb>
+						
+					</item>
+							<item>
+		<onclick>RunScript(special://skin/system/gamecount.py)</onclick>
+		
+						<label>Metal Gear Solid V</label>
+					<label2 fallback="TBC 2015">$INFO[Skin.String(Game0Countdown)]</label2>
+						<thumb>http://img1.wikia.nocookie.net/__cb20140317223027/metalgear/images/d/d8/Metal_Gear_Solid_V_Ground_Zeroes_main_promotional_art.jpg</thumb>
+						
+					</item>
+						<item>
+		<onclick>RunScript(special://skin/system/gamecount.py)</onclick>
+		
+						<label>Escape Dead Island</label>
+					<label2 fallback="TBC 2015">$INFO[Skin.String(Game0Countdown)]</label2>
+						<thumb>http://img2.wikia.nocookie.net/__cb20140703000434/deadisland/images/6/6b/EscapeFromDeadIsland.jpg</thumb>
+						
+					</item>
+					
+					
+				</content>
+			</control>
+
+		</control>	
+					<control type="label">
+				 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="150" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+			
+					<posx>77</posx>
+					<posy>70</posy>
+					<width>550</width>
+					<height>48</height>
+					<label>Jogos vindo</label>
+					<font>Charms-Date4</font>
+					<textcolor>Label_Normal</textcolor>
+					<aligny>center</aligny>
+						<alignx>center</alignx>
+						<visible>Window.Previous(929)</visible>
+				</control>
+		
+		<include condition="Window.Previous(929)">Xbox_Logo</include>
+		<include condition="!Window.Previous(929)">Xbox_Logo</include>
+<include>Snapped_Content</include>	
+	</controls>
+
+</window>

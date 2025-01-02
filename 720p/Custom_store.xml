@@ -1,0 +1,243 @@
+<window id="911">
+
+	<defaultcontrol always="true">1</defaultcontrol>
+	
+	<zorder>2</zorder>
+	
+	<include>Common_Animation_Window</include>
+
+
+	
+	<!--Splash Screen-->
+
+	
+
+
+	
+
+	
+	<controls>
+
+		<!--Background Area-->
+
+		
+<control type="image">
+							
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1280</width>
+								<height>720</height>
+								<texture>demo/app/store/bg.jpg</texture>
+						
+								
+							</control>
+<control type="image">
+							
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1280</width>
+								<height>720</height>
+								<texture>demo/app/store/1.jpg</texture>
+						
+							<visible>Control.HasFocus(1)</visible>	
+							</control>
+<control type="image">
+							
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1280</width>
+								<height>720</height>
+								<texture>demo/app/store/2.jpg</texture>
+						
+							<visible>Control.HasFocus(2)</visible>	
+							</control>
+<control type="image">
+							
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1280</width>
+								<height>720</height>
+								<texture>demo/app/store/3.jpg</texture>
+						
+							<visible>Control.HasFocus(3)</visible>	
+							</control>
+<control type="image">
+							
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1280</width>
+								<height>720</height>
+								<texture>demo/app/store/4.jpg</texture>
+						
+							<visible>Control.HasFocus(4)</visible>	
+							</control>
+
+
+
+									<!--Top Area-->
+
+			
+			<!--Content Area-->
+			<control type="group">
+			
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+				
+				<!--Animation-->
+				<include condition="!Skin.HasSetting(disablesplash)">Common_Animation_Content_Splash</include>
+				<include condition="!Window.Previous(home)">Common_Animation_Content</include>
+				
+				<control type="grouplist">
+		
+					<include>Common_Content_Grouplist</include>
+					
+					<control type="group" id="100">
+					
+						<posx>60</posx>
+						<posy>0</posy>
+						<width>400</width>
+						<height>480</height>
+						
+						
+			
+				
+
+										<control type="panel" id="1">
+<posx>915</posx>
+						<posy>200</posy>
+
+						
+						<include>Common_AltHome_Panel3</include>
+<onleft>4</onleft>
+						<onright>2</onright>
+					
+						<pagecontrol>7017</pagecontrol>
+						
+						<content>
+						
+
+							
+																					<item id="1">
+								<description>Games</description>
+								<label>Games</label>
+								<thumb>SHORT\ICO\Games.png</thumb>
+								<onclick>ActivateWindow(665,return)</onclick>
+								
+														
+							</item>
+							
+
+
+								</content>
+
+					</control>
+															<control type="panel" id="2">
+<posx>915</posx>
+						<posy>200</posy>
+
+						
+						<include>Common_AltHome_Panel3</include>
+<onleft>1</onleft>
+						<onright>3</onright>
+					
+						<pagecontrol>7017</pagecontrol>
+						
+						<content>
+						
+
+							
+																					<item id="1">
+								<description>Games</description>
+								<label>Games</label>
+								<thumb>SHORT\ICO\Games.png</thumb>
+								<onclick>ActivateWindow(61,return)</onclick>
+								
+														
+							</item>
+							
+
+
+								</content>
+
+					</control>
+															<control type="panel" id="3">
+<posx>915</posx>
+						<posy>200</posy>
+
+						
+						<include>Common_AltHome_Panel3</include>
+<onleft>2</onleft>
+						<onright>4</onright>
+					
+						<pagecontrol>7017</pagecontrol>
+						
+						<content>
+						
+
+							
+																					<item id="1">
+								<description>Games</description>
+								<label>Games</label>
+								<thumb>SHORT\ICO\Games.png</thumb>
+								<onclick>ActivateWindow(63,return)</onclick>
+								
+														
+							</item>
+							
+
+
+								</content>
+
+					</control>
+															<control type="panel" id="4">
+<posx>915</posx>
+						<posy>200</posy>
+
+						
+						<include>Common_AltHome_Panel3</include>
+<onleft>3</onleft>
+						<onright>1</onright>
+					
+						<pagecontrol>7017</pagecontrol>
+						
+						<content>
+						
+
+							
+																					<item id="1">
+								<description>Games</description>
+								<label>Games</label>
+								<thumb>SHORT\ICO\Games.png</thumb>
+								<onclick>ActivateWindow(10001,addons://sources/executable/,return)</onclick>
+								
+														
+							</item>
+							
+
+
+								</content>
+
+					</control>
+									
+
+				
+						
+						<!--Scrollbar-->
+
+					
+					</control>
+					
+			
+					
+				</control>
+				
+			</control>
+
+			
+		
+		
+	</controls>	
+		
+</window>

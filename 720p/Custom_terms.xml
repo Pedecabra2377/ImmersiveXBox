@@ -1,0 +1,271 @@
+<window type="dialog" id="560">
+
+	<defaultcontrol always="true">5</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<zorder>2</zorder>
+	<onload>Skin.SetString(TermsXBMC, )</onload>
+	<onload>Control.SetFocus(5)</onload>
+
+
+	<controls>
+	
+			<control type="image">
+		
+			<include>Common_Dimensions</include>
+			<texture background="true">colors/color_white.png</texture>
+			<colordiffuse>FanartDiffuse</colordiffuse>
+			
+			<include>Common_Animation_Window_Dark</include>
+			<visible>!Player.HasMedia</visible>
+		</control>
+
+
+		
+		
+	
+		<!--Charm Bar Section-->
+		<control type="group">
+		
+			<posx>0</posx>
+			<posy>0</posy>
+			
+			 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="150" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+				
+
+	<control type="image">
+				 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="150" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+				
+				<posx>0</posx>
+				<posy>105</posy>
+				<width>1500</width>
+				<height>500</height>
+				<texture>demo\install\1.png</texture>
+			
+			</control>
+			<control type="image">
+				 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="150" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+				
+				<posx>0</posx>
+				<posy>105</posy>
+				<width>1500</width>
+				<height>500</height>
+				<texture>demo\install\1.png</texture>
+				<visible>Control.HasFocus(1)</visible>
+			</control>
+			<control type="image">
+				 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="150" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+				
+				<posx>0</posx>
+				<posy>105</posy>
+				<width>1500</width>
+				<height>500</height>
+				<texture>demo\install\2.png</texture>
+				<visible>Control.HasFocus(2)</visible>
+			</control>
+			
+			<control type="label">
+				 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="150" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+			<visible>!Window.Previous(SkinSettings)</visible>
+					<posx>180</posx>
+					<posy>110</posy>
+					<width>550</width>
+					<height>48</height>
+					<label>Termos de uso Microsoft</label>
+					<font>Charms-Date</font>
+					<textcolor>Label_Normal</textcolor>
+					<aligny>center</aligny>
+						<alignx>center</alignx>
+				</control>
+				<control type="textbox">
+				 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="150" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+				<visible>!Window.Previous(SkinSettings)</visible>
+					<posx>180</posx>
+					<posy>160</posy>
+						<width>900</width>
+								<height>365</height>
+					<label>[CR]Obrigado por escolher a Microsoft! Este é um contrato entre você e a Microsoft Corporation (ou, com base em onde você mora, uma de suas afiliadas) que descreve seus direitos de usar o software e os serviços identificados na seção 1.1. Para sua conveniência, formulamos alguns dos termos deste Contrato em um formato de perguntas e respostas. Você deve revisar todo o Contrato porque todos os termos são importantes e juntos criam um contrato legal que, uma vez aceito por você, se aplica a você.
+
+1. Escopo da aceitação e alterações do Contrato
+
+1.1. Quais serviços são cobertos por este Contrato? Este Contrato se aplica a aplicativos e serviços de conteúdo de jogos do Xbox, incluindo Xbox Live SmartGlass Games para Windows-Live Xbox Video Xbox Music e Windows Phone Store/Marketplace (incluindo qualquer loja fornecida sob a marca de um parceiro do Windows Phone que se vincula a este contrato), incluindo serviços ou software que permitem que você faça streaming, baixe, visualize ou use determinado conteúdo digital, como aplicativos de videogame de música e outros conteúdos que a Microsoft disponibiliza de tempos em tempos (os �Serviços�). Os Serviços podem ser acessados ​​do console Xbox One, do console Xbox 360, de um computador pessoal, de um dispositivo móvel, de um reprodutor de mídia portátil ou de outros dispositivos, cada um conforme autorizado pela Microsoft (cada um um "Dispositivo Autorizado") ou online. Ao usar os Serviços, você deve obedecer a estes termos ("este Contrato").
+
+1.2. Existem termos adicionais para usar os Serviços? Nosso objetivo é criar um ambiente mais seguro e protegido, portanto, ao usar os Serviços, os usuários devem obedecer ao seguinte, todos os quais fazem parte deste Contrato:
+
+Estes Termos de Uso
+As regras de uso do Xbox Live (http://www.xbox.com/usagerules)
+A Política Antispam da Microsoft (http://go.microsoft.com/fwlink/?LinkId=117951); e
+O Código de Conduta (http://www.xbox.com/legal/codeofconduct)
+
+1.3. Existem termos adicionais para usar os Serviços ou o conteúdo acessado por meio dos Serviços? Identificaremos o provedor de cada aplicativo disponível como parte ou por meio dos Serviços. Certos jogos, aplicativos, conteúdo, serviços on-line, publicidade ou eventos de terceiros (por exemplo, sorteios e torneios) que estão disponíveis nos Serviços ou por meio deles (�Recursos de Terceiros�) podem fornecer termos de contrato separados ou adicionais, políticas de privacidade e outras condições que regem seu uso desses Recursos de Terceiros (coletivamente �Termos Adicionais�).
+
+Os Termos de Licença de Aplicativo Padrão no final deste Contrato são os Termos Adicionais que se aplicam ao seu uso desses Recursos de Terceiros disponíveis por meio da Windows Phone Store/Marketplace, a menos que um aplicativo da Windows Phone Store/Marketplace forneça a você Termos Adicionais separados que se apliquem em vez disso.
+
+A Microsoft é parte dos Termos Adicionais somente quando a Microsoft é a provedora dos Serviços aplicáveis. A Microsoft não licencia nenhuma propriedade intelectual para você como parte de quaisquer Recursos de Terceiros disponibilizados por meio dos Serviços, e não somos responsáveis, a menos que exigido por lei, por:
+
+os Recursos de Terceiros;
+seu uso dos Recursos de Terceiros;
+o conteúdo dos Recursos de Terceiros;
+suporte ao cliente para os Recursos de Terceiros; ou
+quaisquer garantias ou reivindicações relacionadas aos Recursos de Terceiros.
+Este Contrato e as Declarações de Privacidade referenciadas neste Contrato não se aplicam aos Recursos de Terceiros, e os Termos Adicionais que regem tais recursos não modificam quaisquer termos deste Contrato de forma alguma.
+
+Scripts ou códigos de terceiros, vinculados ou referenciados a partir destes Serviços, são licenciados a você pelos terceiros que possuem tal código, não pela Microsoft.
+
+1.4 Como aceito este Contrato? Ao usar ou acessar os Serviços, ou ao concordar com estes termos onde a opção é disponibilizada a você na interface do usuário, você concorda em cumprir este Contrato sem modificações por você. Se você não concordar, não poderá usar os Serviços.
+
+1.5 Uma conta da Microsoft é necessária para usar os Serviços. Pode ser necessário aceitar outros termos de uso e fornecer informações adicionais para usar sua conta da Microsoft com outros serviços da Microsoft.
+
+1.6 A Microsoft pode alterar este Contrato depois que eu o aceitar? Sim. De tempos em tempos, a Microsoft pode alterar ou emendar estes termos. Se o fizermos, notificaremos você, por meio da interface do usuário, em uma notificação por e-mail ou por outros meios razoáveis. Seu uso dos Serviços após a data em que a alteração entrar em vigor será seu consentimento aos termos alterados. Se você não concordar com as alterações, deverá parar de usar os Serviços e cancelar quaisquer Serviços pagos seguindo as instruções na seção 6.10. Caso contrário, os novos termos serão aplicáveis.</label>
+					<font>DialogInfo-Label-install</font>
+			<textcolor>Label_Normal</textcolor>
+					<aligny>center</aligny>
+						<alignx>center</alignx>
+						<pagecontrol>130</pagecontrol>
+						<autoscroll delay="2000" time="1000" repeat="10000">!Control.HasFocus(130)</autoscroll>
+				</control>
+				<control type="label">
+				 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="150" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+			<visible>Window.Previous(SkinSettings)</visible>
+					<posx>180</posx>
+					<posy>110</posy>
+					<width>550</width>
+					<height>48</height>
+					<label>Mudanças no Xbox</label>
+					<font>Charms-Date</font>
+					<textcolor>Label_Normal</textcolor>
+					<aligny>center</aligny>
+						<alignx>center</alignx>
+				</control>
+				<control type="textbox">
+				 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="150" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+				<visible>Window.Previous(SkinSettings)</visible>
+					<posx>180</posx>
+					<posy>160</posy>
+						<width>900</width>
+								<height>365</height>
+					<label>[CR]$INFO[Skin.String(TermsXBMC)]</label>
+					<font>DialogInfo-Label-install</font>
+			<textcolor>Label_Normal</textcolor>
+					<aligny>center</aligny>
+						<alignx>center</alignx>
+						<pagecontrol>130</pagecontrol>
+						<autoscroll delay="2000" time="1000" repeat="10000">!Control.HasFocus(130)</autoscroll>
+				</control>
+				
+				<control type="image">
+                        <description>Scrollbar background</description>
+                     				<posx>1100</posx>
+		<posy>160</posy>
+                        <width>6</width>
+                        <height>365</height>
+                        <texture border="1">colors/color_keyboard.png</texture>
+                        <visible>Control.IsVisible(130)</visible>
+                        <animation effect="fade" start="80" end="100" time="300" tween="sine" easing="inout" condition="Control.HasFocus(130)">Conditional</animation>
+                    </control>
+			
+				<control type="scrollbar" id="130">
+											 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="50" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+                        <description>Scrollbar</description>
+                				<posx>1100</posx>
+		<posy>160</posy>
+                        <width>6</width>
+                        <height>365</height>
+                             
+               <onright>5</onright>
+        <onleft>5</onleft>
+                        <texturesliderbar border="1">colors/color_white.png</texturesliderbar>
+                        <texturesliderbarfocus border="1">colors/color_white.png</texturesliderbarfocus>
+                        <orientation>vertical</orientation>
+                        <showonepage>false</showonepage>
+                        <animation effect="fade" start="80" end="35" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(130)">Conditional</animation>
+                   
+                    </control>
+			
+			
+			<control type="panel" id="5">
+	
+<posx>180</posx>
+						<posy>540</posy>
+
+			<onup>130</onup>
+			<onright>130</onright>
+			
+						<include>Common_AltHome_Panel390</include>
+					
+
+
+
+
+						
+						
+						<content>
+						
+
+							
+						
+							<item id="1">
+								<description>Games</description>
+								<label>    Fechar</label>
+								<thumb></thumb>
+									<onclick>Back</onclick>		
+							
+						
+
+								
+							</item>
+			
+								
+		
+							
+
+								</content>
+
+					</control>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+						
+
+		</control>
+
+		
+	</controls>	
+	
+</window>

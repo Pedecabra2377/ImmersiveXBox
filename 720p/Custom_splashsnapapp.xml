@@ -1,0 +1,27 @@
+<!-- Foundation -->
+<window type="dialog" id="1127">
+
+	<zorder>2</zorder>
+	<onload>AlarmClock(welcome,Dialog.Close(1127),00:03,silent,)</onload>
+
+
+<onload>Dialog.Close(1122)</onload>
+		<onload>AlarmClock(welcome2,ReplaceWindow($INFO[Skin.String(snapwindow)]),00:01,silent,)</onload>								
+	<controls>
+																<control type="image">
+																	
+							 <posx>0</posx>
+      <posy>0</posy>
+      <width>1280</width>
+      <height>720</height>
+								<texture>1\$INFO[Skin.String(snap)]</texture>
+				 <aspectratio>stretch</aspectratio>
+            <align>center</align>
+						<include>Common_Animation_vid3</include>
+							</control>
+			
+	
+	
+	</controls>
+
+</window>

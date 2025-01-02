@@ -1,0 +1,1330 @@
+<window id="4321">
+
+	<defaultcontrol always="true">11</defaultcontrol>
+	
+	<zorder>2</zorder>
+
+	
+	
+	<!--Splash Screen-->
+	
+<onload condition="Container(20).HasFocus(2)">Control.Move(20,-1)</onload>
+<onload condition="Container(20).HasFocus(3)">Control.Move(20,-2)</onload>
+<onload condition="Container(20).HasFocus(4)">Control.Move(20,-3)</onload>
+<onload condition="Container(20).HasFocus(5)">Control.Move(20,-4)</onload>
+<onload condition="Container(20).HasFocus(6)">Control.Move(20,-5)</onload>
+<onload>Skin.SetString(steame,Search Steam)</onload>
+<onload condition="Skin.HasSetting(SnapFeature) + Skin.HasSetting(SnapAlways)">Skin.SetString(snap, C:\Assistance\Snap\Pic\Item.jpg,0)</onload>
+<onload condition="Skin.HasSetting(SnapFeature) + Skin.HasSetting(SnapAlways)">AlarmClock(startsnap,RunScript(special://skin/system/Snap.py),00:01,silent)</onload>
+
+		<onload>Skin.SetString(snapwindow, 4321)</onload>
+<onload condition="!Skin.HasSetting(snapie)">Skin.ToggleSetting(snapie)</onload>
+<onload condition="Skin.HasSetting(gaming)">Skin.ToggleSetting(gaming)</onload>
+<onload>Skin.SetString(snap, demo/sna/steamstore.jpg,0)</onload>
+<onload>Skin.SetString(sn,Steam Store)</onload>
+	
+	<controls>
+
+		<!--Background Area-->
+
+
+																									<control type="image">
+											
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1280</width>
+								<height>720</height>
+								<texture>colors\color_black.png</texture>
+
+							</control>	
+									<control type="multiimage">
+				<include>Common_Dimensions</include>
+				<imagepath background="true">demo\app\steamstore\feat\</imagepath>
+				<timeperimage>5000</timeperimage>
+				<randomize>true</randomize>
+				<fadetime>1000</fadetime>
+				<visible>Skin.HasSetting(ShowFanartBackground)</visible>
+			</control>
+														<control type="image">
+			
+				<include>Common_Dimensions</include>
+				<texture background="true">colors/color_white.png</texture>
+				<colordiffuse>FanartDiffuse</colordiffuse>
+				
+				<visible>Skin.HasSetting(ShowFanartBackground)</visible>
+				
+			</control>
+							
+
+		
+
+
+	
+										<control type="grouplist">
+			<visible>true</visible>
+													<!--Animation-->
+				<include>Common_Animation_Window</include>		
+				<posx>128</posx>
+				<posy>100</posy>
+				<width>1100</width>
+				<height>100</height>
+				<orientation>horizontal</orientation>
+				<itemgap>20</itemgap>
+												<control type="label">
+						<visible>true</visible>
+					<width min="0" max="400">auto</width>
+					<height>100</height>
+					<label>Featured</label>
+					<font>Content-Label</font>
+					<textcolor>FF333333</textcolor>
+					<aligny>top</aligny>
+<animation effect="zoom" end="108" center="auto" time="200" condition="Container(20).HasFocus(1) + Skin.HasSetting(textview)">Conditional</animation>
+				</control>
+				
+				<control type="label">
+						<visible>true</visible>
+					<width min="0" max="400">auto</width>
+					<height>100</height>
+					<label>Demos</label>
+					<font>Content-Label</font>
+					<textcolor>FF333333</textcolor>
+					<aligny>top</aligny>
+<animation effect="zoom" end="108" center="auto" time="200" condition="Container(20).HasFocus(2) + Skin.HasSetting(textview)">Conditional</animation>
+				</control>
+								<control type="label">
+						<visible>true</visible>
+					<width min="0" max="400">auto</width>
+					<height>100</height>
+					<label>Software</label>
+					<font>Content-Label</font>
+					<textcolor>FF333333</textcolor>
+					<aligny>top</aligny>
+<animation effect="zoom" end="108" center="auto" time="200" condition="Container(20).HasFocus(3) + Skin.HasSetting(textview)">Conditional</animation>
+				</control>
+									<control type="label">
+						<visible>true</visible>
+					<width min="0" max="400">auto</width>
+					<height>100</height>
+					<label>Free</label>
+					<font>Content-Label</font>
+					<textcolor>FF333333</textcolor>
+					<aligny>top</aligny>
+<animation effect="zoom" end="108" center="auto" time="200" condition="Container(20).HasFocus(4) + Skin.HasSetting(textview)">Conditional</animation>
+				</control>
+												<control type="label">
+						<visible>true</visible>
+					<width min="0" max="400">auto</width>
+					<height>100</height>
+					<label>Deals</label>
+					<font>Content-Label</font>
+					<textcolor>FF333333</textcolor>
+					<aligny>top</aligny>
+<animation effect="zoom" end="108" center="auto" time="200" condition="Container(20).HasFocus(5) + Skin.HasSetting(textview)">Conditional</animation>
+				</control>
+																<control type="label">
+						<visible>true</visible>
+					<width min="0" max="400">auto</width>
+					<height>100</height>
+					<label>Steam</label>
+					<font>Content-Label</font>
+					<textcolor>FF333333</textcolor>
+					<aligny>top</aligny>
+<animation effect="zoom" end="108" center="auto" time="200" condition="Container(20).HasFocus(6) + Skin.HasSetting(textview)">Conditional</animation>
+				</control>
+
+				
+
+				</control>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+										<control type="grouplist">
+			<visible>true</visible>
+													<!--Animation-->
+			<include>Common_Animation_Window</include>	
+				<posx>128</posx>
+				<posy>100</posy>
+				<width>1100</width>
+				<height>100</height>
+				<orientation>horizontal</orientation>
+				<itemgap>20</itemgap>
+												<control type="label">
+						<visible>true</visible>
+					<width min="0" max="400">auto</width>
+					<height>100</height>
+					<label>Featured</label>
+					<font>Content-Label</font>
+					<textcolor>FFFFFFFF</textcolor>
+					<aligny>top</aligny>
+					<animation effect="zoom" end="108" center="auto" time="200" condition="Container(20).HasFocus(1) + Skin.HasSetting(textview)">Conditional</animation>
+                       <animation effect="fade" start="0" end="100" time="200" tween="cubic" easing="inout" condition="Container(20).HasFocus(1)">Conditional</animation>
+                <animation effect="fade" start="100" end="0" time="200" tween="cubic" easing="inout" condition="!Container(20).HasFocus(1)">Conditional</animation>
+				</control>
+				
+				<control type="label">
+						<visible>true</visible>
+					<width min="0" max="400">auto</width>
+					<height>100</height>
+					<label>Demos</label>
+					<font>Content-Label</font>
+					<textcolor>FFFFFFFF</textcolor>
+					<aligny>top</aligny>
+								 <animation effect="zoom" end="108" center="auto" time="200" condition="Container(20).HasFocus(2) + Skin.HasSetting(textview)">Conditional</animation>
+                              <animation effect="fade" start="0" end="100" time="200" tween="cubic" easing="inout" condition="Container(20).HasFocus(2)">Conditional</animation>
+                <animation effect="fade" start="100" end="0" time="200" tween="cubic" easing="inout" condition="!Container(20).HasFocus(2)">Conditional</animation>
+				</control>
+					<control type="label">
+						<visible>true</visible>
+					<width min="0" max="400">auto</width>
+					<height>100</height>
+					<label>Software</label>
+					<font>Content-Label</font>
+					<textcolor>FFFFFFFF</textcolor>
+					<aligny>top</aligny>
+								 <animation effect="zoom" end="108" center="auto" time="200" condition="Container(20).HasFocus(3) + Skin.HasSetting(textview)">Conditional</animation>
+                              <animation effect="fade" start="0" end="100" time="200" tween="cubic" easing="inout" condition="Container(20).HasFocus(3)">Conditional</animation>
+                <animation effect="fade" start="100" end="0" time="200" tween="cubic" easing="inout" condition="!Container(20).HasFocus(3)">Conditional</animation>
+				</control>
+									<control type="label">
+						<visible>true</visible>
+					<width min="0" max="400">auto</width>
+					<height>100</height>
+					<label>Free</label>
+					<font>Content-Label</font>
+					<textcolor>FFFFFFFF</textcolor>
+					<aligny>top</aligny>
+								 <animation effect="zoom" end="108" center="auto" time="200" condition="Container(20).HasFocus(4) + Skin.HasSetting(textview)">Conditional</animation>
+                              <animation effect="fade" start="0" end="100" time="200" tween="cubic" easing="inout" condition="Container(20).HasFocus(4)">Conditional</animation>
+                <animation effect="fade" start="100" end="0" time="200" tween="cubic" easing="inout" condition="!Container(20).HasFocus(4)">Conditional</animation>
+				</control>
+													<control type="label">
+						<visible>true</visible>
+					<width min="0" max="400">auto</width>
+					<height>100</height>
+					<label>Deals</label>
+					<font>Content-Label</font>
+					<textcolor>FFFFFFFF</textcolor>
+					<aligny>top</aligny>
+								 <animation effect="zoom" end="108" center="auto" time="200" condition="Container(20).HasFocus(5) + Skin.HasSetting(textview)">Conditional</animation>
+                              <animation effect="fade" start="0" end="100" time="200" tween="cubic" easing="inout" condition="Container(20).HasFocus(5)">Conditional</animation>
+                <animation effect="fade" start="100" end="0" time="200" tween="cubic" easing="inout" condition="!Container(20).HasFocus(5)">Conditional</animation>
+				</control>
+																	<control type="label">
+						<visible>true</visible>
+					<width min="0" max="400">auto</width>
+					<height>100</height>
+					<label>Steam</label>
+					<font>Content-Label</font>
+					<textcolor>FFFFFFFF</textcolor>
+					<aligny>top</aligny>
+								 <animation effect="zoom" end="108" center="auto" time="200" condition="Container(20).HasFocus(6) + Skin.HasSetting(textview)">Conditional</animation>
+                              <animation effect="fade" start="0" end="100" time="200" tween="cubic" easing="inout" condition="Container(20).HasFocus(6)">Conditional</animation>
+                <animation effect="fade" start="100" end="0" time="200" tween="cubic" easing="inout" condition="!Container(20).HasFocus(6)">Conditional</animation>
+				</control>
+				
+	
+
+
+				</control>
+				
+		
+				        <control type="wraplist" id="20">
+            <description>Control list</description>
+            <posx>0</posx>
+            <posy>0</posy>
+            <height>2</height>
+            <width>2</width>
+            <onup>21</onup>
+            <orientation>horizontal</orientation>
+            <scrolltime>0</scrolltime>
+            <viewtype>list</viewtype>
+	    <defaultcontrol>2</defaultcontrol>
+            <itemlayout width="2" height="2"/>
+           	<focusedlayout width="2" height="2"/>
+            <content>
+            	<item id="1">
+            		<label>My Pins</label>
+            		<onclick>-</onclick>
+            	</item>
+            	<item id="2">
+            		<label>Home</label>
+            		<onclick>-</onclick>
+            	</item>
+				  	<item id="3">
+            		<label>toyota12303</label>
+            		<onclick>-</onclick>
+            	</item>
+						  	<item id="4">
+            		<label>toyota12303</label>
+            		<onclick>-</onclick>
+            	</item>
+						  	<item id="5">
+            		<label>toyota12303</label>
+            		<onclick>-</onclick>
+            	</item>
+							  	<item id="6">
+            		<label>toyota12303</label>
+            		<onclick>-</onclick>
+            	</item>
+
+
+            </content>
+        </control>
+	
+
+
+
+				
+	
+
+
+			
+
+		<control type="group">
+		
+			<include>Common_Dimensions</include>
+			<include>Common_Animation_Window</include>
+		
+			<!--Top Area-->
+			<include>Common_Breadcrumb</include>
+						<include>Common_Overlay</include>
+			
+			<!--Content Area-->
+			<control type="group">
+			
+				<posx>0</posx>
+				<posy>100</posy>
+				<width>1280</width>
+				<height>480</height>
+				
+				<!--Animation-->
+			
+				
+				<control type="grouplist">
+		
+					<include condition="!Skin.HasSetting(Linear) + !Skin.HasSetting(Sine) + !Skin.HasSetting(Quadric) + !Skin.HasSetting(Cubic)">Common_Content_Grouplist2</include>
+				<include condition="Skin.HasSetting(Linear) + !Skin.HasSetting(Sine) + !Skin.HasSetting(Quadric) + !Skin.HasSetting(Cubic)">Common_Content_Grouplist3</include>
+				<include condition="!Skin.HasSetting(Linear) + Skin.HasSetting(Sine) + !Skin.HasSetting(Quadric) + !Skin.HasSetting(Cubic)">Common_Content_Grouplist4</include>
+				<include condition="!Skin.HasSetting(Linear) + !Skin.HasSetting(Sine) + Skin.HasSetting(Quadric) + !Skin.HasSetting(Cubic)">Common_Content_Grouplist5</include>
+				<include condition="!Skin.HasSetting(Linear) + !Skin.HasSetting(Sine) + !Skin.HasSetting(Quadric) + Skin.HasSetting(Cubic)">Common_Content_Grouplist6</include>
+					
+					
+					
+					
+					
+					<control type="group" id="8000">
+
+						<posx>50</posx>
+						<posy>0</posy>
+						<width>1200</width>
+						<height>720</height>
+
+						<control type="panel" id="11">
+<posx>1065</posx>
+						<posy>345</posy>
+
+						
+						<include>Common_AltHome_Panel3</include>
+						<onleft>Control.Move(20,-1)</onleft>
+<onleft>66</onleft>
+<onright>Control.Move(20,1)</onright>
+						<onright>22</onright>
+						<ondown>1</ondown>
+						<pagecontrol>7017</pagecontrol>
+						
+						<content>
+						
+
+							
+																					<item id="1">
+								<description>Games</description>
+								<label>Games</label>
+								<thumb>SHORT\ICO\Games.png</thumb>
+								<onclick>Control.Setfocus(1)</onclick>
+														
+							</item>
+							
+
+
+								</content>
+
+					</control>
+											<control type="panel" id="1">
+<posx>170</posx>
+						<posy>85</posy>
+
+						
+						<include>Common_AltHome_Panel360</include>
+					
+
+
+
+<onup>11</onup>
+						
+						
+						<content>
+						
+
+							
+																					<item id="1">
+								<description>Games</description>
+								<label></label>
+								<thumb>demo\app\steamstore\state.png</thumb>
+								<onclick condition="!Skin.String(SteamLocation)">Skin.SetFile(SteamLocation)</onclick>
+								<onclick condition="Skin.String(SteamLocation)">System.Exec("$INFO[Skin.String(SteamLocation)] steam://rungameid/241540")</onclick>
+														
+							</item>
+																								<item id="2">
+								<description>Games</description>
+								<label></label>
+								<thumb>demo\app\steamstore\arma.png</thumb>
+								<onclick condition="!Skin.String(SteamLocation)">Skin.SetFile(SteamLocation)</onclick>
+								<onclick condition="Skin.String(SteamLocation)">System.Exec("$INFO[Skin.String(SteamLocation)] steam://rungameid/107410")</onclick>
+														
+							</item>
+																														<item id="3">
+								<description>Games</description>
+								<label></label>
+								<thumb>demo\app\steamstore\sabre.jpg</thumb>
+								<onclick condition="!Skin.String(SteamLocation)">Skin.SetFile(SteamLocation)</onclick>
+								<onclick condition="Skin.String(SteamLocation)">System.Exec("$INFO[Skin.String(SteamLocation)] steam://rungameid/236510")</onclick>
+														
+							</item>
+																																<item id="4">
+								<description>Games</description>
+								<label></label>
+								<thumb>demo\app\steamstore\ghost.jpg</thumb>
+								<onclick condition="!Skin.String(SteamLocation)">Skin.SetFile(SteamLocation)</onclick>
+								<onclick condition="Skin.String(SteamLocation)">System.Exec("$INFO[Skin.String(SteamLocation)] steam://rungameid/209160")</onclick>
+														
+							</item>
+																																<item id="5">
+								<description>Games</description>
+								<label></label>
+								<thumb>demo\app\steamstore\ravaged.jpg</thumb>
+								<onclick condition="!Skin.String(SteamLocation)">Skin.SetFile(SteamLocation)</onclick>
+								<onclick condition="Skin.String(SteamLocation)">System.Exec("$INFO[Skin.String(SteamLocation)] steam://rungameid/96300")</onclick>
+														
+							</item>
+																																<item id="6">
+								<description>Games</description>
+								<label></label>
+								<thumb>demo\app\steamstore\payday.jpg</thumb>
+								<onclick condition="!Skin.String(SteamLocation)">Skin.SetFile(SteamEXES)</onclick>
+								<onclick condition="Skin.String(SteamLocation)">System.Exec("$INFO[Skin.String(SteamLocation)] steam://rungameid/218620")</onclick>
+														
+							</item>
+																																<item id="7">
+								<description>Games</description>
+								<label></label>
+								<thumb>demo\app\steamstore\influx.jpg</thumb>
+								<onclick condition="!Skin.String(SteamLocation)">Skin.SetFile(SteamEXES)</onclick>
+								<onclick condition="Skin.String(SteamLocation)">System.Exec("$INFO[Skin.String(SteamLocation)] steam://rungameid/246980")</onclick>
+														
+							</item>
+																																<item id="8">
+								<description>Games</description>
+								<label></label>
+								<thumb>demo\app\steamstore\nascar.jpg</thumb>
+								<onclick condition="!Skin.String(SteamLocation)">Skin.SetFile(SteamLocation)</onclick>
+								<onclick condition="Skin.String(SteamLocation)">System.ExecWait("$INFO[Skin.String(SteamLocation)] steam://rungameid/225220")</onclick>
+														
+							</item>
+																																<item id="9">
+								<description>Games</description>
+								<label></label>
+								<thumb>demo\app\steamstore\trials.jpg</thumb>
+								<onclick condition="!Skin.String(SteamLocation)">Skin.SetFile(SteamLocation)</onclick>
+								<onclick condition="Skin.String(SteamLocation)">System.Exec("$INFO[Skin.String(SteamLocation)] steam://rungameid/243450")</onclick>
+														
+							</item>
+							
+
+
+								</content>
+
+					</control>
+			
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+
+						
+						</control>
+		
+				
+
+				
+				
+				
+				
+				
+				
+				
+					<control type="group" id="121">
+					
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>1200</width>
+						<height>720</height>
+												<control type="panel" id="22">
+<posx>1065</posx>
+						<posy>345</posy>
+
+						
+						<include>Common_AltHome_Panel3</include>
+						<onleft>Control.Move(20,-1)</onleft>
+<onleft>11</onleft>
+<onright>Control.Move(20,1)</onright>
+						<onright>33</onright>
+						<ondown>2</ondown>
+						<pagecontrol>7017</pagecontrol>
+						
+						<content>
+						
+
+							
+																					<item id="1">
+								<description>Games</description>
+								<label>Games</label>
+								<thumb>SHORT\ICO\Games.png</thumb>
+								<onclick>Control.Setfocus(2)</onclick>
+														
+							</item>
+							
+
+
+								</content>
+
+					</control>
+																<control type="panel" id="2">
+<posx>170</posx>
+						<posy>85</posy>
+
+						
+						<include>Common_AltHome_Panel360</include>
+					
+
+
+
+<onup>22</onup>
+						
+						
+						<content>
+						
+
+							
+																					<item id="1">
+								<description>Games</description>
+								<label></label>
+								<thumb>demo\app\steamstore\protocell.jpg</thumb>
+								<onclick condition="!Skin.String(SteamLocation)">Skin.SetFile(SteamLocation)</onclick>
+								<onclick condition="Skin.String(SteamLocation)">System.Exec("$INFO[Skin.String(SteamLocation)] steam://rungameid/246340")</onclick>
+														
+							</item>
+																								<item id="2">
+								<description>Games</description>
+								<label></label>
+								<thumb>demo\app\steamstore\sniper.jpg</thumb>
+								<onclick condition="!Skin.String(SteamLocation)">Skin.SetFile(SteamLocation)</onclick>
+								<onclick condition="Skin.String(SteamLocation)">System.Exec("$INFO[Skin.String(SteamLocation)] steam://rungameid/34870")</onclick>
+														
+							</item>
+																														<item id="3">
+								<description>Games</description>
+								<label></label>
+								<thumb>demo\app\steamstore\coj.jpg</thumb>
+								<onclick condition="!Skin.String(SteamLocation)">Skin.SetFile(SteamLocation)</onclick>
+								<onclick condition="Skin.String(SteamLocation)">System.Exec("$INFO[Skin.String(SteamLocation)] steam://rungameid/204450")</onclick>
+														
+							</item>
+																																<item id="4">
+								<description>Games</description>
+								<label></label>
+								<thumb>demo\app\steamstore\trialse.jpg</thumb>
+								<onclick condition="!Skin.String(SteamLocation)">Skin.SetFile(SteamLocation)</onclick>
+								<onclick condition="Skin.String(SteamLocation)">System.Exec("$INFO[Skin.String(SteamLocation)] steam://rungameid/220160")</onclick>
+														
+							</item>
+																																<item id="5">
+								<description>Games</description>
+								<label></label>
+								<thumb>demo\app\steamstore\sdogs.jpg</thumb>
+								<onclick condition="!Skin.String(SteamLocation)">Skin.SetFile(SteamLocation)</onclick>
+								<onclick condition="Skin.String(SteamLocation)">System.Exec("$INFO[Skin.String(SteamLocation)] steam://rungameid/202170")</onclick>
+														
+							</item>
+																																<item id="6">
+								<description>Games</description>
+								<label></label>
+								<thumb>demo\app\steamstore\rayman.jpg</thumb>
+								<onclick condition="!Skin.String(SteamLocation)">Skin.SetFile(SteamLocation)</onclick>
+								<onclick condition="Skin.String(SteamLocation)">System.Exec("$INFO[Skin.String(SteamLocation)] steam://rungameid/242550")</onclick>
+														
+							</item>
+																																<item id="7">
+								<description>Games</description>
+								<label></label>
+								<thumb>demo\app\steamstore\smora.jpg</thumb>
+								<onclick condition="!Skin.String(SteamLocation)">Skin.SetFile(SteamLocation)</onclick>
+								<onclick condition="Skin.String(SteamLocation)">System.Exec("$INFO[Skin.String(SteamLocation)] steam://rungameid/207040")</onclick>
+														
+							</item>
+																																<item id="8">
+								<description>Games</description>
+								<label></label>
+								<thumb>demo\app\steamstore\zhd.jpg</thumb>
+								<onclick condition="!Skin.String(SteamLocation)">Skin.SetFile(SteamLocation)</onclick>
+								<onclick condition="Skin.String(SteamLocation)">System.Exec("$INFO[Skin.String(SteamLocation)] steam://rungameid/220820")</onclick>
+														
+							</item>
+																																<item id="9">
+								<description>Games</description>
+								<label></label>
+								<thumb>demo\app\steamstore\theline.jpg</thumb>
+								<onclick condition="!Skin.String(SteamLocation)">Skin.SetFile(SteamLocation)</onclick>
+								<onclick condition="Skin.String(SteamLocation)">System.Exec("$INFO[Skin.String(SteamLocation)] steam://rungameid/50300")</onclick>
+														
+							</item>
+							
+
+
+								</content>
+
+					</control>
+							
+					
+					
+					
+					
+					
+					
+					
+					
+						
+
+					
+
+				
+
+				
+	
+					
+				</control>	
+				
+				<control type="group" id="122">
+					
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>1200</width>
+						<height>720</height>
+												<control type="panel" id="33">
+<posx>1065</posx>
+						<posy>345</posy>
+
+						
+						<include>Common_AltHome_Panel3</include>
+						<onleft>Control.Move(20,-1)</onleft>
+<onleft>22</onleft>
+<onright>Control.Move(20,1)</onright>
+						<onright>44</onright>
+						<ondown>5</ondown>
+						<pagecontrol>7017</pagecontrol>
+						
+						<content>
+						
+
+							
+																					<item id="1">
+								<description>Games</description>
+								<label>Games</label>
+								<thumb>SHORT\ICO\Games.png</thumb>
+								<onclick>Control.Setfocus(5)</onclick>
+														
+							</item>
+							
+
+
+								</content>
+
+					</control>
+							
+					
+																					<control type="panel" id="5">
+<posx>170</posx>
+						<posy>85</posy>
+
+						
+						<include>Common_AltHome_Panel360</include>
+					
+
+
+
+<onup>33</onup>
+						
+						
+						<content>
+						
+
+							
+																																			<item id="1">
+								<description>Games</description>
+								<label></label>
+								<thumb>demo\app\steamstore\gmaker.jpg</thumb>
+								<onclick condition="!Skin.String(SteamLocation)">Skin.SetFile(SteamLocation)</onclick>
+								<onclick condition="Skin.String(SteamLocation)">System.Exec("$INFO[Skin.String(SteamLocation)] steam://rungameid/247620")</onclick>
+														
+							</item>
+		
+																								<item id="2">
+								<description>Games</description>
+								<label></label>
+								<thumb>demo\app\steamstore\pclaw.jpg</thumb>
+								<onclick condition="!Skin.String(SteamLocation)">Skin.SetFile(SteamEXES)</onclick>
+								<onclick condition="Skin.String(SteamLocation)">System.Exec("$INFO[Skin.String(SteamLocation)] steam://rungameid/237370")</onclick>
+														
+							</item>
+																										<item id="3">
+								<description>Games</description>
+								<label></label>
+								<thumb>demo\app\steamstore\binc.jpg</thumb>
+								<onclick condition="!Skin.String(SteamLocation)">Skin.SetFile(SteamLocation)</onclick>
+								<onclick condition="Skin.String(SteamLocation)">System.Exec("$INFO[Skin.String(SteamLocation)] steam://rungameid/233680")</onclick>
+														
+							</item>
+		
+																																<item id="4">
+								<description>Games</description>
+								<label></label>
+								<thumb>demo\app\steamstore\df.jpg</thumb>
+								<onclick condition="!Skin.String(SteamLocation)">Skin.SetFile(SteamLocation)</onclick>
+								<onclick condition="Skin.String(SteamLocation)">System.Exec("$INFO[Skin.String(SteamLocation)] steam://rungameid/227260")</onclick>
+														
+							</item>
+																																<item id="5">
+								<description>Games</description>
+								<label></label>
+								<thumb>demo\app\steamstore\mc.jpg</thumb>
+								<onclick condition="!Skin.String(SteamLocation)">Skin.SetFile(SteamLocation)</onclick>
+								<onclick condition="Skin.String(SteamLocation)">System.Exec("$INFO[Skin.String(SteamLocation)] steam://rungameid/222710")</onclick>
+														
+							</item>
+																																<item id="6">
+								<description>Games</description>
+								<label></label>
+								<thumb>demo\app\steamstore\vdj.jpg</thumb>
+								<onclick condition="!Skin.String(SteamLocation)">Skin.SetFile(SteamLocation)</onclick>
+								<onclick condition="Skin.String(SteamLocation)">System.Exec("$INFO[Skin.String(SteamLocation)] steam://rungameid/224380")</onclick>
+														
+							</item>
+																																<item id="7">
+								<description>Games</description>
+								<label></label>
+								<thumb>demo\app\steamstore\3dm.jpg</thumb>
+								<onclick condition="!Skin.String(SteamLocation)">Skin.SetFile(SteamEXES)</onclick>
+								<onclick condition="Skin.String(SteamLocation)">System.Exec("$INFO[Skin.String(SteamLocation)] steam://rungameid/223850")</onclick>
+														
+							</item>
+																																<item id="8">
+								<description>Games</description>
+								<label></label>
+								<thumb>demo\app\steamstore\z3t.jpg</thumb>
+								<onclick condition="!Skin.String(SteamLocation)">Skin.SetFile(SteamLocation)</onclick>
+								<onclick condition="Skin.String(SteamLocation)">System.Exec("$INFO[Skin.String(SteamLocation)] steam://rungameid/241790")</onclick>
+														
+							</item>
+																																<item id="9">
+								<description>Games</description>
+								<label></label>
+								<thumb>demo\app\steamstore\ar.jpg</thumb>
+								<onclick condition="!Skin.String(SteamLocation)">Skin.SetFile(SteamLocation)</onclick>
+								<onclick condition="Skin.String(SteamLocation)">System.Exec("$INFO[Skin.String(SteamLocation)] steam://rungameid/231180")</onclick>
+														
+							</item>
+							
+
+
+								</content>
+
+					</control>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+						
+
+					
+
+				
+
+				
+	
+					
+				</control>
+				
+				
+								<control type="group" id="123">
+					
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>1200</width>
+						<height>720</height>
+												<control type="panel" id="44">
+<posx>1065</posx>
+						<posy>345</posy>
+
+						
+						<include>Common_AltHome_Panel3</include>
+						<onleft>Control.Move(20,-1)</onleft>
+<onleft>33</onleft>
+<onright>Control.Move(20,1)</onright>
+						<onright>55</onright>
+						<ondown>6</ondown>
+						<pagecontrol>7017</pagecontrol>
+						
+						<content>
+						
+
+							
+																					<item id="1">
+								<description>Games</description>
+								<label>Games</label>
+								<thumb>SHORT\ICO\Games.png</thumb>
+								<onclick>Control.Setfocus(6)</onclick>
+														
+							</item>
+							
+
+
+								</content>
+
+					</control>
+							
+					
+					
+																										<control type="panel" id="6">
+<posx>170</posx>
+						<posy>85</posy>
+
+						
+						<include>Common_AltHome_Panel360</include>
+					
+
+
+
+<onup>44</onup>
+						
+						
+						<content>
+						
+
+							
+																																			<item id="1">
+								<description>Games</description>
+								<label></label>
+								<thumb>demo\app\steamstore\rrd.jpg</thumb>
+								<onclick condition="!Skin.String(SteamLocation)">Skin.SetFile(SteamLocation)</onclick>
+								<onclick condition="Skin.String(SteamLocation)">System.Exec("$INFO[Skin.String(SteamLocation)] steam://rungameid/226410")</onclick>
+														
+							</item>
+		
+																								<item id="2">
+								<description>Games</description>
+								<label></label>
+								<thumb>demo\app\steamstore\wt.jpg</thumb>
+								<onclick condition="!Skin.String(SteamLocation)">Skin.SetFile(SteamEXES)</onclick>
+								<onclick condition="Skin.String(SteamLocation)">System.Exec("$INFO[Skin.String(SteamLocation)] steam://rungameid/236390")</onclick>
+														
+							</item>
+																										<item id="3">
+								<description>Games</description>
+								<label></label>
+								<thumb>demo\app\steamstore\wf.jpg</thumb>
+								<onclick condition="!Skin.String(SteamLocation)">Skin.SetFile(SteamLocation)</onclick>
+								<onclick condition="Skin.String(SteamLocation)">System.Exec("$INFO[Skin.String(SteamLocation)] steam://rungameid/230410")</onclick>
+														
+							</item>
+		
+																																<item id="4">
+								<description>Games</description>
+								<label></label>
+								<thumb>demo\app\steamstore\sc.jpg</thumb>
+								<onclick condition="!Skin.String(SteamLocation)">Skin.SetFile(SteamLocation)</onclick>
+								<onclick condition="Skin.String(SteamLocation)">System.Exec("$INFO[Skin.String(SteamLocation)] steam://rungameid/212070")</onclick>
+														
+							</item>
+																																<item id="5">
+								<description>Games</description>
+								<label></label>
+								<thumb>demo\app\steamstore\rr.jpg</thumb>
+								<onclick condition="!Skin.String(SteamLocation)">Skin.SetFile(SteamLocation)</onclick>
+								<onclick condition="Skin.String(SteamLocation)">System.Exec("$INFO[Skin.String(SteamLocation)] steam://rungameid/211500")</onclick>
+														
+							</item>
+																																<item id="6">
+								<description>Games</description>
+								<label></label>
+								<thumb>demo\app\steamstore\p2.jpg</thumb>
+								<onclick condition="!Skin.String(SteamLocation)">Skin.SetFile(SteamEXES)</onclick>
+								<onclick condition="Skin.String(SteamLocation)">System.Exec("$INFO[Skin.String(SteamLocation)] steam://rungameid/218230")</onclick>
+														
+							</item>
+																																<item id="7">
+								<description>Games</description>
+								<label></label>
+								<thumb>demo\app\steamstore\bre.jpg</thumb>
+								<onclick condition="!Skin.String(SteamLocation)">Skin.SetFile(SteamLocation)</onclick>
+								<onclick condition="Skin.String(SteamLocation)">System.Exec("$INFO[Skin.String(SteamLocation)] steam://rungameid/209870")</onclick>
+														
+							</item>
+																																<item id="8">
+								<description>Games</description>
+								<label></label>
+								<thumb>demo\app\steamstore\apb.jpg</thumb>
+								<onclick condition="!Skin.String(SteamLocation)">Skin.SetFile(SteamLocation)</onclick>
+								<onclick condition="Skin.String(SteamLocation)">System.Exec("$INFO[Skin.String(SteamLocation)] steam://rungameid/113400")</onclick>
+														
+							</item>
+																																<item id="9">
+								<description>Games</description>
+								<label></label>
+								<thumb>demo\app\steamstore\tf2.jpg</thumb>
+								<onclick condition="!Skin.String(SteamLocation)">Skin.SetFile(SteamLocation)</onclick>
+								<onclick condition="Skin.String(SteamLocation)">System.Exec("$INFO[Skin.String(SteamLocation)] steam://rungameid/440")</onclick>
+														
+							</item>
+							
+
+
+								</content>
+
+					</control>
+					
+					
+					
+					
+					
+					
+					
+					
+						
+
+					
+
+				
+
+				
+	
+					
+				</control>
+				
+				
+				
+				
+					<control type="group" id="124">
+					
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>1200</width>
+						<height>720</height>
+												<control type="panel" id="55">
+<posx>1065</posx>
+						<posy>345</posy>
+
+						
+						<include>Common_AltHome_Panel3</include>
+						<onleft>Control.Move(20,-1)</onleft>
+<onleft>44</onleft>
+<onright>Control.Move(20,1)</onright>
+						<onright>66</onright>
+						<ondown>7</ondown>
+						<pagecontrol>7017</pagecontrol>
+						
+						<content>
+						
+
+							
+																					<item id="1">
+								<description>Games</description>
+								<label>Games</label>
+								<thumb>SHORT\ICO\Games.png</thumb>
+								<onclick>Control.Setfocus(7)</onclick>
+														
+							</item>
+							
+
+
+								</content>
+
+					</control>
+							
+																															<control type="panel" id="7">
+<posx>170</posx>
+						<posy>85</posy>
+
+						
+						<include>Common_AltHome_Panel360</include>
+					
+
+
+
+<onup>55</onup>
+						
+						
+						<content>
+						
+
+							
+																																			<item id="1">
+								<description>Games</description>
+								<label></label>
+								<thumb>demo\app\steamstore\gmod.jpg</thumb>
+								<onclick condition="!Skin.String(SteamLocation)">Skin.SetFile(SteamLocation)</onclick>
+								<onclick condition="Skin.String(SteamLocation)">System.Exec("$INFO[Skin.String(SteamLocation)] steam://rungameid/4000")</onclick>
+														
+							</item>
+		
+																								<item id="2">
+								<description>Games</description>
+								<label></label>
+								<thumb>demo\app\steamstore\town.jpg</thumb>
+								<onclick condition="!Skin.String(SteamLocation)">Skin.SetFile(SteamLocation)</onclick>
+								<onclick condition="Skin.String(SteamLocation)">System.Exec("$INFO[Skin.String(SteamLocation)] steam://rungameid/221020")</onclick>
+														
+							</item>
+																										<item id="3">
+								<description>Games</description>
+								<label></label>
+								<thumb>demo\app\steamstore\tfe.jpg</thumb>
+								<onclick condition="!Skin.String(SteamLocation)">Skin.SetFile(SteamLocation)</onclick>
+								<onclick condition="Skin.String(SteamLocation)">System.Exec("$INFO[Skin.String(SteamLocation)] steam://rungameid/204080")</onclick>
+														
+							</item>
+		
+																																<item id="4">
+								<description>Games</description>
+								<label></label>
+								<thumb>demo\app\steamstore\b2.jpg</thumb>
+								<onclick condition="!Skin.String(SteamLocation)">Skin.SetFile(SteamLocation)</onclick>
+								<onclick condition="Skin.String(SteamLocation)">System.Exec("$INFO[Skin.String(SteamLocation)] steam://rungameid/224180")</onclick>
+														
+							</item>
+																																<item id="5">
+								<description>Games</description>
+								<label></label>
+								<thumb>demo\app\steamstore\srv.jpg</thumb>
+								<onclick condition="!Skin.String(SteamLocation)">Skin.SetFile(SteamLocation)</onclick>
+								<onclick condition="Skin.String(SteamLocation)">System.Exec("$INFO[Skin.String(SteamLocation)] steam://rungameid//247294")</onclick>
+														
+							</item>
+																																<item id="6">
+								<description>Games</description>
+								<label></label>
+								<thumb>demo\app\steamstore\xrx.jpg</thumb>
+								<onclick condition="!Skin.String(SteamLocation)">Skin.SetFile(SteamLocation)</onclick>
+								<onclick condition="Skin.String(SteamLocation)">System.Exec("$INFO[Skin.String(SteamLocation)] steam://rungameid/3050")</onclick>
+														
+							</item>
+																																<item id="7">
+								<description>Games</description>
+								<label></label>
+								<thumb>demo\app\steamstore\wv.jpg</thumb>
+								<onclick condition="!Skin.String(SteamLocation)">Skin.SetFile(SteamLocation)</onclick>
+								<onclick condition="Skin.String(SteamLocation)">System.Exec("$INFO[Skin.String(SteamLocation)] steam://rungameid/255140")</onclick>
+														
+							</item>
+																																<item id="8">
+								<description>Games</description>
+								<label></label>
+								<thumb>demo\app\steamstore\c2.jpg</thumb>
+								<onclick condition="!Skin.String(SteamLocation)">Skin.SetFile(SteamLocation)</onclick>
+								<onclick condition="Skin.String(SteamLocation)">System.Exec("$INFO[Skin.String(SteamLocation)] steam://rungameid/225431")</onclick>
+														
+							</item>
+																																<item id="9">
+								<description>Games</description>
+								<label></label>
+								<thumb>demo\app\steamstore\tcad.jpg</thumb>
+								<onclick condition="!Skin.String(SteamLocation)">Skin.SetFile(SteamLocation)</onclick>
+								<onclick condition="Skin.String(SteamLocation)">System.Exec("$INFO[Skin.String(SteamLocation)] steam://rungameid/205635")</onclick>
+														
+							</item>
+							
+
+
+								</content>
+
+					</control>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+						
+
+					
+
+				
+
+				
+	
+					
+				</control>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+									<control type="group" id="125">
+					
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>1200</width>
+						<height>720</height>
+												<control type="panel" id="66">
+<posx>1065</posx>
+						<posy>345</posy>
+
+						
+						<include>Common_AltHome_Panel3</include>
+						<onleft>Control.Move(20,-1)</onleft>
+<onleft>55</onleft>
+<onright>Control.Move(20,1)</onright>
+						<onright>11</onright>
+						<ondown>8</ondown>
+						<pagecontrol>7017</pagecontrol>
+						
+						<content>
+						
+
+							
+																					<item id="1">
+								<description>Games</description>
+								<label>Games</label>
+								<thumb>SHORT\ICO\Games.png</thumb>
+								<onclick>Control.Setfocus(8)</onclick>
+														
+							</item>
+							
+
+
+								</content>
+
+					</control>
+							
+																															<control type="panel" id="8">
+<posx>170</posx>
+						<posy>85</posy>
+
+						
+						<include>Common_AltHome_Panel369</include>
+					
+
+
+
+<onup>66</onup>
+						
+						
+						<content>
+						
+
+							
+																																			<item id="1">
+								<description>Games</description>
+								<label>Launch Steam</label>
+								<thumb></thumb>
+																	<onclick>RunScript(special://skin/system/Steam.py)</onclick>
+									
+														
+							</item>
+																																				<item id="2">
+								<description>Games</description>
+								<label>Support</label>
+								<thumb></thumb>
+												<onclick>RunPlugin(plugin://plugin.program.webbrowser/?mode=showSite&amp;showPopups=no&amp;stopPlayback=yes&amp;url=http%3a%2f%2fsupport.steampowered.com)</onclick>					
+											
+														
+							</item>
+																																						<item id="3">
+								<description>Games</description>
+								<label>Community</label>
+								<thumb></thumb>
+																	
+												<onclick>RunPlugin(plugin://plugin.program.webbrowser/?mode=showSite&amp;showPopups=no&amp;stopPlayback=yes&amp;url=http%3a%2f%2fsteamcommunity.com)</onclick>		
+														
+							</item>
+																																													<item id="4">
+								<description>Games</description>
+								<label>About</label>
+								<thumb></thumb>
+																	
+	<onclick>RunPlugin(plugin://plugin.program.webbrowser/?mode=showSite&amp;showPopups=no&amp;stopPlayback=yes&amp;url=http%3a%2f%2fstore.steampowered.com/about)</onclick>		
+														
+							</item>
+																																																		<item id="5">
+								<description>Games</description>
+								<label>Search</label>
+								<thumb></thumb>
+																	
+	<onclick>Skin.SetString(steame)</onclick>
+<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=$INFO[Skin.String(steame)]&quot;,return)</onclick>		
+														
+							</item>
+							
+																																																											<item id="6">
+								<description>Games</description>
+								<label>My Games</label>
+								<thumb></thumb>
+																	
+
+<onclick>ActivateWindow(10001,"plugin://plugin.program.advanced.launcher/?default",return)</onclick>	
+														
+							</item>
+																																																											<item id="7">
+								<description>Games</description>
+								<label>Install a Game</label>
+								<thumb></thumb>
+																	
+
+<onclick>RunScript(special://skin/system/Steam.py)</onclick>		
+														
+							</item>
+																																																																		<item id="8">
+								<description>Games</description>
+								<label>Install Steam</label>
+								<thumb></thumb>
+																	
+
+<onclick>RunPlugin(plugin://plugin.program.webbrowser/?mode=showSite&amp;showPopups=no&amp;stopPlayback=yes&amp;url=http%3a%2f%2fstore.steampowered.com/about)</onclick>	
+														
+							</item>
+																																																				<item id="9">
+								<description>Games</description>
+								<label>More</label>
+								<thumb></thumb>
+																	
+
+<onclick>ActivateWindow(4322)</onclick>		
+														
+							</item>
+							
+							
+		
+												
+
+
+								</content>
+
+					</control>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+						
+
+					
+
+				
+
+				
+	
+					
+				</control>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				</control>
+										</control>
+				
+						
+						<!--Scrollbar-->
+
+					
+					</control>
+					
+					<include>ViewList_RootMenu_Featured</include>
+					<include>ViewList_RootMenu_RecentlyAdded</include>
+					<include>ViewList_RootMenu_AiringToday</include>
+					<include>ViewList_RootMenu_InCinemas</include>
+					<include>ViewList_RootMenu_NearbyEvents</include>
+					<include>ViewList_RootMenu_History</include>
+					<include>ViewList_RootMenu_Trakt</include>
+					
+			
+				
+
+			<include>Snapped_Content</include>	
+			<include>Xbox_Logo</include>
+			<!--Scrollbar-->
+
+
+
+	
+		
+	</controls>	
+		
+</window>

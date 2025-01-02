@@ -1,0 +1,1252 @@
+<!-- Foundation -->
+<window id="4569">
+
+	<defaultcontrol always="true">54</defaultcontrol>
+	
+	<zorder>2</zorder>
+
+		
+
+	<controls>
+ <include condition="!Window.Previous(Home)">Common_Animation_Window</include>
+					  <include condition="Window.Previous(Home)">Common_Animation_apps_dash</include> 
+		<include>Common_Background_Fade</include>
+
+
+			
+						<control type="image">
+			 <include condition="!Window.Previous(Home)">Common_Animation_Window</include>
+					  <include condition="Window.Previous(Home)">Common_Animation_apps_dash</include> 
+				<posy>0</posy>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+				<texture background="true">colors\color_black-.png</texture>
+
+
+			</control>
+					<control type="image">
+			 <include condition="!Window.Previous(Home)">Common_Animation_Window</include>
+					  <include condition="Window.Previous(Home)">Common_Animation_apps_dash</include> 
+				<posy>0</posy>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+				<texture>$INFO[Container(54).ListItem.Thumb]</texture>
+
+
+			</control>
+			<control type="image">
+		
+			<include>Common_Dimensions</include>
+			<texture background="true">colors/color_white.png</texture>
+			<colordiffuse>FanartDiffuse</colordiffuse>
+			
+			<include>Common_Animation_Window_Dark</include>
+		
+		</control>
+			
+					<control type="group">
+		
+			<posx>60</posx>
+			<posy>100</posy>
+		
+			
+			
+		 <include condition="!Window.Previous(Home)">Common_Animation_Window</include>
+					  <include condition="Window.Previous(Home)">Common_Animation_apps_dash</include> 
+			
+		
+			<control type="label">
+					
+				<label></label>
+				<include>Common_Section_Label</include>
+				
+			</control>
+			
+			<control type="panel" id="54">
+ <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="60" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+				<posx>0</posx>
+				<posy>20</posy>
+				<width>1200</width>
+				<height>485</height>
+				<onup>10000</onup>
+				<ondown>1</ondown>
+				<onleft>54</onleft>
+				<onright>54</onright>
+				<viewtype label="Extended">wrap</viewtype>
+				<orientation>horizontal</orientation>
+				<pagecontrol>68</pagecontrol>
+				<focusposition>0</focusposition>
+				<scrolltime tween="cubic" easing="out">500</scrolltime>
+				<preloaditems>2</preloaditems>
+				
+			
+				
+				<itemlayout width="320" height="480">
+				
+					<control type="group">
+					
+						<posx>0</posx>
+						<posy>40</posy>
+						<width>300</width>
+						<height>440</height>
+				
+						<control type="image">
+						
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>300</width>
+							<height>440</height>
+							<texture background="true">colors/color_white.png</texture>
+							<colordiffuse>Settings_Background_Dark</colordiffuse>
+							
+						</control>
+						
+						<control type="image">
+						
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>300</width>
+							<height>300</height>
+							<texture background="true" fallback="colors/color_keyboard_dark.png">$VAR[ExtendedList_Image]</texture>
+							<aspectratio aligny="top">scale</aspectratio>
+							
+						</control>
+						
+						<control type="label">
+						
+							<posx>20</posx>
+							<posy>306</posy>
+							<width>260</width>
+							<height>36</height>
+							<label>$INFO[ListItem.Label]</label>
+							<font>Menu-ExtendedList-Header</font>
+							<textcolor>Settings_Label</textcolor>
+							<aligny>top</aligny>
+							<shadowcolor>00FFFFFF</shadowcolor>
+							<autoscroll>false</autoscroll>
+							
+						</control>
+						
+						<control type="textbox">
+						
+							<posx>20</posx>
+							<posy>340</posy>
+							<width min="20" max="260">auto</width>
+							<height>20</height>
+							<label>[UPPERCASE]$VAR[ExtendedList_SubHeader][/UPPERCASE]</label>
+							<font>Menu-ExtendedList-Small</font>
+							<textcolor>Settings_Label</textcolor>
+							<aligny>top</aligny>
+							<wrapmultiline>false</wrapmultiline>
+							<autoscroll>false</autoscroll>
+							
+						</control>
+						
+						<control type="textbox">
+						
+							<posx>20</posx>
+							<posy>370</posy>
+							<width>260</width>
+							<height>50</height>
+							<label>Esse tema vai mudar o fundo e cores.</label>
+							<font>Menu-ExtendedList-Details</font>
+							<textcolor>Settings_Label</textcolor>
+							<aligny>top</aligny>
+							<wrapmultiline>true</wrapmultiline>
+							<shadowcolor>00FFFFFF</shadowcolor>
+							<autoscroll>false</autoscroll>
+							
+						</control>
+						
+					</control>	
+					
+				</itemlayout>
+
+				<focusedlayout width="320" height="480">
+				
+					<control type="group">
+					
+						<posx>0</posx>
+						<posy>40</posy>
+						<width>300</width>
+						<height>440</height>
+						
+						<control type="image">
+						
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>300</width>
+							<height>440</height>
+							<texture background="true">colors/color_white.png</texture>
+							<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+							
+						</control>
+				
+						<control type="image">
+						
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>300</width>
+							<height>300</height>
+							<texture background="true" fallback="colors/color_keyboard_dark.png">$VAR[ExtendedList_Image]</texture>
+							<aspectratio aligny="top">scale</aspectratio>
+							
+						</control>
+						
+						<control type="label">
+						
+							<posx>20</posx>
+							<posy>306</posy>
+							<width>260</width>
+							<height>36</height>
+							<label>$INFO[ListItem.Label]</label>
+							<font>Menu-ExtendedList-Header</font>
+							<textcolor>Label_Normal</textcolor>
+							<aligny>top</aligny>
+							<shadowcolor>00FFFFFF</shadowcolor>
+							<autoscroll>false</autoscroll>
+							
+						</control>
+						
+						<control type="textbox">
+						
+							<posx>20</posx>
+							<posy>340</posy>
+							<width min="20" max="260">auto</width>
+							<height>20</height>
+							<label>[UPPERCASE]$VAR[ExtendedList_SubHeader][/UPPERCASE]</label>
+							<font>Menu-ExtendedList-Small</font>
+							<textcolor>Label_Normal</textcolor>
+							<aligny>top</aligny>
+							<wrapmultiline>false</wrapmultiline>
+							<autoscroll>false</autoscroll>
+							
+						</control>
+						
+						<control type="textbox">
+						
+							<posx>20</posx>
+							<posy>370</posy>
+							<width min="20" max="260">auto</width>
+							<height>50</height>
+							<label>Esse tema vai mudar o fundo e cores.</label>
+							<font>Menu-ExtendedList-Details</font>
+							<textcolor>Label_Normal</textcolor>
+							<aligny>top</aligny>
+							<wrapmultiline>true</wrapmultiline>
+							<autoscroll>false</autoscroll>
+							
+						</control>
+						
+					</control>	
+					
+				</focusedlayout>
+<content>
+					<item id="1">
+
+<onclick>Skin.SetString(ThemeColor,FF7B7B7B)</onclick>
+<onclick>Skin.SetString(ThemeBackground, themes\Yplecyk.jpg)</onclick>
+<onclick>Skin.SetString(ThemeTitle, Triângulos cinzas)</onclick>
+<onclick>ActivateWindow(5421)</onclick>
+						<label>Triângulos cinzas</label>
+						<thumb>themes\Yplecyk.jpg</thumb>
+						
+					</item>
+					<item id="2">
+	
+		
+<onclick>Skin.SetString(ThemeColor,FF00BFFF)</onclick>
+<onclick>Skin.SetString(ThemeBackground, themes\VYMFUJ7.jpg)</onclick>
+<onclick>Skin.SetString(ThemeTitle, Céu Destiny)</onclick>
+<onclick>ActivateWindow(5421)</onclick>
+						<label>Céu Destiny</label>
+						<thumb>themes\VYMFUJ7.jpg</thumb>
+						
+					</item>
+					<item id="3">
+	
+		
+<onclick>Skin.SetString(ThemeColor,FF728699)</onclick>
+<onclick>Skin.SetString(ThemeBackground, themes\vTiR5Cx.jpg)</onclick>
+<onclick>Skin.SetString(ThemeTitle, Noite Destiny)</onclick>
+<onclick>ActivateWindow(5421)</onclick>
+						<label>Noite Destiny</label>
+						<thumb>themes\vTiR5Cx.jpg</thumb>
+						
+					</item>
+					<item id="4">
+	
+		
+<onclick>Skin.SetString(ThemeColor,FFFCB11B)</onclick>
+<onclick>Skin.SetString(ThemeBackground, themes\uvkitdj.jpg)</onclick>
+<onclick>Skin.SetString(ThemeTitle, Nascer do Sol Destiny)</onclick>
+<onclick>ActivateWindow(5421)</onclick>
+						<label>Nascer do Sol Destiny</label>
+						<thumb>themes\uvkitdj.jpg</thumb>
+						
+					</item>
+					<item id="5">
+	
+		
+<onclick>Skin.SetString(ThemeColor,FFC0C0C0)</onclick>
+<onclick>Skin.SetString(ThemeBackground, themes\umcN8Cj.jpg)</onclick>
+<onclick>Skin.SetString(ThemeTitle, Steel Ninja)</onclick>
+<onclick>ActivateWindow(5421)</onclick>
+						<label>Steel Ninja</label>
+						<thumb>themes\umcN8Cj.jpg</thumb>
+						
+					</item>
+					
+						<item id="6">
+	
+		
+<onclick>Skin.SetString(ThemeColor,FF954E53)</onclick>
+<onclick>Skin.SetString(ThemeBackground, themes\UDEexb5.jpg)</onclick>
+<onclick>Skin.SetString(ThemeTitle, Luta Marvel)</onclick>
+<onclick>ActivateWindow(5421)</onclick>
+						<label>Luta Marvel</label>
+						<thumb>themes\UDEexb5.jpg</thumb>
+						
+					</item>
+					
+						<item id="7">
+	
+		
+<onclick>Skin.SetString(ThemeColor,FF20B2AA)</onclick>
+<onclick>Skin.SetString(ThemeBackground, themes\slcUpq2.jpg)</onclick>
+<onclick>Skin.SetString(ThemeTitle, Folhas verdes)</onclick>
+<onclick>ActivateWindow(5421)</onclick>
+						<label>Folhas verdes</label>
+						<thumb>themes\slcUpq2.jpg</thumb>
+						
+					</item>
+					<item id="8">
+	
+		
+<onclick>Skin.SetString(ThemeColor,FF7B7B7B)</onclick>
+<onclick>Skin.SetString(ThemeBackground, themes\OGoBvGF.jpg)</onclick>
+<onclick>Skin.SetString(ThemeTitle, Halo 5 Theme)</onclick>
+<onclick>ActivateWindow(5421)</onclick>
+						<label>Halo 5</label>
+						<thumb>themes\OGoBvGF.jpg</thumb>
+						
+					</item>
+					<item id="9">
+	
+		
+<onclick>Skin.SetString(ThemeColor,FF00008B)</onclick>
+<onclick>Skin.SetString(ThemeBackground, themes\oAGrRKt.jpg)</onclick>
+<onclick>Skin.SetString(ThemeTitle, Chuva)</onclick>
+<onclick>ActivateWindow(5421)</onclick>
+						<label>Chuva</label>
+						<thumb>themes\oAGrRKt.jpg</thumb>
+						
+					</item>
+					
+					<item id="10">
+	
+		
+<onclick>Skin.SetString(ThemeColor,FF728699)</onclick>
+<onclick>Skin.SetString(ThemeBackground, themes\npDqDAq.jpg)</onclick>
+<onclick>Skin.SetString(ThemeTitle, Lua)</onclick>
+<onclick>ActivateWindow(5421)</onclick>
+						<label>Lua</label>
+						<thumb>themes\npDqDAq.jpg</thumb>
+						
+					</item>
+					
+					<item id="11">
+	
+		
+<onclick>Skin.SetString(ThemeColor,FFA900FF)</onclick>
+<onclick>Skin.SetString(ThemeBackground, themes\NaOdkLL.jpg)</onclick>
+<onclick>Skin.SetString(ThemeTitle, Colorido)</onclick>
+<onclick>ActivateWindow(5421)</onclick>
+						<label>Colorido</label>
+						<thumb>themes\NaOdkLL.jpg</thumb>
+						
+					</item>
+					
+					<item id="12">
+	
+		
+<onclick>Skin.SetString(ThemeColor,FF998959)</onclick>
+<onclick>Skin.SetString(ThemeBackground, themes\m0TKc5g.jpg)</onclick>
+<onclick>Skin.SetString(ThemeTitle, Montanhas rochosas)</onclick>
+<onclick>ActivateWindow(5421)</onclick>
+						<label>Montanhas rochosas</label>
+						<thumb>themes\m0TKc5g.jpg</thumb>
+						
+					</item>
+					
+					<item id="13">
+	
+		
+<onclick>Skin.SetString(ThemeColor,FF00A400)</onclick>
+<onclick>Skin.SetString(ThemeBackground, themes\l9NNrVr.jpg)</onclick>
+<onclick>Skin.SetString(ThemeTitle, Underworld)</onclick>
+<onclick>ActivateWindow(5421)</onclick>
+						<label>Underworld</label>
+						<thumb>themes\l9NNrVr.jpg</thumb>
+						
+					</item>
+					
+					<item id="14">
+	
+		
+<onclick>Skin.SetString(ThemeColor,FF2F4F4F)</onclick>
+<onclick>Skin.SetString(ThemeBackground, themes\K41Azub.jpg)</onclick>
+<onclick>Skin.SetString(ThemeTitle, Construções escuras)</onclick>
+<onclick>ActivateWindow(5421)</onclick>
+						<label>Construções escuras</label>
+						<thumb>themes\K41Azub.jpg</thumb>
+						
+					</item>
+					
+					<item id="15">
+	
+		
+<onclick>Skin.SetString(ThemeColor,FF728699)</onclick>
+<onclick>Skin.SetString(ThemeBackground, themes\jPWL4Gy.jpg)</onclick>
+<onclick>Skin.SetString(ThemeTitle, Battlefield 4)</onclick>
+<onclick>ActivateWindow(5421)</onclick>
+						<label>Battlefield 4</label>
+						<thumb>themes\jPWL4Gy.jpg</thumb>
+						
+					</item>
+					
+						<item id="16">
+	
+		
+<onclick>Skin.SetString(ThemeColor,FFFF7300)</onclick>
+<onclick>Skin.SetString(ThemeBackground, themes\jBRixsZ.jpg)</onclick>
+<onclick>Skin.SetString(ThemeTitle, Sunset Overdrive Theme)</onclick>
+<onclick>ActivateWindow(5421)</onclick>
+						<label>Sunset Overdrive</label>
+						<thumb>themes\jBRixsZ.jpg</thumb>
+						
+					</item>
+					
+					<item id="17">
+	
+		
+<onclick>Skin.SetString(ThemeColor,D7FF0000)</onclick>
+<onclick>Skin.SetString(ThemeBackground, themes\ikeTA2sjACKfU.jpg)</onclick>
+<onclick>Skin.SetString(ThemeTitle, The Evil Within Theme)</onclick>
+<onclick>ActivateWindow(5421)</onclick>
+						<label>The Evil Within</label>
+						<thumb>themes\ikeTA2sjACKfU.jpg</thumb>
+						
+					</item>
+					
+					<item id="18">
+	
+		
+<onclick>Skin.SetString(ThemeColor,FF1E90FF)</onclick>
+<onclick>Skin.SetString(ThemeBackground, themes\icImyFf.jpg)</onclick>
+<onclick>Skin.SetString(ThemeTitle, Gramado)</onclick>
+<onclick>ActivateWindow(5421)</onclick>
+						<label>Gramado</label>
+						<thumb>themes\icImyFf.jpg</thumb>
+						
+					</item>
+					
+						<item id="19">
+	
+		
+<onclick>Skin.SetString(ThemeColor,FFD2691E)</onclick>
+<onclick>Skin.SetString(ThemeBackground, themes\ER00gVd.jpg)</onclick>
+<onclick>Skin.SetString(ThemeTitle, Amanhecer do deserto)</onclick>
+<onclick>ActivateWindow(5421)</onclick>
+						<label>Amanhecer do deserto</label>
+						<thumb>themes\ER00gVd.jpg</thumb>
+						
+					</item>
+					
+						<item id="20">
+	
+		
+<onclick>Skin.SetString(ThemeColor,FF2F4F4F)</onclick>
+<onclick>Skin.SetString(ThemeBackground, themes\eHZPlW7.jpg)</onclick>
+<onclick>Skin.SetString(ThemeTitle, Roma)</onclick>
+<onclick>ActivateWindow(5421)</onclick>
+						<label>Roma</label>
+						<thumb>themes\eHZPlW7.jpg</thumb>
+						
+					</item>
+					
+					<item id="21">
+	
+		
+<onclick>Skin.SetString(ThemeColor,FF228B22)</onclick>
+<onclick>Skin.SetString(ThemeBackground, themes\CTU41cq.jpg)</onclick>
+<onclick>Skin.SetString(ThemeTitle, Anéis verdes)</onclick>
+<onclick>ActivateWindow(5421)</onclick>
+						<label>Anéis verdes</label>
+						<thumb>themes\CTU41cq.jpg</thumb>
+						
+					</item>
+					
+					<item id="22">
+	
+		
+<onclick>Skin.SetString(ThemeColor,FF6A00FF)</onclick>
+<onclick>Skin.SetString(ThemeBackground, themes\CTU41cq.jpg)</onclick>
+<onclick>Skin.SetString(ThemeTitle, O futuro)</onclick>
+<onclick>ActivateWindow(5421)</onclick>
+						<label>O futuro</label>
+						<thumb>themes\BNzDCFT.jpg</thumb>
+						
+					</item>
+					
+					<item id="23">
+	
+		
+<onclick>Skin.SetString(ThemeColor,78000000)</onclick>
+<onclick>Skin.SetString(ThemeBackground, themes\38oaG6D.jpg)</onclick>
+<onclick>Skin.SetString(ThemeTitle, Espaço)</onclick>
+<onclick>ActivateWindow(5421)</onclick>
+						<label>Espaço</label>
+						<thumb>themes\38oaG6D.jpg</thumb>
+						
+					</item>
+					<item id="24">
+	
+		
+<onclick>Skin.SetString(ThemeColor,FF728699)</onclick>
+<onclick>Skin.SetString(ThemeBackground, themes\11MKgzM.jpg)</onclick>
+<onclick>Skin.SetString(ThemeTitle, Robôs)</onclick>
+<onclick>ActivateWindow(5421)</onclick>
+						<label>Robôs</label>
+						<thumb>themes\11MKgzM.jpg</thumb>
+						
+					</item>
+					
+					<item id="25">
+	
+		
+<onclick>Skin.SetString(ThemeColor,FF9A6B36)</onclick>
+<onclick>Skin.SetString(ThemeBackground, themes\5VsJG1Q.jpg)</onclick>
+<onclick>Skin.SetString(ThemeTitle, Titanfall)</onclick>
+<onclick>ActivateWindow(5421)</onclick>
+						<label>Titanfall</label>
+						<thumb>themes\5VsJG1Q.jpg</thumb>
+						
+					</item>
+					
+					<item id="26">
+	
+		
+<onclick>Skin.SetString(ThemeColor,FFEB0000)</onclick>
+<onclick>Skin.SetString(ThemeBackground, themes\3wP1ghm.jpg)</onclick>
+<onclick>Skin.SetString(ThemeTitle, China)</onclick>
+<onclick>ActivateWindow(5421)</onclick>
+						<label>China</label>
+						<thumb>themes\3wP1ghm.jpg</thumb>
+						
+					</item>
+					
+					<item id="27">
+	
+		
+<onclick>Skin.SetString(ThemeColor,FF0054FF)</onclick>
+<onclick>Skin.SetString(ThemeBackground, themes\0KchusF.jpg)</onclick>
+<onclick>Skin.SetString(ThemeTitle, Ruas)</onclick>
+<onclick>ActivateWindow(5421)</onclick>
+						<label>Ruas</label>
+						<thumb>themes\0KchusF.jpg</thumb>
+						
+					</item>
+						<item id="28">
+	
+		
+<onclick>Skin.SetString(ThemeColor,FF228B22)</onclick>
+<onclick>Skin.SetString(ThemeBackground, themes\2E95e19.jpg)</onclick>
+<onclick>Skin.SetString(ThemeTitle, Verde moderno)</onclick>
+<onclick>ActivateWindow(5421)</onclick>
+						<label>Verde moderno</label>
+						<thumb>themes\2E95e19.jpg</thumb>
+						
+					</item>
+						<item id="29">
+	
+		
+<onclick>Skin.SetString(ThemeColor,FF8B008B)</onclick>
+<onclick>Skin.SetString(ThemeBackground, themes\5YUMGjZ.jpg)</onclick>
+<onclick>Skin.SetString(ThemeTitle, Gramado Roxo)</onclick>
+<onclick>ActivateWindow(5421)</onclick>
+						<label>Gramado Roxo</label>
+						<thumb>themes\5YUMGjZ.jpg</thumb>
+						
+					</item>
+						<item id="30">
+	
+		
+<onclick>Skin.SetString(ThemeColor,FF1E90FF)</onclick>
+<onclick>Skin.SetString(ThemeBackground, themes\9ffUtNr.jpg)</onclick>
+<onclick>Skin.SetString(ThemeTitle, Gravidade)</onclick>
+<onclick>ActivateWindow(5421)</onclick>
+						<label>Gravidade</label>
+						<thumb>themes\9ffUtNr.jpg</thumb>
+						
+					</item>
+						<item id="31">
+	
+		
+<onclick>Skin.SetString(ThemeColor,FF00A400)</onclick>
+<onclick>Skin.SetString(ThemeBackground, themes\9mbNUE0.jpg)</onclick>
+<onclick>Skin.SetString(ThemeTitle, Nuvens verdes modernas)</onclick>
+<onclick>ActivateWindow(5421)</onclick>
+						<label>Nuvens verdes modernas</label>
+						<thumb>themes\9mbNUE0.jpg</thumb>
+						
+					</item>
+						<item id="32">
+	
+		
+<onclick>Skin.SetString(ThemeColor,FF00BFFF)</onclick>
+<onclick>Skin.SetString(ThemeBackground, themes\61KKQzW.jpg)</onclick>
+<onclick>Skin.SetString(ThemeTitle, Azul moderno)</onclick>
+<onclick>ActivateWindow(5421)</onclick>
+						<label>Azul moderno</label>
+						<thumb>themes\61KKQzW.jpg</thumb>
+						
+					</item>
+						<item id="33">
+	
+		
+<onclick>Skin.SetString(ThemeColor,FFD2691E)</onclick>
+<onclick>Skin.SetString(ThemeBackground, themes\brYCTj4.jpg)</onclick>
+<onclick>Skin.SetString(ThemeTitle, Chocolate Moderno)</onclick>
+<onclick>ActivateWindow(5421)</onclick>
+						<label>Chocolate Moderno</label>
+						<thumb>themes\brYCTj4.jpg</thumb>
+						
+					</item>
+						<item id="34">
+	
+		
+<onclick>Skin.SetString(ThemeColor,FF0000CD)</onclick>
+<onclick>Skin.SetString(ThemeBackground, themes\DAV3imX.jpg)</onclick>
+<onclick>Skin.SetString(ThemeTitle, Meianoite)</onclick>
+<onclick>ActivateWindow(5421)</onclick>
+						<label>Meianoite</label>
+						<thumb>themes\DAV3imX.jpg</thumb>
+						
+					</item>
+						<item id="35">
+	
+		
+<onclick>Skin.SetString(ThemeColor,FF00BFFF)</onclick>
+<onclick>Skin.SetString(ThemeBackground, themes\DkSei73.jpg)</onclick>
+<onclick>Skin.SetString(ThemeTitle, Céu moderno)</onclick>
+<onclick>ActivateWindow(5421)</onclick>
+						<label>Céu moderno</label>
+						<thumb>themes\DkSei73.jpg</thumb>
+						
+					</item>
+						<item id="36">
+	
+		
+<onclick>Skin.SetString(ThemeColor,FF800080)</onclick>
+<onclick>Skin.SetString(ThemeBackground, themes\dxF82Ed.jpg)</onclick>
+<onclick>Skin.SetString(ThemeTitle, Roxo escuro moderno)</onclick>
+<onclick>ActivateWindow(5421)</onclick>
+						<label>Roxo escuro moderno</label>
+						<thumb>themes\dxF82Ed.jpg</thumb>
+						
+					</item>
+						<item id="37">
+	
+		
+<onclick>Skin.SetString(ThemeColor,FFCD5C5C2)</onclick>
+<onclick>Skin.SetString(ThemeBackground, themes\e3z7lk3.jpg)</onclick>
+<onclick>Skin.SetString(ThemeTitle, Vermelho moderno)</onclick>
+<onclick>ActivateWindow(5421)</onclick>
+						<label>Vermelho moderno</label>
+						<thumb>themes\e3z7lk3.jpg</thumb>
+						
+					</item>
+						<item id="38">
+	
+		
+<onclick>Skin.SetString(ThemeColor,FF6A5ACD)</onclick>
+<onclick>Skin.SetString(ThemeBackground, themes\el73RLG.jpg)</onclick>
+<onclick>Skin.SetString(ThemeTitle, Prédio moderno)</onclick>
+<onclick>ActivateWindow(5421)</onclick>
+						<label>Prédio moderno</label>
+						<thumb>themes\el73RLG.jpg</thumb>
+						
+					</item>
+						<item id="39">
+	
+		
+<onclick>Skin.SetString(ThemeColor,FFFF0000)</onclick>
+<onclick>Skin.SetString(ThemeBackground, themes\EXCENHY.jpg)</onclick>
+<onclick>Skin.SetString(ThemeTitle, Vermelho moderno)</onclick>
+<onclick>ActivateWindow(5421)</onclick>
+						<label>Vermelho moderno</label>
+						<thumb>themes\EXCENHY.jpg</thumb>
+						
+					</item>
+						<item id="40">
+	
+		
+<onclick>Skin.SetString(ThemeColor,FFFFE800)</onclick>
+<onclick>Skin.SetString(ThemeBackground, themes\F7tUbSv.jpg)</onclick>
+<onclick>Skin.SetString(ThemeTitle, Amarelo moderno)</onclick>
+<onclick>ActivateWindow(5421)</onclick>
+						<label>Amarelo moderno</label>
+						<thumb>themes\F7tUbSv.jpg</thumb>
+						
+					</item>
+						<item id="41">
+	
+		
+<onclick>Skin.SetString(ThemeColor,FF7B7B7B)</onclick>
+<onclick>Skin.SetString(ThemeBackground, themes\FCnCKyZ.jpg)</onclick>
+<onclick>Skin.SetString(ThemeTitle, Formas escuras)</onclick>
+<onclick>ActivateWindow(5421)</onclick>
+						<label>Formas escuras</label>
+						<thumb>themes\FCnCKyZ.jpg</thumb>
+						
+					</item>
+						<item id="42">
+	
+		
+<onclick>Skin.SetString(ThemeColor,FF1E90FF)</onclick>
+<onclick>Skin.SetString(ThemeBackground, themes\hLErsQ9.jpg)</onclick>
+<onclick>Skin.SetString(ThemeTitle, Colorido moderno)</onclick>
+<onclick>ActivateWindow(5421)</onclick>
+						<label>Colorido moderno</label>
+						<thumb>themes\hLErsQ9.jpg</thumb>
+						
+					</item>
+						<item id="43">
+	
+		
+<onclick>Skin.SetString(ThemeColor,FF0054FF)</onclick>
+<onclick>Skin.SetString(ThemeBackground, themes\I1QX97h.jpg)</onclick>
+<onclick>Skin.SetString(ThemeTitle, Montanhas)</onclick>
+<onclick>ActivateWindow(5421)</onclick>
+						<label>Montanhas</label>
+						<thumb>themes\I1QX97h.jpg</thumb>
+						
+					</item>
+						<item id="44">
+	
+		
+<onclick>Skin.SetString(ThemeColor,FF728699)</onclick>
+<onclick>Skin.SetString(ThemeBackground, themes\IGPNFDY.jpg)</onclick>
+<onclick>Skin.SetString(ThemeTitle, Moderno escuro)</onclick>
+<onclick>ActivateWindow(5421)</onclick>
+						<label>Moderno escuro</label>
+						<thumb>themes\IGPNFDY.jpg</thumb>
+						
+					</item>
+						<item id="45">
+	
+		
+<onclick>Skin.SetString(ThemeColor,FF728699)</onclick>
+<onclick>Skin.SetString(ThemeBackground, themes\iKTeHtx.jpg)</onclick>
+<onclick>Skin.SetString(ThemeTitle, Moderno escuro)</onclick>
+<onclick>ActivateWindow(5421)</onclick>
+						<label>Moderno escuro</label>
+						<thumb>themes\iKTeHtx.jpg</thumb>
+						
+					</item>
+						<item id="46">
+	
+		
+<onclick>Skin.SetString(ThemeColor,FF4682B4)</onclick>
+<onclick>Skin.SetString(ThemeBackground, themes\iWWPa6a.jpg)</onclick>
+<onclick>Skin.SetString(ThemeTitle, Noites modernas)</onclick>
+<onclick>ActivateWindow(5421)</onclick>
+						<label>Noites modernas</label>
+						<thumb>themes\iWWPa6a.jpg</thumb>
+						
+					</item>
+						<item id="47">
+	
+		
+<onclick>Skin.SetString(ThemeColor,FFF80084)</onclick>
+<onclick>Skin.SetString(ThemeBackground, themes\JNxWVYN.jpg)</onclick>
+<onclick>Skin.SetString(ThemeTitle, Rosa moderno)</onclick>
+<onclick>ActivateWindow(5421)</onclick>
+						<label>Rosa moderno</label>
+						<thumb>themes\JNxWVYN.jpg</thumb>
+						
+					</item>
+						<item id="48">
+	
+		
+<onclick>Skin.SetString(ThemeColor,FF92009B)</onclick>
+<onclick>Skin.SetString(ThemeBackground, themes\JqTfWFL.jpg)</onclick>
+<onclick>Skin.SetString(ThemeTitle, Roxo moderno)</onclick>
+<onclick>ActivateWindow(5421)</onclick>
+						<label>Roxo moderno</label>
+						<thumb>themes\JqTfWFL.jpg</thumb>
+						
+					</item>
+						<item id="49">
+	
+		
+<onclick>Skin.SetString(ThemeColor,FFEB0000)</onclick>
+<onclick>Skin.SetString(ThemeBackground, themes\JTe1HFQ.jpg)</onclick>
+<onclick>Skin.SetString(ThemeTitle, Linhas modernas)</onclick>
+<onclick>ActivateWindow(5421)</onclick>
+						<label>Linhas modernas</label>
+						<thumb>themes\JTe1HFQ.jpg</thumb>
+						
+					</item>
+						<item id="50">
+	
+		
+<onclick>Skin.SetString(ThemeColor,FFDA00FF)</onclick>
+<onclick>Skin.SetString(ThemeBackground, themes\k8ejuzV.jpg)</onclick>
+<onclick>Skin.SetString(ThemeTitle, Roxo)</onclick>
+<onclick>ActivateWindow(5421)</onclick>
+						<label>Roxo</label>
+						<thumb>themes\k8ejuzV.jpg</thumb>
+						
+					</item>
+						<item id="51">
+	
+		
+<onclick>Skin.SetString(ThemeColor,FFFF009B)</onclick>
+<onclick>Skin.SetString(ThemeBackground, themes\kbVvZ6H.jpg)</onclick>
+<onclick>Skin.SetString(ThemeTitle, Rosa)</onclick>
+<onclick>ActivateWindow(5421)</onclick>
+						<label>Rosa</label>
+						<thumb>themes\kbVvZ6H.jpg</thumb>
+						
+					</item>
+						<item id="52">
+	
+		
+<onclick>Skin.SetString(ThemeColor,FFDA00FF)</onclick>
+<onclick>Skin.SetString(ThemeBackground, themes\kYYRuXB.jpg)</onclick>
+<onclick>Skin.SetString(ThemeTitle, Roxo escuro)</onclick>
+<onclick>ActivateWindow(5421)</onclick>
+						<label>Roxo escuro</label>
+						<thumb>themes\kYYRuXB.jpg</thumb>
+						
+					</item>
+						<item id="53">
+	
+		
+<onclick>Skin.SetString(ThemeColor,FFCD5C5C2)</onclick>
+<onclick>Skin.SetString(ThemeBackground, themes\MDXZIj6.jpg)</onclick>
+<onclick>Skin.SetString(ThemeTitle, Vermelho escuro)</onclick>
+<onclick>ActivateWindow(5421)</onclick>
+						<label>Vermelho escuro</label>
+						<thumb>themes\MDXZIj6.jpg</thumb>
+						
+					</item>
+						<item id="54">
+	
+		
+<onclick>Skin.SetString(ThemeColor,FFA900FF)</onclick>
+<onclick>Skin.SetString(ThemeBackground, themes\Mnx9PHV.jpg)</onclick>
+<onclick>Skin.SetString(ThemeTitle, Desvio roxo)</onclick>
+<onclick>ActivateWindow(5421)</onclick>
+						<label>Desvio roxo</label>
+						<thumb>themes\Mnx9PHV.jpg</thumb>
+						
+					</item>
+						<item id="55">
+	
+		
+<onclick>Skin.SetString(ThemeColor,FFDA00FF)</onclick>
+<onclick>Skin.SetString(ThemeBackground, themes\NR8zOY0.jpg)</onclick>
+<onclick>Skin.SetString(ThemeTitle, Escuro)</onclick>
+<onclick>ActivateWindow(5421)</onclick>
+						<label>Escuro</label>
+						<thumb>themes\NR8zOY0.jpg</thumb>
+						
+					</item>
+						<item id="56">
+	
+		
+<onclick>Skin.SetString(ThemeColor,FFD50031)</onclick>
+<onclick>Skin.SetString(ThemeBackground, themes\o6h6xhi.jpg)</onclick>
+<onclick>Skin.SetString(ThemeTitle, Azul escuro)</onclick>
+<onclick>ActivateWindow(5421)</onclick>
+						<label>Azul escuro</label>
+						<thumb>themes\o6h6xhi.jpg</thumb>
+						
+					</item>
+						<item id="57">
+	
+		
+<onclick>Skin.SetString(ThemeColor,FF0054FF)</onclick>
+<onclick>Skin.SetString(ThemeBackground, themes\oCds5Zq.jpg)</onclick>
+<onclick>Skin.SetString(ThemeTitle, Vermelho escuro)</onclick>
+<onclick>ActivateWindow(5421)</onclick>
+						<label>Vermelho escuro</label>
+						<thumb>themes\oCds5Zq.jpg</thumb>
+						
+					</item>
+						<item id="58">
+	
+		
+<onclick>Skin.SetString(ThemeColor,78000000)</onclick>
+<onclick>Skin.SetString(ThemeBackground, themes\otBwAHL.jpg)</onclick>
+<onclick>Skin.SetString(ThemeTitle, Moderno escuro)</onclick>
+<onclick>ActivateWindow(5421)</onclick>
+						<label>Moderno escuro</label>
+						<thumb>themes\otBwAHL.jpg</thumb>
+						
+					</item>
+						<item id="59">
+	
+		
+<onclick>Skin.SetString(ThemeColor,FF0054FF)</onclick>
+<onclick>Skin.SetString(ThemeBackground, themes\PrpjyZk.jpg)</onclick>
+<onclick>Skin.SetString(ThemeTitle, Azul escuro)</onclick>
+<onclick>ActivateWindow(5421)</onclick>
+						<label>Azul escuro</label>
+						<thumb>themes\PrpjyZk.jpg</thumb>
+						
+					</item>
+						<item id="60">
+	
+		
+<onclick>Skin.SetString(ThemeColor,FF0054FF)</onclick>
+<onclick>Skin.SetString(ThemeBackground, themes\QxROOSa.jpg)</onclick>
+<onclick>Skin.SetString(ThemeTitle, Escuro moderno)</onclick>
+<onclick>ActivateWindow(5421)</onclick>
+						<label>Escuro moderno</label>
+						<thumb>themes\QxROOSa.jpg</thumb>
+						
+					</item>
+						<item id="61">
+	
+		
+<onclick>Skin.SetString(ThemeColor,FF228B22)</onclick>
+<onclick>Skin.SetString(ThemeBackground, themes\RNwDxBJ.jpg)</onclick>
+<onclick>Skin.SetString(ThemeTitle, Verde moderno)</onclick>
+<onclick>ActivateWindow(5421)</onclick>
+						<label>Verde moderno</label>
+						<thumb>themes\RNwDxBJ.jpg</thumb>
+						
+					</item>
+						<item id="62">
+	
+		
+<onclick>Skin.SetString(ThemeColor,FF00CED1)</onclick>
+<onclick>Skin.SetString(ThemeBackground, themes\rTsakPT.jpg)</onclick>
+<onclick>Skin.SetString(ThemeTitle, Noite)</onclick>
+<onclick>ActivateWindow(5421)</onclick>
+						<label>Noite</label>
+						<thumb>themes\rTsakPT.jpg</thumb>
+						
+					</item>
+						<item id="63">
+	
+		
+<onclick>Skin.SetString(ThemeColor,FF00CED1)</onclick>
+<onclick>Skin.SetString(ThemeBackground, themes\UnkgxXT.jpg)</onclick>
+<onclick>Skin.SetString(ThemeTitle, Escuro moderno)</onclick>
+<onclick>ActivateWindow(5421)</onclick>
+						<label>Escuro moderno</label>
+						<thumb>themes\UnkgxXT.jpg</thumb>
+						
+					</item>
+						<item id="64">
+	
+		
+<onclick>Skin.SetString(ThemeColor,FFD50031)</onclick>
+<onclick>Skin.SetString(ThemeBackground, themes\W4sqILr.jpg)</onclick>
+<onclick>Skin.SetString(ThemeTitle, Azul moderno)</onclick>
+<onclick>ActivateWindow(5421)</onclick>
+						<label>Azul moderno</label>
+						<thumb>themes\W4sqILr.jpg</thumb>
+						
+					</item>
+						<item id="65">
+	
+		
+<onclick>Skin.SetString(ThemeColor,FF9BDF2E)</onclick>
+<onclick>Skin.SetString(ThemeBackground, themes\x1b2Q3n.jpg)</onclick>
+<onclick>Skin.SetString(ThemeTitle, Limão)</onclick>
+<onclick>ActivateWindow(5421)</onclick>
+						<label>Limão</label>
+						<thumb>themes\x1b2Q3n.jpg</thumb>
+						
+					</item>
+						<item id="66">
+	
+		
+<onclick>Skin.SetString(ThemeColor,FFFF00FF)</onclick>
+<onclick>Skin.SetString(ThemeBackground, themes\x1UFl91.jpg)</onclick>
+<onclick>Skin.SetString(ThemeTitle, Rosa)</onclick>
+<onclick>ActivateWindow(5421)</onclick>
+						<label>Rosa</label>
+						<thumb>themes\x1UFl91.jpg</thumb>
+						
+					</item>
+						<item id="67">
+	
+		
+<onclick>Skin.SetString(ThemeColor,FF728699)</onclick>
+<onclick>Skin.SetString(ThemeBackground, themes\x55lvWQ.jpg)</onclick>
+<onclick>Skin.SetString(ThemeTitle, Escuro)</onclick>
+<onclick>ActivateWindow(5421)</onclick>
+						<label>Escuro</label>
+						<thumb>themes\x55lvWQ.jpg</thumb>
+						
+					</item>
+						<item id="68">
+	
+		
+<onclick>Skin.SetString(ThemeColor,FF728699)</onclick>
+<onclick>Skin.SetString(ThemeBackground, themes\xTTZiJW.jpg)</onclick>
+<onclick>Skin.SetString(ThemeTitle, Animais)</onclick>
+<onclick>ActivateWindow(5421)</onclick>
+						<label>Animais</label>
+						<thumb>themes\xTTZiJW.jpg</thumb>
+						
+					</item>
+						<item id="69">
+	
+		
+<onclick>Skin.SetString(ThemeColor,FFFFE800)</onclick>
+<onclick>Skin.SetString(ThemeBackground, themes\YiMVQHk.jpg)</onclick>
+<onclick>Skin.SetString(ThemeTitle, Arranha-céu)</onclick>
+<onclick>ActivateWindow(5421)</onclick>
+						<label>Arranha-céu</label>
+						<thumb>themes\YiMVQHk.jpg</thumb>
+						
+					</item>
+						<item id="70">
+	
+		
+<onclick>Skin.SetString(ThemeColor,AC0022C9)</onclick>
+<onclick>Skin.SetString(ThemeBackground, themes\yRs7dqc.jpg)</onclick>
+<onclick>Skin.SetString(ThemeTitle, Prédio escuro)</onclick>
+<onclick>ActivateWindow(5421)</onclick>
+						<label>Prédio escuro</label>
+						<thumb>themes\yRs7dqc.jpg</thumb>
+						
+					</item>
+						<item id="71">
+	
+		
+<onclick>Skin.SetString(ThemeColor,FFDA00FF)</onclick>
+<onclick>Skin.SetString(ThemeBackground, themes\YWXObzx.jpg)</onclick>
+<onclick>Skin.SetString(ThemeTitle, Roxo escuro)</onclick>
+<onclick>ActivateWindow(5421)</onclick>
+						<label>Roxo escuro</label>
+						<thumb>themes\YWXObzx.jpg</thumb>
+						
+					</item>
+						<item id="72">
+	
+		
+<onclick>Skin.SetString(ThemeColor,FFDA00FF)</onclick>
+<onclick>Skin.SetString(ThemeBackground, themes\xzCuZWJ.jpg)</onclick>
+<onclick>Skin.SetString(ThemeTitle, Cores loucas)</onclick>
+<onclick>ActivateWindow(5421)</onclick>
+						<label>Cores loucas</label>
+						<thumb>themes\xzCuZWJ.jpg</thumb>
+						
+					</item>
+					<item id="73">
+	
+		
+<onclick>Skin.SetString(ThemeColor,FF9A6B36)</onclick>
+<onclick>Skin.SetString(ThemeBackground, themes\VBLCVsB.jpg)</onclick>
+<onclick>Skin.SetString(ThemeTitle, Advanced Warfighter)</onclick>
+<onclick>ActivateWindow(5421)</onclick>
+						<label>Advanced Warfighter</label>
+						<thumb>themes\VBLCVsB.jpg</thumb>
+						
+					</item>
+					<item id="74">
+	
+		
+<onclick>Skin.SetString(ThemeColor,FF00A400)</onclick>
+<onclick>Skin.SetString(ThemeBackground, themes\jvgsve.jpg)</onclick>
+<onclick>Skin.SetString(ThemeTitle, Minecraft)</onclick>
+<onclick>ActivateWindow(5421)</onclick>
+						<label>Minecraft</label>
+						<thumb>themes\jvgsve.jpg</thumb>
+						
+					</item>
+						
+					
+			<item id="75">
+	
+		
+<onclick>Skin.SetString(ThemeColor,$INFO[Skin.String(Theme1)])</onclick>
+<onclick>Skin.SetString(ThemeBackground, $INFO[Skin.String(ThemeIMG1)])</onclick>
+<onclick>Skin.SetString(ThemeTitle, Tema salvo)</onclick>
+<onclick>ActivateWindow(5421)</onclick>
+						<label>Tema salvo</label>
+						<thumb>$INFO[Skin.String(ThemeIMG1)]</thumb>
+						<visible>!IsEmpty(Skin.String(Theme1))</visible>
+					</item>
+					<item id="76">
+	
+		
+<onclick>Skin.SetString(ThemeColor,$INFO[Skin.String(Theme2)])</onclick>
+<onclick>Skin.SetString(ThemeBackground, $INFO[Skin.String(ThemeIMG2)])</onclick>
+<onclick>Skin.SetString(ThemeTitle, Tema salvo)</onclick>
+<onclick>ActivateWindow(5421)</onclick>
+						<label>Tema salvo</label>
+						<thumb>$INFO[Skin.String(ThemeIMG2)]</thumb>
+						<visible>!IsEmpty(Skin.String(Theme2))</visible>
+					</item>
+					<item id="77">
+	
+		
+<onclick>Skin.SetString(ThemeColor,$INFO[Skin.String(Theme3)])</onclick>
+<onclick>Skin.SetString(ThemeBackground, $INFO[Skin.String(ThemeIMG3)])</onclick>
+<onclick>Skin.SetString(ThemeTitle, Tema salvo)</onclick>
+<onclick>ActivateWindow(5421)</onclick>
+						<label>Tema salvo</label>
+						<thumb>$INFO[Skin.String(ThemeIMG3)]</thumb>
+						<visible>!IsEmpty(Skin.String(Theme3))</visible>
+					</item>
+					<item id="78">
+	
+		
+<onclick>Skin.SetString(ThemeColor,$INFO[Skin.String(Theme4)])</onclick>
+<onclick>Skin.SetString(ThemeBackground, $INFO[Skin.String(ThemeIMG4)])</onclick>
+<onclick>Skin.SetString(ThemeTitle, Tema salvo)</onclick>
+<onclick>ActivateWindow(5421)</onclick>
+						<label>Tema salvo</label>
+						<thumb>$INFO[Skin.String(ThemeIMG4)]</thumb>
+						<visible>!IsEmpty(Skin.String(Theme4))</visible>
+					</item>
+					<item id="79">
+	
+		
+<onclick>Skin.SetString(ThemeColor,$INFO[Skin.String(Theme5)])</onclick>
+<onclick>Skin.SetString(ThemeBackground, $INFO[Skin.String(ThemeIMG5)])</onclick>
+<onclick>Skin.SetString(ThemeTitle, Tema salvo)</onclick>
+<onclick>ActivateWindow(5421)</onclick>
+						<label>Tema salvo</label>
+						<thumb>$INFO[Skin.String(ThemeIMG5)]</thumb>
+						<visible>!IsEmpty(Skin.String(Theme5))</visible>
+					</item>
+					<item id="80">
+	
+		
+<onclick>Skin.SetString(ThemeColor,$INFO[Skin.String(Theme6)])</onclick>
+<onclick>Skin.SetString(ThemeBackground, $INFO[Skin.String(ThemeIMG6)])</onclick>
+<onclick>Skin.SetString(ThemeTitle, Tema salvo)</onclick>
+<onclick>ActivateWindow(5421)</onclick>
+						<label>Tema salvo</label>
+						<thumb>$INFO[Skin.String(ThemeIMG6)]</thumb>
+						<visible>!IsEmpty(Skin.String(Theme6))</visible>
+					</item>
+					<item id="81">
+	
+		
+<onclick>Skin.SetString(ThemeColor,$INFO[Skin.String(Theme7)])</onclick>
+<onclick>Skin.SetString(ThemeBackground, $INFO[Skin.String(ThemeIMG7)])</onclick>
+<onclick>Skin.SetString(ThemeTitle, Tema salvo)</onclick>
+<onclick>ActivateWindow(5421)</onclick>
+						<label>Tema salvo</label>
+						<thumb>$INFO[Skin.String(ThemeIMG7)]</thumb>
+						<visible>!IsEmpty(Skin.String(Theme7))</visible>
+					</item>
+					<item id="82">
+	
+		
+<onclick>Skin.SetString(ThemeColor,$INFO[Skin.String(Theme8)])</onclick>
+<onclick>Skin.SetString(ThemeBackground, $INFO[Skin.String(ThemeIMG8)])</onclick>
+<onclick>Skin.SetString(ThemeTitle, Tema salvo)</onclick>
+<onclick>ActivateWindow(5421)</onclick>
+						<label>Tema salvo</label>
+						<thumb>$INFO[Skin.String(ThemeIMG8)]</thumb>
+						<visible>!IsEmpty(Skin.String(Theme8))</visible>
+					</item>
+					<item id="83">
+	
+		
+<onclick>Skin.SetString(ThemeColor,$INFO[Skin.String(Theme9)])</onclick>
+<onclick>Skin.SetString(ThemeBackground, $INFO[Skin.String(ThemeIMG9)])</onclick>
+<onclick>Skin.SetString(ThemeTitle, Tema salvo)</onclick>
+<onclick>ActivateWindow(5421)</onclick>
+						<label>Tema salvo</label>
+						<thumb>$INFO[Skin.String(ThemeIMG9)]</thumb>
+						<visible>!IsEmpty(Skin.String(Theme9))</visible>
+					</item>
+					<item id="84">
+	
+		
+<onclick>Skin.SetString(ThemeColor,$INFO[Skin.String(Theme10)])</onclick>
+<onclick>Skin.SetString(ThemeBackground, $INFO[Skin.String(ThemeIMG10)])</onclick>
+<onclick>Skin.SetString(ThemeTitle, Tema salvo)</onclick>
+<onclick>ActivateWindow(5421)</onclick>
+						<label>Tema salvo</label>
+						<thumb>$INFO[Skin.String(ThemeIMG10)]</thumb>
+						<visible>!IsEmpty(Skin.String(Theme10))</visible>
+					</item>
+<item id="85">
+	
+		
+<onclick>Skin.SetString(ThemeColor,$INFO[Skin.String(gamercolor)])</onclick>
+<onclick>Skin.SetString(ThemeBackground, https://raw.githubusercontent.com/Pedecabra2377/Image-of-day-test/main/Test.jpg)</onclick>
+<onclick>Skin.SetString(ThemeTitle, Imagem Bing)</onclick>
+<onclick>ActivateWindow(5421)</onclick>
+						<label>Bing</label>
+						<thumb>home\Bing.png</thumb>
+</item>						
+					<item id="86">
+					<label>   Salvar para temas</label>
+					<onclick>Back</onclick>
+					
+
+
+
+<onclick condition="IsEmpty(Skin.String(Theme1))">Skin.Setstring(Theme1, $INFO[Skin.String(gamercolor)])</onclick>
+<onclick condition="!IsEmpty(Skin.String(Theme1)) + IsEmpty(Skin.String(Theme2))">Skin.Setstring(Theme2, $INFO[Skin.String(gamercolor)])</onclick>
+<onclick condition="!IsEmpty(Skin.String(Theme2)) + IsEmpty(Skin.String(Theme3))">Skin.Setstring(Theme3, $INFO[Skin.String(gamercolor)])</onclick>
+<onclick condition="!IsEmpty(Skin.String(Theme3)) + IsEmpty(Skin.String(Theme4))">Skin.Setstring(Theme4, $INFO[Skin.String(gamercolor)])</onclick>
+<onclick condition="!IsEmpty(Skin.String(Theme4)) + IsEmpty(Skin.String(Theme5))">Skin.Setstring(Theme5, $INFO[Skin.String(gamercolor)])</onclick>
+<onclick condition="!IsEmpty(Skin.String(Theme5)) + IsEmpty(Skin.String(Theme6))">Skin.Setstring(Theme6, $INFO[Skin.String(gamercolor)])</onclick>
+<onclick condition="!IsEmpty(Skin.String(Theme6)) + IsEmpty(Skin.String(Theme7))">Skin.Setstring(Theme7, $INFO[Skin.String(gamercolor)])</onclick>
+<onclick condition="!IsEmpty(Skin.String(Theme7)) + IsEmpty(Skin.String(Theme8))">Skin.Setstring(Theme8, $INFO[Skin.String(gamercolor)])</onclick>
+<onclick condition="!IsEmpty(Skin.String(Theme8)) + IsEmpty(Skin.String(Theme9))">Skin.Setstring(Theme9, $INFO[Skin.String(gamercolor)])</onclick>
+<onclick condition="!IsEmpty(Skin.String(Theme9)) + IsEmpty(Skin.String(Theme10))">Skin.Setstring(Theme10, $INFO[Skin.String(gamercolor)])</onclick>
+
+<onclick condition="IsEmpty(Skin.String(ThemeIMG1))">Skin.Setstring(ThemeIMG1, $INFO[Skin.String(DashBack)])</onclick>
+<onclick condition="!IsEmpty(Skin.String(ThemeIMG1)) + IsEmpty(Skin.String(ThemeIMG2))">Skin.Setstring(ThemeIMG2, $INFO[Skin.String(DashBack)])</onclick>
+<onclick condition="!IsEmpty(Skin.String(ThemeIMG2)) + IsEmpty(Skin.String(ThemeIMG3))">Skin.Setstring(ThemeIMG3, $INFO[Skin.String(DashBack)])</onclick>
+<onclick condition="!IsEmpty(Skin.String(ThemeIMG3)) + IsEmpty(Skin.String(ThemeIMG4))">Skin.Setstring(ThemeIMG4, $INFO[Skin.String(DashBack)])</onclick>
+<onclick condition="!IsEmpty(Skin.String(ThemeIMG4)) + IsEmpty(Skin.String(ThemeIMG5))">Skin.Setstring(ThemeIMG5, $INFO[Skin.String(DashBack)])</onclick>
+<onclick condition="!IsEmpty(Skin.String(ThemeIMG5)) + IsEmpty(Skin.String(ThemeIMG6))">Skin.Setstring(ThemeIMG6, $INFO[Skin.String(DashBack)])</onclick>
+<onclick condition="!IsEmpty(Skin.String(ThemeIMG6)) + IsEmpty(Skin.String(ThemeIMG7))">Skin.Setstring(ThemeIMG7, $INFO[Skin.String(DashBack)])</onclick>
+<onclick condition="!IsEmpty(Skin.String(ThemeIMG7)) + IsEmpty(Skin.String(ThemeIMG8))">Skin.Setstring(ThemeIMG8, $INFO[Skin.String(DashBack)])</onclick>
+<onclick condition="!IsEmpty(Skin.String(ThemeIMG8)) + IsEmpty(Skin.String(ThemeIMG9))">Skin.Setstring(ThemeIMG9, $INFO[Skin.String(DashBack)])</onclick>
+<onclick condition="!IsEmpty(Skin.String(ThemeIMG9)) + IsEmpty(Skin.String(ThemeIMG10))">Skin.Setstring(ThemeIMG10, $INFO[Skin.String(DashBack)])</onclick>
+	<onclick>Notification(     ,Salvo!,00:59,)</onclick>
+</item>
+					
+					
+					
+					
+				</content>
+			</control>
+			
+			
+			<!--Scrollbar-->
+		
+
+		</control>	
+		
+		
+		<include>Xbox_Logo</include>
+<include>Snapped_Content</include>	
+	</controls>
+
+</window>

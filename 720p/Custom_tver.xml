@@ -1,0 +1,49 @@
+<!-- Foundation -->
+<window type="dialog" id="9799">
+
+	<zorder>2</zorder>
+
+<onload>RunAddon($INFO[Skin.String(tvalt)])</onload>
+		
+	<onload>AlarmClock(CloseSplash,Dialog.Close(9799, force),00:01,silent)</onload>
+										
+	<controls>
+<include>Common_Animation_dashboard</include>
+		<control type="image">
+					
+			<include>Common_Dimensions</include>
+			<texture background="true">colors/aah.png</texture>
+
+			
+		</control>
+		
+		<control type="group">
+		
+			<include>Common_Animation_gamer2</include>
+	
+			<control type="image">
+					
+				<include>Common_Dimensions</include>
+				<texture>colors/eeeh.png</texture>
+
+			
+			</control>
+
+
+				
+			<control type="image">
+				
+				<animation type="WindowOpen">
+					<effect type="fade" start="0" end="100" time="500" />
+				</animation>
+				
+				<include>Common_Dimensions</include>
+				<texture>colors\ooh.png</texture>
+			
+			</control>
+			
+		</control>	
+	
+	</controls>
+
+</window>

@@ -1,0 +1,132 @@
+<!-- Foundation -->
+<window id="9990">
+	
+	
+
+
+<onload condition="Skin.HasSetting(BOOTWIN)">SetVolume(20)</onload>
+<onload condition="!Skin.HasSetting(BOOTWIN)">SetVolume(50)</onload>
+<onload>XBMC.Playmedia(special://skin/sounds/startup.wav)</onload>
+<onload>AlarmClock(CloseStartup,ReplaceWindow(9115),00:05.5,silent)</onload>
+<onload condition="!Skin.HasSetting(DashStore)">Skin.ToggleSetting(DashStore)</onload>
+
+
+	
+	<controls>
+		
+		
+	
+			
+				<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+			<texture>XBOXnew.png</texture>
+			<aspectratio>stretch</aspectratio>
+		<visible>Skin.HasSetting(FirstTimeRun)</visible>
+		</control>
+
+						<control type="image">
+					<include>Common_Animation_Startup_Slide2</include>
+			<posy>0</posy>
+			<posx>0</posx>
+			<width>1280</width>
+			<height>720</height>
+			<texture>colors\color_white.png</texture>
+			<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+			
+		</control>
+				
+								
+		
+		
+						<control type="label">
+					<include>Common_Animation_Startup_Slide3</include>
+					<description>Profile Name</description>
+					<posx>670</posx>
+					<posy>280</posy>
+					<width>300</width>
+					<label>Bem-vindo,[CR]$INFO[System.ProfileName]!</label>
+					<font>Profile-Settings-Name</font>
+					<textcolor>Label_Normal</textcolor>
+						
+				</control>
+		
+				
+				
+				
+				<control type="image">
+					<include>Common_Animation_Startup_Slide</include>
+					
+			<posy>0</posy>
+			<posx>200</posx>
+			<width>800</width>
+			<height>800</height>
+			<texture background="true" fallback="overlays/default95.png">demo\fade2.png</texture>
+	
+		</control>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				<control type="image">
+					<include>Common_Animation_Startup_Slide</include>
+					<visible>!Skin.HasSetting(gpic)</visible>
+			<posy>0</posy>
+			<posx>0</posx>
+			<width>640</width>
+			<height>720</height>
+			<texture background="true" fallback="overlays/default95.png">$INFO[System.ProfileThumb]</texture>
+		
+		</control>
+		
+		<control type="image">
+				<visible>Skin.HasSetting(gpic)</visible>
+								<include>Common_Animation_Startup_Slide</include>																															
+														
+						<posy>0</posy>
+			<posx>0</posx>
+			<width>640</width>
+			<height>720</height>
+
+								<texture background="true" fallback="overlays/default95.png">$INFO[Skin.String(gamerpic)]</texture>
+				
+			</control>
+				
+
+
+								
+		
+
+
+
+		
+				
+
+				
+				
+
+				
+				
+							
+				
+
+		
+		
+		
+		
+
+			
+
+		
+	</controls>
+	
+</window>
