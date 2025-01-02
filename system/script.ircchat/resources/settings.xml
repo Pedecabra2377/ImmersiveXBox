@@ -1,0 +1,12 @@
+<settings>
+  <setting id="irc_host" type="text" label="N/A" default="" />
+  <setting id="channel_name" type="text" label="N/A" default="" />
+  <setting id="nickname" type="text" label="N/A" default="" />
+  <setting id="username" type="text" label="N/A" default="" />
+  <setting id="password" type="text" label="N/A" default="None" option="hidden" />
+  <setting id="realname" type="text" label="N/A" default="Anonymous" />
+  <setting id="hostname" type="text" label="N/A" default="Unknown" />
+  <setting id="servername" type="text" label="N/A" default="Server" />
+  <setting id="port" type="text" label="N/A" default="6667"/>
+  <setting id="debug" type="bool" label="N/A" default="false" />
+</settings>
