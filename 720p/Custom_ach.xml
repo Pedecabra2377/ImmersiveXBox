@@ -1,0 +1,1373 @@
+<window id="777">
+
+	<defaultcontrol always="true">53</defaultcontrol>
+	
+	<zorder>2</zorder>
+	
+		
+	<!--Splash Screen-->
+
+		<onload>Skin.SetString(snapwindow, 777)</onload>
+<onload condition="!Skin.HasSetting(snapie)">Skin.ToggleSetting(snapie)</onload>
+<onload condition="Skin.HasSetting(gaming)">Skin.ToggleSetting(gaming)</onload>
+<onload>Skin.SetString(snap, demo/sna/ach.jpg,0)</onload>
+<onload>Skin.SetString(sn,Conquistas)</onload>
+	<onload condition="Skin.HasSetting(SnapFeature) + Skin.HasSetting(SnapAlways)">Skin.SetString(snap, C:\Assistance\Snap\Pic\Item.jpg,0)</onload>
+<onload condition="Skin.HasSetting(SnapFeature) + Skin.HasSetting(SnapAlways)">AlarmClock(startsnap,RunScript(special://skin/system/Snap.py),00:01,silent)</onload>
+
+	<onload>Skin.SetString(bing,http://www.)</onload>
+
+	 <include condition="!Window.Previous(Home)">Common_Animation_Window</include>
+					  <include condition="Window.Previous(Home)">Common_Animation_apps_dash</include> 
+	<controls>
+ <include condition="!Window.Previous(Home)">Common_Animation_Window</include>
+					  <include condition="Window.Previous(Home)">Common_Animation_apps_dash</include> 
+		<!--Background Area-->
+<control type="image">
+				
+								<posy>0</posy>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+				<texture>personalization\personalization_cubist.png</texture>
+				<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+
+				
+			</control>
+<control type="image">
+				
+								<posy>0</posy>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+				<texture>$INFO[Skin.String(DashBack)]</texture>
+<visible>Skin.HasSetting(CustomBackApp)</visible>
+				
+			</control>
+				<control type="image">
+		
+			<include>Common_Dimensions</include>
+			<texture background="true">colors/color_white.png</texture>
+			<colordiffuse>FanartDiffuse</colordiffuse>
+			
+			<include>Common_Animation_Window_Dark</include>
+		<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+		</control>
+									<!--Top Area-->
+
+			
+			<!--Content Area-->
+		
+			
+			<control type="label">
+					<posx>50</posx>
+			<posy>120</posy>
+		
+				<label>conquistas</label>
+				<include>Common_Section_Label9</include>
+				
+			</control>
+				<control type="grouplist">
+		
+					
+					<include>Common_Content_Grouplist_ach</include>
+					
+					
+					
+
+					
+
+					
+
+	
+		
+			
+		
+		
+			
+				
+				
+			
+					
+
+
+										<control type="group">
+						
+					<width>720</width>
+					<height>720</height>		
+					
+					<control type="fixedlist" id="53">
+						 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="50" tween="sine" easing="in" time="500" />
+                        <effect type="slide" start="70" end="0" delay="50" tween="cubic" easing="out" time="600" />
+                    </animation>
+					 <include condition="!Window.Previous(Home)">Common_Animation_Window</include>
+					  <include condition="Window.Previous(Home)">Common_Animation_apps_dash</include> 
+				<posx>0</posx>
+				<posy>110</posy>
+				<width>1500</width>
+				<height>480</height>
+				<onup>10000</onup>
+				<ondown>9000</ondown>
+				<onleft>1</onleft>
+				<onright>54</onright>
+				<viewtype label="Extended">wrap</viewtype>
+				<orientation>horizontal</orientation>
+				<pagecontrol>63</pagecontrol>
+				<focusposition>0</focusposition>
+				<scrolltime tween="cubic" easing="out">600</scrolltime>
+				<preloaditems>2</preloaditems>
+				
+							
+				<itemlayout width="320" height="480">
+				
+					<control type="group">
+					
+						<posx>0</posx>
+						<posy>40</posy>
+						<width>300</width>
+						<height>440</height>
+						
+					
+											
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+				
+						
+					</control>	
+					
+				</itemlayout>
+
+				<focusedlayout width="320" height="480">
+				
+					<control type="group">
+					<animation effect="zoom" end="105" center="auto" time="200" condition="Skin.HasSetting(inflateitem)">Conditional</animation>
+						<posx>0</posx>
+						<posy>40</posy>
+						<width>300</width>
+						<height>440</height>
+							<control type="image">
+						
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>300</width>
+							<height>440</height>
+							<texture background="true">colors/eeh.png</texture>
+							
+							
+						</control>
+							<control type="image">
+						
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>300</width>
+							<height>170</height>
+							<texture>colors\color_grey.png</texture>
+							<aspectratio aligny="top">scale</aspectratio>
+						
+						</control>
+							<control type="image">
+						
+						<posx>125</posx>
+							<posy>65</posy>
+							<width>50</width>
+							<height>50</height>
+							<texture>$INFO[ListItem.Icon]</texture>
+							<aspectratio aligny="top">scale</aspectratio>
+							
+						</control>
+						
+						<control type="textbox">
+						
+							<posx>20</posx>
+							<posy>180</posy>
+							<width>260</width>
+							<height>62</height>
+							<label>$INFO[ListItem.Label]</label>
+							<font>Menu-ExtendedList-Header</font>
+							<textcolor>Label_Normal</textcolor>
+							<aligny>top</aligny>
+							<textcolor>Label_Normal</textcolor>
+							<autoscroll>false</autoscroll>
+							
+						</control>
+						
+						
+						
+					<control type="textbox">
+						
+							<posx>220</posx>
+							<posy>370</posy>
+							<width>260</width>
+							<height>125</height>
+							<label>$INFO[ListItem.Label2]</label>
+							<font>Menu-ExtendedList-Header</font>
+						<textcolor>Label_Normal</textcolor>
+							<aligny>top</aligny>
+							<wrapmultiline>true</wrapmultiline>
+							<textcolor>Label_Normal</textcolor>
+							<autoscroll>false</autoscroll>
+							
+						</control>
+								<control type="textbox">
+						
+							<posx>20</posx>
+							<posy>230</posy>
+							<width>260</width>
+							<height>62</height>
+						<label>$INFO[ListItem.Label3]</label>
+							<font>Menu-ExtendedList-Header</font>
+							<textcolor>FF000000</textcolor>
+							<aligny>top</aligny>
+							<wrapmultiline>true</wrapmultiline>
+							<shadowcolor>00FFFFFF</shadowcolor>
+							<autoscroll>false</autoscroll>
+							
+						</control>
+						
+						<control type="image">
+						
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>300</width>
+							<height>440</height>
+							<texture background="true">colors/color_white.png</texture>
+							<visible>Control.HasFocus(53)</visible>
+<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+							
+						</control>
+						
+							<control type="image">
+						
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>300</width>
+							<height>170</height>
+							<texture>colors\color_grey.png</texture>
+							<aspectratio aligny="top">scale</aspectratio>
+							<visible>Control.HasFocus(53)</visible>
+						</control>
+						<control type="image">
+						
+							<posx>125</posx>
+							<posy>65</posy>
+							<width>50</width>
+							<height>50</height>
+							<texture>$INFO[ListItem.Icon]</texture>
+							<aspectratio aligny="top">scale</aspectratio>
+							<visible>Control.HasFocus(53)</visible>
+						</control>
+						
+						<control type="textbox">
+						
+							<posx>20</posx>
+							<posy>180</posy>
+							<width>260</width>
+							<height>62</height>
+						<label>$INFO[ListItem.Label]</label>
+							<font>Menu-ExtendedList-Header</font>
+							<textcolor>FF000000</textcolor>
+							<aligny>top</aligny>
+							<wrapmultiline>true</wrapmultiline>
+							<shadowcolor>00FFFFFF</shadowcolor>
+							<autoscroll>false</autoscroll>
+							<visible>Control.HasFocus(53)</visible>
+						</control>
+									<control type="textbox">
+						
+							<posx>20</posx>
+							<posy>230</posy>
+							<width>260</width>
+							<height>62</height>
+						<label>$INFO[ListItem.Label3]</label>
+							<font>Menu-ExtendedList-Header</font>
+							<textcolor>FF000000</textcolor>
+							<aligny>top</aligny>
+							<wrapmultiline>true</wrapmultiline>
+							<shadowcolor>00FFFFFF</shadowcolor>
+							<autoscroll>false</autoscroll>
+								<visible>Control.HasFocus(53)</visible>
+						</control>
+						
+				
+						
+						<control type="textbox">
+						
+							<posx>220</posx>
+							<posy>370</posy>
+							<width>260</width>
+							<height>125</height>
+							<label>$INFO[ListItem.Label2]</label>
+							<font>Menu-ExtendedList-Header</font>
+							<textcolor>FF000000</textcolor>
+							<aligny>top</aligny>
+							<wrapmultiline>true</wrapmultiline>
+							<shadowcolor>00FFFFFF</shadowcolor>
+							<autoscroll>false</autoscroll>
+								<visible>Control.HasFocus(53)</visible>
+						</control>
+						
+					
+						
+					</control>	
+					
+			</focusedlayout>
+<content>
+					
+													    <item id="1">
+                              <onclick>RunScript(special://skin/system/xbox.gamertag.py)</onclick>  
+                                <label>$INFO[Skin.String(XboxLive.Gamer.RecentlyPlayed.Title.1)]</label>
+                                <label2>$INFO[Skin.String(XboxLive.Gamer.RecentlyPlayed.PercentComplete.1)]</label2>
+								<label3>$INFO[Skin.String(XboxLive.Gamer.RecentlyPlayed.AvailableGamescore.1)]/$INFO[Skin.String(XboxLive.Gamer.RecentlyPlayed.EarnedGamescore.1)][CR]$INFO[Skin.String(XboxLive.Gamer.RecentlyPlayed.AvailableAchievements.1)]/$INFO[Skin.String(XboxLive.Gamer.RecentlyPlayed.EarnedAchievements.1)]</label3>
+                                <icon>$INFO[Skin.String(XboxLive.Gamer.RecentlyPlayed.Icon.1)]</icon>
+                            </item>
+                           
+                          
+</content>
+			</control>
+							
+							
+</control>
+
+
+	<control type="group">
+					<width>720</width>
+					<height>720</height>		
+					
+					<control type="fixedlist" id="54">
+						 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="500" />
+                        <effect type="slide" start="70" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+					 <include>Common_Animation_Window</include>
+				<posx>0</posx>
+				<posy>110</posy>
+				<width>1500</width>
+				<height>480</height>
+				<onup>10000</onup>
+				<ondown>9000</ondown>
+				<onleft>53</onleft>
+				<onright>55</onright>
+				<viewtype label="Extended">wrap</viewtype>
+				<orientation>horizontal</orientation>
+				<pagecontrol>63</pagecontrol>
+				<focusposition>0</focusposition>
+				<scrolltime tween="cubic" easing="out">600</scrolltime>
+				<preloaditems>2</preloaditems>
+				
+							
+				<itemlayout width="320" height="480">
+				
+					<control type="group">
+					
+						<posx>0</posx>
+						<posy>40</posy>
+						<width>300</width>
+						<height>440</height>
+						
+					
+						
+											
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+				
+						
+					</control>	
+					
+				</itemlayout>
+
+				<focusedlayout width="320" height="480">
+				
+					<control type="group">
+					<animation effect="zoom" end="105" center="auto" time="200" condition="Skin.HasSetting(inflateitem)">Conditional</animation>
+						<posx>0</posx>
+						<posy>40</posy>
+						<width>300</width>
+						<height>440</height>
+						
+							<control type="image">
+						
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>300</width>
+							<height>440</height>
+							<texture background="true">colors/eeh.png</texture>
+							
+							
+						</control>
+							<control type="image">
+						
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>300</width>
+							<height>170</height>
+							<texture>colors\color_grey.png</texture>
+							<aspectratio aligny="top">scale</aspectratio>
+							
+						</control>
+							<control type="image">
+						
+						<posx>125</posx>
+							<posy>65</posy>
+							<width>50</width>
+							<height>50</height>
+							<texture>$INFO[ListItem.Icon]</texture>
+							<aspectratio aligny="top">scale</aspectratio>
+							
+						</control>
+						
+						<control type="textbox">
+						
+							<posx>20</posx>
+							<posy>180</posy>
+							<width>260</width>
+							<height>62</height>
+							<label>$INFO[ListItem.Label]</label>
+							<font>Menu-ExtendedList-Header</font>
+							<textcolor>Label_Normal</textcolor>
+							<aligny>top</aligny>
+							<textcolor>Label_Normal</textcolor>
+							<autoscroll>false</autoscroll>
+							
+						</control>
+						
+						
+						
+					<control type="textbox">
+						
+							<posx>220</posx>
+							<posy>370</posy>
+							<width>260</width>
+							<height>125</height>
+							<label>$INFO[ListItem.Label2]</label>
+							<font>Menu-ExtendedList-Header</font>
+						<textcolor>Label_Normal</textcolor>
+							<aligny>top</aligny>
+							<wrapmultiline>true</wrapmultiline>
+							<textcolor>Label_Normal</textcolor>
+							<autoscroll>false</autoscroll>
+							
+						</control>
+								<control type="textbox">
+						
+							<posx>20</posx>
+							<posy>230</posy>
+							<width>260</width>
+							<height>62</height>
+						<label>$INFO[ListItem.Label3]</label>
+							<font>Menu-ExtendedList-Header</font>
+							<textcolor>FF000000</textcolor>
+							<aligny>top</aligny>
+							<wrapmultiline>true</wrapmultiline>
+							<shadowcolor>00FFFFFF</shadowcolor>
+							<autoscroll>false</autoscroll>
+							
+						</control>
+						
+						
+						<control type="image">
+						
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>300</width>
+							<height>440</height>
+							<texture background="true">colors/color_white.png</texture>
+					<visible>Control.HasFocus(54)</visible>
+					
+		<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+						</control>
+						
+							<control type="image">
+						
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>300</width>
+							<height>170</height>
+							<texture>colors\color_grey.png</texture>
+							<aspectratio aligny="top">scale</aspectratio>
+								<visible>Control.HasFocus(54)</visible>
+						</control>
+						<control type="image">
+						
+							<posx>125</posx>
+							<posy>65</posy>
+							<width>50</width>
+							<height>50</height>
+							<texture>$INFO[ListItem.Icon]</texture>
+							<aspectratio aligny="top">scale</aspectratio>
+								<visible>Control.HasFocus(54)</visible>
+						</control>
+						
+						<control type="textbox">
+						
+							<posx>20</posx>
+							<posy>180</posy>
+							<width>260</width>
+							<height>62</height>
+						<label>$INFO[ListItem.Label]</label>
+							<font>Menu-ExtendedList-Header</font>
+							<textcolor>FF000000</textcolor>
+							<aligny>top</aligny>
+							<wrapmultiline>true</wrapmultiline>
+							<shadowcolor>00FFFFFF</shadowcolor>
+							<autoscroll>false</autoscroll>
+								<visible>Control.HasFocus(54)</visible>
+						</control>
+									<control type="textbox">
+						
+							<posx>20</posx>
+							<posy>230</posy>
+							<width>260</width>
+							<height>62</height>
+						<label>$INFO[ListItem.Label3]</label>
+							<font>Menu-ExtendedList-Header</font>
+							<textcolor>FF000000</textcolor>
+							<aligny>top</aligny>
+							<wrapmultiline>true</wrapmultiline>
+							<shadowcolor>00FFFFFF</shadowcolor>
+							<autoscroll>false</autoscroll>
+								<visible>Control.HasFocus(54)</visible>
+						</control>
+						
+				
+						
+						<control type="textbox">
+						
+							<posx>220</posx>
+							<posy>370</posy>
+							<width>260</width>
+							<height>125</height>
+							<label>$INFO[ListItem.Label2]</label>
+							<font>Menu-ExtendedList-Header</font>
+							<textcolor>FF000000</textcolor>
+							<aligny>top</aligny>
+							<wrapmultiline>true</wrapmultiline>
+							<shadowcolor>00FFFFFF</shadowcolor>
+							<autoscroll>false</autoscroll>
+								<visible>Control.HasFocus(54)</visible>
+						</control>
+						
+					
+						
+					</control>	
+					
+			</focusedlayout>
+<content>
+					
+													    <item id="1">
+                              <onclick>RunScript(special://skin/system/xbox.gamertag.py)</onclick>  
+                                <label>$INFO[Skin.String(XboxLive.Gamer.RecentlyPlayed.Title.2)]</label>
+                                <label2>$INFO[Skin.String(XboxLive.Gamer.RecentlyPlayed.PercentComplete.2)]</label2>
+								<label3>$INFO[Skin.String(XboxLive.Gamer.RecentlyPlayed.AvailableGamescore.2)]/$INFO[Skin.String(XboxLive.Gamer.RecentlyPlayed.EarnedGamescore.2)][CR]$INFO[Skin.String(XboxLive.Gamer.RecentlyPlayed.AvailableAchievements.2)]/$INFO[Skin.String(XboxLive.Gamer.RecentlyPlayed.EarnedAchievements.2)]</label3>
+                                <icon>$INFO[Skin.String(XboxLive.Gamer.RecentlyPlayed.Icon.2)]</icon>
+                            </item>
+                            
+                          
+</content>
+			</control>
+							
+							
+</control>
+
+
+<control type="group">
+					<width>720</width>
+					<height>720</height>		
+					
+					<control type="fixedlist" id="55">
+								 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="150" tween="sine" easing="in" time="500" />
+                        <effect type="slide" start="70" end="0" delay="150" tween="cubic" easing="out" time="600" />
+                    </animation>
+					 <include>Common_Animation_Window</include>
+				<posx>0</posx>
+				<posy>110</posy>
+				<width>1500</width>
+				<height>480</height>
+				<onup>10000</onup>
+				<ondown>9000</ondown>
+				<onleft>54</onleft>
+				<onright>56</onright>
+				<viewtype label="Extended">wrap</viewtype>
+				<orientation>horizontal</orientation>
+				<pagecontrol>63</pagecontrol>
+				<focusposition>0</focusposition>
+				<scrolltime tween="cubic" easing="out">600</scrolltime>
+				<preloaditems>2</preloaditems>
+				
+							
+				<itemlayout width="320" height="480">
+				
+					<control type="group">
+					
+						<posx>0</posx>
+						<posy>40</posy>
+						<width>300</width>
+						<height>440</height>
+						
+						
+						
+											
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+				
+						
+					</control>	
+					
+				</itemlayout>
+
+				<focusedlayout width="320" height="480">
+				
+					<control type="group">
+					<animation effect="zoom" end="105" center="auto" time="200" condition="Skin.HasSetting(inflateitem)">Conditional</animation>
+						<posx>0</posx>
+						<posy>40</posy>
+						<width>300</width>
+						<height>440</height>
+						
+						
+						
+						<control type="image">
+						
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>300</width>
+							<height>440</height>
+							<texture background="true">colors/eeh.png</texture>
+							
+							
+						</control>
+							<control type="image">
+						
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>300</width>
+							<height>170</height>
+							<texture>colors\color_grey.png</texture>
+							<aspectratio aligny="top">scale</aspectratio>
+							
+						</control>
+							<control type="image">
+						
+						<posx>125</posx>
+							<posy>65</posy>
+							<width>50</width>
+							<height>50</height>
+							<texture>$INFO[ListItem.Icon]</texture>
+							<aspectratio aligny="top">scale</aspectratio>
+							
+						</control>
+						
+						<control type="textbox">
+						
+							<posx>20</posx>
+							<posy>180</posy>
+							<width>260</width>
+							<height>62</height>
+							<label>$INFO[ListItem.Label]</label>
+							<font>Menu-ExtendedList-Header</font>
+							<textcolor>Label_Normal</textcolor>
+							<aligny>top</aligny>
+							<textcolor>Label_Normal</textcolor>
+							<autoscroll>false</autoscroll>
+							
+						</control>
+						
+						
+						
+					<control type="textbox">
+						
+							<posx>220</posx>
+							<posy>370</posy>
+							<width>260</width>
+							<height>125</height>
+							<label>$INFO[ListItem.Label2]</label>
+							<font>Menu-ExtendedList-Header</font>
+						<textcolor>Label_Normal</textcolor>
+							<aligny>top</aligny>
+							<wrapmultiline>true</wrapmultiline>
+							<textcolor>Label_Normal</textcolor>
+							<autoscroll>false</autoscroll>
+							
+						</control>
+								<control type="textbox">
+						
+							<posx>20</posx>
+							<posy>230</posy>
+							<width>260</width>
+							<height>62</height>
+						<label>$INFO[ListItem.Label3]</label>
+							<font>Menu-ExtendedList-Header</font>
+							<textcolor>FF000000</textcolor>
+							<aligny>top</aligny>
+							<wrapmultiline>true</wrapmultiline>
+							<shadowcolor>00FFFFFF</shadowcolor>
+							<autoscroll>false</autoscroll>
+							
+						</control>
+						<control type="image">
+						
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>300</width>
+							<height>440</height>
+							<texture background="true">colors/color_white.png</texture>
+					
+							<visible>Control.HasFocus(55)</visible>
+<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+						</control>
+						
+							<control type="image">
+						
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>300</width>
+							<height>170</height>
+							<texture>colors\color_grey.png</texture>
+							<aspectratio aligny="top">scale</aspectratio>
+							<visible>Control.HasFocus(55)</visible>
+						</control>
+						<control type="image">
+						
+							<posx>125</posx>
+							<posy>65</posy>
+							<width>50</width>
+							<height>50</height>
+							<texture>$INFO[ListItem.Icon]</texture>
+							<aspectratio aligny="top">scale</aspectratio>
+							<visible>Control.HasFocus(55)</visible>
+						</control>
+						
+						<control type="textbox">
+						
+							<posx>20</posx>
+							<posy>180</posy>
+							<width>260</width>
+							<height>62</height>
+						<label>$INFO[ListItem.Label]</label>
+							<font>Menu-ExtendedList-Header</font>
+							<textcolor>FF000000</textcolor>
+							<aligny>top</aligny>
+							<wrapmultiline>true</wrapmultiline>
+							<shadowcolor>00FFFFFF</shadowcolor>
+							<autoscroll>false</autoscroll>
+							<visible>Control.HasFocus(55)</visible>
+						</control>
+									<control type="textbox">
+						
+							<posx>20</posx>
+							<posy>230</posy>
+							<width>260</width>
+							<height>62</height>
+						<label>$INFO[ListItem.Label3]</label>
+							<font>Menu-ExtendedList-Header</font>
+							<textcolor>FF000000</textcolor>
+							<aligny>top</aligny>
+							<wrapmultiline>true</wrapmultiline>
+							<shadowcolor>00FFFFFF</shadowcolor>
+							<autoscroll>false</autoscroll>
+							<visible>Control.HasFocus(55)</visible>
+						</control>
+						
+				
+						
+						<control type="textbox">
+						
+							<posx>220</posx>
+							<posy>370</posy>
+							<width>260</width>
+							<height>125</height>
+							<label>$INFO[ListItem.Label2]</label>
+							<font>Menu-ExtendedList-Header</font>
+							<textcolor>FF000000</textcolor>
+							<aligny>top</aligny>
+							<wrapmultiline>true</wrapmultiline>
+							<shadowcolor>00FFFFFF</shadowcolor>
+							<autoscroll>false</autoscroll>
+							<visible>Control.HasFocus(55)</visible>
+						</control>
+						
+					
+						
+					</control>	
+					
+			</focusedlayout>
+<content>
+					
+													    <item id="1">
+                              <onclick>RunScript(special://skin/system/xbox.gamertag.py)</onclick>  
+                                <label>$INFO[Skin.String(XboxLive.Gamer.RecentlyPlayed.Title.3)]</label>
+                                <label2>$INFO[Skin.String(XboxLive.Gamer.RecentlyPlayed.PercentComplete.3)]</label2>
+								<label3>$INFO[Skin.String(XboxLive.Gamer.RecentlyPlayed.AvailableGamescore.3)]/$INFO[Skin.String(XboxLive.Gamer.RecentlyPlayed.EarnedGamescore.3)][CR]$INFO[Skin.String(XboxLive.Gamer.RecentlyPlayed.AvailableAchievements.3)]/$INFO[Skin.String(XboxLive.Gamer.RecentlyPlayed.EarnedAchievements.3)]</label3>
+                                <icon>$INFO[Skin.String(XboxLive.Gamer.RecentlyPlayed.Icon.3)]</icon>
+                            </item>
+                            
+                          
+</content>
+			</control>
+							
+							
+</control>
+
+<control type="group">
+					<width>720</width>
+					<height>720</height>		
+					
+					<control type="fixedlist" id="56">
+								 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="200" tween="sine" easing="in" time="500" />
+                        <effect type="slide" start="70" end="0" delay="200" tween="cubic" easing="out" time="600" />
+                    </animation>
+					 <include>Common_Animation_Window</include>
+				<posx>0</posx>
+				<posy>110</posy>
+				<width>1500</width>
+				<height>480</height>
+				<onup>10000</onup>
+				<ondown>9000</ondown>
+				<onleft>55</onleft>
+				<onright>57</onright>
+				<viewtype label="Extended">wrap</viewtype>
+				<orientation>horizontal</orientation>
+				<pagecontrol>63</pagecontrol>
+				<focusposition>0</focusposition>
+				<scrolltime tween="cubic" easing="out">600</scrolltime>
+				<preloaditems>2</preloaditems>
+				
+							
+				<itemlayout width="320" height="480">
+				
+					<control type="group">
+					
+						<posx>0</posx>
+						<posy>40</posy>
+						<width>300</width>
+						<height>440</height>
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+				
+						
+					</control>	
+					
+				</itemlayout>
+
+				<focusedlayout width="320" height="480">
+				
+					<control type="group">
+					<animation effect="zoom" end="105" center="auto" time="200" condition="Skin.HasSetting(inflateitem)">Conditional</animation>
+						<posx>0</posx>
+						<posy>40</posy>
+						<width>300</width>
+						<height>440</height>
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						<control type="image">
+						
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>300</width>
+							<height>440</height>
+							<texture background="true">colors/eeh.png</texture>
+							
+							
+						</control>
+							<control type="image">
+						
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>300</width>
+							<height>170</height>
+							<texture>colors\color_grey.png</texture>
+							<aspectratio aligny="top">scale</aspectratio>
+							
+						</control>
+							<control type="image">
+						
+						<posx>125</posx>
+							<posy>65</posy>
+							<width>50</width>
+							<height>50</height>
+							<texture>$INFO[ListItem.Icon]</texture>
+							<aspectratio aligny="top">scale</aspectratio>
+							
+						</control>
+						
+						<control type="textbox">
+						
+							<posx>20</posx>
+							<posy>180</posy>
+							<width>260</width>
+							<height>62</height>
+							<label>$INFO[ListItem.Label]</label>
+							<font>Menu-ExtendedList-Header</font>
+							<textcolor>Label_Normal</textcolor>
+							<aligny>top</aligny>
+							<textcolor>Label_Normal</textcolor>
+							<autoscroll>false</autoscroll>
+							
+						</control>
+						
+						
+						
+					<control type="textbox">
+						
+							<posx>220</posx>
+							<posy>370</posy>
+							<width>260</width>
+							<height>125</height>
+							<label>$INFO[ListItem.Label2]</label>
+							<font>Menu-ExtendedList-Header</font>
+						<textcolor>Label_Normal</textcolor>
+							<aligny>top</aligny>
+							<wrapmultiline>true</wrapmultiline>
+							<textcolor>Label_Normal</textcolor>
+							<autoscroll>false</autoscroll>
+							
+						</control>
+								<control type="textbox">
+						
+							<posx>20</posx>
+							<posy>230</posy>
+							<width>260</width>
+							<height>62</height>
+						<label>$INFO[ListItem.Label3]</label>
+							<font>Menu-ExtendedList-Header</font>
+							<textcolor>FF000000</textcolor>
+							<aligny>top</aligny>
+							<wrapmultiline>true</wrapmultiline>
+							<shadowcolor>00FFFFFF</shadowcolor>
+							<autoscroll>false</autoscroll>
+							
+						</control>
+						
+											
+						<control type="image">
+						
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>300</width>
+							<height>440</height>
+							<texture background="true">colors/color_white.png</texture>
+					
+							<visible>Control.HasFocus(56)</visible>
+<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+						</control>
+						
+							<control type="image">
+						
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>300</width>
+							<height>170</height>
+							<texture>colors\color_grey.png</texture>
+							<aspectratio aligny="top">scale</aspectratio>
+							<visible>Control.HasFocus(56)</visible>
+						</control>
+						<control type="image">
+						
+							<posx>125</posx>
+							<posy>65</posy>
+							<width>50</width>
+							<height>50</height>
+							<texture>$INFO[ListItem.Icon]</texture>
+							<aspectratio aligny="top">scale</aspectratio>
+							<visible>Control.HasFocus(56)</visible>
+						</control>
+						
+						<control type="textbox">
+						
+							<posx>20</posx>
+							<posy>180</posy>
+							<width>260</width>
+							<height>62</height>
+						<label>$INFO[ListItem.Label]</label>
+							<font>Menu-ExtendedList-Header</font>
+							<textcolor>FF000000</textcolor>
+							<aligny>top</aligny>
+							<wrapmultiline>true</wrapmultiline>
+							<shadowcolor>00FFFFFF</shadowcolor>
+							<autoscroll>false</autoscroll>
+							<visible>Control.HasFocus(56)</visible>
+						</control>
+									<control type="textbox">
+						
+							<posx>20</posx>
+							<posy>230</posy>
+							<width>260</width>
+							<height>62</height>
+						<label>$INFO[ListItem.Label3]</label>
+							<font>Menu-ExtendedList-Header</font>
+							<textcolor>FF000000</textcolor>
+							<aligny>top</aligny>
+							<wrapmultiline>true</wrapmultiline>
+							<shadowcolor>00FFFFFF</shadowcolor>
+							<autoscroll>false</autoscroll>
+							<visible>Control.HasFocus(56)</visible>
+						</control>
+						
+				
+						
+						<control type="textbox">
+						
+							<posx>220</posx>
+							<posy>370</posy>
+							<width>260</width>
+							<height>125</height>
+							<label>$INFO[ListItem.Label2]</label>
+							<font>Menu-ExtendedList-Header</font>
+							<textcolor>FF000000</textcolor>
+							<aligny>top</aligny>
+							<wrapmultiline>true</wrapmultiline>
+							<shadowcolor>00FFFFFF</shadowcolor>
+							<autoscroll>false</autoscroll>
+							<visible>Control.HasFocus(56)</visible>
+						</control>
+						
+					
+						
+					</control>	
+					
+			</focusedlayout>
+<content>
+					
+													    <item id="1">
+                              <onclick>RunScript(special://skin/system/xbox.gamertag.py)</onclick>  
+                                <label>$INFO[Skin.String(XboxLive.Gamer.RecentlyPlayed.Title.4)]</label>
+                                <label2>$INFO[Skin.String(XboxLive.Gamer.RecentlyPlayed.PercentComplete.4)]</label2>
+								<label3>$INFO[Skin.String(XboxLive.Gamer.RecentlyPlayed.AvailableGamescore.4)]/$INFO[Skin.String(XboxLive.Gamer.RecentlyPlayed.EarnedGamescore.4)][CR]$INFO[Skin.String(XboxLive.Gamer.RecentlyPlayed.AvailableAchievements.4)]/$INFO[Skin.String(XboxLive.Gamer.RecentlyPlayed.EarnedAchievements.4)]</label3>
+                                <icon>$INFO[Skin.String(XboxLive.Gamer.RecentlyPlayed.Icon.4)]</icon>
+                            </item>
+                            
+                          
+</content>
+			</control>
+							
+							
+</control>
+
+<control type="group">
+					<width>720</width>
+					<height>720</height>		
+					
+					<control type="fixedlist" id="57">
+								 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="250" tween="sine" easing="in" time="500" />
+                        <effect type="slide" start="70" end="0" delay="250" tween="cubic" easing="out" time="600" />
+                    </animation>
+					 <include>Common_Animation_Window</include>
+				<posx>0</posx>
+				<posy>110</posy>
+				<width>1500</width>
+				<height>480</height>
+				<onup>10000</onup>
+				<ondown>9000</ondown>
+				<onleft>56</onleft>
+				
+				<viewtype label="Extended">wrap</viewtype>
+				<orientation>horizontal</orientation>
+				<pagecontrol>63</pagecontrol>
+				<focusposition>0</focusposition>
+				<scrolltime tween="cubic" easing="out">600</scrolltime>
+				<preloaditems>2</preloaditems>
+				
+							
+				<itemlayout width="320" height="480">
+				
+					<control type="group">
+					
+						<posx>0</posx>
+						<posy>40</posy>
+						<width>300</width>
+						<height>440</height>
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+				
+						
+					</control>	
+					
+				</itemlayout>
+
+				<focusedlayout width="320" height="480">
+				
+					<control type="group">
+					<animation effect="zoom" end="105" center="auto" time="200" condition="Skin.HasSetting(inflateitem)">Conditional</animation>
+						<posx>0</posx>
+						<posy>40</posy>
+						<width>300</width>
+						<height>440</height>
+						
+						<control type="image">
+						
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>300</width>
+							<height>440</height>
+							<texture background="true">colors/eeh.png</texture>
+							
+							
+						</control>
+							<control type="image">
+						
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>300</width>
+							<height>170</height>
+							<texture>colors\color_grey.png</texture>
+							<aspectratio aligny="top">scale</aspectratio>
+							
+						</control>
+							<control type="image">
+						
+						<posx>125</posx>
+							<posy>65</posy>
+							<width>50</width>
+							<height>50</height>
+							<texture>$INFO[ListItem.Icon]</texture>
+							<aspectratio aligny="top">scale</aspectratio>
+							
+						</control>
+						
+						<control type="textbox">
+						
+							<posx>20</posx>
+							<posy>180</posy>
+							<width>260</width>
+							<height>62</height>
+							<label>$INFO[ListItem.Label]</label>
+							<font>Menu-ExtendedList-Header</font>
+							<textcolor>Label_Normal</textcolor>
+							<aligny>top</aligny>
+							<textcolor>Label_Normal</textcolor>
+							<autoscroll>false</autoscroll>
+							
+						</control>
+						
+						
+						
+					<control type="textbox">
+						
+							<posx>220</posx>
+							<posy>370</posy>
+							<width>260</width>
+							<height>125</height>
+							<label>$INFO[ListItem.Label2]</label>
+							<font>Menu-ExtendedList-Header</font>
+						<textcolor>Label_Normal</textcolor>
+							<aligny>top</aligny>
+							<wrapmultiline>true</wrapmultiline>
+							<textcolor>Label_Normal</textcolor>
+							<autoscroll>false</autoscroll>
+							
+						</control>
+								<control type="textbox">
+						
+							<posx>20</posx>
+							<posy>230</posy>
+							<width>260</width>
+							<height>62</height>
+						<label>$INFO[ListItem.Label3]</label>
+							<font>Menu-ExtendedList-Header</font>
+							<textcolor>FF000000</textcolor>
+							<aligny>top</aligny>
+							<wrapmultiline>true</wrapmultiline>
+							<shadowcolor>00FFFFFF</shadowcolor>
+							<autoscroll>false</autoscroll>
+							
+						</control>
+						
+											
+						
+						
+						
+						
+						<control type="image">
+						
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>300</width>
+							<height>440</height>
+							<texture background="true">colors/color_white.png</texture>
+					<visible>Control.HasFocus(57)</visible>
+					<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>		
+						</control>
+						
+<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+							<control type="image">
+						
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>300</width>
+							<height>170</height>
+							<texture>colors\color_grey.png</texture>
+							<aspectratio aligny="top">scale</aspectratio>
+							<visible>Control.HasFocus(57)</visible>
+						</control>
+						<control type="image">
+						
+							<posx>125</posx>
+							<posy>65</posy>
+							<width>50</width>
+							<height>50</height>
+							<texture>$INFO[ListItem.Icon]</texture>
+							<aspectratio aligny="top">scale</aspectratio>
+							<visible>Control.HasFocus(57)</visible>
+						</control>
+						
+						<control type="textbox">
+						
+							<posx>20</posx>
+							<posy>180</posy>
+							<width>260</width>
+							<height>62</height>
+						<label>$INFO[ListItem.Label]</label>
+							<font>Menu-ExtendedList-Header</font>
+							<textcolor>FF000000</textcolor>
+							<aligny>top</aligny>
+							<wrapmultiline>true</wrapmultiline>
+							<shadowcolor>00FFFFFF</shadowcolor>
+							<autoscroll>false</autoscroll>
+							<visible>Control.HasFocus(57)</visible>
+						</control>
+									<control type="textbox">
+						
+							<posx>20</posx>
+							<posy>230</posy>
+							<width>260</width>
+							<height>62</height>
+						<label>$INFO[ListItem.Label3]</label>
+							<font>Menu-ExtendedList-Header</font>
+							<textcolor>FF000000</textcolor>
+							<aligny>top</aligny>
+							<wrapmultiline>true</wrapmultiline>
+							<shadowcolor>00FFFFFF</shadowcolor>
+							<autoscroll>false</autoscroll>
+							<visible>Control.HasFocus(57)</visible>
+						</control>
+						
+				
+						
+						<control type="textbox">
+						
+							<posx>220</posx>
+							<posy>370</posy>
+							<width>260</width>
+							<height>125</height>
+							<label>$INFO[ListItem.Label2]</label>
+							<font>Menu-ExtendedList-Header</font>
+							<textcolor>FF000000</textcolor>
+							<aligny>top</aligny>
+							<wrapmultiline>true</wrapmultiline>
+							<shadowcolor>00FFFFFF</shadowcolor>
+							<autoscroll>false</autoscroll>
+							<visible>Control.HasFocus(57)</visible>
+						</control>
+						
+					
+						
+					</control>	
+					
+			</focusedlayout>
+<content>
+					
+													    <item id="1">
+                              <onclick>RunScript(special://skin/system/xbox.gamertag.py)</onclick>  
+                                <label>$INFO[Skin.String(XboxLive.Gamer.RecentlyPlayed.Title.5)]</label>
+                                <label2>$INFO[Skin.String(XboxLive.Gamer.RecentlyPlayed.PercentComplete.5)]</label2>
+								<label3>$INFO[Skin.String(XboxLive.Gamer.RecentlyPlayed.AvailableGamescore.5)]/$INFO[Skin.String(XboxLive.Gamer.RecentlyPlayed.EarnedGamescore.5)][CR]$INFO[Skin.String(XboxLive.Gamer.RecentlyPlayed.AvailableAchievements.5)]/$INFO[Skin.String(XboxLive.Gamer.RecentlyPlayed.EarnedAchievements.5)]</label3>
+                                <icon>$INFO[Skin.String(XboxLive.Gamer.RecentlyPlayed.Icon.5)]</icon>
+                            </item>
+                            
+                          
+</content>
+			</control>
+							
+							
+</control>
+
+					
+</control>
+
+				
+				
+				
+				
+
+				
+						
+						<!--Scrollbar-->
+
+					
+				
+					
+		
+				
+							
+				
+
+			
+			<!--Scrollbar-->
+					
+		<include>Xbox_Logo</include>										
+<include>Snapped_Content</include>	
+
+		
+	</controls>	
+		
+</window>

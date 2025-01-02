@@ -1,0 +1,956 @@
+<window id="40">
+
+	<defaultcontrol always="true">3</defaultcontrol>
+	
+	<zorder>2</zorder>
+
+	
+	
+	<!--Splash Screen-->
+
+	
+<onload condition="Container(20).HasFocus(2)">Control.Move(20,-1)</onload>
+
+	
+	
+	<onload condition="System.HasAddon(script.randomandlastitems) + Skin.HasSetting(ShowHistorySection_Video)">XBMC.RunScript(script.randomandlastitems,limit=10,method=Last,playlist=special://skin/playlists/History (Movies).xsp,menu=Menu1)</onload>
+	
+	<onload condition="System.HasAddon(script.extendedinfo) + Skin.HasSetting(ShowInCinemasSection_Video)">RunScript(script.extendedinfo,info=incinema)</onload>
+	<onload condition="System.HasAddon(script.extendedinfo) + Skin.HasSetting(ShowTrendingSection_Video)">RunScript(script.extendedinfo,info=TrendingMovies)</onload>
+	
+	<onload>AlarmClock(MoveFeatured,Control.Move(9001,1),00:20,silent,loop)</onload>
+	<onunload>XBMC.CancelAlarm(MoveFeatured,true)</onunload>
+	
+	<onload>AlarmClock(MoveIncinemas,Control.Move(9005,1),00:20,silent,loop)</onload>
+	<onunload>XBMC.CancelAlarm(MoveIncinemas,true)</onunload>
+	
+	<onload>AlarmClock(MoveTrakt,Control.Move(9007,1),00:20,silent,loop)</onload>
+	<onunload>XBMC.CancelAlarm(MoveTrakt,true)</onunload>
+	
+		<onload>Skin.SetString(snapwindow, 911)</onload>
+<onload condition="!Skin.HasSetting(snapie)">Skin.ToggleSetting(snapie)</onload>
+<onload condition="Skin.HasSetting(gaming)">Skin.ToggleSetting(gaming)</onload>
+<onload>Skin.SetString(snap, demo/sna/splash_store.png,0)</onload>
+<onload>Skin.SetString(sn,Loja Xbox)</onload>
+	<onload condition="Skin.HasSetting(SnapFeature) + Skin.HasSetting(SnapAlways)">Skin.SetString(snap, C:\Assistance\Snap\Pic\Item.jpg,0)</onload>
+<onload condition="Skin.HasSetting(SnapFeature) + Skin.HasSetting(SnapAlways)">AlarmClock(startsnap,RunScript(special://skin/system/Snap.py),00:01,silent)</onload>
+<onload>ActivateWindow(8116)</onload>
+<onload condition="IsEmpty(Skin.String(MyEmail)) + IsEmpty(Skin.String(MyPassword)) + IsEmpty(Skin.String(EmailServer)) + IsEmpty(Skin.String(ServerPort))">ActivateWindow(5535)</onload>
+	
+	<controls>
+
+		<!--Background Area-->
+	
+								<control type="image">
+			
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+			<texture>demo\app\store\forza.jpg</texture>
+			<aspectratio>stretch</aspectratio>
+			<visible>true</visible>
+		</control>
+												<control type="image">
+					
+					<include>Common_Dimensions</include>
+					<fadetime>800</fadetime>
+					<texture background="true">$INFO[Window(Home).Property(TrendingMovies.8.Art(fanart))]</texture>
+					<visible>Skin.HasSetting(ShowFanartBackground) + Container(20).HasFocus(1) + !Skin.HasSetting(Altads)</visible>
+				</control>
+																<control type="image">
+					
+					<include>Common_Dimensions</include>
+					<fadetime>800</fadetime>
+					<texture background="true">$INFO[Window(Home).Property(Trendingshows.5.Art(fanart))]</texture>
+					<visible>Skin.HasSetting(ShowFanartBackground) + Container(20).HasFocus(2) + !Skin.HasSetting(Altads)</visible>
+				</control>
+																		<control type="image">
+								<include>Common_Dimensions</include>
+					<fadetime>800</fadetime>
+								<texture>$INFO[Window(Home).Property(RecentMovie.1.Art(fanart))]</texture>
+<visible>Skin.HasSetting(ShowFanartBackground) + Skin.HasSetting(Altads) + Container(20).HasFocus(1)</visible>
+							</control>
+																						<control type="image">
+								<include>Common_Dimensions</include>
+					<fadetime>800</fadetime>
+								<texture>$INFO[Window(Home).Property(RecentEpisode.2.Art(tvshow.fanart))]</texture>
+<visible>Skin.HasSetting(ShowFanartBackground) + Skin.HasSetting(Altads) + Container(20).HasFocus(2)</visible>
+							</control>
+														<control type="image">
+			
+				<include>Common_Dimensions</include>
+				<texture background="true">colors/color_white.png</texture>
+				
+				<colordiffuse>FanartDiffuse</colordiffuse>
+				<visible>Skin.HasSetting(ShowFanartBackground)</visible>
+				
+			</control>
+			
+<include>Xbox_Logo</include>
+	
+										<control type="grouplist">
+			<visible>true</visible>
+													<!--Animation-->
+				<include condition="!Skin.HasSetting(disablesplash)">Common_Animation_Content_Splash</include>
+				<include condition="Skin.HasSetting(disablesplash)">Common_Animation_Content</include>				
+				<posx>128</posx>
+				<posy>100</posy>
+				<width>1100</width>
+				<height>100</height>
+				<orientation>horizontal</orientation>
+				<itemgap>20</itemgap>
+												<control type="label">
+						<visible>true</visible>
+					<width min="0" max="400">auto</width>
+					<height>100</height>
+					<label>Início</label>
+					<font>Content-Label</font>
+					<textcolor>FF333333</textcolor>
+					<aligny>top</aligny>
+<animation effect="zoom" end="108" center="auto" time="200" condition="Container(20).HasFocus(1) + Skin.HasSetting(textview)">Conditional</animation>
+				</control>
+				
+				<control type="label">
+						<visible>true</visible>
+					<width min="0" max="400">auto</width>
+					<height>100</height>
+					<label>Jogos & apps</label>
+					<font>Content-Label</font>
+					<textcolor>FF333333</textcolor>
+					<aligny>top</aligny>
+<animation effect="zoom" end="108" center="auto" time="200" condition="Container(20).HasFocus(2) + Skin.HasSetting(textview)">Conditional</animation>
+				</control>
+				
+
+				
+
+				</control>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+										<control type="grouplist">
+			<visible>true</visible>
+													<!--Animation-->
+							<include condition="!Skin.HasSetting(disablesplash)">Common_Animation_Content_Splash</include>
+				<include condition="Skin.HasSetting(disablesplash)">Common_Animation_Content</include>				
+				<posx>128</posx>
+				<posy>100</posy>
+				<width>1100</width>
+				<height>100</height>
+				<orientation>horizontal</orientation>
+				<itemgap>20</itemgap>
+												<control type="label">
+						<visible>true</visible>
+					<width min="0" max="400">auto</width>
+					<height>100</height>
+					<label>Início</label>
+					<font>Content-Label</font>
+					<textcolor>FFFFFFFF</textcolor>
+					<aligny>top</aligny>
+					<animation effect="zoom" end="108" center="auto" time="200" condition="Container(20).HasFocus(1) + Skin.HasSetting(textview)">Conditional</animation>
+                       <animation effect="fade" start="0" end="100" time="200" tween="cubic" easing="inout" condition="Container(20).HasFocus(1)">Conditional</animation>
+                <animation effect="fade" start="100" end="0" time="200" tween="cubic" easing="inout" condition="!Container(20).HasFocus(1)">Conditional</animation>
+				</control>
+				
+				<control type="label">
+						<visible>true</visible>
+					<width min="0" max="400">auto</width>
+					<height>100</height>
+					<label>Jogos & apps</label>
+					<font>Content-Label</font>
+					<textcolor>FFFFFFFF</textcolor>
+					<aligny>top</aligny>
+								 <animation effect="zoom" end="108" center="auto" time="200" condition="Container(20).HasFocus(2) + Skin.HasSetting(textview)">Conditional</animation>
+                              <animation effect="fade" start="0" end="100" time="200" tween="cubic" easing="inout" condition="Container(20).HasFocus(2)">Conditional</animation>
+                <animation effect="fade" start="100" end="0" time="200" tween="cubic" easing="inout" condition="!Container(20).HasFocus(2)">Conditional</animation>
+				</control>
+				
+	
+
+
+				</control>
+				
+		
+				        <control type="wraplist" id="20">
+            <description>Control list</description>
+            <posx>0</posx>
+            <posy>0</posy>
+            <height>2</height>
+            <width>2</width>
+            <onup>21</onup>
+            <orientation>horizontal</orientation>
+            <scrolltime>0</scrolltime>
+            <viewtype>list</viewtype>
+	    <defaultcontrol>2</defaultcontrol>
+            <itemlayout width="2" height="2"/>
+           	<focusedlayout width="2" height="2"/>
+            <content>
+            	<item id="1">
+            		<label>Fixado</label>
+            		<onclick>-</onclick>
+            	</item>
+            	<item id="2">
+            		<label>Início</label>
+            		<onclick>-</onclick>
+            	</item>
+
+
+            </content>
+        </control>
+	
+
+
+
+				
+	
+
+
+			
+
+		<control type="group">
+		
+			<include>Common_Dimensions</include>
+			<include>Common_Animation_Window</include>
+		
+			<!--Top Area-->
+			<include>Common_Breadcrumb</include>
+						<include>Common_Overlay</include>
+			
+			<!--Content Area-->
+			<control type="group">
+			
+				<posx>0</posx>
+				<posy>100</posy>
+				<width>1280</width>
+				<height>480</height>
+				
+				<!--Animation-->
+							<include condition="!Skin.HasSetting(disablesplash)">Common_Animation_Content_Splash</include>
+				<include condition="Skin.HasSetting(disablesplash)">Common_Animation_Content</include>		
+				
+				<control type="grouplist">
+		
+									<include condition="!Skin.HasSetting(Linear) + !Skin.HasSetting(Sine) + !Skin.HasSetting(Quadric) + !Skin.HasSetting(Cubic)">Common_Content_Grouplist2</include>
+				<include condition="Skin.HasSetting(Linear) + !Skin.HasSetting(Sine) + !Skin.HasSetting(Quadric) + !Skin.HasSetting(Cubic)">Common_Content_Grouplist3</include>
+				<include condition="!Skin.HasSetting(Linear) + Skin.HasSetting(Sine) + !Skin.HasSetting(Quadric) + !Skin.HasSetting(Cubic)">Common_Content_Grouplist4</include>
+				<include condition="!Skin.HasSetting(Linear) + !Skin.HasSetting(Sine) + Skin.HasSetting(Quadric) + !Skin.HasSetting(Cubic)">Common_Content_Grouplist5</include>
+				<include condition="!Skin.HasSetting(Linear) + !Skin.HasSetting(Sine) + !Skin.HasSetting(Quadric) + Skin.HasSetting(Cubic)">Common_Content_Grouplist6</include>
+					
+					
+					
+					
+					
+					<control type="group" id="8000">
+
+						<posx>50</posx>
+						<posy>0</posy>
+						<width>1200</width>
+						<height>720</height>
+
+						<control type="panel" id="11">
+<posx>1065</posx>
+						<posy>345</posy>
+
+						
+						<include>Common_AltHome_Panel3</include>
+						<onleft>Control.Move(20,-1)</onleft>
+<onleft>22</onleft>
+<onright>Control.Move(20,1)</onright>
+						<onright>22</onright>
+						<ondown>3</ondown>
+						<pagecontrol>7017</pagecontrol>
+						
+						<content>
+						
+
+							
+																					<item id="1">
+								<description>Games</description>
+								<label>Games</label>
+								<thumb>SHORT\ICO\Games.png</thumb>
+								<onclick>Control.Setfocus(3)</onclick>
+														
+							</item>
+							
+
+
+								</content>
+
+					</control>
+					<control type="list" id="3">
+					
+						<include>Common_AltHome_List</include>
+
+						<onright>9000</onright>
+						<ondown>33</ondown>
+						<onup>11</onup>
+						<itemlayout width="600" height="240">
+						
+							<control type="image">
+							
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>440</width>
+								<height>220</height>
+								<texture>demo/lololo.png</texture>
+								
+							</control>
+							
+							<include>Common_AltHome_Thumb</include>
+							
+						</itemlayout>
+
+						<focusedlayout width="600" height="240">
+						
+							<control type="image">
+							
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>440</width>
+								<height>220</height>
+								<texture>demo/lololo.png</texture>
+								
+								<visible>!Control.HasFocus(8083)</visible>
+								
+							</control>
+						
+							<control type="image">
+							
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>440</width>
+								<height>220</height>
+								<texture>demo/lololo.png</texture>
+
+								
+								<visible>Control.HasFocus(8083)</visible>
+								
+							</control>
+							
+							<include>Common_AltHome_Thumb</include>
+							
+						</focusedlayout>
+						
+						<content>
+
+							<item id="1">
+								<description>em alta</description>
+								<label>em alta</label>
+								<thumb>lolololo.jpg</thumb>
+							<onclick>ActivateWindow(58)</onclick>
+							<visible>true</visible>
+							</item>
+														<item id="1">
+								<description>em alta</description>
+								<label>em alta</label>
+								<thumb>lolololo.jpg</thumb>
+							<include>Common_TraktTV_ClearProperties</include>
+							<onclick>$INFO[Window(Home).Property(RecentMovie.3.Play)]</onclick>
+
+							<visible>Skin.HasSetting(Altads)</visible>
+							</item>
+							
+						</content>
+
+					</control>
+					
+		
+						<control type="panel" id="9000">
+<include>Common_Animation_dashboard_tab</include>
+							<posx>900</posx>
+							<posy>60</posy>
+							<width>400</width>
+							<height>480</height>
+							<onleft>3</onleft>
+							
+							<onup>11</onup>
+							<ondown>9000</ondown>
+							<pagecontrol>9020</pagecontrol>
+							<viewtype label="535">list</viewtype>
+							<scrolltime tween="cubic" easing="out">600</scrolltime>
+							<preloaditems>2</preloaditems>
+
+							<itemlayout width="400" height="80">
+
+								<control type="image">
+
+									<posx>0</posx>
+									<posy>0</posy>
+									<width>60</width>
+									<height>60</height>
+									<texture>colors/color_keyboard_dark.png</texture>
+
+								</control>
+
+								<control type="image">
+
+									<include>Common_Control_Image</include>
+									<texture>$INFO[ListItem.Thumb]</texture>
+
+								</control>
+
+								<control type="label">
+
+									<width min="20" max="380">auto</width>
+									<label>$INFO[ListItem.Label]</label>
+									<textcolor>Label_Normal</textcolor>
+									<include>Common_Control_Label</include>
+
+								</control>
+
+							</itemlayout>
+
+							<focusedlayout width="400" height="80">
+
+								<control type="image">
+
+									<posx>0</posx>
+									<posy>0</posy>
+									<width>60</width>
+									<height>60</height>
+									<texture>colors/color_white.png</texture>
+									<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+									<visible>!Control.HasFocus(9000)</visible>
+
+								</control>
+
+								<control type="image">
+
+									<posx>0</posx>
+									<posy>0</posy>
+									<width>60</width>
+									<height>60</height>
+									<texture>colors/color_white.png</texture>
+									<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+
+									<visible>Control.HasFocus(9000)</visible>
+
+								</control>
+
+								<control type="image">
+
+									<include>Common_Control_Image</include>
+									<texture>$INFO[ListItem.Thumb]</texture>
+
+								</control>
+
+								<control type="image">
+
+									<posx>0</posx>
+									<posy>0</posy>
+									<width>60</width>
+									<height>60</height>
+									<texture>button_unfocus.png</texture>
+									<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+
+									<visible>Control.HasFocus(9000)</visible>
+
+								</control>
+
+								<control type="label">
+
+									<width min="20" max="380">auto</width>
+									<label>$INFO[ListItem.Label]</label>
+									<textcolor>Label_Normal</textcolor>
+									<include>Common_Control_Label</include>
+
+								</control>
+
+							</focusedlayout>
+
+							<content>
+
+								<item>
+									<description>Loja</description>
+									<label>Loja</label>
+									<thumb>home/xbs.png</thumb>
+									<onclick>ActivateWindow(10040,&quot;special://repos/repository.store/&quot;,return)</onclick>
+</item>
+								
+
+								<item>
+									<description>Termos</description>
+									<label>Termos</label>
+									<thumb>home/alternate/home_systeminfo_small.png</thumb>
+									<onclick>ActivateWindow(560)</onclick>
+								</item>
+
+<item>
+									<description>Atualizar serviços</description>
+									<label>Atualizar serviços</label>
+									<thumb>SHORT/ICO/Downloads.png</thumb>
+									<onclick>UpdateAddonRepos</onclick>
+								</item>
+<item>
+									<description>Atualizar</description>
+									<label>Atualizar</label>
+									<thumb>SHORT/ICO/Downloads.png</thumb>
+									<onclick>UpdateLocalAddons</onclick>
+
+								</item>
+<item>
+									<description>Downloads</description>
+									<label>Downloads</label>
+									<thumb>SHORT/ICO/Downloads.png</thumb>
+									<onclick>ActivateWindow(1,addons://downloading/)</onclick>
+
+								</item>
+
+
+
+							</content>
+							</control>
+																			<control type="image">
+															<include>Common_Animation_dashboard_pic</include>
+
+								<posx>47</posx>
+								<posy>57</posy>
+								<width>776</width>
+								<height>466</height>
+								<texture>xmovad.png</texture>
+								<visible>true</visible>
+
+
+
+					
+				</control>
+									<control type="image">
+										<include>Common_Animation_dashboard_pic</include>
+														<include>Common_TraktTV_ClearProperties</include>
+								<posx>50</posx>
+								<posy>60</posy>
+								<width>770</width>
+								<height>460</height>
+								<texture>$INFO[Window(Home).Property(TrendingMovies.17.Art(fanart))]</texture>
+<visible>!Skin.HasSetting(Altads)</visible>
+							</control>
+																		<control type="image">
+																			<include>Common_Animation_dashboard_pic</include>
+														<include>Common_TraktTV_ClearProperties</include>
+								<posx>50</posx>
+								<posy>60</posy>
+								<width>770</width>
+								<height>460</height>
+								<texture>$INFO[Window(Home).Property(RecentMovie.3.Art(fanart))]</texture>
+<visible>Skin.HasSetting(Altads)</visible>
+							</control>
+							
+													<control type="image">
+														<include>Common_Animation_dashboard_pic</include>
+																															
+			<posx>50</posx>
+			<posy>450</posy>
+		<width>770</width>
+		<height>70</height>
+	
+								<texture>black.png</texture>
+									
+							</control>
+																									<control type="textbox">
+																										<include>Common_Animation_dashboard_pic</include>
+																				
+							
+			<posx>85</posx>
+			<posy>457</posy>
+			<label>$INFO[Window(Home).Property(TrendingMovies.17.Title)]</label>
+
+		<width>650</width>
+		<height>50</height>
+		<font>Settings-Menu-Header</font>
+			<textcolor>Label_Normal</textcolor>
+			<scrollspeed>0</scrollspeed>
+			<autoscroll>false</autoscroll>
+			<wrapmultiline>true</wrapmultiline>
+				<visible>!Skin.HasSetting(Altads)</visible>						
+		</control>
+																											<control type="textbox">
+																												<include>Common_Animation_dashboard_pic</include>
+																				
+							
+			<posx>85</posx>
+			<posy>457</posy>
+			<label>$INFO[Window(Home).Property(RecentMovie.3.Title)]</label>
+
+		<width>650</width>
+		<height>50</height>
+		<font>Settings-Menu-Header</font>
+			<textcolor>Label_Normal</textcolor>
+			<scrollspeed>0</scrollspeed>
+			<autoscroll>false</autoscroll>
+			<wrapmultiline>true</wrapmultiline>
+				<visible>Skin.HasSetting(Altads)</visible>						
+		</control>
+						
+						</control>
+		
+				
+
+				
+				
+				
+				
+				
+				
+				
+					<control type="group" id="121">
+					
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>1200</width>
+						<height>720</height>
+												<control type="panel" id="22">
+<posx>1065</posx>
+						<posy>345</posy>
+
+						
+						<include>Common_AltHome_Panel3</include>
+						<onleft>Control.Move(20,-1)</onleft>
+<onleft>11</onleft>
+<onright>Control.Move(20,1)</onright>
+						<onright>11</onright>
+						<ondown>4</ondown>
+						<pagecontrol>7017</pagecontrol>
+						
+						<content>
+						
+
+							
+																					<item id="1">
+								<description>Games</description>
+								<label>Games</label>
+								<thumb>SHORT\ICO\Games.png</thumb>
+								<onclick>Control.Setfocus(4)</onclick>
+														
+							</item>
+							
+
+
+								</content>
+
+					</control>
+							<control type="list" id="4">
+					
+						<include>Common_AltHome_List</include>
+
+						<onright>104</onright>
+						<ondown>33</ondown>
+						<onup>22</onup>
+						<itemlayout width="600" height="240">
+						
+							<control type="image">
+							
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>440</width>
+								<height>220</height>
+								<texture>demo/lololo.png</texture>
+								
+							</control>
+							
+							<include>Common_AltHome_Thumb</include>
+							
+						</itemlayout>
+
+						<focusedlayout width="600" height="240">
+						
+							<control type="image">
+							
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>440</width>
+								<height>220</height>
+								<texture>demo/lololo.png</texture>
+								
+								<visible>!Control.HasFocus(8083)</visible>
+								
+							</control>
+						
+							<control type="image">
+							
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>440</width>
+								<height>220</height>
+								<texture>demo/lololo.png</texture>
+
+								
+								<visible>Control.HasFocus(8083)</visible>
+								
+							</control>
+							
+							<include>Common_AltHome_Thumb</include>
+							
+						</focusedlayout>
+						
+						<content>
+
+							<item id="1">
+								<description>em alta</description>
+								<label>em alta</label>
+								<thumb>lolololo.jpg</thumb>
+							<visible>!Skin.HasSetting(Altads)</visible>
+							</item>
+														<item id="1">
+								<description>em alta</description>
+								<label>em alta</label>
+								<thumb>lolololo.jpg</thumb>
+							<onclick>$INFO[Window(Home).Property(RecentMovie.4.Play)]</onclick>
+
+							<visible>Skin.HasSetting(Altads)</visible>
+							</item>
+							
+						</content>
+
+					</control>
+					
+														<control type="image">
+
+								<posx>47</posx>
+								<posy>57</posy>
+								<width>776</width>
+								<height>466</height>
+								<texture>xmovad.png</texture>
+								
+
+
+
+					
+				</control>
+									<control type="image">
+														<include>Common_TraktTV_ClearProperties</include>
+								<posx>50</posx>
+								<posy>60</posy>
+								<width>770</width>
+								<height>460</height>
+								<texture>$INFO[Window(Home).Property(Trendingshows.4.Art(fanart))]</texture>
+<visible>!Skin.HasSetting(Altads)</visible>
+							</control>
+																		<control type="image">
+														<include>Common_TraktTV_ClearProperties</include>
+								<posx>50</posx>
+								<posy>60</posy>
+								<width>770</width>
+								<height>460</height>
+								<texture>$INFO[Window(Home).Property(RecentMovie.4.Art(fanart))]</texture>
+<visible>Skin.HasSetting(Altads)</visible>
+							</control>
+							
+													<control type="image">
+														
+																															
+			<posx>50</posx>
+			<posy>450</posy>
+		<width>770</width>
+		<height>70</height>
+	
+								<texture>black.png</texture>
+									
+							</control>
+																									<control type="textbox">
+																				
+							
+			<posx>85</posx>
+			<posy>457</posy>
+			<label>$INFO[Window(Home).Property(TrendingShows.4.Title)]</label>
+
+		<width>650</width>
+		<height>50</height>
+		<font>Settings-Menu-Header</font>
+			<textcolor>Label_Normal</textcolor>
+			<scrollspeed>0</scrollspeed>
+			<autoscroll>false</autoscroll>
+			<wrapmultiline>true</wrapmultiline>
+				<visible>!Skin.HasSetting(Altads)</visible>						
+		</control>
+																											<control type="textbox">
+																				
+							
+			<posx>85</posx>
+			<posy>457</posy>
+			<label>$INFO[Window.Property(RecentMovie.4.Title)]</label>
+
+		<width>650</width>
+		<height>50</height>
+		<font>Settings-Menu-Header</font>
+			<textcolor>Label_Normal</textcolor>
+			<scrollspeed>0</scrollspeed>
+			<autoscroll>false</autoscroll>
+			<wrapmultiline>true</wrapmultiline>
+				<visible>Skin.HasSetting(Altads)</visible>						
+		</control>
+															<control type="panel" id="104">
+
+							<posx>892</posx>
+							<posy>60</posy>
+							<width>400</width>
+							<height>480</height>
+							<onleft>4</onleft>
+						
+<onup>22</onup>
+							<pagecontrol>9020</pagecontrol>
+							<viewtype label="535">list</viewtype>
+							<scrolltime tween="cubic" easing="out">600</scrolltime>
+							<preloaditems>2</preloaditems>
+
+							<itemlayout width="400" height="80">
+
+								<control type="image">
+
+									<posx>0</posx>
+									<posy>0</posy>
+									<width>60</width>
+									<height>60</height>
+									<texture>colors/color_keyboard_dark.png</texture>
+
+								</control>
+
+								<control type="image">
+
+									<include>Common_Control_Image</include>
+									<texture>$INFO[ListItem.Thumb]</texture>
+
+								</control>
+
+								<control type="label">
+
+									<width min="20" max="380">auto</width>
+									<label>$INFO[ListItem.Label]</label>
+									<textcolor>Label_Normal</textcolor>
+									<include>Common_Control_Label</include>
+
+								</control>
+
+							</itemlayout>
+
+							<focusedlayout width="400" height="80">
+
+								<control type="image">
+
+									<posx>0</posx>
+									<posy>0</posy>
+									<width>60</width>
+									<height>60</height>
+									<texture>colors/color_white.png</texture>
+									
+<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+									<visible>!Control.HasFocus(9000)</visible>
+
+								</control>
+
+								<control type="image">
+
+									<posx>0</posx>
+									<posy>0</posy>
+									<width>60</width>
+									<height>60</height>
+									<texture>colors/color_white.png</texture>
+									<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+
+									<visible>Control.HasFocus(9000)</visible>
+
+								</control>
+
+								<control type="image">
+
+									<include>Common_Control_Image</include>
+									<texture>$INFO[ListItem.Thumb]</texture>
+
+								</control>
+
+								<control type="image">
+
+									<posx>0</posx>
+									<posy>0</posy>
+									<width>60</width>
+									<height>60</height>
+									<texture>button_unfocus.png</texture>
+									<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+
+									<visible>Control.HasFocus(9000)</visible>
+
+								</control>
+
+								<control type="label">
+
+									<width min="20" max="380">auto</width>
+									<label>$INFO[ListItem.Label]</label>
+									<textcolor>Label_Normal</textcolor>
+									<include>Common_Control_Label</include>
+
+								</control>
+
+							</focusedlayout>
+
+							<content>
+
+<item>
+									<description>Pesquisa</description>
+									<label>Pesquisa</label>
+									<thumb>home/xbs.png</thumb>
+									<onclick>RunScript(script.globalsearch)</onclick>
+								</item>
+
+								<item>
+									<description>Instalar</description>
+									<label>Instalar</label>
+									<thumb>home/alternate/home_albums_small.png</thumb>
+									<onclick>installfromzip</onclick>
+								</item>
+<item>
+									<description>Música</description>
+									<label>Música</label>
+									<thumb>home/alternate/home_albums_small.png</thumb>
+									<onclick>ActivateWindow(8887)</onclick>
+								</item>								
+								
+
+							</content>
+							
+						</control>
+						
+				
+					
+
+				
+
+				
+	
+					
+				</control>		
+				</control>
+										</control>
+				
+						
+						<!--Scrollbar-->
+
+					
+					</control>
+					
+					<include>ViewList_RootMenu_Featured</include>
+					<include>ViewList_RootMenu_RecentlyAdded</include>
+					<include>ViewList_RootMenu_AiringToday</include>
+					<include>ViewList_RootMenu_InCinemas</include>
+					<include>ViewList_RootMenu_NearbyEvents</include>
+					<include>ViewList_RootMenu_History</include>
+					<include>ViewList_RootMenu_Trakt</include>
+					
+			
+				
+
+			
+			<!--Scrollbar-->
+<include>Snapped_Content</include>	
+
+
+	
+		
+	</controls>	
+		
+</window>

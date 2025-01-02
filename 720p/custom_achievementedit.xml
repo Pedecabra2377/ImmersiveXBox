@@ -1,0 +1,492 @@
+<window id="7545">
+
+	<defaultcontrol always="true">1</defaultcontrol>
+	
+	<zorder>2</zorder>
+	
+	 <include condition="!Window.Previous(Home)">Common_Animation_Window</include>
+					  <include condition="Window.Previous(Home)">Common_Animation_apps_dash</include> 
+<onload condition="Skin.HasSetting(Searching)">Skin.ToggleSetting(Searching)</onload>
+	
+	<!--Splash Screen-->
+
+
+<onload condition="Skin.HasSetting(Logger)">Skin.SetString(snapwindow, 7545)</onload>
+<onload condition="!Skin.HasSetting(snapie) + Skin.HasSetting(Logger)">Skin.ToggleSetting(snapie)</onload>
+<onload condition="Skin.HasSetting(gaming) + Skin.HasSetting(Logger)">Skin.ToggleSetting(gaming)</onload>
+<onload condition="Skin.HasSetting(Logger)">Skin.SetString(snap, demo/sna/act.jpg,0)</onload>
+<onload condition="Skin.HasSetting(Logger)">Skin.SetString(sn,Social)</onload>
+	<onload condition="Skin.HasSetting(SnapFeature) + Skin.HasSetting(SnapAlways)">Skin.SetString(snap, C:\Assistance\Snap\Pic\Item.jpg,0)</onload>
+<onload condition="Skin.HasSetting(SnapFeature) + Skin.HasSetting(SnapAlways)">AlarmClock(startsnap,RunScript(special://skin/system/Snap.py),00:01,silent)</onload>
+
+
+	
+
+	
+	<controls>
+
+		<!--Background Area-->
+ <include condition="!Window.Previous(Home)">Common_Animation_Window</include>
+					  <include condition="Window.Previous(Home)">Common_Animation_apps_dash</include> 
+		
+<control type="image">
+							
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1280</width>
+								<height>720</height>
+								<texture>demo/app/friends/bg.png</texture>
+							
+								
+							</control>
+
+							
+								<control type="image">
+			
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>275</width>
+								<height>720</height>
+								<texture>colors\color_white.png</texture>
+							<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+								
+							</control>
+							
+					
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+			<control type="textbox">
+						 <include condition="!Window.Previous(Home)">Common_Animation_Window</include>
+					  <include condition="Window.Previous(Home)">Common_Animation_apps_dash</include> 												
+							
+	
+			<label>Amigos</label>
+
+		<posx>68</posx>
+								<posy>80</posy>
+								<width>550</width>
+								<height>160</height>
+		<font>Dropdown-Label3</font>
+			<textcolor>Label_Normal</textcolor>
+			<scrollspeed>0</scrollspeed>
+			<autoscroll>false</autoscroll>
+			<wrapmultiline>true</wrapmultiline>
+					
+								
+		</control>		
+							
+							
+							
+							
+							
+				
+							
+							
+																						
+
+							
+									
+									<!--Top Area-->
+
+			
+			<!--Content Area-->
+			<control type="group">
+			
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+				
+				<!--Animation-->
+				 <include condition="!Window.Previous(Home)">Common_Animation_Window</include>
+					  <include condition="Window.Previous(Home)">Common_Animation_apps_dash</include> 
+				
+				<control type="grouplist">
+		
+					<include>Common_Content_Grouplist8</include>
+					
+					<control type="group" id="100">
+					
+						<posx>60</posx>
+						<posy>0</posy>
+						<width>400</width>
+						<height>1200</height>
+						
+						
+			<control type="panel" id="8">
+				
+<posx>780</posx>
+						<posy>184</posy>
+
+				
+		<onleft>1</onleft>
+		<ondown>9</ondown>
+						<include>Common_AltHome_Panel391-msg</include>
+					
+
+
+
+
+						
+						
+						<content>
+						
+
+							
+										<item id="1">
+								<description>Games</description>
+								<label>Algo a falar ?</label>
+								
+								<thumb>demo\message.png</thumb>
+													
+								<onclick condition="IsEmpty(Skin.String(Status1))">Skin.Setstring(Status1)</onclick>
+                                <onclick condition="!IsEmpty(Skin.String(Status1)) + IsEmpty(Skin.String(Status2))">Skin.Setstring(Status2)</onclick>
+								<onclick condition="!IsEmpty(Skin.String(Status2)) + IsEmpty(Skin.String(Status3))">Skin.Setstring(Status3)</onclick>
+								<onclick condition="!IsEmpty(Skin.String(Status3)) + IsEmpty(Skin.String(Status4))">Skin.Setstring(Status4)</onclick>
+								<onclick condition="!IsEmpty(Skin.String(Status4)) + IsEmpty(Skin.String(Status5))">Skin.Setstring(Status5)</onclick>
+								<onclick condition="!IsEmpty(Skin.String(Status5)) + IsEmpty(Skin.String(Status6))">Skin.Setstring(Status6)</onclick>
+								<onclick condition="!IsEmpty(Skin.String(Status6)) + IsEmpty(Skin.String(Status7))">Skin.Setstring(Status7)</onclick>
+								<onclick condition="!IsEmpty(Skin.String(Status7)) + IsEmpty(Skin.String(Status8))">Skin.Setstring(Status8)</onclick>
+								<onclick condition="!IsEmpty(Skin.String(Status8)) + IsEmpty(Skin.String(Status9))">Skin.Setstring(Status9)</onclick>
+								<onclick condition="!IsEmpty(Skin.String(Status9)) + IsEmpty(Skin.String(Status10))">Skin.Setstring(Status10)</onclick>
+									
+														
+							</item>
+							</content>
+							</control>
+				
+
+					
+					<control type="panel" id="9">
+				
+<posx>780</posx>
+						<posy>251</posy>
+
+				<onright>99</onright>
+		<onleft>1</onleft>
+		<onup>8</onup>
+						<include>Common_AltHome_Panel391-social_feed</include>
+					
+
+
+
+
+						
+						
+						<content>
+						
+
+						
+	<item id="1">
+								<description>Games</description>
+								<label>$INFO[Skin.string(GTAG)] compartilhou:</label>
+								<label2>$INFO[Skin.String(YoutubeImage)]</label2>
+								<thumb>$INFO[System.ProfileThumb]</thumb>
+								<onclick>Skin.SetString(SocialVideo, $INFO[Skin.String(SharedVideo)])</onclick>
+								<onclick>Skin.SetString(SocialImage, $INFO[System.ProfileThumb])</onclick>
+									<onclick>Skin.SetString(SocialStatus, $INFO[Skin.string(GTAG)] compartilhou:)</onclick>
+									<onclick>Skin.SetString(SocialVideoImage, $INFO[Skin.String(YoutubeImage)])</onclick>
+									<onclick>Skin.SetString(SocialMessage, )</onclick>
+													<onclick condition="!Player.HasMedia">ActivateWindow(5605)</onclick> 
+													<onclick>Skin.SetString(Comment1, )</onclick>
+									<onclick>Skin.SetString(Comment2, )</onclick>
+<onclick>Skin.SetString(Comment3, )</onclick>
+<onclick>Skin.SetString(Comment4, )</onclick>
+<onclick>Skin.SetString(Comment5, )</onclick>
+<onclick>Skin.SetString(Comment6, )</onclick>
+<onclick>Skin.SetString(Comment7, )</onclick>
+<onclick>Skin.SetString(Comment8, )</onclick>
+<onclick>Skin.SetString(Comment9, )</onclick>
+<onclick>Skin.SetString(Comment10, )</onclick>	
+								<visible>!IsEmpty(Skin.String(Status1))</visible>	
+								</item>
+
+
+						
+
+						
+
+
+
+								</content>
+
+					</control>
+					
+					
+					
+					
+
+				
+
+					
+					
+					
+					
+					
+					
+						
+						<!--Scrollbar-->
+
+					
+					</control>
+					
+			
+					
+				</control>
+				
+			</control>
+<control type="panel" id="1000">
+				
+<posx>60</posx>
+						<posy>175</posy>
+
+				<onright>1</onright>
+	
+						<include>Common_AltHome_Panel384</include>
+					
+
+
+
+
+						
+						
+						<content>
+						
+		<item id="1">
+								<description>Games</description>
+								<label>Social</label>
+								<thumb></thumb>
+													
+											<onclick>ReplaceWindow(7545)</onclick>
+														
+									
+			<visible>false</visible>											
+							</item>
+							
+										<item id="2">
+								<description>Games</description>
+								<label>Amigos</label>
+								<thumb></thumb>
+													
+					<onclick>ActivateWindow(5152)</onclick>
+									
+														
+							</item>
+					<item id="7">
+								<description>Games</description>
+								<label>Mensagens</label>
+								<thumb></thumb>
+													
+								<onclick>ActivateWindow(5513)</onclick>
+							</item>		
+							
+				
+<item id="8">
+								<description>Games</description>
+								<label>Meu perfil</label>
+								<thumb></thumb>
+													
+						<onclick>ActivateWindow(7544)</onclick>
+							</item>
+						
+
+												
+
+
+								</content>
+
+					</control>	
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					<control type="panel" id="1">
+				
+<posx>320</posx>
+						<posy>185</posy>
+
+				<onright>8</onright>
+		<onleft>1000</onleft>
+						<include>Common_AltHome_Panel391</include>
+					
+
+
+
+
+						
+						
+						<content>
+						
+
+							
+
+					<item id="1">
+						<onclick>Skin.SetString(EmailTo, )</onclick>
+<onclick>Skin.SetString(MySubject, )</onclick>
+<onclick>Skin.SetString(MyMessage, )</onclick>
+<onclick>Skin.Setstring(EmailTo, $INFO[Skin.String(Email1)])</onclick>
+<onclick>Skin.Setstring(EmailPic, $INFO[Skin.String(Email1Image)])</onclick>
+	<onclick>ActivateWindow(5512)</onclick>
+						<label>$INFO[Skin.String(Email1)]</label>
+						<thumb>guest.png</thumb>
+						<visible>Skin.HasSetting(Friend1)</visible>
+					</item>
+															
+
+					<item id="2">
+						<onclick>Skin.SetString(EmailTo, )</onclick>
+<onclick>Skin.SetString(MySubject, )</onclick>
+<onclick>Skin.SetString(MyMessage, )</onclick>
+<onclick>Skin.Setstring(EmailTo, $INFO[Skin.String(Email2)])</onclick>
+<onclick>Skin.Setstring(EmailPic, $INFO[Skin.String(Email2Image)])</onclick>
+	<onclick>ActivateWindow(5512)</onclick>
+						<label>$INFO[Skin.String(Email2)]</label>
+						<thumb>guest.png</thumb>
+						<visible>Skin.HasSetting(Friend2)</visible>
+					</item>
+					
+					
+					
+					<item id="3">
+						<onclick>Skin.SetString(EmailTo, )</onclick>
+<onclick>Skin.SetString(MySubject, )</onclick>
+<onclick>Skin.SetString(MyMessage, )</onclick>
+<onclick>Skin.Setstring(EmailTo, $INFO[Skin.String(Email3)])</onclick>
+<onclick>Skin.Setstring(EmailPic, $INFO[Skin.String(Email3Image)])</onclick>
+	<onclick>ActivateWindow(5512)</onclick>
+						<label>$INFO[Skin.String(Email3)]</label>
+						<thumb>guest.png</thumb>
+						<visible>Skin.HasSetting(Friend3)</visible>
+					</item>
+					
+					
+					<item id="4">
+						<onclick>Skin.SetString(EmailTo, )</onclick>
+<onclick>Skin.SetString(MySubject, )</onclick>
+<onclick>Skin.SetString(MyMessage, )</onclick>
+<onclick>Skin.Setstring(EmailTo, $INFO[Skin.String(Email4)])</onclick>
+<onclick>Skin.Setstring(EmailPic, $INFO[Skin.String(Email4Image)])</onclick>
+	<onclick>ActivateWindow(5512)</onclick>
+						<label>$INFO[Skin.String(Email4)]</label>
+						<thumb>guest.png</thumb>
+						<visible>Skin.HasSetting(Friend4)</visible>
+					</item>
+					
+					
+					
+					
+					
+					
+					
+						
+					<item id="5">
+						<onclick>Skin.SetString(EmailTo, )</onclick>
+<onclick>Skin.SetString(MySubject, )</onclick>
+<onclick>Skin.SetString(MyMessage, )</onclick>
+<onclick>Skin.Setstring(EmailTo, $INFO[Skin.String(Email5)])</onclick>
+<onclick>Skin.Setstring(EmailPic, $INFO[Skin.String(Email5Image)])</onclick>
+	<onclick>ActivateWindow(5512)</onclick>
+						<label>$INFO[Skin.String(Email5)]</label>
+						<thumb>guest.png</thumb>
+						<visible>Skin.HasSetting(Friend5)</visible>
+					</item>
+					
+					
+					
+					
+				
+					<item id="6">
+						<onclick>Skin.SetString(EmailTo, )</onclick>
+<onclick>Skin.SetString(MySubject, )</onclick>
+<onclick>Skin.SetString(MyMessage, )</onclick>
+<onclick>Skin.Setstring(EmailTo, $INFO[Skin.String(Email6)])</onclick>
+<onclick>Skin.Setstring(EmailPic, $INFO[Skin.String(Email6Image)])</onclick>
+	<onclick>ActivateWindow(5512)</onclick>
+						<label>$INFO[Skin.String(Email6)]</label>
+						<thumb>guest.png</thumb>
+						<visible>Skin.HasSetting(Friend6)</visible>
+					</item>
+					
+					
+					
+					
+					
+					<item id="7">
+						<onclick>Skin.SetString(EmailTo, )</onclick>
+<onclick>Skin.SetString(MySubject, )</onclick>
+<onclick>Skin.SetString(MyMessage, )</onclick>
+<onclick>Skin.Setstring(EmailTo, $INFO[Skin.String(Email7)])</onclick>
+<onclick>Skin.Setstring(EmailPic, $INFO[Skin.String(Email7Image)])</onclick>
+	<onclick>ActivateWindow(5512)</onclick>
+						<label>$INFO[Skin.String(Email7)]</label>
+						<thumb>guest.png</thumb>
+						<visible>Skin.HasSetting(Friend7)</visible>
+					</item>
+					
+					
+					
+					<item id="8">
+						<onclick>Skin.SetString(EmailTo, )</onclick>
+<onclick>Skin.SetString(MySubject, )</onclick>
+<onclick>Skin.SetString(MyMessage, )</onclick>
+<onclick>Skin.Setstring(EmailTo, $INFO[Skin.String(Email8)])</onclick>
+<onclick>Skin.Setstring(EmailPic, $INFO[Skin.String(Email8Image)])</onclick>
+	<onclick>ActivateWindow(5512)</onclick>
+						<label>$INFO[Skin.String(Email8)]</label>
+						<thumb>guest.png</thumb>
+						<visible>Skin.HasSetting(Friend8)</visible>
+					</item>
+					
+					
+					
+					
+					<item id="9">
+						<onclick>Skin.SetString(EmailTo, )</onclick>
+<onclick>Skin.SetString(MySubject, )</onclick>
+<onclick>Skin.SetString(MyMessage, )</onclick>
+<onclick>Skin.Setstring(EmailTo, $INFO[Skin.String(Email9)])</onclick>
+<onclick>Skin.Setstring(EmailPic, $INFO[Skin.String(Email9Image)])</onclick>
+	<onclick>ActivateWindow(5512)</onclick>
+						<label>$INFO[Skin.String(Email9)]</label>
+						<thumb>guest.png</thumb>
+						<visible>Skin.HasSetting(Friend9)</visible>
+					</item>
+
+					<item id="10">
+						<onclick>Skin.SetString(EmailTo, )</onclick>
+<onclick>Skin.SetString(MySubject, )</onclick>
+<onclick>Skin.SetString(MyMessage, )</onclick>
+<onclick>Skin.Setstring(EmailTo, $INFO[Skin.String(Email10)])</onclick>
+<onclick>Skin.Setstring(EmailPic, $INFO[Skin.String(Email10Image)])</onclick>
+	<onclick>ActivateWindow(5512)</onclick>
+						<label>$INFO[Skin.String(Email10)]</label>
+						<thumb>guest.png</thumb>
+						<visible>Skin.HasSetting(Friend10)</visible>
+					</item>
+												
+
+
+								</content>
+
+					</control>
+					
+			<include>Xbox_Logo</include>
+			<include>Snapped_Content</include>	
+		
+	</controls>	
+		
+</window>
