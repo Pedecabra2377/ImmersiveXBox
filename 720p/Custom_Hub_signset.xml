@@ -1,0 +1,281 @@
+<window id="6707">
+
+	<defaultcontrol always="true">1</defaultcontrol>
+	
+	<zorder>2</zorder>
+	
+ <include condition="!Window.Previous(Home)">Common_Animation_Window</include>
+					  <include condition="Window.Previous(Home)">Common_Animation_apps_dash</include> 
+	
+	<!--Splash Screen-->
+
+	<onload>Skin.SetString(snapwindow, 4)</onload>
+<onload condition="!Skin.HasSetting(snapie)">Skin.ToggleSetting(snapie)</onload>
+<onload condition="Skin.HasSetting(gaming)">Skin.ToggleSetting(gaming)</onload>
+<onload>Skin.SetString(snap, demo/sna/settings.jpg,0)</onload>
+<onload>Skin.SetString(sn,Configurações)</onload>
+	<onload condition="Skin.HasSetting(SnapFeature) + Skin.HasSetting(SnapAlways)">Skin.SetString(snap, C:\Assistance\Snap\Pic\Item.jpg,0)</onload>
+<onload condition="Skin.HasSetting(SnapFeature) + Skin.HasSetting(SnapAlways)">AlarmClock(startsnap,RunScript(special://skin/system/Snap.py),00:01,silent)</onload>
+
+	<controls>
+
+		<!--Background Area-->
+
+		
+
+				<control type="image">
+							
+								<include>Common_Dimensions</include>
+								<texture>demo\app\sign\1.png</texture>
+								<visible>true</visible>
+								
+							</control>
+									<control type="image">
+							
+								<include>Common_Dimensions</include>
+								<texture>demo\app\sign\2.png</texture>
+								<visible>Control.HasFocus(2)</visible>
+								
+							</control>
+									<control type="image">
+							
+								<include>Common_Dimensions</include>
+								<texture>demo\app\sign\3.png</texture>
+								<visible>Control.HasFocus(3)</visible>
+								
+							</control>
+									<control type="image">
+							
+								<include>Common_Dimensions</include>
+								<texture>demo\app\sign\4.png</texture>
+								<visible>Control.HasFocus(4)</visible>
+								
+							</control>
+									<control type="image">
+							
+								<include>Common_Dimensions</include>
+								<texture>demo\app\sign\5.png</texture>
+								<visible>Control.HasFocus(5)</visible>
+								
+							</control>
+									<control type="image">
+							
+								<include>Common_Dimensions</include>
+								<texture>demo\app\sign\6.png</texture>
+								<visible>Control.HasFocus(6)</visible>
+								
+							</control>
+							
+								
+
+									<!--Top Area-->
+
+			
+			<!--Content Area-->
+			<control type="group">
+			
+				<posx>0</posx>
+				<posy>100</posy>
+				<width>1280</width>
+				<height>480</height>
+				
+				<!--Animation-->
+				<include condition="!Skin.HasSetting(disablesplash)">Common_Animation_Content_Splash</include>
+				<include condition="!Window.Previous(home)">Common_Animation_Content</include>
+				
+										<control type="panel" id="1">
+<posx>1060</posx>
+						<posy>200</posy>
+
+						
+						<include>Common_AltHome_Panel3</include>
+
+
+				
+						<onright>2</onright>
+						<pagecontrol>7017</pagecontrol>
+						
+						<content>
+						
+
+							
+																					<item id="1">
+								<description>Games</description>
+								<label>Games</label>
+								<thumb>SHORT\ICO\Games.png</thumb>
+								<onclick>ActivateWindow(34)</onclick>
+														
+							</item>
+							
+
+
+								</content>
+
+					</control>
+						<control type="panel" id="2">
+<posx>1060</posx>
+						<posy>200</posy>
+
+						
+						<include>Common_AltHome_Panel3</include>
+
+<ondown>3</ondown>
+				<onleft>1</onleft>
+						<onright>4</onright>
+						<pagecontrol>7017</pagecontrol>
+						
+						<content>
+						
+
+							
+																					<item id="1">
+								<description>Games</description>
+								<label>Games</label>
+								<thumb>SHORT\ICO\Games.png</thumb>
+								<onclick>ActivateWindow(34)</onclick>					
+							</item>
+							
+
+
+								</content>
+
+					</control>
+					<control type="panel" id="3">
+<posx>1060</posx>
+						<posy>200</posy>
+
+						
+						<include>Common_AltHome_Panel3</include>
+
+<onup>2</onup>
+				<onleft>1</onleft>
+						<onright>5</onright>
+						<pagecontrol>7017</pagecontrol>
+						
+						<content>
+						
+
+							
+																					<item id="1">
+								<description>Games</description>
+								<label>Games</label>
+								<thumb>SHORT\ICO\Games.png</thumb>
+								<onclick>skin.setstring(twitter)</onclick>	
+								
+							</item>
+							
+
+
+								</content>
+
+					</control>
+					<control type="panel" id="4">
+<posx>1060</posx>
+						<posy>200</posy>
+
+						
+						<include>Common_AltHome_Panel3</include>
+
+				<onleft>2</onleft>
+					<ondown>5</ondown>
+						<pagecontrol>7017</pagecontrol>
+						
+						<content>
+						
+
+							
+																					<item id="1">
+								<description>Games</description>
+								<label>Games</label>
+								<thumb>SHORT\ICO\Games.png</thumb>
+								<onclick>ActivateWindow(560)</onclick>					
+							</item>
+							
+
+
+								</content>
+
+					</control>
+					<control type="panel" id="5">
+<posx>1060</posx>
+						<posy>200</posy>
+
+						
+						<include>Common_AltHome_Panel3</include>
+
+<onup>4</onup>
+				<onleft>3</onleft>
+						<ondown>6</ondown>
+						<pagecontrol>7017</pagecontrol>
+						
+						<content>
+						
+
+							
+																					<item id="1">
+								<description>Games</description>
+								<label>Games</label>
+								<thumb>SHORT\ICO\Games.png</thumb>
+								<onclick>ActivateWindow(560)</onclick>					
+							</item>
+							
+
+
+								</content>
+
+					</control>
+					<control type="panel" id="6">
+<posx>1060</posx>
+						<posy>200</posy>
+
+						
+						<include>Common_AltHome_Panel3</include>
+
+
+				<onleft>3</onleft>
+			<onup>5</onup>
+						<pagecontrol>7017</pagecontrol>
+						
+						<content>
+						
+
+							
+																					<item id="1">
+								<description>Games</description>
+								<label>Games</label>
+								<thumb>SHORT\ICO\Games.png</thumb>
+								<onclick>ActivateWindow(560)</onclick>					
+							</item>
+							
+
+
+								</content>
+
+					</control>
+				
+									
+										
+				
+						
+						<!--Scrollbar-->
+
+					
+
+			
+			<!--Scrollbar-->
+			<control type="scrollbar" id="9010">
+				
+				<include>Common_Window_Scrollbar_Horizontal</include>
+				<posy>600</posy>
+				
+				<include>Common_Animation_Window_Scrollbar_Fade</include>
+				
+				<visible>Skin.HasSetting(UseTouchInput)</visible>
+				
+			</control>
+
+			</control>
+		<include>Snapped_Content</include>	
+	</controls>	
+		
+</window>

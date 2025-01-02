@@ -1,0 +1,184 @@
+<window type="dialog" id="6513">
+
+	<defaultcontrol always="true">5</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<zorder>2</zorder>
+	<onload>Skin.SetString(XboxStatus, )</onload>
+	<onload>Skin.SetString(MusicStatus, )</onload>
+	<onload>Skin.SetString(VideoStatus, )</onload>
+	<onload>Skin.SetString(PurchaseStatus, )</onload>
+	<onload>Skin.SetString(DHCP, )</onload>
+		<onload>Skin.SetString(IP, )</onload>
+		<onload>Skin.SetString(MAC, )</onload>
+		<onload>Skin.SetString(MASK, )</onload>
+		<onload>Skin.SetString(GATEWAY, )</onload>
+		<onload>Skin.SetString(DNS1, )</onload>
+		<onload>Skin.SetString(DNS2, )</onload>
+	<onload>Control.SetFocus(5)</onload>
+	<onload>Skin.SetString(XboxStatus, Conectando ao servidor....)</onload>
+	<onload>AlarmClock(info1,RunScript(special://skin/system/XboxStatus.py),00:01,silent,)</onload>
+	<onload>AlarmClock(info2,Skin.SetString(MusicStatus, Conectando ao servidor....),00:03,silent,)</onload>
+	<onload>AlarmClock(info3,RunScript(special://skin/system/MusicStatus.py),00:04,silent,)</onload>
+<onload>AlarmClock(info4,Skin.SetString(VideoStatus, Conectando ao servidor....),00:06,silent,)</onload>
+	<onload>AlarmClock(info5,RunScript(special://skin/system/VideoStatus.py),00:07,silent,)</onload>
+<onload>AlarmClock(info6,Skin.SetString(PurchaseStatus, Conectando ao servidor....),00:09,silent,)</onload>
+	<onload>AlarmClock(info7,RunScript(special://skin/system/PurchaseStatus.py),00:10,silent,)</onload>
+
+	<onload>AlarmClock(info8,Skin.SetString(DHCP, Network.IsDHCP),00:00,silent,)</onload>
+	<onload>AlarmClock(info9,Skin.SetString(IP, $INFO[Network.IPAddress]),00:00,silent,)</onload>
+	<onload>AlarmClock(info10,Skin.SetString(MAC, $INFO[Network.MacAddress]),00:00,silent,)</onload>
+	<onload>AlarmClock(info11,Skin.SetString(MASK, $INFO[Network.SubnetMask]),00:00,silent,)</onload>
+	<onload>AlarmClock(info12,Skin.SetString(GATEWAY, $INFO[Network.GatewayAddress]),00:00,silent,)</onload>
+	<onload>AlarmClock(info13,Skin.SetString(DNS1, $INFO[Network.DNS1Address]),00:00,silent,)</onload>
+	<onload>AlarmClock(info14,Skin.SetString(DNS2, $INFO[Network.DNS2Address]),00:00,silent,)</onload>
+    <onload condition="System.InternetState">AlarmClock(info15,Skin.SetString(STATE, Conectado),00:00,silent,)</onload>
+<onload condition="!System.InternetState">AlarmClock(info16,Skin.SetString(STATE, Não conectado),00:00,silent,)</onload>
+
+		
+
+	
+	
+
+	<controls>
+	
+			<control type="image">
+		
+			<include>Common_Dimensions</include>
+			<texture background="true">colors/color_white.png</texture>
+			<colordiffuse>FanartDiffuse</colordiffuse>
+			
+			<include>Common_Animation_Window_Dark</include>
+			<visible>!Player.HasMedia</visible>
+		</control>
+
+
+		
+		
+	
+		<!--Charm Bar Section-->
+		<control type="group">
+		
+			<posx>0</posx>
+			<posy>-20</posy>
+			
+			 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="150" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+
+	<control type="image">
+				 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="150" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+				
+				<posx>0</posx>
+				<posy>105</posy>
+				<width>1500</width>
+				<height>500</height>
+				<texture>demo\install\1.png</texture>
+			
+			</control>
+			<control type="image">
+				 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="150" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+				
+				<posx>0</posx>
+				<posy>105</posy>
+				<width>1500</width>
+				<height>500</height>
+				<texture>demo\install\1.png</texture>
+				<visible>Control.HasFocus(1)</visible>
+			</control>
+			<control type="image">
+				 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="150" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+				
+				<posx>0</posx>
+				<posy>105</posy>
+				<width>1500</width>
+				<height>500</height>
+				<texture>demo\install\2.png</texture>
+				<visible>Control.HasFocus(2)</visible>
+			</control>
+			<control type="label">
+				 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="150" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+				
+					<posx>180</posx>
+					<posy>85</posy>
+						<width>650</width>
+								<height>160</height>
+					<label></label>
+					<font>DialogInfo-Label2</font>
+			<textcolor>Label_Normal</textcolor>
+					<aligny>center</aligny>
+						<alignx>center</alignx>
+				</control>
+			<control type="label">
+				 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="150" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+				
+					<posx>140</posx>
+					<posy>175</posy>
+					<width>550</width>
+					<height>48</height>
+					<label>Connection Status</label>
+					<font>Charms-Date</font>
+					<textcolor>Label_Normal</textcolor>
+					<aligny>center</aligny>
+						<alignx>center</alignx>
+				</control>
+				<control type="label">
+				 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="150" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+			
+					<posx>140</posx>
+					<posy>140</posy>
+						<width>900</width>
+								<height>500</height>
+					<label>[CR]Xbox LIVE Serviços: $INFO[Skin.String(XboxStatus)][CR]Xbox Música: $INFO[Skin.String(MusicStatus)][CR]Xbox Vídeo: $INFO[Skin.String(VideoStatus)][CR]Compras e uso de conteúdo: $INFO[Skin.String(PurchaseStatus)][CR][CR]Estado: $INFO[Skin.String(STATE)][CR]DHCP: $INFO[Skin.String(DHCP)][CR]Endereço IP: $INFO[Skin.String(IP)][CR]Endereço MAC: $INFO[Skin.String(MAC)][CR]Subnet Mask: $INFO[Skin.String(MASK)][CR]Gateway: $INFO[Skin.String(GATEWAY)][CR]DNS1: $INFO[Skin.String(DNS1)][CR]DNS2: $INFO[Skin.String(DNS2)]</label>
+					<font>DialogInfo-Label-install</font>
+			<textcolor>Label_Normal</textcolor>
+					<aligny>center</aligny>
+						<alignx>center</alignx>
+				</control>
+				
+				
+				
+				
+			
+				
+			
+			
+			
+					
+					
+					
+					
+					
+					</control>
+					
+					
+					
+					
+					
+					
+					
+					
+						
+
+		
+	</controls>	
+	
+</window>

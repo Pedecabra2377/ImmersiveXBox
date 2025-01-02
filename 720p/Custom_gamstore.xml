@@ -1,0 +1,1315 @@
+<window id="8889">
+
+	<defaultcontrol always="true">58</defaultcontrol>
+	
+	<zorder>2</zorder>
+	
+		
+	<!--Splash Screen-->
+
+	
+	
+		<onload>Skin.SetString(snapwindow, 8889)</onload>
+<onload condition="!Skin.HasSetting(snapie)">Skin.ToggleSetting(snapie)</onload>
+<onload condition="Skin.HasSetting(gaming)">Skin.ToggleSetting(gaming)</onload>
+<onload>Skin.SetString(snap, demo/sna/gam.jpg,0)</onload>
+<onload>Skin.SetString(sn,Loja de jogos)</onload>
+	
+	<onload condition="Skin.HasSetting(Searching)">Skin.ToggleSetting(Searching)</onload>
+		<onload condition="Skin.HasSetting(SnapFeature) + Skin.HasSetting(SnapAlways)">Skin.SetString(snap, C:\Assistance\Snap\Pic\Item.jpg,0)</onload>
+<onload condition="Skin.HasSetting(SnapFeature) + Skin.HasSetting(SnapAlways)">AlarmClock(startsnap,RunScript(special://skin/system/Snap.py),00:01,silent)</onload>
+
+	
+	<onload>Skin.SetString(tube,Search)</onload>
+
+	
+	<controls>
+
+		<!--Background Area-->
+
+		
+
+									<!--Top Area-->
+
+			
+			<!--Content Area-->
+			<control type="group">
+			
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+				
+				<!--Animation-->
+	
+				
+				<control type="grouplist">
+		
+					<include>Common_Content_Grouplist</include>
+					
+					<control type="group" id="8000">
+					
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>1280</width>
+						<height>720</height>
+						
+						<control type="label">
+							
+							<label>Loja</label>
+						<include>Common_Section_Label</include>
+							
+							
+						</control>
+					
+
+								
+
+			
+				
+
+						
+							<!--Search Area-->
+				<control type="group">
+										<posx>0</posx>
+						<posy>0</posy>
+					<width>1280</width>
+					<height>720</height>
+					
+					<visible>true</visible>
+				
+					<control type="label">
+						<posx>10</posx>
+						<posy>-3</posy>
+						<label>pesquisa</label>
+						<include>Common_Section_Label2</include>
+						
+					</control>
+					
+
+					
+
+					
+
+	
+				
+				
+					
+
+					
+
+									
+
+
+									
+					</control>					
+
+					
+
+
+				
+				
+				
+				
+
+				
+						
+						<!--Scrollbar-->
+
+					
+					</control>
+					
+
+					
+				</control>
+									
+																									<control type="image">
+							
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1280</width>
+								<height>720</height>
+								<texture>demo\store2\bg.jpg</texture>
+						
+							</control>
+									
+							<control type="image">
+				<visible>!Skin.HasSetting(disableprofilepic)</visible>
+																																						<include condition="Skin.HasSetting(on)">Common_Animation_dashboard_pic</include>
+				
+				
+			</control>
+			
+			
+			
+			
+			
+		<control type="fixedlist" id="58">
+							  <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="500" />
+                        <effect type="slide" start="60" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+				<posx>60</posx>
+				<posy>150</posy>
+				<width>1200</width>
+				<height>480</height>
+				<onup>1</onup>
+				<ondown>9000</ondown>
+				<onleft>58</onleft>
+				<onright>58</onright>
+				<viewtype label="Extended">wrap</viewtype>
+				<orientation>horizontal</orientation>
+				<pagecontrol>68</pagecontrol>
+				<focusposition>0</focusposition>
+				<scrolltime tween="cubic" easing="out">600</scrolltime>
+				<preloaditems>2</preloaditems>
+				
+			
+				
+				<itemlayout width="320" height="480">
+				
+					<control type="group">
+					
+						<posx>0</posx>
+						<posy>40</posy>
+						<width>300</width>
+						<height>440</height>
+				
+						<control type="image">
+						
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>300</width>
+							<height>440</height>
+							<texture background="true">colors/color_white.png</texture>
+							<colordiffuse>Settings_Background_Dark</colordiffuse>
+							
+						</control>
+						
+						<control type="image">
+						
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>300</width>
+							<height>300</height>
+							<texture background="true" fallback="colors/color_keyboard_dark.png">$VAR[ExtendedList_Image]</texture>
+							<aspectratio aligny="top">scale</aspectratio>
+							
+						</control>
+						
+						<control type="label">
+						
+							<posx>20</posx>
+							<posy>306</posy>
+							<width>260</width>
+							<height>36</height>
+							<label>$INFO[ListItem.Label]</label>
+							<font>Menu-ExtendedList-Header</font>
+							<textcolor>Settings_Label</textcolor>
+							<aligny>top</aligny>
+							<shadowcolor>00FFFFFF</shadowcolor>
+							<autoscroll>false</autoscroll>
+							
+						</control>
+						
+						<control type="textbox">
+						
+							<posx>20</posx>
+							<posy>340</posy>
+							<width min="20" max="260">auto</width>
+							<height>20</height>
+							<label></label>
+							<font>Menu-ExtendedList-Small</font>
+							<textcolor>Settings_Label</textcolor>
+							<aligny>top</aligny>
+							<wrapmultiline>false</wrapmultiline>
+							<autoscroll>false</autoscroll>
+							
+						</control>
+						
+						<control type="textbox">
+						
+							<posx>20</posx>
+							<posy>370</posy>
+							<width>260</width>
+							<height>50</height>
+							<label>$INFO[ListItem.Label2]</label>
+							<font>Menu-ExtendedList-Details</font>
+							<textcolor>Settings_Label</textcolor>
+							<aligny>top</aligny>
+							<wrapmultiline>true</wrapmultiline>
+							<shadowcolor>00FFFFFF</shadowcolor>
+							<autoscroll>false</autoscroll>
+							
+						</control>
+						
+					</control>	
+					
+				</itemlayout>
+
+				<focusedlayout width="320" height="480">
+				
+					<control type="group">
+					
+						<posx>0</posx>
+						<posy>40</posy>
+						<width>300</width>
+						<height>440</height>
+						
+						<control type="image">
+						
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>300</width>
+							<height>440</height>
+							<texture background="true">colors/color_white.png</texture>
+							<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+							
+						</control>
+				
+						<control type="image">
+						
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>300</width>
+							<height>300</height>
+							<texture background="true" fallback="colors/color_keyboard_dark.png">$VAR[ExtendedList_Image]</texture>
+							<aspectratio aligny="top">scale</aspectratio>
+							
+						</control>
+						
+						<control type="label">
+						
+							<posx>20</posx>
+							<posy>306</posy>
+							<width>260</width>
+							<height>36</height>
+							<label>$INFO[ListItem.Label]</label>
+							<font>Menu-ExtendedList-Header</font>
+							<textcolor>Label_Normal</textcolor>
+							<aligny>top</aligny>
+							<shadowcolor>00FFFFFF</shadowcolor>
+							<autoscroll>false</autoscroll>
+							
+						</control>
+						
+						<control type="textbox">
+						
+							<posx>20</posx>
+							<posy>340</posy>
+							<width min="20" max="260">auto</width>
+							<height>20</height>
+							<label></label>
+							<font>Menu-ExtendedList-Small</font>
+							<textcolor>Label_Normal</textcolor>
+							<aligny>top</aligny>
+							<wrapmultiline>false</wrapmultiline>
+							<autoscroll>false</autoscroll>
+							
+						</control>
+						
+						<control type="textbox">
+						
+							<posx>20</posx>
+							<posy>370</posy>
+							<width min="20" max="260">auto</width>
+							<height>50</height>
+							<label>$INFO[ListItem.Label2]</label>
+							<font>Menu-ExtendedList-Details</font>
+							<textcolor>Label_Normal</textcolor>
+							<aligny>top</aligny>
+							<wrapmultiline>true</wrapmultiline>
+							<autoscroll>false</autoscroll>
+							
+						</control>
+						
+					</control>	
+					
+				</focusedlayout>
+<content>
+	
+	<item id="1">
+								<description>Games</description>
+								<label>Assassins Creed</label>
+								<thumb>demo\app\gamestore\asassinscreed.jpg</thumb>
+								
+								
+								<onclick>Skin.SetString(GameFanart, )</onclick>
+<onclick>Skin.SetString(GamePoster, )</onclick>
+<onclick>Skin.SetString(GameFanart2, )</onclick>
+<onclick>Skin.SetString(GameName, )</onclick>
+<onclick>Skin.SetString(GameGenre, )</onclick>
+<onclick>Skin.SetString(GamePlatform, )</onclick>
+<onclick>Skin.SetString(GameReleased, )</onclick>
+<onclick>Skin.SetString(GameStudio, )</onclick>
+<onclick>Skin.SetString(GameDescription, )</onclick>
+								
+								
+								
+								
+							
+<onclick>Skin.SetString(GameFanart, demo\app\info\fanart\assassinscreed.png)</onclick>
+<onclick>Skin.SetString(GamePoster, demo\app\info\poster\assassinscreed.jpg)</onclick>
+<onclick>Skin.SetString(GameFanart2, demo\app\info\fanart\assassinscreed2.jpg)</onclick>
+<onclick>Skin.SetString(GameName, Assassins Creed IV: Black Flag)</onclick>
+<onclick>Skin.SetString(GameGenre, Action adventure)</onclick>
+<onclick>Skin.SetString(GamePlatform, Xbox One)</onclick>
+<onclick>Skin.SetString(GameReleased, 2013)</onclick>
+<onclick>Skin.SetString(GameStudio, Ubisoft)</onclick>
+<onclick>Skin.SetString(GameDescription, Assassin's Creed IV: Black Flag is a 2013 historical action-adventure open world video game developed by Ubisoft Montreal and published by Ubisoft. It is the sixth major installment in the Assassin's Creed series a sequel to 2012's Assassin's Creed III's modern story and a prequel to its historical storyline. The story is set in the early 18th century Caribbean during the Golden Age of Piracy and follows notorious pirate Edward Kenway grandfather of Assassin's Creed III protagonist Ratonhnhaké:ton who stumbles upon the conflict waged by the Assassins and Templars. Unlike previous games gameplay elements focus more on ship-based exploration in the open world map while also retaining the series' third-person land-based exploration melee combat and stealth system. Multiplayer also returns albeit with only land-based modes and settings. Assassin's Creed IV: Black Flag received positive reviews with critics praising the open world gameplay side-quests graphics and naval combat. The story received a mixed response while criticism fell on aspects of the story missions which were considered repetitive. The game received several awards and nominations including winning the Spike VGX 2013 award for Best Action Adventure Game.)</onclick>
+<onclick>ActivateWindow(1223)</onclick>
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+							</item>
+																								<item id="2">
+								<description>Games</description>
+								<label>Battlefield 4</label>
+								<thumb>demo\app\gamestore\bf4.jpg</thumb>
+								
+								<onclick>Skin.SetString(GameFanart, )</onclick>
+<onclick>Skin.SetString(GamePoster, )</onclick>
+<onclick>Skin.SetString(GameFanart2, )</onclick>
+<onclick>Skin.SetString(GameName, )</onclick>
+<onclick>Skin.SetString(GameGenre, )</onclick>
+<onclick>Skin.SetString(GamePlatform, )</onclick>
+<onclick>Skin.SetString(GameReleased, )</onclick>
+<onclick>Skin.SetString(GameStudio, )</onclick>
+<onclick>Skin.SetString(GameDescription, )</onclick>
+								
+								
+								
+								
+
+<onclick>Skin.SetString(GameFanart, demo\app\info\fanart\battlefield4.jpg)</onclick>
+<onclick>Skin.SetString(GamePoster, demo\app\info\poster\battlefield4.jpg)</onclick>
+<onclick>Skin.SetString(GameFanart2, demo\app\info\fanart\battlefield42.jpg)</onclick>
+<onclick>Skin.SetString(GameName, Battlefield 4)</onclick>
+<onclick>Skin.SetString(GameGenre, First-erson shooter)</onclick>
+<onclick>Skin.SetString(GamePlatform, Xbox One)</onclick>
+<onclick>Skin.SetString(GameReleased, 2013)</onclick>
+<onclick>Skin.SetString(GameStudio, Electronic Arts)</onclick>
+<onclick>Skin.SetString(GameDescription, Battlefield 4 is a first-person shooter video game developed by Swedish video game developer EA Digital Illusions CE (DICE) and published by Electronic Arts. It is a sequel to 2011's Battlefield 3. It was released on October 29 2013 in North America. October 31 2013 in Australia. November 1 2013 in Europe and New Zealand and November 7 2013 in Japan for Microsoft Windows PlayStation 3 PlayStation 4 Xbox 360 and Xbox One. Battlefield 4 received positive critical response from reviewers and was a commercial success praised for its multiplayer mode gameplay and graphics. In contrast the game's single-player campaign was highly criticised by critics for being short and shallow as well as glitches and bugs upon the game's release.)</onclick>
+<onclick>ActivateWindow(1223)</onclick>
+														
+							</item>
+																														<item id="3">
+								<description>Games</description>
+								<label>Dead Rising 3</label>
+								<thumb>demo\app\gamestore\deadrising.jpg</thumb>
+								
+								<onclick>Skin.SetString(GameFanart, )</onclick>
+<onclick>Skin.SetString(GamePoster, )</onclick>
+<onclick>Skin.SetString(GameFanart2, )</onclick>
+<onclick>Skin.SetString(GameName, )</onclick>
+<onclick>Skin.SetString(GameGenre, )</onclick>
+<onclick>Skin.SetString(GamePlatform, )</onclick>
+<onclick>Skin.SetString(GameReleased, )</onclick>
+<onclick>Skin.SetString(GameStudio, )</onclick>
+<onclick>Skin.SetString(GameDescription, )</onclick>
+								
+								
+								
+								
+
+<onclick>Skin.SetString(GameFanart, demo\app\info\fanart\deadrising3.jpg)</onclick>
+<onclick>Skin.SetString(GamePoster, demo\app\info\poster\deadrising3.jpg)</onclick>
+<onclick>Skin.SetString(GameFanart2, demo\app\info\fanart\deadrising32.png)</onclick>
+<onclick>Skin.SetString(GameName, Dead Rising 3)</onclick>
+<onclick>Skin.SetString(GameGenre, Survival horror)</onclick>
+<onclick>Skin.SetString(GamePlatform, Xbox One)</onclick>
+<onclick>Skin.SetString(GameReleased, 2013)</onclick>
+<onclick>Skin.SetString(GameStudio, Microsoft Studios)</onclick>
+<onclick>Skin.SetString(GameDescription, Dead Rising 3 is a survival horror video game developed by Capcom Vancouver and published by Microsoft Studios. The game was announced as an Xbox One exclusive during Microsoft's E3 2013 press conference on June 10 2013. It was released on November 22 2013 as a launch title for the Xbox One.)</onclick>
+<onclick>ActivateWindow(1223)</onclick>
+														
+							</item>
+																																<item id="4">
+								<description>Games</description>
+								<label>Destiny</label>
+								<thumb>demo\app\gamestore\destiny.jpg</thumb>
+								
+								<onclick>Skin.SetString(GameFanart, )</onclick>
+<onclick>Skin.SetString(GamePoster, )</onclick>
+<onclick>Skin.SetString(GameFanart2, )</onclick>
+<onclick>Skin.SetString(GameName, )</onclick>
+<onclick>Skin.SetString(GameGenre, )</onclick>
+<onclick>Skin.SetString(GamePlatform, )</onclick>
+<onclick>Skin.SetString(GameReleased, )</onclick>
+<onclick>Skin.SetString(GameStudio, )</onclick>
+<onclick>Skin.SetString(GameDescription, )</onclick>
+								
+								
+								
+								
+
+<onclick>Skin.SetString(GameFanart, demo\app\info\fanart\destiny.jpg)</onclick>
+<onclick>Skin.SetString(GamePoster, demo\app\info\poster\destiny.png)</onclick>
+<onclick>Skin.SetString(GameFanart2, demo\app\info\fanart\destiny2.jpg)</onclick>
+<onclick>Skin.SetString(GameName, Destiny)</onclick>
+<onclick>Skin.SetString(GameGenre, First-person shooter)</onclick>
+<onclick>Skin.SetString(GamePlatform, Xbox One)</onclick>
+<onclick>Skin.SetString(GameReleased, 2014)</onclick>
+<onclick>Skin.SetString(GameStudio, Activision)</onclick>
+<onclick>Skin.SetString(GameDescription, Destiny is an upcoming massively multiplayer online action role-playing first-person shooter video game in a mythic science fiction open world setting. It is developed by Bungie and published by Activision as part of a ten-year publishing deal. The game will be released on the PlayStation 3 PlayStation 4 Xbox 360 and Xbox One video game consoles on September 9 2014 with a beta testing phase planned for this upcoming summer. The beta will launch first on PlayStation 3 and PlayStation 4. Bungie demoed live gameplay footage of Destiny at Sony's E3 2013 conference.)</onclick>
+<onclick>ActivateWindow(1223)</onclick>
+														
+							</item>
+																																<item id="5">
+								<description>Games</description>
+								<label>The Division</label>
+								<thumb>demo\app\gamestore\division.jpg</thumb>
+								
+								<onclick>Skin.SetString(GameFanart, )</onclick>
+<onclick>Skin.SetString(GamePoster, )</onclick>
+<onclick>Skin.SetString(GameFanart2, )</onclick>
+<onclick>Skin.SetString(GameName, )</onclick>
+<onclick>Skin.SetString(GameGenre, )</onclick>
+<onclick>Skin.SetString(GamePlatform, )</onclick>
+<onclick>Skin.SetString(GameReleased, )</onclick>
+<onclick>Skin.SetString(GameStudio, )</onclick>
+<onclick>Skin.SetString(GameDescription, )</onclick>
+								
+								
+								
+								
+
+<onclick>Skin.SetString(GameFanart, demo\app\info\fanart\division.jpg)</onclick>
+<onclick>Skin.SetString(GamePoster, demo\app\info\poster\division.jpg)</onclick>
+<onclick>Skin.SetString(GameFanart2, demo\app\info\fanart\division2.jpg)</onclick>
+<onclick>Skin.SetString(GameName, Tom Clancy's The Division)</onclick>
+<onclick>Skin.SetString(GameGenre, Third-person shooter)</onclick>
+<onclick>Skin.SetString(GamePlatform, Xbox One)</onclick>
+<onclick>Skin.SetString(GameReleased, 2014)</onclick>
+<onclick>Skin.SetString(GameStudio, Ubisoft)</onclick>
+<onclick>Skin.SetString(GameDescription, The Division is inspired by Operation Dark Winter and Directive 51 real-world events which revealed how vulnerable we've become. society has become fragile and complex. In the game a disease that spreads on Black Friday causes the United States to collapse in five days. The player is part of a group called Strategic Homeland Division (SHD) called The Division for short. This group was established to combat the threat and do whatever it takes to save what remains in a massive multiplayer online situation. putting them against friends AI and other players.)</onclick>
+<onclick>ActivateWindow(1223)</onclick>
+														
+							</item>
+																																<item id="6">
+								<description>Games</description>
+								<label>Dying Light</label>
+								<thumb>demo\app\gamestore\dyinglight.jpg</thumb>
+								
+								<onclick>Skin.SetString(GameFanart, )</onclick>
+<onclick>Skin.SetString(GamePoster, )</onclick>
+<onclick>Skin.SetString(GameFanart2, )</onclick>
+<onclick>Skin.SetString(GameName, )</onclick>
+<onclick>Skin.SetString(GameGenre, )</onclick>
+<onclick>Skin.SetString(GamePlatform, )</onclick>
+<onclick>Skin.SetString(GameReleased, )</onclick>
+<onclick>Skin.SetString(GameStudio, )</onclick>
+<onclick>Skin.SetString(GameDescription, )</onclick>
+								
+								
+								
+								
+								
+<onclick>Skin.SetString(GameFanart, demo\app\info\fanart\dyinglight.jpg)</onclick>
+<onclick>Skin.SetString(GamePoster, demo\app\info\poster\dyinglight.jpg)</onclick>
+<onclick>Skin.SetString(GameFanart2, demo\app\info\fanart\dyinglight2.jpg)</onclick>
+<onclick>Skin.SetString(GameName, Dying Light)</onclick>
+<onclick>Skin.SetString(GameGenre, Survival horror)</onclick>
+<onclick>Skin.SetString(GamePlatform, Xbox One)</onclick>
+<onclick>Skin.SetString(GameReleased, 2014)</onclick>
+<onclick>Skin.SetString(GameStudio, Warner Bros)</onclick>
+<onclick>Skin.SetString(GameDescription, Dying Light is an upcoming first-person survival horror video game developed by Techland to be released on the PlayStation 3 PlayStation 4 Xbox One Xbox 360 and Microsoft Windows.)</onclick>
+<onclick>ActivateWindow(1223)</onclick>
+														
+							</item>
+																																<item id="7">
+								<description>Games</description>
+								<label>Fifa 14</label>
+								<thumb>demo\app\gamestore\fifa.jpg</thumb>
+								
+								<onclick>Skin.SetString(GameFanart, )</onclick>
+<onclick>Skin.SetString(GamePoster, )</onclick>
+<onclick>Skin.SetString(GameFanart2, )</onclick>
+<onclick>Skin.SetString(GameName, )</onclick>
+<onclick>Skin.SetString(GameGenre, )</onclick>
+<onclick>Skin.SetString(GamePlatform, )</onclick>
+<onclick>Skin.SetString(GameReleased, )</onclick>
+<onclick>Skin.SetString(GameStudio, )</onclick>
+<onclick>Skin.SetString(GameDescription, )</onclick>
+								
+								
+								
+								
+							
+<onclick>Skin.SetString(GameFanart, demo\app\info\fanart\fifa14.jpg)</onclick>
+<onclick>Skin.SetString(GamePoster, demo\app\info\poster\fifa14.jpg)</onclick>
+<onclick>Skin.SetString(GameFanart2, demo\app\info\fanart\fifa142.jpg)</onclick>
+<onclick>Skin.SetString(GameName, Fifa 14)</onclick>
+<onclick>Skin.SetString(GameGenre, Sports)</onclick>
+<onclick>Skin.SetString(GamePlatform, Xbox One)</onclick>
+<onclick>Skin.SetString(GameReleased, 2013)</onclick>
+<onclick>Skin.SetString(GameStudio, Electronic Arts)</onclick>
+<onclick>Skin.SetString(GameDescription, FIFA 14 is a sports association football simulation video game developed by EA Canada and published by Electronics Arts. It was released in late September 2013 for the PlayStation 2 PlayStation 3 PlayStation Portable PlayStation Vita Xbox 360 Wii Nintendo 3DS video game consoles and Microsoft Windows. It was also released as freeware for iOS and Android on 23 September 2013 and as a launch title for the PlayStation 4 and Xbox One in November 2013.)</onclick>
+								<onclick>ActivateWindow(1223)</onclick>						
+							</item>
+																																<item id="8">
+								<description>Games</description>
+								<label>Forza</label>
+								<thumb>demo\app\gamestore\forza.jpg</thumb>
+								
+								<onclick>Skin.SetString(GameFanart, )</onclick>
+<onclick>Skin.SetString(GamePoster, )</onclick>
+<onclick>Skin.SetString(GameFanart2, )</onclick>
+<onclick>Skin.SetString(GameName, )</onclick>
+<onclick>Skin.SetString(GameGenre, )</onclick>
+<onclick>Skin.SetString(GamePlatform, )</onclick>
+<onclick>Skin.SetString(GameReleased, )</onclick>
+<onclick>Skin.SetString(GameStudio, )</onclick>
+<onclick>Skin.SetString(GameDescription, )</onclick>
+								
+								
+								
+								
+								
+<onclick>Skin.SetString(GameFanart, demo\app\info\fanart\forza.jpg)</onclick>
+<onclick>Skin.SetString(GamePoster, demo\app\info\poster\forza.jpg)</onclick>
+<onclick>Skin.SetString(GameFanart2, demo\app\info\fanart\forza2.jpg)</onclick>
+<onclick>Skin.SetString(GameName, Forza)</onclick>
+<onclick>Skin.SetString(GameGenre, Racing)</onclick>
+<onclick>Skin.SetString(GamePlatform, Xbox One)</onclick>
+<onclick>Skin.SetString(GameReleased, 2013)</onclick>
+<onclick>Skin.SetString(GameStudio, Microsoft Studios)</onclick>
+<onclick>Skin.SetString(GameDescription, Forza Motorsport 5 is a racing video game developed by Turn 10 Studios and published by Microsoft Studios for the Xbox One video game console. The game was released on November 22 2013 as launch title. The game was revealed on May 21 2013 during the Xbox One reveal event with a teaser trailer that showed an orange McLaren P1 racing against a silver McLaren F1. On August 15 2013 the Limited Edition of the game was announced and will include multiple car packs and a VIP membership for the game. It features Jeremy Clarkson James May and Richard Hammond from Top Gear for the game's commentary when choosing a new event championship or league. It is the fifth installment in the Forza Motorsport series.)</onclick>
+							<onclick>ActivateWindow(1223)</onclick>							
+							</item>
+																																<item id="9">
+								<description>Games</description>
+								<label>Call Of Duty</label>
+								<thumb>demo\app\gamestore\ghosts.jpg</thumb>
+								
+								<onclick>Skin.SetString(GameFanart, )</onclick>
+<onclick>Skin.SetString(GamePoster, )</onclick>
+<onclick>Skin.SetString(GameFanart2, )</onclick>
+<onclick>Skin.SetString(GameName, )</onclick>
+<onclick>Skin.SetString(GameGenre, )</onclick>
+<onclick>Skin.SetString(GamePlatform, )</onclick>
+<onclick>Skin.SetString(GameReleased, )</onclick>
+<onclick>Skin.SetString(GameStudio, )</onclick>
+<onclick>Skin.SetString(GameDescription, )</onclick>
+								
+								
+								
+								
+								
+<onclick>Skin.SetString(GameFanart, demo\app\info\fanart\ghosts.jpg)</onclick>
+<onclick>Skin.SetString(GamePoster, demo\app\info\poster\ghosts.jpg)</onclick>
+<onclick>Skin.SetString(GameFanart2, demo\app\info\fanart\ghosts2.jpg)</onclick>
+<onclick>Skin.SetString(GameName, Call of Duty : Ghosts)</onclick>
+<onclick>Skin.SetString(GameGenre, First-person shooter)</onclick>
+<onclick>Skin.SetString(GamePlatform, Xbox One)</onclick>
+<onclick>Skin.SetString(GameReleased, 2013)</onclick>
+<onclick>Skin.SetString(GameStudio, Activision)</onclick>
+<onclick>Skin.SetString(GameDescription, Call of Duty: Ghosts is a 2013 first-person shooter video game developed by Infinity Ward with assistance from Raven Software Neversoft and Certain Affinity and published by Activision. It is the tenth primary installment in the Call of Duty series and the sixth developed by Infinity Ward. The video game was released for Microsoft Windows PlayStation 3 Xbox 360 and Wii U on November 5 2013 with Treyarch handling the port for the Wii U. The game's release date on next-generation consoles PlayStation 4 and Xbox One is officially November 15 2013 and November 22 2013 respectively to coincide with the console release dates. However the game was released earlier for the PlayStation 4 from some retailers.)</onclick>
+							<onclick>ActivateWindow(1223)</onclick>							
+							</item>
+							<item id="10">
+								<description>Games</description>
+								<label>Halo</label>
+								<thumb>demo\app\gamestore\halo.jpg</thumb>
+		<onclick>Skin.SetString(GameFanart, )</onclick>
+<onclick>Skin.SetString(GamePoster, )</onclick>
+<onclick>Skin.SetString(GameFanart2, )</onclick>
+<onclick>Skin.SetString(GameName, )</onclick>
+<onclick>Skin.SetString(GameGenre, )</onclick>
+<onclick>Skin.SetString(GamePlatform, )</onclick>
+<onclick>Skin.SetString(GameReleased, )</onclick>
+<onclick>Skin.SetString(GameStudio, )</onclick>
+<onclick>Skin.SetString(GameDescription, )</onclick>
+										
+<onclick>Skin.SetString(GameFanart, demo\app\info\fanart\halo.jpg)</onclick>
+<onclick>Skin.SetString(GamePoster, demo\app\info\poster\halo.png)</onclick>
+<onclick>Skin.SetString(GameFanart2, demo\app\info\fanart\halo2.jpg)</onclick>
+<onclick>Skin.SetString(GameName, Halo : Spartan Assult)</onclick>
+<onclick>Skin.SetString(GameGenre, First-person shooter)</onclick>
+<onclick>Skin.SetString(GamePlatform, Xbox One)</onclick>
+<onclick>Skin.SetString(GameReleased, 2014)</onclick>
+<onclick>Skin.SetString(GameStudio, Microsoft Studios)</onclick>
+<onclick>Skin.SetString(GameDescription, Halo: Spartan Assault is a 2013 top-down third-person shooter video game developed by 343 Industries and Vanguard Entertainment. Part of the Halo media franchise it was first released on July 18 2013 for Microsoft Windows 8 and Windows Phone 8 platforms. An Xbox One version of the game released on December 24 2013 followed by an Xbox 360 version on January 31 2014. It was released on Steam on April 4th 2014.)</onclick>
+<onclick>ActivateWindow(1223)</onclick>			
+							</item>
+																								<item id="11">
+								<description>Games</description>
+								<label>Killer Instinct</label>
+								<thumb>demo\app\gamestore\killer.png</thumb>
+<onclick>Skin.SetString(GameFanart, )</onclick>
+<onclick>Skin.SetString(GamePoster, )</onclick>
+<onclick>Skin.SetString(GameFanart2, )</onclick>
+<onclick>Skin.SetString(GameName, )</onclick>
+<onclick>Skin.SetString(GameGenre, )</onclick>
+<onclick>Skin.SetString(GamePlatform, )</onclick>
+<onclick>Skin.SetString(GameReleased, )</onclick>
+<onclick>Skin.SetString(GameStudio, )</onclick>
+<onclick>Skin.SetString(GameDescription, )</onclick>
+										
+<onclick>Skin.SetString(GameFanart, demo\app\info\fanart\killer.png)</onclick>
+<onclick>Skin.SetString(GamePoster, demo\app\info\poster\killer.jpg)</onclick>
+<onclick>Skin.SetString(GameFanart2, demo\app\info\fanart\killer2.jpg)</onclick>
+<onclick>Skin.SetString(GameName, Killer Instinct)</onclick>
+<onclick>Skin.SetString(GameGenre, Fighting)</onclick>
+<onclick>Skin.SetString(GamePlatform, Xbox One)</onclick>
+<onclick>Skin.SetString(GameReleased, 2013)</onclick>
+<onclick>Skin.SetString(GameStudio, Microsoft Studios)</onclick>
+<onclick>Skin.SetString(GameDescription, Killer Instinct is a fighting game in the Killer Instinct series developed by Double Helix Games Iron Galaxy Studios and Rare under supervision of Ken Lobb. The game was announced during Microsoft's E3 2013 press event and was released exclusively as a launch game for the Xbox One on November 22 2013.)</onclick>
+<onclick>ActivateWindow(1223)</onclick>			
+							</item>
+																														<item id="12">
+								<description>Games</description>
+								<label>Kinect Sports</label>
+								<thumb>demo\app\gamestore\kinect.jpg</thumb>
+<onclick>Skin.SetString(GameFanart, )</onclick>
+<onclick>Skin.SetString(GamePoster, )</onclick>
+<onclick>Skin.SetString(GameFanart2, )</onclick>
+<onclick>Skin.SetString(GameName, )</onclick>
+<onclick>Skin.SetString(GameGenre, )</onclick>
+<onclick>Skin.SetString(GamePlatform, )</onclick>
+<onclick>Skin.SetString(GameReleased, )</onclick>
+<onclick>Skin.SetString(GameStudio, )</onclick>
+<onclick>Skin.SetString(GameDescription, )</onclick>
+										
+<onclick>Skin.SetString(GameFanart, demo\app\info\fanart\kinect.jpg)</onclick>
+<onclick>Skin.SetString(GamePoster, demo\app\info\poster\kinect.jpg)</onclick>
+<onclick>Skin.SetString(GameFanart2, demo\app\info\fanart\kinect2.jpg)</onclick>
+<onclick>Skin.SetString(GameName, Kinect Sports)</onclick>
+<onclick>Skin.SetString(GameGenre, Sports)</onclick>
+<onclick>Skin.SetString(GamePlatform, Xbox One)</onclick>
+<onclick>Skin.SetString(GameReleased, 2014)</onclick>
+<onclick>Skin.SetString(GameStudio, Microsoft Studios)</onclick>
+<onclick>Skin.SetString(GameDescription, Kinect Sports Rivals is a sports video game for the Xbox One. It is part of the Kinect Sports series. The game was announced during Microsoft's E3 2013 press event and was released on 8 April 2014.)</onclick>
+<onclick>ActivateWindow(1223)</onclick>												
+							</item>
+																																<item id="13">
+								<description>Games</description>
+								<label>Quantum Break</label>
+								<thumb>demo\app\gamestore\quantum.jpg</thumb>
+								<onclick>Skin.SetString(GameFanart, )</onclick>
+<onclick>Skin.SetString(GamePoster, )</onclick>
+<onclick>Skin.SetString(GameFanart2, )</onclick>
+<onclick>Skin.SetString(GameName, )</onclick>
+<onclick>Skin.SetString(GameGenre, )</onclick>
+<onclick>Skin.SetString(GamePlatform, )</onclick>
+<onclick>Skin.SetString(GameReleased, )</onclick>
+<onclick>Skin.SetString(GameStudio, )</onclick>
+<onclick>Skin.SetString(GameDescription, )</onclick>
+										
+<onclick>Skin.SetString(GameFanart, demo\app\info\fanart\quantum.jpg)</onclick>
+<onclick>Skin.SetString(GamePoster, demo\app\info\poster\quantum.jpg)</onclick>
+<onclick>Skin.SetString(GameFanart2, demo\app\info\fanart\quantum2.jpg)</onclick>
+<onclick>Skin.SetString(GameName, Quantum Break)</onclick>
+<onclick>Skin.SetString(GameGenre, Third-person shooter)</onclick>
+<onclick>Skin.SetString(GamePlatform, Xbox One)</onclick>
+<onclick>Skin.SetString(GameReleased, 2014)</onclick>
+<onclick>Skin.SetString(GameStudio, Microsoft Studios)</onclick>
+<onclick>Skin.SetString(GameDescription, Quantum Break is an upcoming third-person shooter video game to be released on the Xbox One. Developed by Finnish game developer Remedy Entertainment and published by Microsoft Studios the game will feature live-action videos blended with regular gameplay. The game was revealed with a teaser trailer during the Xbox One reveal event on 21 May 2013. A Quantum Break television series is also in production with Remedy stating that how you play the game impacts the show and the show informs how you play the game.)</onclick>
+<onclick>ActivateWindow(1223)</onclick>							
+							</item>
+																																<item id="14">
+								<description>Games</description>
+								<label>Ryse</label>
+								<thumb>demo\app\gamestore\ryse.jpg</thumb>
+								<onclick>Skin.SetString(GamePoster, )</onclick>
+<onclick>Skin.SetString(GameFanart2, )</onclick>
+<onclick>Skin.SetString(GameName, )</onclick>
+<onclick>Skin.SetString(GameGenre, )</onclick>
+<onclick>Skin.SetString(GamePlatform, )</onclick>
+<onclick>Skin.SetString(GameReleased, )</onclick>
+<onclick>Skin.SetString(GameStudio, )</onclick>
+<onclick>Skin.SetString(GameDescription, )</onclick>
+										
+<onclick>Skin.SetString(GameFanart, demo\app\info\fanart\ryse.jpg)</onclick>
+<onclick>Skin.SetString(GamePoster, demo\app\info\poster\ryse.jpg)</onclick>
+<onclick>Skin.SetString(GameFanart2, demo\app\info\fanart\ryse2.jpg)</onclick>
+<onclick>Skin.SetString(GameName, Ryse : Son Of Rome)</onclick>
+<onclick>Skin.SetString(GameGenre, Hack and slash)</onclick>
+<onclick>Skin.SetString(GamePlatform, Xbox One)</onclick>
+<onclick>Skin.SetString(GameReleased, 2014)</onclick>
+<onclick>Skin.SetString(GameStudio, Microsoft Studios)</onclick>
+<onclick>Skin.SetString(GameDescription, Ryse: Son of Rome is a third-person action-adventure video game developed by Crytek. It was published by Microsoft Studios on November 22 2013 as an Xbox One-exclusive launch title.)</onclick>
+<onclick>ActivateWindow(1223)</onclick>						
+							</item>
+																																<item id="15">
+								<description>Games</description>
+								<label>Titanfall</label>
+								<thumb>demo\app\gamestore\titanfall.jpg</thumb>
+																<onclick>Skin.SetString(GamePoster, )</onclick>
+<onclick>Skin.SetString(GameFanart2, )</onclick>
+<onclick>Skin.SetString(GameName, )</onclick>
+<onclick>Skin.SetString(GameGenre, )</onclick>
+<onclick>Skin.SetString(GamePlatform, )</onclick>
+<onclick>Skin.SetString(GameReleased, )</onclick>
+<onclick>Skin.SetString(GameStudio, )</onclick>
+<onclick>Skin.SetString(GameDescription, )</onclick>
+										
+<onclick>Skin.SetString(GameFanart, demo\app\info\fanart\titanfall.jpg)</onclick>
+<onclick>Skin.SetString(GamePoster, demo\app\info\poster\titanfall.jpg)</onclick>
+<onclick>Skin.SetString(GameFanart2, demo\app\info\fanart\titanfall2.jpg)</onclick>
+<onclick>Skin.SetString(GameName, Titanfall)</onclick>
+<onclick>Skin.SetString(GameGenre, First-person shooter)</onclick>
+<onclick>Skin.SetString(GamePlatform, Xbox One)</onclick>
+<onclick>Skin.SetString(GameReleased, 2014)</onclick>
+<onclick>Skin.SetString(GameStudio, Electronic Arts)</onclick>
+<onclick>Skin.SetString(GameDescription, Titanfall is a 2014 first-person shooter online multiplayer video game developed by Respawn Entertainment and published by Electronic Arts exclusively for Microsoft Windows Xbox 360 and Xbox One. Titanfall was highly anticipated for its pedigree as the debut game from Respawn a company composed of those responsible for the successful Call of Duty series. The game received abundant publicity from video game journalists following its reveal. The game was released on March 11 2014.)</onclick>
+<onclick>ActivateWindow(1223)</onclick>			
+							</item>
+																																<item id="16">
+								<description>Games</description>
+								<label>Tomb Raider</label>
+								<thumb>demo\app\gamestore\tombraider.jpg</thumb>
+									<onclick>Skin.SetString(GamePoster, )</onclick>
+<onclick>Skin.SetString(GameFanart2, )</onclick>
+<onclick>Skin.SetString(GameName, )</onclick>
+<onclick>Skin.SetString(GameGenre, )</onclick>
+<onclick>Skin.SetString(GamePlatform, )</onclick>
+<onclick>Skin.SetString(GameReleased, )</onclick>
+<onclick>Skin.SetString(GameStudio, )</onclick>
+<onclick>Skin.SetString(GameDescription, )</onclick>
+										
+<onclick>Skin.SetString(GameFanart, demo\app\info\fanart\tomb.jpg)</onclick>
+<onclick>Skin.SetString(GamePoster, demo\app\info\poster\tomb.jpg)</onclick>
+<onclick>Skin.SetString(GameFanart2, demo\app\info\fanart\tomb2.jpg)</onclick>
+<onclick>Skin.SetString(GameName, Tomb Raider)</onclick>
+<onclick>Skin.SetString(GameGenre, Action-adventure)</onclick>
+<onclick>Skin.SetString(GamePlatform, Xbox One)</onclick>
+<onclick>Skin.SetString(GameReleased, 2013)</onclick>
+<onclick>Skin.SetString(GameStudio, Square Enix)</onclick>
+<onclick>Skin.SetString(GameDescription, Tomb Raider is a 2013 action-adventure video game published by Square Enix. Tomb Raider is the fifth title developed by Crystal Dynamics in the Tomb Raider franchise. As the first entry in a new Tomb Raider continuity the game is a reboot that emphasises the reconstructed origins of the culturally influential lead character Lara Croft. Tomb Raider was released on 5 March 2013 for Microsoft Windows PlayStation 3 and Xbox 360 and on 23 January 2014 for Mac OS X.)</onclick>
+<onclick>ActivateWindow(1223)</onclick>					
+							</item>
+																																<item id="17">
+								<description>Games</description>
+								<label>Watch Dogs</label>
+								<thumb>demo\app\gamestore\watchdogs.jpg</thumb>
+								<onclick>Skin.SetString(GamePoster, )</onclick>
+<onclick>Skin.SetString(GameFanart2, )</onclick>
+<onclick>Skin.SetString(GameName, )</onclick>
+<onclick>Skin.SetString(GameGenre, )</onclick>
+<onclick>Skin.SetString(GamePlatform, )</onclick>
+<onclick>Skin.SetString(GameReleased, )</onclick>
+<onclick>Skin.SetString(GameStudio, )</onclick>
+<onclick>Skin.SetString(GameDescription, )</onclick>
+										
+<onclick>Skin.SetString(GameFanart, demo\app\info\fanart\dogs.jpg)</onclick>
+<onclick>Skin.SetString(GamePoster, demo\app\info\poster\dogs.jpg)</onclick>
+<onclick>Skin.SetString(GameFanart2, demo\app\info\fanart\dogs2.jpg)</onclick>
+<onclick>Skin.SetString(GameName, Watch Dogs)</onclick>
+<onclick>Skin.SetString(GameGenre, Action-adventure)</onclick>
+<onclick>Skin.SetString(GamePlatform, Xbox One)</onclick>
+<onclick>Skin.SetString(GameReleased, 2014)</onclick>
+<onclick>Skin.SetString(GameStudio, Ubisoft)</onclick>
+<onclick>Skin.SetString(GameDescription, Watch Dogs is an upcoming open world action-adventure video game developed by Ubisoft Montreal and published by Ubisoft. It is due for release worldwide on May 27 2014 for Microsoft Windows PlayStation 3 PlayStation 4 Xbox 360 and Xbox One consoles. The Wii U version of the game has been put on hold while the other versions are being worked on and is planned to release in the fourth quarter of 2014.)</onclick>
+<onclick>ActivateWindow(1223)</onclick>								
+							</item>
+																																<item id="18">
+								<description>Games</description>
+								<label>Zoo Tycoon</label>
+								<thumb>demo\app\gamestore\zoo.jpg</thumb>
+								<onclick>Skin.SetString(GamePoster, )</onclick>
+<onclick>Skin.SetString(GameFanart2, )</onclick>
+<onclick>Skin.SetString(GameName, )</onclick>
+<onclick>Skin.SetString(GameGenre, )</onclick>
+<onclick>Skin.SetString(GamePlatform, )</onclick>
+<onclick>Skin.SetString(GameReleased, )</onclick>
+<onclick>Skin.SetString(GameStudio, )</onclick>
+<onclick>Skin.SetString(GameDescription, )</onclick>
+										
+<onclick>Skin.SetString(GameFanart, demo\app\info\fanart\zoo.jpg)</onclick>
+<onclick>Skin.SetString(GamePoster, demo\app\info\poster\zoo.jpg)</onclick>
+<onclick>Skin.SetString(GameFanart2, demo\app\info\fanart\zoo2.jpg)</onclick>
+<onclick>Skin.SetString(GameName, Zoo Tycoon)</onclick>
+<onclick>Skin.SetString(GameGenre, Business simulation)</onclick>
+<onclick>Skin.SetString(GamePlatform, Xbox One)</onclick>
+<onclick>Skin.SetString(GameReleased, 2013)</onclick>
+<onclick>Skin.SetString(GameStudio, Microsoft Studios)</onclick>
+<onclick>Skin.SetString(GameDescription, Zoo Tycoon is a business simulation video game developed by Frontier Developments and published by Microsoft Studios. The game was released on 22 November 2013 for Xbox One and Xbox 360.)</onclick>
+<onclick>ActivateWindow(1223)</onclick>								
+							</item>
+	
+	
+	<item id="19">
+								<description>Games</description>
+								<label>The Crew</label>
+								<thumb>demo\app\gamestore\thecrew.jpg</thumb>
+	<onclick>Skin.SetString(GamePoster, )</onclick>
+<onclick>Skin.SetString(GameFanart2, )</onclick>
+<onclick>Skin.SetString(GameName, )</onclick>
+<onclick>Skin.SetString(GameGenre, )</onclick>
+<onclick>Skin.SetString(GamePlatform, )</onclick>
+<onclick>Skin.SetString(GameReleased, )</onclick>
+<onclick>Skin.SetString(GameStudio, )</onclick>
+<onclick>Skin.SetString(GameDescription, )</onclick>
+										
+<onclick>Skin.SetString(GameFanart, demo\app\info\fanart\crew.jpg)</onclick>
+<onclick>Skin.SetString(GamePoster, demo\app\info\poster\crew.jpg)</onclick>
+<onclick>Skin.SetString(GameFanart2, demo\app\info\fanart\crew2.jpg)</onclick>
+<onclick>Skin.SetString(GameName, The Crew)</onclick>
+<onclick>Skin.SetString(GameGenre, Racing)</onclick>
+<onclick>Skin.SetString(GamePlatform, Xbox One)</onclick>
+<onclick>Skin.SetString(GameReleased, 2014)</onclick>
+<onclick>Skin.SetString(GameStudio, Ubisoft)</onclick>
+<onclick>Skin.SetString(GameDescription, The Crew is an upcoming racing video game set in an open world environment. It is being developed by Ivory Tower and Ubisoft Reflections and published by Ubisoft for Microsoft Windows PlayStation 4 and Xbox One. It is expected to release in the third quarter of 2014.)</onclick>
+<onclick>ActivateWindow(1223)</onclick>												
+							</item>
+																								<item id="20">
+								<description>Games</description>
+								<label>Max</label>
+								<thumb>demo\app\gamestore\max.png</thumb>
+<onclick>Skin.SetString(GamePoster, )</onclick>
+<onclick>Skin.SetString(GameFanart2, )</onclick>
+<onclick>Skin.SetString(GameName, )</onclick>
+<onclick>Skin.SetString(GameGenre, )</onclick>
+<onclick>Skin.SetString(GamePlatform, )</onclick>
+<onclick>Skin.SetString(GameReleased, )</onclick>
+<onclick>Skin.SetString(GameStudio, )</onclick>
+<onclick>Skin.SetString(GameDescription, )</onclick>
+										
+<onclick>Skin.SetString(GameFanart, demo\app\info\fanart\max.jpg)</onclick>
+<onclick>Skin.SetString(GamePoster, demo\app\info\poster\max.jpg)</onclick>
+<onclick>Skin.SetString(GameFanart2, demo\app\info\fanart\max2.jpg)</onclick>
+<onclick>Skin.SetString(GameName, Max : The Curse Of Brotherhood)</onclick>
+<onclick>Skin.SetString(GameGenre, Puzzle)</onclick>
+<onclick>Skin.SetString(GamePlatform, Xbox One)</onclick>
+<onclick>Skin.SetString(GameReleased, 2014)</onclick>
+<onclick>Skin.SetString(GameStudio, Microsoft Studios)</onclick>
+<onclick>Skin.SetString(GameDescription, Max: The Curse of Brotherhood is a 2.5D side-scrolling platform video game developed by Press Play for the Xbox 360 Xbox One and Microsoft Windows. The game was announced during Microsoft's E3 2013 press event. It is a reimagining of Press Play's previous work the 2010 Max & the Magic Marker.)</onclick>
+<onclick>ActivateWindow(1223)</onclick>							
+							</item>
+																														<item id="21">
+								<description>Games</description>
+								<label>Black Ops 2</label>
+								<thumb>demo\app\gamestore\blackop.jpg</thumb>
+<onclick>Skin.SetString(GamePoster, )</onclick>
+<onclick>Skin.SetString(GameFanart2, )</onclick>
+<onclick>Skin.SetString(GameName, )</onclick>
+<onclick>Skin.SetString(GameGenre, )</onclick>
+<onclick>Skin.SetString(GamePlatform, )</onclick>
+<onclick>Skin.SetString(GameReleased, )</onclick>
+<onclick>Skin.SetString(GameStudio, )</onclick>
+<onclick>Skin.SetString(GameDescription, )</onclick>
+										
+<onclick>Skin.SetString(GameFanart, demo\app\info\fanart\bops.jpg)</onclick>
+<onclick>Skin.SetString(GamePoster, demo\app\info\poster\bops.jpg)</onclick>
+<onclick>Skin.SetString(GameFanart2, demo\app\info\fanart\bops2.jpg)</onclick>
+<onclick>Skin.SetString(GameName, Call Of Duty : Black Ops II)</onclick>
+<onclick>Skin.SetString(GameGenre, First-person shooter)</onclick>
+<onclick>Skin.SetString(GamePlatform, Xbox 360)</onclick>
+<onclick>Skin.SetString(GameReleased, 2012)</onclick>
+<onclick>Skin.SetString(GameStudio, Activision)</onclick>
+<onclick>Skin.SetString(GameDescription, Call of Duty: Black Ops II is a 2012 first-person shooter video game developed by Treyarch and published by Activision. It was released on November 13 2012 for PlayStation 3 Xbox 360 and Microsoft Windows and on November 18 2012 in North America November 30 2012 in Europe and Australia for the Wii U. Square Enix released the game for the Japanese market on November 22 2012 as a subbed version. A Japanese voice-dubbed version was released separately on December 20 2012.)</onclick>
+<onclick>ActivateWindow(1223)</onclick>												
+							</item>
+																																<item id="22">
+								<description>Games</description>
+								<label>The Hobbit</label>
+								<thumb>demo\app\gamestore\hobbit.jpg</thumb>
+<onclick>Skin.SetString(GamePoster, )</onclick>
+<onclick>Skin.SetString(GameFanart2, )</onclick>
+<onclick>Skin.SetString(GameName, )</onclick>
+<onclick>Skin.SetString(GameGenre, )</onclick>
+<onclick>Skin.SetString(GamePlatform, )</onclick>
+<onclick>Skin.SetString(GameReleased, )</onclick>
+<onclick>Skin.SetString(GameStudio, )</onclick>
+<onclick>Skin.SetString(GameDescription, )</onclick>
+										
+<onclick>Skin.SetString(GameFanart, demo\app\info\fanart\hobbit.jpg)</onclick>
+<onclick>Skin.SetString(GamePoster, demo\app\info\poster\hobbit.jpg)</onclick>
+<onclick>Skin.SetString(GameFanart2, demo\app\info\fanart\hobbit2.jpg)</onclick>
+<onclick>Skin.SetString(GameName, Lego : The Hobbit)</onclick>
+<onclick>Skin.SetString(GameGenre, Action-adventure)</onclick>
+<onclick>Skin.SetString(GamePlatform, Xbox One)</onclick>
+<onclick>Skin.SetString(GameReleased, 2014)</onclick>
+<onclick>Skin.SetString(GameStudio, Warner Bros)</onclick>
+<onclick>Skin.SetString(GameDescription, Lego The Hobbit is an action-adventure video game in developed by Traveller's Tales. The game was released by Warner Bros. Interactive Entertainment on 8 April 2014 in North America and 11 April in Europe. The game is based on the first two Hobbit films The Hobbit An Unexpected Journey and The Hobbit The Desolation of Smaug. The Hobbit There and Back Again is rumored to be released as DLC. It has a Lego feature similar to the one in The Lego Movie Videogame where Emmet has to find the instructions to build certain Lego objects except in this Videogame you have to mine for wooden objects and crystal objects to build. A PC demo version was released in March. It was released on PlayStation 3 PlayStation 4 PlayStation Vita Xbox 360 Xbox One Wii U Nintendo 3DS and Microsoft Windows.)</onclick>
+<onclick>ActivateWindow(1223)</onclick>								
+							</item>
+																																<item id="23">
+								<description>Games</description>
+								<label>Just Dance</label>
+								<thumb>demo\app\gamestore\dance.jpg</thumb>
+<onclick>Skin.SetString(GamePoster, )</onclick>
+<onclick>Skin.SetString(GameFanart2, )</onclick>
+<onclick>Skin.SetString(GameName, )</onclick>
+<onclick>Skin.SetString(GameGenre, )</onclick>
+<onclick>Skin.SetString(GamePlatform, )</onclick>
+<onclick>Skin.SetString(GameReleased, )</onclick>
+<onclick>Skin.SetString(GameStudio, )</onclick>
+<onclick>Skin.SetString(GameDescription, )</onclick>
+										
+<onclick>Skin.SetString(GameFanart, demo\app\info\fanart\dance.jpg)</onclick>
+<onclick>Skin.SetString(GamePoster, demo\app\info\poster\dance.jpg)</onclick>
+<onclick>Skin.SetString(GameFanart2, demo\app\info\fanart\dance2.jpg)</onclick>
+<onclick>Skin.SetString(GameName, Just Dance)</onclick>
+<onclick>Skin.SetString(GameGenre, Rhythm)</onclick>
+<onclick>Skin.SetString(GamePlatform, Xbox One)</onclick>
+<onclick>Skin.SetString(GameReleased, 2014)</onclick>
+<onclick>Skin.SetString(GameStudio, Ubisoft)</onclick>
+<onclick>Skin.SetString(GameDescription, Just Dance 2014 is the fifth game in the Just Dance series developed by Ubisoft Milan. It was released for current-generation consoles on 8 October 2013 in the United States and it was released as a launch title for PlayStation 4 and Xbox One and is rated E10 by the ESRB. It was officially announced at Ubisoft's E3 2013 press event. This is the first game in the series to have a year in the title instead of the usual number.)</onclick>
+<onclick>ActivateWindow(1223)</onclick>								
+							</item>
+																																<item id="24">
+								<description>Games</description>
+								<label>Saints Row</label>
+								<thumb>demo\app\gamestore\saints.jpg</thumb>
+								<onclick>Skin.SetString(GamePoster, )</onclick>
+<onclick>Skin.SetString(GameFanart2, )</onclick>
+<onclick>Skin.SetString(GameName, )</onclick>
+<onclick>Skin.SetString(GameGenre, )</onclick>
+<onclick>Skin.SetString(GamePlatform, )</onclick>
+<onclick>Skin.SetString(GameReleased, )</onclick>
+<onclick>Skin.SetString(GameStudio, )</onclick>
+<onclick>Skin.SetString(GameDescription, )</onclick>
+										
+<onclick>Skin.SetString(GameFanart, demo\app\info\fanart\saints.jpg)</onclick>
+<onclick>Skin.SetString(GamePoster, demo\app\info\poster\saints.jpg)</onclick>
+<onclick>Skin.SetString(GameFanart2, demo\app\info\fanart\saints2.jpg)</onclick>
+<onclick>Skin.SetString(GameName, Saints Row : IV)</onclick>
+<onclick>Skin.SetString(GameGenre, Action-adventure)</onclick>
+<onclick>Skin.SetString(GamePlatform, Xbox 360)</onclick>
+<onclick>Skin.SetString(GameReleased, 2013)</onclick>
+<onclick>Skin.SetString(GameStudio, Deep Silver)</onclick>
+<onclick>Skin.SetString(GameDescription, Saints Row IV is a comedic action-adventure video game developed by Volition and published by Deep Silver. It was released for Microsoft Windows PlayStation 3 and Xbox 360. It is the fourth installment in the Saints Row series after the release of Saints Row The Third in 2011. As in previous titles in the series the player controls the leader of the Third Street Saints a street gang who has now become the president of the United States.)</onclick>
+<onclick>ActivateWindow(1223)</onclick>						
+							</item>
+																																<item id="25">
+								<description>Games</description>
+								<label>Hot Wheels</label>
+								<thumb>demo\app\gamestore\hotwheel.jpg</thumb>
+								<onclick>Skin.SetString(GamePoster, )</onclick>
+<onclick>Skin.SetString(GameFanart2, )</onclick>
+<onclick>Skin.SetString(GameName, )</onclick>
+<onclick>Skin.SetString(GameGenre, )</onclick>
+<onclick>Skin.SetString(GamePlatform, )</onclick>
+<onclick>Skin.SetString(GameReleased, )</onclick>
+<onclick>Skin.SetString(GameStudio, )</onclick>
+<onclick>Skin.SetString(GameDescription, )</onclick>
+										
+<onclick>Skin.SetString(GameFanart, demo\app\info\fanart\wheels.jpg)</onclick>
+<onclick>Skin.SetString(GamePoster, demo\app\info\poster\wheels.jpg)</onclick>
+<onclick>Skin.SetString(GameFanart2, demo\app\info\fanart\wheels2.jpg)</onclick>
+<onclick>Skin.SetString(GameName, Hot Wheels : Beat That)</onclick>
+<onclick>Skin.SetString(GameGenre, Racing)</onclick>
+<onclick>Skin.SetString(GamePlatform, Xbox 360)</onclick>
+<onclick>Skin.SetString(GameReleased, 2007)</onclick>
+<onclick>Skin.SetString(GameStudio, Activision)</onclick>
+<onclick>Skin.SetString(GameDescription, Hot Wheels: Beat That is a racing video game released in September 2007 developed by Eutechnyx.)</onclick>
+<onclick>ActivateWindow(1223)</onclick>							
+							</item>
+																																<item id="26">
+								<description>Games</description>
+								<label>R.I.P.D</label>
+								<thumb>demo\app\gamestore\ripd.jpg</thumb>
+								<onclick>Skin.SetString(GamePoster, )</onclick>
+<onclick>Skin.SetString(GameFanart2, )</onclick>
+<onclick>Skin.SetString(GameName, )</onclick>
+<onclick>Skin.SetString(GameGenre, )</onclick>
+<onclick>Skin.SetString(GamePlatform, )</onclick>
+<onclick>Skin.SetString(GameReleased, )</onclick>
+<onclick>Skin.SetString(GameStudio, )</onclick>
+<onclick>Skin.SetString(GameDescription, )</onclick>
+										
+<onclick>Skin.SetString(GameFanart, demo\app\info\fanart\ripd.jpg)</onclick>
+<onclick>Skin.SetString(GamePoster, demo\app\info\poster\ripd.jpg)</onclick>
+<onclick>Skin.SetString(GameFanart2, demo\app\info\fanart\ripd2.jpg)</onclick>
+<onclick>Skin.SetString(GameName, R.I.P.D)</onclick>
+<onclick>Skin.SetString(GameGenre, Third-person shooter)</onclick>
+<onclick>Skin.SetString(GamePlatform, Xbox 360)</onclick>
+<onclick>Skin.SetString(GameReleased, 2013)</onclick>
+<onclick>Skin.SetString(GameStudio, Activision)</onclick>
+<onclick>Skin.SetString(GameDescription, R.I.P.D. The Game is a co-op third-person shooter video game released in July 2013 set around a survival mode and is based on the film of the same name. It was developed by Old School Games and the gameplay is based on their previous game God Mode.)</onclick>
+<onclick>ActivateWindow(1223)</onclick>						
+							</item>
+																																<item id="27">
+								<description>Games</description>
+								<label>Rock Band</label>
+								<thumb>demo\app\gamestore\rockband.jpg</thumb>
+								<onclick>Skin.SetString(GamePoster, )</onclick>
+<onclick>Skin.SetString(GameFanart2, )</onclick>
+<onclick>Skin.SetString(GameName, )</onclick>
+<onclick>Skin.SetString(GameGenre, )</onclick>
+<onclick>Skin.SetString(GamePlatform, )</onclick>
+<onclick>Skin.SetString(GameReleased, )</onclick>
+<onclick>Skin.SetString(GameStudio, )</onclick>
+<onclick>Skin.SetString(GameDescription, )</onclick>
+										
+<onclick>Skin.SetString(GameFanart, demo\app\info\fanart\rock.jpg)</onclick>
+<onclick>Skin.SetString(GamePoster, demo\app\info\poster\rock.jpg)</onclick>
+<onclick>Skin.SetString(GameFanart2, demo\app\info\fanart\rock2.jpg)</onclick>
+<onclick>Skin.SetString(GameName, Rock Band)</onclick>
+<onclick>Skin.SetString(GameGenre, Rhythm)</onclick>
+<onclick>Skin.SetString(GamePlatform, Xbox 360)</onclick>
+<onclick>Skin.SetString(GameReleased, 2009)</onclick>
+<onclick>Skin.SetString(GameStudio, MTV Games)</onclick>
+<onclick>Skin.SetString(GameDescription, Rock Band 2 is a 2008 music video game developed by Harmonix. It is the sequel to Rock Band and is the second title in the series. The game allows up to four players to simulate the performance of popular songs by playing with controllers modeled after musical instruments. Players can play the lead guitar bass guitar and drums parts to songs with instrument controllers as well as sing through a USB microphone. Players are scored on their ability to match scrolling musical notes while playing instruments or by their ability to match the singer's pitch on vocals.)</onclick>
+<onclick>ActivateWindow(1223)</onclick>					
+							</item>
+	
+	
+	
+							
+							<item id="28">
+								<description>Games</description>
+								<label>Dark Souls 2</label>
+								<thumb>demo\app\gamestore\darksouls.jpg</thumb>
+		<onclick>Skin.SetString(GamePoster, )</onclick>
+<onclick>Skin.SetString(GameFanart2, )</onclick>
+<onclick>Skin.SetString(GameName, )</onclick>
+<onclick>Skin.SetString(GameGenre, )</onclick>
+<onclick>Skin.SetString(GamePlatform, )</onclick>
+<onclick>Skin.SetString(GameReleased, )</onclick>
+<onclick>Skin.SetString(GameStudio, )</onclick>
+<onclick>Skin.SetString(GameDescription, )</onclick>
+										
+<onclick>Skin.SetString(GameFanart, demo\app\info\fanart\dark.jpg)</onclick>
+<onclick>Skin.SetString(GamePoster, demo\app\info\poster\dark.jpg)</onclick>
+<onclick>Skin.SetString(GameFanart2, demo\app\info\fanart\dark2.jpg)</onclick>
+<onclick>Skin.SetString(GameName, Dark Souls 2)</onclick>
+<onclick>Skin.SetString(GameGenre, Role-playing)</onclick>
+<onclick>Skin.SetString(GamePlatform, Xbox 360)</onclick>
+<onclick>Skin.SetString(GameReleased, 2014)</onclick>
+<onclick>Skin.SetString(GameStudio,  Namco Bandai)</onclick>
+<onclick>Skin.SetString(GameDescription, Dark Souls II is an action role-playing video game set in an open world environment. Dark Souls II was developed for Microsoft Windows PlayStation 3 and Xbox 360 by From Software. From Software published the game in Japan while Namco Bandai Games published the game in other regions.)</onclick>
+<onclick>ActivateWindow(1223)</onclick>												
+							</item>
+																								<item id="29">
+								<description>Games</description>
+								<label>Kinect Sports</label>
+								<thumb>demo\app\gamestore\kinectsports.jpg</thumb>
+<onclick>Skin.SetString(GameFanart, )</onclick>
+<onclick>Skin.SetString(GamePoster, )</onclick>
+<onclick>Skin.SetString(GameFanart2, )</onclick>
+<onclick>Skin.SetString(GameName, )</onclick>
+<onclick>Skin.SetString(GameGenre, )</onclick>
+<onclick>Skin.SetString(GamePlatform, )</onclick>
+<onclick>Skin.SetString(GameReleased, )</onclick>
+<onclick>Skin.SetString(GameStudio, )</onclick>
+<onclick>Skin.SetString(GameDescription, )</onclick>
+										
+<onclick>Skin.SetString(GameFanart, demo\app\info\fanart\kinect.jpg)</onclick>
+<onclick>Skin.SetString(GamePoster, demo\app\info\poster\kinect.jpg)</onclick>
+<onclick>Skin.SetString(GameFanart2, demo\app\info\fanart\kinect2.jpg)</onclick>
+<onclick>Skin.SetString(GameName, Kinect Sports)</onclick>
+<onclick>Skin.SetString(GameGenre, Sports)</onclick>
+<onclick>Skin.SetString(GamePlatform, Xbox One)</onclick>
+<onclick>Skin.SetString(GameReleased, 2014)</onclick>
+<onclick>Skin.SetString(GameStudio, Microsoft Studios)</onclick>
+<onclick>Skin.SetString(GameDescription, Kinect Sports Rivals is a sports video game for the Xbox One. It is part of the Kinect Sports series. The game was announced during Microsoft's E3 2013 press event and was released on 8 April 2014.)</onclick>
+<onclick>ActivateWindow(1223)</onclick>							
+							</item>
+																														<item id="30">
+								<description>Games</description>
+								<label>Lego</label>
+								<thumb>demo\app\gamestore\lego.jpg</thumb>
+<onclick>Skin.SetString(GameFanart, )</onclick>
+<onclick>Skin.SetString(GamePoster, )</onclick>
+<onclick>Skin.SetString(GameFanart2, )</onclick>
+<onclick>Skin.SetString(GameName, )</onclick>
+<onclick>Skin.SetString(GameGenre, )</onclick>
+<onclick>Skin.SetString(GamePlatform, )</onclick>
+<onclick>Skin.SetString(GameReleased, )</onclick>
+<onclick>Skin.SetString(GameStudio, )</onclick>
+<onclick>Skin.SetString(GameDescription, )</onclick>
+										
+<onclick>Skin.SetString(GameFanart, demo\app\info\fanart\lego.jpg)</onclick>
+<onclick>Skin.SetString(GamePoster, demo\app\info\poster\lego.jpg)</onclick>
+<onclick>Skin.SetString(GameFanart2, demo\app\info\fanart\lego2.jpg)</onclick>
+<onclick>Skin.SetString(GameName, Lego Marvel Super Heroes)</onclick>
+<onclick>Skin.SetString(GameGenre, Action-adventure)</onclick>
+<onclick>Skin.SetString(GamePlatform, Xbox One)</onclick>
+<onclick>Skin.SetString(GameReleased, 2013)</onclick>
+<onclick>Skin.SetString(GameStudio, Warner Bros)</onclick>
+<onclick>Skin.SetString(GameDescription, Lego Marvel Super Heroes is a 2013 action-adventure video game that is developed by TT Games and is published by Warner Bros. Interactive Entertainment for the PlayStation 3 Xbox 360 Wii U PlayStation 4 Xbox One and Microsoft Windows. The game features gameplay similar to other Lego titles such as Lego Star Wars The Complete Saga and Lego Batman 2 DC Super Heroes alternating between various action-adventure sequences and puzzle-solving scenarios. The game was released under the title Lego Marvel Super Heroes Universe in Peril for the Nintendo DS Nintendo 3DS and PlayStation Vita handheld consoles.)</onclick>
+<onclick>ActivateWindow(1223)</onclick>					
+							</item>
+																																<item id="31">
+								<description>Games</description>
+								<label>NBA Live 14</label>
+								<thumb>demo\app\gamestore\nba.jpg</thumb>
+								<onclick>Skin.SetString(GameFanart, )</onclick>
+<onclick>Skin.SetString(GamePoster, )</onclick>
+<onclick>Skin.SetString(GameFanart2, )</onclick>
+<onclick>Skin.SetString(GameName, )</onclick>
+<onclick>Skin.SetString(GameGenre, )</onclick>
+<onclick>Skin.SetString(GamePlatform, )</onclick>
+<onclick>Skin.SetString(GameReleased, )</onclick>
+<onclick>Skin.SetString(GameStudio, )</onclick>
+<onclick>Skin.SetString(GameDescription, )</onclick>
+										
+<onclick>Skin.SetString(GameFanart, demo\app\info\fanart\nba.jpg)</onclick>
+<onclick>Skin.SetString(GamePoster, demo\app\info\poster\nba.jpg)</onclick>
+<onclick>Skin.SetString(GameFanart2, demo\app\info\fanart\nba2.jpg)</onclick>
+<onclick>Skin.SetString(GameName, NBA 2K14)</onclick>
+<onclick>Skin.SetString(GameGenre, Sports)</onclick>
+<onclick>Skin.SetString(GamePlatform, Xbox One)</onclick>
+<onclick>Skin.SetString(GameReleased, 2013)</onclick>
+<onclick>Skin.SetString(GameStudio, 2K Sports)</onclick>
+<onclick>Skin.SetString(GameDescription, NBA 2K14 is a basketball video game that was developed by Visual Concepts and published by 2K Sports. It was released on October 1 2013 for Microsoft Windows PlayStation 3 and Xbox 360. Versions for the PlayStation 4 and the Xbox One were also released on the consoles respective launch dates.)</onclick>
+<onclick>ActivateWindow(1223)</onclick>				
+							</item>
+																																<item id="32">
+								<description>Games</description>
+								<label>Ninja Turtles</label>
+								<thumb>demo\app\gamestore\ninjaturtles.jpg</thumb>
+								<onclick>Skin.SetString(GamePoster, )</onclick>
+<onclick>Skin.SetString(GameFanart2, )</onclick>
+<onclick>Skin.SetString(GameName, )</onclick>
+<onclick>Skin.SetString(GameGenre, )</onclick>
+<onclick>Skin.SetString(GamePlatform, )</onclick>
+<onclick>Skin.SetString(GameReleased, )</onclick>
+<onclick>Skin.SetString(GameStudio, )</onclick>
+<onclick>Skin.SetString(GameDescription, )</onclick>
+										
+<onclick>Skin.SetString(GameFanart, demo\app\info\fanart\ninja.jpg)</onclick>
+<onclick>Skin.SetString(GamePoster, demo\app\info\poster\ninja.png)</onclick>
+<onclick>Skin.SetString(GameFanart2, demo\app\info\fanart\ninja2.jpg)</onclick>
+<onclick>Skin.SetString(GameName, Teenage Mutant Ninja Turtles)</onclick>
+<onclick>Skin.SetString(GameGenre, Fighting)</onclick>
+<onclick>Skin.SetString(GamePlatform, Xbox 360)</onclick>
+<onclick>Skin.SetString(GameReleased, 2009)</onclick>
+<onclick>Skin.SetString(GameStudio, Ubisoft)</onclick>
+<onclick>Skin.SetString(GameDescription, Teenage Mutant Ninja Turtles: Turtles in Time Re-Shelled sometimes shortened Turtles in Time Re-Shelled is an enhanced remake of the 1991 arcade game Teenage Mutant Ninja Turtles: Turtles in Time which itself is a sequel to the original Teenage Mutant Ninja Turtles arcade game. Both of the original arcade games were produced by Konami.)</onclick>
+<onclick>ActivateWindow(1223)</onclick>					
+							</item>
+																																<item id="33">
+								<description>Games</description>
+								<label>Garden Warfare</label>
+								<thumb>demo\app\gamestore\plants.jpg</thumb>
+								<onclick>Skin.SetString(GamePoster, )</onclick>
+<onclick>Skin.SetString(GameFanart2, )</onclick>
+<onclick>Skin.SetString(GameName, )</onclick>
+<onclick>Skin.SetString(GameGenre, )</onclick>
+<onclick>Skin.SetString(GamePlatform, )</onclick>
+<onclick>Skin.SetString(GameReleased, )</onclick>
+<onclick>Skin.SetString(GameStudio, )</onclick>
+<onclick>Skin.SetString(GameDescription, )</onclick>
+										
+<onclick>Skin.SetString(GameFanart, demo\app\info\fanart\plants.jpg)</onclick>
+<onclick>Skin.SetString(GamePoster, demo\app\info\poster\plants.jpg)</onclick>
+<onclick>Skin.SetString(GameFanart2, demo\app\info\fanart\plants2.jpg)</onclick>
+<onclick>Skin.SetString(GameName, Plants Vs Zombies : Garden Warfare)</onclick>
+<onclick>Skin.SetString(GameGenre, Third-person shooter)</onclick>
+<onclick>Skin.SetString(GamePlatform, Xbox one)</onclick>
+<onclick>Skin.SetString(GameReleased, 2014)</onclick>
+<onclick>Skin.SetString(GameStudio, Electronic Arts)</onclick>
+<onclick>Skin.SetString(GameDescription, Plants vs Zombies: Garden Warfare is a multiplayer third-person shooter and tower defense video game it is part of Plants vs Zombies series developed by PopCap Games and published by Electronic Arts. The game was first announced for the Xbox 360 and Xbox One but later it was reported that it will also be available for Microsoft Windows and other platforms.)</onclick>
+<onclick>ActivateWindow(1223)</onclick>			
+							</item>
+																																<item id="34">
+								<description>Games</description>
+								<label>Quantum Break</label>
+								<thumb>demo\app\gamestore\quantumbreak.jpg</thumb>
+								<onclick>Skin.SetString(GameFanart, )</onclick>
+<onclick>Skin.SetString(GamePoster, )</onclick>
+<onclick>Skin.SetString(GameFanart2, )</onclick>
+<onclick>Skin.SetString(GameName, )</onclick>
+<onclick>Skin.SetString(GameGenre, )</onclick>
+<onclick>Skin.SetString(GamePlatform, )</onclick>
+<onclick>Skin.SetString(GameReleased, )</onclick>
+<onclick>Skin.SetString(GameStudio, )</onclick>
+<onclick>Skin.SetString(GameDescription, )</onclick>
+										
+<onclick>Skin.SetString(GameFanart, demo\app\info\fanart\quantum.jpg)</onclick>
+<onclick>Skin.SetString(GamePoster, demo\app\info\poster\quantum.jpg)</onclick>
+<onclick>Skin.SetString(GameFanart2, demo\app\info\fanart\quantum2.jpg)</onclick>
+<onclick>Skin.SetString(GameName, Quantum Break)</onclick>
+<onclick>Skin.SetString(GameGenre, Third-person shooter)</onclick>
+<onclick>Skin.SetString(GamePlatform, Xbox One)</onclick>
+<onclick>Skin.SetString(GameReleased, 2014)</onclick>
+<onclick>Skin.SetString(GameStudio, Microsoft Studios)</onclick>
+<onclick>Skin.SetString(GameDescription, Quantum Break is an upcoming third-person shooter video game to be released on the Xbox One. Developed by Finnish game developer Remedy Entertainment and published by Microsoft Studios the game will feature live-action videos blended with regular gameplay. The game was revealed with a teaser trailer during the Xbox One reveal event on 21 May 2013. A Quantum Break television series is also in production with Remedy stating that how you play the game impacts the show and the show informs how you play the game.)</onclick>
+<onclick>ActivateWindow(1223)</onclick>					
+							</item>
+																																<item id="35">
+								<description>Games</description>
+								<label>Rising Revengance</label>
+								<thumb>demo\app\gamestore\rising.jpg</thumb>
+								<onclick>Skin.SetString(GameFanart, )</onclick>
+<onclick>Skin.SetString(GamePoster, )</onclick>
+<onclick>Skin.SetString(GameFanart2, )</onclick>
+<onclick>Skin.SetString(GameName, )</onclick>
+<onclick>Skin.SetString(GameGenre, )</onclick>
+<onclick>Skin.SetString(GamePlatform, )</onclick>
+<onclick>Skin.SetString(GameReleased, )</onclick>
+<onclick>Skin.SetString(GameStudio, )</onclick>
+<onclick>Skin.SetString(GameDescription, )</onclick>
+										
+<onclick>Skin.SetString(GameFanart, demo\app\info\fanart\rising.jpg)</onclick>
+<onclick>Skin.SetString(GamePoster, demo\app\info\poster\rising.jpg)</onclick>
+<onclick>Skin.SetString(GameFanart2, demo\app\info\fanart\rising2.jpg)</onclick>
+<onclick>Skin.SetString(GameName, Metal Gear : Rising Revengance)</onclick>
+<onclick>Skin.SetString(GameGenre, Hack and slash)</onclick>
+<onclick>Skin.SetString(GamePlatform, Xbox 360)</onclick>
+<onclick>Skin.SetString(GameReleased, 2013)</onclick>
+<onclick>Skin.SetString(GameStudio, Konami)</onclick>
+<onclick>Skin.SetString(GameDescription, Metal Gear Rising: Revengeance is an action hack and slash video game developed by Platinum Games and produced by Kojima Productions for the PlayStation 3 Xbox 360 and Microsoft Windows.)</onclick>
+<onclick>ActivateWindow(1223)</onclick>						
+							</item>
+																																<item id="36">
+								<description>Games</description>
+								<label>Tanks</label>
+								<thumb>demo\app\gamestore\tanks.jpg</thumb>
+								<onclick>Skin.SetString(GameFanart, )</onclick>
+<onclick>Skin.SetString(GamePoster, )</onclick>
+<onclick>Skin.SetString(GameFanart2, )</onclick>
+<onclick>Skin.SetString(GameName, )</onclick>
+<onclick>Skin.SetString(GameGenre, )</onclick>
+<onclick>Skin.SetString(GamePlatform, )</onclick>
+<onclick>Skin.SetString(GameReleased, )</onclick>
+<onclick>Skin.SetString(GameStudio, )</onclick>
+<onclick>Skin.SetString(GameDescription, )</onclick>
+										
+<onclick>Skin.SetString(GameFanart, demo\app\info\fanart\tanks.jpg)</onclick>
+<onclick>Skin.SetString(GamePoster, demo\app\info\poster\tanks.jpg)</onclick>
+<onclick>Skin.SetString(GameFanart2, demo\app\info\fanart\tanks2.jpg)</onclick>
+<onclick>Skin.SetString(GameName, World Of Tanks)</onclick>
+<onclick>Skin.SetString(GameGenre, Action)</onclick>
+<onclick>Skin.SetString(GamePlatform, Xbox 360)</onclick>
+<onclick>Skin.SetString(GameReleased, 2013)</onclick>
+<onclick>Skin.SetString(GameStudio, Wargaming)</onclick>
+<onclick>Skin.SetString(GameDescription, World of Tanks is a massively multiplayer online game developed by Belarusian company Wargaming.net featuring early to mid-20th century era fighting vehicles. It is built upon a freemium business model where the game is free-to-play but participants also have the option of paying a fee for use of premium features. The focus is on player vs player gameplay with each player controlling an armored vehicle which may be a tank tank destroyer or self-propelled gun. World of Tanks debuted as an eSports game at the World Cyber Games 2012.)</onclick>
+<onclick>ActivateWindow(1223)</onclick>						
+							</item>
+	
+	
+	
+	
+	
+</content>
+			</control>
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+			</control>
+			<!--Scrollbar-->
+					<include>Xbox_Logo</include>
+				<include>Snapped_Content</include>									
+
+
+		
+	</controls>	
+		
+</window>

@@ -1,0 +1,299 @@
+<window type="dialog" id="8169">
+
+	<defaultcontrol>900</defaultcontrol>
+	
+
+	
+	
+
+	
+	<!--Splash Screen-->
+
+
+	
+
+
+	
+
+	
+	<controls>
+
+		<!--Background Area-->
+
+	
+			
+<control type="image">
+		
+			<include>Common_Dimensions</include>
+			<texture background="true">colors/color_white.png</texture>
+			<colordiffuse>FanartDiffuse</colordiffuse>
+			
+			<include>Common_Animation_Window_Dark</include>
+		
+		</control>
+
+							
+																			
+									<!--Top Area-->
+
+	
+						
+						
+			
+				
+
+					
+
+							
+					
+					
+						
+					
+					
+					
+					
+					
+								
+					
+					
+							
+					
+					
+					
+	
+			<control type="group">
+		<include>Common_Animation_Splash_kai2</include>
+			<posx>480</posx>
+			<posy>70</posy>
+			<width>320</width>
+			<height>400</height>
+			
+		
+		
+			<!--Background-->
+				
+					<control type="image">
+			
+				<posy>0</posy>
+				<posy>0</posy>
+				<width>320</width>
+				<height>500</height>
+				<texture background="true">colors\color_black.png</texture>
+			<colordiffuse>FFF5F5F5</colordiffuse>
+
+			</control>
+			<control type="image">
+			
+				<posx>0</posx>
+				<posy>390</posy>
+				<width>320</width>
+				<height>180</height>
+				<texture background="true">colors\color_white.png</texture>
+			<colordiffuse>$INFO[Skin.String(Gamercolor)]</colordiffuse>
+
+			</control>
+			
+			<include>Common_ContextMenu_Header_Back</include>
+			
+			<control type="label">
+	
+					<posx>80</posx>
+		<posy>29</posy>
+		<width>240</width>
+		<height>32</height>
+		<font>PVR-EPG-Time2</font>
+		<textcolor>Label_Normal</textcolor>
+		<aligny>top</aligny>
+				<label>$INFO[Skin.String(sn)]</label>
+				
+				<visible>!Skin.HasSetting(gaming) + !Player.HasMedia + Skin.HasSetting(snapie)</visible>
+			</control>
+			<control type="label">
+	
+					<posx>80</posx>
+	<posy>29</posy>
+		<width>240</width>
+		<height>32</height>
+		<font>PVR-EPG-Time2</font>
+		<textcolor>Label_Normal</textcolor>
+		<aligny>top</aligny>
+				<label>$INFO[Window(Home).Property(TrendingMovies.6.Title)]</label>
+				
+				<visible>!Skin.HasSetting(gaming) + !Player.HasMedia + !Skin.HasSetting(Altads) + !Skin.HasSetting(snapie)</visible>
+			</control>
+			<control type="label">
+	
+					<posx>80</posx>
+		<posy>29</posy>
+		<width>240</width>
+		<height>32</height>
+			<font>PVR-EPG-Time2</font>
+		<textcolor>Label_Normal</textcolor>
+		<aligny>top</aligny>
+				<label>$INFO[Window.Property(RecentMovie.1.Title)]</label>
+				
+				<visible>!Skin.HasSetting(gaming) + !Player.HasMedia + Skin.HasSetting(Altads) + !Skin.HasSetting(snapie)</visible>
+			</control>
+			
+			<control type="label">
+	
+					<posx>80</posx>
+	<posy>29</posy>
+		<width>240</width>
+		<height>32</height>
+	<font>PVR-EPG-Time2</font>
+		<textcolor>Label_Normal</textcolor>
+		<aligny>top</aligny>
+				<label>$INFO[Skin.String(gammie)]</label>
+				
+				<visible>Skin.HasSetting(gaming) + !Player.HasMedia + !Skin.HasSetting(snapie)</visible>
+			</control>
+			<control type="label">
+	
+					<posx>80</posx>
+	<posy>29</posy>
+		<width>240</width>
+		<height>32</height>
+		<font>PVR-EPG-Time2</font>
+		<textcolor>Label_Normal</textcolor>
+		<aligny>top</aligny>
+				<label>$VAR[NowPlaying_First_Label]</label>
+				
+				<visible>Player.HasMedia</visible>
+			</control>
+			
+			
+			
+			<control type="panel" id="900">
+				
+<posx>-5</posx>
+						<posy>100</posy>
+
+				<onright>53</onright>
+		<onleft>-</onleft>
+						<include>Common_AltHome_Panel383-alt</include>
+					
+
+
+
+
+						
+						
+						<content>
+						
+
+							
+						
+								<item id="1">
+								<label>   Tela cheia</label>
+					<onclick>Back</onclick>
+						<onclick condition="!Skin.HasSetting(dashovid) + Player.HasVideo">Skin.ToggleSetting(dashovid)</onclick>
+					<onclick condition="Skin.HasSetting(dashovid) + Player.HasVideo">ActivateWindow(6166)</onclick>
+						<onclick condition="Skin.HasSetting(gaming) + !Player.HasVideo + !Skin.HasSetting(snapie) + !Player.HasAudio">ActivateWindow(1124)</onclick>
+						<onclick condition="Player.HasAudio">FullScreen</onclick>
+						<onclick condition="!Skin.HasSetting(gaming) + !Player.HasVideo + Skin.HasSetting(snapie) + !Player.HasAudio">ActivateWindow($INFO[Skin.String(snapwindow)])</onclick>
+						
+						
+						<onclick condition="+ !Skin.HasSetting(gaming) + !Player.HasMedia + Skin.HasSetting(Altads) + !Skin.HasSetting(snapie)">$INFO[Window.Property(RecentMovie.1.Play)]</onclick>
+						
+						
+													<onclick condition="System.InternetState + !IsEmpty(Window(Home).Property(TrendingMovies.6.Art(fanart))) + !Skin.HasSetting(gaming) + !Player.HasMedia + !Skin.HasSetting(Altads) + !Skin.HasSetting(snapie)">SetProperty(Title,$INFO[Window(Home).Property(TrendingMovies.6.Title)],58)</onclick>
+							<onclick condition="System.InternetState + !IsEmpty(Window(Home).Property(TrendingMovies.6.Art(fanart))) + !Skin.HasSetting(gaming) + !Player.HasMedia + !Skin.HasSetting(Altads) + !Skin.HasSetting(snapie)">SetProperty(MPAA,$INFO[Window(Home).Property(TrendingMovies.6.MPAA)],58)</onclick>
+							<onclick condition="System.InternetState + !IsEmpty(Window(Home).Property(TrendingMovies.6.Art(fanart))) + !Skin.HasSetting(gaming) + !Player.HasMedia + !Skin.HasSetting(Altads) + !Skin.HasSetting(snapie)">SetProperty(Plot,$ESCINFO[Window(Home).Property(TrendingMovies.6.Plot)],58)</onclick>
+							<onclick condition="System.InternetState + !IsEmpty(Window(Home).Property(TrendingMovies.6.Art(fanart))) + !Skin.HasSetting(gaming) + !Player.HasMedia + !Skin.HasSetting(Altads) + !Skin.HasSetting(snapie)">SetProperty(Tagline,$INFO[Window(Home).Property(TrendingMovies.6.Tagline)],58)</onclick>
+							<onclick condition="System.InternetState + !IsEmpty(Window(Home).Property(TrendingMovies.6.Art(fanart))) + !Skin.HasSetting(gaming) + !Player.HasMedia + !Skin.HasSetting(Altads) + !Skin.HasSetting(snapie)">SetProperty(Year,$INFO[Window(Home).Property(TrendingMovies.6.Year)],58)</onclick>
+							<onclick condition="System.InternetState + !IsEmpty(Window(Home).Property(TrendingMovies.6.Art(fanart))) + !Skin.HasSetting(gaming) + !Player.HasMedia + !Skin.HasSetting(Altads) + !Skin.HasSetting(snapie)">SetProperty(Genre,$INFO[Window(Home).Property(TrendingMovies.6.Genre)],58)</onclick>
+							<onclick condition="System.InternetState + !IsEmpty(Window(Home).Property(TrendingMovies.6.Art(fanart))) + !Skin.HasSetting(gaming) + !Player.HasMedia + !Skin.HasSetting(Altads) + !Skin.HasSetting(snapie)">SetProperty(Runtime,$INFO[Window(Home).Property(TrendingMovies.6.Runtime)],58)</onclick>
+							<onclick condition="System.InternetState + !IsEmpty(Window(Home).Property(TrendingMovies.6.Art(fanart))) + !Skin.HasSetting(gaming) + !Player.HasMedia + !Skin.HasSetting(Altads) + !Skin.HasSetting(snapie)">SetProperty(Rating,$INFO[Window(Home).Property(TrendingMovies.6.Rating)],58)</onclick>
+							<onclick condition="System.InternetState + !IsEmpty(Window(Home).Property(TrendingMovies.6.Art(fanart))) + !Skin.HasSetting(gaming) + !Player.HasMedia + !Skin.HasSetting(Altads) + !Skin.HasSetting(snapie)">SetProperty(Poster,$INFO[Window(Home).Property(TrendingMovies.6.Art(poster))],58)</onclick>
+							<onclick condition="System.InternetState + !IsEmpty(Window(Home).Property(TrendingMovies.6.Art(fanart))) + !Skin.HasSetting(gaming) + !Player.HasMedia + !Skin.HasSetting(Altads) + !Skin.HasSetting(snapie)">SetProperty(Fanart,$INFO[Window(Home).Property(TrendingMovies.6.Art(fanart))],58)</onclick>
+							<onclick condition="System.InternetState + !IsEmpty(Window(Home).Property(TrendingMovies.6.Art(fanart))) + !Skin.HasSetting(gaming) + !Player.HasMedia + !Skin.HasSetting(Altads) + !Skin.HasSetting(snapie)">SetProperty(Trailer,$INFO[Window(Home).Property(TrendingMovies.6.Play)],58)</onclick>
+							<onclick condition="System.InternetState + !IsEmpty(Window(Home).Property(TrendingMovies.6.Art(fanart))) + !Skin.HasSetting(gaming) + !Player.HasMedia + !Skin.HasSetting(Altads) + !Skin.HasSetting(snapie)">SetProperty(ID,$INFO[Window(Home).Property(TrendingMovies.6.ID)],58)</onclick>
+							<onclick condition="System.InternetState + !IsEmpty(Window(Home).Property(TrendingMovies.6.Art(fanart))) + !Skin.HasSetting(gaming) + !Player.HasMedia + !Skin.HasSetting(Altads) + !Skin.HasSetting(snapie)">SetProperty(Type,movie,58)</onclick>
+							
+						    <onclick condition="System.InternetState + !IsEmpty(Window(Home).Property(TrendingMovies.6.Art(fanart))) + !Skin.HasSetting(gaming) + !Player.HasMedia + !Skin.HasSetting(Altads) + !Skin.HasSetting(snapie)">ActivateWindow(58)</onclick>
+							
+						   <onclick condition="!System.InternetState + !Skin.HasSetting(gaming) + !Player.HasMedia + !Skin.HasSetting(Altads) + !Skin.HasSetting(snapie)">ActivateWindow(5525)</onclick>
+							
+						
+						<onclick condition="IsEmpty(Window(Home).Property(TrendingMovies.6.Art(fanart))) + System.InternetState">ActivateWindow(5526)</onclick>
+									<onclick condition="!System.InternetState + !Skin.HasSetting(gaming) + !Player.HasMedia + !Skin.HasSetting(Altads) + !Skin.HasSetting(snapie)">Skin.SetString(snap, $INFO[Window(Home).Property(TrendingMovies.6.Title)],0)</onclick>					
+							</item>
+								<item id="2">
+								
+					<label>   Sair</label>
+					<onclick>Back</onclick>
+					<onclick condition="Skin.HasSetting(snapie) + !Player.HasMedia">Skin.ToggleSetting(snapie)</onclick>
+	<onclick condition="Skin.HasSetting(Snapped) + !Player.HasMedia">Skin.ToggleSetting(Snapped)</onclick>
+	<onclick condition="Skin.HasSetting(Snapped2) + !Player.HasMedia">Skin.ToggleSetting(Snapped2)</onclick>
+					
+	<onclick condition="Player.HasMedia">PlayerControl(Stop)</onclick>
+								
+							</item>
+							<item id="3">
+								<label>   Configurações</label>
+					<onclick>Back</onclick>
+					<onclick>ActivateWindow(Settings)</onclick>
+							
+							</item>
+								
+									<item id="4">
+								<label>   Trocar perfil</label>
+					<onclick>Back</onclick>
+					<onclick>ActivateWindow(29)</onclick>				
+							</item>		
+				
+<item id="5">
+								<description>Games</description>
+								<label>   Meu perfil</label>
+								<thumb></thumb>
+									<onclick>Back</onclick>				
+							<onclick>ActivateWindow(7544)</onclick>
+							</item>
+							
+							
+					<item id="6">
+	<include>Common_ContextMenu_Button</include>
+					<label>   Loja Xbox</label>
+					<onclick>Back</onclick>
+				
+					<onclick>ActivateWindow(AddonBrowser)</onclick>
+							</item>			
+	
+								<item id="7">
+		<include>Common_ContextMenu_Button</include>
+					<label>   Informação do sistema</label>
+					<onclick>Back</onclick>
+				
+					<onclick>ActivateWindow(7)</onclick>
+
+						
+							</item>						
+
+								<item id="8">
+		<include>Common_ContextMenu_Button</include>
+					<label>   Opções de energia</label>
+			<onclick>Back</onclick>
+				
+					<onclick>ActivateWindow(8114)</onclick>
+						
+							</item>	
+
+								</content>
+
+					</control>
+			
+		</control>
+		
+						
+						<!--Scrollbar-->
+
+					
+			
+
+			
+		
+		
+	</controls>	
+		
+</window>

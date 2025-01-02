@@ -1,0 +1,265 @@
+<window type="dialog" id="6618">
+
+	<defaultcontrol>900</defaultcontrol>
+	
+	<onload>Control.SetFocus(900)</onload>
+	
+	
+
+	
+	<!--Splash Screen-->
+
+
+	
+
+
+	
+
+	
+	<controls>
+
+		<!--Background Area-->
+
+	
+			
+<control type="image">
+		
+			<include>Common_Dimensions</include>
+			<texture background="true">colors/color_white.png</texture>
+			<colordiffuse>FanartDiffuse</colordiffuse>
+			
+			<include>Common_Animation_Window_Dark</include>
+		
+		</control>
+
+							
+																			
+									<!--Top Area-->
+
+	
+						
+						
+			
+				
+
+					
+
+							
+					
+					
+						
+					
+					
+					
+					
+					
+								
+					
+					
+							
+					
+					
+					
+	
+		<control type="group">
+		<include>Common_Animation_Splash_kai2</include>
+			<posx>480</posx>
+			<posy>170</posy>
+			<width>320</width>
+			<height>100</height>
+			
+		
+		
+			<!--Background-->
+				
+					<control type="image">
+			
+				<posy>0</posy>
+				<posy>0</posy>
+				<width>320</width>
+				<height>400</height>
+				<texture background="true">colors\color_black.png</texture>
+			<colordiffuse>FFF5F5F5</colordiffuse>
+
+			</control>
+		
+			
+			<include>Common_ContextMenu_Header_Back</include>
+			
+			<control type="label">
+	
+					<posx>80</posx>
+		<posy>29</posy>
+		<width>240</width>
+		<height>32</height>
+		<font>PVR-EPG-Time2</font>
+		<textcolor>Label_Normal</textcolor>
+		<aligny>top</aligny>
+				<label>Opções de fundo</label>
+				
+			
+			</control>
+			
+			
+			
+			<control type="panel" id="900">
+				
+<posx>-5</posx>
+						<posy>100</posy>
+
+				<onright>53</onright>
+		<onleft>-</onleft>
+						<include>Common_AltHome_Panel383-alt</include>
+					
+
+
+
+
+						
+						
+						<content>
+						
+
+							
+										<item id="1">
+								
+					<label>   Ativar fundos</label>
+					<onclick>Back</onclick>
+						<onclick>Skin.ToggleSetting(CustomBack)</onclick>
+				
+						<visible>!Skin.HasSetting(CustomBack)</visible>
+							</item>
+							<item id="1">
+								
+					<label>   Desativar fundo</label>
+					<onclick>Back</onclick>
+						<onclick>Skin.ToggleSetting(CustomBack)</onclick>
+				
+						<visible>Skin.HasSetting(CustomBack)</visible>
+							</item>
+							
+								<item id="2">
+								
+			
+					<label>   Definir fundo</label>
+					<onclick>Back</onclick>
+					<onclick>Skin.SetImage(DashBack)</onclick>
+<onclick>ActivateWindow(52)</onclick>
+	</item>
+	<item id="3">
+								
+			
+					<label>   Enviar para o Bing</label>
+					<onclick>Back</onclick>
+					<onclick>Skin.ToggleSetting(DashBing)</onclick>
+<onclick>Skin.ToggleSetting(CustomBack)</onclick>
+<onclick>ActivateWindow(52)</onclick>
+
+	</item>
+		<item id="4">
+								
+			
+					<label>   Temas</label>
+					<onclick>Back</onclick>
+					<onclick>ActivateWindow(4569)</onclick>
+	</item>
+		<item id="5">
+								
+			
+					<label>   Salvar para temas</label>
+					<onclick>Back</onclick>
+					
+
+
+
+<onclick condition="IsEmpty(Skin.String(Theme1))">Skin.Setstring(Theme1, $INFO[Skin.String(gamercolor)])</onclick>
+<onclick condition="!IsEmpty(Skin.String(Theme1)) + IsEmpty(Skin.String(Theme2))">Skin.Setstring(Theme2, $INFO[Skin.String(gamercolor)])</onclick>
+<onclick condition="!IsEmpty(Skin.String(Theme2)) + IsEmpty(Skin.String(Theme3))">Skin.Setstring(Theme3, $INFO[Skin.String(gamercolor)])</onclick>
+<onclick condition="!IsEmpty(Skin.String(Theme3)) + IsEmpty(Skin.String(Theme4))">Skin.Setstring(Theme4, $INFO[Skin.String(gamercolor)])</onclick>
+<onclick condition="!IsEmpty(Skin.String(Theme4)) + IsEmpty(Skin.String(Theme5))">Skin.Setstring(Theme5, $INFO[Skin.String(gamercolor)])</onclick>
+<onclick condition="!IsEmpty(Skin.String(Theme5)) + IsEmpty(Skin.String(Theme6))">Skin.Setstring(Theme6, $INFO[Skin.String(gamercolor)])</onclick>
+<onclick condition="!IsEmpty(Skin.String(Theme6)) + IsEmpty(Skin.String(Theme7))">Skin.Setstring(Theme7, $INFO[Skin.String(gamercolor)])</onclick>
+<onclick condition="!IsEmpty(Skin.String(Theme7)) + IsEmpty(Skin.String(Theme8))">Skin.Setstring(Theme8, $INFO[Skin.String(gamercolor)])</onclick>
+<onclick condition="!IsEmpty(Skin.String(Theme8)) + IsEmpty(Skin.String(Theme9))">Skin.Setstring(Theme9, $INFO[Skin.String(gamercolor)])</onclick>
+<onclick condition="!IsEmpty(Skin.String(Theme9)) + IsEmpty(Skin.String(Theme10))">Skin.Setstring(Theme10, $INFO[Skin.String(gamercolor)])</onclick>
+
+<onclick condition="IsEmpty(Skin.String(ThemeIMG1))">Skin.Setstring(ThemeIMG1, $INFO[Skin.String(DashBack)])</onclick>
+<onclick condition="!IsEmpty(Skin.String(ThemeIMG1)) + IsEmpty(Skin.String(ThemeIMG2))">Skin.Setstring(ThemeIMG2, $INFO[Skin.String(DashBack)])</onclick>
+<onclick condition="!IsEmpty(Skin.String(ThemeIMG2)) + IsEmpty(Skin.String(ThemeIMG3))">Skin.Setstring(ThemeIMG3, $INFO[Skin.String(DashBack)])</onclick>
+<onclick condition="!IsEmpty(Skin.String(ThemeIMG3)) + IsEmpty(Skin.String(ThemeIMG4))">Skin.Setstring(ThemeIMG4, $INFO[Skin.String(DashBack)])</onclick>
+<onclick condition="!IsEmpty(Skin.String(ThemeIMG4)) + IsEmpty(Skin.String(ThemeIMG5))">Skin.Setstring(ThemeIMG5, $INFO[Skin.String(DashBack)])</onclick>
+<onclick condition="!IsEmpty(Skin.String(ThemeIMG5)) + IsEmpty(Skin.String(ThemeIMG6))">Skin.Setstring(ThemeIMG6, $INFO[Skin.String(DashBack)])</onclick>
+<onclick condition="!IsEmpty(Skin.String(ThemeIMG6)) + IsEmpty(Skin.String(ThemeIMG7))">Skin.Setstring(ThemeIMG7, $INFO[Skin.String(DashBack)])</onclick>
+<onclick condition="!IsEmpty(Skin.String(ThemeIMG7)) + IsEmpty(Skin.String(ThemeIMG8))">Skin.Setstring(ThemeIMG8, $INFO[Skin.String(DashBack)])</onclick>
+<onclick condition="!IsEmpty(Skin.String(ThemeIMG8)) + IsEmpty(Skin.String(ThemeIMG9))">Skin.Setstring(ThemeIMG9, $INFO[Skin.String(DashBack)])</onclick>
+<onclick condition="!IsEmpty(Skin.String(ThemeIMG9)) + IsEmpty(Skin.String(ThemeIMG10))">Skin.Setstring(ThemeIMG10, $INFO[Skin.String(DashBack)])</onclick>
+	<onclick>Notification(     ,Salvo!,00:59,)</onclick>
+<visible>false</visible>
+	</item>
+	<item id="6">
+								
+			
+					<label>   Pasta de fundo do Clima</label>
+					<onclick>Back</onclick>
+					<onclick>Skin.SetPath(WeatherFanartDir)</onclick>
+<enable>Skin.ToggleSetting(ShowWeatherFanart)</enable>
+<visible>false</visible>
+	</item>
+	<item id="6">
+								
+			
+					<label>   Aplicar seu fundo em alguns apps</label>
+					<onclick>Back</onclick>
+					<onclick>Skin.ToggleSetting(CustomBackApp)</onclick>
+<visible>!Skin.HasSetting(CustomBackApp)</visible>
+	</item>
+	<item id="6">
+								
+			
+					<label>   Desativar seu fundo em apps</label>
+					<onclick>Back</onclick>
+					<onclick>Skin.ToggleSetting(CustomBackApp)</onclick>
+<visible>Skin.HasSetting(CustomBackApp)</visible>
+	</item>
+	<item id="7">
+								
+			
+					<label>   Ativar fundo animado</label>
+					<onclick>Back</onclick>
+					<onclick>Skin.ToggleSetting(animation_bg)</onclick>
+<visible>false</visible>
+	</item>		
+	<item id="7">
+								
+			
+					<label>   Desativar fundo animado</label>
+					<onclick>Back</onclick>
+					<onclick>Skin.ToggleSetting(animation_bg)</onclick>
+<visible>false</visible>
+	</item>						
+							
+							
+							
+							
+							
+	
+												
+
+
+								</content>
+
+					</control>
+			
+		</control>		
+						
+						<!--Scrollbar-->
+
+					
+			
+
+			
+		
+		
+	</controls>	
+		
+</window>

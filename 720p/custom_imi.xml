@@ -1,0 +1,56 @@
+<window type="dialog" id="9876">
+
+	<defaultcontrol always="true">1</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<zorder>2</zorder>
+
+
+	<include>Common_Animation_gamer</include>
+	<controls>
+	
+		
+		
+
+		
+		
+		
+		
+		<include>Common_Background_Fade</include>
+		<!--Time + Date Section-->
+
+			
+
+								
+												<control type="image">
+					
+				      <posx>0</posx>
+                                        <posy>0</posy>
+                                        <width>1280</width>
+                                        <height>720</height>
+					<fadetime>800</fadetime>
+					<texture background="true">$VAR[Fanart_Image]</texture>
+
+				</control>
+
+						<control type="image">
+					
+				      <posx>0</posx>
+                                        <posy>0</posy>
+                                        <width>1280</width>
+                                        <height>720</height>
+					<fadetime>800</fadetime>
+					<texture>$INFO[Skin.String(GameFanart2)]</texture>
+			
+				</control>
+
+
+					
+					
+					
+					
+					
+
+		
+	</controls>	
+	
+</window>

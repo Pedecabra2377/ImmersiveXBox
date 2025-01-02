@@ -1,0 +1,874 @@
+<!-- Foundation -->
+<window id="9198">
+
+	<defaultcontrol always="true">54</defaultcontrol>
+	
+	<zorder>2</zorder>
+
+			<onload>Skin.SetString(snapwindow, 9198)</onload>
+<onload condition="!Skin.HasSetting(snapie)">Skin.ToggleSetting(snapie)</onload>
+<onload condition="Skin.HasSetting(gaming)">Skin.ToggleSetting(gaming)</onload>
+<onload>Skin.SetString(snap, demo/sna/cash.jpg,0)</onload>
+<onload>Skin.SetString(sn,Escolha a cor)</onload>
+<onload condition="Skin.HasSetting(SnapFeature) + Skin.HasSetting(SnapAlways)">Skin.SetString(snap, C:\Assistance\Snap\Pic\Item.jpg,0)</onload>
+<onload condition="Skin.HasSetting(SnapFeature) + Skin.HasSetting(SnapAlways)">AlarmClock(startsnap,RunScript(special://skin/system/Snap.py),00:01,silent)</onload>
+	<controls>
+ <include condition="!Window.Previous(Home)">Common_Animation_Window</include>
+					  <include condition="Window.Previous(Home)">Common_Animation_apps_dash</include> 
+		<include>Common_Background_Fade</include>
+
+
+			
+						<control type="image">
+			 <include condition="!Window.Previous(Home)">Common_Animation_Window</include>
+					  <include condition="Window.Previous(Home)">Common_Animation_apps_dash</include> 
+				<posy>0</posy>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+				<texture background="true">XBOXnow2.png</texture>
+<visible>!Window.Previous(9118)</visible>
+
+			</control>
+			<control type="image">
+			 <include condition="!Window.Previous(Home)">Common_Animation_Window</include>
+					  <include condition="Window.Previous(Home)">Common_Animation_apps_dash</include> 
+				<posy>0</posy>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+				<texture background="true">XBOXnow2.png</texture>
+<visible>Window.Previous(9118)</visible>
+
+			</control>
+			
+					<control type="group">
+		
+			<posx>60</posx>
+			<posy>100</posy>
+		
+			
+			
+			 <include condition="!Window.Previous(Home)">Common_Animation_Window</include>
+					  <include condition="Window.Previous(Home)">Common_Animation_apps_dash</include> 
+			
+		
+			<control type="label">
+					
+				<label></label>
+				<include>Common_Section_Label</include>
+				
+			</control>
+			
+			<control type="panel" id="54">
+ <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="60" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+				<posx>0</posx>
+				<posy>20</posy>
+				<width>1280</width>
+				<height>485</height>
+				<onup>10000</onup>
+				<ondown>9000</ondown>
+				<onleft>54</onleft>
+				<onright>54</onright>
+				<viewtype label="Square">wrap</viewtype>
+				<orientation>horizontal</orientation>
+				<pagecontrol>64</pagecontrol>
+				<scrolltime tween="cubic" easing="out">300</scrolltime>
+				<preloaditems>4</preloaditems>
+				
+								
+				<itemlayout width="230" height="230">
+
+
+					
+					<control type="group">
+		
+						<posx>5</posx>
+						<posy>40</posy>
+						<width>210</width>
+						<height>210</height>
+						
+						<control type="image">
+						
+							<posx>5</posx>
+							<posy>0</posy>
+							<width>210</width>
+							<height>210</height>
+							<texture>colors/color_keyboard_dark.png</texture>
+							<aspectratio>scale</aspectratio>
+							
+						</control>
+					<control type="image">
+						
+							<posx>5</posx>
+							<posy>0</posy>
+							<width>210</width>
+							<height>210</height>
+							<texture>$INFO[ListItem.Icon]</texture>
+							<aspectratio>scale</aspectratio>
+						
+						</control>
+				
+					
+						
+			
+							
+					
+					
+					</control>
+					
+				</itemlayout>
+
+				<focusedlayout width="230" height="230">
+				
+
+				
+					<control type="group">
+						
+						<posx>5</posx>
+						<posy>40</posy>
+						<width>210</width>
+						<height>210</height>
+					
+				
+						
+						<control type="image">
+						
+							<posx>5</posx>
+							<posy>0</posy>
+							<width>210</width>
+							<height>210</height>
+							<texture>colors/color_keyboard_dark.png</texture>
+							<aspectratio>scale</aspectratio>
+							
+						</control>
+												<control type="image">
+						
+							<posx>3</posx>
+							<posy>-2</posy>
+							<width>214</width>
+							<height>214</height>
+							<texture>colors/color_black-.png</texture>
+							<aspectratio>scale</aspectratio>
+							     <include>Common_Animation_tiledash</include>
+						</control>
+					
+						<control type="image">
+						
+							<posx>5</posx>
+							<posy>0</posy>
+							<width>210</width>
+							<height>210</height>
+							<texture>$INFO[ListItem.Icon]</texture>
+							<aspectratio>scale</aspectratio>
+						
+						</control>
+							<control type="image">
+						
+							<posx>5</posx>
+							<posy>0</posy>
+							<width>210</width>
+							<height>210</height>
+							<texture>button_selected.png</texture>
+							<aspectratio>scale</aspectratio>
+<include>Common_Animation_tiledash</include>
+			
+						</control>
+						<control type="image">
+						
+							<posx>5</posx>
+							<posy>0</posy>
+							<width>210</width>
+							<height>210</height>
+							<texture>button_selected_check.png</texture>
+							<aspectratio>scale</aspectratio>
+							<colordiffuse>FF000000</colordiffuse>
+<include>Common_Animation_tiledash</include>
+			
+						</control>
+						
+						
+						
+
+					</control>
+					
+					<!--Back Side Info-->
+					<control type="group">
+					
+						<posx>0</posx>
+						<posy>40</posy>
+						<width>210</width>
+						<height>210</height>
+						
+				
+						
+						<control type="image">
+						
+							<include>Common_LiveTile_Rating</include>
+							<visible>false</visible>
+							
+						</control>
+						
+						<control type="textbox">
+							
+							<include>Common_LiveTile_Description</include>
+							<label>$VAR[Tile_Description]</label>
+							<visible>false</visible>
+				
+						</control>
+						
+					</control>
+					
+				</focusedlayout>
+<content>
+												<item id="1">
+		<onclick>Skin.Setstring(gamercolor,FFFCB11B)</onclick>
+	<onclick condition="!Window.Previous(9118)">ActivateWindow(7544)</onclick>
+	<onclick condition="Window.Previous(9118)">ActivateWindow(7540)</onclick>
+					
+						<icon>demo\colors\amber.png</icon>
+						
+					</item>
+													<item id="2">
+		<onclick>Skin.Setstring(gamercolor,FF00FFFF)</onclick>
+<onclick condition="!Window.Previous(9118)">ActivateWindow(7544)</onclick>
+	<onclick condition="Window.Previous(9118)">ActivateWindow(7540)</onclick>
+
+						<icon>demo\colors\aqua.png</icon>
+						
+					</item>
+													<item id="3">
+		<onclick>Skin.Setstring(gamercolor,FFEB9E17)</onclick>
+	<onclick condition="!Window.Previous(9118)">ActivateWindow(7544)</onclick>
+	<onclick condition="Window.Previous(9118)">ActivateWindow(7540)</onclick>
+
+						<icon>demo\colors\yellow.png</icon>
+						
+					</item>
+					<item id="4">
+		<onclick>Skin.Setstring(gamercolor,FFA400F6)</onclick>
+		<onclick condition="!Window.Previous(9118)">ActivateWindow(7544)</onclick>
+	<onclick condition="Window.Previous(9118)">ActivateWindow(7540)</onclick>
+
+						<icon>demo\colors\violet.png</icon>
+						
+					</item>
+					<item id="5">
+		<onclick>Skin.Setstring(gamercolor,FF40E0D0)</onclick>
+		<onclick condition="!Window.Previous(9118)">ActivateWindow(7544)</onclick>
+	<onclick condition="Window.Previous(9118)">ActivateWindow(7540)</onclick>
+
+						<icon>demo\colors\turquoise.png</icon>
+						
+					</item>
+					<item id="6">
+		<onclick>Skin.Setstring(gamercolor,FF1E90FF)</onclick>
+		<onclick condition="!Window.Previous(9118)">ActivateWindow(7544)</onclick>
+	<onclick condition="Window.Previous(9118)">ActivateWindow(7540)</onclick>
+
+						<icon>demo\colors\teal.png</icon>
+						
+					</item>
+					<item id="7">
+		<onclick>Skin.Setstring(gamercolor,FF998959)</onclick>
+		<onclick condition="!Window.Previous(9118)">ActivateWindow(7544)</onclick>
+	<onclick condition="Window.Previous(9118)">ActivateWindow(7540)</onclick>
+
+						<icon>demo\colors\taupe.png</icon>
+						
+					</item>
+					<item id="8">
+		<onclick>Skin.Setstring(gamercolor,FF4682B4)</onclick>
+		<onclick condition="!Window.Previous(9118)">ActivateWindow(7544)</onclick>
+	<onclick condition="Window.Previous(9118)">ActivateWindow(7540)</onclick>
+
+						<icon>demo\colors\steelblue.png</icon>
+						
+					</item>
+					<item id="8">
+		<onclick>Skin.Setstring(gamercolor,FF728699)</onclick>
+		<onclick condition="!Window.Previous(9118)">ActivateWindow(7544)</onclick>
+	<onclick condition="Window.Previous(9118)">ActivateWindow(7540)</onclick>
+
+						<icon>demo\colors\steel.png</icon>
+						
+					</item>
+					<item id="9">
+		<onclick>Skin.Setstring(gamercolor,FF2F4F4F)</onclick>
+		<onclick condition="!Window.Previous(9118)">ActivateWindow(7544)</onclick>
+	<onclick condition="Window.Previous(9118)">ActivateWindow(7540)</onclick>
+
+						<icon>demo\colors\slategrey.png</icon>
+						
+					</item>
+					<item id="10">
+		<onclick>Skin.Setstring(gamercolor,FF6A5ACD)</onclick>
+		<onclick condition="!Window.Previous(9118)">ActivateWindow(7544)</onclick>
+	<onclick condition="Window.Previous(9118)">ActivateWindow(7540)</onclick>
+
+						<icon>demo\colors\slateblue.png</icon>
+						
+					</item>
+					<item id="11">
+		<onclick>Skin.Setstring(gamercolor,FF00BFFF)</onclick>
+	<onclick condition="!Window.Previous(9118)">ActivateWindow(7544)</onclick>
+	<onclick condition="Window.Previous(9118)">ActivateWindow(7540)</onclick>
+
+						<icon>demo\colors\skyblue.png</icon>
+						
+					</item>
+					<item id="12">
+		<onclick>Skin.Setstring(gamercolor,FFC0C0C0)</onclick>
+	<onclick condition="!Window.Previous(9118)">ActivateWindow(7544)</onclick>
+	<onclick condition="Window.Previous(9118)">ActivateWindow(7540)</onclick>
+
+						<icon>demo\colors\silver.png</icon>
+						
+					</item>
+					<item id="13">
+		<onclick>Skin.Setstring(gamercolor,FF954E53)</onclick>
+	<onclick condition="!Window.Previous(9118)">ActivateWindow(7544)</onclick>
+	<onclick condition="Window.Previous(9118)">ActivateWindow(7540)</onclick>
+
+						<icon>demo\colors\sienna.png</icon>
+						
+					</item>
+					<item id="14">
+		<onclick>Skin.Setstring(gamercolor,FF20B2AA)</onclick>
+	<onclick condition="!Window.Previous(9118)">ActivateWindow(7544)</onclick>
+	<onclick condition="Window.Previous(9118)">ActivateWindow(7540)</onclick>
+
+						<icon>demo\colors\seagreen.png</icon>
+						
+					</item>
+					<item id="15">
+		<onclick>Skin.Setstring(gamercolor,FFFF0000)</onclick>
+	<onclick condition="!Window.Previous(9118)">ActivateWindow(7544)</onclick>
+	<onclick condition="Window.Previous(9118)">ActivateWindow(7540)</onclick>
+
+						<icon>demo\colors\red.png</icon>
+						
+					</item>
+					<item id="16">
+		<onclick>Skin.Setstring(gamercolor,FF800080)</onclick>
+		<onclick condition="!Window.Previous(9118)">ActivateWindow(7544)</onclick>
+	<onclick condition="Window.Previous(9118)">ActivateWindow(7540)</onclick>
+
+						<icon>demo\colors\purple.png</icon>
+						
+					</item>
+					<item id="17">
+		<onclick>Skin.Setstring(gamercolor,FFFF69B4)</onclick>
+	<onclick condition="!Window.Previous(9118)">ActivateWindow(7544)</onclick>
+	<onclick condition="Window.Previous(9118)">ActivateWindow(7540)</onclick>
+
+						<icon>demo\colors\pink.png</icon>
+						
+					</item>
+					<item id="18">
+		<onclick>Skin.Setstring(gamercolor,FFFF4500)</onclick>
+		<onclick condition="!Window.Previous(9118)">ActivateWindow(7544)</onclick>
+	<onclick condition="Window.Previous(9118)">ActivateWindow(7540)</onclick>
+
+						<icon>demo\colors\orangered.png</icon>
+						
+					</item>
+					<item id="19">
+		<onclick>Skin.Setstring(gamercolor,FFFFA500)</onclick>
+		<onclick condition="!Window.Previous(9118)">ActivateWindow(7544)</onclick>
+	<onclick condition="Window.Previous(9118)">ActivateWindow(7540)</onclick>
+
+						<icon>demo\colors\orange.png</icon>
+						
+					</item>
+					<item id="20">
+		<onclick>Skin.Setstring(gamercolor,FF6B8E23)</onclick>
+	<onclick condition="!Window.Previous(9118)">ActivateWindow(7544)</onclick>
+	<onclick condition="Window.Previous(9118)">ActivateWindow(7540)</onclick>
+
+						<icon>demo\colors\olivedrab.png</icon>
+						
+					</item>
+					<item id="21">
+		<onclick>Skin.Setstring(gamercolor,FF83A078)</onclick>
+		<onclick condition="!Window.Previous(9118)">ActivateWindow(7544)</onclick>
+	<onclick condition="Window.Previous(9118)">ActivateWindow(7540)</onclick>
+
+						<icon>demo\colors\olive.png</icon>
+						
+					</item>
+					<item id="22">
+		<onclick>Skin.Setstring(gamercolor,FF0000CD)</onclick>
+	<onclick condition="!Window.Previous(9118)">ActivateWindow(7544)</onclick>
+	<onclick condition="Window.Previous(9118)">ActivateWindow(7540)</onclick>
+
+						<icon>demo\colors\mediumblue.png</icon>
+						
+					</item>
+					<item id="23">
+		<onclick>Skin.Setstring(gamercolor,FF896EA2)</onclick>
+	<onclick condition="!Window.Previous(9118)">ActivateWindow(7544)</onclick>
+	<onclick condition="Window.Previous(9118)">ActivateWindow(7540)</onclick>
+
+						<icon>demo\colors\mauve.png</icon>
+						
+					</item>
+					<item id="24">
+		<onclick>Skin.Setstring(gamercolor,FFF80084)</onclick>
+<onclick condition="!Window.Previous(9118)">ActivateWindow(7544)</onclick>
+	<onclick condition="Window.Previous(9118)">ActivateWindow(7540)</onclick>
+
+						<icon>demo\colors\magenta.png</icon>
+						
+					</item>
+					<item id="25">
+		<onclick>Skin.Setstring(gamercolor,FF32CD32)</onclick>
+<onclick condition="!Window.Previous(9118)">ActivateWindow(7544)</onclick>
+	<onclick condition="Window.Previous(9118)">ActivateWindow(7540)</onclick>
+
+						<icon>demo\colors\limegreen.png</icon>
+						
+					</item>
+					<item id="25">
+		<onclick>Skin.Setstring(gamercolor,FF32CD32)</onclick>
+<onclick condition="!Window.Previous(9118)">ActivateWindow(7544)</onclick>
+	<onclick condition="Window.Previous(9118)">ActivateWindow(7540)</onclick>
+
+						<icon>demo\colors\lime.png</icon>
+						
+					</item>
+					<item id="26">
+		<onclick>Skin.Setstring(gamercolor,FF6A00FF)</onclick>
+<onclick condition="!Window.Previous(9118)">ActivateWindow(7544)</onclick>
+	<onclick condition="Window.Previous(9118)">ActivateWindow(7540)</onclick>
+
+						<icon>demo\colors\indigo.png</icon>
+						
+					</item>
+					<item id="27">
+		<onclick>Skin.Setstring(gamercolor,FFCD5C5C2)</onclick>
+<onclick condition="!Window.Previous(9118)">ActivateWindow(7544)</onclick>
+	<onclick condition="Window.Previous(9118)">ActivateWindow(7540)</onclick>
+
+						<icon>demo\colors\indianred.png</icon>
+						
+					</item>
+					<item id="28">
+		<onclick>Skin.Setstring(gamercolor,FF228B22)</onclick>
+<onclick condition="!Window.Previous(9118)">ActivateWindow(7544)</onclick>
+	<onclick condition="Window.Previous(9118)">ActivateWindow(7540)</onclick>
+
+						<icon>demo\colors\green.png</icon>
+						
+					</item>
+					<item id="29">
+		<onclick>Skin.Setstring(gamercolor,FF7B7B7B)</onclick>
+<onclick condition="!Window.Previous(9118)">ActivateWindow(7544)</onclick>
+	<onclick condition="Window.Previous(9118)">ActivateWindow(7540)</onclick>
+
+						<icon>demo\colors\gray.png</icon>
+						
+					</item>
+					<item id="30">
+		<onclick>Skin.Setstring(gamercolor,FFFF00FF)</onclick>
+<onclick condition="!Window.Previous(9118)">ActivateWindow(7544)</onclick>
+	<onclick condition="Window.Previous(9118)">ActivateWindow(7540)</onclick>
+
+						<icon>demo\colors\fuchisa.png</icon>
+						
+					</item>
+					<item id="31">
+		<onclick>Skin.Setstring(gamercolor,FF228B22)</onclick>
+<onclick condition="!Window.Previous(9118)">ActivateWindow(7544)</onclick>
+	<onclick condition="Window.Previous(9118)">ActivateWindow(7540)</onclick>
+
+						<icon>demo\colors\forestgreen.png</icon>
+						
+					</item>
+					<item id="32">
+		<onclick>Skin.Setstring(gamercolor,FFB22222)</onclick>
+<onclick condition="!Window.Previous(9118)">ActivateWindow(7544)</onclick>
+	<onclick condition="Window.Previous(9118)">ActivateWindow(7540)</onclick>
+
+						<icon>demo\colors\firebrick.png</icon>
+						
+					</item>
+					<item id="33">
+		<onclick>Skin.Setstring(gamercolor,FF00A400)</onclick>
+<onclick condition="!Window.Previous(9118)">ActivateWindow(7544)</onclick>
+	<onclick condition="Window.Previous(9118)">ActivateWindow(7540)</onclick>
+
+						<icon>demo\colors\emerald.png</icon>
+						
+					</item>
+					<item id="34">
+		<onclick>Skin.Setstring(gamercolor,FF1E90FF)</onclick>
+<onclick condition="!Window.Previous(9118)">ActivateWindow(7544)</onclick>
+	<onclick condition="Window.Previous(9118)">ActivateWindow(7540)</onclick>
+
+						<icon>demo\colors\dodgerblue.png</icon>
+						
+					</item>
+					<item id="34">
+		<onclick>Skin.Setstring(gamercolor,FFFF1493)</onclick>
+<onclick condition="!Window.Previous(9118)">ActivateWindow(7544)</onclick>
+	<onclick condition="Window.Previous(9118)">ActivateWindow(7540)</onclick>
+
+						<icon>demo\colors\deeppink.png</icon>
+						
+					</item>
+					<item id="35">
+		<onclick>Skin.Setstring(gamercolor,FF00CED1)</onclick>
+<onclick condition="!Window.Previous(9118)">ActivateWindow(7544)</onclick>
+	<onclick condition="Window.Previous(9118)">ActivateWindow(7540)</onclick>
+
+						<icon>demo\colors\darkturquoise.png</icon>
+						
+					</item>
+					<item id="36">
+		<onclick>Skin.Setstring(gamercolor,FFFF8C00)</onclick>
+<onclick condition="!Window.Previous(9118)">ActivateWindow(7544)</onclick>
+	<onclick condition="Window.Previous(9118)">ActivateWindow(7540)</onclick>
+
+						<icon>demo\colors\darkorange.png</icon>
+						
+					</item>
+					<item id="37">
+		<onclick>Skin.Setstring(gamercolor,FF8B008B)</onclick>
+<onclick condition="!Window.Previous(9118)">ActivateWindow(7544)</onclick>
+	<onclick condition="Window.Previous(9118)">ActivateWindow(7540)</onclick>
+
+						<icon>demo\colors\darkmagenta.png</icon>
+						
+					</item>
+					<item id="38">
+		<onclick>Skin.Setstring(gamercolor,FF00008B)</onclick>
+<onclick condition="!Window.Previous(9118)">ActivateWindow(7544)</onclick>
+	<onclick condition="Window.Previous(9118)">ActivateWindow(7540)</onclick>
+
+						<icon>demo\colors\darkblue.png</icon>
+						
+					</item>
+					<item id="39">
+		<onclick>Skin.Setstring(gamercolor,FFD50031)</onclick>
+<onclick condition="!Window.Previous(9118)">ActivateWindow(7544)</onclick>
+	<onclick condition="Window.Previous(9118)">ActivateWindow(7540)</onclick>
+
+						<icon>demo\colors\crimson.png</icon>
+						
+					</item>
+					<item id="40">
+		<onclick>Skin.Setstring(gamercolor,FF0054FF)</onclick>
+<onclick condition="!Window.Previous(9118)">ActivateWindow(7544)</onclick>
+	<onclick condition="Window.Previous(9118)">ActivateWindow(7540)</onclick>
+
+						<icon>demo\colors\cobalt.png</icon>
+						
+					</item>
+					<item id="41">
+		<onclick>Skin.Setstring(gamercolor,FFD2691E)</onclick>
+<onclick condition="!Window.Previous(9118)">ActivateWindow(7544)</onclick>
+	<onclick condition="Window.Previous(9118)">ActivateWindow(7540)</onclick>
+
+						<icon>demo\colors\chocolate.png</icon>
+						
+					</item>
+					<item id="42">
+		<onclick>Skin.Setstring(gamercolor,FF9A6B36)</onclick>
+<onclick condition="!Window.Previous(9118)">ActivateWindow(7544)</onclick>
+	<onclick condition="Window.Previous(9118)">ActivateWindow(7540)</onclick>
+
+						<icon>demo\colors\brown.png</icon>
+						
+					</item>
+					<item id="43">
+		<onclick>Skin.Setstring(gamercolor,FF8A2BE2)</onclick>
+<onclick condition="!Window.Previous(9118)">ActivateWindow(7544)</onclick>
+	<onclick condition="Window.Previous(9118)">ActivateWindow(7540)</onclick>
+
+						<icon>demo\colors\blueviolet.png</icon>
+						
+					</item>
+					<item id="44">
+		<onclick>Skin.Setstring(gamercolor,FF0000FF)</onclick>
+<onclick condition="!Window.Previous(9118)">ActivateWindow(7544)</onclick>
+	<onclick condition="Window.Previous(9118)">ActivateWindow(7540)</onclick>
+
+						<icon>demo\colors\blue.png</icon>
+						
+					</item>
+					<item id="45">
+		<onclick>Skin.Setstring(gamercolor,FF00A400)</onclick>
+<onclick condition="!Window.Previous(9118)">ActivateWindow(7544)</onclick>
+	<onclick condition="Window.Previous(9118)">ActivateWindow(7540)</onclick>
+
+						<icon>demo\colors\default.png</icon>
+						
+					</item>
+					<item id="46">
+		<onclick>Skin.Setstring(gamercolor,FFF10000)</onclick>
+<onclick condition="!Window.Previous(9118)">ActivateWindow(7544)</onclick>
+	<onclick condition="Window.Previous(9118)">ActivateWindow(7540)</onclick>
+
+						<icon>demo\colors\newred.png</icon>
+						
+					</item>
+					<item id="47">
+		<onclick>Skin.Setstring(gamercolor,FFFF7E00)</onclick>
+<onclick condition="!Window.Previous(9118)">ActivateWindow(7544)</onclick>
+	<onclick condition="Window.Previous(9118)">ActivateWindow(7540)</onclick>
+
+						<icon>demo\colors\neworange.png</icon>
+						
+					</item>
+					<item id="48">
+		<onclick>Skin.Setstring(gamercolor,FFFF7EFF)</onclick>
+<onclick condition="!Window.Previous(9118)">ActivateWindow(7544)</onclick>
+	<onclick condition="Window.Previous(9118)">ActivateWindow(7540)</onclick>
+
+						<icon>demo\colors\newpink.png</icon>
+						
+					</item>
+					<item id="49">
+		<onclick>Skin.Setstring(gamercolor,FFFF00FF)</onclick>
+<onclick condition="!Window.Previous(9118)">ActivateWindow(7544)</onclick>
+	<onclick condition="Window.Previous(9118)">ActivateWindow(7540)</onclick>
+
+						<icon>demo\colors\newdarkpink.png</icon>
+						
+					</item>
+					<item id="50">
+		<onclick>Skin.Setstring(gamercolor,FFFF009B)</onclick>
+<onclick condition="!Window.Previous(9118)">ActivateWindow(7544)</onclick>
+	<onclick condition="Window.Previous(9118)">ActivateWindow(7540)</onclick>
+
+						<icon>demo\colors\newdarkpink2.png</icon>
+						
+					</item>
+					<item id="51">
+		<onclick>Skin.Setstring(gamercolor,FF92009B)</onclick>
+<onclick condition="!Window.Previous(9118)">ActivateWindow(7544)</onclick>
+	<onclick condition="Window.Previous(9118)">ActivateWindow(7540)</onclick>
+
+						<icon>demo\colors\newpurple.png</icon>
+						
+					</item>
+					<item id="52">
+		<onclick>Skin.Setstring(gamercolor,FFEB0000)</onclick>
+<onclick condition="!Window.Previous(9118)">ActivateWindow(7544)</onclick>
+	<onclick condition="Window.Previous(9118)">ActivateWindow(7540)</onclick>
+
+						<icon>demo\colors\newred2.png</icon>
+						
+					</item>
+					<item id="53">
+		<onclick>Skin.Setstring(gamercolor,FF00BDFF)</onclick>
+<onclick condition="!Window.Previous(9118)">ActivateWindow(7544)</onclick>
+	<onclick condition="Window.Previous(9118)">ActivateWindow(7540)</onclick>
+
+						<icon>demo\colors\newteal.png</icon>
+						
+					</item>
+					<item id="54">
+		<onclick>Skin.Setstring(gamercolor,FFFFE800)</onclick>
+<onclick condition="!Window.Previous(9118)">ActivateWindow(7544)</onclick>
+	<onclick condition="Window.Previous(9118)">ActivateWindow(7540)</onclick>
+
+						<icon>demo\colors\newyellow.png</icon>
+						
+					</item>
+					<item id="55">
+		<onclick>Skin.Setstring(gamercolor,FF9BDF2E)</onclick>
+<onclick condition="!Window.Previous(9118)">ActivateWindow(7544)</onclick>
+	<onclick condition="Window.Previous(9118)">ActivateWindow(7540)</onclick>
+
+						<icon>demo\colors\newlime.png</icon>
+						
+					</item>
+					<item id="56">
+		<onclick>Skin.Setstring(gamercolor,AC0022C9)</onclick>
+<onclick condition="!Window.Previous(9118)">ActivateWindow(7544)</onclick>
+	<onclick condition="Window.Previous(9118)">ActivateWindow(7540)</onclick>
+
+						<icon>demo\colors\blue2.png</icon>
+						
+					</item>
+					<item id="57">
+		<onclick>Skin.Setstring(gamercolor,AC0000FF)</onclick>
+<onclick condition="!Window.Previous(9118)">ActivateWindow(7544)</onclick>
+	<onclick condition="Window.Previous(9118)">ActivateWindow(7540)</onclick>
+
+						<icon>demo\colors\blue3.png</icon>
+						
+					</item>
+					<item id="58">
+		<onclick>Skin.Setstring(gamercolor,FF0053FF)</onclick>
+<onclick condition="!Window.Previous(9118)">ActivateWindow(7544)</onclick>
+	<onclick condition="Window.Previous(9118)">ActivateWindow(7540)</onclick>
+
+						<icon>demo\colors\blue4.png</icon>
+						
+					</item>
+					<item id="59">
+		<onclick>Skin.Setstring(gamercolor,FFFF7300)</onclick>
+<onclick condition="!Window.Previous(9118)">ActivateWindow(7544)</onclick>
+	<onclick condition="Window.Previous(9118)">ActivateWindow(7540)</onclick>
+
+						<icon>demo\colors\orange2.png</icon>
+						
+					</item>
+					<item id="60">
+		<onclick>Skin.Setstring(gamercolor,CEFF1109)</onclick>
+<onclick condition="!Window.Previous(9118)">ActivateWindow(7544)</onclick>
+	<onclick condition="Window.Previous(9118)">ActivateWindow(7540)</onclick>
+
+						<icon>demo\colors\redd.png</icon>
+						
+					</item>
+					<item id="61">
+		<onclick>Skin.Setstring(gamercolor,D7FF0000)</onclick>
+<onclick condition="!Window.Previous(9118)">ActivateWindow(7544)</onclick>
+	<onclick condition="Window.Previous(9118)">ActivateWindow(7540)</onclick>
+
+						<icon>demo\colors\reddd.png</icon>
+						
+					</item>
+					<item id="62">
+		<onclick>Skin.Setstring(gamercolor,78000000)</onclick>
+<onclick condition="!Window.Previous(9118)">ActivateWindow(7544)</onclick>
+	<onclick condition="Window.Previous(9118)">ActivateWindow(7540)</onclick>
+
+						<icon>demo\colors\newgray1.png</icon>
+						
+					</item>
+					
+					<item id="63">
+		<onclick>Skin.Setstring(gamercolor,FFFF0000)</onclick>
+<onclick condition="!Window.Previous(9118)">ActivateWindow(7544)</onclick>
+	<onclick condition="Window.Previous(9118)">ActivateWindow(7540)</onclick>
+
+						<icon>demo\colors\newred5.png</icon>
+						
+					</item>
+					<item id="64">
+		<onclick>Skin.Setstring(gamercolor,C6FF0000)</onclick>
+<onclick condition="!Window.Previous(9118)">ActivateWindow(7544)</onclick>
+	<onclick condition="Window.Previous(9118)">ActivateWindow(7540)</onclick>
+
+						<icon>demo\colors\newred4.png</icon>
+						
+					</item>
+					<item id="65">
+		<onclick>Skin.Setstring(gamercolor,FFFF7B00)</onclick>
+<onclick condition="!Window.Previous(9118)">ActivateWindow(7544)</onclick>
+	<onclick condition="Window.Previous(9118)">ActivateWindow(7540)</onclick>
+
+						<icon>demo\colors\neworange3.png</icon>
+						
+					</item>
+					<item id="66">
+		<onclick>Skin.Setstring(gamercolor,FFFFA900)</onclick>
+<onclick condition="!Window.Previous(9118)">ActivateWindow(7544)</onclick>
+	<onclick condition="Window.Previous(9118)">ActivateWindow(7540)</onclick>
+
+						<icon>demo\colors\neworange2.png</icon>
+						
+					</item>
+					<item id="67">
+		<onclick>Skin.Setstring(gamercolor,FFFFFF00)</onclick>
+<onclick condition="!Window.Previous(9118)">ActivateWindow(7544)</onclick>
+	<onclick condition="Window.Previous(9118)">ActivateWindow(7540)</onclick>
+
+						<icon>demo\colors\newyellow3.png</icon>
+						
+					</item>
+					
+					<item id="68">
+		<onclick>Skin.Setstring(gamercolor,FFFFD700)</onclick>
+<onclick condition="!Window.Previous(9118)">ActivateWindow(7544)</onclick>
+	<onclick condition="Window.Previous(9118)">ActivateWindow(7540)</onclick>
+
+						<icon>demo\colors\newyellow2.png</icon>
+						
+					</item>
+					
+					<item id="69">
+		<onclick>Skin.Setstring(gamercolor,FFFF00FF)</onclick>
+<onclick condition="!Window.Previous(9118)">ActivateWindow(7544)</onclick>
+	<onclick condition="Window.Previous(9118)">ActivateWindow(7540)</onclick>
+
+						<icon>demo\colors\newpink.png</icon>
+						
+					</item>
+					<item id="70">
+		<onclick>Skin.Setstring(gamercolor,FFFF64FF)</onclick>
+<onclick condition="!Window.Previous(9118)">ActivateWindow(7544)</onclick>
+	<onclick condition="Window.Previous(9118)">ActivateWindow(7540)</onclick>
+
+						<icon>demo\colors\newpink3.png</icon>
+						
+					</item>
+					<item id="71">
+		<onclick>Skin.Setstring(gamercolor,FFFF0092)</onclick>
+<onclick condition="!Window.Previous(9118)">ActivateWindow(7544)</onclick>
+	<onclick condition="Window.Previous(9118)">ActivateWindow(7540)</onclick>
+
+						<icon>demo\colors\newhotpink2.png</icon>
+						
+					</item>
+					<item id="72">
+		<onclick>Skin.Setstring(gamercolor,FFFF0039)</onclick>
+<onclick condition="!Window.Previous(9118)">ActivateWindow(7544)</onclick>
+	<onclick condition="Window.Previous(9118)">ActivateWindow(7540)</onclick>
+
+						<icon>demo\colors\newred3.png</icon>
+						
+					</item>
+					<item id="73">
+		<onclick>Skin.Setstring(gamercolor,FFDA00FF)</onclick>
+<onclick condition="!Window.Previous(9118)">ActivateWindow(7544)</onclick>
+	<onclick condition="Window.Previous(9118)">ActivateWindow(7540)</onclick>
+
+						<icon>demo\colors\newpurple3.png</icon>
+						
+					</item>
+						<item id="74">
+		<onclick>Skin.Setstring(gamercolor,FFA900FF)</onclick>
+<onclick condition="!Window.Previous(9118)">ActivateWindow(7544)</onclick>
+	<onclick condition="Window.Previous(9118)">ActivateWindow(7540)</onclick>
+
+						<icon>demo\colors\newpurple2.png</icon>
+						
+					</item>
+					<item id="75">
+		<onclick>Skin.Setstring(gamercolor,FF00D1FF)</onclick>
+<onclick condition="!Window.Previous(9118)">ActivateWindow(7544)</onclick>
+	<onclick condition="Window.Previous(9118)">ActivateWindow(7540)</onclick>
+
+						<icon>demo\colors\newaqua.png</icon>
+						
+					</item>
+				
+				</content>
+			</control>
+			
+			<!--Scrollbar-->
+			<control type="scrollbar" id="64">
+				
+				<include>Common_Scrollbar_Horizontal</include>
+				<posy>520</posy>
+				
+				<animation effect="fade" start="100" end="20" time="200" reversible="true" condition="!Container(54).Scrolling">Conditional</animation>
+				
+			</control>
+
+		</control>	
+		<include condition="!Window.Previous(9118)">Xbox_Logo_Dark</include>
+		<include condition="Window.Previous(9118)">Xbox_Logo</include>
+<include>Snapped_Content</include>	
+	</controls>
+
+</window>

@@ -1,0 +1,135 @@
+<window type="dialog" id="6502">
+
+	<defaultcontrol always="true">5</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<zorder>2</zorder>
+	<onload>Skin.SetString(Transfer, )</onload>
+	<onload>Control.SetFocus(5)</onload>
+<onload>Skin.SetString(iinfo, )</onload>
+<onload>Skin.SetString(infoo, )</onload>
+<onload>Skin.SetString(iinfoo, Restaurando conexão)</onload>
+<onload condition="System.InternetState">AlarmClock(info6,Skin.SetString(iinfo, Conexão restaurada),00:10,silent,)</onload>
+<onload condition="!System.InternetState">AlarmClock(info6,Skin.SetString(iinfo, Falha ao restaurar a conexão),00:10,silent,)</onload>
+<onload condition="System.InternetState">AlarmClock(info7,Skin.SetString(infoo, Seu console está conectado a internet),00:10,silent,)</onload>
+<onload condition="!System.InternetState">AlarmClock(info7,Skin.SetString(infoo, Seu console não está conectado a internet),00:10,silent,)</onload>
+<onload>RunScript(special://skin/system/InternetOn.py)</onload>
+		
+
+	
+	
+
+	<controls>
+	
+			<control type="image">
+		
+			<include>Common_Dimensions</include>
+			<texture background="true">XBOXnew.png</texture>
+		
+			
+	
+		</control>
+
+
+		
+		
+	
+		<!--Charm Bar Section-->
+		<control type="group">
+		
+			<posx>0</posx>
+			<posy>0</posy>
+			
+			 
+
+
+		
+				<control type="label">
+				 <animation type="Visible">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="0,100" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+				
+					<posx>180</posx>
+					<posy>175</posy>
+					<width>550</width>
+					<height>48</height>
+					<label>$INFO[Skin.String(iinfoo)]</label>
+					<font>Charms-Date</font>
+					<textcolor>Label_Normal</textcolor>
+					<aligny>center</aligny>
+						<alignx>center</alignx>
+							<visible>IsEmpty(Skin.String(iinfo)) + !IsEmpty(Skin.String(iinfoo))</visible>
+				</control>
+			<control type="label">
+				 <animation type="Visible">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="0,100" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+				
+					<posx>180</posx>
+					<posy>175</posy>
+					<width>550</width>
+					<height>48</height>
+					<label>$INFO[Skin.String(iinfo)]</label>
+					<font>Charms-Date</font>
+					<textcolor>Label_Normal</textcolor>
+					<aligny>center</aligny>
+						<alignx>center</alignx>
+							<visible>!IsEmpty(Skin.String(iinfo))</visible>
+				</control>
+				<control type="label">
+				<animation type="Visible">
+                        <effect type="fade" start="0" end="100" delay="150" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="0,100" end="0" delay="150" tween="cubic" easing="out" time="600" />
+                    </animation>
+			
+					<posx>180</posx>
+					<posy>80</posy>
+						<width>900</width>
+								<height>500</height>
+					<label>[CR]$INFO[Skin.String(infoo)]</label>
+					<font>DialogInfo-Label-install</font>
+			<textcolor>Label_Normal</textcolor>
+					<aligny>center</aligny>
+						<alignx>center</alignx>
+						<visible>!IsEmpty(Skin.String(infoo))</visible>
+				</control>
+				
+			
+			
+				
+			
+			
+			
+					
+					
+					
+					
+					
+					</control>
+					
+					
+					
+					
+					
+					
+					
+					<control type="image">
+			
+			<description>Busy animation</description>
+			<posx>616</posx>
+			<posy>339</posy>
+			<width>85</width>
+			<height>85</height>
+			<texture>buffer/buffer_progress.png</texture>
+			<aspectratio>keep</aspectratio>
+			<visible>IsEmpty(Skin.String(infoo))</visible>
+			<animation effect="rotate" end="-360" center="auto" time="1200" loop="true" condition="true">Conditional</animation>
+			
+		</control>
+						
+
+		
+	</controls>	
+	
+</window>

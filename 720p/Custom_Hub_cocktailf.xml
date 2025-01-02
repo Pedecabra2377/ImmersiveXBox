@@ -1,0 +1,84 @@
+<window id="6616">
+
+	<defaultcontrol always="true">1</defaultcontrol>
+	
+	<zorder>2</zorder>
+	
+	
+	<!--Splash Screen-->
+
+	<onload>Skin.SetString(ebay, )</onload>
+	
+		<onload>Skin.SetString(snapwindow, 661)</onload>
+<onload condition="!Skin.HasSetting(snapie)">Skin.ToggleSetting(snapie)</onload>
+<onload condition="Skin.HasSetting(gaming)">Skin.ToggleSetting(gaming)</onload>
+<onload>Skin.SetString(snap, demo/sna/cocktail.jpg,0)</onload>
+<onload>Skin.SetString(sn,Cocktail Flow)</onload>
+
+	
+<onload condition="Skin.HasSetting(SnapFeature) + Skin.HasSetting(SnapAlways)">Skin.SetString(snap, C:\Assistance\Snap\Pic\Item.jpg,0)</onload>
+<onload condition="Skin.HasSetting(SnapFeature) + Skin.HasSetting(SnapAlways)">AlarmClock(startsnap,RunScript(special://skin/system/Snap.py),00:01,silent)</onload>
+	
+	<controls>
+
+		<!--Background Area-->
+
+	<control type="image">
+							
+								<include>Common_Dimensions</include>
+								<texture>colors\color_white.png</texture>
+								<visible>true</visible>
+								
+							</control>
+
+				<control type="image">
+								<include>Common_Animation_Splash_cocktail</include>
+								<include>Common_Dimensions</include>
+								<texture>$INFO[Window.Property(Cocktail)]</texture>
+								<visible>true</visible>
+								
+							</control>
+								
+								
+								
+
+									<!--Top Area-->
+
+			
+			<!--Content Area-->
+			<control type="group">
+			
+				<posx>0</posx>
+				<posy>100</posy>
+				<width>1280</width>
+				<height>480</height>
+				
+				<!--Animation-->
+	
+				
+									
+										
+				
+						
+						<!--Scrollbar-->
+
+					
+
+			
+			<!--Scrollbar-->
+			<control type="scrollbar" id="9010">
+				
+				<include>Common_Window_Scrollbar_Horizontal</include>
+				<posy>600</posy>
+				
+				<include>Common_Animation_Window_Scrollbar_Fade</include>
+				
+				<visible>Skin.HasSetting(UseTouchInput)</visible>
+				
+			</control>
+
+			</control>
+		<include>Snapped_Content</include>	
+	</controls>	
+		
+</window>

@@ -1,0 +1,24 @@
+<window type="dialog" id="5515">
+
+	<defaultcontrol always="true">10</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<zorder>2</zorder>
+	<onload condition="!Window.IsVisible(29)">Back</onload>
+
+		<onload condition="Skin.HasSetting(dashovid)">Back</onload>
+<onload condition="!Window.IsVisible(0)">Back</onload>
+<onload condition="Window.IsVisible(0)">ActivateWindow(5514)</onload>
+	<controls>
+	
+
+
+		
+		
+	
+		<!--Hidden Window to decide what to open-->
+		
+
+		
+	</controls>	
+	
+</window>

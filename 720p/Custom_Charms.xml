@@ -1,0 +1,1097 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<window type="dialog" id="55">
+
+	<defaultcontrol always="true">10</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<zorder>2</zorder>
+	<onload>AlarmClock(CloseCharmBar,Dialog.Close(55, force),00:30,silent)</onload>
+<onload>Skin.SetString(tube, )</onload>
+	<onload>AlarmClock(CloseCharmBar,Dialog.Close(55, force),00:30,silent)</onload>
+<onload condition="Skin.HasSetting(Searching)">Skin.ToggleSetting(Searching)</onload>
+
+<onload condition="Window.IsVisible(4)">Dialog.Close(55)</onload>
+	<controls>
+			<control type="image">
+	<visible>!Skin.HasSetting(Lock) + !Skin.HasSetting(CharmTheme)</visible>				
+			<include>Common_Dimensions</include>
+			<texture background="true">colors/color_white.png</texture>
+			<colordiffuse>FanartDiffuse</colordiffuse>
+			
+			<include>Common_Animation_Window_Dark</include>
+		
+		</control>
+
+
+		
+		
+
+		<!--Charm Bar Section-->
+		<control type="group">
+	<visible>!Skin.HasSetting(Lock) + !Skin.HasSetting(CharmTheme)</visible>				
+			<posx>540</posx>
+			<posy>170</posy>
+			
+			<include>Common_Animation_Splash_kai2</include>
+
+
+			<control type="image">
+						<include>Common_Animation_dashboard-charm</include>
+						<posx>71</posx>
+						<posy>30</posy>
+						<width>60</width>
+						<height>60</height>
+						<texture>$INFO[System.ProfileThumb]</texture>
+						
+						
+					</control>
+			<control type="label">
+					<include>Common_Animation_dashboard-charm</include>
+					<posx>88</posx>
+					<posy>75</posy>
+					<width>400</width>
+					<height>48</height>
+					<label>$INFO[System.ProfileName]</label>
+					<font>Charms-Label</font>
+					<textcolor>Label_Normal</textcolor>
+					<aligny>center</aligny>
+						<alignx>center</alignx>
+				</control>
+			
+			
+			<control type="panel" id="10">
+				<include>Common_Animation_dashboard-charm</include>
+				<posx>20</posx>
+				<posy>110</posy>
+				<width>200</width>
+				<height>600</height>
+				<onup>12</onup>
+				<ondown>13</ondown>
+				<onleft>Dialog.Close(55)</onleft>
+				<onright>Dialog.Close(55)</onright>
+		
+				<orientation>vertical</orientation>
+				<scrolltime tween="cubic" easing="out">600</scrolltime>
+				
+				
+				
+				
+				<itemlayout width="55" height="55">
+				
+					<control type="image">
+					
+						<posx>2</posx>
+						<posy>2</posy>
+						<width>50</width>
+						<height>50</height>
+						<texture>colors/color_white.png</texture>
+						<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+						
+					</control>
+						<control type="image">
+					
+						<posx>4.3</posx>
+						<posy>2</posy>
+						<width>45</width>
+						<height>45</height>
+						<texture>$INFO[ListItem.Icon]</texture>
+						<colordiffuse>Label_Normal</colordiffuse>
+						
+					</control>
+					
+					
+					
+				</itemlayout>
+
+				<focusedlayout width="55" height="55">
+				
+					<control type="image">
+					
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>54</width>
+						<height>54</height>
+						<texture>colors/color_white.png</texture>
+					<include>Common_Animation_tiledash</include>
+			
+					</control>
+					<control type="image">
+					
+						<posx>2</posx>
+						<posy>2</posy>
+						<width>50</width>
+						<height>50</height>
+						<texture>colors/color_white.png</texture>
+						<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+						
+					</control>
+				
+					<control type="image">
+					
+						<posx>4.3</posx>
+						<posy>2</posy>
+						<width>45</width>
+						<height>45</height>
+						<texture>$INFO[ListItem.Icon]</texture>
+						<colordiffuse>Label_Normal</colordiffuse>
+				
+					</control>
+					
+				
+					
+				</focusedlayout>
+				
+				<content>
+				
+					<item>
+						<description>Início</description>
+						<label>Início</label>
+						<thumb>charms/home.png</thumb>
+						<onclick>Dialog.Close(55)</onclick>
+						
+						<onclick condition="!Skin.HasSetting(snapie) + !Window.IsVisible(0) + Skin.HasSetting(SnapFeature)">Skin.ToggleSetting(snapie)</onclick>
+<onclick condition="Skin.HasSetting(gaming) + !Window.IsVisible(0) + Skin.HasSetting(SnapFeature)">Skin.ToggleSetting(gaming)</onclick>
+<onclick condition="!Window.IsVisible(0) + Skin.HasSetting(SnapFeature)">Skin.SetString(snap, C:\Assistance\Snap\Pic\Item.jpg,0)</onclick>
+						<onclick condition="Skin.HasSetting(SnapFeature) + !Window.IsVisible(0)">AlarmClock(startsnap,RunScript(special://skin/system/Snap.py),00:01,silent)</onclick>
+		
+						<onclick condition="Skin.HasSetting(SnapFeature)">AlarmClock(startapp,ActivateWindow(0),00:02,silent)</onclick>
+						<onclick condition="!Skin.HasSetting(SnapFeature)">ActivateWindow(0)</onclick>
+				
+							<onclick>Dialog.Close(146)</onclick>
+		<onclick>Dialog.Close(134)</onclick>
+		<onclick>Dialog.Close(2003)</onclick>
+				<onclick>Dialog.Close(2001)</onclick>
+					</item>
+					
+					<item>
+						<description>Pesquisa</description>
+						<label>Pesquisa[CR]Youtube</label>
+						<thumb>charms/search.png</thumb>
+																		<onclick>Dialog.Close(55)</onclick>
+<onclick>Skin.SetString(tube)</onclick>
+<onclick condition="!Skin.HasSetting(Searching)">Skin.ToggleSetting(Searching)</onclick>
+<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=$INFO[Skin.String(tube)]&quot;,return)</onclick>
+
+					</item>
+				
+					<item>
+						<description>Vídeos</description>
+						<label>Vídeos</label>
+						<thumb>charms/charm_video.png</thumb>
+						<onclick>Dialog.Close(55)</onclick>
+						<onclick>ActivateWindow(8868)</onclick>
+					</item>
+				
+				
+
+				</content>
+				
+			</control>
+			
+			<control type="panel" id="11">
+				<include>Common_Animation_dashboard3-charm</include>
+				<posx>20</posx>
+				<posy>220</posy>
+				<width>200</width>
+				<height>600</height>
+				<onup>13</onup>
+				<ondown>14</ondown>
+				<onleft>Dialog.Close(55)</onleft>
+				<onright>Dialog.Close(55)</onright>
+		
+				<orientation>vertical</orientation>
+				<scrolltime tween="cubic" easing="out">600</scrolltime>
+				
+				
+				
+				
+				<itemlayout width="55" height="55">
+				
+					<control type="image">
+					
+						<posx>2</posx>
+						<posy>2</posy>
+						<width>50</width>
+						<height>50</height>
+						<texture>colors/color_white.png</texture>
+						<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+						
+					</control>
+						<control type="image">
+					
+						<posx>4.3</posx>
+						<posy>2</posy>
+						<width>45</width>
+						<height>45</height>
+						<texture>$INFO[ListItem.Icon]</texture>
+						<colordiffuse>Label_Normal</colordiffuse>
+						
+					</control>
+					
+					
+					
+				</itemlayout>
+
+				<focusedlayout width="55" height="55">
+				
+					<control type="image">
+					
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>54</width>
+						<height>54</height>
+						<texture>colors/color_white.png</texture>
+					<include>Common_Animation_tiledash</include>
+			
+					</control>
+					<control type="image">
+					
+						<posx>2</posx>
+						<posy>2</posy>
+						<width>50</width>
+						<height>50</height>
+						<texture>colors/color_white.png</texture>
+						<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+						
+					</control>
+				
+					<control type="image">
+					
+						<posx>4.3</posx>
+						<posy>2</posy>
+						<width>45</width>
+						<height>45</height>
+						<texture>$INFO[ListItem.Icon]</texture>
+						<colordiffuse>Label_Normal</colordiffuse>
+						
+					</control>
+					
+			
+					
+				</focusedlayout>
+				
+				<content>
+				
+				
+				
+					<item>
+						<description>Música</description>
+						<label>Música</label>
+						<thumb>charms/charm_music.png</thumb>
+						<onclick>Dialog.Close(55)</onclick>
+						<onclick>ActivateWindow(8869)</onclick>
+					</item>
+					
+
+					
+					<item>
+						<description>Jogos</description>
+						<label>Jogos</label>
+						<thumb>charms/charm_games.png</thumb>
+						<onclick>Dialog.Close(55)</onclick>
+					<onclick>ActivateWindow(10001,"plugin://plugin.program.advanced.launcher/?default",return)</onclick>
+					</item>
+					
+						
+		
+					
+					
+	
+							
+												<item>
+														<visible>Skin.HasSetting(AltSet)</visible>
+						<description>Configurações</description>
+						<label>Configurações</label>
+						<thumb>charms/charm_settings.png</thumb>
+						<onclick>Dialog.Close(55)</onclick>
+						<onclick>ActivateWindow(8448)</onclick>
+					</item>
+													<item>
+														<visible>!Skin.HasSetting(AltSet)</visible>
+						<description>Configurações</description>
+						<label>Configurações</label>
+						<thumb>charms/charm_settings.png</thumb>
+						<onclick>Dialog.Close(55)</onclick>
+						<onclick>ActivateWindow(Settings)</onclick>
+					</item>
+
+				</content>
+				
+			</control>
+			
+			
+			<control type="panel" id="13">
+				<include>Common_Animation_dashboard2-charm</include>
+				<posx>-20</posx>
+				<posy>165</posy>
+				<width>500</width>
+				<height>60</height>
+				<onup>10</onup>
+				<ondown>11</ondown>
+				<onleft>Dialog.Close(55)</onleft>
+				<onright>Dialog.Close(55)</onright>
+		
+				<orientation>vertical</orientation>
+				<scrolltime tween="cubic" easing="out">600</scrolltime>
+				
+				
+				
+				
+				<itemlayout width="150" height="55">
+				
+					<control type="image">
+					
+						<posx>2</posx>
+						<posy>2</posy>
+						<width>90</width>
+						<height>50</height>
+						<texture>colors/color_white.png</texture>
+						<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+						
+					</control>
+					
+					
+					<control type="label">
+					
+						<posx>40</posx>
+						<posy>15</posy>
+						<width>70</width>
+						<height>20</height>
+						<label>$INFO[ListItem.Label]</label>
+						<font>Charms-Label</font>
+						<textcolor>Label_Normal</textcolor>
+						<align>center</align>
+				
+					</control>
+					
+				</itemlayout>
+
+				<focusedlayout width="150" height="55">
+				
+					<control type="image">
+					
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>94</width>
+						<height>54</height>
+						<texture>colors/color_white.png</texture>
+					<include>Common_Animation_tiledash</include>
+				
+					</control>
+					<control type="image">
+					
+						<posx>2</posx>
+						<posy>2</posy>
+						<width>90</width>
+						<height>50</height>
+						<texture>colors/color_white.png</texture>
+						<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+						
+					</control>
+				
+				
+					
+					<control type="label">
+					
+						<posx>40</posx>
+						<posy>15</posy>
+						<width>70</width>
+						<height>20</height>
+						<label>$INFO[ListItem.Label]</label>
+						<font>Charms-Label</font>
+						<textcolor>Label_Normal</textcolor>
+						<align>center</align>
+	
+					</control>
+					
+				</focusedlayout>
+				
+				<content>
+				
+				
+				
+					
+													<item>
+														
+						<description>Settings</description>
+						<label>Perfil</label>
+						<thumb>charms/charm_settings.png</thumb>
+						<onclick>Dialog.Close(55)</onclick>
+						<onclick>ActivateWindow(7544)</onclick>
+					</item>
+													<item>
+														
+						<description>Settings</description>
+						<label>Amigos</label>
+						<thumb>charms/charm_settings.png</thumb>
+						<onclick>Dialog.Close(55)</onclick>
+						<onclick>ActivateWindow(7545)</onclick>
+					</item>
+
+				</content>
+				
+			</control>
+			
+			
+			<control type="panel" id="11000">
+				<include>Common_Animation_dashboard2-charm</include>
+				<posx>75</posx>
+				<posy>165</posy>
+				<width>200</width>
+				<height>600</height>
+		
+		
+				<orientation>vertical</orientation>
+				<scrolltime tween="cubic" easing="out">600</scrolltime>
+				
+				
+				
+				
+				<itemlayout width="55" height="55">
+				
+					<control type="image">
+					
+						<posx>2</posx>
+						<posy>2</posy>
+						<width>50</width>
+						<height>50</height>
+						<texture>colors/color_white.png</texture>
+						<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+						
+					</control>
+						<control type="image">
+					
+						<posx>12</posx>
+						<posy>12</posy>
+						<width>30</width>
+						<height>30</height>
+						<texture>$INFO[ListItem.Icon]</texture>
+						<colordiffuse>Label_Normal</colordiffuse>
+						
+					</control>
+					
+					
+					
+				</itemlayout>
+
+				<focusedlayout width="55" height="55">
+				
+					
+					
+				</focusedlayout>
+				
+				<content>
+				
+				
+				
+					<item>
+						<description></description>
+						<label></label>
+						<thumb>demo\xb1.png</thumb>
+						<onclick>Dialog.Close(55)</onclick>
+						<onclick>ActivateWindow(8869)</onclick>
+					</item>
+					
+
+					
+					
+
+				</content>
+				
+			</control>
+			
+			
+			<control type="panel" id="14">
+				<include>Common_Animation_dashboard4-charm</include>
+				<posx>48</posx>
+				<posy>275</posy>
+				<width>200</width>
+				<height>600</height>
+				<onup>11</onup>
+				<ondown>10</ondown>
+				<onleft>Dialog.Close(55)</onleft>
+				<onright>Dialog.Close(55)</onright>
+		<visible>!System.HasMediadvd</visible>
+				<orientation>vertical</orientation>
+				<scrolltime tween="cubic" easing="out">600</scrolltime>
+				
+				
+				
+				
+				<itemlayout width="55" height="55">
+				
+					<control type="image">
+					
+						<posx>2</posx>
+						<posy>2</posy>
+						<width>50</width>
+						<height>50</height>
+						<texture>colors/color_white.png</texture>
+						<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+						
+					</control>
+						<control type="image">
+					
+						<posx>5</posx>
+						<posy>3</posy>
+						<width>45</width>
+						<height>45</height>
+						<texture>$INFO[ListItem.Icon]</texture>
+						<colordiffuse>Label_Normal</colordiffuse>
+						
+					</control>
+					
+					
+					
+				</itemlayout>
+
+				<focusedlayout width="55" height="55">
+				
+					<control type="image">
+					
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>54</width>
+						<height>54</height>
+						<texture>colors/color_white.png</texture>
+					<include>Common_Animation_tiledash</include>
+						
+					</control>
+					<control type="image">
+					
+						<posx>2</posx>
+						<posy>2</posy>
+						<width>50</width>
+						<height>50</height>
+						<texture>colors/color_white.png</texture>
+						<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+						
+					</control>
+				
+						<control type="image">
+					
+						<posx>5</posx>
+						<posy>3</posy>
+						<width>45</width>
+						<height>45</height>
+						<texture>$INFO[ListItem.Icon]</texture>
+						<colordiffuse>Label_Normal</colordiffuse>
+						
+					</control>
+					
+				
+					
+				</focusedlayout>
+				
+				<content>
+				
+				
+				
+			<item>
+						<description>Snap Video</description>
+						<label>Snap</label>
+						<thumb>charms\charm_movie.png</thumb>
+						<onclick>Dialog.Close(55)</onclick>
+					<onclick condition="!Window.IsVisible(4545)">ActivateWindow(4545)</onclick>
+					<onclick condition="Window.IsVisible(4545)">Dialog.Close(4545)</onclick>
+			<visible>Player.HasVideo</visible>
+					</item>
+							<item>
+						<description>Snap Music</description>
+						<label>Snap</label>
+						<thumb>charms\charm_music.png</thumb>
+						<onclick>Dialog.Close(55)</onclick>
+					<onclick condition="!Window.IsVisible(4546)">ActivateWindow(4546)</onclick>
+					<onclick condition="Window.IsVisible(4546)">Dialog.Close(4546)</onclick>
+			<visible>Player.HasAudio</visible>
+					</item>
+					
+											<item>
+						<description>UnSnap Video</description>
+						<label>UnSnap</label>
+						<thumb>charms\charm_unsnap.png</thumb>
+						<onclick>Dialog.Close(55)</onclick>
+		<onclick condition="Skin.HasSetting(Snapped)">Skin.ToggleSetting(Snapped)</onclick>
+					<onclick condition="Window.IsVisible(4545)">Dialog.Close(4545)</onclick>
+		<visible>false</visible>
+					</item>
+													<item>
+						<description>UnSnap Music</description>
+						<label>UnSnap</label>
+						<thumb>charms\charm_unsnap.png</thumb>
+						<onclick>Dialog.Close(55)</onclick>
+		<onclick condition="Skin.HasSetting(Snapped2)">Skin.ToggleSetting(Snapped2)</onclick>
+					<onclick condition="Window.IsVisible(4546)">Dialog.Close(4546)</onclick>
+		<visible>false</visible>
+					</item>
+
+				</content>
+				
+			</control>
+			<control type="panel" id="14">
+				<include>Common_Animation_dashboard4-charm</include>
+				<posx>48</posx>
+				<posy>275</posy>
+				<width>200</width>
+				<height>600</height>
+				<onup>11</onup>
+				<ondown>10</ondown>
+				<onleft>Dialog.Close(55)</onleft>
+				<onright>Dialog.Close(55)</onright>
+		<visible>System.HasMediadvd</visible>
+				<orientation>vertical</orientation>
+				<scrolltime tween="cubic" easing="out">600</scrolltime>
+				
+				
+				
+				
+				<itemlayout width="55" height="55">
+				
+					<control type="image">
+					
+						<posx>2</posx>
+						<posy>2</posy>
+						<width>50</width>
+						<height>50</height>
+						<texture>colors/color_white.png</texture>
+						<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+						
+					</control>
+						<control type="image">
+					
+						<posx>5</posx>
+						<posy>3</posy>
+						<width>45</width>
+						<height>45</height>
+						<texture>$INFO[ListItem.Icon]</texture>
+						<colordiffuse>Label_Normal</colordiffuse>
+						
+					</control>
+					
+					
+					
+				</itemlayout>
+
+				<focusedlayout width="55" height="55">
+				
+					<control type="image">
+					
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>54</width>
+						<height>54</height>
+						<texture>colors/color_white.png</texture>
+					<include>Common_Animation_tiledash</include>
+						
+					</control>
+					<control type="image">
+					
+						<posx>2</posx>
+						<posy>2</posy>
+						<width>50</width>
+						<height>50</height>
+						<texture>colors/color_white.png</texture>
+						<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+						
+					</control>
+				
+						<control type="image">
+					
+						<posx>5</posx>
+						<posy>3</posy>
+						<width>45</width>
+						<height>45</height>
+						<texture>$INFO[ListItem.Icon]</texture>
+						<colordiffuse>Label_Normal</colordiffuse>
+						
+					</control>
+					
+				
+					
+				</focusedlayout>
+				
+				<content>
+				
+				
+				
+			<item>
+						<description>Snap Video</description>
+						<label>Ejetar</label>
+						<thumb>charms\charm_disc.png</thumb>
+						<onclick>Dialog.Close(55)</onclick>
+				
+					<onclick>EjectTray()</onclick>
+			
+					</item>
+							<item>
+						<description>Snap Music</description>
+						<label>Reproduzir</label>
+						<thumb>osd\b\media-play2.png</thumb>
+						<onclick>Dialog.Close(55)</onclick>
+					<onclick>PlayDVD</onclick>
+					<visible>!Player.HasVideo</visible>
+			
+					</item>
+					<item>
+						<description>Snap Music</description>
+						<label>Parar</label>
+						<thumb>osd\b\media-stop2.png</thumb>
+						<onclick>Dialog.Close(55)</onclick>
+					<onclick>playercontrol(stop)</onclick>
+					<visible>Player.HasVideo</visible>
+			
+					</item>
+					
+								
+
+				</content>
+				
+			</control>
+
+
+		</control>
+
+		
+	</controls>	
+	
+
+	<controls>
+
+
+		<!--Time + Date Section-->
+		<control type="group">
+			<visible>Skin.HasSetting(CharmTheme)</visible>				
+			<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
+
+			<control type="image">
+			
+				<posx>40</posx>
+				<posy>545</posy>
+				<width>500</width>
+				<height>136</height>
+				<texture>colors/color_white.png</texture>
+				<colordiffuse>FanartDiffuse</colordiffuse>
+
+				<visible>!Player.HasMedia</visible>
+				
+			</control>
+			
+			<control type="image">
+			
+				<posx>40</posx>
+				<posy>545</posy>
+				<width>600</width>
+				<height>136</height>
+				<texture>colors/color_white.png</texture>
+               <colordiffuse>FanartDiffuse</colordiffuse>
+
+				<visible>Player.HasMedia</visible>
+				
+				<animation type="Conditional" condition="Player.HasMedia" reversible="false">
+					<effect type="slide" start="0,0" end="0,-20" time="200" tween="cubic" easing="out" />
+					<effect type="zoom" start="100,100" end="100,120" time="200" tween="cubic" easing="out" />
+				</animation>
+				
+			</control>
+		
+			<control type="grouplist">
+				<visible>Skin.HasSetting(CharmTheme)</visible>				
+				<posx>60</posx>
+				<posy>540</posy>
+				<width>1220</width>
+				<height>300</height>
+				<orientation>horizontal</orientation>
+				<itemgap>20</itemgap>
+				<usecontrolcoords>true</usecontrolcoords>
+				
+				<animation type="Conditional" condition="Player.HasMedia" reversible="false">
+					<effect type="slide" start="0,0" end="0,-20" time="200" tween="cubic" easing="out" />
+				</animation>
+				
+				<control type="label">
+					<width min="0" max="400">auto</width>
+					<height>100</height>
+					<label>$INFO[System.Time(HH:MM)]</label>
+					<font>Charms-Time</font>
+					<textcolor>Label_Normal</textcolor>
+					<aligny>top</aligny>
+				
+				</control>
+				
+				<control type="label">
+					<posx>0</posx>
+					<posy>24</posy>
+					<width>1220</width>
+					<height>100</height>
+					<label>$INFO[System.Date(DDD)][CR]$INFO[System.Date(MMM d)]</label>
+					<font>Charms-Date</font>
+					<textcolor>Label_Normal</textcolor>
+					<aligny>top</aligny>
+				
+				</control>
+
+				
+			</control>
+											<visible>Skin.HasSetting(CharmTheme)</visible>				
+			<control type="group">
+				<posx>60</posx>
+				<posy>635</posy>
+
+				
+				<animation type="VisibleChange" reversible="false">
+					<effect type="fade" start="0" end="100" delay="400" time="400" />
+					<effect type="slide" start="1280,0" end="0,0" center="auto" delay="400" time="1000" tween="cubic" easing="out" />
+				</animation>
+			
+				<control type="multiimage">
+									<visible>Player.HasMedia</visible>				
+					<posx>6</posx>
+					<posy>0</posy>
+					<width>15</width>
+					<height>48</height>
+					<imagepath>nowplaying/</imagepath>
+					<aspectratio>center</aspectratio>
+					<timeperimage>1000</timeperimage>
+					<fadetime>400</fadetime>
+					<randomize>false</randomize>
+					<loop>yes</loop>
+					<colordiffuse>Label_Normal</colordiffuse>
+
+				</control>
+				
+				<control type="label">
+								<visible>Player.HasMedia</visible>
+					<posx>36</posx>
+					<posy>0</posy>
+					<width>520</width>
+					<height>48</height>
+					<label>$VAR[NowPlaying_First_Label] $VAR[NowPlaying_Second_Label,· ,]</label>
+					<font>Screensaver-NowPlaying</font>
+					<textcolor>Label_Normal</textcolor>
+					<aligny>center</aligny>
+					
+				</control>
+				
+			</control>
+			
+		</control>	
+
+		<!--Charm Bar Section-->
+		<control type="group">
+									<visible>Skin.HasSetting(CharmTheme)</visible>				
+			<posx>1280</posx>
+			<posy>0</posy>
+			
+			<animation type="WindowOpen" reversible="false">
+				<effect type="slide" start="0,0" end="-100,0" time="400" tween="cubic" easing="out" />
+				<effect type="fade" start="0" end="100" time="200" />
+			</animation>
+			
+			<animation type="WindowClose" reversible="false">
+				<effect type="slide" start="-100,0" end="0,0" time="400" tween="cubic" easing="out" />
+				<effect type="fade" start="100" end="0" time="200" />
+			</animation>
+
+			<control type="image">
+				
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>100</width>
+				<height>720</height>
+				<texture>colors/color_keyboard_dark.png</texture>
+				
+			</control>
+			
+			<control type="list" id="10">
+			
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>100</width>
+				<height>720</height>
+				<onup>10</onup>
+				<ondown>10</ondown>
+				<onleft>Dialog.Close(55)</onleft>
+				<onright>Dialog.Close(55)</onright>
+				<viewtype label="List">list</viewtype>
+				<scrolltime tween="cubic" easing="out">600</scrolltime>
+				<preloaditems>2</preloaditems>
+				
+
+				<animation effect="slide" start="0,0" end="0,40" time="400" tween="cubic" easing="out" condition="StringCompare(Container(10).NumItems,8)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="0,80" time="400" tween="cubic" easing="out" condition="StringCompare(Container(10).NumItems,7)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="0,120" time="400" tween="cubic" easing="out" condition="StringCompare(Container(10).NumItems,6)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="0,160" time="400" tween="cubic" easing="out" condition="StringCompare(Container(10).NumItems,5)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="0,200" time="400" tween="cubic" easing="out" condition="StringCompare(Container(10).NumItems,4)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="0,240" time="400" tween="cubic" easing="out" condition="StringCompare(Container(10).NumItems,3)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="0,280" time="400" tween="cubic" easing="out" condition="StringCompare(Container(10).NumItems,2)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="0,320" time="400" tween="cubic" easing="out" condition="StringCompare(Container(10).NumItems,1)">Conditional</animation>
+				
+				<itemlayout width="100" height="80">
+				
+					<control type="image">
+					
+						<posx>20</posx>
+						<posy>0</posy>
+						<width>60</width>
+						<height>60</height>
+						<texture>$INFO[ListItem.Icon]</texture>
+						<colordiffuse>Label_Normal</colordiffuse>
+						
+					</control>
+					
+					<control type="label">
+					
+						<posx>0</posx>
+						<posy>50</posy>
+						<width>100</width>
+						<height>20</height>
+						<label>$INFO[ListItem.Label]</label>
+						<font>Charms-Label</font>
+						<textcolor>Label_Normal</textcolor>
+						<align>center</align>
+						
+					</control>
+					
+				</itemlayout>
+
+				<focusedlayout width="100" height="80">
+				
+					<control type="image">
+					
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>100</width>
+						<height>80</height>
+						<texture>colors/color_white.png</texture>
+                      <colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+						
+					</control>
+				
+					<control type="image">
+					
+						<posx>20</posx>
+						<posy>0</posy>
+						<width>60</width>
+						<height>60</height>
+						<texture>$INFO[ListItem.Icon]</texture>
+						<colordiffuse>Label_Normal</colordiffuse>
+						
+					</control>
+					
+					<control type="label">
+					
+						<posx>0</posx>
+						<posy>50</posy>
+						<width>100</width>
+						<height>20</height>
+						<label>$INFO[ListItem.Label]</label>
+						<font>Charms-Label</font>
+						<textcolor>Label_Normal</textcolor>
+						<align>center</align>
+						
+					</control>
+					
+				</focusedlayout>
+				
+				<content>
+				
+					
+					
+					<item>
+						
+						<label></label>
+						<thumb>charms\search.png</thumb>
+						<onclick>Dialog.Close(55)</onclick>
+						<onclick>Dialog.Close(134)</onclick>
+						<onclick>XBMC.RunScript(script.globalsearch)</onclick>
+<visible>!Skin.HasSetting(Lock)</visible>
+					</item>
+
+<item>
+						
+						<label>$LOCALIZE[31013]</label>
+						<thumb>home\alternate\msg.png</thumb>
+						<onclick>Dialog.Close(55)</onclick>
+						<onclick>Dialog.Close(134)</onclick>
+						<onclick>ReplaceWindow(6595)</onclick>	
+<visible>!Skin.HasSetting(Lock)</visible>
+					</item>
+								
+<item>
+						
+						<thumb>charms\home.png</thumb>
+						<onclick>Dialog.Close(55)</onclick>
+						<onclick>Dialog.Close(134)</onclick>
+						<onclick>ActivateWindow(Home)</onclick>
+<visible>!Skin.HasSetting(Lock)</visible>
+					</item>
+
+					<item>
+						
+						<label>$LOCALIZE[31012]</label>
+						<thumb>charms/charm_settings.png</thumb>
+						<onclick>Dialog.Close(55)</onclick>
+						<onclick>Dialog.Close(134)</onclick>
+						<onclick>ActivateWindow(settings)</onclick>
+<visible>!Skin.HasSetting(Lock)</visible>
+					</item>
+					
+					<item>
+						
+						<label>$LOCALIZE[31013]</label>
+						<thumb>charms/charm_shutdown.png</thumb>
+						<onclick>Dialog.Close(55)</onclick>
+						<onclick>Dialog.Close(134)</onclick>
+						<onclick>ActivateWindow(shutdownmenu)</onclick>
+						</item>
+
+					<item>	
+					
+						<label>$LOCALIZE[31013]</label>
+						<thumb>iexplorer.png</thumb>
+						<onclick>Dialog.Close(55)</onclick>
+						<onclick>Dialog.Close(134)</onclick>
+						<onclick>ReplaceWindow(666)</onclick>
+						<visible>Skin.HasSetting(charm-ie)</visible>
+<visible>!Skin.HasSetting(Lock)</visible>
+					</item>
+<item>	
+					
+						<label>$LOCALIZE[31013]</label>
+						<thumb>home/api.png</thumb>
+						<onclick>Dialog.Close(55)</onclick>
+						<onclick>Dialog.Close(134)</onclick>
+						<onclick>ReplaceWindow(7543)</onclick>
+<visible>Skin.HasSetting(charm-guide)</visible>
+					</item>
+			<item>
+						<description></description>
+						<label></label>
+						<thumb>charms\charm_movies.png</thumb>
+						<onclick>Dialog.Close(55)</onclick>
+					<onclick condition="!Window.IsVisible(4545)">ActivateWindow(4545)</onclick>
+					<onclick condition="Window.IsVisible(4545)">Dialog.Close(4545)</onclick>
+<visible>!Skin.HasSetting(Lock)</visible>
+					</item>
+							<item>
+						<description></description>
+						<label></label>
+						<thumb>charms\charm_music.png</thumb>
+						<onclick>Dialog.Close(55)</onclick>
+					<onclick condition="!Window.IsVisible(4546)">ActivateWindow(4546)</onclick>
+					<onclick condition="Window.IsVisible(4546)">Dialog.Close(4546)</onclick>
+<visible>!Skin.HasSetting(Lock)</visible>
+					</item>
+					
+											
+					
+				</content>
+				
+			</control>
+			
+		</control>
+		
+	</controls>	
+	
+</window>

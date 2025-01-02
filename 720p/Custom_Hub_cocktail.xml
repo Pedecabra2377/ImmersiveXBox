@@ -1,0 +1,518 @@
+<window id="661">
+
+	<defaultcontrol always="true">54</defaultcontrol>
+	
+	<zorder>2</zorder>
+	
+	 <include condition="!Window.Previous(Home)">Common_Animation_Window2</include>
+					  <include condition="Window.Previous(Home)">Common_Animation_apps_dash</include> 
+	
+	<!--Splash Screen-->
+
+	<onload>Skin.SetString(amazon, )</onload>
+	
+		<onload>Skin.SetString(snapwindow, 661)</onload>
+<onload condition="!Skin.HasSetting(snapie)">Skin.ToggleSetting(snapie)</onload>
+<onload condition="Skin.HasSetting(gaming)">Skin.ToggleSetting(gaming)</onload>
+<onload>Skin.SetString(snap, demo/sna/cocktail.jpg,0)</onload>
+<onload>Skin.SetString(sn,Cocktail Flow)</onload>
+
+	<onload condition="Skin.HasSetting(SnapFeature) + Skin.HasSetting(SnapAlways)">Skin.SetString(snap, C:\Assistance\Snap\Pic\Item.jpg,0)</onload>
+<onload condition="Skin.HasSetting(SnapFeature) + Skin.HasSetting(SnapAlways)">AlarmClock(startsnap,RunScript(special://skin/system/Snap.py),00:01,silent)</onload>
+
+	
+	<controls>
+
+		<!--Background Area-->
+
+		
+
+				<control type="image">
+							
+								<include>Common_Dimensions</include>
+								<texture>demo\cocktails\bg.png</texture>
+								<visible>true</visible>
+								
+							</control>
+									
+								
+
+									<!--Top Area-->
+
+			
+			<!--Content Area-->
+			<control type="group">
+			
+				<posx>0</posx>
+				<posy>100</posy>
+				<width>1280</width>
+				<height>480</height>
+				
+				<!--Animation-->
+		
+				
+								<control type="panel" id="54">
+
+				<posx>70</posx>
+				<posy>90</posy>
+				<width>1280</width>
+				<height>485</height>
+				<onup>10000</onup>
+				<ondown>9000</ondown>
+				<onleft>54</onleft>
+				<onright>54</onright>
+				<viewtype label="Square">wrap</viewtype>
+				<orientation>horizontal</orientation>
+				<pagecontrol>64</pagecontrol>
+				<scrolltime tween="cubic" easing="out">600</scrolltime>
+				<preloaditems>4</preloaditems>
+				
+								
+				<itemlayout width="165" height="330">
+
+
+					
+					<control type="group">
+		
+						<posx>5</posx>
+						<posy>40</posy>
+						<width>155</width>
+						<height>310</height>
+						
+						<control type="image">
+						
+							<posx>5</posx>
+							<posy>0</posy>
+							<width>155</width>
+							<height>310</height>
+							<texture>colors/color_white.png</texture>
+							<aspectratio>scale</aspectratio>
+							
+						</control>
+					
+						<control type="image">
+						
+							<posx>5</posx>
+							<posy>0</posy>
+							<width>155</width>
+							<height>310</height>
+							<texture background="true" fallback="colors/color_keyboard_dark.png">$VAR[Square_Image]</texture>
+							<aspectratio>scale</aspectratio>
+							
+						</control>
+						
+			
+							
+						<control type="label">
+							
+							<posx>15</posx>
+							<posy>268</posy>
+							<width>145</width>
+							<height>20</height>
+							<textcolor>Label_Normal</textcolor>
+							<font>Menu-Square-Header</font>
+							<aligny>top</aligny>
+							<label></label>
+						
+						</control>
+						
+						<control type="label">
+							
+							<posx>15</posx>
+							<posy>178</posy>
+							<width>145</width>
+							<height>20</height>
+							<textcolor>Label_Normal</textcolor>
+							<font>Menu-Square-Detail</font>
+							<aligny>top</aligny>
+							<label></label>
+						
+						</control>
+					
+					</control>
+					
+				</itemlayout>
+
+				<focusedlayout width="165" height="330">
+				
+
+				
+					<control type="group">
+						
+						<posx>5</posx>
+						<posy>40</posy>
+						<width>155</width>
+						<height>310</height>
+					
+				
+						
+						<control type="image">
+						
+							<posx>5</posx>
+							<posy>0</posy>
+							<width>155</width>
+							<height>310</height>
+							<texture>colors/color_white.png</texture>
+							<aspectratio>scale</aspectratio>
+							
+						</control>
+												<control type="image">
+						
+							<posx>3</posx>
+							<posy>-2</posy>
+							<width>157</width>
+							<height>314</height>
+							<texture>colors/color_black.png</texture>
+							<aspectratio>scale</aspectratio>
+							     <include>Common_Animation_tiledash</include>
+						</control>
+										<control type="image">
+						
+							<posx>5</posx>
+							<posy>0</posy>
+							<width>153</width>
+							<height>310</height>
+							<texture>colors/color_white.png</texture>
+							<aspectratio>scale</aspectratio>
+							
+						</control>
+					
+						<control type="image">
+						
+							<posx>5</posx>
+							<posy>0</posy>
+							<width>155</width>
+							<height>310</height>
+							<texture background="true" fallback="colors/color_keyboard_dark.png">$VAR[Square_Image]</texture>
+							<aspectratio>scale</aspectratio>
+							
+						</control>
+						
+						<control type="image">
+						<include>Common_Animation_Pini</include>
+							<posx>5</posx>
+							<posy>250</posy>
+							<width>155</width>
+							<height>60</height>
+							<texture>colors/color_white.png</texture>
+							<colordiffuse>FanartDiffuse</colordiffuse>
+							
+						</control>
+							
+						<control type="label">
+							
+							<posx>15</posx>
+							<posy>268</posy>
+							<width>145</width>
+							<height>20</height>
+							<textcolor>Label_Normal</textcolor>
+							<font>Menu-Square-Header</font>
+							<aligny>top</aligny>
+							<label>$VAR[Square_Header]</label>
+						
+						</control>
+						
+						<control type="label">
+							
+							<posx>15</posx>
+							<posy>178</posy>
+							<width>145</width>
+							<height>20</height>
+							<textcolor>Label_Normal</textcolor>
+							<font>Menu-Square-Detail</font>
+							<aligny>top</aligny>
+							<label></label>
+						
+						</control>
+
+					</control>
+					
+					<!--Back Side Info-->
+					<control type="group">
+					
+						<posx>0</posx>
+						<posy>40</posy>
+						<width>210</width>
+						<height>210</height>
+						
+						
+						
+						<control type="image">
+						
+							<include>Common_LiveTile_Rating</include>
+							<visible>false</visible>
+							
+						</control>
+						
+						<control type="textbox">
+							
+							<include>Common_LiveTile_Description</include>
+							<label>$VAR[Tile_Description]</label>
+							<visible>false</visible>
+				
+						</control>
+						
+					</control>
+					
+				</focusedlayout>
+				<content>
+												<item id="1">
+		<onclick>SetProperty(Cocktail,demo/Cocktails/howto/acapulco.jpg,6616)</onclick>
+		<onclick>ActivateWindow(6616)</onclick>
+						<label>Acapulco</label>
+						<thumb>demo/cocktails\acapulco.png</thumb>
+				
+					</item>
+																<item id="2">
+			<onclick>SetProperty(Cocktail,demo/Cocktails/howto/affair.jpg,6616)</onclick>
+				<onclick>ActivateWindow(6616)</onclick>
+						<label>Affair</label>
+						<thumb>demo/cocktails\affair.png</thumb>
+				
+					</item>
+																<item id="3">
+			<onclick>SetProperty(Cocktail,demo/Cocktails/howto/after eight martini.jpg,6616)</onclick>
+				<onclick>ActivateWindow(6616)</onclick>
+						<label>After Eight Martini</label>
+						<thumb>demo/cocktails\after eight martini.png</thumb>
+				
+					</item>
+																				<item id="4">
+			<onclick>SetProperty(Cocktail,demo/Cocktails/howto/after five.jpg,6616)</onclick>
+				<onclick>ActivateWindow(6616)</onclick>
+						<label>After Five</label>
+						<thumb>demo/cocktails\after five.png</thumb>
+				
+					</item>
+																								<item id="5">
+		<onclick>SetProperty(Cocktail,demo/Cocktails/howto/agrave kiss.jpg,6616)</onclick>
+				<onclick>ActivateWindow(6616)</onclick>
+						<label>Agrave Kiss</label>
+						<thumb>demo/cocktails\agrave kiss.png</thumb>
+				
+					</item>
+					
+																										<item id="6">
+		<onclick>SetProperty(Cocktail,demo/Cocktails/howto/alabama slammer.jpg,6616)</onclick>
+				<onclick>ActivateWindow(6616)</onclick>
+						<label>Alabama Slammer</label>
+						<thumb>demo/cocktails\alabama slammer.png</thumb>
+			
+					</item>	
+																										<item id="7">
+		<onclick>SetProperty(Cocktail,demo/Cocktails/howto/amaretto sour.jpg,6616)</onclick>
+				<onclick>ActivateWindow(6616)</onclick>
+						<label>Amaretto Sour</label>
+						<thumb>demo/cocktails\amaretto sour.png</thumb>
+			
+					</item>						
+																										<item id="8">
+		<onclick>SetProperty(Cocktail,demo/Cocktails/howto/ambassador.jpg,6616)</onclick>
+				<onclick>ActivateWindow(6616)</onclick>
+						<label>Ambassador</label>
+						<thumb>demo/cocktails\ambassador.png</thumb>
+			
+					</item>	
+																										<item id="9">
+		<onclick>SetProperty(Cocktail,demo/Cocktails/howto/americano.jpg,6616)</onclick>
+				<onclick>ActivateWindow(6616)</onclick>
+						<label>Americano</label>
+						<thumb>demo/cocktails\americano.png</thumb>
+	
+					</item>		
+																															<item id="10">
+		<onclick>SetProperty(Cocktail,demo/Cocktails/howto/amf.jpg,6616)</onclick>
+				<onclick>ActivateWindow(6616)</onclick>
+						<label>Amf</label>
+						<thumb>demo/cocktails\amf.png</thumb>
+		
+					</item>	
+																										<item id="11">
+		<onclick>SetProperty(Cocktail,demo/Cocktails/howto/anaconda.jpg,6616)</onclick>
+				<onclick>ActivateWindow(6616)</onclick>
+						<label>Anaconda</label>
+						<thumb>demo/cocktails\anaconda.png</thumb>
+
+					</item>						
+																										<item id="12">
+		<onclick>SetProperty(Cocktail,demo/Cocktails/howto/apple pie.jpg,6616)</onclick>
+				<onclick>ActivateWindow(6616)</onclick>
+						<label>Apple Pie</label>
+						<thumb>demo/cocktails\apple pie.png</thumb>
+						
+					</item>							
+					
+																										<item id="13">
+		<onclick>SetProperty(Cocktail,demo/Cocktails/howto/arise my love.jpg,6616)</onclick>
+				<onclick>ActivateWindow(6616)</onclick>
+						<label>Arise My Love</label>
+						<thumb>demo/cocktails\arise my love.png</thumb>
+					
+					</item>
+																										<item id="14">
+		<onclick>SetProperty(Cocktail,demo/Cocktails/howto/atomic cat.jpg,6616)</onclick>
+				<onclick>ActivateWindow(6616)</onclick>
+						<label>Atomic Cat</label>
+						<thumb>demo/cocktails\atomic cat.png</thumb>
+						
+					</item>							
+																										<item id="15">
+		<onclick>SetProperty(Cocktail,demo/Cocktails/howto/b52.jpg,6616)</onclick>
+				<onclick>ActivateWindow(6616)</onclick>
+						<label>B52</label>
+						<thumb>demo/cocktails\b52.png</thumb>
+						
+					</item>					
+																										<item id="16">
+		<onclick>SetProperty(Cocktail,demo/Cocktails/howto/b54.jpg,6616)</onclick>
+				<onclick>ActivateWindow(6616)</onclick>
+						<label>B54</label>
+						<thumb>demo/cocktails\b54.png</thumb>
+					
+					</item>							
+																										<item id="17">
+		<onclick>SetProperty(Cocktail,demo/Cocktails/howto/batman cocktail.jpg,6616)</onclick>
+				<onclick>ActivateWindow(6616)</onclick>
+						<label>Batman Cocktail</label>
+						<thumb>demo/cocktails\batman cocktail.png</thumb>
+					
+					</item>							
+																										<item id="18">
+		<onclick>SetProperty(Cocktail,demo/Cocktails/howto/bay breeze.jpg,6616)</onclick>
+				<onclick>ActivateWindow(6616)</onclick>
+						<label>Bay Breeze</label>
+						<thumb>demo/cocktails\bay breeze.png</thumb>
+					
+					</item>		
+																													<item id="19">
+		<onclick>SetProperty(Cocktail,demo/Cocktails/howto/bazooka joe.jpg,6616)</onclick>
+				<onclick>ActivateWindow(6616)</onclick>
+						<label>Bazooka Joe</label>
+						<thumb>demo/cocktails\bazooka joe.png</thumb>
+						
+					</item>				
+																													<item id="20">
+		<onclick>SetProperty(Cocktail,demo/Cocktails/howto/bellini.jpg,6616)</onclick>
+				<onclick>ActivateWindow(6616)</onclick>
+						<label>Bellini</label>
+						<thumb>demo/cocktails\bellini.png</thumb>
+					
+					</item>						
+																													<item id="21">
+		<onclick>SetProperty(Cocktail,demo/Cocktails/howto/between the sheets.jpg,6616)</onclick>
+				<onclick>ActivateWindow(6616)</onclick>
+						<label>Between The Sheets</label>
+						<thumb>demo/cocktails\between the sheets.png</thumb>
+					
+					</item>						
+																													<item id="22">
+		<onclick>SetProperty(Cocktail,demo/Cocktails/howto/bikina martini.jpg,6616)</onclick>
+				<onclick>ActivateWindow(6616)</onclick>
+						<label>Bikini Martini</label>
+						<thumb>demo/cocktails\bikini martini.png</thumb>
+				
+					</item>						
+																														<item id="23">
+		<onclick>SetProperty(Cocktail,demo/Cocktails/howto/black russian.jpg,6616)</onclick>
+				<onclick>ActivateWindow(6616)</onclick>
+						<label>Black Russian</label>
+						<thumb>demo/cocktails\black russian.png</thumb>
+					
+					</item>	
+																													<item id="24">
+		<onclick>SetProperty(Cocktail,demo/Cocktails/howto/black santa.jpg,6616)</onclick>
+				<onclick>ActivateWindow(6616)</onclick>
+						<label>Black Santa</label>
+						<thumb>demo/cocktails\black santa.png</thumb>
+					
+					</item>						
+																														<item id="25">
+		<onclick>SetProperty(Cocktail,demo/Cocktails/howto/black velvet.jpg,6616)</onclick>
+				<onclick>ActivateWindow(6616)</onclick>
+						<label>Black Velvet</label>
+						<thumb>demo/cocktails\black velvet.png</thumb>
+					
+					</item>					
+																													<item id="26">
+		<onclick>SetProperty(Cocktail,demo/Cocktails/howto/bloody mary.jpg,6616)</onclick>
+				<onclick>ActivateWindow(6616)</onclick>
+						<label>Bloody Mary</label>
+						<thumb>demo/cocktails\bloody mary.png</thumb>
+				
+					</item>						
+																													<item id="27">
+		<onclick>SetProperty(Cocktail,demo/Cocktails/howto/bloody mary.jpg,6616)</onclick>
+				<onclick>ActivateWindow(6616)</onclick>
+						<label>Bloody Mary</label>
+						<thumb>demo/cocktails\bloody mary.png</thumb>
+				
+					</item>						
+																													<item id="28">
+		<onclick>SetProperty(Cocktail,demo/Cocktails/howto/blow job.jpg,6616)</onclick>
+				<onclick>ActivateWindow(6616)</onclick>
+						<label>Blow Job</label>
+						<thumb>demo/cocktails\blow job.png</thumb>
+				
+					</item>	
+																																		<item id="29">
+		<onclick>SetProperty(Cocktail,demo/Cocktails/howto/blue arrow.jpg,6616)</onclick>
+				<onclick>ActivateWindow(6616)</onclick>
+						<label>Blue Arrow</label>
+						<thumb>demo/cocktails\blue arrow.png</thumb>
+			
+					</item>	
+																													<item id="30">
+		<onclick>SetProperty(Cocktail,demo/Cocktails/howto/blue hawaiian.jpg,6616)</onclick>
+				<onclick>ActivateWindow(6616)</onclick>
+						<label>Blue Hawaiian</label>
+						<thumb>demo/cocktails\blue hawaiian.png</thumb>
+				
+					</item>						
+																													<item id="31">
+		<onclick>SetProperty(Cocktail,demo/Cocktails/howto/blue tequila.jpg,6616)</onclick>
+				<onclick>ActivateWindow(6616)</onclick>
+						<label>Blue Tequila</label>
+						<thumb>demo/cocktails\blue tequila.png</thumb>
+						
+					</item>						
+																													<item id="32">
+		<onclick>SetProperty(Cocktail,demo/Cocktails/howto/bocce ball.jpg,6616)</onclick>
+				<onclick>ActivateWindow(6616)</onclick>
+						<label>Bocce Ball</label>
+						<thumb>demo/cocktails\bocce ball.png</thumb>
+						
+					</item>						
+					
+					
+					
+					
+					
+					
+					
+</content>
+		</control>
+													
+				
+						
+						<!--Scrollbar-->
+
+					
+
+			
+			<!--Scrollbar-->
+			<control type="scrollbar" id="9010">
+				
+				<include>Common_Window_Scrollbar_Horizontal</include>
+				<posy>600</posy>
+				
+				<include>Common_Animation_Window_Scrollbar_Fade</include>
+				
+				<visible>Skin.HasSetting(UseTouchInput)</visible>
+				
+			</control>
+
+			</control>
+		<include>Snapped_Content</include>	
+	</controls>	
+		
+</window>

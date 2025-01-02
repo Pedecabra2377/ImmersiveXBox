@@ -1,0 +1,2723 @@
+<window id="7644">
+
+	<defaultcontrol always="true">1</defaultcontrol>
+	
+	<zorder>2</zorder>
+	
+	
+
+	<onload>Skin.SetString(snapwindow, 7644)</onload>
+<onload condition="!Skin.HasSetting(snapie)">Skin.ToggleSetting(snapie)</onload>
+<onload condition="Skin.HasSetting(gaming)">Skin.ToggleSetting(gaming)</onload>
+<onload>Skin.SetString(snap, demo/sna/act.jpg,0)</onload>
+<onload>Skin.SetString(sn,Atividade)</onload>
+	
+	<!--Splash Screen-->
+
+
+
+	
+ <include condition="!Window.Previous(Home)">Common_Animation_Window</include>
+					  <include condition="Window.Previous(Home)">Common_Animation_apps_dash</include> 
+	
+	<controls>
+
+		<!--Background Area-->
+ <include condition="!Window.Previous(Home)">Common_Animation_Window</include>
+					  <include condition="Window.Previous(Home)">Common_Animation_apps_dash</include> 
+
+		<control type="image">
+							 <include condition="!Window.Previous(Home)">Common_Animation_Window</include>
+					  <include condition="Window.Previous(Home)">Common_Animation_apps_dash</include> 
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1280</width>
+								<height>720</height>
+								<texture>demo/app/gamertag/bg.jpg</texture>
+		
+								
+							</control>	
+			<!--Content Area-->
+			<control type="group">
+			 <include condition="!Window.Previous(Home)">Common_Animation_Window</include>
+					  <include condition="Window.Previous(Home)">Common_Animation_apps_dash</include> 
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+				
+				<!--Animation-->
+				 <include condition="!Window.Previous(Home)">Common_Animation_Window</include>
+					  <include condition="Window.Previous(Home)">Common_Animation_apps_dash</include> 
+			
+				<control type="grouplist">
+		
+					<include>Common_Content_Grouplist_profile</include>
+					
+					
+					
+					<control type="group" id="100">
+					
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>1230</width>
+						<height>720</height>
+						
+					<control type="image">
+							 <include condition="!Window.Previous(Home)">Common_Animation_Window</include>
+					  <include condition="Window.Previous(Home)">Common_Animation_apps_dash</include> 
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1280</width>
+								<height>720</height>
+								<texture>demo/app/gamertag/bg.png</texture>
+		
+								
+							</control>	
+<control type="image">
+							 <include condition="!Window.Previous(Home)">Common_Animation_Window</include>
+					  <include condition="Window.Previous(Home)">Common_Animation_apps_dash</include> 
+								<posx>0</posx>
+								<posy>71</posy>
+								<width>550</width>
+								<height>580</height>
+								<texture>$INFO[skin.string(profilepicture)]</texture>
+						
+								<visible>!Skin.HasSetting(gpic)</visible>
+							</control>
+							<control type="image">
+						 <include condition="!Window.Previous(Home)">Common_Animation_Window</include>
+					  <include condition="Window.Previous(Home)">Common_Animation_apps_dash</include> 
+								<posx>0</posx>
+								<posy>71</posy>
+								<width>550</width>
+								<height>580</height>
+								<texture>$INFO[skin.string(profilepicture)]</texture>
+						
+								<visible>Skin.HasSetting(gpic)</visible>
+							</control>
+							 <include condition="!Window.Previous(Home)">Common_Animation_Window</include>
+					  <include condition="Window.Previous(Home)">Common_Animation_apps_dash</include> 
+								<posx>0</posx>
+								<posy>201</posy>
+								<width>550</width>
+								<height>450</height>
+								<texture>demo\fade.png</texture>
+						
+								
+							</control>
+							<control type="image">
+							 <include condition="!Window.Previous(Home)">Common_Animation_Window</include>
+					  <include condition="Window.Previous(Home)">Common_Animation_apps_dash</include> 
+								<posx>20</posx>
+								<posy>441</posy>
+								<width>9</width>
+								<height>9</height>
+								<texture>demo\green.png</texture>
+						<visible>Skin.HasSetting(online)</visible>
+								
+							</control>
+							<control type="image">
+						 <include condition="!Window.Previous(Home)">Common_Animation_Window</include>
+					  <include condition="Window.Previous(Home)">Common_Animation_apps_dash</include> 
+								<posx>20</posx>
+								<posy>441</posy>
+								<width>9</width>
+								<height>9</height>
+								<texture>demo\red.png</texture>
+						<visible>!Skin.HasSetting(online)</visible>
+								
+							</control>
+							<control type="label">
+			 <include condition="!Window.Previous(Home)">Common_Animation_Window</include>
+					  <include condition="Window.Previous(Home)">Common_Animation_apps_dash</include> 
+					<description>Profile Name</description>
+				<posx>40</posx>
+								<posy>361</posy>
+								<width>550</width>
+								<height>160</height>
+						<label>$INFO[skin.string(profilegamertag)]</label>
+					<font>Profile-Settings-Name</font>
+					<textcolor>Label_Normal</textcolor>
+	
+				</control>
+				<control type="textbox">
+			 <include condition="!Window.Previous(Home)">Common_Animation_Window</include>
+					  <include condition="Window.Previous(Home)">Common_Animation_apps_dash</include> 																
+							
+	
+			<label>Jogando Interface Xbox</label>
+
+		<posx>40</posx>
+								<posy>460</posy>
+								<width>550</width>
+								<height>160</height>
+		<font>DialogInfo-Label</font>
+			<textcolor>Label_Normal</textcolor>
+			<scrollspeed>0</scrollspeed>
+			<autoscroll>false</autoscroll>
+			<wrapmultiline>true</wrapmultiline>
+					
+									
+		</control>
+	
+		<control type="image">
+						 <include condition="!Window.Previous(Home)">Common_Animation_Window</include>
+					  <include condition="Window.Previous(Home)">Common_Animation_apps_dash</include> 
+								<posx>35</posx>
+								<posy>495</posy>
+								<width>480</width>
+								<height>2</height>
+								<texture>colors\color_white.png</texture>
+						
+								
+							</control>
+							<control type="image">
+							 <include condition="!Window.Previous(Home)">Common_Animation_Window</include>
+					  <include condition="Window.Previous(Home)">Common_Animation_apps_dash</include> 
+								<posx>35</posx>
+								<posy>515</posy>
+								<width>19</width>
+								<height>19</height>
+								<texture>demo\gsc.png</texture>
+						
+								
+							</control>
+						
+						
+							<control type="textbox">
+								 <include condition="!Window.Previous(Home)">Common_Animation_Window</include>
+					  <include condition="Window.Previous(Home)">Common_Animation_apps_dash</include> 												
+							
+	
+			<label>$INFO[Skin.String(XboxLive.Gamer.Score)]</label>
+
+			<posx>60</posx>
+								<posy>508</posy>
+								<width>550</width>
+								<height>160</height>
+		<font>DialogInfo-Label</font>
+			<textcolor>Label_Normal</textcolor>
+			<scrollspeed>0</scrollspeed>
+			<autoscroll>false</autoscroll>
+			<wrapmultiline>true</wrapmultiline>
+					
+											
+		</control>
+		<control type="textbox">
+																						
+							
+ <include condition="!Window.Previous(Home)">Common_Animation_Window</include>
+					  <include condition="Window.Previous(Home)">Common_Animation_apps_dash</include> 
+			<label>No Xbox</label>
+
+			<posx>40</posx>
+								<posy>560</posy>
+								<width>550</width>
+								<height>160</height>
+		<font>DialogInfo-Label2</font>
+			<textcolor>Label_Normal</textcolor>
+			<scrollspeed>0</scrollspeed>
+			<autoscroll>false</autoscroll>
+			<wrapmultiline>true</wrapmultiline>
+					
+											
+		</control>
+		<control type="textbox">
+																						
+				 <include condition="!Window.Previous(Home)">Common_Animation_Window</include>
+					  <include condition="Window.Previous(Home)">Common_Animation_apps_dash</include> 		
+	
+			<label>4 years</label>
+
+			<posx>40</posx>
+								<posy>590</posy>
+								<width>550</width>
+								<height>160</height>
+		<font>DialogInfo-Label</font>
+			<textcolor>Label_Normal</textcolor>
+			<scrollspeed>0</scrollspeed>
+			<autoscroll>false</autoscroll>
+			<wrapmultiline>true</wrapmultiline>
+				<visible>!Skin.HasSetting(Uptime)</visible>		
+											
+		</control>
+		<control type="textbox">
+																						
+			 <include condition="!Window.Previous(Home)">Common_Animation_Window</include>
+					  <include condition="Window.Previous(Home)">Common_Animation_apps_dash</include> 		
+	
+			<label>$INFO[System.Uptime]</label>
+
+			<posx>40</posx>
+								<posy>590</posy>
+								<width>100</width>
+								<height>260</height>
+		<font>DialogInfo-Label</font>
+			<textcolor>Label_Normal</textcolor>
+			<scrollspeed>0</scrollspeed>
+			<autoscroll>false</autoscroll>
+			<wrapmultiline>true</wrapmultiline>
+					
+				<visible>Skin.HasSetting(Uptime)</visible>							
+		</control>
+		
+		
+		
+		
+		
+		
+		
+		
+				<control type="textbox">
+																						
+			 <include condition="!Window.Previous(Home)">Common_Animation_Window</include>
+					  <include condition="Window.Previous(Home)">Common_Animation_apps_dash</include> 		
+	
+			<label>Friends</label>
+
+			<posx>155</posx>
+								<posy>508</posy>
+								<width>550</width>
+								<height>160</height>
+		<font>DialogInfo-Label2</font>
+			<textcolor>Label_Normal</textcolor>
+			<scrollspeed>0</scrollspeed>
+			<autoscroll>false</autoscroll>
+			<wrapmultiline>true</wrapmultiline>
+					
+											
+		</control>
+			<control type="textbox">
+				 <include condition="!Window.Previous(Home)">Common_Animation_Window</include>
+					  <include condition="Window.Previous(Home)">Common_Animation_apps_dash</include> 																
+							
+	
+			<label>$INFO[Skin.String(fndcnt)]</label>
+
+			<posx>155</posx>
+								<posy>532</posy>
+								<width>550</width>
+								<height>160</height>
+		<font>DialogInfo-Label</font>
+			<textcolor>Label_Normal</textcolor>
+			<scrollspeed>0</scrollspeed>
+			<autoscroll>false</autoscroll>
+			<wrapmultiline>true</wrapmultiline>
+					
+											
+		</control>
+		
+		
+		
+		
+		
+		<control type="textbox">
+				 <include condition="!Window.Previous(Home)">Common_Animation_Window</include>
+					  <include condition="Window.Previous(Home)">Common_Animation_apps_dash</include> 																
+							
+	
+			<label>Followers</label>
+
+			<posx>155</posx>
+								<posy>560</posy>
+								<width>550</width>
+								<height>160</height>
+		<font>DialogInfo-Label2</font>
+			<textcolor>Label_Normal</textcolor>
+			<scrollspeed>0</scrollspeed>
+			<autoscroll>false</autoscroll>
+			<wrapmultiline>true</wrapmultiline>
+					
+											
+		</control>
+		<control type="textbox">
+																						
+				 <include condition="!Window.Previous(Home)">Common_Animation_Window</include>
+					  <include condition="Window.Previous(Home)">Common_Animation_apps_dash</include> 	
+	
+			<label>$INFO[Skin.String(followers)]</label>
+
+		<posx>155</posx>
+								<posy>590</posy>
+								<width>550</width>
+								<height>160</height>
+		<font>DialogInfo-Label</font>
+			<textcolor>Label_Normal</textcolor>
+			<scrollspeed>0</scrollspeed>
+			<autoscroll>false</autoscroll>
+			<wrapmultiline>true</wrapmultiline>
+					
+											
+		</control>
+		
+		
+		
+				<control type="textbox">
+																						
+					 <include condition="!Window.Previous(Home)">Common_Animation_Window</include>
+					  <include condition="Window.Previous(Home)">Common_Animation_apps_dash</include> 	
+	
+			<label>Reputation</label>
+
+			<posx>340</posx>
+								<posy>508</posy>
+								<width>550</width>
+								<height>160</height>
+		<font>DialogInfo-Label2</font>
+			<textcolor>Label_Normal</textcolor>
+			<scrollspeed>0</scrollspeed>
+			<autoscroll>false</autoscroll>
+			<wrapmultiline>true</wrapmultiline>
+					
+											
+		</control>
+		<control type="textbox">
+																						
+				<include>Common_Animation_Dialog_Player</include>			
+	
+			<label>Bom jogador</label>
+
+			<posx>340</posx>
+								<posy>532</posy>
+								<width>550</width>
+								<height>160</height>
+		<font>DialogInfo-Label</font>
+			<textcolor>Label_Normal</textcolor>
+			<scrollspeed>0</scrollspeed>
+			<autoscroll>false</autoscroll>
+			<wrapmultiline>true</wrapmultiline>
+					
+											
+		</control>
+		
+
+							
+							<control type="multiimage">
+                   <include condition="!Window.Previous(Home)">Common_Animation_Window</include>
+					  <include condition="Window.Previous(Home)">Common_Animation_apps_dash</include> 
+                         <posx>340</posx>
+								<posy>580</posy>
+								<width>80</width>
+								<height>80</height>
+                        <imagepath>demo\rating\</imagepath>
+		<timeperimage>0</timeperimage>
+		<fadetime>40</fadetime>
+		
+		<randomize>no</randomize>
+		<loop>no</loop>
+        </control>
+					
+																			
+									<!--Top Area-->
+
+			
+
+			<control type="panel" id="1">
+				
+<posx>580</posx>
+						<posy>185</posy>
+
+				<onright>53</onright>
+		<onleft>-</onleft>
+						<include>Common_AltHome_Panel383</include>
+					
+
+
+
+
+						
+						
+						<content>
+						
+
+							
+										<item id="1">
+								<description>Games</description>
+								<label>Enviar  ></label>
+								<thumb></thumb>
+													
+										<onclick>ActivateWindow(5410)</onclick>
+									
+														
+							</item>
+								<item id="2">
+								<description>Games</description>
+								<label>Silenciar bate-papo</label>
+								<thumb></thumb>
+													
+								<onclick>-</onclick>						
+							</item>
+							<item id="3">
+								<description>Games</description>
+								<label>Entrar  ></label>
+								<thumb></thumb>
+											<onclick>ActivateWindow(5310)</onclick>
+									
+							</item>
+							
+							
+									
+
+												
+
+
+								</content>
+
+					</control>
+					
+				
+</control>
+				
+						<control type="group">
+						
+					<width>920</width>
+					<height>720</height>		
+					
+					<control type="image">
+					
+						<posx>-69</posx>
+						<posy>71.7</posy>
+						<width>550</width>
+					<height>580</height>
+						<texture>colors\color_friend2.png</texture>
+					</control>
+						<control type="label">
+                                           <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="60" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+										
+                                                                <posx>0</posx>
+								<posy>120</posy>
+                                                                <width min="20" max="250">auto</width>
+                                                                <height>20</height>
+                                                                <label>FEED DE ATIVIDADE</label>
+                                                                <font>Home-Tile-Header</font>
+                                                                <textcolor>black</textcolor>
+                                                                <aligny>center</aligny>
+                                                              
+                                                        </control>
+														
+														
+														
+<control type="panel" id="53">
+															 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="60" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+				
+	<posx>0</posx>
+				<posy>150</posy>
+			<height>440</height>
+
+				
+	<onup>10000</onup>
+				<ondown>8</ondown>
+				<onleft>1</onleft>
+				<onright>88</onright>
+						<include>Common_AltHome_Panel391-social_feed</include>
+					
+
+
+
+
+						
+						
+						<content>
+						
+							<item id="21">
+								<description>Games</description>
+								<label>$INFO[Skin.string(Friend1)] uploaded this:</label>
+								<label2>demo\feed\video1.png</label2>
+								<thumb>special://skin/system/D400040/Friend/pictures/$INFO[Skin.string(Friend1)].png</thumb>
+								<onclick>Skin.SetString(SocialVideo, special://skin/system/videos/titanfall.mp4)</onclick>
+								<onclick>Skin.SetString(SocialImage, special://skin/system/D400040/Friend/pictures/$INFO[Skin.string(Friend1)].png)</onclick>
+									<onclick>Skin.SetString(SocialStatus, $INFO[Skin.string(Friend1)] said this:)</onclick>
+									<onclick>Skin.SetString(SocialVideoImage, demo\feed\video1.png)</onclick>
+									<onclick>Skin.SetString(SocialMessage, )</onclick>
+													<onclick condition="!Player.HasMedia">ActivateWindow(5605)</onclick> 
+													<onclick>Skin.SetString(Comment1, )</onclick>
+									<onclick>Skin.SetString(Comment2, )</onclick>
+<onclick>Skin.SetString(Comment3, )</onclick>
+<onclick>Skin.SetString(Comment4, )</onclick>
+<onclick>Skin.SetString(Comment5, )</onclick>
+<onclick>Skin.SetString(Comment6, )</onclick>
+<onclick>Skin.SetString(Comment7, )</onclick>
+<onclick>Skin.SetString(Comment8, )</onclick>
+<onclick>Skin.SetString(Comment9, )</onclick>
+<onclick>Skin.SetString(Comment10, )</onclick>	
+														
+							</item>
+							<item id="22">
+								<description>Games</description>
+								<label>$INFO[Skin.string(Friend2)] said this:</label>
+								<label2>Who's up for playing some[CR]Titalfall tonight at around 8ish ?</label2>
+								<thumb>special://skin/system/D400040/Friend/pictures/$INFO[Skin.string(Friend2)].png</thumb>
+													
+<onclick>Skin.SetString(SocialImage, special://skin/system/D400040/Friend/pictures/$INFO[Skin.string(Friend2)].png)</onclick>
+									<onclick>Skin.SetString(SocialStatus, $INFO[Skin.string(Friend2)] said this:)</onclick>
+									<onclick>Skin.SetString(SocialMessage, Who's up for playing some[CR]Titalfall tonight at around 8ish ?)</onclick>  
+									<onclick>ActivateWindow(5605)</onclick>   
+										<onclick>Skin.SetString(Comment1, )</onclick>
+<onclick>Skin.SetString(Comment2, )</onclick>
+<onclick>Skin.SetString(Comment3, )</onclick>
+<onclick>Skin.SetString(Comment4, )</onclick>
+<onclick>Skin.SetString(Comment5, )</onclick>
+<onclick>Skin.SetString(Comment6, )</onclick>
+<onclick>Skin.SetString(Comment7, )</onclick>
+<onclick>Skin.SetString(Comment8, )</onclick>
+<onclick>Skin.SetString(Comment9, )</onclick>
+<onclick>Skin.SetString(Comment10, )</onclick>				
+							</item>
+							<item id="23">
+								<description>Games</description>
+								<label>$INFO[Skin.string(Friend3)] said this:</label>
+								<label2>Is anyone getting the new[CR]Forza Horizon 2 ? </label2>
+								<thumb>special://skin/system/D400040/Friend/pictures/$INFO[Skin.string(Friend3)].png</thumb>
+													
+								<onclick>Skin.SetString(SocialImage, special://skin/system/D400040/Friend/pictures/$INFO[Skin.string(Friend3)].png)</onclick>
+									<onclick>Skin.SetString(SocialStatus, $INFO[Skin.string(Friend3)] said this:)</onclick>
+									<onclick>Skin.SetString(SocialMessage, Is anyone getting the new[CR]Forza Horizon 2 ? )</onclick>  
+									<onclick>ActivateWindow(5605)</onclick>   
+										<onclick>Skin.SetString(Comment1, )</onclick>
+<onclick>Skin.SetString(Comment2, )</onclick>
+<onclick>Skin.SetString(Comment3, )</onclick>
+<onclick>Skin.SetString(Comment4, )</onclick>
+<onclick>Skin.SetString(Comment5, )</onclick>
+<onclick>Skin.SetString(Comment6, )</onclick>
+<onclick>Skin.SetString(Comment7, )</onclick>
+<onclick>Skin.SetString(Comment8, )</onclick>
+<onclick>Skin.SetString(Comment9, )</onclick>
+<onclick>Skin.SetString(Comment10, )</onclick>		
+														
+							</item>
+							<item id="24">
+								<description>Games</description>
+								<label>$INFO[Skin.string(Friend4)] said this:</label>
+								<label2>has anyone heard from $INFO[Skin.string(Friend2)] ?</label2>
+								<thumb>special://skin/system/D400040/Friend/pictures/$INFO[Skin.string(Friend4)].png</thumb>
+													
+										<onclick>Skin.SetString(SocialImage, special://skin/system/D400040/Friend/pictures/$INFO[Skin.string(Friend4)].png)</onclick>
+									<onclick>Skin.SetString(SocialStatus, $INFO[Skin.string(Friend4)] said this:)</onclick>
+									<onclick>Skin.SetString(SocialMessage, has anyone heard from $INFO[Skin.string(Friend2)] ? )</onclick>  
+									<onclick>ActivateWindow(5605)</onclick>   
+										<onclick>Skin.SetString(Comment1, )</onclick>
+<onclick>Skin.SetString(Comment2, )</onclick>
+<onclick>Skin.SetString(Comment3, )</onclick>
+<onclick>Skin.SetString(Comment4, )</onclick>
+<onclick>Skin.SetString(Comment5, )</onclick>
+<onclick>Skin.SetString(Comment6, )</onclick>
+<onclick>Skin.SetString(Comment7, )</onclick>
+<onclick>Skin.SetString(Comment8, )</onclick>
+<onclick>Skin.SetString(Comment9, )</onclick>
+<onclick>Skin.SetString(Comment10, )</onclick>		
+															
+							</item>
+							<item id="25">
+								<description>Games</description>
+								<label>$INFO[Skin.string(Friend5)] said this:</label>
+								<label2>Anyone know when the next[CR]dashboard update is coming[CR]out for Xbox One ?</label2>
+								<thumb>special://skin/system/D400040/Friend/pictures/$INFO[Skin.string(Friend5)].png</thumb>
+													
+											<onclick>Skin.SetString(SocialImage, special://skin/system/D400040/Friend/pictures/$INFO[Skin.string(Friend5)].png)</onclick>
+									<onclick>Skin.SetString(SocialStatus, $INFO[Skin.string(Friend5)] said this:)</onclick>
+									<onclick>Skin.SetString(SocialMessage, Anyone know when the next[CR]dashboard update is coming[CR]out for Xbox One ? )</onclick>  
+									<onclick>ActivateWindow(5605)</onclick>   
+										<onclick>Skin.SetString(Comment1, )</onclick>
+<onclick>Skin.SetString(Comment2, )</onclick>
+<onclick>Skin.SetString(Comment3, )</onclick>
+<onclick>Skin.SetString(Comment4, )</onclick>
+<onclick>Skin.SetString(Comment5, )</onclick>
+<onclick>Skin.SetString(Comment6, )</onclick>
+<onclick>Skin.SetString(Comment7, )</onclick>
+<onclick>Skin.SetString(Comment8, )</onclick>
+<onclick>Skin.SetString(Comment9, )</onclick>
+<onclick>Skin.SetString(Comment10, )</onclick>		
+										
+														
+							</item>
+							<item id="26">
+								<description>Games</description>
+								<label>$INFO[Skin.string(Friend3)] uploaded this:</label>
+								<label2>demo\feed\plants.png</label2>
+								<thumb>special://skin/system/D400040/Friend/pictures/$INFO[Skin.string(Friend3)].png</thumb>
+								<onclick>Skin.SetString(SocialVideo, special://skin/system/videos/plants.mp4)</onclick>
+								<onclick>Skin.SetString(SocialImage, special://skin/system/D400040/Friend/pictures/$INFO[Skin.string(Friend3)].png)</onclick>
+									<onclick>Skin.SetString(SocialStatus, $INFO[Skin.string(Friend3)] said this:)</onclick>
+									<onclick>Skin.SetString(SocialVideoImage, demo\feed\plants.png)</onclick>
+									<onclick>Skin.SetString(SocialMessage, )</onclick>
+													<onclick condition="!Player.HasMedia">ActivateWindow(5605)</onclick> 
+													<onclick>Skin.SetString(Comment1, )</onclick>
+									<onclick>Skin.SetString(Comment2, )</onclick>
+<onclick>Skin.SetString(Comment3, )</onclick>
+<onclick>Skin.SetString(Comment4, )</onclick>
+<onclick>Skin.SetString(Comment5, )</onclick>
+<onclick>Skin.SetString(Comment6, )</onclick>
+<onclick>Skin.SetString(Comment7, )</onclick>
+<onclick>Skin.SetString(Comment8, )</onclick>
+<onclick>Skin.SetString(Comment9, )</onclick>
+<onclick>Skin.SetString(Comment10, )</onclick>	
+														
+							</item>
+							<item id="27">
+								<description>Games</description>
+								<label>$INFO[Skin.string(Friend6)] said this:</label>
+								<label2>Anyone on Call Of Duty Ghosts ? </label2>
+								<thumb>special://skin/system/D400040/Friend/pictures/$INFO[Skin.string(Friend6)].png</thumb>
+													
+												<onclick>Skin.SetString(SocialImage, special://skin/system/D400040/Friend/pictures/$INFO[Skin.string(Friend6)].png)</onclick>
+									<onclick>Skin.SetString(SocialStatus, $INFO[Skin.string(Friend6)] said this:)</onclick>
+									<onclick>Skin.SetString(SocialMessage, Anyone on Call Of Duty Ghosts ? )</onclick>  
+									<onclick>ActivateWindow(5605)</onclick>   
+										<onclick>Skin.SetString(Comment1, )</onclick>
+<onclick>Skin.SetString(Comment2, )</onclick>
+<onclick>Skin.SetString(Comment3, )</onclick>
+<onclick>Skin.SetString(Comment4, )</onclick>
+<onclick>Skin.SetString(Comment5, )</onclick>
+<onclick>Skin.SetString(Comment6, )</onclick>
+<onclick>Skin.SetString(Comment7, )</onclick>
+<onclick>Skin.SetString(Comment8, )</onclick>
+<onclick>Skin.SetString(Comment9, )</onclick>
+<onclick>Skin.SetString(Comment10, )</onclick>		
+														
+							</item>
+							<item id="28">
+								<description>Games</description>
+								<label>$INFO[Skin.string(Friend7)]said this:</label>
+								<label2>Who's going to get the[CR]next gen Grand Theft Auto V ?[CR]Looks fucking awesome!</label2>
+								<thumb>special://skin/system/D400040/Friend/pictures/$INFO[Skin.string(Friend7)].png</thumb>
+													
+											<onclick>Skin.SetString(SocialImage, special://skin/system/D400040/Friend/pictures/$INFO[Skin.string(Friend7)].png)</onclick>
+									<onclick>Skin.SetString(SocialStatus, $INFO[Skin.string(Friend7)] said this:)</onclick>
+									<onclick>Skin.SetString(SocialMessage, Who's going to get the[CR]next gen Grand Theft Auto V ?[CR]Looks fucking awesome! )</onclick>  
+									<onclick>ActivateWindow(5605)</onclick>   
+										<onclick>Skin.SetString(Comment1, )</onclick>
+<onclick>Skin.SetString(Comment2, )</onclick>
+<onclick>Skin.SetString(Comment3, )</onclick>
+<onclick>Skin.SetString(Comment4, )</onclick>
+<onclick>Skin.SetString(Comment5, )</onclick>
+<onclick>Skin.SetString(Comment6, )</onclick>
+<onclick>Skin.SetString(Comment7, )</onclick>
+<onclick>Skin.SetString(Comment8, )</onclick>
+<onclick>Skin.SetString(Comment9, )</onclick>
+<onclick>Skin.SetString(Comment10, )</onclick>		
+										
+														
+							</item>
+						
+<item id="29">
+								<description>Games</description>
+								<label>$INFO[Skin.string(Friend8)]said this:</label>
+								<label2>Is Dead Rising 3 any good ?[CR]I'm thinking of buying it.</label2>
+								<thumb>special://skin/system/D400040/Friend/pictures/$INFO[Skin.string(Friend8)].png</thumb>
+													
+											<onclick>Skin.SetString(SocialImage, special://skin/system/D400040/Friend/pictures/$INFO[Skin.string(Friend8)].png)</onclick>
+									<onclick>Skin.SetString(SocialStatus, $INFO[Skin.string(Friend8)] said this:)</onclick>
+									<onclick>Skin.SetString(SocialMessage, Is Dead Rising 3 any good ?[CR]I'm thinking of buying it. )</onclick>  
+									<onclick>ActivateWindow(5605)</onclick>   
+										<onclick>Skin.SetString(Comment1, )</onclick>
+<onclick>Skin.SetString(Comment2, )</onclick>
+<onclick>Skin.SetString(Comment3, )</onclick>
+<onclick>Skin.SetString(Comment4, )</onclick>
+<onclick>Skin.SetString(Comment5, )</onclick>
+<onclick>Skin.SetString(Comment6, )</onclick>
+<onclick>Skin.SetString(Comment7, )</onclick>
+<onclick>Skin.SetString(Comment8, )</onclick>
+<onclick>Skin.SetString(Comment9, )</onclick>
+<onclick>Skin.SetString(Comment10, )</onclick>		
+										
+														
+							</item>
+							<item id="30">
+								<description>Games</description>
+								<label>$INFO[Skin.string(Friend9)] said this:</label>
+								<label2>Anyone else having problems[CR]with Internet Explorer ?[CR]Mine won't load :(</label2>
+								<thumb>special://skin/system/D400040/Friend/pictures/$INFO[Skin.string(Friend9)].png</thumb>
+											<onclick>Skin.SetString(SocialImage, special://skin/system/D400040/Friend/pictures/$INFO[Skin.string(Friend9)].png)</onclick>
+									<onclick>Skin.SetString(SocialStatus, $INFO[Skin.string(Friend9)] said this:)</onclick>
+									<onclick>Skin.SetString(SocialMessage, Anyone else having problems[CR]with Internet Explorer ?[CR]Mine won't load :( )</onclick>  
+									<onclick>ActivateWindow(5605)</onclick>   
+										<onclick>Skin.SetString(Comment1, )</onclick>
+<onclick>Skin.SetString(Comment2, )</onclick>
+<onclick>Skin.SetString(Comment3, )</onclick>
+<onclick>Skin.SetString(Comment4, )</onclick>
+<onclick>Skin.SetString(Comment5, )</onclick>
+<onclick>Skin.SetString(Comment6, )</onclick>
+<onclick>Skin.SetString(Comment7, )</onclick>
+<onclick>Skin.SetString(Comment8, )</onclick>
+<onclick>Skin.SetString(Comment9, )</onclick>
+<onclick>Skin.SetString(Comment10, )</onclick>		
+										
+														
+							</item>
+								
+							<item id="31">
+								<description>Games</description>
+								<label>$INFO[Skin.string(Friend11)] said this:</label>
+								<label2>Someone invite me to a good[CR]game on Call Of Duty!</label2>
+								<thumb>special://skin/system/D400040/Friend/pictures/$INFO[Skin.string(Friend11)].png</thumb>
+													
+											<onclick>Skin.SetString(SocialImage, special://skin/system/D400040/Friend/pictures/$INFO[Skin.string(Friend11)].png)</onclick>
+									<onclick>Skin.SetString(SocialStatus, $INFO[Skin.string(Friend11)] said this:)</onclick>
+									<onclick>Skin.SetString(SocialMessage, Someone invite me to a good[CR]game on Call Of Duty! )</onclick>  
+									<onclick>ActivateWindow(5605)</onclick>   
+										<onclick>Skin.SetString(Comment1, )</onclick>
+<onclick>Skin.SetString(Comment2, )</onclick>
+<onclick>Skin.SetString(Comment3, )</onclick>
+<onclick>Skin.SetString(Comment4, )</onclick>
+<onclick>Skin.SetString(Comment5, )</onclick>
+<onclick>Skin.SetString(Comment6, )</onclick>
+<onclick>Skin.SetString(Comment7, )</onclick>
+<onclick>Skin.SetString(Comment8, )</onclick>
+<onclick>Skin.SetString(Comment9, )</onclick>
+<onclick>Skin.SetString(Comment10, )</onclick>		
+										
+														
+							</item>
+									
+							<item id="32">
+								<description>Games</description>
+								<label>$INFO[Skin.string(Friend1)] said this:</label>
+								<label2>Someone join me on Minecraft tonight?</label2>
+								<thumb>special://skin/system/D400040/Friend/pictures/$INFO[Skin.string(Friend1)].png</thumb>
+													<onclick>Skin.SetString(ProfileGamertag, $INFO[Skin.String(Friend1)])</onclick>
+													<onclick>Skin.SetString(ProfilePicture, special://skin/system/D400040/Friend/pictures/$INFO[Skin.string(Friend1)].png)</onclick>
+													
+											<onclick>Skin.SetString(SocialImage, special://skin/system/D400040/Friend/pictures/$INFO[Skin.string(Friend1)].png)</onclick>
+									<onclick>Skin.SetString(SocialStatus, $INFO[Skin.string(Friend1)] said this:)</onclick>
+									<onclick>Skin.SetString(SocialMessage, Someone join me on Minecraft tonight? )</onclick>  
+									<onclick>ActivateWindow(5605)</onclick>   
+										<onclick>Skin.SetString(Comment1, )</onclick>
+<onclick>Skin.SetString(Comment2, )</onclick>
+<onclick>Skin.SetString(Comment3, )</onclick>
+<onclick>Skin.SetString(Comment4, )</onclick>
+<onclick>Skin.SetString(Comment5, )</onclick>
+<onclick>Skin.SetString(Comment6, )</onclick>
+<onclick>Skin.SetString(Comment7, )</onclick>
+<onclick>Skin.SetString(Comment8, )</onclick>
+<onclick>Skin.SetString(Comment9, )</onclick>
+<onclick>Skin.SetString(Comment10, )</onclick>		
+										
+														
+							</item>
+							<item id="33">
+								<description>Games</description>
+								<label>$INFO[Skin.string(Friend2)] said this:</label>
+								<label2>Anyone up for doing an all nighter on Minecraft ?</label2>
+								<thumb>special://skin/system/D400040/Friend/pictures/$INFO[Skin.string(Friend2)].png</thumb>
+													
+											<onclick>Skin.SetString(SocialImage, special://skin/system/D400040/Friend/pictures/$INFO[Skin.string(Friend2)].png)</onclick>
+									<onclick>Skin.SetString(SocialStatus, $INFO[Skin.string(Friend2)] said this:)</onclick>
+									<onclick>Skin.SetString(SocialMessage, Anyone up for doing an all nighter on Minecraft ? )</onclick>  
+									<onclick>ActivateWindow(5605)</onclick>   
+										<onclick>Skin.SetString(Comment1, )</onclick>
+<onclick>Skin.SetString(Comment2, )</onclick>
+<onclick>Skin.SetString(Comment3, )</onclick>
+<onclick>Skin.SetString(Comment4, )</onclick>
+<onclick>Skin.SetString(Comment5, )</onclick>
+<onclick>Skin.SetString(Comment6, )</onclick>
+<onclick>Skin.SetString(Comment7, )</onclick>
+<onclick>Skin.SetString(Comment8, )</onclick>
+<onclick>Skin.SetString(Comment9, )</onclick>
+<onclick>Skin.SetString(Comment10, )</onclick>		
+										
+														
+							</item>
+							<item id="34">
+								<description>Games</description>
+								<label>$INFO[Skin.string(Friend3)] said this:</label>
+								<label2>Who's up for racing me on Need For Speed ?</label2>
+								<thumb>special://skin/system/D400040/Friend/pictures/$INFO[Skin.string(Friend3)].png</thumb>
+													
+												<onclick>Skin.SetString(SocialImage, special://skin/system/D400040/Friend/pictures/$INFO[Skin.string(Friend3)].png)</onclick>
+									<onclick>Skin.SetString(SocialStatus, $INFO[Skin.string(Friend3)] said this:)</onclick>
+									<onclick>Skin.SetString(SocialMessage, Who's up for racing me on Need For Speed ? )</onclick>  
+									<onclick>ActivateWindow(5605)</onclick>   
+										<onclick>Skin.SetString(Comment1, )</onclick>
+<onclick>Skin.SetString(Comment2, )</onclick>
+<onclick>Skin.SetString(Comment3, )</onclick>
+<onclick>Skin.SetString(Comment4, )</onclick>
+<onclick>Skin.SetString(Comment5, )</onclick>
+<onclick>Skin.SetString(Comment6, )</onclick>
+<onclick>Skin.SetString(Comment7, )</onclick>
+<onclick>Skin.SetString(Comment8, )</onclick>
+<onclick>Skin.SetString(Comment9, )</onclick>
+<onclick>Skin.SetString(Comment10, )</onclick>		
+										
+														
+							</item>
+							<item id="35">
+								<description>Games</description>
+								<label>$INFO[Skin.string(Friend4)] said this:</label>
+								<label2>$INFO[Skin.string(Friend8)] Accept my friend request!!!</label2>
+								<thumb>special://skin/system/D400040/Friend/pictures/$INFO[Skin.string(Friend4)].png</thumb>
+													
+											<onclick>Skin.SetString(SocialImage, special://skin/system/D400040/Friend/pictures/$INFO[Skin.string(Friend4)].png)</onclick>
+									<onclick>Skin.SetString(SocialStatus, $INFO[Skin.string(Friend4)] said this:)</onclick>
+									<onclick>Skin.SetString(SocialMessage, $INFO[Skin.string(Friend8)] Accept my friend request!!! )</onclick>  
+									<onclick>ActivateWindow(5605)</onclick>   
+										<onclick>Skin.SetString(Comment1, )</onclick>
+<onclick>Skin.SetString(Comment2, )</onclick>
+<onclick>Skin.SetString(Comment3, )</onclick>
+<onclick>Skin.SetString(Comment4, )</onclick>
+<onclick>Skin.SetString(Comment5, )</onclick>
+<onclick>Skin.SetString(Comment6, )</onclick>
+<onclick>Skin.SetString(Comment7, )</onclick>
+<onclick>Skin.SetString(Comment8, )</onclick>
+<onclick>Skin.SetString(Comment9, )</onclick>
+<onclick>Skin.SetString(Comment10, )</onclick>		
+										
+														
+							</item>
+							<item id="36">
+								<description>Games</description>
+								<label>$INFO[Skin.string(Friend5)] said this:</label>
+								<label2>Anyone got any spare trial memberships I can have ?</label2>
+								<thumb>special://skin/system/D400040/Friend/pictures/$INFO[Skin.string(Friend5)].png</thumb>
+													
+												<onclick>Skin.SetString(SocialImage, special://skin/system/D400040/Friend/pictures/$INFO[Skin.string(Friend5)].png)</onclick>
+									<onclick>Skin.SetString(SocialStatus, $INFO[Skin.string(Friend5)] said this:)</onclick>
+									<onclick>Skin.SetString(SocialMessage, Anyone got any spare trial memberships I can have ? )</onclick>  
+									<onclick>ActivateWindow(5605)</onclick>   
+										<onclick>Skin.SetString(Comment1, )</onclick>
+<onclick>Skin.SetString(Comment2, )</onclick>
+<onclick>Skin.SetString(Comment3, )</onclick>
+<onclick>Skin.SetString(Comment4, )</onclick>
+<onclick>Skin.SetString(Comment5, )</onclick>
+<onclick>Skin.SetString(Comment6, )</onclick>
+<onclick>Skin.SetString(Comment7, )</onclick>
+<onclick>Skin.SetString(Comment8, )</onclick>
+<onclick>Skin.SetString(Comment9, )</onclick>
+<onclick>Skin.SetString(Comment10, )</onclick>		
+										
+														
+							</item>
+							<item id="37">
+								<description>Games</description>
+								<label>$INFO[Skin.string(Friend6)] said this:</label>
+								<label2>Anyone know the release date for Dying Light?</label2>
+								<thumb>special://skin/system/D400040/Friend/pictures/$INFO[Skin.string(Friend6)].png</thumb>
+													
+												<onclick>Skin.SetString(SocialImage, special://skin/system/D400040/Friend/pictures/$INFO[Skin.string(Friend6)].png)</onclick>
+									<onclick>Skin.SetString(SocialStatus, $INFO[Skin.string(Friend6)] said this:)</onclick>
+									<onclick>Skin.SetString(SocialMessage, Anyone know the release date for Dying Light? )</onclick>  
+									<onclick>ActivateWindow(5605)</onclick>   
+										<onclick>Skin.SetString(Comment1, )</onclick>
+<onclick>Skin.SetString(Comment2, )</onclick>
+<onclick>Skin.SetString(Comment3, )</onclick>
+<onclick>Skin.SetString(Comment4, )</onclick>
+<onclick>Skin.SetString(Comment5, )</onclick>
+<onclick>Skin.SetString(Comment6, )</onclick>
+<onclick>Skin.SetString(Comment7, )</onclick>
+<onclick>Skin.SetString(Comment8, )</onclick>
+<onclick>Skin.SetString(Comment9, )</onclick>
+<onclick>Skin.SetString(Comment10, )</onclick>		
+										
+														
+							</item>
+							<item id="38">
+								<description>Games</description>
+								<label>$INFO[Skin.string(Friend7)]said this:</label>
+								<label2>Someone join me on NFS ?</label2>
+								<thumb>special://skin/system/D400040/Friend/pictures/$INFO[Skin.string(Friend7)].png</thumb>
+													
+												<onclick>Skin.SetString(SocialImage, special://skin/system/D400040/Friend/pictures/$INFO[Skin.string(Friend7)].png)</onclick>
+									<onclick>Skin.SetString(SocialStatus, $INFO[Skin.string(Friend7)] said this:)</onclick>
+									<onclick>Skin.SetString(SocialMessage, Someone join me on NFS ? )</onclick>  
+									<onclick>ActivateWindow(5605)</onclick>   
+										<onclick>Skin.SetString(Comment1, )</onclick>
+<onclick>Skin.SetString(Comment2, )</onclick>
+<onclick>Skin.SetString(Comment3, )</onclick>
+<onclick>Skin.SetString(Comment4, )</onclick>
+<onclick>Skin.SetString(Comment5, )</onclick>
+<onclick>Skin.SetString(Comment6, )</onclick>
+<onclick>Skin.SetString(Comment7, )</onclick>
+<onclick>Skin.SetString(Comment8, )</onclick>
+<onclick>Skin.SetString(Comment9, )</onclick>
+<onclick>Skin.SetString(Comment10, )</onclick>		
+										
+														
+							</item>
+						
+<item id="39">
+								<description>Games</description>
+								<label>$INFO[Skin.string(Friend8)]said this:</label>
+								<label2>Anyone wanna buy an Xbox One headset ?</label2>
+								<thumb>special://skin/system/D400040/Friend/pictures/$INFO[Skin.string(Friend8)].png</thumb>
+													
+												<onclick>Skin.SetString(SocialImage, special://skin/system/D400040/Friend/pictures/$INFO[Skin.string(Friend8)].png)</onclick>
+									<onclick>Skin.SetString(SocialStatus, $INFO[Skin.string(Friend8)] said this:)</onclick>
+									<onclick>Skin.SetString(SocialMessage, Anyone wanna buy an Xbox One headset ? )</onclick>  
+									<onclick>ActivateWindow(5605)</onclick>   
+										<onclick>Skin.SetString(Comment1, )</onclick>
+<onclick>Skin.SetString(Comment2, )</onclick>
+<onclick>Skin.SetString(Comment3, )</onclick>
+<onclick>Skin.SetString(Comment4, )</onclick>
+<onclick>Skin.SetString(Comment5, )</onclick>
+<onclick>Skin.SetString(Comment6, )</onclick>
+<onclick>Skin.SetString(Comment7, )</onclick>
+<onclick>Skin.SetString(Comment8, )</onclick>
+<onclick>Skin.SetString(Comment9, )</onclick>
+<onclick>Skin.SetString(Comment10, )</onclick>		
+										
+														
+							</item>
+							<item id="40">
+								<description>Games</description>
+								<label>$INFO[Skin.string(Friend9)] said this:</label>
+								<label2>Anyone played Murdered Soul Suspect yet ? Any good ? </label2>
+								<thumb>special://skin/system/D400040/Friend/pictures/$INFO[Skin.string(Friend9)].png</thumb>
+													
+													<onclick>Skin.SetString(SocialImage, special://skin/system/D400040/Friend/pictures/$INFO[Skin.string(Friend9)].png)</onclick>
+									<onclick>Skin.SetString(SocialStatus, $INFO[Skin.string(Friend9)] said this:)</onclick>
+									<onclick>Skin.SetString(SocialMessage, Anyone played Murdered Soul Suspect yet ? Any good ? )</onclick>  
+									<onclick>ActivateWindow(5605)</onclick>   
+										<onclick>Skin.SetString(Comment1, )</onclick>
+<onclick>Skin.SetString(Comment2, )</onclick>
+<onclick>Skin.SetString(Comment3, )</onclick>
+<onclick>Skin.SetString(Comment4, )</onclick>
+<onclick>Skin.SetString(Comment5, )</onclick>
+<onclick>Skin.SetString(Comment6, )</onclick>
+<onclick>Skin.SetString(Comment7, )</onclick>
+<onclick>Skin.SetString(Comment8, )</onclick>
+<onclick>Skin.SetString(Comment9, )</onclick>
+<onclick>Skin.SetString(Comment10, )</onclick>		
+										
+														
+							</item>
+								<item id="41">
+								<description>Games</description>
+								<label>$INFO[Skin.string(Friend10)] said this:</label>
+								<label2>Need to pre-order The Club, looks awesome!!</label2>
+								<thumb>special://skin/system/D400040/Friend/pictures/$INFO[Skin.string(Friend10)].png</thumb>
+													
+													<onclick>Skin.SetString(SocialImage, special://skin/system/D400040/Friend/pictures/$INFO[Skin.string(Friend10)].png)</onclick>
+									<onclick>Skin.SetString(SocialStatus, $INFO[Skin.string(Friend10)] said this:)</onclick>
+									<onclick>Skin.SetString(SocialMessage, Need to pre-order The Club, looks awesome!! )</onclick>  
+									<onclick>ActivateWindow(5605)</onclick>   
+										<onclick>Skin.SetString(Comment1, )</onclick>
+<onclick>Skin.SetString(Comment2, )</onclick>
+<onclick>Skin.SetString(Comment3, )</onclick>
+<onclick>Skin.SetString(Comment4, )</onclick>
+<onclick>Skin.SetString(Comment5, )</onclick>
+<onclick>Skin.SetString(Comment6, )</onclick>
+<onclick>Skin.SetString(Comment7, )</onclick>
+<onclick>Skin.SetString(Comment8, )</onclick>
+<onclick>Skin.SetString(Comment9, )</onclick>
+<onclick>Skin.SetString(Comment10, )</onclick>		
+										
+														
+							</item>
+							<item id="42">
+								<description>Games</description>
+								<label>$INFO[Skin.string(Friend11)] said this:</label>
+								<label2>Anyone on Fifa?</label2>
+								<thumb>special://skin/system/D400040/Friend/pictures/$INFO[Skin.string(Friend11)].png</thumb>
+													
+													<onclick>Skin.SetString(SocialImage, special://skin/system/D400040/Friend/pictures/$INFO[Skin.string(Friend11)].png)</onclick>
+									<onclick>Skin.SetString(SocialStatus, $INFO[Skin.string(Friend11)] said this:)</onclick>
+									<onclick>Skin.SetString(SocialMessage, Anyone on Fifa? )</onclick>  
+									<onclick>ActivateWindow(5605)</onclick>   
+										<onclick>Skin.SetString(Comment1, )</onclick>
+<onclick>Skin.SetString(Comment2, )</onclick>
+<onclick>Skin.SetString(Comment3, )</onclick>
+<onclick>Skin.SetString(Comment4, )</onclick>
+<onclick>Skin.SetString(Comment5, )</onclick>
+<onclick>Skin.SetString(Comment6, )</onclick>
+<onclick>Skin.SetString(Comment7, )</onclick>
+<onclick>Skin.SetString(Comment8, )</onclick>
+<onclick>Skin.SetString(Comment9, )</onclick>
+<onclick>Skin.SetString(Comment10, )</onclick>		
+										
+														
+							</item>
+							<item id="43">
+								<description>Games</description>
+								<label>$INFO[Skin.string(Friend2)] said this:</label>
+								<label2>Is American Dad on tonight ?!</label2>
+								<thumb>special://skin/system/D400040/Friend/pictures/$INFO[Skin.string(Friend2)].png</thumb>
+													
+											<onclick>Skin.SetString(SocialImage, special://skin/system/D400040/Friend/pictures/$INFO[Skin.string(Friend2)].png)</onclick>
+									<onclick>Skin.SetString(SocialStatus, $INFO[Skin.string(Friend2)] said this:)</onclick>
+									<onclick>Skin.SetString(SocialMessage, Is American Dad on tonight ?! )</onclick>  
+									<onclick>ActivateWindow(5605)</onclick>   
+										<onclick>Skin.SetString(Comment1, )</onclick>
+<onclick>Skin.SetString(Comment2, )</onclick>
+<onclick>Skin.SetString(Comment3, )</onclick>
+<onclick>Skin.SetString(Comment4, )</onclick>
+<onclick>Skin.SetString(Comment5, )</onclick>
+<onclick>Skin.SetString(Comment6, )</onclick>
+<onclick>Skin.SetString(Comment7, )</onclick>
+<onclick>Skin.SetString(Comment8, )</onclick>
+<onclick>Skin.SetString(Comment9, )</onclick>
+<onclick>Skin.SetString(Comment10, )</onclick>		
+										
+														
+							</item>
+							<item id="44">
+								<description>Games</description>
+								<label>$INFO[Skin.string(Friend3)] said this:</label>
+								<label2>Everyone join my party!!</label2>
+								<thumb>special://skin/system/D400040/Friend/pictures/$INFO[Skin.string(Friend3)].png</thumb>
+													
+												<onclick>Skin.SetString(SocialImage, special://skin/system/D400040/Friend/pictures/$INFO[Skin.string(Friend3)].png)</onclick>
+									<onclick>Skin.SetString(SocialStatus, $INFO[Skin.string(Friend3)] said this:)</onclick>
+									<onclick>Skin.SetString(SocialMessage, Everyone join my party!! )</onclick>  
+									<onclick>ActivateWindow(5605)</onclick>   
+										<onclick>Skin.SetString(Comment1, )</onclick>
+<onclick>Skin.SetString(Comment2, )</onclick>
+<onclick>Skin.SetString(Comment3, )</onclick>
+<onclick>Skin.SetString(Comment4, )</onclick>
+<onclick>Skin.SetString(Comment5, )</onclick>
+<onclick>Skin.SetString(Comment6, )</onclick>
+<onclick>Skin.SetString(Comment7, )</onclick>
+<onclick>Skin.SetString(Comment8, )</onclick>
+<onclick>Skin.SetString(Comment9, )</onclick>
+<onclick>Skin.SetString(Comment10, )</onclick>		
+										
+														
+							</item>
+							<item id="45">
+								<description>Games</description>
+								<label>$INFO[Skin.string(Friend4)] said this:</label>
+								<label2>How do I record a game clip ?</label2>
+								<thumb>special://skin/system/D400040/Friend/pictures/$INFO[Skin.string(Friend4)].png</thumb>
+													
+											<onclick>Skin.SetString(SocialImage, special://skin/system/D400040/Friend/pictures/$INFO[Skin.string(Friend4)].png)</onclick>
+									<onclick>Skin.SetString(SocialStatus, $INFO[Skin.string(Friend4)] said this:)</onclick>
+									<onclick>Skin.SetString(SocialMessage, How do I record a game clip ? )</onclick>  
+									<onclick>ActivateWindow(5605)</onclick>   
+										<onclick>Skin.SetString(Comment1, )</onclick>
+<onclick>Skin.SetString(Comment2, )</onclick>
+<onclick>Skin.SetString(Comment3, )</onclick>
+<onclick>Skin.SetString(Comment4, )</onclick>
+<onclick>Skin.SetString(Comment5, )</onclick>
+<onclick>Skin.SetString(Comment6, )</onclick>
+<onclick>Skin.SetString(Comment7, )</onclick>
+<onclick>Skin.SetString(Comment8, )</onclick>
+<onclick>Skin.SetString(Comment9, )</onclick>
+<onclick>Skin.SetString(Comment10, )</onclick>		
+										
+														
+							</item>
+							<item id="46">
+								<description>Games</description>
+								<label>$INFO[Skin.string(Friend5)] said this:</label>
+								<label2>Is there any way that i can share videos on here yet? </label2>
+								<thumb>special://skin/system/D400040/Friend/pictures/$INFO[Skin.string(Friend5)].png</thumb>
+													
+												<onclick>Skin.SetString(SocialImage, special://skin/system/D400040/Friend/pictures/$INFO[Skin.string(Friend5)].png)</onclick>
+									<onclick>Skin.SetString(SocialStatus, $INFO[Skin.string(Friend5)] said this:)</onclick>
+									<onclick>Skin.SetString(SocialMessage, Is there any way that i can share videos on here yet? )</onclick>  
+									<onclick>ActivateWindow(5605)</onclick>   
+										<onclick>Skin.SetString(Comment1, )</onclick>
+<onclick>Skin.SetString(Comment2, )</onclick>
+<onclick>Skin.SetString(Comment3, )</onclick>
+<onclick>Skin.SetString(Comment4, )</onclick>
+<onclick>Skin.SetString(Comment5, )</onclick>
+<onclick>Skin.SetString(Comment6, )</onclick>
+<onclick>Skin.SetString(Comment7, )</onclick>
+<onclick>Skin.SetString(Comment8, )</onclick>
+<onclick>Skin.SetString(Comment9, )</onclick>
+<onclick>Skin.SetString(Comment10, )</onclick>		
+										
+														
+							</item>
+							<item id="47">
+								<description>Games</description>
+								<label>$INFO[Skin.string(Friend6)] said this:</label>
+								<label2>Who's seen the new Dead Island trailer ? Looks awesome!!</label2>
+								<thumb>special://skin/system/D400040/Friend/pictures/$INFO[Skin.string(Friend6)].png</thumb>
+													
+												<onclick>Skin.SetString(SocialImage, special://skin/system/D400040/Friend/pictures/$INFO[Skin.string(Friend6)].png)</onclick>
+									<onclick>Skin.SetString(SocialStatus, $INFO[Skin.string(Friend6)] said this:)</onclick>
+									<onclick>Skin.SetString(SocialMessage, Who's seen the new Dead Island trailer ? Looks awesome!! )</onclick>  
+									<onclick>ActivateWindow(5605)</onclick>   
+										<onclick>Skin.SetString(Comment1, )</onclick>
+<onclick>Skin.SetString(Comment2, )</onclick>
+<onclick>Skin.SetString(Comment3, )</onclick>
+<onclick>Skin.SetString(Comment4, )</onclick>
+<onclick>Skin.SetString(Comment5, )</onclick>
+<onclick>Skin.SetString(Comment6, )</onclick>
+<onclick>Skin.SetString(Comment7, )</onclick>
+<onclick>Skin.SetString(Comment8, )</onclick>
+<onclick>Skin.SetString(Comment9, )</onclick>
+<onclick>Skin.SetString(Comment10, )</onclick>		
+										
+														
+							</item>
+							<item id="48">
+								<description>Games</description>
+								<label>$INFO[Skin.string(Friend7)]said this:</label>
+								<label2>Is anyone getting problems installing apps recently ? </label2>
+								<thumb>special://skin/system/D400040/Friend/pictures/$INFO[Skin.string(Friend7)].png</thumb>
+													
+												<onclick>Skin.SetString(SocialImage, special://skin/system/D400040/Friend/pictures/$INFO[Skin.string(Friend7)].png)</onclick>
+									<onclick>Skin.SetString(SocialStatus, $INFO[Skin.string(Friend7)] said this:)</onclick>
+									<onclick>Skin.SetString(SocialMessage, Is anyone getting problems installing apps recently ? )</onclick>  
+									<onclick>ActivateWindow(5605)</onclick>   
+										<onclick>Skin.SetString(Comment1, )</onclick>
+<onclick>Skin.SetString(Comment2, )</onclick>
+<onclick>Skin.SetString(Comment3, )</onclick>
+<onclick>Skin.SetString(Comment4, )</onclick>
+<onclick>Skin.SetString(Comment5, )</onclick>
+<onclick>Skin.SetString(Comment6, )</onclick>
+<onclick>Skin.SetString(Comment7, )</onclick>
+<onclick>Skin.SetString(Comment8, )</onclick>
+<onclick>Skin.SetString(Comment9, )</onclick>
+<onclick>Skin.SetString(Comment10, )</onclick>		
+										
+														
+							</item>
+						
+<item id="49">
+								<description>Games</description>
+								<label>$INFO[Skin.string(Friend8)]said this:</label>
+								<label2>Soooo, Who's pre-ordering The Division ?!</label2>
+								<thumb>special://skin/system/D400040/Friend/pictures/$INFO[Skin.string(Friend8)].png</thumb>
+													
+												<onclick>Skin.SetString(SocialImage, special://skin/system/D400040/Friend/pictures/$INFO[Skin.string(Friend8)].png)</onclick>
+									<onclick>Skin.SetString(SocialStatus, $INFO[Skin.string(Friend8)] said this:)</onclick>
+									<onclick>Skin.SetString(SocialMessage, Soooo, Who's pre-ordering The Division ?! )</onclick>  
+									<onclick>ActivateWindow(5605)</onclick>   
+										<onclick>Skin.SetString(Comment1, )</onclick>
+<onclick>Skin.SetString(Comment2, )</onclick>
+<onclick>Skin.SetString(Comment3, )</onclick>
+<onclick>Skin.SetString(Comment4, )</onclick>
+<onclick>Skin.SetString(Comment5, )</onclick>
+<onclick>Skin.SetString(Comment6, )</onclick>
+<onclick>Skin.SetString(Comment7, )</onclick>
+<onclick>Skin.SetString(Comment8, )</onclick>
+<onclick>Skin.SetString(Comment9, )</onclick>
+<onclick>Skin.SetString(Comment10, )</onclick>		
+										
+														
+							</item>
+							<item id="50">
+								<description>Games</description>
+								<label>$INFO[Skin.string(Friend9)] said this:</label>
+								<label2>Damn the new Rainbow Six Seige looks so good! </label2>
+								<thumb>special://skin/system/D400040/Friend/pictures/$INFO[Skin.string(Friend9)].png</thumb>
+													
+													<onclick>Skin.SetString(SocialImage, special://skin/system/D400040/Friend/pictures/$INFO[Skin.string(Friend9)].png)</onclick>
+									<onclick>Skin.SetString(SocialStatus, $INFO[Skin.string(Friend9)] said this:)</onclick>
+									<onclick>Skin.SetString(SocialMessage, Damn the new Rainbow Six Seige looks so good! )</onclick>  
+									<onclick>ActivateWindow(5605)</onclick>   
+										<onclick>Skin.SetString(Comment1, )</onclick>
+<onclick>Skin.SetString(Comment2, )</onclick>
+<onclick>Skin.SetString(Comment3, )</onclick>
+<onclick>Skin.SetString(Comment4, )</onclick>
+<onclick>Skin.SetString(Comment5, )</onclick>
+<onclick>Skin.SetString(Comment6, )</onclick>
+<onclick>Skin.SetString(Comment7, )</onclick>
+<onclick>Skin.SetString(Comment8, )</onclick>
+<onclick>Skin.SetString(Comment9, )</onclick>
+<onclick>Skin.SetString(Comment10, )</onclick>		
+										
+														
+							</item>
+								<item id="51">
+								<description>Games</description>
+								<label>$INFO[Skin.string(Friend10)] said this:</label>
+								<label2>I've just played the new Grid Autosport..... It's Awesome!!!</label2>
+								<thumb>special://skin/system/D400040/Friend/pictures/$INFO[Skin.string(Friend10)].png</thumb>
+													
+													<onclick>Skin.SetString(SocialImage, special://skin/system/D400040/Friend/pictures/$INFO[Skin.string(Friend10)].png)</onclick>
+									<onclick>Skin.SetString(SocialStatus, $INFO[Skin.string(Friend10)] said this:)</onclick>
+									<onclick>Skin.SetString(SocialMessage, I've just played the new Grid Autosport..... Oh My, It's Awesome!!! )</onclick>  
+									<onclick>ActivateWindow(5605)</onclick>   
+										<onclick>Skin.SetString(Comment1, )</onclick>
+<onclick>Skin.SetString(Comment2, )</onclick>
+<onclick>Skin.SetString(Comment3, )</onclick>
+<onclick>Skin.SetString(Comment4, )</onclick>
+<onclick>Skin.SetString(Comment5, )</onclick>
+<onclick>Skin.SetString(Comment6, )</onclick>
+<onclick>Skin.SetString(Comment7, )</onclick>
+<onclick>Skin.SetString(Comment8, )</onclick>
+<onclick>Skin.SetString(Comment9, )</onclick>
+<onclick>Skin.SetString(Comment10, )</onclick>		
+										
+														
+							</item>
+							<item id="52">
+								<description>Games</description>
+								<label>$INFO[Skin.string(Friend11)] said this:</label>
+								<label2>Is there any way that i can upgrade storage space on my console ?</label2>
+								<thumb>special://skin/system/D400040/Friend/pictures/$INFO[Skin.string(Friend11)].png</thumb>
+													
+													<onclick>Skin.SetString(SocialImage, special://skin/system/D400040/Friend/pictures/$INFO[Skin.string(Friend11)].png)</onclick>
+									<onclick>Skin.SetString(SocialStatus, $INFO[Skin.string(Friend11)] said this:)</onclick>
+									<onclick>Skin.SetString(SocialMessage, Is there any way that i can upgrade storage space on my console ? )</onclick>  
+									<onclick>ActivateWindow(5605)</onclick>   
+										<onclick>Skin.SetString(Comment1, )</onclick>
+<onclick>Skin.SetString(Comment2, )</onclick>
+<onclick>Skin.SetString(Comment3, )</onclick>
+<onclick>Skin.SetString(Comment4, )</onclick>
+<onclick>Skin.SetString(Comment5, )</onclick>
+<onclick>Skin.SetString(Comment6, )</onclick>
+<onclick>Skin.SetString(Comment7, )</onclick>
+<onclick>Skin.SetString(Comment8, )</onclick>
+<onclick>Skin.SetString(Comment9, )</onclick>
+<onclick>Skin.SetString(Comment10, )</onclick>		
+										
+														
+							</item>
+
+
+								</content>
+
+					</control>
+							
+							
+</control>
+
+
+
+<control type="group">
+						
+					<width>920</width>
+					<height>720</height>		
+					
+					<control type="image">
+					
+						<posx>-69</posx>
+						<posy>71.7</posy>
+						<width>550</width>
+					<height>580</height>
+						<texture>colors\color_keyboard_dark.png</texture>
+					</control>
+						<control type="label">
+                                           <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="60" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+										
+                                                                <posx>0</posx>
+								<posy>120</posy>
+                                                                <width min="20" max="250">auto</width>
+                                                                <height>20</height>
+                                                                <label>JOGADO RECENTEMENTE</label>
+                                                                <font>Home-Tile-Header</font>
+                                                                <textcolor>white</textcolor>
+                                                                <aligny>center</aligny>
+                                                              
+                                                        </control>
+														
+														
+														
+
+<control type="panel" id="88">
+				
+ <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="60" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+					 <include condition="!Window.Previous(Home)">Common_Animation_Window</include>
+					  <include condition="Window.Previous(Home)">Common_Animation_apps_dash</include> 
+		<posx>0</posx>
+				<posy>150</posy>
+			<height>440</height>
+			<onright>54</onright>
+			<onleft>53</onleft>
+						<include>Common_AltHome_Panel391-social_feed2</include>
+					
+
+
+
+
+						
+						
+						<content>
+						
+							<item id="0">
+								<include>Common_Animation_Content_social</include>
+								<description>Games</description>
+								<label>Battlefield 4</label>
+								<label2>Played 5 times[CR]Last played 6 days ago</label2>
+								<thumb>demo\app\gamestore\bf4.jpg</thumb>
+													
+												<onclick>-</onclick>
+									
+														
+							</item>
+							<item id="1">
+								<include>Common_Animation_Content_social</include>
+								<description>Games</description>
+								<label>Forza Motorsport 5</label>
+								<label2>Played 3 times[CR]Last played 1 month ago.</label2>
+								<thumb>demo\app\gamestore\forza.jpg</thumb>
+													
+												<onclick>-</onclick>
+									
+														
+							</item>
+							<item id="2">
+								<include>Common_Animation_Content_social</include>
+								<description>Games</description>
+								<label>Ryse: Son Of Rome</label>
+								<label2>Played 2 times[CR]Last played 3 months ago.</label2>
+								<thumb>demo\app\gamestore\ryse.jpg</thumb>
+													
+												<onclick>-</onclick>
+									
+														
+							</item>
+							<item id="3">
+								<include>Common_Animation_Content_social</include>
+								<description>Games</description>
+								<label>Titanfall</label>
+								<label2>Played 18 times[CR]Last played 6 days ago.</label2>
+								<thumb>demo\app\gamestore\titanfall.jpg</thumb>
+													
+												<onclick>-</onclick>
+									
+														
+							</item>
+							<item id="4">
+								<include>Common_Animation_Content_social</include>
+								<description>Games</description>
+								<label>Call Of Duty: Ghosts</label>
+								<label2>Played 9 times[CR]Last played 2 months ago.</label2>
+								<thumb>demo\app\gamestore\ghosts.jpg</thumb>
+													
+												<onclick>-</onclick>
+									
+														
+							</item>
+								<item id="5">
+								<include>Common_Animation_Content_social</include>
+								<description>Games</description>
+								<label>Dead Rising 3</label>
+								<label2>Played 2 times[CR]Last played 1 day ago.</label2>
+								<thumb>demo\app\gamestore\deadrising.jpg</thumb>
+													
+												<onclick>-</onclick>
+									
+														
+							</item>
+<item id="6">
+								<include>Common_Animation_Content_social</include>
+								<description>Games</description>
+								<label>Fifa 14</label>
+								<label2>Played 1 time[CR]Last played 5 months ago.</label2>
+								<thumb>demo\app\gamestore\fifa.jpg</thumb>
+													
+												<onclick>-</onclick>
+									
+														
+							</item>
+						
+	
+							
+							</content>
+							</control>
+							
+							
+</control>
+
+
+	<control type="group">
+					<width>720</width>
+					<height>720</height>		
+						<control type="label">
+                                           <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="60" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+										
+                                                                <posx>0</posx>
+								<posy>120</posy>
+                                                                <width min="20" max="250">auto</width>
+                                                                <height>20</height>
+                                                                <label>CONQUISTAS</label>
+                                                                <font>Home-Tile-Header</font>
+                                                                <textcolor>white</textcolor>
+                                                                <aligny>center</aligny>
+                                                              
+                                                        </control>
+					<control type="fixedlist" id="54">
+						 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="300" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="60" end="0" delay="300" tween="cubic" easing="out" time="600" />
+                    </animation>
+					 <include condition="!Window.Previous(Home)">Common_Animation_Window</include>
+					  <include condition="Window.Previous(Home)">Common_Animation_apps_dash</include> 
+				<posx>0</posx>
+				<posy>110</posy>
+				<width>1500</width>
+				<height>480</height>
+				<onup>10000</onup>
+				<ondown>9000</ondown>
+				<onleft>88</onleft>
+				<onright>55</onright>
+				<viewtype label="Extended">wrap</viewtype>
+				<orientation>horizontal</orientation>
+				<pagecontrol>63</pagecontrol>
+				<focusposition>0</focusposition>
+				<scrolltime tween="cubic" easing="out">600</scrolltime>
+				<preloaditems>2</preloaditems>
+				
+							
+				<itemlayout width="320" height="480">
+				
+					<control type="group">
+					
+						<posx>0</posx>
+						<posy>40</posy>
+						<width>300</width>
+						<height>440</height>
+						
+					
+						
+											
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+				
+						
+					</control>	
+					
+				</itemlayout>
+
+				<focusedlayout width="320" height="480">
+				
+					<control type="group">
+					<animation effect="zoom" end="105" center="auto" time="200" condition="Skin.HasSetting(inflateitem)">Conditional</animation>
+						<posx>0</posx>
+						<posy>40</posy>
+						<width>300</width>
+						<height>440</height>
+						
+							<control type="image">
+						
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>300</width>
+							<height>440</height>
+							<texture background="true">colors/eeh.png</texture>
+							
+							
+						</control>
+							<control type="image">
+						
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>300</width>
+							<height>170</height>
+							<texture>colors\color_grey.png</texture>
+							<aspectratio aligny="top">scale</aspectratio>
+							
+						</control>
+							<control type="image">
+						
+						<posx>125</posx>
+							<posy>65</posy>
+							<width>50</width>
+							<height>50</height>
+							<texture>$INFO[ListItem.Icon]</texture>
+							<aspectratio aligny="top">scale</aspectratio>
+							
+						</control>
+						
+						<control type="textbox">
+						
+							<posx>20</posx>
+							<posy>180</posy>
+							<width>260</width>
+							<height>62</height>
+							<label>$INFO[ListItem.Label]</label>
+							<font>Menu-ExtendedList-Header</font>
+							<textcolor>Label_Normal</textcolor>
+							<aligny>top</aligny>
+							<textcolor>Label_Normal</textcolor>
+							<autoscroll>false</autoscroll>
+							
+						</control>
+						
+						
+						
+					<control type="textbox">
+						
+							<posx>220</posx>
+							<posy>370</posy>
+							<width>260</width>
+							<height>125</height>
+							<label>$INFO[ListItem.Label2]</label>
+							<font>Menu-ExtendedList-Header</font>
+						<textcolor>Label_Normal</textcolor>
+							<aligny>top</aligny>
+							<wrapmultiline>true</wrapmultiline>
+							<textcolor>Label_Normal</textcolor>
+							<autoscroll>false</autoscroll>
+							
+						</control>
+								<control type="textbox">
+						
+							<posx>20</posx>
+							<posy>230</posy>
+							<width>260</width>
+							<height>62</height>
+						<label>$INFO[ListItem.Label3]</label>
+							<font>Menu-ExtendedList-Header</font>
+							<textcolor>FF000000</textcolor>
+							<aligny>top</aligny>
+							<wrapmultiline>true</wrapmultiline>
+							<shadowcolor>00FFFFFF</shadowcolor>
+							<autoscroll>false</autoscroll>
+							
+						</control>
+						
+						
+						<control type="image">
+						
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>300</width>
+							<height>440</height>
+							<texture background="true">colors/color_white.png</texture>
+					<visible>Control.HasFocus(54)</visible>
+							
+						</control>
+						
+							<control type="image">
+						
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>300</width>
+							<height>170</height>
+							<texture>colors\color_grey.png</texture>
+							<aspectratio aligny="top">scale</aspectratio>
+								<visible>Control.HasFocus(54)</visible>
+						</control>
+						<control type="image">
+						
+							<posx>125</posx>
+							<posy>65</posy>
+							<width>50</width>
+							<height>50</height>
+							<texture>$INFO[ListItem.Icon]</texture>
+							<aspectratio aligny="top">scale</aspectratio>
+								<visible>Control.HasFocus(54)</visible>
+						</control>
+						
+						<control type="textbox">
+						
+							<posx>20</posx>
+							<posy>180</posy>
+							<width>260</width>
+							<height>62</height>
+						<label>$INFO[ListItem.Label]</label>
+							<font>Menu-ExtendedList-Header</font>
+							<textcolor>FF000000</textcolor>
+							<aligny>top</aligny>
+							<wrapmultiline>true</wrapmultiline>
+							<shadowcolor>00FFFFFF</shadowcolor>
+							<autoscroll>false</autoscroll>
+								<visible>Control.HasFocus(54)</visible>
+						</control>
+									<control type="textbox">
+						
+							<posx>20</posx>
+							<posy>230</posy>
+							<width>260</width>
+							<height>62</height>
+						<label>$INFO[ListItem.Label3]</label>
+							<font>Menu-ExtendedList-Header</font>
+							<textcolor>FF000000</textcolor>
+							<aligny>top</aligny>
+							<wrapmultiline>true</wrapmultiline>
+							<shadowcolor>00FFFFFF</shadowcolor>
+							<autoscroll>false</autoscroll>
+								<visible>Control.HasFocus(54)</visible>
+						</control>
+						
+				
+						
+						<control type="textbox">
+						
+							<posx>220</posx>
+							<posy>370</posy>
+							<width>260</width>
+							<height>125</height>
+							<label>$INFO[ListItem.Label2]</label>
+							<font>Menu-ExtendedList-Header</font>
+							<textcolor>FF000000</textcolor>
+							<aligny>top</aligny>
+							<wrapmultiline>true</wrapmultiline>
+							<shadowcolor>00FFFFFF</shadowcolor>
+							<autoscroll>false</autoscroll>
+								<visible>Control.HasFocus(54)</visible>
+						</control>
+						
+					
+						
+					</control>	
+					
+			</focusedlayout>
+<content>
+					
+													    <item id="1">
+                              <onclick>RunScript(special://skin/system/xbox.gamertag.py)</onclick>  
+                                <label>$INFO[Skin.String(XboxLive.Gamer.RecentlyPlayed.Title.2)]</label>
+                                <label2>$INFO[Skin.String(XboxLive.Gamer.RecentlyPlayed.PercentComplete.2)]</label2>
+								<label3>$INFO[Skin.String(XboxLive.Gamer.RecentlyPlayed.AvailableGamescore.2)]/$INFO[Skin.String(XboxLive.Gamer.RecentlyPlayed.EarnedGamescore.2)][CR]$INFO[Skin.String(XboxLive.Gamer.RecentlyPlayed.AvailableAchievements.2)]/$INFO[Skin.String(XboxLive.Gamer.RecentlyPlayed.EarnedAchievements.2)]</label3>
+                                <icon>$INFO[Skin.String(XboxLive.Gamer.RecentlyPlayed.Icon.2)]</icon>
+                            </item>
+                            
+                          
+</content>
+			</control>
+							
+							
+</control>
+
+
+<control type="group">
+					<width>720</width>
+					<height>720</height>		
+					
+					<control type="fixedlist" id="55">
+								 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="500" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="60" end="0" delay="500" tween="cubic" easing="out" time="600" />
+                    </animation>
+					 <include condition="!Window.Previous(Home)">Common_Animation_Window</include>
+					  <include condition="Window.Previous(Home)">Common_Animation_apps_dash</include> 
+				<posx>0</posx>
+				<posy>110</posy>
+				<width>1500</width>
+				<height>480</height>
+				<onup>10000</onup>
+				<ondown>9000</ondown>
+				<onleft>54</onleft>
+				<onright>56</onright>
+				<viewtype label="Extended">wrap</viewtype>
+				<orientation>horizontal</orientation>
+				<pagecontrol>63</pagecontrol>
+				<focusposition>0</focusposition>
+				<scrolltime tween="cubic" easing="out">600</scrolltime>
+				<preloaditems>2</preloaditems>
+				
+							
+				<itemlayout width="320" height="480">
+				
+					<control type="group">
+					
+						<posx>0</posx>
+						<posy>40</posy>
+						<width>300</width>
+						<height>440</height>
+						
+						
+						
+											
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+				
+						
+					</control>	
+					
+				</itemlayout>
+
+				<focusedlayout width="320" height="480">
+				
+					<control type="group">
+					<animation effect="zoom" end="105" center="auto" time="200" condition="Skin.HasSetting(inflateitem)">Conditional</animation>
+						<posx>0</posx>
+						<posy>40</posy>
+						<width>300</width>
+						<height>440</height>
+						
+						
+						
+						<control type="image">
+						
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>300</width>
+							<height>440</height>
+							<texture background="true">colors/eeh.png</texture>
+							
+							
+						</control>
+							<control type="image">
+						
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>300</width>
+							<height>170</height>
+							<texture>colors\color_grey.png</texture>
+							<aspectratio aligny="top">scale</aspectratio>
+							
+						</control>
+							<control type="image">
+						
+						<posx>125</posx>
+							<posy>65</posy>
+							<width>50</width>
+							<height>50</height>
+							<texture>$INFO[ListItem.Icon]</texture>
+							<aspectratio aligny="top">scale</aspectratio>
+							
+						</control>
+						
+						<control type="textbox">
+						
+							<posx>20</posx>
+							<posy>180</posy>
+							<width>260</width>
+							<height>62</height>
+							<label>$INFO[ListItem.Label]</label>
+							<font>Menu-ExtendedList-Header</font>
+							<textcolor>Label_Normal</textcolor>
+							<aligny>top</aligny>
+							<textcolor>Label_Normal</textcolor>
+							<autoscroll>false</autoscroll>
+							
+						</control>
+						
+						
+						
+					<control type="textbox">
+						
+							<posx>220</posx>
+							<posy>370</posy>
+							<width>260</width>
+							<height>125</height>
+							<label>$INFO[ListItem.Label2]</label>
+							<font>Menu-ExtendedList-Header</font>
+						<textcolor>Label_Normal</textcolor>
+							<aligny>top</aligny>
+							<wrapmultiline>true</wrapmultiline>
+							<textcolor>Label_Normal</textcolor>
+							<autoscroll>false</autoscroll>
+							
+						</control>
+								<control type="textbox">
+						
+							<posx>20</posx>
+							<posy>230</posy>
+							<width>260</width>
+							<height>62</height>
+						<label>$INFO[ListItem.Label3]</label>
+							<font>Menu-ExtendedList-Header</font>
+							<textcolor>FF000000</textcolor>
+							<aligny>top</aligny>
+							<wrapmultiline>true</wrapmultiline>
+							<shadowcolor>00FFFFFF</shadowcolor>
+							<autoscroll>false</autoscroll>
+							
+						</control>
+						<control type="image">
+						
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>300</width>
+							<height>440</height>
+							<texture background="true">colors/color_white.png</texture>
+					
+							<visible>Control.HasFocus(55)</visible>
+						</control>
+						
+							<control type="image">
+						
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>300</width>
+							<height>170</height>
+							<texture>colors\color_grey.png</texture>
+							<aspectratio aligny="top">scale</aspectratio>
+							<visible>Control.HasFocus(55)</visible>
+						</control>
+						<control type="image">
+						
+							<posx>125</posx>
+							<posy>65</posy>
+							<width>50</width>
+							<height>50</height>
+							<texture>$INFO[ListItem.Icon]</texture>
+							<aspectratio aligny="top">scale</aspectratio>
+							<visible>Control.HasFocus(55)</visible>
+						</control>
+						
+						<control type="textbox">
+						
+							<posx>20</posx>
+							<posy>180</posy>
+							<width>260</width>
+							<height>62</height>
+						<label>$INFO[ListItem.Label]</label>
+							<font>Menu-ExtendedList-Header</font>
+							<textcolor>FF000000</textcolor>
+							<aligny>top</aligny>
+							<wrapmultiline>true</wrapmultiline>
+							<shadowcolor>00FFFFFF</shadowcolor>
+							<autoscroll>false</autoscroll>
+							<visible>Control.HasFocus(55)</visible>
+						</control>
+									<control type="textbox">
+						
+							<posx>20</posx>
+							<posy>230</posy>
+							<width>260</width>
+							<height>62</height>
+						<label>$INFO[ListItem.Label3]</label>
+							<font>Menu-ExtendedList-Header</font>
+							<textcolor>FF000000</textcolor>
+							<aligny>top</aligny>
+							<wrapmultiline>true</wrapmultiline>
+							<shadowcolor>00FFFFFF</shadowcolor>
+							<autoscroll>false</autoscroll>
+							<visible>Control.HasFocus(55)</visible>
+						</control>
+						
+				
+						
+						<control type="textbox">
+						
+							<posx>220</posx>
+							<posy>370</posy>
+							<width>260</width>
+							<height>125</height>
+							<label>$INFO[ListItem.Label2]</label>
+							<font>Menu-ExtendedList-Header</font>
+							<textcolor>FF000000</textcolor>
+							<aligny>top</aligny>
+							<wrapmultiline>true</wrapmultiline>
+							<shadowcolor>00FFFFFF</shadowcolor>
+							<autoscroll>false</autoscroll>
+							<visible>Control.HasFocus(55)</visible>
+						</control>
+						
+					
+						
+					</control>	
+					
+			</focusedlayout>
+<content>
+					
+													    <item id="1">
+                              <onclick>RunScript(special://skin/system/xbox.gamertag.py)</onclick>  
+                                <label>$INFO[Skin.String(XboxLive.Gamer.RecentlyPlayed.Title.3)]</label>
+                                <label2>$INFO[Skin.String(XboxLive.Gamer.RecentlyPlayed.PercentComplete.3)]</label2>
+								<label3>$INFO[Skin.String(XboxLive.Gamer.RecentlyPlayed.AvailableGamescore.3)]/$INFO[Skin.String(XboxLive.Gamer.RecentlyPlayed.EarnedGamescore.3)][CR]$INFO[Skin.String(XboxLive.Gamer.RecentlyPlayed.AvailableAchievements.3)]/$INFO[Skin.String(XboxLive.Gamer.RecentlyPlayed.EarnedAchievements.3)]</label3>
+                                <icon>$INFO[Skin.String(XboxLive.Gamer.RecentlyPlayed.Icon.3)]</icon>
+                            </item>
+                            
+                          
+</content>
+			</control>
+							
+							
+</control>
+
+<control type="group">
+					<width>720</width>
+					<height>720</height>		
+					
+					<control type="fixedlist" id="56">
+								 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="700" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="60" end="0" delay="700" tween="cubic" easing="out" time="600" />
+                    </animation>
+					 <include condition="!Window.Previous(Home)">Common_Animation_Window</include>
+					  <include condition="Window.Previous(Home)">Common_Animation_apps_dash</include> 
+				<posx>0</posx>
+				<posy>110</posy>
+				<width>1500</width>
+				<height>480</height>
+				<onup>10000</onup>
+				<ondown>9000</ondown>
+				<onleft>55</onleft>
+				<onright>57</onright>
+				<viewtype label="Extended">wrap</viewtype>
+				<orientation>horizontal</orientation>
+				<pagecontrol>63</pagecontrol>
+				<focusposition>0</focusposition>
+				<scrolltime tween="cubic" easing="out">600</scrolltime>
+				<preloaditems>2</preloaditems>
+				
+							
+				<itemlayout width="320" height="480">
+				
+					<control type="group">
+					
+						<posx>0</posx>
+						<posy>40</posy>
+						<width>300</width>
+						<height>440</height>
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+				
+						
+					</control>	
+					
+				</itemlayout>
+
+				<focusedlayout width="320" height="480">
+				
+					<control type="group">
+					<animation effect="zoom" end="105" center="auto" time="200" condition="Skin.HasSetting(inflateitem)">Conditional</animation>
+						<posx>0</posx>
+						<posy>40</posy>
+						<width>300</width>
+						<height>440</height>
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						<control type="image">
+						
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>300</width>
+							<height>440</height>
+							<texture background="true">colors/eeh.png</texture>
+							
+							
+						</control>
+							<control type="image">
+						
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>300</width>
+							<height>170</height>
+							<texture>colors\color_grey.png</texture>
+							<aspectratio aligny="top">scale</aspectratio>
+							
+						</control>
+							<control type="image">
+						
+						<posx>125</posx>
+							<posy>65</posy>
+							<width>50</width>
+							<height>50</height>
+							<texture>$INFO[ListItem.Icon]</texture>
+							<aspectratio aligny="top">scale</aspectratio>
+							
+						</control>
+						
+						<control type="textbox">
+						
+							<posx>20</posx>
+							<posy>180</posy>
+							<width>260</width>
+							<height>62</height>
+							<label>$INFO[ListItem.Label]</label>
+							<font>Menu-ExtendedList-Header</font>
+							<textcolor>Label_Normal</textcolor>
+							<aligny>top</aligny>
+							<textcolor>Label_Normal</textcolor>
+							<autoscroll>false</autoscroll>
+							
+						</control>
+						
+						
+						
+					<control type="textbox">
+						
+							<posx>220</posx>
+							<posy>370</posy>
+							<width>260</width>
+							<height>125</height>
+							<label>$INFO[ListItem.Label2]</label>
+							<font>Menu-ExtendedList-Header</font>
+						<textcolor>Label_Normal</textcolor>
+							<aligny>top</aligny>
+							<wrapmultiline>true</wrapmultiline>
+							<textcolor>Label_Normal</textcolor>
+							<autoscroll>false</autoscroll>
+							
+						</control>
+								<control type="textbox">
+						
+							<posx>20</posx>
+							<posy>230</posy>
+							<width>260</width>
+							<height>62</height>
+						<label>$INFO[ListItem.Label3]</label>
+							<font>Menu-ExtendedList-Header</font>
+							<textcolor>FF000000</textcolor>
+							<aligny>top</aligny>
+							<wrapmultiline>true</wrapmultiline>
+							<shadowcolor>00FFFFFF</shadowcolor>
+							<autoscroll>false</autoscroll>
+							
+						</control>
+						
+											
+						<control type="image">
+						
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>300</width>
+							<height>440</height>
+							<texture background="true">colors/color_white.png</texture>
+					
+							<visible>Control.HasFocus(56)</visible>
+						</control>
+						
+							<control type="image">
+						
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>300</width>
+							<height>170</height>
+							<texture>colors\color_grey.png</texture>
+							<aspectratio aligny="top">scale</aspectratio>
+							<visible>Control.HasFocus(56)</visible>
+						</control>
+						<control type="image">
+						
+							<posx>125</posx>
+							<posy>65</posy>
+							<width>50</width>
+							<height>50</height>
+							<texture>$INFO[ListItem.Icon]</texture>
+							<aspectratio aligny="top">scale</aspectratio>
+							<visible>Control.HasFocus(56)</visible>
+						</control>
+						
+						<control type="textbox">
+						
+							<posx>20</posx>
+							<posy>180</posy>
+							<width>260</width>
+							<height>62</height>
+						<label>$INFO[ListItem.Label]</label>
+							<font>Menu-ExtendedList-Header</font>
+							<textcolor>FF000000</textcolor>
+							<aligny>top</aligny>
+							<wrapmultiline>true</wrapmultiline>
+							<shadowcolor>00FFFFFF</shadowcolor>
+							<autoscroll>false</autoscroll>
+							<visible>Control.HasFocus(56)</visible>
+						</control>
+									<control type="textbox">
+						
+							<posx>20</posx>
+							<posy>230</posy>
+							<width>260</width>
+							<height>62</height>
+						<label>$INFO[ListItem.Label3]</label>
+							<font>Menu-ExtendedList-Header</font>
+							<textcolor>FF000000</textcolor>
+							<aligny>top</aligny>
+							<wrapmultiline>true</wrapmultiline>
+							<shadowcolor>00FFFFFF</shadowcolor>
+							<autoscroll>false</autoscroll>
+							<visible>Control.HasFocus(56)</visible>
+						</control>
+						
+				
+						
+						<control type="textbox">
+						
+							<posx>220</posx>
+							<posy>370</posy>
+							<width>260</width>
+							<height>125</height>
+							<label>$INFO[ListItem.Label2]</label>
+							<font>Menu-ExtendedList-Header</font>
+							<textcolor>FF000000</textcolor>
+							<aligny>top</aligny>
+							<wrapmultiline>true</wrapmultiline>
+							<shadowcolor>00FFFFFF</shadowcolor>
+							<autoscroll>false</autoscroll>
+							<visible>Control.HasFocus(56)</visible>
+						</control>
+						
+					
+						
+					</control>	
+					
+			</focusedlayout>
+<content>
+					
+													    <item id="1">
+                              <onclick>RunScript(special://skin/system/xbox.gamertag.py)</onclick>  
+                                <label>$INFO[Skin.String(XboxLive.Gamer.RecentlyPlayed.Title.4)]</label>
+                                <label2>$INFO[Skin.String(XboxLive.Gamer.RecentlyPlayed.PercentComplete.4)]</label2>
+								<label3>$INFO[Skin.String(XboxLive.Gamer.RecentlyPlayed.AvailableGamescore.4)]/$INFO[Skin.String(XboxLive.Gamer.RecentlyPlayed.EarnedGamescore.4)][CR]$INFO[Skin.String(XboxLive.Gamer.RecentlyPlayed.AvailableAchievements.4)]/$INFO[Skin.String(XboxLive.Gamer.RecentlyPlayed.EarnedAchievements.4)]</label3>
+                                <icon>$INFO[Skin.String(XboxLive.Gamer.RecentlyPlayed.Icon.4)]</icon>
+                            </item>
+                            
+                          
+</content>
+			</control>
+							
+							
+</control>
+
+<control type="group">
+					<width>720</width>
+					<height>720</height>		
+					
+					<control type="fixedlist" id="57">
+								 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="900" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="60" end="0" delay="900" tween="cubic" easing="out" time="600" />
+                    </animation>
+				 <include condition="!Window.Previous(Home)">Common_Animation_Window</include>
+					  <include condition="Window.Previous(Home)">Common_Animation_apps_dash</include> 
+				<posx>0</posx>
+				<posy>110</posy>
+				<width>1500</width>
+				<height>480</height>
+				<onup>10000</onup>
+				<ondown>9000</ondown>
+				<onleft>56</onleft>
+				<onright>58</onright>
+				<viewtype label="Extended">wrap</viewtype>
+				<orientation>horizontal</orientation>
+				<pagecontrol>63</pagecontrol>
+				<focusposition>0</focusposition>
+				<scrolltime tween="cubic" easing="out">600</scrolltime>
+				<preloaditems>2</preloaditems>
+				
+							
+				<itemlayout width="320" height="480">
+				
+					<control type="group">
+					
+						<posx>0</posx>
+						<posy>40</posy>
+						<width>300</width>
+						<height>440</height>
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+				
+						
+					</control>	
+					
+				</itemlayout>
+
+				<focusedlayout width="320" height="480">
+				
+					<control type="group">
+					<animation effect="zoom" end="105" center="auto" time="200" condition="Skin.HasSetting(inflateitem)">Conditional</animation>
+						<posx>0</posx>
+						<posy>40</posy>
+						<width>300</width>
+						<height>440</height>
+						
+						<control type="image">
+						
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>300</width>
+							<height>440</height>
+							<texture background="true">colors/eeh.png</texture>
+							
+							
+						</control>
+							<control type="image">
+						
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>300</width>
+							<height>170</height>
+							<texture>colors\color_grey.png</texture>
+							<aspectratio aligny="top">scale</aspectratio>
+							
+						</control>
+							<control type="image">
+						
+						<posx>125</posx>
+							<posy>65</posy>
+							<width>50</width>
+							<height>50</height>
+							<texture>$INFO[ListItem.Icon]</texture>
+							<aspectratio aligny="top">scale</aspectratio>
+							
+						</control>
+						
+						<control type="textbox">
+						
+							<posx>20</posx>
+							<posy>180</posy>
+							<width>260</width>
+							<height>62</height>
+							<label>$INFO[ListItem.Label]</label>
+							<font>Menu-ExtendedList-Header</font>
+							<textcolor>Label_Normal</textcolor>
+							<aligny>top</aligny>
+							<textcolor>Label_Normal</textcolor>
+							<autoscroll>false</autoscroll>
+							
+						</control>
+						
+						
+						
+					<control type="textbox">
+						
+							<posx>220</posx>
+							<posy>370</posy>
+							<width>260</width>
+							<height>125</height>
+							<label>$INFO[ListItem.Label2]</label>
+							<font>Menu-ExtendedList-Header</font>
+						<textcolor>Label_Normal</textcolor>
+							<aligny>top</aligny>
+							<wrapmultiline>true</wrapmultiline>
+							<textcolor>Label_Normal</textcolor>
+							<autoscroll>false</autoscroll>
+							
+						</control>
+								<control type="textbox">
+						
+							<posx>20</posx>
+							<posy>230</posy>
+							<width>260</width>
+							<height>62</height>
+						<label>$INFO[ListItem.Label3]</label>
+							<font>Menu-ExtendedList-Header</font>
+							<textcolor>FF000000</textcolor>
+							<aligny>top</aligny>
+							<wrapmultiline>true</wrapmultiline>
+							<shadowcolor>00FFFFFF</shadowcolor>
+							<autoscroll>false</autoscroll>
+							
+						</control>
+						
+											
+						
+						
+						
+						
+						<control type="image">
+						
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>300</width>
+							<height>440</height>
+							<texture background="true">colors/color_white.png</texture>
+					<visible>Control.HasFocus(57)</visible>
+							
+						</control>
+						
+							<control type="image">
+						
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>300</width>
+							<height>170</height>
+							<texture>colors\color_grey.png</texture>
+							<aspectratio aligny="top">scale</aspectratio>
+							<visible>Control.HasFocus(57)</visible>
+						</control>
+						<control type="image">
+						
+							<posx>125</posx>
+							<posy>65</posy>
+							<width>50</width>
+							<height>50</height>
+							<texture>$INFO[ListItem.Icon]</texture>
+							<aspectratio aligny="top">scale</aspectratio>
+							<visible>Control.HasFocus(57)</visible>
+						</control>
+						
+						<control type="textbox">
+						
+							<posx>20</posx>
+							<posy>180</posy>
+							<width>260</width>
+							<height>62</height>
+						<label>$INFO[ListItem.Label]</label>
+							<font>Menu-ExtendedList-Header</font>
+							<textcolor>FF000000</textcolor>
+							<aligny>top</aligny>
+							<wrapmultiline>true</wrapmultiline>
+							<shadowcolor>00FFFFFF</shadowcolor>
+							<autoscroll>false</autoscroll>
+							<visible>Control.HasFocus(57)</visible>
+						</control>
+									<control type="textbox">
+						
+							<posx>20</posx>
+							<posy>230</posy>
+							<width>260</width>
+							<height>62</height>
+						<label>$INFO[ListItem.Label3]</label>
+							<font>Menu-ExtendedList-Header</font>
+							<textcolor>FF000000</textcolor>
+							<aligny>top</aligny>
+							<wrapmultiline>true</wrapmultiline>
+							<shadowcolor>00FFFFFF</shadowcolor>
+							<autoscroll>false</autoscroll>
+							<visible>Control.HasFocus(57)</visible>
+						</control>
+						
+				
+						
+						<control type="textbox">
+						
+							<posx>220</posx>
+							<posy>370</posy>
+							<width>260</width>
+							<height>125</height>
+							<label>$INFO[ListItem.Label2]</label>
+							<font>Menu-ExtendedList-Header</font>
+							<textcolor>FF000000</textcolor>
+							<aligny>top</aligny>
+							<wrapmultiline>true</wrapmultiline>
+							<shadowcolor>00FFFFFF</shadowcolor>
+							<autoscroll>false</autoscroll>
+							<visible>Control.HasFocus(57)</visible>
+						</control>
+						
+					
+						
+					</control>	
+					
+			</focusedlayout>
+<content>
+					
+													    <item id="1">
+                              <onclick>RunScript(special://skin/system/xbox.gamertag.py)</onclick>  
+                                <label>$INFO[Skin.String(XboxLive.Gamer.RecentlyPlayed.Title.5)]</label>
+                                <label2>$INFO[Skin.String(XboxLive.Gamer.RecentlyPlayed.PercentComplete.5)]</label2>
+								<label3>$INFO[Skin.String(XboxLive.Gamer.RecentlyPlayed.AvailableGamescore.5)]/$INFO[Skin.String(XboxLive.Gamer.RecentlyPlayed.EarnedGamescore.5)][CR]$INFO[Skin.String(XboxLive.Gamer.RecentlyPlayed.AvailableAchievements.5)]/$INFO[Skin.String(XboxLive.Gamer.RecentlyPlayed.EarnedAchievements.5)]</label3>
+                                <icon>$INFO[Skin.String(XboxLive.Gamer.RecentlyPlayed.Icon.5)]</icon>
+                            </item>
+                            
+                          
+</content>
+			</control>
+							
+							
+</control>
+<control type="group">
+					<width>320</width>
+					<height>720</height>		
+					
+					<control type="fixedlist" id="58">
+								 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="900" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="60" end="0" delay="900" tween="cubic" easing="out" time="600" />
+                    </animation>
+					 <include condition="!Window.Previous(Home)">Common_Animation_Window</include>
+					  <include condition="Window.Previous(Home)">Common_Animation_apps_dash</include> 
+				<posx>0</posx>
+				<posy>110</posy>
+				<width>1500</width>
+				<height>480</height>
+				<onup>10000</onup>
+				<ondown>9000</ondown>
+				<onleft>57</onleft>
+				
+				<viewtype label="Extended">wrap</viewtype>
+				<orientation>horizontal</orientation>
+				<pagecontrol>63</pagecontrol>
+				<focusposition>0</focusposition>
+				<scrolltime tween="cubic" easing="out">600</scrolltime>
+				<preloaditems>2</preloaditems>
+				
+							
+				<itemlayout width="320" height="480">
+				
+					<control type="group">
+					
+						<posx>0</posx>
+						<posy>40</posy>
+						<width>300</width>
+						<height>440</height>
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+				
+						
+					</control>	
+					
+				</itemlayout>
+
+				<focusedlayout width="320" height="480">
+				
+					<control type="group">
+					<animation effect="zoom" end="105" center="auto" time="200" condition="Skin.HasSetting(inflateitem)">Conditional</animation>
+						<posx>0</posx>
+						<posy>40</posy>
+						<width>300</width>
+						<height>440</height>
+						
+						<control type="image">
+						
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>300</width>
+							<height>440</height>
+							<texture background="true">colors/eeh.png</texture>
+							
+							
+						</control>
+							<control type="image">
+						
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>300</width>
+							<height>170</height>
+							<texture>colors\color_grey.png</texture>
+							<aspectratio aligny="top">scale</aspectratio>
+							
+						</control>
+							<control type="image">
+						
+						<posx>125</posx>
+							<posy>65</posy>
+							<width>50</width>
+							<height>50</height>
+							<texture>$INFO[ListItem.Icon]</texture>
+							<aspectratio aligny="top">scale</aspectratio>
+							
+						</control>
+						
+						<control type="textbox">
+						
+							<posx>20</posx>
+							<posy>180</posy>
+							<width>260</width>
+							<height>62</height>
+							<label>$INFO[ListItem.Label]</label>
+							<font>Menu-ExtendedList-Header</font>
+							<textcolor>Label_Normal</textcolor>
+							<aligny>top</aligny>
+							<textcolor>Label_Normal</textcolor>
+							<autoscroll>false</autoscroll>
+							
+						</control>
+						
+						
+						
+					<control type="textbox">
+						
+							<posx>220</posx>
+							<posy>370</posy>
+							<width>260</width>
+							<height>125</height>
+							<label>$INFO[ListItem.Label2]</label>
+							<font>Menu-ExtendedList-Header</font>
+						<textcolor>Label_Normal</textcolor>
+							<aligny>top</aligny>
+							<wrapmultiline>true</wrapmultiline>
+							<textcolor>Label_Normal</textcolor>
+							<autoscroll>false</autoscroll>
+							
+						</control>
+								<control type="textbox">
+						
+							<posx>20</posx>
+							<posy>230</posy>
+							<width>260</width>
+							<height>62</height>
+						<label>$INFO[ListItem.Label3]</label>
+							<font>Menu-ExtendedList-Header</font>
+							<textcolor>FF000000</textcolor>
+							<aligny>top</aligny>
+							<wrapmultiline>true</wrapmultiline>
+							<shadowcolor>00FFFFFF</shadowcolor>
+							<autoscroll>false</autoscroll>
+							
+						</control>
+						
+											
+						
+						
+						
+						
+						<control type="image">
+						
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>300</width>
+							<height>440</height>
+							<texture background="true">colors/color_white.png</texture>
+					<visible>Control.HasFocus(58)</visible>
+							
+						</control>
+						
+							<control type="image">
+						
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>300</width>
+							<height>170</height>
+							<texture>colors\color_grey.png</texture>
+							<aspectratio aligny="top">scale</aspectratio>
+							<visible>Control.HasFocus(58)</visible>
+						</control>
+						<control type="image">
+						
+							<posx>125</posx>
+							<posy>65</posy>
+							<width>50</width>
+							<height>50</height>
+							<texture>$INFO[ListItem.Icon]</texture>
+							<aspectratio aligny="top">scale</aspectratio>
+							<visible>Control.HasFocus(58)</visible>
+						</control>
+						
+						<control type="textbox">
+						
+							<posx>20</posx>
+							<posy>180</posy>
+							<width>260</width>
+							<height>62</height>
+						<label>$INFO[ListItem.Label]</label>
+							<font>Menu-ExtendedList-Header</font>
+							<textcolor>FF000000</textcolor>
+							<aligny>top</aligny>
+							<wrapmultiline>true</wrapmultiline>
+							<shadowcolor>00FFFFFF</shadowcolor>
+							<autoscroll>false</autoscroll>
+							<visible>Control.HasFocus(58)</visible>
+						</control>
+									<control type="textbox">
+						
+							<posx>20</posx>
+							<posy>230</posy>
+							<width>260</width>
+							<height>62</height>
+						<label>$INFO[ListItem.Label3]</label>
+							<font>Menu-ExtendedList-Header</font>
+							<textcolor>FF000000</textcolor>
+							<aligny>top</aligny>
+							<wrapmultiline>true</wrapmultiline>
+							<shadowcolor>00FFFFFF</shadowcolor>
+							<autoscroll>false</autoscroll>
+							<visible>Control.HasFocus(58)</visible>
+						</control>
+						
+				
+						
+						<control type="textbox">
+						
+							<posx>220</posx>
+							<posy>370</posy>
+							<width>260</width>
+							<height>125</height>
+							<label>$INFO[ListItem.Label2]</label>
+							<font>Menu-ExtendedList-Header</font>
+							<textcolor>FF000000</textcolor>
+							<aligny>top</aligny>
+							<wrapmultiline>true</wrapmultiline>
+							<shadowcolor>00FFFFFF</shadowcolor>
+							<autoscroll>false</autoscroll>
+							<visible>Control.HasFocus(58)</visible>
+						</control>
+						
+					
+						
+					</control>	
+					
+			</focusedlayout>
+<content>
+					
+													    <item id="1">
+                              <onclick>RunScript(special://skin/system/xbox.gamertag.py)</onclick>  
+                                <label>$INFO[Skin.String(XboxLive.Gamer.RecentlyPlayed.Title.1)]</label>
+                                <label2>$INFO[Skin.String(XboxLive.Gamer.RecentlyPlayed.PercentComplete.1)]</label2>
+								<label3>$INFO[Skin.String(XboxLive.Gamer.RecentlyPlayed.AvailableGamescore.1)]/$INFO[Skin.String(XboxLive.Gamer.RecentlyPlayed.EarnedGamescore.1)][CR]$INFO[Skin.String(XboxLive.Gamer.RecentlyPlayed.AvailableAchievements.1)]/$INFO[Skin.String(XboxLive.Gamer.RecentlyPlayed.EarnedAchievements.1)]</label3>
+                                <icon>$INFO[Skin.String(XboxLive.Gamer.RecentlyPlayed.Icon.1)]</icon>
+                            </item>
+                            
+                          
+</content>
+			</control>
+							
+							
+</control>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				
+						
+						<!--Scrollbar-->
+
+					
+					</control>
+					
+			
+					
+				</control>
+		
+
+			
+		
+		<include>Snapped_Content</include>	
+	</controls>	
+		
+</window>

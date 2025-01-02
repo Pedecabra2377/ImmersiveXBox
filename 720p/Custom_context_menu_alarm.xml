@@ -1,0 +1,237 @@
+<window type="dialog" id="6565">
+
+	<defaultcontrol>900</defaultcontrol>
+	
+
+	
+
+	
+	<!--Splash Screen-->
+
+
+	
+
+
+	
+
+	
+	<controls>
+
+		<!--Background Area-->
+
+	
+			
+<control type="image">
+		
+			<include>Common_Dimensions</include>
+			<texture background="true">colors/color_white.png</texture>
+			<colordiffuse>FanartDiffuse</colordiffuse>
+			
+			<include>Common_Animation_Window_Dark</include>
+		
+		</control>
+
+							
+																			
+									<!--Top Area-->
+
+	
+						
+						
+			
+				
+
+					
+
+							
+					
+					
+						
+					
+					
+					
+					
+					
+								
+					
+					
+							
+					
+					
+					
+	
+		<control type="group">
+		<include>Common_Animation_Splash_kai2</include>
+			<posx>480</posx>
+			<posy>70</posy>
+			<width>320</width>
+			<height>400</height>
+			
+		
+		
+			<!--Background-->
+				
+					<control type="image">
+			
+				<posy>0</posy>
+				<posy>0</posy>
+				<width>320</width>
+				<height>500</height>
+				<texture background="true">colors\color_black.png</texture>
+			<colordiffuse>FFF5F5F5</colordiffuse>
+
+			</control>
+			<control type="image">
+			
+				<posx>0</posx>
+				<posy>390</posy>
+				<width>320</width>
+				<height>180</height>
+				<texture background="true">colors\color_white.png</texture>
+			<colordiffuse>$INFO[Skin.String(Gamercolor)]</colordiffuse>
+
+			</control>
+			
+			<include>Common_ContextMenu_Header_Back</include>
+			
+			<control type="label">
+	
+					<posx>80</posx>
+		<posy>29</posy>
+		<width>240</width>
+		<height>32</height>
+		<font>PVR-EPG-Time2</font>
+		<textcolor>Label_Normal</textcolor>
+		<aligny>top</aligny>
+				<label>Definir um alarme</label>
+				
+				
+			</control>
+			
+			
+			
+			<control type="panel" id="900">
+				
+<posx>-5</posx>
+						<posy>100</posy>
+
+				<onright>53</onright>
+		<onleft>-</onleft>
+						<include>Common_AltHome_Panel383-alt</include>
+					
+
+
+
+
+						
+						
+						<content>
+						
+
+							
+						
+								<item id="1">
+								
+					<label>   Alarme de desligamento</label>
+					<onclick>Back</onclick>
+						<onclick>XBMC.AlarmClock(a,XBMC.Powerdown())</onclick>
+						<onclick>ActivateWindow(866)</onclick>
+
+						
+						
+							</item>
+							<item id="2">
+								<visible>Skin.HasSetting(alai)</visible>
+					<label>   Alarme de áudio</label>
+					<onclick>Back</onclick>
+						<onclick>XBMC.AlarmClock(a,Playmedia(special://skin/system/alarm.wav))</onclick>
+		
+							
+								<onclick>ActivateWindow(866)</onclick>
+
+						
+						
+							</item>
+							<item id="2">
+							<visible>!Skin.HasSetting(alai)</visible>	
+					<label>   Alarme de áudio</label>
+					<onclick>Back</onclick>
+					<onclick>XBMC.AlarmClock(a,ActivateWindow(798))</onclick>
+									<onclick>ActivateWindow(866)</onclick>
+
+						
+						
+							</item>
+							<item id="3">
+							
+					<label>   Alarme de saída de conta</label>
+					<onclick>Back</onclick>
+				<onclick>XBMC.AlarmClock(a,ActivateWindow(29))</onclick>
+							<onclick>ActivateWindow(866)</onclick>
+
+						
+						
+							</item>
+							<item id="4">
+							
+					<label>   Alarme de reinício</label>
+					<onclick>Back</onclick>
+				<onclick>XBMC.AlarmClock(a,XBMC.Reset())</onclick>
+						<onclick>ActivateWindow(866)</onclick>
+
+						
+						
+							</item>
+							<item id="5">
+							
+					<label>   Alarme de mídia</label>
+					<onclick>Back</onclick>
+					<onclick>Skin.SetFile(string)</onclick>
+				<onclick>XBMC.AlarmClock(a,Playmedia($INFO[Skin.String(string)]))</onclick>	
+				<onclick>ActivateWindow(866)</onclick>
+
+						
+						
+							</item>
+							<item id="6">
+							
+					<label>   Alarme de app de vídeo</label>
+					<onclick>Back</onclick>
+					<onclick>Skin.SetAddon(string,xbmc.addon.video)</onclick>
+				<onclick>XBMC.AlarmClock(a,RunAddon($INFO[Skin.String(string)]))</onclick>	
+				<onclick>ActivateWindow(866)</onclick>
+
+						
+						
+							</item>
+							<item id="7">
+							
+					<label>   Alarme de app de música</label>
+					<onclick>Back</onclick>
+						<onclick>Skin.SetAddon(string,xbmc.addon.audio)</onclick>
+				<onclick>XBMC.AlarmClock(a,RunAddon($INFO[Skin.String(string)]))</onclick>	
+				<onclick>ActivateWindow(866)</onclick>
+			
+
+						
+						
+							</item>
+						
+
+								</content>
+
+					</control>
+			
+		</control>			
+						
+						<!--Scrollbar-->
+
+					
+			
+
+			
+		
+		
+	</controls>	
+		
+</window>

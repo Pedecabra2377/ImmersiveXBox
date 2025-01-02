@@ -1,0 +1,279 @@
+<window id="6606">
+
+	<defaultcontrol always="true">1</defaultcontrol>
+	
+	<zorder>2</zorder>
+	
+ <include condition="!Window.Previous(Home)">Common_Animation_Window</include>
+					  <include condition="Window.Previous(Home)">Common_Animation_apps_dash</include> 
+	
+	<!--Splash Screen-->
+
+	<onload>Skin.SetString(wiki, )</onload>
+	
+		<onload>Skin.SetString(snapwindow, settings)</onload>
+<onload condition="!Skin.HasSetting(snapie)">Skin.ToggleSetting(snapie)</onload>
+<onload condition="Skin.HasSetting(gaming)">Skin.ToggleSetting(gaming)</onload>
+<onload>Skin.SetString(snap, demo/sna/settings.jpg,0)</onload>
+<onload>Skin.SetString(sn,Configurações)</onload>
+
+	<onload condition="Skin.HasSetting(SnapFeature) + Skin.HasSetting(SnapAlways)">Skin.SetString(snap, C:\Assistance\Snap\Pic\Item.jpg,0)</onload>
+<onload condition="Skin.HasSetting(SnapFeature) + Skin.HasSetting(SnapAlways)">AlarmClock(startsnap,RunScript(special://skin/system/Snap.py),00:01,silent)</onload>
+
+	
+	<controls>
+
+		<!--Background Area-->
+
+		
+
+				<control type="image">
+							 <include condition="!Window.Previous(Home)">Common_Animation_Window</include>
+					  <include condition="Window.Previous(Home)">Common_Animation_apps_dash</include> 
+								<include>Common_Dimensions</include>
+								<texture>demo\app\net\bg.png</texture>
+								<visible>System.InternetState</visible>
+								
+							</control>
+									<control type="image">
+							 <include condition="!Window.Previous(Home)">Common_Animation_Window</include>
+					  <include condition="Window.Previous(Home)">Common_Animation_apps_dash</include> 
+								<include>Common_Dimensions</include>
+								<texture>demo\app\net\1.png</texture>
+								<visible>Control.HasFocus(1) + System.InternetState</visible>
+								
+							</control>
+							<control type="image">
+							
+								<include>Common_Dimensions</include>
+								<texture>demo\app\net\2.png</texture>
+								<visible>Control.HasFocus(2) + System.InternetState</visible>
+								
+							</control>
+							<control type="image">
+							
+								<include>Common_Dimensions</include>
+								<texture>demo\app\net\3.png</texture>
+							<visible>Control.HasFocus(3) + System.InternetState</visible>
+								
+							</control>
+							<control type="image">
+							
+								<include>Common_Dimensions</include>
+								<texture>demo\app\net\4.png</texture>
+								<visible>Control.HasFocus(4) + System.InternetState</visible>
+								
+							</control>
+							<control type="image">
+							 <include condition="!Window.Previous(Home)">Common_Animation_Window</include>
+					  <include condition="Window.Previous(Home)">Common_Animation_apps_dash</include> 
+								<include>Common_Dimensions</include>
+								<texture>demo\app\net\bga.png</texture>
+								<visible>!System.InternetState</visible>
+								
+							</control>
+									<control type="image">
+							 <include condition="!Window.Previous(Home)">Common_Animation_Window</include>
+					  <include condition="Window.Previous(Home)">Common_Animation_apps_dash</include> 
+								<include>Common_Dimensions</include>
+								<texture>demo\app\net\1a.png</texture>
+								<visible>Control.HasFocus(1) + !System.InternetState</visible>
+								
+							</control>
+							<control type="image">
+							
+								<include>Common_Dimensions</include>
+								<texture>demo\app\net\2a.png</texture>
+								<visible>Control.HasFocus(2) + !System.InternetState</visible>
+								
+							</control>
+							<control type="image">
+							
+								<include>Common_Dimensions</include>
+								<texture>demo\app\net\3a.png</texture>
+							<visible>Control.HasFocus(3) + !System.InternetState</visible>
+								
+							</control>
+							<control type="image">
+							
+								<include>Common_Dimensions</include>
+								<texture>demo\app\net\4a.png</texture>
+								<visible>Control.HasFocus(4) + !System.InternetState</visible>
+								
+							</control>
+								
+
+									<!--Top Area-->
+
+			
+			<!--Content Area-->
+			<control type="group">
+			
+				<posx>0</posx>
+				<posy>100</posy>
+				<width>1280</width>
+				<height>480</height>
+				
+				<!--Animation-->
+				<include condition="!Skin.HasSetting(disablesplash)">Common_Animation_Content_Splash</include>
+				<include condition="!Window.Previous(home)">Common_Animation_Content</include>
+				
+										<control type="panel" id="1">
+<posx>1060</posx>
+						<posy>200</posy>
+
+						
+						<include>Common_AltHome_Panel3</include>
+
+
+				
+						<onright>2</onright>
+						<pagecontrol>7017</pagecontrol>
+						
+						<content>
+						
+
+							
+																					<item id="1">
+								<description>Games</description>
+								<label>Games</label>
+								<thumb>SHORT\ICO\Games.png</thumb>
+								
+							<onclick>Skin.SetString(iinfoo, Opções avançadas)</onclick>
+							
+<onclick>Skin.SetString(item1label, Desativar conexão)</onclick>
+<onclick>Skin.SetString(item1label2, Desativa sua conexão)</onclick>
+<onclick>Skin.SetString(item1click, ActivateWindow(6517))</onclick>
+
+<onclick>Skin.SetString(item2label, Refrescar conexão)</onclick>
+<onclick>Skin.SetString(item2label2, Refrescar conexão do console)</onclick>
+<onclick>Skin.SetString(item2click, ActivateWindow(6502))</onclick>
+
+<onclick>Skin.SetString(item3label, Checar conexão)</onclick>
+<onclick>Skin.SetString(item3label2, Verifica sua conexão)</onclick>
+<onclick>Skin.SetString(item3click, ActivateWindow(6518))</onclick>
+
+<onclick>Skin.SetString(item4label, Opções da internet)</onclick>
+<onclick>Skin.SetString(item4label2, Opções da internet do console)</onclick>
+<onclick>Skin.SetString(item4click, ActivateWindow(servicesettings))</onclick>
+<onclick>ActivateWindow(6519)</onclick>
+														
+							</item>
+							
+
+
+								</content>
+
+					</control>
+					<control type="panel" id="2">
+<posx>1060</posx>
+						<posy>200</posy>
+
+						
+						<include>Common_AltHome_Panel3</include>
+
+
+				<onleft>1</onleft>
+				<ondown>3</ondown>
+						<pagecontrol>7017</pagecontrol>
+						
+						<content>
+						
+
+							
+																					<item id="1">
+								<description>Games</description>
+								<label>Games</label>
+								<thumb>SHORT\ICO\Games.png</thumb>
+								<onclick>ActivateWindow(6514)</onclick>
+														
+							</item>
+							
+
+
+								</content>
+
+					</control>
+					<control type="panel" id="3">
+<posx>1060</posx>
+						<posy>200</posy>
+
+						
+						<include>Common_AltHome_Panel3</include>
+<onup>2</onup>
+				<onleft>1</onleft>
+				<ondown>4</ondown>
+						<pagecontrol>7017</pagecontrol>
+						
+						<content>
+						
+
+							
+																					<item id="1">
+								<description>Games</description>
+								<label>Games</label>
+								<thumb>SHORT\ICO\Games.png</thumb>
+								<onclick>ActivateWindow(6516)</onclick>
+														
+							</item>
+							
+
+
+								</content>
+
+					</control>
+					<control type="panel" id="4">
+<posx>1060</posx>
+						<posy>200</posy>
+
+						
+						<include>Common_AltHome_Panel3</include>
+<onup>3</onup>
+				<onleft>1</onleft>
+				
+						<pagecontrol>7017</pagecontrol>
+						
+						<content>
+						
+
+							
+																					<item id="1">
+								<description>Games</description>
+								<label>Games</label>
+								<thumb>SHORT\ICO\Games.png</thumb>
+								<onclick>ActivateWindow(6513)</onclick>
+														
+							</item>
+							
+
+
+								</content>
+
+					</control>
+						
+									
+										
+				
+						
+						<!--Scrollbar-->
+
+					
+
+			
+			<!--Scrollbar-->
+			<control type="scrollbar" id="9010">
+				
+				<include>Common_Window_Scrollbar_Horizontal</include>
+				<posy>600</posy>
+				
+				<include>Common_Animation_Window_Scrollbar_Fade</include>
+				
+				<visible>Skin.HasSetting(UseTouchInput)</visible>
+				
+			</control>
+
+			</control>
+		<include>Snapped_Content</include>	
+	</controls>	
+		
+</window>

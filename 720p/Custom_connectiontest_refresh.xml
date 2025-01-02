@@ -1,0 +1,315 @@
+<window type="dialog" id="6519">
+
+	<defaultcontrol always="true">5</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<zorder>2</zorder>
+	<onload condition="Window.IsVisible(5525)">Skin.SetString(Transfer, )</onload>
+	<onload condition="Window.IsVisible(5525)">Control.SetFocus(5)</onload>
+<onload condition="Window.IsVisible(5525)">Skin.SetString(iinfo, )</onload>
+<onload condition="Window.IsVisible(5525)">Skin.SetString(infoo, )</onload>
+<onunload>Skin.SetString(infoo, )</onunload>
+<onunload>Skin.SetString(iinfo, )</onunload>
+<onunload>Skin.SetString(iinfoo, )</onunload>
+<onunload>Skin.SetString(item1label, )</onunload>
+<onunload>Skin.SetString(item1label2, )</onunload>
+<onunload>Skin.SetString(item1click, )</onunload>
+<onunload>Skin.SetString(item2label, )</onunload>
+<onunload>Skin.SetString(item2label2, )</onunload>
+<onunload>Skin.SetString(item2click, )</onunload>
+<onunload>Skin.SetString(item3label, )</onunload>
+<onunload>Skin.SetString(item3label2, )</onunload>
+<onunload>Skin.SetString(item3click, )</onunload>
+<onunload>Skin.SetString(item4label, )</onunload>
+<onunload>Skin.SetString(item4label2, )</onunload>
+<onunload>Skin.SetString(item4click, )</onunload>
+<onunload>Skin.SetString(item5label, )</onunload>
+<onunload>Skin.SetString(item5label2, )</onunload>
+<onunload>Skin.SetString(item5click, )</onunload>
+<onunload>Skin.SetString(item6label, )</onunload>
+<onunload>Skin.SetString(item6label2, )</onunload>
+<onunload>Skin.SetString(item6click, )</onunload>
+<onunload>Skin.SetString(item7label, )</onunload>
+<onunload>Skin.SetString(item7label2, )</onunload>
+<onunload>Skin.SetString(item7click, )</onunload>
+<onload condition="Window.IsVisible(5525)">Skin.SetString(iinfoo, Refreshing connection)</onload>
+<onload condition="System.InternetState + Window.IsVisible(5525)">AlarmClock(info6,Skin.SetString(iinfo, Connection refreshed),00:10,silent,)</onload>
+<onload condition="!System.InternetState + Window.IsVisible(5525)">AlarmClock(info6,Skin.SetString(iinfo, Refreshing failed),00:10,silent,)</onload>
+<onload condition="System.InternetState + Window.IsVisible(5525)">AlarmClock(info7,Skin.SetString(infoo, Your console is connected to the internet),00:10,silent,)</onload>
+<onload condition="!System.InternetState + Window.IsVisible(5525)">AlarmClock(info7,Skin.SetString(infoo, Your console is not connected to the internet),00:10,silent,)</onload>
+<onload condition="Window.IsVisible(5525)">RunScript(special://skin/system/InternetOn.py)</onload>
+		
+
+	
+	
+
+	<controls>
+	
+			<control type="image">
+		
+			<include>Common_Dimensions</include>
+			<texture background="true">XBOXnew.png</texture>
+		
+			
+	
+		</control>
+
+
+		
+		
+	
+		<!--Charm Bar Section-->
+		<control type="group">
+		<visible>Window.IsVisible(5525)</visible>
+			<posx>0</posx>
+			<posy>0</posy>
+			
+			 
+
+
+		
+				<control type="label">
+				 <animation type="Visible">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="0,100" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+				
+					<posx>180</posx>
+					<posy>175</posy>
+					<width>550</width>
+					<height>48</height>
+					<label>$INFO[Skin.String(iinfoo)]</label>
+					<font>Charms-Date</font>
+					<textcolor>Label_Normal</textcolor>
+					<aligny>center</aligny>
+						<alignx>center</alignx>
+							<visible>IsEmpty(Skin.String(iinfo)) + !IsEmpty(Skin.String(iinfoo))</visible>
+				</control>
+			<control type="label">
+				 <animation type="Visible">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="0,100" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+				
+					<posx>180</posx>
+					<posy>175</posy>
+					<width>550</width>
+					<height>48</height>
+					<label>$INFO[Skin.String(iinfo)]</label>
+					<font>Charms-Date</font>
+					<textcolor>Label_Normal</textcolor>
+					<aligny>center</aligny>
+						<alignx>center</alignx>
+							<visible>!IsEmpty(Skin.String(iinfo))</visible>
+				</control>
+				<control type="label">
+				<animation type="Visible">
+                        <effect type="fade" start="0" end="100" delay="150" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="0,100" end="0" delay="150" tween="cubic" easing="out" time="600" />
+                    </animation>
+			
+					<posx>180</posx>
+					<posy>80</posy>
+						<width>900</width>
+								<height>500</height>
+					<label>[CR]$INFO[Skin.String(infoo)]</label>
+					<font>DialogInfo-Label-install</font>
+			<textcolor>Label_Normal</textcolor>
+					<aligny>center</aligny>
+						<alignx>center</alignx>
+						<visible>!IsEmpty(Skin.String(infoo))</visible>
+				</control>
+				
+			
+			
+				
+			
+			
+			
+					
+					
+					
+					
+					
+					</control>
+					<control type="label">
+						<animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="150" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="0,100" end="0" delay="150" tween="cubic" easing="out" time="600" />
+                    </animation>
+				 <animation type="Visible">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="0,100" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+				
+					<posx>180</posx>
+					<posy>175</posy>
+					<width>550</width>
+					<height>48</height>
+					<label>$INFO[Skin.String(iinfoo)]</label>
+					<font>Charms-Date</font>
+					<textcolor>Label_Normal</textcolor>
+					<aligny>center</aligny>
+						<alignx>center</alignx>
+								<visible>!Window.IsVisible(5525)</visible>
+				</control>
+				<control type="label">
+					<animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="150" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="0,100" end="0" delay="150" tween="cubic" easing="out" time="600" />
+                    </animation>
+				<animation type="Visible">
+                        <effect type="fade" start="0" end="100" delay="150" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="0,100" end="0" delay="150" tween="cubic" easing="out" time="600" />
+                    </animation>
+			
+					<posx>180</posx>
+					<posy>40</posy>
+						<width>900</width>
+								<height>500</height>
+					<label>[CR]$INFO[Container(5).ListItem.Label2]</label>
+					<font>DialogInfo-Label-install</font>
+			<textcolor>Label_Normal</textcolor>
+					<aligny>center</aligny>
+						<alignx>center</alignx>
+						<visible>!Window.IsVisible(5525) + !IsEmpty(Container(5).ListItem.Label2)</visible>
+				</control>
+					
+					<control type="list" id="5">
+						<animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="150" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="0,100" end="0" delay="150" tween="cubic" easing="out" time="600" />
+                    </animation>
+				<visible>!Window.IsVisible(5525)</visible>
+<posx>180</posx>
+						<posy>375</posy>
+
+			<orientation>vertical</orientation>
+		<onleft>-</onleft>
+		<onright>1</onright>
+						<include>Common_AltHome_Panel383-optionmenu</include>
+					
+<orientation>vertical</orientation>
+
+
+
+						
+						
+						<content>
+							
+
+							
+										<item id="1">
+								<description>Games</description>
+								<label>   $INFO[Skin.String(item1label)]</label>
+								<label2>$INFO[Skin.String(item1label2)]</label2>
+								<thumb></thumb>
+													
+							
+										<onclick>$INFO[Skin.String(item1click)]</onclick>
+										<onclick>Dialog.Close(6519)</onclick>
+										<visible>!IsEmpty(Skin.String(item1label))</visible>
+							</item>
+							
+										<item id="2">
+								<description>Games</description>
+								<label>   $INFO[Skin.String(item2label)]</label>
+								<label2>$INFO[Skin.String(item2label2)]</label2>
+								<thumb></thumb>
+													
+						
+										<onclick>$INFO[Skin.String(item2click)]</onclick>
+											<onclick>Dialog.Close(6519)</onclick>
+										<visible>!IsEmpty(Skin.String(item2label))</visible>
+							</item>
+							
+										<item id="3">
+								<description>Games</description>
+								<label>   $INFO[Skin.String(item3label)]</label>
+								<label2>$INFO[Skin.String(item3label2)]</label2>
+								<thumb></thumb>
+													
+							
+										<onclick>$INFO[Skin.String(item3click)]</onclick>
+										<onclick>Dialog.Close(6519)</onclick>
+										<visible>!IsEmpty(Skin.String(item3label))</visible>
+							</item>
+							
+										<item id="4">
+								<description>Games</description>
+								<label>   $INFO[Skin.String(item4label)]</label>
+								<label2>$INFO[Skin.String(item4label2)]</label2>
+								<thumb></thumb>
+													
+							
+										<onclick>$INFO[Skin.String(item4click)]</onclick>
+										<onclick>Dialog.Close(6519)</onclick>
+										<visible>!IsEmpty(Skin.String(item4label))</visible>
+							</item>
+							
+										<item id="5">
+								<description>Games</description>
+								<label>   $INFO[Skin.String(item5label)]</label>
+								<label2>$INFO[Skin.String(item5label2)]</label2>
+								<thumb></thumb>
+													
+							
+										<onclick>$INFO[Skin.String(item5click)]</onclick>
+										<onclick>Dialog.Close(6519)</onclick>
+										<visible>!IsEmpty(Skin.String(item5label))</visible>
+							</item>
+							
+										<item id="6">
+								<description>Games</description>
+								<label>   $INFO[Skin.String(item6label)]</label>
+								<label2>$INFO[Skin.String(item6label2)]</label2>
+								<thumb></thumb>
+													
+							
+										<onclick>$INFO[Skin.String(item6click)]</onclick>
+										<onclick>Dialog.Close(6519)</onclick>
+										<visible>!IsEmpty(Skin.String(item6label))</visible>
+							</item>
+								<item id="7">
+								<description>Games</description>
+								<label>   $INFO[Skin.String(item7label)]</label>
+								<label2>$INFO[Skin.String(item7label2)]</label2>
+								<thumb></thumb>
+													
+							
+										<onclick>$INFO[Skin.String(item7click)]</onclick>
+										<onclick>Dialog.Close(6519)</onclick>
+										<visible>!IsEmpty(Skin.String(item7label))</visible>
+							</item>
+							
+								
+								
+
+												
+
+
+								</content>
+
+					</control>
+					
+					
+					
+					
+					<control type="image">
+			
+			<description>Busy animation</description>
+			<posx>616</posx>
+			<posy>339</posy>
+			<width>85</width>
+			<height>85</height>
+			<texture>buffer/buffer_progress.png</texture>
+			<aspectratio>keep</aspectratio>
+			<visible>IsEmpty(Skin.String(infoo)) + Window.IsVisible(5525)</visible>
+			<animation effect="rotate" end="-360" center="auto" time="1200" loop="true" condition="true">Conditional</animation>
+			
+		</control>
+						
+
+		
+	</controls>	
+	
+</window>

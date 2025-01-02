@@ -1,0 +1,532 @@
+<window id="866">
+
+	<defaultcontrol always="true">9005</defaultcontrol>
+	
+	<zorder>2</zorder>
+	
+
+	
+	<!--Splash Screen-->
+	
+	
+	<onload condition="System.HasAddon(script.randomandlastitems) + Skin.HasSetting(ShowHistorySection_Music)">XBMC.RunScript(script.randomandlastitems,limit=16,type=Music,method=Last,playlist=special://skin/playlists/History (Music).xsp,menu=Menu3)</onload>
+	
+	<onload condition="System.HasAddon(script.extendedinfo) + Skin.HasSetting(ShowNearbyEventsSection_Music)">RunScript(script.extendedinfo,info=NearEvents)</onload>
+	
+	<onload>AlarmClock(MoveFeatured,Control.Move(9001,1),00:20,silent,loop)</onload>
+	<onunload>XBMC.CancelAlarm(MoveFeatured,true)</onunload>
+	<onload condition="Skin.HasSetting(SnapFeature) + Skin.HasSetting(SnapAlways)">Skin.SetString(snap, C:\Assistance\Snap\Pic\Item.jpg,0)</onload>
+<onload condition="Skin.HasSetting(SnapFeature) + Skin.HasSetting(SnapAlways)">AlarmClock(startsnap,RunScript(special://skin/system/Snap.py),00:01,silent)</onload>
+	
+		<onload>Skin.SetString(snapwindow, 866)</onload>
+<onload condition="!Skin.HasSetting(snapie)">Skin.ToggleSetting(snapie)</onload>
+<onload condition="Skin.HasSetting(gaming)">Skin.ToggleSetting(gaming)</onload>
+<onload>Skin.SetString(snap, demo/sna/time.jpg,0)</onload>
+<onload>Skin.SetString(sn,Relógio)</onload>
+	
+	<controls>
+
+		<!--Background Area-->
+
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+			<texture>XBOXnew.png</texture>
+			<aspectratio>stretch</aspectratio>
+<onclick>XBMC.CancelAlarm(a)</onclick>
+								<onclick>ActivateWindow(866)</onclick>
+											<visible>System.HasAlarm(a)</visible>
+		</control>
+<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+			<texture>XBOXnew.png</texture>
+			<aspectratio>stretch</aspectratio>
+<onclick>ActivateWindow(6565)</onclick>
+											<visible>!System.HasAlarm(a)</visible>
+		</control>
+		<control type="image">
+			 <animation effect="zoom" start="110" end="130" center="auto" time="15000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
+        <animation effect="slide" start="-10,-10" end="20,20" time="7000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
+        <animation effect="rotate" center="360,640" start="-2" end="2" time="11000" tween="cubic" easing="inout" pulse="true" condition="Skin.HasSetting(animation_bg)">Conditional</animation>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+<aspectratio>stretch</aspectratio>
+			<texture background="true">$INFO[Skin.String(DashBack)]</texture>
+			<colordiffuse>Settings_Background_Light</colordiffuse>
+			<visible>Skin.HasSetting(CustomBackApp)</visible>
+			
+
+
+		</control>
+		<control type="image">
+		
+			<include>Common_Dimensions</include>
+			<texture background="true">colors/color_white.png</texture>
+			<colordiffuse>FanartDiffuse</colordiffuse>
+			
+	
+			<visible>Skin.HasSetting(AlarmBing)</visible>
+		</control>
+			
+									<!--Top Area-->
+			<include>Common_Breadcrumb</include>
+		
+			
+			<!--Content Area-->
+			<control type="group">
+			
+				<posx>0</posx>
+				<posy>100</posy>
+				<width>1280</width>
+				<height>480</height>
+				
+				<!--Animation-->
+ <include condition="!Window.Previous(Home)">Common_Animation_Window</include>
+					  <include condition="Window.Previous(Home)">Common_Animation_apps_dash</include> 
+		
+				
+				<control type="grouplist">
+		
+					<include>Common_Content_Grouplist</include>
+					
+					<control type="group" id="8000">
+					
+						<posx>60</posx>
+						<posy>0</posy>
+						<width>400</width>
+						<height>480</height>
+						
+						<control type="label">
+							
+							<label></label>
+						<include>Common_Section_Label</include>
+							
+							
+						</control>
+					
+						<control type="panel" id="9000">
+								
+							<posx>50</posx>
+							<posy>60</posy>
+						<width>480</width>
+						<height>480</height>
+							<onleft>9005</onleft>
+							<onright>9005</onright>
+							<onup>9000</onup>
+							<ondown>9000</ondown>
+						<pagecontrol>9011</pagecontrol>
+						<viewtype label="535">list</viewtype>
+						<scrolltime tween="cubic" easing="out">600</scrolltime>
+						<orientation>vertical</orientation>
+						<preloaditems>3</preloaditems>
+							
+						<itemlayout width="160" height="160">
+
+							<control type="image">
+							
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>140</width>
+								<height>140</height>
+								<texture>colors/color_white.png</texture>
+								<colordiffuse>Tile_Background</colordiffuse>
+								
+							</control>
+							
+							<control type="image">
+							
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>140</width>
+								<height>140</height>
+								<texture>$INFO[ListItem.Thumb]</texture>
+								<aspectratio>scale</aspectratio>
+								
+							</control>
+						
+							<control type="label">
+							
+								<posx>10</posx>
+								<posy>114</posy>
+								<width min="20" max="127">auto</width>
+								<height>20</height>
+								<label>$INFO[ListItem.Label]</label>
+								<font>Home-Tile-Header</font>
+								<textcolor>Tile_Text</textcolor>
+								<aligny>center</aligny>
+								
+							</control>
+							
+							<control type="textbox">
+								
+								<posx>0</posx>
+								<posy>20</posy>
+								<width>140</width>
+								<height>90</height>
+								<label>$INFO[ListItem.Label2]</label>
+								<font>Home-Featured</font>
+								<textcolor>80FFFFFF</textcolor>
+								<align>left</align>
+								<aligny>top</aligny>
+								
+								<visible>StringCompare(ListItem.Label,Now playing) + !VideoPlayer.HasMenu</visible>
+								
+							</control>
+							
+						</itemlayout>
+
+						<focusedlayout width="160" height="160">
+
+							<control type="image">
+							
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>140</width>
+								<height>140</height>
+								<texture>colors/color_white.png</texture>
+								<colordiffuse>Background_Highlight</colordiffuse>
+								
+							</control>
+							
+							<control type="image">
+							
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>140</width>
+								<height>140</height>
+								<texture>$INFO[ListItem.Thumb]</texture>
+								<aspectratio>scale</aspectratio>
+								
+							</control>
+						
+							<control type="label">
+							
+								<posx>10</posx>
+								<posy>114</posy>
+								<width min="20" max="127">auto</width>
+								<height>20</height>
+								<label>$INFO[ListItem.Label]</label>
+								<font>Home-Tile-Header</font>
+								<textcolor>Tile_Text</textcolor>
+								<aligny>center</aligny>
+								
+							</control>
+							
+							<control type="textbox">
+								
+								<posx>0</posx>
+								<posy>20</posy>
+								<width>140</width>
+								<height>100</height>
+								<label>$INFO[ListItem.Label2]</label>
+								<font>Home-Featured</font>
+								<textcolor>80FFFFFF</textcolor>
+								<align>left</align>
+								<aligny>top</aligny>
+								
+								<visible>StringCompare(ListItem.Label,Now playing) + !VideoPlayer.HasMenu</visible>
+								
+							</control>
+							
+							<control type="group">
+							
+								<control type="image">
+							
+									<posx>0</posx>
+									<posy>0</posy>
+									<width>140</width>
+									<height>140</height>
+									<texture>colors/color_white.png</texture>
+									<colordiffuse>Background_Normal</colordiffuse>
+									
+									<visible>!IsEmpty(ListItem.Label2) + Control.HasFocus(9001) + System.IdleTime(2)</visible>
+								
+									<animation type="Visible" reversible="false" loop="true">
+										<effect type="fade" start="0" end="100" time="100" />
+										<effect type="zoom" start="100,0" end="100,100" center="90,0" time="100" />
+										<effect type="zoom" start="100,100" end="100,0" center="90,0" time="100" delay="100" />
+										<effect type="fade" start="100" end="0" time="400" delay="120" />
+									</animation>
+									
+								</control>
+								
+								<control type="textbox">
+								
+									<posx>20</posx>
+									<posy>20</posy>
+									<width>100</width>
+									<height>100</height>
+									<label>$INFO[ListItem.Label2]</label>
+									<font>Home-Tile-Detail</font>
+									<textcolor>Label_Normal</textcolor>
+									<aligny>top</aligny>
+									<wrapmultiline>true</wrapmultiline>
+									<shadowcolor>00FFFFFF</shadowcolor>
+									<autoscroll>false</autoscroll>
+									
+									<visible>!IsEmpty(ListItem.Label2) + Control.HasFocus(9001) + System.IdleTime(2)</visible>
+									
+									<animation type="Visible" reversible="false" loop="true">
+										<effect type="fade" start="0" end="100" time="100" delay="200" />
+										<effect type="fade" start="100" end="0" time="100" delay="200" />
+									</animation>
+									
+								</control>
+								
+							</control>	
+							
+						</focusedlayout>
+						
+						<content>
+
+
+
+							</content>
+							
+						</control>
+			
+				
+
+						
+							<!--Search Area-->
+				<control type="group">
+										<posx>30</posx>
+						<posy>30</posy>
+					<width>420</width>
+					<height>480</height>
+					
+					<visible>false</visible>
+				
+					<control type="label">
+						<posx>10</posx>
+						<posy>-3</posy>
+						<label>pesquise</label>
+						<include>Common_Section_Label2</include>
+						
+					</control>
+					
+					<control type="panel" id="9005">
+<posx>150</posx>
+										<posy>117</posy>
+
+						
+						<include>Common_AltHome_Panel3</include>
+
+						<pagecontrol>7017</pagecontrol>
+						
+						<content>
+						
+
+							
+																					<item id="1">
+								<description>Games</description>
+								<label>Games</label>
+								<thumb>SHORT\ICO\Games.png</thumb>
+								<onclick>XBMC.CancelAlarm(a)</onclick>
+								<onclick>ActivateWindow(866)</onclick>
+											<visible>System.HasAlarm(a)</visible>				
+							</item>
+																								<item id="1">
+								<description>Games</description>
+								<label>Games</label>
+								<thumb>SHORT\ICO\Games.png</thumb>
+									<onclick>ActivateWindow(6565)</onclick>
+											<visible>!System.HasAlarm(a)</visible>			
+							</item>
+							
+
+
+								</content>
+
+					</control>
+					
+					<control type="image">
+							
+						<posx>362</posx>
+						<posy>2</posy>
+						<width>36</width>
+						<height>36</height>
+						<texture>charms\charm_search.png</texture>
+						<colordiffuse>FF000000</colordiffuse>
+					
+					</control>
+					
+					<control type="textbox">
+							
+						<posx>0</posx>
+						<posy>76</posy>
+						<width>400</width>
+						<height>200</height>
+						<label>Clique para pesquisar no Bing a palavra-chave</label>
+						<font>Menu-List</font>
+						<textcolor>FFFFFFFF</textcolor>
+						<aligny>top</aligny>
+						<wrapmultiline>true</wrapmultiline>
+						<scrollspeed>0</scrollspeed>
+						
+					</control>
+										<control type="label">
+						<posx>10</posx>
+						<posy>-3</posy>
+						<label>search</label>
+						<include>Common_Section_Label2</include>
+						
+					</control>
+					
+				</control>		
+						<!--Time + Date Section-->
+		<control type="group">
+		
+			<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
+			
+
+		
+			<control type="grouplist">
+			
+				<posx>330</posx>
+				<posy>100</posy>
+				<width>2000</width>
+				<height>600</height>
+				<orientation>vertical</orientation>
+				<itemgap>20</itemgap>
+				
+				
+			
+				
+				
+				<control type="label">
+				
+					<width min="0" max="4000">auto</width>
+					<height>3000</height>
+					<label>$INFO[System.Time(HH:MM)]</label>
+					<font>Alarm-time</font>
+					<textcolor>Label_Normal</textcolor>
+					<aligny>top</aligny>
+				
+				</control>
+				
+
+				
+			</control>
+			
+						<control type="grouplist">
+			
+				<posx>0</posx>
+				<posy>325</posy>
+				<width>2000</width>
+				<height>600</height>
+				<orientation>vertical</orientation>
+				<itemgap>20</itemgap>
+				<usecontrolcoords>true</usecontrolcoords>
+				
+			
+				
+				
+
+				
+				<control type="label">
+					
+					<description>Heading</description>
+				<posx>350</posx>
+				<posy>35</posy>
+					<width min="0" max="9000">auto</width>
+					<height>82</height>
+					<label>Seu alarme foi definido.[CR]Clique para cancelar.</label>
+					<font>Charms-Date</font>
+					<onclick>ActivateWindow(866)</onclick>
+					<visible>System.HasAlarm(a)</visible>
+					
+				</control>
+											<control type="label">
+					
+					<description>Heading</description>
+						<posx>350</posx>
+				<posy>35</posy>
+					<width min="0" max="800">auto</width>
+					<height>82</height>
+					<label>Não há alarmes definidos.[CR]Clique para definir um alarme.</label>					
+<onclick>ActivateWindow(6565)</onclick>																	
+				
+		
+	
+
+					<font>Charms-Date</font>
+					
+					<visible>!System.HasAlarm(a)</visible>
+					
+				</control>
+				
+			</control>
+			<control type="label">
+					
+					<description>Heading</description>
+				<posx>350</posx>
+				<posy>35</posy>
+					<width min="0" max="9000">auto</width>
+					<height>82</height>
+					<label>São [CR]$INFO[System.Date(DDD)] $INFO[System.Date(MMM d)]</label>
+					<font>Charms-Date-big</font>
+					<aligny>top</aligny>
+<onclick>ActivateWindow(6565)</onclick>
+<visible>!System.HasAlarm(a)</visible>					
+					
+				</control>
+<control type="label">
+					
+					<description>Heading</description>
+				<posx>350</posx>
+				<posy>35</posy>
+					<width min="0" max="9000">auto</width>
+					<height>82</height>
+					<label>São [CR]$INFO[System.Date(DDD)] $INFO[System.Date(MMM d)]</label>
+					<font>Charms-Date-big</font>
+					<aligny>top</aligny>
+<onclick>ActivateWindow(866)</onclick>
+<visible>System.HasAlarm(a)</visible>					
+					
+				</control>							
+				
+						
+						<!--Scrollbar-->
+
+					
+					</control>
+					
+					<include>ViewList_RootMenu_Featured</include>
+					<include>ViewList_RootMenu_RecentlyAdded</include>
+					<include>ViewList_RootMenu_AiringToday</include>
+					<include>ViewList_RootMenu_InCinemas</include>
+					<include>ViewList_RootMenu_NearbyEvents</include>
+					<include>ViewList_RootMenu_History</include>
+					<include>ViewList_RootMenu_Trakt</include>
+					
+				</control>
+				
+			</control>
+			
+			<!--Scrollbar-->
+			<control type="scrollbar" id="9010">
+				
+				<include>Common_Window_Scrollbar_Horizontal</include>
+				<posy>600</posy>
+				
+				<include>Common_Animation_Window_Scrollbar_Fade</include>
+				
+				<visible>Skin.HasSetting(UseTouchInput)</visible>
+				
+			</control>
+
+			</control>
+			<include>Xbox_Logo</include>
+		<include>Snapped_Content</include>	
+	</controls>	
+		
+</window>

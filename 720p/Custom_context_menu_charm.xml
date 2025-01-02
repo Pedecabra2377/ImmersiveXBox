@@ -1,0 +1,175 @@
+<window type="dialog" id="8135">
+
+	<defaultcontrol>900</defaultcontrol>
+	
+	<onload>Control.SetFocus(900)</onload>
+	
+	
+
+	
+	<!--Splash Screen-->
+
+
+	
+
+
+	
+
+	
+	<controls>
+
+		<!--Background Area-->
+
+	
+			
+<control type="image">
+		
+			<include>Common_Dimensions</include>
+			<texture background="true">colors/color_white.png</texture>
+			<colordiffuse>FanartDiffuse</colordiffuse>
+			
+			<include>Common_Animation_Window_Dark</include>
+		
+		</control>
+
+							
+																			
+									<!--Top Area-->
+
+	
+						
+						
+			
+				
+
+					
+
+							
+					
+					
+						
+					
+					
+					
+					
+					
+								
+					
+					
+							
+					
+					
+					
+	
+		<control type="group">
+		<include>Common_Animation_Splash_kai2</include>
+			<posx>480</posx>
+			<posy>170</posy>
+			<width>320</width>
+			<height>100</height>
+			
+		
+		
+			<!--Background-->
+				
+					<control type="image">
+			
+				<posy>0</posy>
+				<posy>0</posy>
+				<width>320</width>
+				<height>400</height>
+				<texture background="true">colors\color_black.png</texture>
+			<colordiffuse>FFF5F5F5</colordiffuse>
+
+			</control>
+		
+			
+			<include>Common_ContextMenu_Header_Back</include>
+			
+			<control type="label">
+	
+					<posx>80</posx>
+		<posy>29</posy>
+		<width>240</width>
+		<height>32</height>
+		<font>PVR-EPG-Time2</font>
+		<textcolor>Label_Normal</textcolor>
+		<aligny>top</aligny>
+				<label>Barra de tarefas</label>
+				
+			
+			</control>
+			
+			
+			
+			<control type="panel" id="900">
+				
+<posx>-5</posx>
+						<posy>100</posy>
+
+				<onright>53</onright>
+		<onleft>-</onleft>
+						<include>Common_AltHome_Panel383-alt</include>
+					
+
+
+
+
+						
+						
+						<content>
+						
+
+							
+										<item id="1">
+								
+					<label>   Alternar explorador de internet</label>
+					<onclick>Back</onclick>
+						<onclick>Skin.ToggleSetting(charm-ie)</onclick>
+					
+					<visible>Skin.HasSetting(CharmTheme)</visible>					
+							</item>
+<item id="2">
+								
+					<label>   Alternar guia do console</label>
+					<onclick>Back</onclick>
+						<onclick>Skin.ToggleSetting(charm-guide)</onclick>
+				
+						<visible>Skin.HasSetting(CharmTheme)</visible>				
+							</item>
+<item id="3">
+								
+					<label>   Alternar estilo da barra de tarefas</label>
+					<onclick>Back</onclick>
+						<onclick>Skin.ToggleSetting(CharmTheme)</onclick>
+				
+						
+							</item>
+										
+							
+							
+							
+							
+							
+							
+	
+												
+
+
+								</content>
+
+					</control>
+			
+		</control>		
+						
+						<!--Scrollbar-->
+
+					
+			
+
+			
+		
+		
+	</controls>	
+		
+</window>

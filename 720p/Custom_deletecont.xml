@@ -1,0 +1,222 @@
+<window type="dialog" id="5509">
+
+	<defaultcontrol always="true">5</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<zorder>2</zorder>
+	<onload>Control.SetFocus(5)</onload>
+
+	<controls>
+	
+			<control type="image">
+		
+			<include>Common_Dimensions</include>
+			<texture background="true">colors/color_white.png</texture>
+			<colordiffuse>FanartDiffuse</colordiffuse>
+			
+			<include>Common_Animation_Window_Dark</include>
+			<visible>!Player.HasMedia</visible>
+		</control>
+
+
+		
+		
+	
+		<!--Charm Bar Section-->
+		<control type="group">
+		
+			<posx>0</posx>
+			<posy>0</posy>
+			
+			 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="150" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+
+	<control type="image">
+				 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="150" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+				
+				<posx>0</posx>
+				<posy>105</posy>
+				<width>1500</width>
+				<height>500</height>
+				<texture>demo\install\1.png</texture>
+			
+			</control>
+			<control type="image">
+				 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="150" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+				
+				<posx>0</posx>
+				<posy>105</posy>
+				<width>1500</width>
+				<height>500</height>
+				<texture>demo\install\1.png</texture>
+				<visible>Control.HasFocus(1)</visible>
+			</control>
+			<control type="image">
+				 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="150" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+				
+				<posx>0</posx>
+				<posy>105</posy>
+				<width>1500</width>
+				<height>500</height>
+				<texture>demo\install\2.png</texture>
+				<visible>Control.HasFocus(2)</visible>
+			</control>
+			<control type="label">
+				 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="150" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+				
+					<posx>180</posx>
+					<posy>85</posy>
+						<width>650</width>
+								<height>160</height>
+					<label></label>
+					<font>DialogInfo-Label2</font>
+			<textcolor>Label_Normal</textcolor>
+					<aligny>center</aligny>
+						<alignx>center</alignx>
+				</control>
+			<control type="label">
+				 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="150" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+				
+					<posx>180</posx>
+					<posy>175</posy>
+					<width>550</width>
+					<height>48</height>
+					<label>Deletar todos contatos</label>
+					<font>Charms-Date</font>
+					<textcolor>Label_Normal</textcolor>
+					<aligny>center</aligny>
+						<alignx>center</alignx>
+				</control>
+				<control type="label">
+				 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="150" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+			
+					<posx>180</posx>
+					<posy>210</posy>
+						<width>900</width>
+								<height>160</height>
+					<label>Tem certeza que quer deletar todos contatos ?</label>
+					<font>DialogInfo-Label-install</font>
+			<textcolor>Label_Normal</textcolor>
+					<aligny>center</aligny>
+						<alignx>center</alignx>
+				</control>
+				
+				
+			
+				
+			
+			
+			<control type="panel" id="5">
+	
+<posx>180</posx>
+						<posy>540</posy>
+
+			<onright>6</onright>
+				<onleft>-</onleft>
+						<include>Common_AltHome_Panel390</include>
+					
+
+
+
+
+						
+						
+						<content>
+						
+
+							
+						
+							<item id="1">
+								<description>Games</description>
+								<label>  Confirmar</label>
+								<thumb></thumb>
+								<onclick>Back</onclick>
+									<onclick condition="Skin.HasSetting(Friend1)">Skin.ToggleSetting(Friend1)</onclick>
+			<onclick>Skin.SetString(Email1, )</onclick>
+			<onclick>Skin.SetString(Email1Image, )</onclick>
+			<onclick condition="Skin.HasSetting(Friend2)">Skin.ToggleSetting(Friend2)</onclick>
+			<onclick>Skin.SetString(Email2, )</onclick>
+			<onclick>Skin.SetString(Email2Image, )</onclick>
+			<onclick condition="Skin.HasSetting(Friend3)">Skin.ToggleSetting(Friend3)</onclick>
+			<onclick>Skin.SetString(Email3, )</onclick>
+			<onclick>Skin.SetString(Email3Image, )</onclick>
+			<onclick condition="Skin.HasSetting(Friend4)">Skin.ToggleSetting(Friend4)</onclick>
+			<onclick>Skin.SetString(Email4, )</onclick>
+			<onclick>Skin.SetString(Email4Image, )</onclick>
+			<onclick condition="Skin.HasSetting(Friend5)">Skin.ToggleSetting(Friend5)</onclick>
+			<onclick>Skin.SetString(Email5, )</onclick>
+			<onclick>Skin.SetString(Email5Image, )</onclick>
+			<onclick condition="Skin.HasSetting(Friend6)">Skin.ToggleSetting(Friend6)</onclick>
+			<onclick>Skin.SetString(Email6, )</onclick>
+			<onclick>Skin.SetString(Email6Image, )</onclick>
+			<onclick condition="Skin.HasSetting(Friend7)">Skin.ToggleSetting(Friend7)</onclick>
+			<onclick>Skin.SetString(Email7, )</onclick>
+			<onclick>Skin.SetString(Email7Image, )</onclick>
+			<onclick condition="Skin.HasSetting(Friend8)">Skin.ToggleSetting(Friend8)</onclick>
+			<onclick>Skin.SetString(Email8, )</onclick>
+			<onclick>Skin.SetString(Email8Image, )</onclick>
+			<onclick condition="Skin.HasSetting(Friend9)">Skin.ToggleSetting(Friend9)</onclick>
+			<onclick>Skin.SetString(Email9, )</onclick>
+			<onclick>Skin.SetString(Email9Image, )</onclick>
+			<onclick condition="Skin.HasSetting(Friend10)">Skin.ToggleSetting(Friend10)</onclick>
+			<onclick>Skin.SetString(Email10, )</onclick>
+			<onclick>Skin.SetString(Email10Image, )</onclick>
+							
+						<onclick>Notification(     ,Deletado,00:59,)</onclick>	
+
+								
+							</item>
+			
+								<item id="2">
+								<description>Games</description>
+								<label>   Cancelar</label>
+								<thumb></thumb>
+													
+<onclick>Back</onclick>
+						
+							</item>
+		
+							
+
+								</content>
+
+					</control>
+					
+					
+					
+					
+					
+					</control>
+					
+					
+					
+					
+					
+					
+					
+					
+						
+
+		
+	</controls>	
+	
+</window>

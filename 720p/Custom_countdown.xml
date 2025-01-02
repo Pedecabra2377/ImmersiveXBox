@@ -1,0 +1,42 @@
+<!-- Foundation -->
+<window id="4392">
+	<defaultcontrol always="true">9000</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+
+	<controls>
+
+				<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+			<texture>xboxnow.jpg</texture>
+			<aspectratio>stretch</aspectratio>
+		</control>
+
+		
+				<control type="label">
+				 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="150" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+				
+					<posx>180</posx>
+					<posy>-150</posy>
+					<width>1000</width>
+					<height>1000</height>
+					<label>O que há de novo na [2.3.0-Carbon]? Resolvido: Falha ao inicializar console após ser restaurado para o padrão de fábrica. Nova interface de apps, otimização,
+Nova interface após restaurar padrão de fábrica, guia do usuário, TV e música, novo app: OneGuide, acesse exclusivos no seu console. Resolvido:
+Problema ao inicializar após tela de login e não acessar menu inicial, acessível apenas pela barra de tarefas do console. Resolvido: Falha em filmes & TV.
+Adicionado Temas Dinâmicos no console, escolha a cor e ela será aplicado em alguns apps, dentro do app, ícones e temas, nova tela de entrada, melhorias na
+loja Xbox, novas funções nas configurações, nova opção de interface no console, adicionado novo modo de captura e captura ao vivo, resolvido travamento ao usar modo de captura em vídeos enormes.</label>
+					<font>Charms-Date</font>
+					<textcolor>Label_Normal</textcolor>
+					
+				</control>
+	
+	
+
+	</controls>
+
+</window>

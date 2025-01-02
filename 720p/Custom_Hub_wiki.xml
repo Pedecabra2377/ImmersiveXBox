@@ -1,0 +1,542 @@
+<window id="864">
+
+	<defaultcontrol always="true">1</defaultcontrol>
+	
+	<zorder>2</zorder>
+	
+ <include condition="!Window.Previous(Home)">Common_Animation_Window</include>
+					  <include condition="Window.Previous(Home)">Common_Animation_apps_dash</include> 
+	
+	<!--Splash Screen-->
+
+	<onload>Skin.SetString(wiki, )</onload>
+	
+		<onload>Skin.SetString(snapwindow, 864)</onload>
+<onload condition="!Skin.HasSetting(snapie)">Skin.ToggleSetting(snapie)</onload>
+<onload condition="Skin.HasSetting(gaming)">Skin.ToggleSetting(gaming)</onload>
+<onload>Skin.SetString(snap, demo/sna/wiki.jpg,0)</onload>
+<onload>Skin.SetString(sn,Wikipedia)</onload>
+
+	<onload condition="Skin.HasSetting(SnapFeature) + Skin.HasSetting(SnapAlways)">Skin.SetString(snap, C:\Assistance\Snap\Pic\Item.jpg,0)</onload>
+<onload condition="Skin.HasSetting(SnapFeature) + Skin.HasSetting(SnapAlways)">AlarmClock(startsnap,RunScript(special://skin/system/Snap.py),00:01,silent)</onload>
+
+	
+	<controls>
+
+		<!--Background Area-->
+
+		
+
+				<control type="image">
+							
+								<include>Common_Dimensions</include>
+								<texture>demo\app\wiki\1.png</texture>
+								<visible>true</visible>
+								
+							</control>
+									<control type="image">
+							
+								<include>Common_Dimensions</include>
+								<texture>demo\app\wiki\2.png</texture>
+								<visible>Control.HasFocus(2)</visible>
+								
+							</control>
+									<control type="image">
+							
+								<include>Common_Dimensions</include>
+								<texture>demo\app\wiki\3.png</texture>
+								<visible>Control.HasFocus(3)</visible>
+								
+							</control>
+									<control type="image">
+							
+								<include>Common_Dimensions</include>
+								<texture>demo\app\wiki\4.png</texture>
+								<visible>Control.HasFocus(4)</visible>
+								
+							</control>
+									<control type="image">
+							
+								<include>Common_Dimensions</include>
+								<texture>demo\app\wiki\5.png</texture>
+								<visible>Control.HasFocus(5)</visible>
+								
+							</control>
+									<control type="image">
+							
+								<include>Common_Dimensions</include>
+								<texture>demo\app\wiki\6.png</texture>
+								<visible>Control.HasFocus(6)</visible>
+								
+							</control>
+									<control type="image">
+							
+								<include>Common_Dimensions</include>
+								<texture>demo\app\wiki\7.png</texture>
+								<visible>Control.HasFocus(7)</visible>
+								
+							</control>
+									<control type="image">
+							
+								<include>Common_Dimensions</include>
+								<texture>demo\app\wiki\8.png</texture>
+								<visible>Control.HasFocus(8)</visible>
+								
+							</control>
+									<control type="image">
+							
+								<include>Common_Dimensions</include>
+								<texture>demo\app\wiki\9.png</texture>
+								<visible>Control.HasFocus(9)</visible>
+								
+							</control>
+									<control type="image">
+							
+								<include>Common_Dimensions</include>
+								<texture>demo\app\wiki\10.png</texture>
+								<visible>Control.HasFocus(10)</visible>
+								
+							</control>
+									<control type="image">
+							
+								<include>Common_Dimensions</include>
+								<texture>demo\app\wiki\11.png</texture>
+								<visible>Control.HasFocus(11)</visible>
+								
+							</control>
+									<control type="image">
+							
+								<include>Common_Dimensions</include>
+								<texture>demo\app\wiki\12.png</texture>
+								<visible>Control.HasFocus(12)</visible>
+								
+							</control>
+									<control type="image">
+							
+								<include>Common_Dimensions</include>
+								<texture>demo\app\wiki\13.png</texture>
+								<visible>Control.HasFocus(13)</visible>
+								
+							</control>
+
+									<!--Top Area-->
+
+			
+			<!--Content Area-->
+			<control type="group">
+			
+				<posx>0</posx>
+				<posy>100</posy>
+				<width>1280</width>
+				<height>480</height>
+				
+				<!--Animation-->
+				<include condition="!Skin.HasSetting(disablesplash)">Common_Animation_Content_Splash</include>
+				<include condition="!Window.Previous(home)">Common_Animation_Content</include>
+				
+										<control type="panel" id="1">
+<posx>1060</posx>
+						<posy>200</posy>
+
+						
+						<include>Common_AltHome_Panel3</include>
+
+
+				
+						<ondown>2</ondown>
+						<pagecontrol>7017</pagecontrol>
+						
+						<content>
+						
+
+							
+																					<item id="1">
+								<description>Games</description>
+								<label>Games</label>
+								<thumb>SHORT\ICO\Games.png</thumb>
+								<onclick>Skin.SetString(wiki)</onclick>
+								<onclick>RunPlugin(plugin://plugin.program.webbrowser/?mode=showSite&amp;showPopups=no&amp;stopPlayback=yes&amp;url=http%3a%2f%2fen.wikipedia.org/wiki/$INFO[Skin.String(wiki)])</onclick>
+														
+							</item>
+							
+
+
+								</content>
+
+					</control>
+															<control type="panel" id="2">
+<posx>1060</posx>
+						<posy>200</posy>
+
+						
+						<include>Common_AltHome_Panel3</include>
+
+
+						<onup>1</onup>
+					<onright>3</onright>
+						<pagecontrol>7017</pagecontrol>
+						
+						<content>
+						
+
+							
+																					<item id="1">
+								<description>Games</description>
+								<label>Games</label>
+								<thumb>SHORT\ICO\Games.png</thumb>
+								<onclick>RunPlugin(plugin://plugin.program.webbrowser/?mode=showSite&amp;showPopups=no&amp;stopPlayback=yes&amp;url=http%3a%2f%2fen.wikipedia.org/wiki/wood_duck)</onclick>
+														
+							</item>
+							
+
+
+								</content>
+
+					</control>
+															<control type="panel" id="3">
+<posx>1060</posx>
+						<posy>200</posy>
+
+						
+						<include>Common_AltHome_Panel3</include>
+
+<onleft>2</onleft>
+						<onup>1</onup>
+						<ondown>4</ondown>
+						<onright>5</onright>
+						<pagecontrol>7017</pagecontrol>
+						
+						<content>
+						
+
+							
+																					<item id="1">
+								<description>Games</description>
+								<label>Games</label>
+								<thumb>SHORT\ICO\Games.png</thumb>
+																<onclick>RunPlugin(plugin://plugin.program.webbrowser/?mode=showSite&amp;showPopups=no&amp;stopPlayback=yes&amp;url=http%3a%2f%2fen.wikipedia.org/wiki/Lysimachia_monelli)</onclick>
+														
+							</item>
+							
+
+
+								</content>
+
+					</control>
+															<control type="panel" id="4">
+<posx>1060</posx>
+						<posy>200</posy>
+
+						
+						<include>Common_AltHome_Panel3</include>
+
+<onleft>2</onleft>
+						<onup>3</onup>
+					<onright>6</onright>
+						<pagecontrol>7017</pagecontrol>
+						
+						<content>
+						
+
+							
+																					<item id="1">
+								<description>Games</description>
+								<label>Games</label>
+								<thumb>SHORT\ICO\Games.png</thumb>
+								<onclick>RunPlugin(plugin://plugin.program.webbrowser/?mode=showSite&amp;showPopups=no&amp;stopPlayback=yes&amp;url=http%3a%2f%2fen.wikipedia.org/wiki/Hammersmith_Bridge)</onclick>
+														
+							</item>
+							
+
+
+								</content>
+
+					</control>
+															<control type="panel" id="5">
+<posx>1060</posx>
+						<posy>200</posy>
+
+						
+						<include>Common_AltHome_Panel3</include>
+
+<onleft>3</onleft>
+						<onup>1</onup>
+					<onright>7</onright>
+					<ondown>6</ondown>
+						<pagecontrol>7017</pagecontrol>
+						
+						<content>
+						
+
+							
+																					<item id="1">
+								<description>Games</description>
+								<label>Games</label>
+								<thumb>SHORT\ICO\Games.png</thumb>
+								<onclick>RunPlugin(plugin://plugin.program.webbrowser/?mode=showSite&amp;showPopups=no&amp;stopPlayback=yes&amp;url=http%3a%2f%2fen.wikipedia.org/wiki/Sheepscombe)</onclick>
+														
+							</item>
+							
+
+
+								</content>
+
+					</control>
+															<control type="panel" id="6">
+<posx>1060</posx>
+						<posy>200</posy>
+
+						
+						<include>Common_AltHome_Panel3</include>
+
+<onleft>4</onleft>
+						<onup>5</onup>
+					<onright>8</onright>
+						<pagecontrol>7017</pagecontrol>
+						
+						<content>
+						
+
+							
+																					<item id="1">
+								<description>Games</description>
+								<label>Games</label>
+								<thumb>SHORT\ICO\Games.png</thumb>
+								<onclick>RunPlugin(plugin://plugin.program.webbrowser/?mode=showSite&amp;showPopups=no&amp;stopPlayback=yes&amp;url=http%3a%2f%2fen.wikipedia.org/wiki/mugimaki_flycatcher)</onclick>
+														
+							</item>
+							
+
+
+								</content>
+
+					</control>
+															<control type="panel" id="7">
+<posx>1060</posx>
+						<posy>200</posy>
+
+						
+						<include>Common_AltHome_Panel3</include>
+
+<onleft>5</onleft>
+						<onup>1</onup>
+						<ondown>8</ondown>
+						<onright>9</onright>
+						<pagecontrol>7017</pagecontrol>
+						
+						<content>
+						
+
+							
+																					<item id="1">
+								<description>Games</description>
+								<label>Games</label>
+								<thumb>SHORT\ICO\Games.png</thumb>
+								<onclick>RunPlugin(plugin://plugin.program.webbrowser/?mode=showSite&amp;showPopups=no&amp;stopPlayback=yes&amp;url=http%3a%2f%2fen.wikipedia.org/wiki/lava_lake)</onclick>
+														
+							</item>
+							
+
+
+								</content>
+
+					</control>
+															<control type="panel" id="8">
+<posx>1060</posx>
+						<posy>200</posy>
+
+						
+						<include>Common_AltHome_Panel3</include>
+
+<onleft>6</onleft>
+						<onup>7</onup>
+						<onright>10</onright>
+						<pagecontrol>7017</pagecontrol>
+						
+						<content>
+						
+
+							
+																					<item id="1">
+								<description>Games</description>
+								<label>Games</label>
+								<thumb>SHORT\ICO\Games.png</thumb>
+								<onclick>RunPlugin(plugin://plugin.program.webbrowser/?mode=showSite&amp;showPopups=no&amp;stopPlayback=yes&amp;url=http%3a%2f%2fen.wikipedia.org/wiki/albert_bridge)</onclick>
+														
+							</item>
+							
+
+
+								</content>
+
+					</control>
+															<control type="panel" id="9">
+<posx>1060</posx>
+						<posy>200</posy>
+
+						
+						<include>Common_AltHome_Panel3</include>
+
+<onleft>7</onleft>
+						<onup>1</onup>
+						<ondown>10</ondown>
+						<onright>11</onright>
+						<pagecontrol>7017</pagecontrol>
+						
+						<content>
+						
+
+							
+																					<item id="1">
+								<description>Games</description>
+								<label>Games</label>
+								<thumb>SHORT\ICO\Games.png</thumb>
+								<onclick>RunPlugin(plugin://plugin.program.webbrowser/?mode=showSite&amp;showPopups=no&amp;stopPlayback=yes&amp;url=http%3a%2f%2fen.wikipedia.org/wiki/battle_of_the_eastern_solomons)</onclick>
+														
+							</item>
+							
+
+
+								</content>
+
+					</control>
+															<control type="panel" id="10">
+<posx>1060</posx>
+						<posy>200</posy>
+
+						
+						<include>Common_AltHome_Panel3</include>
+
+<onleft>8</onleft>
+						<onup>9</onup>
+						<onright>12</onright>
+						<pagecontrol>7017</pagecontrol>
+						
+						<content>
+						
+
+							
+																					<item id="1">
+								<description>Games</description>
+								<label>Games</label>
+								<thumb>SHORT\ICO\Games.png</thumb>
+								<onclick>RunPlugin(plugin://plugin.program.webbrowser/?mode=showSite&amp;showPopups=no&amp;stopPlayback=yes&amp;url=http%3a%2f%2fen.wikipedia.org/wiki/sack_of_amorium)</onclick>
+														
+							</item>
+							
+
+
+								</content>
+
+					</control>
+															<control type="panel" id="11">
+<posx>1060</posx>
+						<posy>200</posy>
+
+						
+						<include>Common_AltHome_Panel3</include>
+
+<onleft>9</onleft>
+						<onup>1</onup>
+						<ondown>13</ondown>
+						<pagecontrol>7017</pagecontrol>
+						
+						<content>
+						
+
+							
+																					<item id="1">
+								<description>Games</description>
+								<label>Games</label>
+								<thumb>SHORT\ICO\Games.png</thumb>
+								<onclick>RunPlugin(plugin://plugin.program.webbrowser/?mode=showSite&amp;showPopups=no&amp;stopPlayback=yes&amp;url=http%3a%2f%2fen.wikipedia.org/wiki/auriga)</onclick>
+														
+							</item>
+							
+
+
+								</content>
+
+					</control>
+															<control type="panel" id="12">
+<posx>1060</posx>
+						<posy>200</posy>
+
+						
+						<include>Common_AltHome_Panel3</include>
+
+<onleft>10</onleft>
+						<onup>9</onup>
+						<onright>13</onright>
+						<pagecontrol>7017</pagecontrol>
+						
+						<content>
+						
+
+							
+																					<item id="1">
+								<description>Games</description>
+								<label>Games</label>
+								<thumb>SHORT\ICO\Games.png</thumb>
+								<onclick>RunPlugin(plugin://plugin.program.webbrowser/?mode=showSite&amp;showPopups=no&amp;stopPlayback=yes&amp;url=http%3a%2f%2fen.wikipedia.org/wiki/south_park)</onclick>
+														
+							</item>
+							
+
+
+								</content>
+
+					</control>
+															<control type="panel" id="13">
+<posx>1060</posx>
+						<posy>200</posy>
+
+						
+						<include>Common_AltHome_Panel3</include>
+
+<onleft>12</onleft>
+						<onup>11</onup>
+					
+						<pagecontrol>7017</pagecontrol>
+						
+						<content>
+						
+
+							
+																					<item id="1">
+								<description>Games</description>
+								<label>Games</label>
+								<thumb>SHORT\ICO\Games.png</thumb>
+								<onclick>RunPlugin(plugin://plugin.program.webbrowser/?mode=showSite&amp;showPopups=no&amp;stopPlayback=yes&amp;url=http%3a%2f%2fen.wikipedia.org/wiki/Banksia_violacea)</onclick>
+														
+							</item>
+							
+
+
+								</content>
+
+					</control>
+				
+						
+						<!--Scrollbar-->
+
+					
+
+			
+			<!--Scrollbar-->
+			<control type="scrollbar" id="9010">
+				
+				<include>Common_Window_Scrollbar_Horizontal</include>
+				<posy>600</posy>
+				
+				<include>Common_Animation_Window_Scrollbar_Fade</include>
+				
+				<visible>Skin.HasSetting(UseTouchInput)</visible>
+				
+			</control>
+
+			</control>
+		<include>Snapped_Content</include>	
+	</controls>	
+		
+</window>

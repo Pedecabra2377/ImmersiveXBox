@@ -1,0 +1,115 @@
+<!-- Foundation -->
+<window type="buttonMenu" id="4414">
+	
+	<defaultcontrol always="true">3111</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+
+	<controls>
+
+		<include>Common_Background_Fade</include>
+
+		<control type="group">
+
+			<posx>0</posx>
+			<posy>210</posy>
+			
+			<include>Common_Animation_Dialog</include>
+			
+						<control type="image">
+			
+				<posy>0</posy>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>300</height>
+				<texture background="true">colors\color_black.png</texture>
+			
+
+			</control>
+			
+			<control type="grouplist">
+			
+				<posx>300</posx>
+				<posy>20</posy>
+				<width>880</width>
+				<itemgap>20</itemgap>
+				<orientation>horizontal</orientation>
+				
+				<animation effect="slide" start="0,0" end="-64,0" time="200" condition="System.Loggedon + System.HasLoginScreen">Conditional</animation>
+				
+				<control type="label" id="1">
+					
+					<description>Heading</description>
+					<posx>500</posx>
+					<posy>20</posy>
+					<width min="0" max="1280">auto</width>
+					<height>70</height>
+					<label>DVD não encontrado.[CR]Insira o DVD e tente novamente.</label>
+					<font>Dialog-Header</font>
+					<textcolor>FFFFFFFF</textcolor>
+					
+				</control>
+				
+				<control type="label" id="1">
+					
+					<description>Heading</description>
+					<posx>500</posx>
+					<posy>20</posy>
+					<width min="0" max="400">auto</width>
+					<height>82</height>
+					<label></label>
+					<font>Dialog-Detail</font>
+					
+					<visible>System.HasAlarm(shutdowntimer)</visible>
+					
+				</control>
+				
+			</control>
+
+			<control type="grouplist">
+			
+				<posx>3000</posx>
+				<posy>92</posy>
+				<width>880</width>
+				<itemgap>20</itemgap>
+				<orientation>horizontal</orientation>
+				
+				<animation effect="slide" start="0,0" end="-64,0" time="200" condition="System.Loggedon + System.HasLoginScreen">Conditional</animation>
+				
+				<!--Exit Button-->
+				<control type="group" id="1">
+				
+					<width>0</width>
+					<height>0</height>
+					
+					<visible>true</visible>
+					
+					<control type="button" id="3111">
+						
+						<include></include>
+						<onclick>ActivateWindow(999)</onclick>
+	<onclick>Dialog.Close(4114)</onclick>
+	<onclick>EjectTray()</onclick>		
+		
+
+<onup>1</onup>
+<ondown>1</ondown>						<onleft>1</onleft>
+						<onright>1</onright>
+						
+					</control>
+					
+
+
+					
+				</control>
+				
+
+					
+				</control>
+				
+			</control>	
+
+
+
+	</controls>
+
+</window>

@@ -1,0 +1,64 @@
+<!-- Foundation -->
+<window type="dialog" id="1128">
+
+	<zorder>2</zorder>
+	
+	<onload>RunPlugin($INFO[Skin.String(gametolaunch)])</onload>
+
+
+<onload>Dialog.Close(1122)</onload>
+		<onload>AlarmClock(Dashit,ActivateWindow(0),00:15,silent)</onload>
+	<onload>AlarmClock(CloseSplash,Dialog.Close(1128, force),00:15,silent)</onload>
+										
+	<controls>
+<include>Common_Animation_dashboard</include>
+			<control type="image">
+					
+			<include>Common_Dimensions</include>
+			<texture background="true">colors/aah.png</texture>
+<visible>!Skin.HasSetting(GameSplash)</visible>
+			
+		</control>
+		
+		
+		<control type="group">
+		
+			<include>Common_Animation_gamer2</include>
+	
+			<control type="image">
+					
+				<include>Common_Dimensions</include>
+				<texture>colors/eeeh.png</texture>
+<visible>!Skin.HasSetting(GameSplash)</visible>
+			
+			</control>
+			
+			
+
+
+				
+			<control type="image">
+				
+				<animation type="WindowOpen">
+					<effect type="fade" start="0" end="100" time="500" />
+				</animation>
+				
+				<include>Common_Dimensions</include>
+				<texture>colors\ooh.png</texture>
+			<visible>!Skin.HasSetting(GameSplash)</visible>
+			</control>
+				<control type="image">	
+					<animation type="WindowOpen">
+					<effect type="fade" start="0" end="100" time="500" />
+				</animation>
+				<include>Common_Dimensions</include>
+			<texture>$INFO[Skin.String(gamer)]</texture>
+<visible>Skin.HasSetting(GameSplash)</visible>
+			
+			</control>
+			
+		</control>	
+	
+	</controls>
+
+</window>

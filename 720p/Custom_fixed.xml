@@ -1,0 +1,23 @@
+<window type="dialog" id="4504">
+
+	<defaultcontrol always="true">10</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<zorder>2</zorder>
+	
+
+
+<onload>Skin.ToggleSetting(BOOTGUI)</onload>
+	<controls>
+	
+
+
+		
+		
+	
+		<!--Hidden Window to decide what to open-->
+		
+
+		
+	</controls>	
+	
+</window>

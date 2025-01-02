@@ -1,0 +1,386 @@
+<window id="666">
+
+	<defaultcontrol always="true">9005</defaultcontrol>
+	
+	<zorder>2</zorder>
+	
+	<include condition="!Skin.HasSetting(disablesplash)">Common_Animation_Window</include>
+	
+	<!--Splash Screen-->
+
+		<onload>Skin.SetString(snapwindow, 666)</onload>
+<onload condition="!Skin.HasSetting(snapie)">Skin.ToggleSetting(snapie)</onload>
+<onload condition="Skin.HasSetting(gaming)">Skin.ToggleSetting(gaming)</onload>
+<onload>Skin.SetString(snap, demo/sna/ie.jpg,0)</onload>
+<onload>Skin.SetString(sn,Internet Explorer)</onload>
+
+	<onload>Skin.SetString(bing,http://www.)</onload>
+
+<onload condition="Skin.HasSetting(SnapFeature) + Skin.HasSetting(SnapAlways)">Skin.SetString(snap, C:\Assistance\Snap\Pic\Item.jpg,0)</onload>
+<onload condition="Skin.HasSetting(SnapFeature) + Skin.HasSetting(SnapAlways)">AlarmClock(startsnap,RunScript(special://skin/system/Snap.py),00:01,silent)</onload>
+	<controls>
+
+		<!--Background Area-->
+
+		
+
+									<!--Top Area-->
+
+			
+			<!--Content Area-->
+			<control type="group">
+			
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+				
+				<!--Animation-->
+				<include condition="!Skin.HasSetting(disablesplash)">Common_Animation_Content_Splash</include>
+
+				
+				<control type="grouplist">
+		
+					<include>Common_Content_Grouplist</include>
+					
+					<control type="group" id="8000">
+					
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>1280</width>
+						<height>720</height>
+						
+						<control type="label">
+							
+							<label></label>
+						<include>Common_Section_Label</include>
+							
+							
+						</control>
+					
+
+								
+
+			
+				
+
+						
+							<!--Search Area-->
+				<control type="group">
+										<posx>0</posx>
+						<posy>0</posy>
+					<width>1280</width>
+					<height>720</height>
+					
+					<visible>true</visible>
+				
+					<control type="label">
+						<posx>10</posx>
+						<posy>-3</posy>
+						<label>pesquise</label>
+						<include>Common_Section_Label2</include>
+						
+					</control>
+					
+					<control type="button" id="9005">
+					
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>1280</width>
+						<height>100</height>
+						<label></label>
+						<font>DialogInfo-Header</font>
+						<textcolor>Label_Normal</textcolor>
+						<textoffsetx>16</textoffsetx>
+						<textoffsety>6</textoffsety>
+						<align>left</align>
+						<aligny>top</aligny>
+
+						<ondown>2</ondown>
+
+<onclick>Skin.SetString(bing)</onclick>
+<onclick>RunPlugin(plugin://plugin.program.webbrowser/?mode=showSite&amp;showPopups=no&amp;stopPlayback=yes&amp;url=$INFO[Skin.String(bing)])</onclick>
+						
+					</control>
+					
+
+					
+
+	
+				
+				
+				
+									<control type="button" id="2">
+					
+						<posx>0</posx>
+						<posy>230</posy>
+						<width>400</width>
+						<height>400</height>
+
+						<label></label>
+						<font>DialogInfo-Header</font>
+						<textcolor>Label_Normal</textcolor>
+						<textoffsetx>16</textoffsetx>
+						<textoffsety>6</textoffsety>
+						<align>left</align>
+						<aligny>top</aligny>
+						<onup>9005</onup>
+
+						<onleft>6</onleft>
+						<onright>3</onright>
+
+<onclick>RunPlugin(plugin://plugin.program.webbrowser/?mode=showSite&amp;showPopups=no&amp;stopPlayback=yes&amp;url=http%3a%2f%2fwww.flickr.com)</onclick>
+					
+					</control>
+					
+
+					
+	
+													<control type="button" id="3">
+					
+						<posx>253</posx>
+						<posy>230</posy>
+						<width>400</width>
+						<height>400</height>
+
+						<label></label>
+						<font>DialogInfo-Header</font>
+						<textcolor>Label_Normal</textcolor>
+
+						<textoffsetx>16</textoffsetx>
+						<textoffsety>6</textoffsety>
+						<align>left</align>
+						<aligny>top</aligny>
+						<onup>9005</onup>
+
+						<onleft>2</onleft>
+						<onright>4</onright>
+
+<onclick>RunPlugin(plugin://plugin.program.webbrowser/?mode=showSite&amp;showPopups=no&amp;stopPlayback=yes&amp;url=http%3a%2f%2fwww.pinterest.com)</onclick>
+					
+					</control>
+					
+
+
+													<control type="button" id="4">
+					
+						<posx>506</posx>
+						<posy>230</posy>
+						<width>400</width>
+						<height>400</height>
+
+						<label></label>
+						<font>DialogInfo-Header</font>
+						<textcolor>Label_Normal</textcolor>
+
+						<textoffsetx>16</textoffsetx>
+						<textoffsety>6</textoffsety>
+						<align>left</align>
+						<aligny>top</aligny>
+						<onup>9005</onup>
+
+						<onleft>3</onleft>
+						<onright>5</onright>
+
+<onclick>RunPlugin(plugin://plugin.program.webbrowser/?mode=showSite&amp;showPopups=no&amp;stopPlayback=yes&amp;url=http%3a%2f%2fwww.facebook.com)</onclick>
+				
+					</control>
+					
+
+					
+
+				
+													<control type="button" id="5">
+					
+						<posx>759</posx>
+						<posy>230</posy>
+						<width>400</width>
+						<height>400</height>
+
+						<label></label>
+						<font>DialogInfo-Header</font>
+						<textcolor>Label_Normal</textcolor>
+
+						<textoffsetx>16</textoffsetx>
+						<textoffsety>6</textoffsety>
+						<align>left</align>
+						<aligny>top</aligny>
+						<onup>9005</onup>
+
+						<onleft>4</onleft>
+						<onright>6</onright>
+
+<onclick>RunPlugin(plugin://plugin.program.webbrowser/?mode=showSite&amp;showPopups=no&amp;stopPlayback=yes&amp;url=http%3a%2f%2fwww.twitter.com)</onclick>
+		
+					</control>
+					
+
+					
+
+													<control type="button" id="6">
+					
+							<posx>1012</posx>
+						<posy>230</posy>
+						<width>1280</width>
+						<height>400</height>
+
+						<label></label>
+						<font>DialogInfo-Header</font>
+						<textcolor>Label_Normal</textcolor>
+
+						<textoffsetx>16</textoffsetx>
+						<textoffsety>6</textoffsety>
+						<align>left</align>
+						<aligny>top</aligny>
+						<onup>9005</onup>
+
+						<onleft>5</onleft>
+						<onright>2</onright>
+
+<onclick>RunPlugin(plugin://plugin.program.webbrowser/?mode=showSite&amp;showPopups=no&amp;stopPlayback=yes&amp;url=http%3a%2f%2fwww.xbox.com)</onclick>
+					
+					</control>
+					
+																									<control type="image">
+							
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1280</width>
+								<height>720</height>
+								<texture>demo\xo\1.jpg</texture>
+						
+							</control>
+																												<control type="image">
+							
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1280</width>
+								<height>720</height>
+								<texture>demo\xo\2.jpg</texture>
+								<visible>Control.Hasfocus(2)</visible>
+							</control>
+																																			<control type="image">
+							
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1280</width>
+								<height>720</height>
+								<texture>demo\xo\3.jpg</texture>
+								<visible>Control.Hasfocus(3)</visible>
+							</control>
+																																			<control type="image">
+							
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1280</width>
+								<height>720</height>
+								<texture>demo\xo\4.jpg</texture>
+								<visible>Control.Hasfocus(4)</visible>
+							</control>
+																																			<control type="image">
+							
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1280</width>
+								<height>720</height>
+								<texture>demo\xo\5.jpg</texture>
+								<visible>Control.Hasfocus(5)</visible>
+							</control>
+
+																																			<control type="image">
+							
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1280</width>
+								<height>720</height>
+								<texture>demo\xo\6.jpg</texture>
+								<visible>Control.Hasfocus(6)</visible>
+							</control>
+
+					</control>					
+
+					
+
+
+				
+				
+				
+				
+
+				
+						
+						<!--Scrollbar-->
+
+					
+					</control>
+					
+
+					
+				</control>
+				
+			</control>
+			
+			<!--Scrollbar-->
+					
+																									<control type="image">
+							
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1280</width>
+								<height>720</height>
+								<texture>demo\xo\1.jpg</texture>
+
+							</control>
+																												<control type="image">
+							
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1280</width>
+								<height>720</height>
+								<texture>demo\xo\2.jpg</texture>
+								<visible>Control.Hasfocus(2)</visible>
+							</control>
+																																			<control type="image">
+							
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1280</width>
+								<height>720</height>
+								<texture>demo\xo\3.jpg</texture>
+								<visible>Control.Hasfocus(3)</visible>
+							</control>
+																																			<control type="image">
+							
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1280</width>
+								<height>720</height>
+								<texture>demo\xo\4.jpg</texture>
+								<visible>Control.Hasfocus(4)</visible>
+							</control>
+																																			<control type="image">
+							
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1280</width>
+								<height>720</height>
+								<texture>demo\xo\5.jpg</texture>
+								<visible>Control.Hasfocus(5)</visible>
+							</control>
+
+																																			<control type="image">
+							
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1280</width>
+								<height>720</height>
+								<texture>demo\xo\6.jpg</texture>
+								<visible>Control.Hasfocus(6)</visible>
+							</control>
+	
+<include>Snapped_Content</include>	
+
+		
+	</controls>	
+		
+</window>

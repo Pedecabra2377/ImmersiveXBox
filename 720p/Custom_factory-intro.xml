@@ -1,0 +1,84 @@
+<!-- Foundation -->
+<window id="1367">
+	<defaultcontrol always="true">9000</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<onload>XBMC.Playmedia(special://skin/sounds/1.wav)</onload>
+	<controls>
+
+				<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+			<texture>xboxnow.jpg</texture>
+			<aspectratio>stretch</aspectratio>
+		</control>
+
+		
+				<control type="label">
+				 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="150" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+				
+					<posx>180</posx>
+					<posy>-150</posy>
+					<width>1000</width>
+					<height>1000</height>
+					<label>Olá!</label>
+					<font>Charms-Date</font>
+					<textcolor>Label_Normal</textcolor>
+					
+				</control>
+			<control type="panel" id="5">
+	
+<posx>180</posx>
+						<posy>540</posy>
+
+			<onright>6</onright>
+				<onleft>-</onleft>
+						<include>Common_AltHome_Panel390</include>
+					
+
+
+
+
+						
+						
+						<content>
+						
+
+							
+						
+							<item id="1">
+								<description>Games</description>
+								<label>  Continuar</label>
+								<thumb></thumb>
+									<onclick>ReplaceWindow(8140)</onclick>		
+							
+						
+
+								
+							</item>
+			
+								<item id="2">
+								<description>Games</description>
+								<label>   Desligar</label>
+								<thumb></thumb>
+													
+<onclick>XBMC.Powerdown()</onclick>
+						
+							</item>
+		
+							
+
+								</content>
+
+					</control>
+
+	
+	
+
+	</controls>
+
+</window>

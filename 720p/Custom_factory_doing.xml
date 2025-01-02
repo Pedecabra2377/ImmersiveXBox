@@ -1,0 +1,255 @@
+<window type="dialog" id="4292">
+
+	<defaultcontrol always="true">5</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<zorder>2</zorder>
+	<onload>Control.SetFocus(5)</onload>
+	
+<onload>Skin.SetString(SystemReset, Restaurando padrão de fábrica)</onload>
+<onload>Skin.ToggleSetting(FirstTimeBooting)</onload>	
+	
+
+	
+
+
+<onload>Extract(special://skin/system/Install/Python/AppdataModules1.Zip,special://home/addons/)</onload>
+<onload>Extract(special://skin/system/Install/Python/AppdataModules2.Zip,special://home/addons/)</onload>
+<onload>Extract(special://skin/system/Install/Python/AppdataModules3.Zip,special://home/addons/)</onload>
+<onload>Extract(special://skin/system/Install/Python/AppdataModules4.Zip,special://home/addons/)</onload>
+<onload>Extract(special://skin/system/Install/Python/AppdataModules5.Zip,special://home/addons/)</onload>
+<onload>Extract(special://skin/system/Install/Python/AppdataModules6.Zip,special://home/addons/)</onload>
+<onload>Extract(special://skin/system/Install/Python/AppdataModules7.Zip,special://home/addons/)</onload>
+<onload>Extract(special://skin/system/Install/Python/AppdataModules8.Zip,special://home/addons/)</onload>
+<onload>Extract(special://skin/system/Install/Python/AppdataModules9.Zip,special://home/addons/)</onload>
+<onload>Extract(special://skin/system/Install/Python/AppdataModules10.Zip,special://home/addons/)</onload>
+<onload>Extract(special://skin/system/Install/Python/AppdataModules11.Zip,special://home/addons/)</onload>
+<onload>Extract(special://skin/system/Install/Python/AppdataModules12.Zip,special://home/addons/)</onload>
+<onload>Extract(special://skin/system/Install/Python/AppdataModules13.Zip,special://home/addons/)</onload>
+<onload>Extract(special://skin/system/Install/Python/AppdataModules14.Zip,special://home/addons/)</onload>
+<onload>Extract(special://skin/system/Install/Python/AppdataModules15.Zip,special://home/addons/)</onload>
+<onload>Extract(special://skin/system/Install/Python/AppdataModules16.Zip,special://home/addons/)</onload>
+<onload>Extract(special://skin/system/Install/Python/AppdataModules17.Zip,special://home/addons/)</onload>
+<onload>Extract(special://skin/system/Install/Python/AppdataModules18.Zip,special://home/addons/)</onload>
+<onload>Extract(special://skin/system/Install/Python/AppdataModules19.Zip,special://home/addons/)</onload>
+<onload>RunScript(special://skin/system/ClearCach.py)</onload>
+
+<onload>Extract(special://skin/system/Install/Python/InstallModules1.Zip,special://xbmc/addons/)</onload>
+<onload>Extract(special://skin/system/Install/Python/InstallModules2.Zip,special://xbmc/addons/)</onload>
+<onload>Extract(special://skin/system/Install/Python/InstallModules3.Zip,special://xbmc/addons/)</onload>
+
+<onload>Extract(special://skin/system/Install/Python/PythonModules1.Zip,special://xbmc/system/python/)</onload>
+<onload>Extract(special://skin/system/Install/Python/PythonModules2.Zip,special://xbmc/system/python/)</onload>
+<onload>Extract(special://skin/system/Install/Python/PythonModules3.Zip,special://xbmc/system/python/)</onload>
+
+
+
+
+
+
+
+
+
+<onload>Extract(special://skin/system/Install/Dependencies1.Zip,special://home/addons/)</onload>
+<onload>Extract(special://skin/system/Install/Dependencies2.Zip,special://home/addons/)</onload>
+<onload>Extract(special://skin/system/Install/Dependencies3.Zip,special://home/addons/)</onload>
+<onload>Extract(special://skin/system/Install/Dependencies4.Zip,special://home/addons/)</onload>
+<onload>Extract(special://skin/system/Install/Dependencies5.Zip,special://home/addons/)</onload>
+<onload>Extract(special://skin/system/Install/Dependencies6.Zip,special://home/addons/)</onload>
+<onload>Extract(special://skin/system/Install/Dependencies7.Zip,special://home/addons/)</onload>
+<onload>Extract(special://skin/system/Install/Dependencies8.Zip,special://home/addons/)</onload>
+<onload>Extract(special://skin/system/Install/Dependencies9.Zip,special://home/addons/)</onload>
+<onload>Extract(special://skin/system/Install/Dependencies10.Zip,special://home/addons/)</onload>
+<onload>Extract(special://skin/system/Install/Dependencies11.Zip,special://home/addons/)</onload>
+<onload>Extract(special://skin/system/Install/Dependencies12.Zip,special://home/addons/)</onload>
+<onload>Extract(special://skin/system/Install/Dependencies13.Zip,special://home/addons/)</onload>
+<onload>Extract(special://skin/system/Install/Dependencies14.Zip,special://home/addons/)</onload>
+<onload>Extract(special://skin/system/Install/Dependencies15.Zip,special://home/addons/)</onload>
+<onload>Extract(special://skin/system/Install/Dependencies16.Zip,special://home/addons/)</onload>
+<onload>Extract(special://skin/system/Install/Dependencies17.Zip,special://home/addons/)</onload>
+<onload>Extract(special://skin/system/Install/Dependencies18.Zip,special://home/addons/)</onload>
+
+
+ <onload>UpdateAddonRepos</onload>
+ <onload>UpdateLocalAddons</onload>
+
+
+
+
+
+
+
+
+
+<onload condition="Skin.HasSetting(UseTouchInput)">Skin.ToggleSetting(UseTouchInput)</onload>
+
+
+
+		
+		<onload>AlarmClock(info7,Skin.SetString(SystemReset, Restaurando...),00:10,silent,)</onload>
+		
+		
+		<onload>AlarmClock(info8,Skin.SetString(SystemReset, Restaurando opções de fábrica),00:16,silent,)</onload>
+		
+		<onload>AlarmClock(info9,Skin.SetString(SystemReset, Restaurando dados de fábrica),01:20,silent,)</onload>
+		
+		<onload>AlarmClock(info10,Skin.SetString(SystemReset, ),01:22,silent,)</onload>
+		<onload>AlarmClock(info11,Skin.SetString(SystemReset, ),01:23,silent,)</onload>
+		<onload>AlarmClock(info12,Skin.SetString(SystemReset, ),01:24,silent,)</onload>
+		<onload>AlarmClock(info13,Skin.SetString(SystemReset, ),01:25,silent,)</onload>
+		<onload>AlarmClock(info14,Skin.SetString(SystemReset, ),01:26,silent,)</onload>
+		<onload>AlarmClock(info15,Back,01:27,silent,)</onload>
+		<onload>AlarmClock(info15,Dialog.Close(4292),01:27.5,silent,)</onload>
+		<onload>AlarmClock(info16,ActivateWindow(1367),01:26.5,silent,)</onload>
+	<controls>
+	
+			<control type="image">
+		
+			<include>Common_Dimensions</include>
+			<texture background="true">colors/color_white.png</texture>
+			<colordiffuse>FanartDiffuse</colordiffuse>
+			
+			<include>Common_Animation_Window_Dark</include>
+			<visible>!Player.HasMedia</visible>
+		</control>
+
+
+		
+		
+	
+		<!--Charm Bar Section-->
+		<control type="group">
+		
+			<posx>0</posx>
+			<posy>0</posy>
+			
+			 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="150" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+
+	<control type="image">
+				 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="150" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+				
+				<posx>0</posx>
+				<posy>105</posy>
+				<width>1500</width>
+				<height>500</height>
+				<texture>demo\install\1.png</texture>
+			
+			</control>
+			<control type="image">
+				 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="150" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+				
+				<posx>0</posx>
+				<posy>105</posy>
+				<width>1500</width>
+				<height>500</height>
+				<texture>demo\install\1.png</texture>
+				<visible>Control.HasFocus(1)</visible>
+			</control>
+			<control type="image">
+				 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="150" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+				
+				<posx>0</posx>
+				<posy>105</posy>
+				<width>1500</width>
+				<height>500</height>
+				<texture>demo\install\2.png</texture>
+				<visible>Control.HasFocus(2)</visible>
+			</control>
+			<control type="label">
+				 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="150" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+				
+					<posx>180</posx>
+					<posy>85</posy>
+						<width>650</width>
+								<height>160</height>
+					<label></label>
+					<font>DialogInfo-Label2</font>
+			<textcolor>Label_Normal</textcolor>
+					<aligny>center</aligny>
+						<alignx>center</alignx>
+				</control>
+			<control type="label">
+				 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="150" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+				
+					<posx>180</posx>
+					<posy>175</posy>
+					<width>550</width>
+					<height>48</height>
+					<label>Restaurando padrão de fábrica</label>
+					<font>Charms-Date</font>
+					<textcolor>Label_Normal</textcolor>
+					<aligny>center</aligny>
+						<alignx>center</alignx>
+				</control>
+				<control type="label">
+				 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="150" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+			
+					<posx>180</posx>
+					<posy>210</posy>
+						<width>900</width>
+								<height>160</height>
+					<label></label>
+					<font>DialogInfo-Label-install</font>
+			<textcolor>Label_Normal</textcolor>
+					<aligny>center</aligny>
+						<alignx>center</alignx>
+				</control>
+				
+				
+			
+				
+			
+			
+			
+					
+					
+					
+					
+					
+					</control>
+					
+					
+					
+					
+					
+					
+					
+					
+						
+<control type="image">
+			
+			<description>Busy animation</description>
+			<posx>576</posx>
+			<posy>296</posy>
+			<width>128</width>
+			<height>128</height>
+			<texture>buffer/buffer_progress.png</texture>
+			<aspectratio>keep</aspectratio>
+			<animation effect="fade" start="0" end="100" time="600" delay="3000" condition="true">Conditional</animation>
+			<animation effect="rotate" end="-360" center="640,360" time="1200" loop="true" condition="true">Conditional</animation>
+			
+		</control>
+		
+	</controls>	
+	
+</window>

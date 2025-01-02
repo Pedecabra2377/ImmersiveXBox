@@ -1,0 +1,2155 @@
+
+
+<window id="929">
+
+	<defaultcontrol always="true">1</defaultcontrol>
+	
+	<zorder>2</zorder>
+	
+		
+	<!--Splash Screen-->
+
+	<onload condition="Skin.HasSetting(Searching)">Skin.ToggleSetting(Searching)</onload>
+	
+	
+	<onload>Skin.SetString(tube, Search)</onload>
+
+	
+	<onload>Skin.SetString(snapwindow, 929)</onload>
+<onload condition="!Skin.HasSetting(snapie)">Skin.ToggleSetting(snapie)</onload>
+<onload condition="Skin.HasSetting(gaming)">Skin.ToggleSetting(gaming)</onload>
+<onload>Skin.SetString(snap, demo/sna/gam.jpg)</onload>
+<onload>Skin.SetString(sn,Loja de jogos)</onload>
+	<onload condition="Skin.HasSetting(SnapFeature) + Skin.HasSetting(SnapAlways)">Skin.SetString(snap, C:\Assistance\Snap\Pic\Item.jpg,0)</onload>
+<onload condition="Skin.HasSetting(SnapFeature) + Skin.HasSetting(SnapAlways)">AlarmClock(startsnap,RunScript(special://skin/system/Snap.py),00:01,silent)</onload>
+
+	<controls>
+<include>Common_Animation_Window</include>
+		<!--Background Area-->
+
+		
+
+									<!--Top Area-->
+
+			
+			<!--Content Area-->
+		
+		
+																							<control type="image">
+							
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1280</width>
+								<height>720</height>
+								<texture>demo\store2\bg3.png</texture>
+						
+							</control>	
+
+						<control type="group">
+			
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+				
+				<!--Animation-->
+	
+				
+				<control type="grouplist">
+		
+					<include>Common_Content_Grouplist_store</include>
+			
+				
+									
+						
+							
+							
+							<control type="group">
+							  <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="500" />
+                        <effect type="slide" start="60" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+					
+																					<control type="image">
+							
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1208</width>
+								<height>720</height>
+								<texture>demo\store2\app.png</texture>
+						
+							</control>
+						<posx>0</posx>
+								<posy>0</posy>
+								<width>1000</width>
+								<height>720</height>
+							
+								
+								<control type="panel" id="1">
+				
+<posx>60</posx>
+                                                <posy>191</posy>
+<onup>1</onup>
+				<onright>222</onright>
+		<onleft>1</onleft>
+		<ondown>1</ondown>
+						<include>Common_AltHome_Panel383-golden</include>
+					
+
+
+
+
+						
+						
+						<content>
+						
+
+							
+										<item id="1">
+								<description>Games</description>
+								<label>Meus jogos</label>
+								<thumb></thumb>
+												<onclick>ReplaceWindow(10001,"plugin://plugin.program.advanced.launcher/?default",return)</onclick> 	
+														
+							</item>
+							
+										<item id="2">
+								<description>Games</description>
+								<label>Títulos vindo</label>
+								<thumb></thumb>
+												<onclick>ReplaceWindow(5152)</onclick> 	
+														
+							</item>
+								
+								<item id="4">
+								<description>Games</description>
+								<label>Pesquisa</label>
+								<thumb></thumb>
+													
+								<onclick condition="!Skin.HasSetting(GlobalD) + System.InternetState">Skin.SetString(tube)</onclick>
+<onclick condition="!Skin.HasSetting(Searching) + !Skin.HasSetting(GlobalD) + System.InternetState">Skin.ToggleSetting(Searching)</onclick>
+<onclick condition="!Skin.HasSetting(GlobalD) + System.InternetState">ActivateWindow(10025,&quot;plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=$INFO[Skin.String(tube)]&quot;,return)</onclick>
+ <onclick condition="!System.InternetState + !Skin.HasSetting(GlobalD)">ActivateWindow(5525)</onclick>
+
+<onclick condition="Skin.HasSetting(GlobalD">RunScript(script.globalsearch)</onclick>
+                              						
+							</item>
+						
+						
+					
+
+												
+
+
+								</content>
+
+					</control>
+								
+								
+					
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+		<control type="group">								
+			<posx>320</posx>						
+
+<control type="label">
+                                    <posx>5</posx>
+                                                                
+								<posy>170</posy>
+                                                                <width min="20" max="250">auto</width>
+                                                                <height>20</height>
+                                                                <label>PRESENTEADO</label>
+                                                                <font>Home-Tile-Header</font>
+                                                                <textcolor>Tile_Text</textcolor>
+                                                                <aligny>center</aligny>
+                                                              
+                                                        </control>
+					
+				
+										<control type="panel" id="222">
+	
+                                         
+				<posy>191</posy>
+                                                <width>700</width>
+                                                <height>1385</height>
+													
+                                              <onleft>1</onleft>
+
+							<ondown>10007</ondown>
+							<onright>ActivateWindow(1157)</onright>
+                                          
+	<onright>1110</onright>
+			
+                                     
+                                    
+                                            	<pagecontrol>81</pagecontrol>
+					<viewtype label="535">list</viewtype>
+					<scrolltime tween="cubic" easing="out">600</scrolltime>
+					<preloaditems>2</preloaditems>
+                                              
+												  
+                                                <itemlayout width="450" height="310">
+
+                                                   <control type="image">
+                                                        
+                                                                <posx>5</posx>
+                                                                <posy>2</posy>
+                                                                <width>430</width>
+                                                                <height>290</height>
+                                                                <texture>colors/color_black.png</texture>
+                                                     
+                                                                
+                                                        </control>
+                                                        
+                                                        <control type="image">
+                                                        
+                                                                <posx>5</posx>
+                                                                <posy>2</posy>
+                                                                <width>430</width>
+                                                                <height>298</height>
+                                                                <texture>$INFO[ListItem.icon]</texture>
+                                                                <aspectratio>scale</aspectratio>
+                                                               
+                                                        </control>
+												
+																									
+				    <control type="image">
+                                                      
+                                                                <posx>5</posx>
+                                                                <posy>227</posy>
+                                                                <width>430</width>
+                                                                <height>73</height>
+                                                                <texture>black.png</texture>
+                                                     
+                                                                
+                                                        </control>
+                                                        
+                                                        <control type="label">
+                                                        
+                                                                <posx>15</posx>
+                                                                <posy>220</posy>
+                                                                <width min="20" max="350">auto</width>
+                                                                <height>65</height>
+                                                                <label>$INFO[Listitem.Label]</label>
+                                                                <font>Home-Tile-Header-bg</font>
+                                                                <textcolor>Tile_Text</textcolor>
+                                                                <aligny>center</aligny>
+                                                                
+                                                        </control>
+														  <control type="label">
+                                                        
+                                                                <posx>15</posx>
+                                                                <posy>250</posy>
+                                                                <width min="20" max="350">auto</width>
+                                                                <height>65</height>
+                                                                <label>$INFO[Listitem.Label2]</label>
+                                                                <font>Home-Tile-Header</font>
+                                                                <textcolor>Tile_Text</textcolor>
+                                                                <aligny>center</aligny>
+                                                                
+                                                        </control>
+                                                        
+                                                      
+                                                        
+                                                </itemlayout>
+
+                                                <focusedlayout width="450" height="310">
+
+                                                        <control type="image">
+                                                        
+                                                                <posx>5</posx>
+                                                                <posy>2</posy>
+                                                                <width>430</width>
+                                                                <height>295</height>
+                                                                <texture>colors/color_black.png</texture>
+                                                               
+                                                                
+                                                        </control>
+														          <control type="image">
+                                                        
+                                                                <posx>2.5</posx>
+                                                                <posy>-1.3</posy>
+                                                                <width>435</width>
+                                                                <height>303.5</height>
+                                                                <texture>colors/color_white.png</texture>
+																<visible>Control.HasFocus(222)</visible>
+                                                                    <include>Common_Animation_tiledash</include>
+                                                                
+                                                        </control>
+                                                        
+                                                        <control type="image">
+                                                        
+                                                                <posx>5</posx>
+                                                                <posy>2</posy>
+                                                                <width>430</width>
+                                                                <height>298</height>
+                                                                <texture>$INFO[ListItem.icon]</texture>
+                                                                <aspectratio>scale</aspectratio>
+                                                                
+                                                        </control>
+				
+				
+                                                       <control type="image">
+                                                      
+                                                                <posx>5</posx>
+                                                                <posy>227</posy>
+                                                                <width>430</width>
+                                                                <height>73</height>
+                                                                <texture>black.png</texture>
+                                                     
+                                                                
+                                                        </control>
+                                                        
+                                                        <control type="label">
+                                                        
+                                                                <posx>15</posx>
+                                                                <posy>220</posy>
+                                                                <width min="20" max="350">auto</width>
+                                                                <height>65</height>
+                                                                <label>$INFO[Listitem.Label]</label>
+                                                                <font>Home-Tile-Header-bg</font>
+                                                                <textcolor>Tile_Text</textcolor>
+                                                                <aligny>center</aligny>
+                                                                
+                                                        </control>
+														  <control type="label">
+                                                        
+                                                                <posx>15</posx>
+                                                                <posy>250</posy>
+                                                                <width min="20" max="350">auto</width>
+                                                                <height>65</height>
+                                                                <label>$INFO[Listitem.Label2]</label>
+                                                                <font>Home-Tile-Header</font>
+                                                                <textcolor>Tile_Text</textcolor>
+                                                                <aligny>center</aligny>
+                                                                
+                                                        </control>
+                                                        
+                                                        <control type="group">
+                                                        
+                                                                <control type="image">
+                                                        
+                                                                        <posx>0</posx>
+                                                                        <posy>0</posy>
+                                                                        <width>380</width>
+                                                                        <height>425</height>
+                                                                        <texture>colors/color_white.png</texture>
+                                                                        <colordiffuse>Background_Normal</colordiffuse>
+                                                                        
+                                                                        <visible>false</visible>
+                                                                
+                                                                        <animation type="Visible" reversible="false" loop="true">
+                                                                                <effect type="fade" start="0" end="100" time="400" />
+                                                                                <effect type="zoom" start="100,0" end="100,100" center="90,0" time="400" />
+                                                                                <effect type="zoom" start="100,100" end="100,0" center="90,0" time="400" delay="5000" />
+                                                                                <effect type="fade" start="100" end="0" time="400" delay="5200" />
+                                                                        </animation>
+                                                                        
+                                                                </control>
+                                                                
+                                                                <control type="textbox">
+                                                                
+                                                                        <posx>20</posx>
+                                                                        <posy>20</posy>
+                                                                        <width>300</width>
+                                                                        <height>305</height>
+                                                                        <label></label>
+                                                                        <font>Home-Tile-Detail</font>
+                                                                        <textcolor>Label_Normal</textcolor>
+                                                                        <aligny>top</aligny>
+                                                                        <wrapmultiline>true</wrapmultiline>
+                                                                        <shadowcolor>00FFFFFF</shadowcolor>
+                                                                        <autoscroll>false</autoscroll>
+                                                                        
+                                                                        <visible>false</visible>
+                                                                        
+                                                                        <animation type="Visible" reversible="false" loop="true">
+                                                                                <effect type="fade" start="0" end="100" time="400" delay="800" />
+                                                                                <effect type="fade" start="100" end="0" time="400" delay="5000" />
+                                                                        </animation>
+                                                                        
+                                                                </control>
+                                                                
+                                                        </control>        
+                                                        
+                                                </focusedlayout>
+                                                
+                                                <content>
+                                                
+  
+                            
+									<item id="1">
+									 <label>Advanced Warfare</label>
+								<label2>There's a soldier in all of us.</label2>
+                                <icon>demo\app\info\poster\aw.jpg</icon>
+                               
+								
+                             <onclick>Skin.SetString(GameFanart, )</onclick>
+<onclick>Skin.SetString(GamePoster, )</onclick>
+<onclick>Skin.SetString(GameFanart2, )</onclick>
+<onclick>Skin.SetString(GameName, )</onclick>
+<onclick>Skin.SetString(GameGenre, )</onclick>
+<onclick>Skin.SetString(GamePlatform, )</onclick>
+<onclick>Skin.SetString(GameReleased, )</onclick>
+<onclick>Skin.SetString(GameStudio, )</onclick>
+<onclick>Skin.SetString(GameDescription, )</onclick>
+								
+								
+								
+								
+								
+<onclick>Skin.SetString(GameFanart, demo\app\info\fanart\codaw.jpg)</onclick>
+<onclick>Skin.SetString(GamePoster, demo\app\info\poster\advancedwarfare.jpg)</onclick>
+<onclick>Skin.SetString(GameFanart2, demo\app\info\fanart\codaw2.jpg)</onclick>
+<onclick>Skin.SetString(GameName, Call Of Duty: Advanced Warfare)</onclick>
+<onclick>Skin.SetString(GameGenre, First-person shooter)</onclick>
+<onclick>Skin.SetString(GamePlatform, Xbox One)</onclick>
+<onclick>Skin.SetString(GameReleased, 2014)</onclick>
+<onclick>Skin.SetString(GameStudio, Sledgehammer Games)</onclick>
+<onclick>Skin.SetString(GameDescription, Call of Duty: Advanced Warfare is an upcoming 2014 first-person shooter video game developed by Sledgehammer Games and published by Activision. It is the eleventh primary installment in the Call of Duty series and the first developed primarily by Sledgehammer Games after Neversoft was merged into Infinity Ward on May 3 2014 and was then officially made defunct on July 10 2014. The game is set to be released for Microsoft Windows PlayStation 3 PlayStation 4 Xbox 360 and Xbox One on November 4 2014.)</onclick>
+<onclick>ActivateWindow(1223)</onclick>	
+						</item>
+					
+                                                
+
+									
+						
+
+                                                </content>
+
+                                        </control>
+	
+			
+			
+			
+				
+										
+										
+										<control type="panel" id="10007">
+
+                                               
+                                          
+				<posy>495</posy>
+                                                <width>365</width>
+                                                <height>462</height>
+                                                   
+							
+							<onright>10006</onright>
+				                    <onleft>1</onleft>
+<onup>222</onup>
+						
+						
+                                     
+                                    
+                                            	<pagecontrol>81</pagecontrol>
+					<viewtype label="535">list</viewtype>
+					<scrolltime tween="cubic" easing="out">600</scrolltime>
+					<preloaditems>2</preloaditems>
+                                              
+												  
+                                                <itemlayout width="220" height="135">
+
+                                                   <control type="image">
+                                                        
+                                                                <posx>5</posx>
+                                                                <posy>2</posy>
+                                                                <width>210</width>
+                                                                <height>127</height>
+                                                                <texture>colors/color_black.png</texture>
+                                                     
+                                                                
+                                                        </control>
+                                                        
+                                                        <control type="image">
+                                                        
+                                                                <posx>5</posx>
+                                                                <posy>2</posy>
+                                                                <width>210</width>
+                                                                <height>128</height>
+                                                                <texture>$INFO[ListItem.icon]</texture>
+                                                                <aspectratio>scale</aspectratio>
+                                                            
+                                                        </control>
+												
+																									
+				     <control type="image">
+                                                      
+                                                                <posx>5</posx>
+                                                                <posy>100</posy>
+                                                                <width>210</width>
+                                                                <height>30.5</height>
+                                                                <texture>black.png</texture>
+                                                     
+                                                                
+                                                        </control>
+                                                        
+                                                        <control type="label">
+                                                        
+                                                                <posx>15</posx>
+                                                                <posy>90</posy>
+                                                                <width min="20" max="350">auto</width>
+                                                                <height>65</height>
+                                                                <label>$INFO[Listitem.Label]</label>
+                                                                <font>Home-Tile-Header-bg2</font>
+                                                                <textcolor>Tile_Text</textcolor>
+                                                                <aligny>center</aligny>
+                                                                
+                                                        </control>
+														  <control type="label">
+                                                        
+                                                                <posx>15</posx>
+                                                                <posy>80</posy>
+                                                                <width min="20" max="195">auto</width>
+                                                                <height>65</height>
+                                                                <label>$INFO[Listitem.Label2]</label>
+                                                                <font>Home-Tile-Header</font>
+                                                                <textcolor>Tile_Text</textcolor>
+                                                                <aligny>center</aligny>
+                                                                
+                                                        </control>
+                                                        
+                                                        <control type="textbox">
+                                                                
+                                                                <posx>5</posx>
+                                                                <posy>12</posy>
+                                                                <width>340</width>
+                                                                <height>305</height>
+                                                                <label></label>
+                                                                <font>Home-Featured</font>
+                                                                <textcolor>80FFFFFF</textcolor>
+                                                                <align>left</align>
+                                                                <aligny>top</aligny>
+                                                                
+                                                                <visible>StringCompare(ListItem.Label,Now playing) + !VideoPlayer.HasMenu</visible>
+                                                                
+                                                        </control>
+                                                        
+                                                </itemlayout>
+
+                                                <focusedlayout width="220" height="135">
+
+                                                        <control type="image">
+                                                        
+                                                                <posx>5</posx>
+                                                                <posy>2</posy>
+                                                                <width>210</width>
+                                                                <height>127</height>
+                                                                <texture>colors/color_black.png</texture>
+                                                               
+                                                                
+                                                        </control>
+														          <control type="image">
+                                                        
+                                                                <posx>2.5</posx>
+                                                                <posy>-1.3</posy>
+                                                                <width>215.5</width>
+                                                                <height>134.5</height>
+                                                                <texture>colors/color_white.png</texture>
+																
+                                                                    <include>Common_Animation_tiledash</include>
+                                                                
+                                                        </control>
+                                                        
+                                                          <control type="image">
+                                                        
+                                                                <posx>5</posx>
+                                                                <posy>2</posy>
+                                                                <width>210</width>
+                                                                <height>128</height>
+                                                                <texture>$INFO[ListItem.icon]</texture>
+                                                                <aspectratio>scale</aspectratio>
+                                                               
+                                                        </control>
+				
+				
+                                                        
+														    <control type="image">
+                                                      
+                                                                <posx>5</posx>
+                                                                <posy>100</posy>
+                                                                <width>210</width>
+                                                                <height>30.5</height>
+                                                                <texture>black.png</texture>
+                                                     
+                                                                
+                                                        </control>
+                                                        
+                                                        <control type="label">
+                                                        
+                                                                <posx>15</posx>
+                                                                <posy>90</posy>
+                                                                <width min="20" max="350">auto</width>
+                                                                <height>65</height>
+                                                                <label>$INFO[Listitem.Label]</label>
+                                                                <font>Home-Tile-Header-bg2</font>
+                                                                <textcolor>Tile_Text</textcolor>
+                                                                <aligny>center</aligny>
+                                                                
+                                                        </control>
+														  <control type="label">
+                                                        
+                                                                <posx>15</posx>
+                                                                <posy>80</posy>
+                                                                <width min="20" max="195">auto</width>
+                                                                <height>65</height>
+                                                                <label>$INFO[Listitem.Label2]</label>
+                                                                <font>Home-Tile-Header</font>
+                                                                <textcolor>Tile_Text</textcolor>
+                                                                <aligny>center</aligny>
+                                                                
+                                                        </control>
+                                                        
+                                                     
+                                                     
+                                                        
+                                                        <control type="group">
+                                                        
+                                                                <control type="image">
+                                                        
+                                                                        <posx>0</posx>
+                                                                        <posy>0</posy>
+                                                                        <width>380</width>
+                                                                        <height>425</height>
+                                                                        <texture>colors/color_white.png</texture>
+                                                                        <colordiffuse>Background_Normal</colordiffuse>
+                                                                        
+                                                                        <visible>false</visible>
+                                                                
+                                                                        <animation type="Visible" reversible="false" loop="true">
+                                                                                <effect type="fade" start="0" end="100" time="400" />
+                                                                                <effect type="zoom" start="100,0" end="100,100" center="90,0" time="400" />
+                                                                                <effect type="zoom" start="100,100" end="100,0" center="90,0" time="400" delay="5000" />
+                                                                                <effect type="fade" start="100" end="0" time="400" delay="5200" />
+                                                                        </animation>
+                                                                        
+                                                                </control>
+                                                                
+                                                                <control type="textbox">
+                                                                
+                                                                        <posx>20</posx>
+                                                                        <posy>20</posy>
+                                                                        <width>300</width>
+                                                                        <height>305</height>
+                                                                        <label></label>
+                                                                        <font>Home-Tile-Detail</font>
+                                                                        <textcolor>Label_Normal</textcolor>
+                                                                        <aligny>top</aligny>
+                                                                        <wrapmultiline>true</wrapmultiline>
+                                                                        <shadowcolor>00FFFFFF</shadowcolor>
+                                                                        <autoscroll>false</autoscroll>
+                                                                        
+                                                                        <visible>false</visible>
+                                                                        
+                                                                        <animation type="Visible" reversible="false" loop="true">
+                                                                                <effect type="fade" start="0" end="100" time="400" delay="800" />
+                                                                                <effect type="fade" start="100" end="0" time="400" delay="5000" />
+                                                                        </animation>
+                                                                        
+                                                                </control>
+                                                                
+                                                        </control>        
+                                                        
+                                                </focusedlayout>
+                                                
+                                                <content>
+                                                
+  	<item id="1">
+						
+								<description>Games</description>
+								<label2>Battlefield 4</label2>
+								<thumb>demo\app\gamestore\bf4.jpg</thumb>
+								
+								<onclick>Skin.SetString(GameFanart, )</onclick>
+<onclick>Skin.SetString(GamePoster, )</onclick>
+<onclick>Skin.SetString(GameFanart2, )</onclick>
+<onclick>Skin.SetString(GameName, )</onclick>
+<onclick>Skin.SetString(GameGenre, )</onclick>
+<onclick>Skin.SetString(GamePlatform, )</onclick>
+<onclick>Skin.SetString(GameReleased, )</onclick>
+<onclick>Skin.SetString(GameStudio, )</onclick>
+<onclick>Skin.SetString(GameDescription, )</onclick>
+								
+								
+								
+								
+
+<onclick>Skin.SetString(GameFanart, demo\app\info\fanart\battlefield4.jpg)</onclick>
+<onclick>Skin.SetString(GamePoster, demo\app\info\poster\battlefield4.jpg)</onclick>
+<onclick>Skin.SetString(GameFanart2, demo\app\info\fanart\battlefield42.jpg)</onclick>
+<onclick>Skin.SetString(GameName, Battlefield 4)</onclick>
+<onclick>Skin.SetString(GameGenre, First-erson shooter)</onclick>
+<onclick>Skin.SetString(GamePlatform, Xbox One)</onclick>
+<onclick>Skin.SetString(GameReleased, 2013)</onclick>
+<onclick>Skin.SetString(GameStudio, Electronic Arts)</onclick>
+<onclick>Skin.SetString(GameDescription, Battlefield 4 is a first-person shooter video game developed by Swedish video game developer EA Digital Illusions CE (DICE) and published by Electronic Arts. It is a sequel to 2011's Battlefield 3. It was released on October 29 2013 in North America. October 31 2013 in Australia. November 1 2013 in Europe and New Zealand and November 7 2013 in Japan for Microsoft Windows PlayStation 3 PlayStation 4 Xbox 360 and Xbox One. Battlefield 4 received positive critical response from reviewers and was a commercial success praised for its multiplayer mode gameplay and graphics. In contrast the game's single-player campaign was highly criticised by critics for being short and shallow as well as glitches and bugs upon the game's release.)</onclick>
+<onclick>ActivateWindow(1223)</onclick>
+						</item>
+									   
+					
+									
+						
+
+                                                </content>
+
+                                        </control>
+									
+											<control type="panel" id="10006">
+
+                                               
+                                               <posx>218.7</posx>
+				<posy>495</posy>
+                                                <width>365</width>
+                                                <height>462</height>
+                                            <onleft>10007</onleft>
+
+							
+						
+				
+						<onup>222</onup>
+						                   
+							<onright>ActivateWindow(1157)</onright>
+                                          
+	<onright>1110</onright>
+                                     
+                                    
+                                            	<pagecontrol>81</pagecontrol>
+					<viewtype label="535">list</viewtype>
+					<scrolltime tween="cubic" easing="out">600</scrolltime>
+					<preloaditems>2</preloaditems>
+                                              
+												  
+                                                <itemlayout width="220" height="135">
+
+                                                   <control type="image">
+                                                        
+                                                                <posx>5</posx>
+                                                                <posy>2</posy>
+                                                                <width>210</width>
+                                                                <height>127</height>
+                                                                <texture>colors/color_black.png</texture>
+                                                     
+                                                                
+                                                        </control>
+                                                        
+                                                        <control type="image">
+                                                        
+                                                                <posx>5</posx>
+                                                                <posy>2</posy>
+                                                                <width>210</width>
+                                                                <height>128</height>
+                                                                <texture>$INFO[ListItem.icon]</texture>
+                                                                <aspectratio>scale</aspectratio>
+                                                            
+                                                        </control>
+												
+																									
+				     <control type="image">
+                                                      
+                                                                <posx>5</posx>
+                                                                <posy>100</posy>
+                                                                <width>210</width>
+                                                                <height>30.5</height>
+                                                                <texture>black.png</texture>
+                                                     
+                                                                
+                                                        </control>
+                                                        
+                                                        <control type="label">
+                                                        
+                                                                <posx>15</posx>
+                                                                <posy>90</posy>
+                                                                <width min="20" max="350">auto</width>
+                                                                <height>65</height>
+                                                                <label>$INFO[Listitem.Label]</label>
+                                                                <font>Home-Tile-Header-bg2</font>
+                                                                <textcolor>Tile_Text</textcolor>
+                                                                <aligny>center</aligny>
+                                                                
+                                                        </control>
+														  <control type="label">
+                                                        
+                                                                <posx>15</posx>
+                                                                <posy>80</posy>
+                                                                <width min="20" max="195">auto</width>
+                                                                <height>65</height>
+                                                                <label>$INFO[Listitem.Label2]</label>
+                                                                <font>Home-Tile-Header</font>
+                                                                <textcolor>Tile_Text</textcolor>
+                                                                <aligny>center</aligny>
+                                                                
+                                                        </control>
+                                                        
+                                                        <control type="textbox">
+                                                                
+                                                                <posx>5</posx>
+                                                                <posy>12</posy>
+                                                                <width>340</width>
+                                                                <height>305</height>
+                                                                <label></label>
+                                                                <font>Home-Featured</font>
+                                                                <textcolor>80FFFFFF</textcolor>
+                                                                <align>left</align>
+                                                                <aligny>top</aligny>
+                                                                
+                                                                <visible>StringCompare(ListItem.Label,Now playing) + !VideoPlayer.HasMenu</visible>
+                                                                
+                                                        </control>
+                                                        
+                                                </itemlayout>
+
+                                                <focusedlayout width="220" height="135">
+
+                                                        <control type="image">
+                                                        
+                                                                <posx>5</posx>
+                                                                <posy>2</posy>
+                                                                <width>210</width>
+                                                                <height>127</height>
+                                                                <texture>colors/color_black.png</texture>
+                                                               
+                                                                
+                                                        </control>
+														          <control type="image">
+                                                        
+                                                                <posx>2.5</posx>
+                                                                <posy>-1.3</posy>
+                                                                <width>215.5</width>
+                                                                <height>134.5</height>
+                                                                <texture>colors/color_white.png</texture>
+																
+                                                                    <include>Common_Animation_tiledash</include>
+                                                                
+                                                        </control>
+                                                        
+                                                          <control type="image">
+                                                        
+                                                                <posx>5</posx>
+                                                                <posy>2</posy>
+                                                                <width>210</width>
+                                                                <height>128</height>
+                                                                <texture>$INFO[ListItem.icon]</texture>
+                                                                <aspectratio>scale</aspectratio>
+                                                               
+                                                        </control>
+				
+				
+                                                        
+														    <control type="image">
+                                                      
+                                                                <posx>5</posx>
+                                                                <posy>100</posy>
+                                                                <width>210</width>
+                                                                <height>30.5</height>
+                                                                <texture>black.png</texture>
+                                                     
+                                                                
+                                                        </control>
+                                                        
+                                                        <control type="label">
+                                                        
+                                                                <posx>15</posx>
+                                                                <posy>90</posy>
+                                                                <width min="20" max="350">auto</width>
+                                                                <height>65</height>
+                                                                <label>$INFO[Listitem.Label]</label>
+                                                                <font>Home-Tile-Header-bg2</font>
+                                                                <textcolor>Tile_Text</textcolor>
+                                                                <aligny>center</aligny>
+                                                                
+                                                        </control>
+														  <control type="label">
+                                                        
+                                                                <posx>15</posx>
+                                                                <posy>80</posy>
+                                                                <width min="20" max="195">auto</width>
+                                                                <height>65</height>
+                                                                <label>$INFO[Listitem.Label2]</label>
+                                                                <font>Home-Tile-Header</font>
+                                                                <textcolor>Tile_Text</textcolor>
+                                                                <aligny>center</aligny>
+                                                                
+                                                        </control>
+                                                        
+                                                     
+                                                     
+                                                        
+                                                        <control type="group">
+                                                        
+                                                                <control type="image">
+                                                        
+                                                                        <posx>0</posx>
+                                                                        <posy>0</posy>
+                                                                        <width>380</width>
+                                                                        <height>425</height>
+                                                                        <texture>colors/color_white.png</texture>
+                                                                        <colordiffuse>Background_Normal</colordiffuse>
+                                                                        
+                                                                        <visible>false</visible>
+                                                                
+                                                                        <animation type="Visible" reversible="false" loop="true">
+                                                                                <effect type="fade" start="0" end="100" time="400" />
+                                                                                <effect type="zoom" start="100,0" end="100,100" center="90,0" time="400" />
+                                                                                <effect type="zoom" start="100,100" end="100,0" center="90,0" time="400" delay="5000" />
+                                                                                <effect type="fade" start="100" end="0" time="400" delay="5200" />
+                                                                        </animation>
+                                                                        
+                                                                </control>
+                                                                
+                                                                <control type="textbox">
+                                                                
+                                                                        <posx>20</posx>
+                                                                        <posy>20</posy>
+                                                                        <width>300</width>
+                                                                        <height>305</height>
+                                                                        <label></label>
+                                                                        <font>Home-Tile-Detail</font>
+                                                                        <textcolor>Label_Normal</textcolor>
+                                                                        <aligny>top</aligny>
+                                                                        <wrapmultiline>true</wrapmultiline>
+                                                                        <shadowcolor>00FFFFFF</shadowcolor>
+                                                                        <autoscroll>false</autoscroll>
+                                                                        
+                                                                        <visible>false</visible>
+                                                                        
+                                                                        <animation type="Visible" reversible="false" loop="true">
+                                                                                <effect type="fade" start="0" end="100" time="400" delay="800" />
+                                                                                <effect type="fade" start="100" end="0" time="400" delay="5000" />
+                                                                        </animation>
+                                                                        
+                                                                </control>
+                                                                
+                                                        </control>        
+                                                        
+                                                </focusedlayout>
+                                                
+                                                <content>
+                                                	<item id="1">
+							<description>Games</description>
+								<label2>Destiny</label2>
+								<thumb>demo\app\gamestore\destiny.jpg</thumb>
+								
+								<onclick>Skin.SetString(GameFanart, )</onclick>
+<onclick>Skin.SetString(GamePoster, )</onclick>
+<onclick>Skin.SetString(GameFanart2, )</onclick>
+<onclick>Skin.SetString(GameName, )</onclick>
+<onclick>Skin.SetString(GameGenre, )</onclick>
+<onclick>Skin.SetString(GamePlatform, )</onclick>
+<onclick>Skin.SetString(GameReleased, )</onclick>
+<onclick>Skin.SetString(GameStudio, )</onclick>
+<onclick>Skin.SetString(GameDescription, )</onclick>
+								
+								
+								
+								
+
+<onclick>Skin.SetString(GameFanart, demo\app\info\fanart\destiny.jpg)</onclick>
+<onclick>Skin.SetString(GamePoster, demo\app\info\poster\destiny.png)</onclick>
+<onclick>Skin.SetString(GameFanart2, demo\app\info\fanart\destiny2.jpg)</onclick>
+<onclick>Skin.SetString(GameName, Destiny)</onclick>
+<onclick>Skin.SetString(GameGenre, First-person shooter)</onclick>
+<onclick>Skin.SetString(GamePlatform, Xbox One)</onclick>
+<onclick>Skin.SetString(GameReleased, 2014)</onclick>
+<onclick>Skin.SetString(GameStudio, Activision)</onclick>
+<onclick>Skin.SetString(GameDescription, Destiny is an upcoming massively multiplayer online action role-playing first-person shooter video game in a mythic science fiction open world setting. It is developed by Bungie and published by Activision as part of a ten-year publishing deal. The game will be released on the PlayStation 3 PlayStation 4 Xbox 360 and Xbox One video game consoles on September 9 2014 with a beta testing phase planned for this upcoming summer. The beta will launch first on PlayStation 3 and PlayStation 4. Bungie demoed live gameplay footage of Destiny at Sony's E3 2013 conference.)</onclick>
+<onclick>ActivateWindow(1223)</onclick>
+						</item>
+									   
+					
+									
+						
+
+                                                </content>
+
+                                        </control>
+										
+										</control>
+										</control>
+										
+										
+										
+										
+						<control type="group">
+							
+						<posx>0</posx>
+								<posy>0</posy>
+								<width>1280</width>
+								<height>720</height>
+							
+																							<control type="image">
+							
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1280</width>
+								<height>720</height>
+								<texture>demo\store2\bg3.png</texture>
+						
+							</control>	
+							
+							
+							
+							
+							
+							<control type="label">
+									  <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="500" />
+                        <effect type="slide" start="60" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+                                    <posx>15</posx>
+                                                                
+								<posy>160</posy>
+                                                                <width min="20" max="250">auto</width>
+                                                                <height>20</height>
+                                                                <label>JOGOS EM ALTA</label>
+                                                                <font>Home-Tile-Header</font>
+                                                                <textcolor>Tile_Text</textcolor>
+                                                                <aligny>center</aligny>
+                                                              
+                                                        </control>
+						<control type="panel" id="1110">
+
+             	  <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="500" />
+                        <effect type="slide" start="60" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+                
+				 <posx>05</posx>
+                                                <posy>150</posy>
+                                                <width>1280</width>
+                                                <height>280</height>
+												<onleft>ActivateWindow(1157)</onleft>
+                                               <onleft>222</onleft>
+                                             <ondown>11101</ondown>
+				<viewtype label="Square">wrap</viewtype>
+				<orientation>horizontal</orientation>
+				<pagecontrol>64</pagecontrol>
+				<scrolltime tween="cubic" easing="out">500</scrolltime>
+				<preloaditems>4</preloaditems>
+		
+								
+				<itemlayout width="220" height="220">
+
+
+					
+					<control type="group">
+		
+						<posx>5</posx>
+						<posy>40</posy>
+						<width>210</width>
+						<height>210</height>
+						
+						<control type="image">
+						
+							<posx>5</posx>
+							<posy>0</posy>
+							<width>210</width>
+							<height>210</height>
+							<texture>colors/color_keyboard_dark.png</texture>
+							<aspectratio>scale</aspectratio>
+							
+						</control>
+					
+						<control type="image">
+						
+							<posx>5</posx>
+							<posy>0</posy>
+							<width>210</width>
+							<height>210</height>
+							<texture>colors\color_white.png</texture>
+							<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+							<aspectratio>scale</aspectratio>
+							
+						</control>
+					<control type="image">
+						
+							<posx>5</posx>
+							<posy>0</posy>
+							<width>210</width>
+							<height>210</height>
+							<texture>$INFO[ListItem.Thumb]</texture>
+						
+							<aspectratio>scale</aspectratio>
+							
+						</control>
+						
+			
+							
+					
+					
+					</control>
+					
+				</itemlayout>
+
+				<focusedlayout width="220" height="220">
+				
+
+				
+					<control type="group">
+						
+						<posx>5</posx>
+						<posy>40</posy>
+						<width>210</width>
+						<height>210</height>
+					
+				
+						
+						<control type="image">
+						
+							<posx>5</posx>
+							<posy>0</posy>
+							<width>210</width>
+							<height>210</height>
+							<texture>colors/color_keyboard_dark.png</texture>
+							<aspectratio>scale</aspectratio>
+							
+						</control>
+												<control type="image">
+						
+							<posx>3</posx>
+							<posy>-2</posy>
+							<width>214</width>
+							<height>214</height>
+							<texture>colors/color_white.png</texture>
+							<aspectratio>scale</aspectratio>
+							     <include>Common_Animation_tiledash</include>
+						</control>
+					
+						<control type="image">
+						
+							<posx>5</posx>
+							<posy>0</posy>
+							<width>210</width>
+							<height>210</height>
+							<texture>colors\color_white.png</texture>
+							<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+							<aspectratio>scale</aspectratio>
+							
+						</control>
+					
+						<control type="image">
+						
+							<posx>5</posx>
+							<posy>0</posy>
+							<width>210</width>
+							<height>210</height>
+							<texture>$INFO[ListItem.Thumb]</texture>
+						
+							<aspectratio>scale</aspectratio>
+							
+						</control>
+						
+						<control type="image">
+						<include>Common_Animation_Pini</include>
+							<posx>5</posx>
+							<posy>150</posy>
+							<width>210</width>
+							<height>60</height>
+							<texture>colors/color_white.png</texture>
+							<colordiffuse>FanartDiffuse</colordiffuse>
+							
+						</control>
+							
+						<control type="label">
+							
+							<posx>15</posx>
+							<posy>168</posy>
+							<width>190</width>
+							<height>20</height>
+							<textcolor>Label_Normal</textcolor>
+							<font>Menu-Square-Header</font>
+							<aligny>top</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						
+						</control>
+						
+						<control type="label">
+							
+							<posx>15</posx>
+							<posy>178</posy>
+							<width>190</width>
+							<height>20</height>
+							<textcolor>Label_Normal</textcolor>
+							<font>Menu-Square-Detail</font>
+							<aligny>top</aligny>
+							<label></label>
+						
+						</control>
+
+					</control>
+					
+					<!--Back Side Info-->
+					<control type="group">
+					
+						<posx>0</posx>
+						<posy>40</posy>
+						<width>210</width>
+						<height>210</height>
+						
+						
+						
+						<control type="image">
+						
+							<include>Common_LiveTile_Rating</include>
+							<visible>false</visible>
+							
+						</control>
+						
+						<control type="textbox">
+							
+							<include>Common_LiveTile_Description</include>
+							<label>$VAR[Tile_Description]</label>
+							<visible>false</visible>
+				
+						</control>
+						
+					</control>
+					
+				</focusedlayout>
+			<content>
+		<item id="1">
+								<description>Games</description>
+								<label>Assassins Creed</label>
+								<thumb>demo\app\gamestore\asassinscreed.jpg</thumb>
+								
+								
+								<onclick>Skin.SetString(GameFanart, )</onclick>
+<onclick>Skin.SetString(GamePoster, )</onclick>
+<onclick>Skin.SetString(GameFanart2, )</onclick>
+<onclick>Skin.SetString(GameName, )</onclick>
+<onclick>Skin.SetString(GameGenre, )</onclick>
+<onclick>Skin.SetString(GamePlatform, )</onclick>
+<onclick>Skin.SetString(GameReleased, )</onclick>
+<onclick>Skin.SetString(GameStudio, )</onclick>
+<onclick>Skin.SetString(GameDescription, )</onclick>
+								
+								
+								
+								
+							
+<onclick>Skin.SetString(GameFanart, demo\app\info\fanart\assassinscreed.png)</onclick>
+<onclick>Skin.SetString(GamePoster, demo\app\info\poster\assassinscreed.jpg)</onclick>
+<onclick>Skin.SetString(GameFanart2, demo\app\info\fanart\assassinscreed2.jpg)</onclick>
+<onclick>Skin.SetString(GameName, Assassins Creed IV: Black Flag)</onclick>
+<onclick>Skin.SetString(GameGenre, Action adventure)</onclick>
+<onclick>Skin.SetString(GamePlatform, Xbox One)</onclick>
+<onclick>Skin.SetString(GameReleased, 2013)</onclick>
+<onclick>Skin.SetString(GameStudio, Ubisoft)</onclick>
+<onclick>Skin.SetString(GameDescription, Assassin's Creed IV: Black Flag is a 2013 historical action-adventure open world video game developed by Ubisoft Montreal and published by Ubisoft. It is the sixth major installment in the Assassin's Creed series a sequel to 2012's Assassin's Creed III's modern story and a prequel to its historical storyline. The story is set in the early 18th century Caribbean during the Golden Age of Piracy and follows notorious pirate Edward Kenway grandfather of Assassin's Creed III protagonist Ratonhnhaké:ton who stumbles upon the conflict waged by the Assassins and Templars. Unlike previous games gameplay elements focus more on ship-based exploration in the open world map while also retaining the series' third-person land-based exploration melee combat and stealth system. Multiplayer also returns albeit with only land-based modes and settings. Assassin's Creed IV: Black Flag received positive reviews with critics praising the open world gameplay side-quests graphics and naval combat. The story received a mixed response while criticism fell on aspects of the story missions which were considered repetitive. The game received several awards and nominations including winning the Spike VGX 2013 award for Best Action Adventure Game.)</onclick>
+<onclick>ActivateWindow(1223)</onclick>
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+							</item>
+																								<item id="2">
+								<description>Games</description>
+								<label>Battlefield 4</label>
+								<thumb>demo\app\gamestore\bf4.jpg</thumb>
+								
+								<onclick>Skin.SetString(GameFanart, )</onclick>
+<onclick>Skin.SetString(GamePoster, )</onclick>
+<onclick>Skin.SetString(GameFanart2, )</onclick>
+<onclick>Skin.SetString(GameName, )</onclick>
+<onclick>Skin.SetString(GameGenre, )</onclick>
+<onclick>Skin.SetString(GamePlatform, )</onclick>
+<onclick>Skin.SetString(GameReleased, )</onclick>
+<onclick>Skin.SetString(GameStudio, )</onclick>
+<onclick>Skin.SetString(GameDescription, )</onclick>
+								
+								
+								
+								
+
+<onclick>Skin.SetString(GameFanart, demo\app\info\fanart\battlefield4.jpg)</onclick>
+<onclick>Skin.SetString(GamePoster, demo\app\info\poster\battlefield4.jpg)</onclick>
+<onclick>Skin.SetString(GameFanart2, demo\app\info\fanart\battlefield42.jpg)</onclick>
+<onclick>Skin.SetString(GameName, Battlefield 4)</onclick>
+<onclick>Skin.SetString(GameGenre, First-erson shooter)</onclick>
+<onclick>Skin.SetString(GamePlatform, Xbox One)</onclick>
+<onclick>Skin.SetString(GameReleased, 2013)</onclick>
+<onclick>Skin.SetString(GameStudio, Electronic Arts)</onclick>
+<onclick>Skin.SetString(GameDescription, Battlefield 4 is a first-person shooter video game developed by Swedish video game developer EA Digital Illusions CE (DICE) and published by Electronic Arts. It is a sequel to 2011's Battlefield 3. It was released on October 29 2013 in North America. October 31 2013 in Australia. November 1 2013 in Europe and New Zealand and November 7 2013 in Japan for Microsoft Windows PlayStation 3 PlayStation 4 Xbox 360 and Xbox One. Battlefield 4 received positive critical response from reviewers and was a commercial success praised for its multiplayer mode gameplay and graphics. In contrast the game's single-player campaign was highly criticised by critics for being short and shallow as well as glitches and bugs upon the game's release.)</onclick>
+<onclick>ActivateWindow(1223)</onclick>
+														
+							</item>
+																														<item id="3">
+								<description>Games</description>
+								<label>Dead Rising 3</label>
+								<thumb>demo\app\gamestore\deadrising.jpg</thumb>
+								
+								<onclick>Skin.SetString(GameFanart, )</onclick>
+<onclick>Skin.SetString(GamePoster, )</onclick>
+<onclick>Skin.SetString(GameFanart2, )</onclick>
+<onclick>Skin.SetString(GameName, )</onclick>
+<onclick>Skin.SetString(GameGenre, )</onclick>
+<onclick>Skin.SetString(GamePlatform, )</onclick>
+<onclick>Skin.SetString(GameReleased, )</onclick>
+<onclick>Skin.SetString(GameStudio, )</onclick>
+<onclick>Skin.SetString(GameDescription, )</onclick>
+								
+								
+								
+								
+
+<onclick>Skin.SetString(GameFanart, demo\app\info\fanart\deadrising3.jpg)</onclick>
+<onclick>Skin.SetString(GamePoster, demo\app\info\poster\deadrising3.jpg)</onclick>
+<onclick>Skin.SetString(GameFanart2, demo\app\info\fanart\deadrising32.png)</onclick>
+<onclick>Skin.SetString(GameName, Dead Rising 3)</onclick>
+<onclick>Skin.SetString(GameGenre, Survival horror)</onclick>
+<onclick>Skin.SetString(GamePlatform, Xbox One)</onclick>
+<onclick>Skin.SetString(GameReleased, 2013)</onclick>
+<onclick>Skin.SetString(GameStudio, Microsoft Studios)</onclick>
+<onclick>Skin.SetString(GameDescription, Dead Rising 3 is a survival horror video game developed by Capcom Vancouver and published by Microsoft Studios. The game was announced as an Xbox One exclusive during Microsoft's E3 2013 press conference on June 10 2013. It was released on November 22 2013 as a launch title for the Xbox One.)</onclick>
+<onclick>ActivateWindow(1223)</onclick>
+														
+							</item>
+																																<item id="4">
+								<description>Games</description>
+								<label>Destiny</label>
+								<thumb>demo\app\gamestore\destiny.jpg</thumb>
+								
+								<onclick>Skin.SetString(GameFanart, )</onclick>
+<onclick>Skin.SetString(GamePoster, )</onclick>
+<onclick>Skin.SetString(GameFanart2, )</onclick>
+<onclick>Skin.SetString(GameName, )</onclick>
+<onclick>Skin.SetString(GameGenre, )</onclick>
+<onclick>Skin.SetString(GamePlatform, )</onclick>
+<onclick>Skin.SetString(GameReleased, )</onclick>
+<onclick>Skin.SetString(GameStudio, )</onclick>
+<onclick>Skin.SetString(GameDescription, )</onclick>
+								
+								
+								
+								
+
+<onclick>Skin.SetString(GameFanart, demo\app\info\fanart\destiny.jpg)</onclick>
+<onclick>Skin.SetString(GamePoster, demo\app\info\poster\destiny.png)</onclick>
+<onclick>Skin.SetString(GameFanart2, demo\app\info\fanart\destiny2.jpg)</onclick>
+<onclick>Skin.SetString(GameName, Destiny)</onclick>
+<onclick>Skin.SetString(GameGenre, First-person shooter)</onclick>
+<onclick>Skin.SetString(GamePlatform, Xbox One)</onclick>
+<onclick>Skin.SetString(GameReleased, 2014)</onclick>
+<onclick>Skin.SetString(GameStudio, Activision)</onclick>
+<onclick>Skin.SetString(GameDescription, Destiny is an upcoming massively multiplayer online action role-playing first-person shooter video game in a mythic science fiction open world setting. It is developed by Bungie and published by Activision as part of a ten-year publishing deal. The game will be released on the PlayStation 3 PlayStation 4 Xbox 360 and Xbox One video game consoles on September 9 2014 with a beta testing phase planned for this upcoming summer. The beta will launch first on PlayStation 3 and PlayStation 4. Bungie demoed live gameplay footage of Destiny at Sony's E3 2013 conference.)</onclick>
+<onclick>ActivateWindow(1223)</onclick>
+														
+							</item>
+																																<item id="5">
+								<description>Games</description>
+								<label>The Division</label>
+								<thumb>demo\app\gamestore\division.jpg</thumb>
+								
+								<onclick>Skin.SetString(GameFanart, )</onclick>
+<onclick>Skin.SetString(GamePoster, )</onclick>
+<onclick>Skin.SetString(GameFanart2, )</onclick>
+<onclick>Skin.SetString(GameName, )</onclick>
+<onclick>Skin.SetString(GameGenre, )</onclick>
+<onclick>Skin.SetString(GamePlatform, )</onclick>
+<onclick>Skin.SetString(GameReleased, )</onclick>
+<onclick>Skin.SetString(GameStudio, )</onclick>
+<onclick>Skin.SetString(GameDescription, )</onclick>
+								
+								
+								
+								
+
+<onclick>Skin.SetString(GameFanart, demo\app\info\fanart\division.jpg)</onclick>
+<onclick>Skin.SetString(GamePoster, demo\app\info\poster\division.jpg)</onclick>
+<onclick>Skin.SetString(GameFanart2, demo\app\info\fanart\division2.jpg)</onclick>
+<onclick>Skin.SetString(GameName, Tom Clancy's The Division)</onclick>
+<onclick>Skin.SetString(GameGenre, Third-person shooter)</onclick>
+<onclick>Skin.SetString(GamePlatform, Xbox One)</onclick>
+<onclick>Skin.SetString(GameReleased, 2014)</onclick>
+<onclick>Skin.SetString(GameStudio, Ubisoft)</onclick>
+<onclick>Skin.SetString(GameDescription, The Division is inspired by Operation Dark Winter and Directive 51 real-world events which revealed how vulnerable we've become. society has become fragile and complex. In the game a disease that spreads on Black Friday causes the United States to collapse in five days. The player is part of a group called Strategic Homeland Division (SHD) called The Division for short. This group was established to combat the threat and do whatever it takes to save what remains in a massive multiplayer online situation. putting them against friends AI and other players.)</onclick>
+<onclick>ActivateWindow(1223)</onclick>
+														
+							</item>
+																																<item id="6">
+								<description>Games</description>
+								<label>Dying Light</label>
+								<thumb>demo\app\gamestore\dyinglight.jpg</thumb>
+								
+								<onclick>Skin.SetString(GameFanart, )</onclick>
+<onclick>Skin.SetString(GamePoster, )</onclick>
+<onclick>Skin.SetString(GameFanart2, )</onclick>
+<onclick>Skin.SetString(GameName, )</onclick>
+<onclick>Skin.SetString(GameGenre, )</onclick>
+<onclick>Skin.SetString(GamePlatform, )</onclick>
+<onclick>Skin.SetString(GameReleased, )</onclick>
+<onclick>Skin.SetString(GameStudio, )</onclick>
+<onclick>Skin.SetString(GameDescription, )</onclick>
+								
+								
+								
+								
+								
+<onclick>Skin.SetString(GameFanart, demo\app\info\fanart\dyinglight.jpg)</onclick>
+<onclick>Skin.SetString(GamePoster, demo\app\info\poster\dyinglight.jpg)</onclick>
+<onclick>Skin.SetString(GameFanart2, demo\app\info\fanart\dyinglight2.jpg)</onclick>
+<onclick>Skin.SetString(GameName, Dying Light)</onclick>
+<onclick>Skin.SetString(GameGenre, Survival horror)</onclick>
+<onclick>Skin.SetString(GamePlatform, Xbox One)</onclick>
+<onclick>Skin.SetString(GameReleased, 2014)</onclick>
+<onclick>Skin.SetString(GameStudio, Warner Bros)</onclick>
+<onclick>Skin.SetString(GameDescription, Dying Light is an upcoming first-person survival horror video game developed by Techland to be released on the PlayStation 3 PlayStation 4 Xbox One Xbox 360 and Microsoft Windows.)</onclick>
+<onclick>ActivateWindow(1223)</onclick>
+														
+							</item>
+																																<item id="7">
+								<description>Games</description>
+								<label>Fifa 14</label>
+								<thumb>demo\app\gamestore\fifa.jpg</thumb>
+								
+								<onclick>Skin.SetString(GameFanart, )</onclick>
+<onclick>Skin.SetString(GamePoster, )</onclick>
+<onclick>Skin.SetString(GameFanart2, )</onclick>
+<onclick>Skin.SetString(GameName, )</onclick>
+<onclick>Skin.SetString(GameGenre, )</onclick>
+<onclick>Skin.SetString(GamePlatform, )</onclick>
+<onclick>Skin.SetString(GameReleased, )</onclick>
+<onclick>Skin.SetString(GameStudio, )</onclick>
+<onclick>Skin.SetString(GameDescription, )</onclick>
+								
+								
+								
+								
+							
+<onclick>Skin.SetString(GameFanart, demo\app\info\fanart\fifa14.jpg)</onclick>
+<onclick>Skin.SetString(GamePoster, demo\app\info\poster\fifa14.jpg)</onclick>
+<onclick>Skin.SetString(GameFanart2, demo\app\info\fanart\fifa142.jpg)</onclick>
+<onclick>Skin.SetString(GameName, Fifa 14)</onclick>
+<onclick>Skin.SetString(GameGenre, Sports)</onclick>
+<onclick>Skin.SetString(GamePlatform, Xbox One)</onclick>
+<onclick>Skin.SetString(GameReleased, 2013)</onclick>
+<onclick>Skin.SetString(GameStudio, Electronic Arts)</onclick>
+<onclick>Skin.SetString(GameDescription, FIFA 14 is a sports association football simulation video game developed by EA Canada and published by Electronics Arts. It was released in late September 2013 for the PlayStation 2 PlayStation 3 PlayStation Portable PlayStation Vita Xbox 360 Wii Nintendo 3DS video game consoles and Microsoft Windows. It was also released as freeware for iOS and Android on 23 September 2013 and as a launch title for the PlayStation 4 and Xbox One in November 2013.)</onclick>
+								<onclick>ActivateWindow(1223)</onclick>						
+							</item>
+																																<item id="8">
+								<description>Games</description>
+								<label>Forza</label>
+								<thumb>demo\app\gamestore\forza.jpg</thumb>
+								
+								<onclick>Skin.SetString(GameFanart, )</onclick>
+<onclick>Skin.SetString(GamePoster, )</onclick>
+<onclick>Skin.SetString(GameFanart2, )</onclick>
+<onclick>Skin.SetString(GameName, )</onclick>
+<onclick>Skin.SetString(GameGenre, )</onclick>
+<onclick>Skin.SetString(GamePlatform, )</onclick>
+<onclick>Skin.SetString(GameReleased, )</onclick>
+<onclick>Skin.SetString(GameStudio, )</onclick>
+<onclick>Skin.SetString(GameDescription, )</onclick>
+								
+								
+								
+								
+								
+<onclick>Skin.SetString(GameFanart, demo\app\info\fanart\forza.jpg)</onclick>
+<onclick>Skin.SetString(GamePoster, demo\app\info\poster\forza.jpg)</onclick>
+<onclick>Skin.SetString(GameFanart2, demo\app\info\fanart\forza2.jpg)</onclick>
+<onclick>Skin.SetString(GameName, Forza)</onclick>
+<onclick>Skin.SetString(GameGenre, Racing)</onclick>
+<onclick>Skin.SetString(GamePlatform, Xbox One)</onclick>
+<onclick>Skin.SetString(GameReleased, 2013)</onclick>
+<onclick>Skin.SetString(GameStudio, Microsoft Studios)</onclick>
+<onclick>Skin.SetString(GameDescription, Forza Motorsport 5 is a racing video game developed by Turn 10 Studios and published by Microsoft Studios for the Xbox One video game console. The game was released on November 22 2013 as launch title. The game was revealed on May 21 2013 during the Xbox One reveal event with a teaser trailer that showed an orange McLaren P1 racing against a silver McLaren F1. On August 15 2013 the Limited Edition of the game was announced and will include multiple car packs and a VIP membership for the game. It features Jeremy Clarkson James May and Richard Hammond from Top Gear for the game's commentary when choosing a new event championship or league. It is the fifth installment in the Forza Motorsport series.)</onclick>
+							<onclick>ActivateWindow(1223)</onclick>							
+							</item>
+																																<item id="9">
+								<description>Games</description>
+								<label>Call Of Duty</label>
+								<thumb>demo\app\gamestore\ghosts.jpg</thumb>
+								
+								<onclick>Skin.SetString(GameFanart, )</onclick>
+<onclick>Skin.SetString(GamePoster, )</onclick>
+<onclick>Skin.SetString(GameFanart2, )</onclick>
+<onclick>Skin.SetString(GameName, )</onclick>
+<onclick>Skin.SetString(GameGenre, )</onclick>
+<onclick>Skin.SetString(GamePlatform, )</onclick>
+<onclick>Skin.SetString(GameReleased, )</onclick>
+<onclick>Skin.SetString(GameStudio, )</onclick>
+<onclick>Skin.SetString(GameDescription, )</onclick>
+								
+								
+								
+								
+								
+<onclick>Skin.SetString(GameFanart, demo\app\info\fanart\ghosts.jpg)</onclick>
+<onclick>Skin.SetString(GamePoster, demo\app\info\poster\ghosts.jpg)</onclick>
+<onclick>Skin.SetString(GameFanart2, demo\app\info\fanart\ghosts2.jpg)</onclick>
+<onclick>Skin.SetString(GameName, Call of Duty : Ghosts)</onclick>
+<onclick>Skin.SetString(GameGenre, First-person shooter)</onclick>
+<onclick>Skin.SetString(GamePlatform, Xbox One)</onclick>
+<onclick>Skin.SetString(GameReleased, 2013)</onclick>
+<onclick>Skin.SetString(GameStudio, Activision)</onclick>
+<onclick>Skin.SetString(GameDescription, Call of Duty: Ghosts is a 2013 first-person shooter video game developed by Infinity Ward with assistance from Raven Software Neversoft and Certain Affinity and published by Activision. It is the tenth primary installment in the Call of Duty series and the sixth developed by Infinity Ward. The video game was released for Microsoft Windows PlayStation 3 Xbox 360 and Wii U on November 5 2013 with Treyarch handling the port for the Wii U. The game's release date on next-generation consoles PlayStation 4 and Xbox One is officially November 15 2013 and November 22 2013 respectively to coincide with the console release dates. However the game was released earlier for the PlayStation 4 from some retailers.)</onclick>
+							<onclick>ActivateWindow(1223)</onclick>							
+							</item>
+				
+				
+				
+				</content>
+
+		</control>
+												
+										
+										
+										
+										
+										
+										
+					<control type="label">
+							  <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="500" />
+                        <effect type="slide" start="60" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+                                    <posx>15</posx>
+                                                                
+								<posy>400</posy>
+                                                                <width min="20" max="250">auto</width>
+                                                                <height>20</height>
+                                                                <label>MAIS POPULAR</label>
+                                                                <font>Home-Tile-Header</font>
+                                                                <textcolor>Tile_Text</textcolor>
+                                                                <aligny>center</aligny>
+                                                              
+                                                        </control>
+						<control type="panel" id="11101">
+
+             	  <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="500" />
+                        <effect type="slide" start="60" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+                
+				 <posx>05</posx>
+                                                <posy>390</posy>
+                                                <width>1280</width>
+                                                <height>280</height>
+												<onleft>ActivateWindow(1157)</onleft>
+                                               <onleft>222</onleft>
+                                              <onup>1110</onup>
+				<viewtype label="Square">wrap</viewtype>
+				<orientation>horizontal</orientation>
+				<pagecontrol>64</pagecontrol>
+				<scrolltime tween="cubic" easing="out">500</scrolltime>
+				<preloaditems>4</preloaditems>
+		
+								
+				<itemlayout width="220" height="220">
+
+
+					
+					<control type="group">
+		
+						<posx>5</posx>
+						<posy>40</posy>
+						<width>210</width>
+						<height>210</height>
+						
+						<control type="image">
+						
+							<posx>5</posx>
+							<posy>0</posy>
+							<width>210</width>
+							<height>210</height>
+							<texture>colors/color_keyboard_dark.png</texture>
+							<aspectratio>scale</aspectratio>
+							
+						</control>
+					
+						<control type="image">
+						
+							<posx>5</posx>
+							<posy>0</posy>
+							<width>210</width>
+							<height>210</height>
+							<texture>colors\color_white.png</texture>
+							<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+							<aspectratio>scale</aspectratio>
+							
+						</control>
+					<control type="image">
+						
+							<posx>5</posx>
+							<posy>0</posy>
+							<width>210</width>
+							<height>210</height>
+							<texture>$INFO[ListItem.Thumb]</texture>
+					
+							<aspectratio>scale</aspectratio>
+							
+						</control>
+						
+			
+							
+					
+					
+					</control>
+					
+				</itemlayout>
+
+				<focusedlayout width="220" height="220">
+				
+
+				
+					<control type="group">
+						
+						<posx>5</posx>
+						<posy>40</posy>
+						<width>210</width>
+						<height>210</height>
+					
+				
+						
+						<control type="image">
+						
+							<posx>5</posx>
+							<posy>0</posy>
+							<width>210</width>
+							<height>210</height>
+							<texture>colors/color_keyboard_dark.png</texture>
+							<aspectratio>scale</aspectratio>
+							
+						</control>
+												<control type="image">
+						
+							<posx>3</posx>
+							<posy>-2</posy>
+							<width>214</width>
+							<height>214</height>
+							<texture>colors/color_white.png</texture>
+							<aspectratio>scale</aspectratio>
+							     <include>Common_Animation_tiledash</include>
+						</control>
+					
+						<control type="image">
+						
+							<posx>5</posx>
+							<posy>0</posy>
+							<width>210</width>
+							<height>210</height>
+							<texture>colors\color_white.png</texture>
+							<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+							<aspectratio>scale</aspectratio>
+							
+						</control>
+					
+					
+						<control type="image">
+						
+							<posx>5</posx>
+							<posy>0</posy>
+							<width>210</width>
+							<height>210</height>
+							<texture>$INFO[ListItem.Thumb]</texture>
+					
+							<aspectratio>scale</aspectratio>
+							
+						</control>
+						
+						<control type="image">
+						<include>Common_Animation_Pini</include>
+							<posx>5</posx>
+							<posy>150</posy>
+							<width>210</width>
+							<height>60</height>
+							<texture>colors/color_white.png</texture>
+							<colordiffuse>FanartDiffuse</colordiffuse>
+							
+						</control>
+							
+						<control type="label">
+							
+							<posx>15</posx>
+							<posy>168</posy>
+							<width>190</width>
+							<height>20</height>
+							<textcolor>Label_Normal</textcolor>
+							<font>Menu-Square-Header</font>
+							<aligny>top</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						
+						</control>
+						
+						<control type="label">
+							
+							<posx>15</posx>
+							<posy>178</posy>
+							<width>190</width>
+							<height>20</height>
+							<textcolor>Label_Normal</textcolor>
+							<font>Menu-Square-Detail</font>
+							<aligny>top</aligny>
+							<label></label>
+						
+						</control>
+
+					</control>
+					
+					<!--Back Side Info-->
+					<control type="group">
+					
+						<posx>0</posx>
+						<posy>40</posy>
+						<width>210</width>
+						<height>210</height>
+						
+						
+						
+						<control type="image">
+						
+							<include>Common_LiveTile_Rating</include>
+							<visible>false</visible>
+							
+						</control>
+						
+						<control type="textbox">
+							
+							<include>Common_LiveTile_Description</include>
+							<label>$VAR[Tile_Description]</label>
+							<visible>false</visible>
+				
+						</control>
+						
+					</control>
+					
+				</focusedlayout>
+			<content>
+				
+		<item id="1">
+								<description>Games</description>
+								<label>Halo</label>
+								<thumb>demo\app\gamestore\halo.jpg</thumb>
+		<onclick>Skin.SetString(GameFanart, )</onclick>
+<onclick>Skin.SetString(GamePoster, )</onclick>
+<onclick>Skin.SetString(GameFanart2, )</onclick>
+<onclick>Skin.SetString(GameName, )</onclick>
+<onclick>Skin.SetString(GameGenre, )</onclick>
+<onclick>Skin.SetString(GamePlatform, )</onclick>
+<onclick>Skin.SetString(GameReleased, )</onclick>
+<onclick>Skin.SetString(GameStudio, )</onclick>
+<onclick>Skin.SetString(GameDescription, )</onclick>
+										
+<onclick>Skin.SetString(GameFanart, demo\app\info\fanart\halo.jpg)</onclick>
+<onclick>Skin.SetString(GamePoster, demo\app\info\poster\halo.png)</onclick>
+<onclick>Skin.SetString(GameFanart2, demo\app\info\fanart\halo2.jpg)</onclick>
+<onclick>Skin.SetString(GameName, Halo : Spartan Assult)</onclick>
+<onclick>Skin.SetString(GameGenre, First-person shooter)</onclick>
+<onclick>Skin.SetString(GamePlatform, Xbox One)</onclick>
+<onclick>Skin.SetString(GameReleased, 2014)</onclick>
+<onclick>Skin.SetString(GameStudio, Microsoft Studios)</onclick>
+<onclick>Skin.SetString(GameDescription, Halo: Spartan Assault is a 2013 top-down third-person shooter video game developed by 343 Industries and Vanguard Entertainment. Part of the Halo media franchise it was first released on July 18 2013 for Microsoft Windows 8 and Windows Phone 8 platforms. An Xbox One version of the game released on December 24 2013 followed by an Xbox 360 version on January 31 2014. It was released on Steam on April 4th 2014.)</onclick>
+<onclick>ActivateWindow(1223)</onclick>			
+							</item>
+																								<item id="2">
+								<description>Games</description>
+								<label>Killer Instinct</label>
+								<thumb>demo\app\gamestore\killer.png</thumb>
+<onclick>Skin.SetString(GameFanart, )</onclick>
+<onclick>Skin.SetString(GamePoster, )</onclick>
+<onclick>Skin.SetString(GameFanart2, )</onclick>
+<onclick>Skin.SetString(GameName, )</onclick>
+<onclick>Skin.SetString(GameGenre, )</onclick>
+<onclick>Skin.SetString(GamePlatform, )</onclick>
+<onclick>Skin.SetString(GameReleased, )</onclick>
+<onclick>Skin.SetString(GameStudio, )</onclick>
+<onclick>Skin.SetString(GameDescription, )</onclick>
+										
+<onclick>Skin.SetString(GameFanart, demo\app\info\fanart\killer.png)</onclick>
+<onclick>Skin.SetString(GamePoster, demo\app\info\poster\killer.jpg)</onclick>
+<onclick>Skin.SetString(GameFanart2, demo\app\info\fanart\killer2.jpg)</onclick>
+<onclick>Skin.SetString(GameName, Killer Instinct)</onclick>
+<onclick>Skin.SetString(GameGenre, Fighting)</onclick>
+<onclick>Skin.SetString(GamePlatform, Xbox One)</onclick>
+<onclick>Skin.SetString(GameReleased, 2013)</onclick>
+<onclick>Skin.SetString(GameStudio, Microsoft Studios)</onclick>
+<onclick>Skin.SetString(GameDescription, Killer Instinct is a fighting game in the Killer Instinct series developed by Double Helix Games Iron Galaxy Studios and Rare under supervision of Ken Lobb. The game was announced during Microsoft's E3 2013 press event and was released exclusively as a launch game for the Xbox One on November 22 2013.)</onclick>
+<onclick>ActivateWindow(1223)</onclick>			
+							</item>
+																														<item id="3">
+								<description>Games</description>
+								<label>Kinect Sports</label>
+								<thumb>demo\app\gamestore\kinect.jpg</thumb>
+<onclick>Skin.SetString(GameFanart, )</onclick>
+<onclick>Skin.SetString(GamePoster, )</onclick>
+<onclick>Skin.SetString(GameFanart2, )</onclick>
+<onclick>Skin.SetString(GameName, )</onclick>
+<onclick>Skin.SetString(GameGenre, )</onclick>
+<onclick>Skin.SetString(GamePlatform, )</onclick>
+<onclick>Skin.SetString(GameReleased, )</onclick>
+<onclick>Skin.SetString(GameStudio, )</onclick>
+<onclick>Skin.SetString(GameDescription, )</onclick>
+										
+<onclick>Skin.SetString(GameFanart, demo\app\info\fanart\kinect.jpg)</onclick>
+<onclick>Skin.SetString(GamePoster, demo\app\info\poster\kinect.jpg)</onclick>
+<onclick>Skin.SetString(GameFanart2, demo\app\info\fanart\kinect2.jpg)</onclick>
+<onclick>Skin.SetString(GameName, Kinect Sports)</onclick>
+<onclick>Skin.SetString(GameGenre, Sports)</onclick>
+<onclick>Skin.SetString(GamePlatform, Xbox One)</onclick>
+<onclick>Skin.SetString(GameReleased, 2014)</onclick>
+<onclick>Skin.SetString(GameStudio, Microsoft Studios)</onclick>
+<onclick>Skin.SetString(GameDescription, Kinect Sports Rivals is a sports video game for the Xbox One. It is part of the Kinect Sports series. The game was announced during Microsoft's E3 2013 press event and was released on 8 April 2014.)</onclick>
+<onclick>ActivateWindow(1223)</onclick>												
+							</item>
+																																<item id="4">
+								<description>Games</description>
+								<label>Quantum Break</label>
+								<thumb>demo\app\gamestore\quantum.jpg</thumb>
+								<onclick>Skin.SetString(GameFanart, )</onclick>
+<onclick>Skin.SetString(GamePoster, )</onclick>
+<onclick>Skin.SetString(GameFanart2, )</onclick>
+<onclick>Skin.SetString(GameName, )</onclick>
+<onclick>Skin.SetString(GameGenre, )</onclick>
+<onclick>Skin.SetString(GamePlatform, )</onclick>
+<onclick>Skin.SetString(GameReleased, )</onclick>
+<onclick>Skin.SetString(GameStudio, )</onclick>
+<onclick>Skin.SetString(GameDescription, )</onclick>
+										
+<onclick>Skin.SetString(GameFanart, demo\app\info\fanart\quantum.jpg)</onclick>
+<onclick>Skin.SetString(GamePoster, demo\app\info\poster\quantum.jpg)</onclick>
+<onclick>Skin.SetString(GameFanart2, demo\app\info\fanart\quantum2.jpg)</onclick>
+<onclick>Skin.SetString(GameName, Quantum Break)</onclick>
+<onclick>Skin.SetString(GameGenre, Third-person shooter)</onclick>
+<onclick>Skin.SetString(GamePlatform, Xbox One)</onclick>
+<onclick>Skin.SetString(GameReleased, 2014)</onclick>
+<onclick>Skin.SetString(GameStudio, Microsoft Studios)</onclick>
+<onclick>Skin.SetString(GameDescription, Quantum Break is an upcoming third-person shooter video game to be released on the Xbox One. Developed by Finnish game developer Remedy Entertainment and published by Microsoft Studios the game will feature live-action videos blended with regular gameplay. The game was revealed with a teaser trailer during the Xbox One reveal event on 21 May 2013. A Quantum Break television series is also in production with Remedy stating that how you play the game impacts the show and the show informs how you play the game.)</onclick>
+<onclick>ActivateWindow(1223)</onclick>							
+							</item>
+																																<item id="5">
+								<description>Games</description>
+								<label>Ryse</label>
+								<thumb>demo\app\gamestore\ryse.jpg</thumb>
+								<onclick>Skin.SetString(GamePoster, )</onclick>
+<onclick>Skin.SetString(GameFanart2, )</onclick>
+<onclick>Skin.SetString(GameName, )</onclick>
+<onclick>Skin.SetString(GameGenre, )</onclick>
+<onclick>Skin.SetString(GamePlatform, )</onclick>
+<onclick>Skin.SetString(GameReleased, )</onclick>
+<onclick>Skin.SetString(GameStudio, )</onclick>
+<onclick>Skin.SetString(GameDescription, )</onclick>
+										
+<onclick>Skin.SetString(GameFanart, demo\app\info\fanart\ryse.jpg)</onclick>
+<onclick>Skin.SetString(GamePoster, demo\app\info\poster\ryse.jpg)</onclick>
+<onclick>Skin.SetString(GameFanart2, demo\app\info\fanart\ryse2.jpg)</onclick>
+<onclick>Skin.SetString(GameName, Ryse : Son Of Rome)</onclick>
+<onclick>Skin.SetString(GameGenre, Hack and slash)</onclick>
+<onclick>Skin.SetString(GamePlatform, Xbox One)</onclick>
+<onclick>Skin.SetString(GameReleased, 2014)</onclick>
+<onclick>Skin.SetString(GameStudio, Microsoft Studios)</onclick>
+<onclick>Skin.SetString(GameDescription, Ryse: Son of Rome is a third-person action-adventure video game developed by Crytek. It was published by Microsoft Studios on November 22 2013 as an Xbox One-exclusive launch title.)</onclick>
+<onclick>ActivateWindow(1223)</onclick>						
+							</item>
+																																<item id="6">
+								<description>Games</description>
+								<label>Titanfall</label>
+								<thumb>demo\app\gamestore\titanfall.jpg</thumb>
+																<onclick>Skin.SetString(GamePoster, )</onclick>
+<onclick>Skin.SetString(GameFanart2, )</onclick>
+<onclick>Skin.SetString(GameName, )</onclick>
+<onclick>Skin.SetString(GameGenre, )</onclick>
+<onclick>Skin.SetString(GamePlatform, )</onclick>
+<onclick>Skin.SetString(GameReleased, )</onclick>
+<onclick>Skin.SetString(GameStudio, )</onclick>
+<onclick>Skin.SetString(GameDescription, )</onclick>
+										
+<onclick>Skin.SetString(GameFanart, demo\app\info\fanart\titanfall.jpg)</onclick>
+<onclick>Skin.SetString(GamePoster, demo\app\info\poster\titanfall.jpg)</onclick>
+<onclick>Skin.SetString(GameFanart2, demo\app\info\fanart\titanfall2.jpg)</onclick>
+<onclick>Skin.SetString(GameName, Titanfall)</onclick>
+<onclick>Skin.SetString(GameGenre, First-person shooter)</onclick>
+<onclick>Skin.SetString(GamePlatform, Xbox One)</onclick>
+<onclick>Skin.SetString(GameReleased, 2014)</onclick>
+<onclick>Skin.SetString(GameStudio, Electronic Arts)</onclick>
+<onclick>Skin.SetString(GameDescription, Titanfall is a 2014 first-person shooter online multiplayer video game developed by Respawn Entertainment and published by Electronic Arts exclusively for Microsoft Windows Xbox 360 and Xbox One. Titanfall was highly anticipated for its pedigree as the debut game from Respawn a company composed of those responsible for the successful Call of Duty series. The game received abundant publicity from video game journalists following its reveal. The game was released on March 11 2014.)</onclick>
+<onclick>ActivateWindow(1223)</onclick>			
+							</item>
+																																<item id="7">
+								<description>Games</description>
+								<label>Tomb Raider</label>
+								<thumb>demo\app\gamestore\tombraider.jpg</thumb>
+									<onclick>Skin.SetString(GamePoster, )</onclick>
+<onclick>Skin.SetString(GameFanart2, )</onclick>
+<onclick>Skin.SetString(GameName, )</onclick>
+<onclick>Skin.SetString(GameGenre, )</onclick>
+<onclick>Skin.SetString(GamePlatform, )</onclick>
+<onclick>Skin.SetString(GameReleased, )</onclick>
+<onclick>Skin.SetString(GameStudio, )</onclick>
+<onclick>Skin.SetString(GameDescription, )</onclick>
+										
+<onclick>Skin.SetString(GameFanart, demo\app\info\fanart\tomb.jpg)</onclick>
+<onclick>Skin.SetString(GamePoster, demo\app\info\poster\tomb.jpg)</onclick>
+<onclick>Skin.SetString(GameFanart2, demo\app\info\fanart\tomb2.jpg)</onclick>
+<onclick>Skin.SetString(GameName, Tomb Raider)</onclick>
+<onclick>Skin.SetString(GameGenre, Action-adventure)</onclick>
+<onclick>Skin.SetString(GamePlatform, Xbox One)</onclick>
+<onclick>Skin.SetString(GameReleased, 2013)</onclick>
+<onclick>Skin.SetString(GameStudio, Square Enix)</onclick>
+<onclick>Skin.SetString(GameDescription, Tomb Raider is a 2013 action-adventure video game published by Square Enix. Tomb Raider is the fifth title developed by Crystal Dynamics in the Tomb Raider franchise. As the first entry in a new Tomb Raider continuity the game is a reboot that emphasises the reconstructed origins of the culturally influential lead character Lara Croft. Tomb Raider was released on 5 March 2013 for Microsoft Windows PlayStation 3 and Xbox 360 and on 23 January 2014 for Mac OS X.)</onclick>
+<onclick>ActivateWindow(1223)</onclick>					
+							</item>
+																																<item id="8">
+								<description>Games</description>
+								<label>Watch Dogs</label>
+								<thumb>demo\app\gamestore\watchdogs.jpg</thumb>
+								<onclick>Skin.SetString(GamePoster, )</onclick>
+<onclick>Skin.SetString(GameFanart2, )</onclick>
+<onclick>Skin.SetString(GameName, )</onclick>
+<onclick>Skin.SetString(GameGenre, )</onclick>
+<onclick>Skin.SetString(GamePlatform, )</onclick>
+<onclick>Skin.SetString(GameReleased, )</onclick>
+<onclick>Skin.SetString(GameStudio, )</onclick>
+<onclick>Skin.SetString(GameDescription, )</onclick>
+										
+<onclick>Skin.SetString(GameFanart, demo\app\info\fanart\dogs.jpg)</onclick>
+<onclick>Skin.SetString(GamePoster, demo\app\info\poster\dogs.jpg)</onclick>
+<onclick>Skin.SetString(GameFanart2, demo\app\info\fanart\dogs2.jpg)</onclick>
+<onclick>Skin.SetString(GameName, Watch Dogs)</onclick>
+<onclick>Skin.SetString(GameGenre, Action-adventure)</onclick>
+<onclick>Skin.SetString(GamePlatform, Xbox One)</onclick>
+<onclick>Skin.SetString(GameReleased, 2014)</onclick>
+<onclick>Skin.SetString(GameStudio, Ubisoft)</onclick>
+<onclick>Skin.SetString(GameDescription, Watch Dogs is an upcoming open world action-adventure video game developed by Ubisoft Montreal and published by Ubisoft. It is due for release worldwide on May 27 2014 for Microsoft Windows PlayStation 3 PlayStation 4 Xbox 360 and Xbox One consoles. The Wii U version of the game has been put on hold while the other versions are being worked on and is planned to release in the fourth quarter of 2014.)</onclick>
+<onclick>ActivateWindow(1223)</onclick>								
+							</item>
+																																<item id="9">
+								<description>Games</description>
+								<label>Zoo Tycoon</label>
+								<thumb>demo\app\gamestore\zoo.jpg</thumb>
+								<onclick>Skin.SetString(GamePoster, )</onclick>
+<onclick>Skin.SetString(GameFanart2, )</onclick>
+<onclick>Skin.SetString(GameName, )</onclick>
+<onclick>Skin.SetString(GameGenre, )</onclick>
+<onclick>Skin.SetString(GamePlatform, )</onclick>
+<onclick>Skin.SetString(GameReleased, )</onclick>
+<onclick>Skin.SetString(GameStudio, )</onclick>
+<onclick>Skin.SetString(GameDescription, )</onclick>
+										
+<onclick>Skin.SetString(GameFanart, demo\app\info\fanart\zoo.jpg)</onclick>
+<onclick>Skin.SetString(GamePoster, demo\app\info\poster\zoo.jpg)</onclick>
+<onclick>Skin.SetString(GameFanart2, demo\app\info\fanart\zoo2.jpg)</onclick>
+<onclick>Skin.SetString(GameName, Zoo Tycoon)</onclick>
+<onclick>Skin.SetString(GameGenre, Business simulation)</onclick>
+<onclick>Skin.SetString(GamePlatform, Xbox One)</onclick>
+<onclick>Skin.SetString(GameReleased, 2013)</onclick>
+<onclick>Skin.SetString(GameStudio, Microsoft Studios)</onclick>
+<onclick>Skin.SetString(GameDescription, Zoo Tycoon is a business simulation video game developed by Frontier Developments and published by Microsoft Studios. The game was released on 22 November 2013 for Xbox One and Xbox 360.)</onclick>
+<onclick>ActivateWindow(1223)</onclick>								
+							</item>
+						
+						
+												
+				
+				</content>
+
+		</control>
+										</control>							
+										
+										
+										
+		
+			
+			<!--Scrollbar-->
+					
+								
+		</control>
+			</control>
+			<control type="image">
+				<visible>!Skin.HasSetting(disableprofilepic)</visible>
+																																															<include condition="Skin.HasSetting(on)">Common_Animation_dashboard_pic</include>
+														<include condition="!Skin.HasSetting(on)">Common_Animation_Windows8</include>	
+				<posx>77</posx>
+				<posy>22</posy>
+				<width>49</width>
+				<height>49</height>
+
+								<texture>colors\color_white.png</texture>
+			<visible>Control.HasFocus(91919)</visible>
+			</control>
+
+<control type="image">
+				<visible>!Skin.HasSetting(disableprofilepic)</visible>
+																																																	<include condition="Skin.HasSetting(on)">Common_Animation_dashboard_pic</include>
+														<include condition="!Skin.HasSetting(on)">Common_Animation_Windows8</include>	
+				<posx>79</posx>
+				<posy>24</posy>
+				<width>45</width>
+				<height>45</height>
+
+								<texture>colors\color_white.png</texture>
+			<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+			</control>
+		<control type="image">
+				<visible>!Skin.HasSetting(disableprofilepic)</visible>
+																																																			<include condition="Skin.HasSetting(on)">Common_Animation_dashboard_pic</include>
+														<include condition="!Skin.HasSetting(on)">Common_Animation_Windows8</include>	
+				<posx>82</posx>
+				<posy>29</posy>
+				<width>40</width>
+				<height>34</height>
+
+								<texture>demo\prof.png</texture>
+			
+			</control>
+			
+			<control type="image">
+				<visible>!Skin.HasSetting(gamertag) + !Skin.HasSetting(disableprofilepic) + !Skin.HasSetting(gpic) + Skin.HasSetting(Logger)</visible>
+																																						<include condition="Skin.HasSetting(on)">Common_Animation_dashboard_pic</include>
+														<include condition="!Skin.HasSetting(on)">Common_Animation_Windows8</include>	
+				<posx>126</posx>
+				<posy>24</posy>
+				<width>46</width>
+				<height>45</height>
+
+								<texture background="true" fallback="overlays/defa.jpg">$INFO[System.ProfileThumb]</texture>
+				
+			</control>
+						<control type="image">
+				<visible>!Skin.HasSetting(gamertag) + !Skin.HasSetting(disableprofilepic) + Skin.HasSetting(gpic) + Skin.HasSetting(Logger)</visible>
+																																				<include condition="Skin.HasSetting(on)">Common_Animation_dashboard_pic</include>
+														<include condition="!Skin.HasSetting(on)">Common_Animation_Windows8</include>	
+				<posx>126</posx>
+				<posy>24</posy>
+				<width>46</width>
+				<height>45</height>
+
+								<texture background="true" fallback="overlays/defa.jpg">$INFO[Skin.String(gamerpic)]</texture>
+				
+			</control>
+			
+			
+			
+				<control type="image">
+				<visible>!Skin.HasSetting(gamertag) + !Skin.HasSetting(disableprofilepic) + !Skin.HasSetting(gpic) + !Skin.HasSetting(Logger)</visible>
+																																					<include condition="Skin.HasSetting(on)">Common_Animation_dashboard_pic</include>
+														<include condition="!Skin.HasSetting(on)">Common_Animation_Windows8</include>	
+				<posx>126</posx>
+				<posy>24</posy>
+				<width>46</width>
+				<height>45</height>
+
+								<texture background="true" fallback="overlays/default95.png">overlays/defa.jpg</texture>
+				
+			</control>
+						<control type="image">
+				<visible>!Skin.HasSetting(gamertag) + !Skin.HasSetting(disableprofilepic) + Skin.HasSetting(gpic) + !Skin.HasSetting(Logger)</visible>
+																																		<include condition="Skin.HasSetting(on)">Common_Animation_dashboard_pic</include>
+														<include condition="!Skin.HasSetting(on)">Common_Animation_Windows8</include>	
+				<posx>126</posx>
+				<posy>24</posy>
+				<width>46</width>
+				<height>45</height>
+
+								<texture background="true" fallback="overlays/default95.png">overlays/defa.jpg</texture>
+				
+			</control>
+			
+						
+					
+			
+			
+			
+
+			
+			
+			
+			
+						<control type="image">
+							<visible>Skin.HasSetting(gamertag) + !Skin.HasSetting(gpic) + !Skin.HasSetting(disableprofilepic) + Skin.HasSetting(Logger)</visible>
+																																							<include condition="Skin.HasSetting(on)">Common_Animation_dashboard_pic</include>
+														<include condition="!Skin.HasSetting(on)">Common_Animation_Windows8</include>	
+				<posx>126</posx>
+				<posy>24</posy>
+				<width>46</width>
+				<height>45</height>
+
+								<texture background="true" fallback="overlays/defa.jpg">$INFO[Skin.String(XBoxLive.Gamer.Picture)]</texture>
+				
+			</control>
+							<control type="image">
+							<visible>Skin.HasSetting(gamertag) + !Skin.HasSetting(gpic) + !Skin.HasSetting(disableprofilepic) + !Skin.HasSetting(Logger)</visible>
+																																							<include condition="Skin.HasSetting(on)">Common_Animation_dashboard_pic</include>
+														<include condition="!Skin.HasSetting(on)">Common_Animation_Windows8</include>	
+				<posx>126</posx>
+				<posy>24</posy>
+				<width>46</width>
+				<height>45</height>
+
+								<texture background="true" fallback="overlays/defa.jpg">overlays/defa.jpg</texture>
+				
+			</control>
+			
+			
+						<control type="image">
+							
+																																								<include condition="Skin.HasSetting(on)">Common_Animation_dashboard_pic</include>
+														<include condition="!Skin.HasSetting(on)">Common_Animation_Windows8</include>	
+				<posx>126</posx>
+				<posy>65</posy>
+				<width>46</width>
+				<height>4</height>
+
+								<texture>colors/color_white.png</texture>
+								<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+				<visible>!Skin.HasSetting(disableprofilepic)</visible>
+			</control>
+			
+				<control type="label">
+				 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="150" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+			
+					<posx>77</posx>
+					<posy>70</posy>
+					<width>550</width>
+					<height>48</height>
+					<label>Jogos</label>
+					<font>Charms-Date4</font>
+					<textcolor>Label_Normal</textcolor>
+					<aligny>center</aligny>
+						<alignx>center</alignx>
+				</control>
+				
+<include>Xbox_Logo</include>
+	<include>Snapped_Content</include>		
+	</controls>	
+		
+</window>

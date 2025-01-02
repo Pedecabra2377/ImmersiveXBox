@@ -1,0 +1,1715 @@
+<!-- Foundation -->
+<window id="999">
+
+	<defaultcontrol always="true">54</defaultcontrol>
+	
+	<zorder>2</zorder>
+
+			<onload>Skin.SetString(snapwindow, 999)</onload>
+<onload condition="!Skin.HasSetting(snapie)">Skin.ToggleSetting(snapie)</onload>
+<onload condition="Skin.HasSetting(gaming)">Skin.ToggleSetting(gaming)</onload>
+<onload>Skin.SetString(snap, demo/sna/store.jpg,0)</onload>
+<onload>Skin.SetString(sn,Seus jogos & apps)</onload>
+
+	<controls>
+
+<include>Common_Animation_XBO2</include>
+	
+
+
+			
+						<control type="image">
+			<include>Common_Animation_XBO2</include>
+				<posy>0</posy>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+				<texture background="true">demo\librarysection\bg.jpg</texture>
+
+
+			</control>
+			<control type="image">
+			<include>Common_Animation_XBO2</include>
+				<posy>0</posy>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+				<texture background="true">demo\librarysection\1.jpg</texture>
+<visible>Control.HasFocus(1)</visible>
+
+			</control>
+			
+			
+			
+			
+		
+			
+			
+		
+			
+			
+			
+			
+			
+		
+  
+ <control type="panel" id="91919">
+<posx>150</posx>
+										<posy>117</posy>
+
+						
+						<include>Common_AltHome_Panel3</include>
+
+					
+						
+				
+						<ondown>54</ondown>
+						<ondown condition="Container(20).HasFocus(1)">Control.Move(20,1)</ondown>
+<ondown condition="Container(20).HasFocus(3)">Control.Move(20,-1)</ondown>
+						<ondown></ondown>
+						<pagecontrol>7017</pagecontrol>
+						
+						<content>
+						
+
+							
+																					<item id="1">
+								<description>Games</description>
+								<label>Games</label>
+								<thumb>SHORT\ICO\Games.png</thumb>
+								<onclick>ActivateWindow(29)</onclick>
+							<visible>!Skin.HasSetting(PowerMenu)</visible>
+														
+							</item>
+							
+							
+																				<item id="1">
+								<description>Games</description>
+								<label>Games</label>
+								<thumb>SHORT\ICO\Games.png</thumb>
+								<onclick>Control.SetFocus(10001)</onclick>
+							<visible>Skin.HasSetting(PowerMenu)</visible>
+														
+							</item>
+							
+
+
+								</content>
+
+					</control>
+					
+					
+					
+					
+					
+					
+					
+					
+					  <control type="panel" id="1">
+<posx>150</posx>
+										<posy>117</posy>
+
+						
+						<include>Common_AltHome_Panel3</include>
+
+					
+				<onup>91919</onup>		
+				<onright>54</onright>
+					
+						<ondown>2</ondown>
+						<pagecontrol>7017</pagecontrol>
+						
+						<content>
+						
+
+							
+																					<item id="1">
+								<description>Games</description>
+								<label>Games</label>
+								<thumb>SHORT\ICO\Games.png</thumb>
+								<onclick></onclick>
+							
+														
+							</item>
+							
+
+
+								</content>
+
+					</control>
+					
+					<control type="panel" id="2">
+<posx>150</posx>
+										<posy>117</posy>
+
+						
+						<include>Common_AltHome_Panel3</include>
+
+					
+						
+				
+					
+						<onup>1</onup>
+						<pagecontrol>7017</pagecontrol>
+						
+						<content>
+						
+
+							
+																					<item id="1">
+								<description>Games</description>
+								<label>Games</label>
+								<thumb>SHORT\ICO\Games.png</thumb>
+								<onclick></onclick>
+							
+														
+							</item>
+							
+
+
+								</content>
+
+					</control>
+					<control type="list" id="10001">
+						
+			<posx>79.5</posx>
+			<posy>70</posy>
+			<width>120</width>
+			<height>160</height>
+
+			<onleft>91919</onleft>
+			<onright>91919</onright>
+			<viewtype label="List">list</viewtype>
+			<scrolltime tween="Cubic " easing="inout">200</scrolltime>
+			<preloaditems>2</preloaditems>
+			
+			<visible allowhiddenfocus="true">Control.HasFocus(10001) + Skin.HasSetting(PowerMenu)</visible>
+			
+			<animation effect="fade" start="0" end="100" time="200" reversible="true">Visible</animation>
+			
+			<itemlayout width="120" height="40">
+
+				<control type="image">
+							
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>120</width>
+					<height>40</height>
+					<texture>colors/color_white.png</texture>
+					
+				</control>
+				
+				<control type="label">
+				
+					<posx>16</posx>
+					<posy>0</posy>
+					<width min="20" max="80">auto</width>
+					<height>40</height>
+					<label>$INFO[ListItem.Label]</label>
+					<font>Menu-List-Small</font>
+					<textcolor>Label_Dark</textcolor>
+					<aligny>center</aligny>
+					<scrollspeed>0</scrollspeed>
+					
+				</control>
+					
+			</itemlayout>
+
+			<focusedlayout width="120" height="40">
+					
+				<control type="image">
+				
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>120</width>
+					<height>40</height>
+					<texture>colors/color_white.png</texture>
+					<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+				
+				</control>
+				
+				<control type="label">
+					
+					<posx>16</posx>
+					<posy>0</posy>
+					<width min="20" max="80">auto</width>
+					<height>40</height>
+					<label>$INFO[ListItem.Label]</label>
+					<font>Menu-List-Small</font>
+					<textcolor>Label_Normal</textcolor>
+					<aligny>center</aligny>
+					<scrollspeed>0</scrollspeed>
+					
+				</control>
+					
+			</focusedlayout>
+			
+			<content>
+			
+					<!--Exit Button-->
+				<item>
+					<label>$LOCALIZE[13012]</label>
+							<onclick>XBMC.Quit</onclick>  	
+				<visible>!Skin.HasSetting(PythonLogout)</visible>
+				</item>
+				<item>
+					<label>$LOCALIZE[13012]</label>
+						<onclick>Notification(     ,Até logo $INFO[System.ProfileName],00:20,)</onclick>
+<onclick condition="System.Platform.Windows">AlarmClock(exit,RunScript(special://skin/system/Logout.py),00:3,silent,)</onclick>
+<onclick condition="System.Platform.Linux">AlarmClock(exit,RunScript(special://skin/system/LogoutLinux.py),00:3,silent,)</onclick>
+<onclick condition="System.Platform.Linux.RaspberryPi">AlarmClock(exit,RunScript(special://skin/system/LogoutRaspberry.py),00:3,silent,)</onclick>						
+	<onclick condition="System.Platform.Darwin">AlarmClock(exit,RunScript(special://skin/system/LogoutDarwin.py),00:3,silent,)</onclick>		
+	<onclick condition="System.Platform.ATV2">AlarmClock(exit,RunScript(special://skin/system/LogoutATV.py),00:3,silent,)</onclick>		
+
+				<visible>Skin.HasSetting(PythonLogout)</visible>
+				</item>
+				
+			
+			
+				<!--ShutDown Button-->
+				<item>
+					<label>$LOCALIZE[13011]</label>
+			
+					<onclick>ActivateWindow(52)</onclick>
+				</item>
+				
+				<!--Suspend Button-->
+				<item>
+					<label>$LOCALIZE[13005]</label>
+					<onclick>Control.SetFocus(52)</onclick>
+					<onclick>Notification(     ,Até logo $INFO[System.ProfileName],00:20,)</onclick>
+						<onclick>AlarmClock(suspend,XBMC.Suspend(),00:3,silent,)</onclick>
+				</item>
+			
+				<!--Reboot Button-->
+				<item>
+					<label>$LOCALIZE[13013]</label>
+						<onclick>Control.SetFocus(52)</onclick>
+					<onclick>Notification(     ,Até logo $INFO[System.ProfileName],00:20,)</onclick>
+						<onclick>AlarmClock(reset,XBMC.Reset(),00:3,silent,)</onclick>
+				</item>
+				
+			</content>	
+				
+		</control>		
+					<control type="group">
+		 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="60" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+			<posx>280</posx>
+			<posy>120</posy>
+		
+			
+			<include>Common_Animation_XBO2</include>
+			
+		
+			<control type="label">
+					<posx>10</posx>
+				<label>Seus jogos & apps</label>
+				<include>Common_Section_Label</include>
+				
+			</control>
+			
+			<control type="panel" id="54">
+
+                   
+                
+				<posx>0</posx>
+				<posy>30</posy>
+				<width>1000</width>
+				<height>485</height>
+				<onup>91919</onup>
+				<ondown>1</ondown>
+				<onleft>1</onleft>
+				<onright>54</onright>
+				<viewtype label="Square">wrap</viewtype>
+				<orientation>horizontal</orientation>
+				<pagecontrol>64</pagecontrol>
+				<scrolltime tween="cubic" easing="out">500</scrolltime>
+				<preloaditems>4</preloaditems>
+				
+								
+				<itemlayout width="220" height="220">
+
+
+					
+					<control type="group">
+		
+						<posx>5</posx>
+						<posy>40</posy>
+						<width>210</width>
+						<height>210</height>
+						
+						<control type="image">
+						
+							<posx>5</posx>
+							<posy>0</posy>
+							<width>210</width>
+							<height>210</height>
+							<texture>colors/color_keyboard_dark.png</texture>
+							<aspectratio>scale</aspectratio>
+							
+						</control>
+					
+						<control type="image">
+						
+							<posx>5</posx>
+							<posy>0</posy>
+							<width>210</width>
+							<height>210</height>
+							<texture>colors\color_white.png</texture>
+							<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+							<aspectratio>scale</aspectratio>
+							
+						</control>
+						<control type="image">
+						
+							<posx>70</posx>
+							<posy>60</posy>
+							<width>70</width>
+							<height>70</height>
+							<texture background="true" fallback="colors/color_keyboard_dark.png">$VAR[Square_Image]</texture>
+							<aspectratio>scale</aspectratio>
+							
+						</control>
+						<control type="image">
+						
+							<posx>5</posx>
+							<posy>0</posy>
+							<width>210</width>
+							<height>210</height>
+							<texture>$INFO[ListItem.Label2]</texture>
+					
+							<aspectratio>scale</aspectratio>
+							
+						</control>
+						
+			
+							
+						<control type="label">
+							
+							<posx>15</posx>
+							<posy>168</posy>
+							<width>190</width>
+							<height>20</height>
+							<textcolor>Label_Normal</textcolor>
+							<font>Menu-Square-Header</font>
+							<aligny>top</aligny>
+							<label>$INFO[Listitem.Label]</label>
+						
+						</control>
+						
+						<control type="label">
+							
+							<posx>15</posx>
+							<posy>178</posy>
+							<width>190</width>
+							<height>20</height>
+							<textcolor>Label_Normal</textcolor>
+							<font>Menu-Square-Detail</font>
+							<aligny>top</aligny>
+							<label></label>
+						
+						</control>
+					
+					</control>
+					
+				</itemlayout>
+
+				<focusedlayout width="220" height="220">
+				
+
+				
+					<control type="group">
+						
+						<posx>5</posx>
+						<posy>40</posy>
+						<width>210</width>
+						<height>210</height>
+					
+				
+						
+						<control type="image">
+						
+							<posx>5</posx>
+							<posy>0</posy>
+							<width>210</width>
+							<height>210</height>
+							<texture>colors/color_keyboard_dark.png</texture>
+							<aspectratio>scale</aspectratio>
+							
+						</control>
+												<control type="image">
+						
+							<posx>3</posx>
+							<posy>-2</posy>
+							<width>214</width>
+							<height>214</height>
+							<texture>colors/color_white.png</texture>
+							<aspectratio>scale</aspectratio>
+							     <include>Common_Animation_tiledash</include>
+						</control>
+					
+						<control type="image">
+						
+							<posx>5</posx>
+							<posy>0</posy>
+							<width>210</width>
+							<height>210</height>
+							<texture>colors\color_white.png</texture>
+							<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+							<aspectratio>scale</aspectratio>
+							
+						</control>
+						<control type="image">
+						
+							<posx>70</posx>
+							<posy>60</posy>
+							<width>70</width>
+							<height>70</height>
+							<texture background="true" fallback="colors/color_keyboard_dark.png">$VAR[Square_Image]</texture>
+							<aspectratio>scale</aspectratio>
+							
+						</control>
+						<control type="image">
+						
+							<posx>5</posx>
+							<posy>0</posy>
+							<width>210</width>
+							<height>210</height>
+							<texture>$INFO[ListItem.Label2]</texture>
+						
+							<aspectratio>scale</aspectratio>
+							
+						</control>
+						
+						<control type="image">
+						<include>Common_Animation_Pini</include>
+							<posx>5</posx>
+							<posy>150</posy>
+							<width>210</width>
+							<height>60</height>
+							<texture>colors/color_white.png</texture>
+							<colordiffuse>FanartDiffuse</colordiffuse>
+							
+						</control>
+							
+						<control type="label">
+							
+							<posx>15</posx>
+							<posy>168</posy>
+							<width>190</width>
+							<height>20</height>
+							<textcolor>Label_Normal</textcolor>
+							<font>Menu-Square-Header</font>
+							<aligny>top</aligny>
+							<label>$VAR[Square_Header]</label>
+						
+						</control>
+						
+						<control type="label">
+							
+							<posx>15</posx>
+							<posy>178</posy>
+							<width>190</width>
+							<height>20</height>
+							<textcolor>Label_Normal</textcolor>
+							<font>Menu-Square-Detail</font>
+							<aligny>top</aligny>
+							<label></label>
+						
+						</control>
+
+					</control>
+					
+					<!--Back Side Info-->
+					<control type="group">
+					
+						<posx>0</posx>
+						<posy>40</posy>
+						<width>210</width>
+						<height>210</height>
+						
+						
+						
+						<control type="image">
+						
+							<include>Common_LiveTile_Rating</include>
+							<visible>false</visible>
+							
+						</control>
+						
+						<control type="textbox">
+							
+							<include>Common_LiveTile_Description</include>
+							<label>$VAR[Tile_Description]</label>
+							<visible>false</visible>
+				
+						</control>
+						
+					</control>
+					
+				</focusedlayout>
+<content>
+		
+					<item id="1">
+							<onclick condition="!Skin.HasSetting(Logger)">ReplaceWindow(1213)</onclick>
+						<onclick condition="Skin.HasSetting(Logger)">ReplaceWindow(favourites)</onclick>
+						<onclick condition="Skin.HasSetting(Logger)">Dialog.Close(999)</onclick>
+						<label>Fixado</label>
+						<thumb>home/pin.png</thumb>
+					</item>
+										<item id="2">
+												
+						<onclick>ReplaceWindow(MusicLibrary,addons://sources/audio/,return)</onclick>
+						<onclick>Dialog.Close(999)</onclick>
+						<label>My Music Apps</label>
+						<thumb>home/home_music.png</thumb>
+<visible>false</visible>
+					</item>
+										<item id="3">
+												
+						<onclick>ReplaceWindow(Videos,addons://sources/video/,return)</onclick> 
+						<onclick>Dialog.Close(999)</onclick>
+						<label>My Video Apps</label>
+						<thumb>home/home_movie.png</thumb>
+<visible>false</visible>
+					</item>
+										<item id="4">
+											
+						<onclick>ReplaceWindow(10001,"plugin://plugin.program.advanced.launcher/?default",return)</onclick> 	
+						<onclick>Dialog.Close(999)</onclick>
+						<label>Meus jogos</label>
+						<thumb>home/home_games.png</thumb>
+					</item>
+										<item id="5">
+											
+						<onclick>ReplaceWindow(10001,"addons://sources/executable/")</onclick>
+						<onclick>Dialog.Close(999)</onclick>
+						<label>Meus Apps</label>
+						<thumb>home/apps.png</thumb>
+					</item>
+					<item id="6">
+		<onclick>Dialog.Close(999)</onclick>
+		<onclick>ReplaceWindow(8869)</onclick>
+	
+						<label>Xbox Música</label>
+						<thumb>home\home_music.png</thumb>
+					</item>
+						<item id="7">
+				<onclick>Dialog.Close(999)</onclick>			
+		<onclick>ReplaceWindow(8868)</onclick>
+
+						<label>Xbox Vídeo</label>
+						<thumb>home\home_movie.png</thumb>
+					</item>
+																		<item id="8">
+	<onclick condition="!Skin.HasSetting(Logger)">ActivateWindow(1213)</onclick>
+												
+	<onclick condition="Skin.HasSetting(Logger)">ReplaceWindow(AddonBrowser)</onclick>
+	<onclick condition="Skin.HasSetting(Logger)">Dialog.Close(999)</onclick>
+						<label>Loja Xbox</label>
+						<thumb>demo\shop.png</thumb>
+					</item>
+											<item id="9">
+												
+										<onclick condition="!Skin.HasSetting(tvalt)">ActivateWindow(57)</onclick>
+									<onclick condition="Skin.HasSetting(tvalt)">RunAddon($INFO[Skin.String(tvalt)])</onclick>	
+											<onclick>Dialog.Close(999)</onclick>			
+									
+									<onclick condition="Skin.HasSetting(tvalt)">Skin.SetString(snapwindow, 9799)</onclick>
+									<onclick condition="!Skin.HasSetting(tvalt)">Skin.SetString(snapwindow, PVR)</onclick>
+<onclick condition="!Skin.HasSetting(snapie)">Skin.ToggleSetting(snapie)</onclick>
+<onclick condition="Skin.HasSetting(gaming)">Skin.ToggleSetting(gaming)</onclick>
+<onclick>Skin.SetString(snap, demo/sna/tv.jpg,0)</onclick>
+<onclick>Skin.SetString(sn,TV)</onclick>
+						<label>TV</label>
+						<thumb>home/home_livetv.png</thumb>
+					</item>
+					
+					
+																												<item id="10">
+<onclick>ReplaceWindow(3)</onclick>											
+		<onclick>Dialog.Close(999)</onclick>
+						<label>Gerenciador de arquivos</label>
+						<thumb>home/home_filemanager.png</thumb>
+					</item>
+																																	<item id="11">
+<onclick>ReplaceWindow(4)</onclick>											
+		<onclick>Dialog.Close(999)</onclick>
+						<label>Configurações</label>
+						<thumb>home/home_addons.png</thumb>
+					</item>
+
+					
+						
+																<item id="12">
+					<onclick condition="!Skin.HasSetting(Logger)">ActivateWindow(1213)</onclick>
+<onclick condition="Skin.HasSetting(Logger)">ReplaceWindow(777)</onclick>
+		<onclick condition="Skin.HasSetting(Logger)">Dialog.Close(999)</onclick>
+						<label>Conquistas</label>
+						<thumb>home/tt.png</thumb>
+					</item>
+					<item id="13">
+					<onclick condition="!Skin.HasSetting(Logger)">ActivateWindow(1213)</onclick>
+<onclick condition="Skin.HasSetting(Logger)">ReplaceWindow(7546)</onclick>
+		<onclick condition="Skin.HasSetting(Logger)">Dialog.Close(999)</onclick>
+						<label>Amigos</label>
+						<thumb>home/home_profiles.png</thumb>
+					</item>
+					
+					
+														<item id="14">
+															
+						<onclick>ReplaceWindow(2)</onclick>
+						<onclick>Dialog.Close(999)</onclick>
+						<label>Galeria</label>
+						<thumb>home/home_pictures.png</thumb>
+
+					</item>
+																			<item id="15">
+																			
+						<onclick>ReplaceWindow(866)</onclick>
+						<onclick>Dialog.Close(999)</onclick>
+						<label>Relógio</label>
+						<thumb>home/alarm.png</thumb>
+					</item>
+																			<item id="16">
+																			
+						<onclick>ReplaceWindow(8154)</onclick>
+						<onclick>Dialog.Close(999)</onclick>
+						<label>Desenvolvedores</label>
+						<thumb>home/key.png</thumb>
+					</item>
+																<item id="17">
+																
+						<onclick>ReplaceWindow(2600)</onclick>
+						<onclick>Dialog.Close(999)</onclick>
+						<label>Clima Bing</label>
+						<label2>home/home_weathers.png</label2>
+					</item>
+					
+															<item id="18">
+		<onclick>ActivateWindow(7342)</onclick>
+		<onclick>Dialog.Close(999)</onclick>
+						<label>Blu-ray player</label>
+						<label2>home/home_bluray.png</label2>
+						<visible>false</visible>
+					</item>
+														<item id="18">
+															
+		<onclick>ReplaceWindow(8159)</onclick>
+		<onclick>Dialog.Close(999)</onclick>
+						<label>Microsoft Mail</label>
+						<label2>home/home_mail.png</label2>
+						
+					</item>
+																					<item id="19">
+		<onclick condition="!Skin.HasSetting(Logger)">ActivateWindow(1213)</onclick>
+								<onclick condition="Skin.HasSetting(Logger)">Dialog.Close(999)</onclick>														
+						<onclick condition="Skin.HasSetting(Logger)">ReplaceWindow(667)</onclick>
+					
+						<label>Youtube</label>
+						<label2>home/home_youtube.png</label2>
+					</item>
+																						<item id="20">
+		<onclick condition="!Skin.HasSetting(Logger)">ActivateWindow(1213)</onclick>
+													<onclick condition="Skin.HasSetting(Logger)">Dialog.Close(999)</onclick>											
+						<onclick condition="Skin.HasSetting(Logger)">ReplaceWindow(668)</onclick>
+					
+						<label>Vevo</label>
+						<label2>home/home_vevo.png</label2>
+<visible>false</visible>
+					</item>
+																								<item id="21">
+		<onclick condition="!Skin.HasSetting(Logger)">ActivateWindow(1213)</onclick>								
+					<onclick condition="Skin.HasSetting(Logger)">ReplaceWindow(864)</onclick>
+					<onclick condition="Skin.HasSetting(Logger)">Dialog.Close(999)</onclick>
+						<label>Wikipedia</label>
+						<label2>home/home_wiki.png</label2>
+<visible>false</visible>
+					</item>
+																								<item id="22">
+		<onclick condition="!Skin.HasSetting(Logger)">ActivateWindow(1213)</onclick>								
+					<onclick condition="Skin.HasSetting(Logger)">ReplaceWindow(8861)</onclick>
+					<onclick condition="Skin.HasSetting(Logger)">Dialog.Close(999)</onclick>
+						<label>Onedrive</label>
+						<label2>demo\sky.png</label2>
+<visible>false</visible>
+					</item>
+				<item id="23">
+		<onclick condition="!Skin.HasSetting(Logger)">ActivateWindow(1213)</onclick>	
+				<onclick condition="Skin.HasSetting(Logger)">ReplaceWindow(869)</onclick>
+				<onclick condition="Skin.HasSetting(Logger)">Dialog.Close(999)</onclick>
+						<label>Amazon</label>
+						<label2>home/home_amazon.png</label2>
+<visible>false</visible>
+					</item>
+						<item id="24">
+	<onclick condition="!Skin.HasSetting(Logger)">ActivateWindow(1213)</onclick>	
+								<onclick condition="Skin.HasSetting(Logger)">Dialog.Close(999)</onclick>
+				<onclick condition="Skin.HasSetting(Logger)">ReplaceWindow(665)</onclick>
+				
+						<label>Steam</label>
+						<label2>home/home_steam.png</label2>
+<visible>false</visible>
+					</item>
+									<item id="25">
+<onclick condition="!Skin.HasSetting(Logger)">ActivateWindow(1213)</onclick>							
+			<onclick condition="Skin.HasSetting(Logger)">ReplaceWindow(666)</onclick>
+			<onclick condition="Skin.HasSetting(Logger)">Dialog.Close(999)</onclick>
+						<label>Internet Explorer</label>
+						<label2>home/alternative/ie.png</label2>
+<visible>false</visible>
+					</item>
+					<item id="25">
+<onclick>RunScript(special://skin/system/InternetExplorer.py)</onclick>
+						<label>Internet Explorer</label>
+						<label2>home/alternative/ie.png</label2>
+<visible>false</visible>
+					</item>
+						<item id="25">
+	<onclick>RunScript(special://skin/system/Kylo.py)</onclick>
+						<label>Internet Explorer</label>
+						<label2>home/alternative/ie.png</label2>
+<visible>false</visible>
+					</item>
+					
+					
+				
+											<item id="26">
+			<onclick condition="!Skin.HasSetting(Logger)">ActivateWindow(1213)</onclick>									
+			<onclick condition="Skin.HasSetting(Logger)">ReplaceWindow(9181)</onclick>
+			<onclick condition="Skin.HasSetting(Logger)">Dialog.Close(999)</onclick>
+						<label>Ebay</label>
+						<label2>home/home_ebay.png</label2>
+<visible>false</visible>
+					</item>
+																																						<item id="27">
+<onclick>ReplaceWindow(863)</onclick>											
+		<onclick>Dialog.Close(999)</onclick>
+						<label>Pesquisa Bing</label>
+						<label2>home\bing.jpg</label2>
+<visible>false</visible>
+					</item>
+				
+																			<item id="28">
+																				
+<onclick>ReplaceWindow(661)</onclick>											
+		<onclick>Dialog.Close(999)</onclick>
+						<label>Cocktail Flow</label>
+						<label2>home/cocktail.png</label2>
+<visible>false</visible>
+					</item>
+					
+					
+					
+					
+																	<item id="29">
+	<onclick condition="!Skin.HasSetting(Logger)">ActivateWindow(1213)</onclick>
+																	
+	<onclick condition="Skin.HasSetting(Logger)">ReplaceWindow(181)</onclick>
+	<onclick condition="Skin.HasSetting(Logger)">Dialog.Close(999)</onclick>
+						<label>Upload Studio</label>
+						<label2>home/home_upload.png</label2>
+<visible>false</visible>
+					</item>
+																				<item id="30">
+																					
+	<onclick condition="!Skin.HasSetting(Logger)">ActivateWindow(1213)</onclick>																
+		<onclick condition="Skin.HasSetting(Logger)">ReplaceWindow(818)</onclick>
+		<onclick condition="Skin.HasSetting(Logger)">Dialog.Close(999)</onclick>
+						<label>Twitch</label>
+						<label2>home/home_twitch.png</label2>
+ <visible>false</visible>
+					</item>
+																								<item id="31">
+					<onclick condition="!Skin.HasSetting(Logger)">ActivateWindow(1213)</onclick>												
+		<onclick condition="Skin.HasSetting(Logger)">ReplaceWindow(9899)</onclick>
+		<onclick condition="Skin.HasSetting(Logger)">Dialog.Close(999)</onclick>
+						<label>Skype</label>
+						<label2>home/home_skype.png</label2>
+
+					</item>
+	
+																			          <item id="32">
+                                                                <onclick>ReplaceWindow(7500)</onclick>
+																<onclick>Dialog.Close(999)</onclick>
+                                                                <label2>home\notepad.png</label2>
+                                                                <label>Bloco de notas</label>
+                                                         
+                                                        </item>	
+					
+
+									
+                  <item id="33">
+                                                                <onclick>RunPlugin(plugin://plugin.program.webbrowser/?mode=showSite&amp;showPopups=no&amp;stopPlayback=yes&amp;url=http%3a%2f%2fplay.google.com)</onclick>
+																<onclick>Dialog.Close(999)</onclick>
+                                                                <label2>home\playstore.png</label2>
+                                                                <label>Play Store</label>
+                                                                <visible>Skin.HasSetting(ShowNewApps1)</visible>
+                                                        </item>	
+                  <item id="34">
+                                                                <onclick>ReplaceWindow(865)</onclick>
+																<onclick>Dialog.Close(999)</onclick>
+                                                                <label2>demo\appi\dailylogo.jpg</label2>
+                                                                <label>Dailymotion</label>
+                                                                <visible>false</visible>
+                                                        </item>
+														          <item id="35">
+                                                                <onclick>ActivateWindow(866)</onclick>
+																<onclick>Dialog.Close(999)</onclick>
+                                                                <label2>demo\appi\4od-logo.jpg</label2>
+                                                                <label>4OD</label>
+                                                                                  <visible>false</visible>
+                                                        </item>
+																												          <item id="36">
+                                                                <onclick>ActivateWindow()</onclick>
+																<onclick>Dialog.Close(999)</onclick>
+                                                                <label2>demo\appi\rail.jpg</label2>
+                                                                <label>National Rail</label>
+                                                            <visible>false</visible>
+                                                        </item>
+																												          <item id="37">
+                                                                <onclick>RunPlugin(plugin://plugin.program.webbrowser/?mode=showSite&amp;showPopups=no&amp;stopPlayback=yes&amp;url=http%3a%2f%2fjust-eat.co.uk)</onclick>
+																<onclick>Dialog.Close(999)</onclick>
+                                                                <label2>demo\appi\je.jpg</label2>
+                                                                <label>Just Eat</label>
+                                                                <visible>Skin.HasSetting(ShowNewApps1)</visible>
+                                                        </item>		
+														
+																									          <item id="38">
+                                                                <onclick>RunPlugin(plugin://plugin.program.webbrowser/?mode=showSite&amp;showPopups=no&amp;stopPlayback=yes&amp;url=http%3a%2f%2fwww.onedrive.live.com/about/en-gb/)</onclick>
+																<onclick>Dialog.Close(999)</onclick>
+																
+															<onclick>Skin.SetString(snapwindow, 999)</onclick>
+<onclick condition="!Skin.HasSetting(snapie)">Skin.ToggleSetting(snapie)</onclick>
+<onclick condition="Skin.HasSetting(gaming)">Skin.ToggleSetting(gaming)</onclick>
+<onclick>SetString(snap, demo/sna/onedrive.jpg,0)</onclick>
+<onclick>Skin.SetString(sn,OneDrive)</onclick>
+                                                                <label2>demo\appi\onedrive.jpg</label2>
+                                                                <label>OneDrive</label>
+                                                                <visible>false</visible>
+                                                        </item>	
+																		          <item id="39">
+                                                               <onclick>RunScript(special://skin/system/Google.py)</onclick>
+																<onclick>Dialog.Close(999)</onclick>
+                                                                <label2>home/maps.jpg</label2>
+                                                                <label>Google Web Search</label>
+                                                                <visible>Skin.HasSetting(BIG)</visible>
+                                                        </item>	
+															          		          <item id="40">
+<onclick condition="!Skin.HasSetting(Logger)">ActivateWindow(1213)</onclick>
+												
+	<onclick condition="Skin.HasSetting(Logger)">ReplaceWindow(8146)</onclick>
+																<onclick>Dialog.Close(999)</onclick>
+                                                                <label2>demo\appi\bing.jpg</label2>
+                                                                <label>Bing: Pesquisa na Web</label>
+                                                        </item>
+														 <item id="41">
+                                                                <onclick>RunPlugin(plugin://plugin.program.webbrowser/?mode=showSite&amp;showPopups=no&amp;stopPlayback=yes&amp;url=http%3a%2f%2fwww.redux.com/tv)</onclick>
+																<onclick>Dialog.Close(999)</onclick>
+                                                                <label2>demo\appi\redux.jpg</label2>
+                                                                <label>Redux</label>
+                                                                <visible>Skin.HasSetting(ShowNewApps1)</visible>
+                                                        </item>	
+														<item id="42">
+                                                                <onclick>RunPlugin(plugin://plugin.program.webbrowser/?mode=showSite&amp;showPopups=no&amp;stopPlayback=yes&amp;url=http%3a%2f%2ftv.revision3.com/)</onclick>
+																<onclick>Dialog.Close(999)</onclick>
+                                                                <label2>demo\appi\revision3.jpg</label2>
+                                                                <label>Revision3</label>
+                                                                <visible>Skin.HasSetting(ShowNewApps1)</visible>
+                                                        </item>	
+														<item id="43">
+                                                                <onclick>RunPlugin(plugin://plugin.program.webbrowser/?mode=showSite&amp;showPopups=no&amp;stopPlayback=yes&amp;url=http%3a%2f%2fvimeo.com/couchmode/staffpicks/)</onclick>
+																<onclick>Dialog.Close(999)</onclick>
+                                                                <label2>demo\appi\vimeo.jpg</label2>
+                                                                <label>Vimeo</label>
+                                                                <visible>Skin.HasSetting(ShowNewApps1)</visible>
+                                                        </item>	
+														
+														<item id="44">
+                                                                <onclick>RunPlugin(plugin://plugin.program.webbrowser/?mode=showSite&amp;showPopups=no&amp;stopPlayback=yes&amp;url=http%3a%2f%2fwww.metacafe.com/entertain/)</onclick>
+																<onclick>Dialog.Close(999)</onclick>
+                                                                <label2>demo\appi\metacafe.png</label2>
+                                                                <label>Metacafe</label>
+                                                                <visible>Skin.HasSetting(ShowNewApps1)</visible>
+                                                        </item>	
+														<item id="45">
+                                                                <onclick>RunPlugin(plugin://plugin.program.webbrowser/?mode=showSite&amp;showPopups=no&amp;stopPlayback=yes&amp;url=http%3a%2f%2ftv.tunein.com/)</onclick>
+																<onclick>Dialog.Close(999)</onclick>
+                                                                <label2>demo\appi\tunein.jpg</label2>
+                                                                <label>Tunein</label>
+                                                                <visible>Skin.HasSetting(ShowNewApps1)</visible>
+                                                        </item>	
+														<item id="46">
+                                                                <onclick>RunPlugin(plugin://plugin.program.webbrowser/?mode=showSite&amp;showPopups=no&amp;stopPlayback=yes&amp;url=http%3a%2f%2fedition.cnn.com/xl/)</onclick>
+																<onclick>Dialog.Close(999)</onclick>
+                                                                <label2>demo\appi\cnn.jpg</label2>
+                                                                <label>CNN</label>
+                                                                <visible>Skin.HasSetting(ShowNewApps1)</visible>
+                                                        </item>	
+														<item id="47">
+                                                                <onclick>RunPlugin(plugin://plugin.program.webbrowser/?mode=showSite&amp;showPopups=no&amp;stopPlayback=yes&amp;url=http%3a%2f%2fgtv.guardiannews.com/)</onclick>
+																<onclick>Dialog.Close(999)</onclick>
+                                                                <label2>demo\appi\guardiannews.jpg</label2>
+                                                                <label>Guardian News</label>
+                                                                <visible>Skin.HasSetting(ShowNewApps1)</visible>
+                                                        </item>	
+														<item id="48">
+                                                                <onclick>RunPlugin(plugin://plugin.program.webbrowser/?mode=showSite&amp;showPopups=no&amp;stopPlayback=yes&amp;url=http%3a%2f%2fwww.nytimes.com/gtv/)</onclick>
+																<onclick>Dialog.Close(999)</onclick>
+                                                                <label2>demo\appi\newyorktimes.jpg</label2>
+                                                                <label>New York Times</label>
+                                                                <visible>Skin.HasSetting(ShowNewApps1)</visible>
+                                                        </item>	
+														<item id="49">
+                                                                <onclick>RunPlugin(plugin://plugin.program.webbrowser/?mode=showSite&amp;showPopups=no&amp;stopPlayback=yes&amp;url=http%3a%2f%2fuk.ign.com/videos/tv/)</onclick>
+																<onclick>Dialog.Close(999)</onclick>
+                                                                <label2>demo\appi\ign.jpg</label2>
+                                                                <label>IGN</label>
+                                                                <visible>Skin.HasSetting(ShowNewApps1)</visible>
+                                                        </item>	
+														<item id="50">
+                                                                <onclick>RunPlugin(plugin://plugin.program.webbrowser/?mode=showSite&amp;showPopups=no&amp;stopPlayback=yes&amp;url=http%3a%2f%2fwinners.webbyawards.com/)</onclick>
+																<onclick>Dialog.Close(999)</onclick>
+                                                                <label2>demo\appi\webbyawards.jpg</label2>
+                                                                <label>Webby Awards</label>
+                                                                <visible>Skin.HasSetting(ShowNewApps1)</visible>
+                                                        </item>	
+<item id="51">
+ActivateWindow(9546, special://home/addon/pkg/$INFO[Skin.String(Path_PKG)]/data.xml)
+																<onclick>Dialog.Close(999)</onclick>
+                                                                <label2>special://home/addon/pkg/$INFO[Skin.String(Path_PKG)]/icon.png</label2>
+                                                                <label>$INFO[Skin.String(Path_PKG)]</label>
+                                                       <visible>Skin.HasSetting(App1)</visible>         
+                                                        </item>		
+														<item id="52">
+                                                                <onclick>RunScript(special://skin/system/App2.py)</onclick>
+																<onclick>Dialog.Close(999)</onclick>
+                                                                <label2>$INFO[Skin.String(App2image)]</label2>
+                                                                <label>$INFO[Skin.String(App2name)]</label>
+                                                                <visible>Skin.HasSetting(App2)</visible>
+                                                        </item>	
+														<item id="53">
+                                                                <onclick>RunScript(special://skin/system/App3.py)</onclick>
+																<onclick>Dialog.Close(999)</onclick>
+                                                                <label2>$INFO[Skin.String(App3image)]</label2>
+                                                                <label>$INFO[Skin.String(App3name)]</label>
+                                                                <visible>Skin.HasSetting(App3)</visible>
+                                                        </item>	
+														<item id="54">
+                                                                <onclick>RunScript(special://skin/system/App4.py)</onclick>
+																<onclick>Dialog.Close(999)</onclick>
+                                                                <label2>$INFO[Skin.String(App4image)]</label2>
+                                                                <label>$INFO[Skin.String(App4name)]</label>
+                                                                <visible>Skin.HasSetting(App4)</visible>
+                                                        </item>	
+														
+														
+														
+														
+														
+														
+														
+														
+														
+														
+														
+														
+														
+														
+														
+														
+														
+														
+														
+														
+														
+														
+														
+														
+														
+														  <item id="55">
+                                                                <onclick>$INFO[Window(Home).Property(favourite.1.Path)]</onclick>
+																<onclick>Dialog.Close(999)</onclick>
+                                                                <label2>$INFO[Window(Home).Property(favourite.1.Thumb)]</label2>
+                                                                <label>$INFO[Window(Home).Property(favourite.1.Name)]</label>
+                                                                <visible>!IsEmpty(Window(Home).Property(favourite.1.Path))</visible>
+                                                        </item>
+														
+														
+
+
+                                                        <item id="56">
+                                                                <onclick>$INFO[Window(Home).Property(favourite.2.Path)]</onclick>
+																<onclick>Dialog.Close(999)</onclick>
+                                                                <label2>$INFO[Window(Home).Property(favourite.2.Thumb)]</label2>
+                                                                <label>$INFO[Window(Home).Property(favourite.2.Name)]</label>
+                                                                <visible>!IsEmpty(Window(Home).Property(favourite.2.Path))</visible>
+                                                        </item>
+                                                        
+                                                        <item id="57">
+                                                                <onclick>$INFO[Window(Home).Property(favourite.3.Path)]</onclick>
+																<onclick>Dialog.Close(999)</onclick>
+                                                                <label2>$INFO[Window(Home).Property(favourite.3.Thumb)]</label2>
+                                                                <label>$INFO[Window(Home).Property(favourite.3.Name)]</label>
+                                                                <visible>!IsEmpty(Window(Home).Property(favourite.3.Path))</visible>
+                                                        </item>
+                                                        
+                                                        <item id="58">
+                                                                <onclick>$INFO[Window(Home).Property(favourite.4.Path)]</onclick>
+																<onclick>Dialog.Close(999)</onclick>
+                                                                <label2>$INFO[Window(Home).Property(favourite.4.Thumb)]</label2>
+                                                                <label>$INFO[Window(Home).Property(favourite.4.Name)]</label>
+                                                                <visible>!IsEmpty(Window(Home).Property(favourite.4.Path))</visible>
+                                                        </item>
+                                                        
+                                                        <item id="59">
+                                                                <onclick>$INFO[Window(Home).Property(favourite.5.Path)]</onclick>
+																<onclick>Dialog.Close(999)</onclick>
+                                                                <label2>$INFO[Window(Home).Property(favourite.5.Thumb)]</label2>
+                                                                <label>$INFO[Window(Home).Property(favourite.5.Name)]</label>
+                                                                <visible>!IsEmpty(Window(Home).Property(favourite.5.Path))</visible>
+                                                        </item>
+
+                                                        <item id="60">
+                                                                <onclick>$INFO[Window(Home).Property(favourite.6.Path)]</onclick>
+																<onclick>Dialog.Close(999)</onclick>
+                                                                <label2>$INFO[Window(Home).Property(favourite.6.Thumb)]</label2>
+                                                                <label>$INFO[Window(Home).Property(favourite.6.Name)]</label>
+                                                                <visible>!IsEmpty(Window(Home).Property(favourite.6.Path))</visible>
+                                                        </item>
+                                                        
+                                                        <item id="61">
+                                                                <onclick>$INFO[Window(Home).Property(favourite.7.Path)]</onclick>
+																<onclick>Dialog.Close(999)</onclick>
+                                                                <label2>$INFO[Window(Home).Property(favourite.7.Thumb)]</label2>
+                                                                <label>$INFO[Window(Home).Property(favourite.7.Name)]</label>
+                                                                <visible>!IsEmpty(Window(Home).Property(favourite.7.Path))</visible>
+                                                        </item>
+                                                        
+                                                        <item id="62">
+                                                                <onclick>$INFO[Window(Home).Property(favourite.8.Path)]</onclick>
+																<onclick>Dialog.Close(999)</onclick>
+                                                                <label2>$INFO[Window(Home).Property(favourite.8.Thumb)]</label2>
+                                                                <label>$INFO[Window(Home).Property(favourite.8.Name)]</label>
+                                                                <visible>!IsEmpty(Window(Home).Property(favourite.8.Path))</visible>
+                                                        </item>
+                                                        
+                                                        <item id="63">
+                                                                <onclick>$INFO[Window(Home).Property(favourite.9.Path)]</onclick>
+																<onclick>Dialog.Close(999)</onclick>
+                                                                <label2>$INFO[Window(Home).Property(favourite.9.Thumb)]</label2>
+                                                                <label>$INFO[Window(Home).Property(favourite.9.Name)]</label>
+                                                                <visible>!IsEmpty(Window(Home).Property(favourite.9.Path))</visible>
+                                                        </item>
+                                                        
+                                                        <item id="64">
+                                                                <onclick>$INFO[Window(Home).Property(favourite.10.Path)]</onclick>
+																<onclick>Dialog.Close(999)</onclick>
+                                                                <label2>$INFO[Window(Home).Property(favourite.10.Thumb)]</label2>
+                                                                <label>$INFO[Window(Home).Property(favourite.10.Name)]</label>
+                                                                <visible>!IsEmpty(Window(Home).Property(favourite.10.Path))</visible>
+                                                        </item>
+                                                        
+                                                        <item id="65">
+                                                                <onclick>$INFO[Window(Home).Property(favourite.11.Path)]</onclick>
+																<onclick>Dialog.Close(999)</onclick>
+                                                                <label2>$INFO[Window(Home).Property(favourite.11.Thumb)]</label2>
+                                                                <label>$INFO[Window(Home).Property(favourite.11.Name)]</label>
+                                                                <visible>!IsEmpty(Window(Home).Property(favourite.11.Path))</visible>
+                                                        </item>
+
+                                                        <item id="66">
+                                                                <onclick>$INFO[Window(Home).Property(favourite.12.Path)]</onclick>
+																<onclick>Dialog.Close(999)</onclick>
+                                                                <label2>$INFO[Window(Home).Property(favourite.12.Thumb)]</label2>
+                                                                <label>$INFO[Window(Home).Property(favourite.12.Name)]</label>
+                                                                <visible>!IsEmpty(Window(Home).Property(favourite.12.Path))</visible>
+                                                        </item>
+                                                        
+                                                        <item id="67">
+                                                                <onclick>$INFO[Window(Home).Property(favourite.13.Path)]</onclick>
+																<onclick>Dialog.Close(999)</onclick>
+                                                                <label2>$INFO[Window(Home).Property(favourite.13.Thumb)]</label2>
+                                                                <label>$INFO[Window(Home).Property(favourite.13.Name)]</label>
+                                                                <visible>!IsEmpty(Window(Home).Property(favourite.13.Path))</visible>
+                                                        </item>
+                                                        
+                                                        <item id="68">
+                                                                <onclick>$INFO[Window(Home).Property(favourite.14.Path)]</onclick>
+																<onclick>Dialog.Close(999)</onclick>
+                                                                <label2>$INFO[Window(Home).Property(favourite.14.Thumb)]</label2>
+                                                                <label>$INFO[Window(Home).Property(favourite.14.Name)]</label>
+                                                                <visible>!IsEmpty(Window(Home).Property(favourite.14.Path))</visible>
+                                                        </item>
+                                                        
+                                                        <item id="69">
+                                                                <onclick>$INFO[Window(Home).Property(favourite.15.Path)]</onclick>
+																<onclick>Dialog.Close(999)</onclick>
+                                                                <label2>$INFO[Window(Home).Property(favourite.15.Thumb)]</label2>
+                                                                <label>$INFO[Window(Home).Property(favourite.15.Name)]</label>
+                                                                <visible>!IsEmpty(Window(Home).Property(favourite.15.Path))</visible>
+                                                        </item>
+
+                                                        <item id="70">
+                                                                <onclick>$INFO[Window(Home).Property(favourite.16.Path)]</onclick>
+																<onclick>Dialog.Close(999)</onclick>
+                                                                <label2>$INFO[Window(Home).Property(favourite.16.Thumb)]</label2>
+                                                                <label>$INFO[Window(Home).Property(favourite.16.Name)]</label>
+                                                                <visible>!IsEmpty(Window(Home).Property(favourite.16.Path))</visible>
+                                                        </item>
+                                                        
+                                                        <item id="71">
+                                                                <onclick>$INFO[Window(Home).Property(favourite.17.Path)]</onclick>
+																<onclick>Dialog.Close(999)</onclick>
+                                                                <label2>$INFO[Window(Home).Property(favourite.17.Thumb)]</label2>
+                                                                <label>$INFO[Window(Home).Property(favourite.17.Name)]</label>
+                                                                <visible>!IsEmpty(Window(Home).Property(favourite.17.Path))</visible>
+                                                        </item>
+                                                        
+                                                        <item id="72">
+                                                                <onclick>$INFO[Window(Home).Property(favourite.18.Path)]</onclick>
+																<onclick>Dialog.Close(999)</onclick>
+                                                                <label2>$INFO[Window(Home).Property(favourite.18.Thumb)]</label2>
+                                                                <label>$INFO[Window(Home).Property(favourite.18.Name)]</label>
+                                                                <visible>!IsEmpty(Window(Home).Property(favourite.18.Path))</visible>
+                                                        </item>
+                                                        
+                                                        <item id="73">
+                                                                <onclick>$INFO[Window(Home).Property(favourite.19.Path)]</onclick>
+																<onclick>Dialog.Close(999)</onclick>
+                                                                <label2>$INFO[Window(Home).Property(favourite.19.Thumb)]</label2>
+                                                                <label>$INFO[Window(Home).Property(favourite.19.Name)]</label>
+                                                                <visible>!IsEmpty(Window(Home).Property(favourite.19.Path))</visible>
+                                                        </item>
+                                                        
+                                                        <item id="74">
+                                                                <onclick>$INFO[Window(Home).Property(favourite.20.Path)]</onclick>
+																<onclick>Dialog.Close(999)</onclick>
+                                                                <label2>$INFO[Window(Home).Property(favourite.20.Thumb)]</label2>
+                                                                <label>$INFO[Window(Home).Property(favourite.20.Name)]</label>
+                                                                <visible>!IsEmpty(Window(Home).Property(favourite.20.Path))</visible>
+                                                        </item>
+														                                                        <item id="75">
+                                                                <onclick>$INFO[Window(Home).Property(favourite.21.Path)]</onclick>
+																<onclick>Dialog.Close(999)</onclick>
+                                                                <label2>$INFO[Window(Home).Property(favourite.21.Thumb)]</label2>
+                                                                <label>$INFO[Window(Home).Property(favourite.21.Name)]</label>
+                                                                <visible>!IsEmpty(Window(Home).Property(favourite.21.Path))</visible>
+                                                        </item>
+ <item id="76">
+                                                                <onclick>$INFO[Window(Home).Property(favourite.22.Path)]</onclick>
+																<onclick>Dialog.Close(999)</onclick>
+                                                                <label2>$INFO[Window(Home).Property(favourite.22.Thumb)]</label2>
+                                                                <label>$INFO[Window(Home).Property(favourite.22.Name)]</label>
+                                                                <visible>!IsEmpty(Window(Home).Property(favourite.22.Path))</visible>
+                                                        </item>
+ <item id="77">
+                                                                <onclick>$INFO[Window(Home).Property(favourite.23.Path)]</onclick>
+																<onclick>Dialog.Close(999)</onclick>
+                                                                <label2>$INFO[Window(Home).Property(favourite.23.Thumb)]</label2>
+                                                                <label>$INFO[Window(Home).Property(favourite.23.Name)]</label>
+                                                                <visible>!IsEmpty(Window(Home).Property(favourite.23.Path))</visible>
+                                                        </item>
+ <item id="78">
+                                                                <onclick>$INFO[Window(Home).Property(favourite.24.Path)]</onclick>
+																<onclick>Dialog.Close(999)</onclick>
+                                                                <label2>$INFO[Window(Home).Property(favourite.24.Thumb)]</label2>
+                                                                <label>$INFO[Window(Home).Property(favourite.24.Name)]</label>
+                                                                <visible>!IsEmpty(Window(Home).Property(favourite.24.Path))</visible>
+                                                        </item>														
+ <item id="79">
+                                                                <onclick>$INFO[Window(Home).Property(favourite.25.Path)]</onclick>
+																<onclick>Dialog.Close(999)</onclick>
+                                                                <label2>$INFO[Window(Home).Property(favourite.25.Thumb)]</label2>
+                                                                <label>$INFO[Window(Home).Property(favourite.25.Name)]</label>
+                                                                <visible>!IsEmpty(Window(Home).Property(favourite.25.Path))</visible>
+                                                        </item>					
+ <item id="80">
+                                                                <onclick>$INFO[Window(Home).Property(favourite.26.Path)]</onclick>
+																<onclick>Dialog.Close(999)</onclick>
+                                                                <label2>$INFO[Window(Home).Property(favourite.26.Thumb)]</label2>
+                                                                <label>$INFO[Window(Home).Property(favourite.26.Name)]</label>
+                                                                <visible>!IsEmpty(Window(Home).Property(favourite.26.Path))</visible>
+                                                        </item>
+ <item id="81">
+                                                                <onclick>$INFO[Window(Home).Property(favourite.27.Path)]</onclick>
+																<onclick>Dialog.Close(999)</onclick>
+                                                                <label2>$INFO[Window(Home).Property(favourite.27.Thumb)]</label2>
+                                                                <label>$INFO[Window(Home).Property(favourite.27.Name)]</label>
+                                                                <visible>!IsEmpty(Window(Home).Property(favourite.27.Path))</visible>
+                                                        </item>
+ <item id="82">
+                                                                <onclick>$INFO[Window(Home).Property(favourite.28.Path)]</onclick>
+																<onclick>Dialog.Close(999)</onclick>
+                                                                <label2>$INFO[Window(Home).Property(favourite.28.Thumb)]</label2>
+                                                                <label>$INFO[Window(Home).Property(favourite.28.Name)]</label>
+                                                                <visible>!IsEmpty(Window(Home).Property(favourite.28.Path))</visible>
+                                                        </item>	
+ <item id="83">
+                                                                <onclick>$INFO[Window(Home).Property(favourite.29.Path)]</onclick>
+																<onclick>Dialog.Close(999)</onclick>
+                                                                <label2>$INFO[Window(Home).Property(favourite.29.Thumb)]</label2>
+                                                                <label>$INFO[Window(Home).Property(favourite.29.Name)]</label>
+                                                                <visible>!IsEmpty(Window(Home).Property(favourite.29.Path))</visible>
+                                                        </item>	
+ <item id="84">
+                                                                <onclick>$INFO[Window(Home).Property(favourite.30.Path)]</onclick>
+																<onclick>Dialog.Close(999)</onclick>
+                                                                <label2>$INFO[Window(Home).Property(favourite.30.Thumb)]</label2>
+                                                                <label>$INFO[Window(Home).Property(favourite.30.Name)]</label>
+                                                                <visible>!IsEmpty(Window(Home).Property(favourite.30.Path))</visible>
+                                                        </item>	
+														 <item id="85">
+                                                                <onclick>$INFO[Window(Home).Property(favourite.31.Path)]</onclick>
+																<onclick>Dialog.Close(999)</onclick>
+                                                                <label2>$INFO[Window(Home).Property(favourite.31.Thumb)]</label2>
+                                                                <label>$INFO[Window(Home).Property(favourite.31.Name)]</label>
+                                                                <visible>!IsEmpty(Window(Home).Property(favourite.31.Path))</visible>
+                                                        </item>														
+	<item id="86">
+<onclick condition="!Skin.HasSetting(Logger)">ActivateWindow(1213)</onclick>
+<onclick>ReplaceWindow(5512)</onclick>											
+		<onclick>Dialog.Close(999)</onclick>
+						<label>Mensagens</label>
+					   <thumb>home\alternate\msg.png</thumb>
+					</item>	
+<item id="87">
+<onclick>ReplaceWindow(7171)</onclick>											
+		<onclick>Dialog.Close(999)</onclick>
+						<label>Guia do usuário</label>
+						<label2>home\Info.png</label2>
+					</item>	
+								
+	<item id="88">
+<onclick condition="!Skin.HasSetting(Logger)">ActivateWindow(1213)</onclick>
+<onclick>ReplaceWindow(7549)</onclick>											
+		<onclick>Dialog.Close(999)</onclick>
+						<label>Avatar</label>
+						<label2>home\Avatar.png</label2>
+</item>
+<item id="89">
+<onclick>ReplaceWindow(5606)</onclick>											
+		<onclick>Dialog.Close(999)</onclick>
+						<label>OneGuide</label>
+						<label2>home/Gold.png</label2>
+<visible>false</visible>
+</item>														
+					
+					
+				</content>
+			</control>
+			
+			<!--Scrollbar-->
+			
+	
+		</control>	
+	
+<control type="image">
+			<include>Common_Animation_XBO2</include>
+				<posy>0</posy>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+				<texture background="true">demo\librarysection\2.jpg</texture>
+<visible>Control.HasFocus(2)</visible>
+
+			</control>
+			<control type="textbox">
+																	
+				<include>Common_Animation_XBO2</include>			
+	
+			<label>Apps</label>
+
+		<posx>68</posx>
+								<posy>223</posy>
+								<width>550</width>
+								<height>160</height>
+		<font>Dropdown-Label</font>
+			<textcolor>Label_Normal</textcolor>
+			<scrollspeed>0</scrollspeed>
+			<autoscroll>false</autoscroll>
+			<wrapmultiline>true</wrapmultiline>
+					
+								
+		</control>
+		
+		<control type="textbox">
+																	
+				<include>Common_Animation_XBO2</include>			
+	
+			<label>Queue (0)</label>
+
+		<posx>66</posx>
+								<posy>278</posy>
+								<width>550</width>
+								<height>160</height>
+		<font>Dropdown-Label</font>
+			<textcolor>Label_Normal</textcolor>
+			<scrollspeed>0</scrollspeed>
+			<autoscroll>false</autoscroll>
+			<wrapmultiline>true</wrapmultiline>
+					
+								
+		</control>
+		
+		<control type="image">
+			<include>Common_Animation_XBO2</include>
+				<posx>65</posx>
+				<posy>412</posy>
+				<width>140</width>
+				<height>140</height>
+				<texture>demo\wheel\100 % used.png</texture>
+<colordiffuse>FF303030</colordiffuse>
+
+			</control>
+			<control type="image">
+			<include>Common_Animation_XBO2</include>
+				<posx>65</posx>
+				<posy>412</posy>
+				<width>140</width>
+				<height>140</height>
+				<texture>demo\wheel\$INFO[System.UsedSpacePercent].png</texture>
+<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+
+			</control>
+		
+		<control type="textbox">
+																	
+				<include>Common_Animation_XBO2</include>			
+	
+			<label>$INFO[System.UsedSpacePercent]</label>
+
+		<posx>80</posx>
+								<posy>463</posy>
+								<width>550</width>
+								<height>160</height>
+		<font>Dropdown-Label</font>
+			<textcolor>Label_Normal</textcolor>
+			<scrollspeed>0</scrollspeed>
+			<autoscroll>false</autoscroll>
+			<wrapmultiline>true</wrapmultiline>
+					
+								
+		</control>
+		
+		
+			<control type="image">
+			<include>Common_Animation_XBO2</include>
+			<posx>75</posx>
+								<posy>566</posy>
+				<width>6</width>
+				<height>6</height>
+				<texture>colors\color_white.png</texture>
+<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+
+			</control>
+		<control type="textbox">
+																	
+					<include>Common_Animation_XBO2</include>		
+	
+			<label>Armazenamento</label>
+
+		<posx>85</posx>
+								<posy>555</posy>
+								<width>550</width>
+								<height>160</height>
+		<font>DialogInfo-Label-Small</font>
+			<textcolor>Label_Normal</textcolor>
+			<scrollspeed>0</scrollspeed>
+			<autoscroll>false</autoscroll>
+			<wrapmultiline>true</wrapmultiline>
+					
+								
+		</control>
+		
+		<control type="textbox">
+																	
+					<include>Common_Animation_XBO2</include>		
+	
+			<label>$INFO[System.FreeSpace]</label>
+
+		<posx>85</posx>
+								<posy>577</posy>
+								<width>550</width>
+								<height>160</height>
+		<font>DialogInfo-Label-Small</font>
+			<textcolor>Label_Normal</textcolor>
+			<scrollspeed>0</scrollspeed>
+			<autoscroll>false</autoscroll>
+			<wrapmultiline>true</wrapmultiline>
+					
+								
+		</control>
+		
+		<control type="textbox">
+																	
+							
+	<include>Common_Animation_XBO2</include>
+			<label></label>
+
+		<posx>350</posx>
+								<posy>230</posy>
+								<width>550</width>
+								<height>160</height>
+		<font>Dropdown-Label2</font>
+			<textcolor>Label_Normal</textcolor>
+			<scrollspeed>0</scrollspeed>
+			<autoscroll>false</autoscroll>
+			<wrapmultiline>true</wrapmultiline>
+					
+				<visible>Control.HasFocus(2)</visible>				
+		</control>
+		<control type="image">
+				<visible>!Skin.HasSetting(disableprofilepic)</visible>
+																											<include>Common_Animation_XBO2</include>																				<include condition="Skin.HasSetting(on)">Common_Animation_dashboard_pic</include>
+														<include condition="!Skin.HasSetting(on)">Common_Animation_Windows8</include>	
+				<posx>77</posx>
+				<posy>22</posy>
+				<width>49</width>
+				<height>49</height>
+
+								<texture>colors\color_white.png</texture>
+			<visible>Control.HasFocus(91919)</visible>
+			</control>
+
+<control type="image">
+				<visible>!Skin.HasSetting(disableprofilepic)</visible>
+																																<include>Common_Animation_XBO2</include>																				<include condition="Skin.HasSetting(on)">Common_Animation_dashboard_pic</include>
+														<include condition="!Skin.HasSetting(on)">Common_Animation_Windows8</include>	
+				<posx>79</posx>
+				<posy>24</posy>
+				<width>45</width>
+				<height>45</height>
+
+								<texture>colors\color_white.png</texture>
+			<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+			</control>
+		<control type="image">
+				<visible>!Skin.HasSetting(disableprofilepic)</visible>
+																																					<include>Common_Animation_XBO2</include>																				<include condition="Skin.HasSetting(on)">Common_Animation_dashboard_pic</include>
+														<include condition="!Skin.HasSetting(on)">Common_Animation_Windows8</include>	
+				<posx>82</posx>
+				<posy>29</posy>
+				<width>40</width>
+				<height>34</height>
+
+								<texture>demo\prof.png</texture>
+			
+			</control>
+			
+			<control type="image">
+				<visible>!Skin.HasSetting(gamertag) + !Skin.HasSetting(disableprofilepic) + !Skin.HasSetting(gpic) + Skin.HasSetting(Logger)</visible>
+																		<include>Common_Animation_XBO2</include>																				<include condition="Skin.HasSetting(on)">Common_Animation_dashboard_pic</include>
+														<include condition="!Skin.HasSetting(on)">Common_Animation_Windows8</include>	
+				<posx>126</posx>
+				<posy>24</posy>
+				<width>46</width>
+				<height>45</height>
+
+								<texture background="true" fallback="overlays/defa.jpg">$INFO[System.ProfileThumb]</texture>
+				
+			</control>
+						<control type="image">
+				<visible>!Skin.HasSetting(gamertag) + !Skin.HasSetting(disableprofilepic) + Skin.HasSetting(gpic) + Skin.HasSetting(Logger)</visible>
+																			<include>Common_Animation_XBO2</include>																			<include condition="Skin.HasSetting(on)">Common_Animation_dashboard_pic</include>
+														<include condition="!Skin.HasSetting(on)">Common_Animation_Windows8</include>	
+				<posx>126</posx>
+				<posy>24</posy>
+				<width>46</width>
+				<height>45</height>
+
+								<texture background="true" fallback="overlays/defa.jpg">$INFO[Skin.String(gamerpic)]</texture>
+				
+			</control>
+			
+			
+			
+				<control type="image">
+				<visible>!Skin.HasSetting(gamertag) + !Skin.HasSetting(disableprofilepic) + !Skin.HasSetting(gpic) + !Skin.HasSetting(Logger)</visible>
+																							<include>Common_Animation_XBO2</include>															<include condition="Skin.HasSetting(on)">Common_Animation_dashboard_pic</include>
+														<include condition="!Skin.HasSetting(on)">Common_Animation_Windows8</include>	
+				<posx>126</posx>
+				<posy>24</posy>
+				<width>46</width>
+				<height>45</height>
+
+								<texture background="true" fallback="overlays/default95.png">overlays/defa.jpg</texture>
+				
+			</control>
+						<control type="image">
+				<visible>!Skin.HasSetting(gamertag) + !Skin.HasSetting(disableprofilepic) + Skin.HasSetting(gpic) + !Skin.HasSetting(Logger)</visible>
+																							<include>Common_Animation_XBO2</include>															<include condition="Skin.HasSetting(on)">Common_Animation_dashboard_pic</include>
+														<include condition="!Skin.HasSetting(on)">Common_Animation_Windows8</include>	
+				<posx>126</posx>
+				<posy>24</posy>
+				<width>46</width>
+				<height>45</height>
+
+								<texture background="true" fallback="overlays/default95.png">overlays/defa.jpg</texture>
+				
+			</control>
+			
+						
+					
+			
+			
+			
+
+			
+			
+			
+			
+						<control type="image">
+							<visible>Skin.HasSetting(gamertag) + !Skin.HasSetting(gpic) + !Skin.HasSetting(disableprofilepic) + Skin.HasSetting(Logger)</visible>
+																					<include>Common_Animation_XBO2</include>																			<include condition="Skin.HasSetting(on)">Common_Animation_dashboard_pic</include>
+														<include condition="!Skin.HasSetting(on)">Common_Animation_Windows8</include>	
+				<posx>126</posx>
+				<posy>24</posy>
+				<width>46</width>
+				<height>45</height>
+
+								<texture background="true" fallback="overlays/defa.jpg">$INFO[Skin.String(XBoxLive.Gamer.Picture)]</texture>
+				
+			</control>
+							<control type="image">
+							<visible>Skin.HasSetting(gamertag) + !Skin.HasSetting(gpic) + !Skin.HasSetting(disableprofilepic) + !Skin.HasSetting(Logger)</visible>
+																						<include>Common_Animation_XBO2</include>																		<include condition="Skin.HasSetting(on)">Common_Animation_dashboard_pic</include>
+														<include condition="!Skin.HasSetting(on)">Common_Animation_Windows8</include>	
+				<posx>126</posx>
+				<posy>24</posy>
+				<width>46</width>
+				<height>45</height>
+
+								<texture background="true" fallback="overlays/defa.jpg">overlays/defa.jpg</texture>
+				
+			</control>
+			
+			
+						<control type="image">
+							
+																				<include>Common_Animation_XBO2</include>																					<include condition="Skin.HasSetting(on)">Common_Animation_dashboard_pic</include>
+														<include condition="!Skin.HasSetting(on)">Common_Animation_Windows8</include>	
+				<posx>126</posx>
+				<posy>65</posy>
+				<width>46</width>
+				<height>4</height>
+
+								<texture>colors/color_white.png</texture>
+								<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+				<visible>!Skin.HasSetting(disableprofilepic)</visible>
+			</control>
+			
+			<control type="group">
+																			<include>Common_Animation_XBO2</include>	
+													
+			<posx>750</posx>
+			<posy>50</posy>
+			<width>100</width>
+			<height>145</height>			
+			<control type="image">
+				<posx>333</posx>
+				<posy>0</posy>
+				<width>40</width>
+				<height>40</height>
+				<texture>demo/vol/xbox.png</texture>
+				<aspectratio>scale</aspectratio>
+			</control>	
+		</control>
+		<control type="group">
+			<animation type="WindowOpen" condition="!Window.IsVisible(113) + !Window.IsVisible(104)">
+		<effect type="fade" start="0" end="100" time="100" delay="1500" />
+	</animation>
+		<animation type="WindowOpen" condition="!Window.IsVisible(113) + !Window.IsVisible(104)">
+		<effect type="fade" start="0" end="100" time="400" />
+	</animation>
+	
+	<animation type="WindowClose">
+		<effect type="fade" start="100" end="0" time="400" />
+	</animation>
+	
+		<animation type="Visible">
+		<effect type="fade" start="0" end="100" time="100" />
+	</animation>
+	
+	<animation type="Hidden">
+		<effect type="fade" start="100" end="0" time="400" />
+	</animation>
+	
+			<visible>!Window.IsVisible(113) + !Window.IsVisible(104) + !Skin.HasSetting(ShowFPS)</visible>
+			
+			<posx>705</posx>
+			<posy>50</posy>
+			<width>100</width>
+			<height>145</height>
+			
+		
+		
+		
+				<control type="label">
+					<animation effect="fade" start="100" end="0" time="400" condition="!System.IdleTime(5)">Conditional</animation>
+									<animation effect="fade" start="0" end="100" time="400" condition="System.IdleTime(5)">Conditional</animation>
+							
+				<posx>225</posx>
+				<posy>10</posy>
+					<width>280</width>
+					<height>20</height>
+					<label></label>
+					<font>Settings-Label2</font>
+					<textcolor>Label_Normal</textcolor>
+					<aligny>center</aligny>
+			<visible>Skin.HasSetting(EnableKinectText)</visible>
+				</control>
+			
+		</control>
+		<control type="group">
+			<animation type="WindowOpen" condition="!Window.IsVisible(113) + !Window.IsVisible(104)">
+		<effect type="fade" start="0" end="100" time="100" delay="200" />
+	</animation>
+		<animation type="WindowOpen" condition="!Window.IsVisible(113) + !Window.IsVisible(104)">
+		<effect type="fade" start="0" end="100" time="200" />
+	</animation>
+	
+	<animation type="WindowClose">
+		<effect type="fade" start="100" end="0" time="400" />
+	</animation>
+	
+		<animation type="Visible">
+		<effect type="fade" start="0" end="100" time="100" />
+	</animation>
+	
+	<animation type="Hidden">
+		<effect type="fade" start="100" end="0" time="400" />
+	</animation>
+	
+			<visible>!Window.IsVisible(113) + !Window.IsVisible(104) + Skin.HasSetting(ShowFPS)</visible>
+			
+			<posx>705</posx>
+			<posy>50</posy>
+			<width>100</width>
+			<height>145</height>
+			
+		
+		
+		
+				<control type="label">
+				
+				<posx>224</posx>
+				<posy>10</posy>
+					<width>280</width>
+					<height>20</height>
+					<label>FPS: $INFO[System.FPS] MEM: $INFO[system.memory(used.percent)]</label>
+					<font>Settings-Label2</font>
+					<textcolor>Label_Normal</textcolor>
+					<aligny>center</aligny>
+			<visible>Skin.HasSetting(EnableKinectText)</visible>
+				</control>
+			
+		</control>
+		<include>Snapped_Content</include>
+	</controls>
+
+</window>

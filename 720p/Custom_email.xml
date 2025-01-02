@@ -1,0 +1,367 @@
+<window type="window" id="5512">
+
+	<defaultcontrol always="true">1</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<zorder>2</zorder>
+<onload condition="!Window.Previous(5152)">Skin.SetString(EmailTo, )</onload>
+<onload condition="!Window.Previous(5152)">Skin.SetString(MySubject, )</onload>
+<onload condition="!Window.Previous(5152)">Skin.SetString(MyMessage, )</onload>
+
+
+	<controls>
+	
+			<control type="image">
+		
+			<include>Common_Dimensions</include>
+			<texture background="true">colors/color_white.png</texture>
+			<colordiffuse>FanartDiffuse</colordiffuse>
+			
+			<include>Common_Animation_Window_Dark</include>
+			<visible>!Player.HasMedia</visible>
+		</control>
+
+
+		
+		
+	
+		<!--Charm Bar Section-->
+		<control type="group">
+		
+			<posx>0</posx>
+			<posy>150</posy>
+			
+			 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="150" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+
+
+		<control type="image">
+				
+				<posx>0</posx>
+				<posy>-100</posy>
+				<width>1280</width>
+				<height>650</height>
+				<texture>demo\messaging\msg.png</texture>
+		
+			</control>
+			<control type="image">
+				
+				<posx>0</posx>
+				<posy>-100</posy>
+				<width>1280</width>
+				<height>650</height>
+				<texture>demo\messaging\1.png</texture>
+				<visible>Control.HasFocus(1)</visible>
+			</control>
+			<control type="image">
+				
+				<posx>0</posx>
+				<posy>-100</posy>
+				<width>1280</width>
+				<height>650</height>
+				<texture>demo\messaging\2.png</texture>
+				<visible>Control.HasFocus(2)</visible>
+			</control>
+			<control type="image">
+				
+				<posx>0</posx>
+				<posy>-100</posy>
+				<width>1280</width>
+				<height>650</height>
+				<texture>demo\messaging\3.png</texture>
+				<visible>Control.HasFocus(3)</visible>
+			</control>
+		
+			
+			
+			
+			
+				<control type="image">
+					
+					<visible>!Skin.HasSetting(gpic) + !Window.Previous(5152)</visible>
+			<posx>68</posx>
+				<posy>76</posy>
+				<width>330</width>
+				<height>296</height>
+			<texture background="true" fallback="overlays/default95.png">$INFO[System.ProfileThumb]</texture>
+		
+		</control>
+		
+		<control type="image">
+				<visible>Skin.HasSetting(gpic) + !Window.Previous(5152)</visible>
+																																						
+														
+				<posx>68</posx>
+				<posy>76</posy>
+				<width>330</width>
+				<height>296</height>
+								<texture background="true" fallback="overlays/default95.png">$INFO[Skin.String(gamerpic)]</texture>
+				
+			</control>
+			
+				<control type="image">
+					
+					<visible>Window.Previous(5152)</visible>
+			<posx>68</posx>
+				<posy>76</posy>
+				<width>330</width>
+				<height>296</height>
+			<texture background="true" fallback="overlays/default95.png">$INFO[Skin.String(EmailPic)]</texture>
+		
+		</control>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+			<control type="label">
+                                                        
+                                                                <posx>413</posx>
+                                                                <posy>85</posy>
+                                                                <width min="20" max="250">auto</width>
+                                                                <height>20</height>
+                                                                <label>Para :</label>
+                                                                <font>Home-Tile-Detail2</font>
+                                                                <textcolor>black</textcolor>
+                                                                <aligny>center</aligny>
+                                                                
+                                                        </control>
+																	<control type="label">
+                                                        
+                                                                <posx>453</posx>
+                                                                <posy>85</posy>
+                                                                <width min="20" max="220">auto</width>
+                                                                <height>20</height>
+                                                                <label>$INFO[Skin.String(EmailTo)]</label>
+                                                                <font>Home-Tile-Detail2</font>
+                                                                <textcolor>black</textcolor>
+                                                                <aligny>center</aligny>
+                                                                <visible>!Window.IsVisible(103)</visible>
+                                                        </control>
+														
+														
+														
+														
+														
+															<control type="label">
+                                                        
+                                                                <posx>413</posx>
+                                                                <posy>115</posy>
+                                                                <width min="20" max="250">auto</width>
+                                                                <height>20</height>
+                                                                <label>Mensagem :</label>
+                                                                <font>Home-Tile-Detail2</font>
+                                                                <textcolor>black</textcolor>
+                                                                <aligny>center</aligny>
+                                                                
+                                                        </control>
+																	<control type="label">
+                                                        
+                                                                <posx>483</posx>
+                                                                <posy>115</posy>
+                                                                <width min="20" max="220">auto</width>
+                                                                <height>20</height>
+                                                                <label>$INFO[Skin.String(MySubject)]</label>
+                                                                <font>Home-Tile-Detail2</font>
+                                                                <textcolor>black</textcolor>
+                                                                <aligny>center</aligny>
+                                                                <visible>!Window.IsVisible(103)</visible>
+                                                        </control>
+														
+														
+														
+													
+														
+														
+														<control type="textbox">
+			
+				
+					 <posx>413</posx>
+                                                                <posy>147</posy>
+						<width>700</width>
+								<height>122</height>
+					   <label>[CR]$INFO[Skin.String(MyMessage)]</label>
+					<font>Home-Tile-Detail2</font>
+                                                                <textcolor>black</textcolor>
+		<autoscroll>True</autoscroll>
+					<aligny>center</aligny>
+						<alignx>center</alignx>
+						<autoscroll delay="2000" time="1000" repeat="10000">!Control.HasFocus(345)</autoscroll>
+						<visible>!Window.IsVisible(103)</visible>
+				</control>
+		
+		
+		
+		
+		<control type="panel" id="1">
+<posx>915</posx>
+						<posy>200</posy>
+
+						
+						<include>Common_AltHome_Panel3</include>
+
+						<ondown>2</ondown>
+	
+			
+						<pagecontrol>7017</pagecontrol>
+						
+						<content>
+						
+
+							
+																					<item id="1">
+								<description>Games</description>
+								<label>Games</label>
+								<thumb>SHORT\ICO\Games.png</thumb>
+								 <onclick>Skin.Setstring(EmailTo)</onclick>
+     
+							   
+	
+														
+							</item>
+							
+
+
+								</content>
+
+					</control>	
+			
+			<control type="panel" id="2">
+<posx>915</posx>
+						<posy>100</posy>
+
+						
+						<include>Common_AltHome_Panel3</include>
+
+						<onup>1</onup>
+	<ondown>3</ondown>
+			
+						<pagecontrol>7017</pagecontrol>
+						
+						<content>
+						
+
+							
+																					<item id="1">
+								<description>Games</description>
+								<label>Games</label>
+								<thumb>SHORT\ICO\Games.png</thumb>
+								 <onclick>Skin.Setstring(MySubject)</onclick>
+                
+							   
+	
+														
+							</item>
+							
+
+
+								</content>
+
+					</control>	
+			
+				
+			<control type="panel" id="3">
+<posx>915</posx>
+						<posy>200</posy>
+
+						
+						<include>Common_AltHome_Panel3</include>
+
+						<onup>2</onup>
+	<ondown>5</ondown>
+			
+						<pagecontrol>7017</pagecontrol>
+						
+						<content>
+						
+
+							
+																					<item id="1">
+								<description>Games</description>
+								<label>Games</label>
+								<thumb>SHORT\ICO\Games.png</thumb>
+								                 
+								 <onclick>Skin.Setstring(MyMessage)</onclick>
+
+							   
+	
+														
+							</item>
+							
+
+
+								</content>
+
+					</control>	
+			
+			
+					
+					
+					
+					
+<control type="panel" id="5">
+		 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="140" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="150" end="0" delay="140" tween="cubic" easing="out" time="600" />
+                    </animation>
+<posx>915</posx>
+						<posy>300</posy>
+
+		<onup>3</onup>
+						<include>Common_AltHome_Panel410</include>
+					
+
+
+
+
+						
+						
+						<content>
+						
+
+							
+						
+							
+			
+								<item id="1">
+								<description>Games</description>
+								<label>   Cancelar</label>
+								<thumb></thumb>
+													
+<onclick>Back</onclick>
+						
+							</item>
+							
+							<item id="2">
+								<description>Games</description>
+								<label>     Enviar</label>
+								<thumb></thumb>
+								<onclick>Back</onclick>
+								    <onclick condition="!IsEmpty(Skin.String(MyEmail)) + !IsEmpty(Skin.String(MyPassword)) + !IsEmpty(Skin.String(EmailServer)) + !IsEmpty(Skin.String(ServerPort))">RunScript(special://skin/system/Email.py)</onclick>
+							<onclick>ActivateWindow(5535)</onclick>
+						<visible>!IsEmpty(Skin.String(MyMessage)) + !IsEmpty(Skin.String(MySubject)) + !IsEmpty(Skin.String(EmailTo))</visible>
+
+								
+							</item>
+		
+							
+
+								</content>
+
+					</control>
+		</control>
+
+		
+	</controls>	
+	
+</window>
