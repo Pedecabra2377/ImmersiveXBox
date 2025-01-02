@@ -1,0 +1,176 @@
+<window type="dialog" id="4548">
+
+	<defaultcontrol always="true">1009</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<zorder>2</zorder>
+
+
+	<controls>
+	
+	
+	
+		<!--Snap Bar Section-->
+		<control type="group">
+		<visible>true</visible>
+			<posx>960</posx>
+			<posy>0</posy>
+			
+			
+	
+			<animation type="WindowOpen" reversible="false">
+				<effect type="slide" start="0,0" end="0" time="0" tween="cubic" easing="out" />
+				<effect type="fade" start="0" end="100" time="350" />
+			</animation>
+			
+			<animation type="WindowClose" reversible="false">
+				<effect type="slide" start="0,0" end="320,0" time="0" tween="cubic" easing="out" />
+				<effect type="fade" start="100" end="0" time="350" />
+			</animation>
+
+
+			
+			
+						<control type="image">
+					<include>Common_Animation_Snapped2</include>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>320</width>
+				<height>720</height>
+				<texture>demo/snapper/snap.png</texture>
+			
+			</control>
+			
+		
+		
+																						<control type="textbox">
+																				
+							
+			<posx>15</posx>
+								<posy>50</posy>
+			<label>Snap</label>
+
+		<width>300</width>
+		<height>40</height>
+		<font>Settings-Menu-Header2</font>
+			<textcolor>Label_Normal</textcolor>
+			<scrollspeed>0</scrollspeed>
+			<autoscroll>false</autoscroll>
+			<wrapmultiline>true</wrapmultiline>
+									
+																																													
+														
+		</control>
+		
+		
+			<control type="panel" id="1009">
+				
+<visible>Skin.HasSetting(Logger)</visible>
+					 <include>Common_Animation_Window</include>
+				<posx>10</posx>
+				<posy>80</posy>
+				
+				<height>480</height>
+				<onleft>1004</onleft>
+
+							
+							<onright>1006</onright>
+						<ondown>1007</ondown>
+						<onup>103</onup>
+						<include>Common_AltHome_Panel391-alt</include>
+					
+
+
+
+
+						
+						
+						<content>
+						
+
+							
+										<item id="1">
+								<description>Games</description>
+							
+								<label2>Games</label2>
+								<thumb>home\home_games.png</thumb>
+													
+												 <onclick condition="System.InternetState">ActivateWindow(929)</onclick>
+								   <onclick condition="!System.InternetState">ActivateWindow(5525)</onclick>
+                              
+			
+									
+														
+							</item>
+							
+							<item id="2">
+								<description>Games</description>
+							
+								<label2>Movies & TV</label2>
+								<thumb>demo\charm_movies.png</thumb>
+													
+												<onclick condition="System.InternetState">ActivateWindow(888)</onclick>
+								 <onclick condition="!System.InternetState">ActivateWindow(5525)</onclick>
+                              
+			
+									
+														
+							</item>
+								<item id="3">
+								<description>Games</description>
+								
+								<label2>Music</label2>
+								<thumb>home\home_music.png</thumb>
+													
+													  <onclick condition="System.InternetState">ActivateWindow(1019)</onclick>
+								 <onclick condition="!System.InternetState">ActivateWindow(5525)</onclick>
+                              
+			
+									
+														
+							</item>				
+<item id="4">
+								<description>Games</description>
+							
+								<label2>Apps</label2>
+								<thumb>home\apps.png</thumb>
+													
+													 <onclick condition="System.InternetState">ActivateWindow(919,return)</onclick>
+								 <onclick condition="!System.InternetState">ActivateWindow(5525)</onclick>
+                              
+			
+									
+														
+							</item>
+							
+							<item id="5">
+								<description>Games</description>
+								<label>colors\color_grey.png</label>
+								<label2>Search</label2>
+								<thumb>demo\search2.png</thumb>
+													
+													<onclick condition="!Skin.HasSetting(GlobalD) + System.InternetState">Skin.SetString(tube)</onclick>
+<onclick condition="!Skin.HasSetting(Searching) + !Skin.HasSetting(GlobalD) + System.InternetState">Skin.ToggleSetting(Searching)</onclick>
+<onclick condition="!Skin.HasSetting(GlobalD) + System.InternetState">ActivateWindow(10025,&quot;plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=$INFO[Skin.String(tube)]&quot;,return)</onclick>
+ <onclick condition="!System.InternetState + !Skin.HasSetting(GlobalD)">ActivateWindow(5525)</onclick>
+
+<onclick condition="Skin.HasSetting(GlobalD">RunScript(script.globalsearch)</onclick>
+                              
+			
+									
+														
+							</item>
+
+								</content>
+
+					</control>		
+			
+			
+				
+			</control>
+
+
+
+		
+	</controls>	
+	
+</window>

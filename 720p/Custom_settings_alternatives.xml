@@ -1,0 +1,254 @@
+<window type="dialog" id="5592">
+
+	<defaultcontrol>100</defaultcontrol>
+	
+	
+	
+	
+
+	
+	<!--Splash Screen-->
+
+
+	
+
+
+	
+
+	
+	<controls>
+
+		<!--Background Area-->
+
+	
+			
+<control type="image">
+		
+			<include>Common_Dimensions</include>
+			<texture background="true">colors/color_white.png</texture>
+			<colordiffuse>FanartDiffuse</colordiffuse>
+			
+			<include>Common_Animation_Window_Dark</include>
+			<visible>!Player.HasMedia</visible>
+		</control>
+
+							
+																			
+									<!--Top Area-->
+
+	
+						
+						
+			
+				
+
+					
+
+							
+					
+					
+						
+					
+					
+					
+					
+					
+								
+					
+					
+							
+					
+					
+					
+	
+		<control type="group">
+		<include>Common_Animation_Splash_kai2</include>
+			<posx>280</posx>
+			<posy>70</posy>
+			<width>320</width>
+			<height>400</height>
+			
+		
+		
+			<!--Background-->
+				
+					<control type="image">
+			
+				<posx>-5</posx>
+				<posy>0</posy>
+				<width>700</width>
+				<height>580</height>
+				<texture background="true">colors\color_black.png</texture>
+			<colordiffuse>FFF5F5F5</colordiffuse>
+
+			</control>
+			
+			
+			<include>Common_ContextMenu_Header_Back</include>
+			
+			<control type="label">
+	
+					<posx>80</posx>
+		<posy>29</posy>
+		<width>240</width>
+		<height>32</height>
+		<font>PVR-EPG-Time2</font>
+		<textcolor>Label_Normal</textcolor>
+		<aligny>top</aligny>
+				<label>Alternativas</label>
+				
+				
+			</control>
+			
+			
+			
+			<control type="grouplist" id="100">
+			
+				<description>Control Area</description>
+				<posx>-5</posx>
+				<posy>100</posy>
+				<width>700</width>
+				<height>500</height>
+				<itemgap>0</itemgap>
+				<onup>100</onup>
+				<ondown>100</ondown>
+				<onleft>98</onleft>
+				<onright>-</onright>
+				<orientation>vertical</orientation>
+				<pagecontrol>81</pagecontrol>
+				
+				
+				<include>Common_Animation_Settings_Options</include>
+						
+
+							
+						
+					<control type="radiobutton" id="157">
+					
+					<description>Background Visualiser</description>
+					<include>Common_Settings_hitme</include>
+					<label>Set A Live TV Alternative program</label>
+					
+					<onclick>Skin.SetAddon(tvalt,xbmc.addon.executable)</onclick>
+					<visible>false</visible>
+					
+				</control>
+				
+				<control type="radiobutton" id="158">
+										
+					<description>Background Visualiser</description>
+					<include>Common_Settings_RadioButton</include>
+					<label>Navegador alternativo</label>
+					<onclick>Skin.ToggleSetting(AltBrowser)</onclick>
+			<onclick condition="Skin.HasSetting(KyloBrowser)">Skin.ToggleSetting(KyloBrowser)</onclick>	
+					<selected>Skin.HasSetting(AltBrowser)</selected>
+					<visible>System.Platform.Windows</visible>
+				</control>
+				<control type="radiobutton" id="159">
+					
+					<description>Background Visualiser</description>
+					<include>Common_Settings_hitme</include>
+					<label>Navegador alternativo</label>
+				<onclick>Skin.SetFile(IELocation)</onclick>
+					
+				</control>
+					<control type="radiobutton" id="165">
+										
+					<description>Background Visualiser</description>
+					<include>Common_Settings_RadioButton</include>
+					<label>Ativar meio-blocos</label>
+					<onclick>Skin.ToggleSetting(HalfPin)</onclick>
+			
+		
+	
+					<selected>Skin.HasSetting(HalfPin)</selected>
+			
+				</control>
+				<control type="radiobutton" id="166">
+										
+					<description>Background Visualiser</description>
+					<include>Common_Settings_RadioButton</include>
+					<label>Ativar sobreposição de música</label>
+					<onclick>Skin.ToggleSetting(OverlayMus)</onclick>
+			
+		
+	
+					<selected>Skin.HasSetting(OverlayMus)</selected>
+			
+				</control>
+		
+			<control type="radiobutton" id="167">
+										
+					<description>Background Visualiser</description>
+					<include>Common_Settings_RadioButton</include>
+					<label>Desativar mudança no volume na inicialização</label>
+					<onclick>Skin.ToggleSetting(Volchange)</onclick>
+			
+		<visible>false</visible>
+	
+					<selected>Skin.HasSetting(Volchange)</selected>
+			
+				</control>	
+				<control type="radiobutton" id="168">
+										
+					<description>Background Visualiser</description>
+					<include>Common_Settings_RadioButton</include>
+					<label>Simular disco de jogo no sistema (NÃO RECOMENDADO)</label>
+					<onclick>Skin.ToggleSetting(DiscGame)</onclick>
+			
+		
+	
+					<selected>Skin.HasSetting(DiscGame)</selected>
+			
+				</control>	
+				
+				<control type="radiobutton" id="169">
+					
+					<description>Background Visualiser</description>
+					<include>Common_Settings_hitme</include>
+					<label>Definir simulação de disco de jogo</label>
+				<onclick>Skin.SetFile(GameDiscLocation)</onclick>
+					
+				</control>
+				
+				
+				<control type="radiobutton" id="175">
+										
+					<description>Background Visualiser</description>
+					<include>Common_Settings_RadioButton</include>
+					<label>Ativar menu de energia</label>
+					<onclick>Skin.ToggleSetting(PowerMenu)</onclick>
+			
+		
+	
+					<selected>Skin.HasSetting(PowerMenu)</selected>
+			
+				</control>
+				<control type="radiobutton" id="176">
+										
+					<description>Background Visualiser</description>
+					<include>Common_Settings_RadioButton</include>
+					<label>TvCatchup (If booted to) - start bbc three</label>
+					<onclick>Skin.ToggleSetting(bootbbc)</onclick>
+			<visible>false</visible>
+		
+	
+					<selected>Skin.HasSetting(bootbbc)</selected>
+			
+				</control>
+
+					</control>
+			
+		</control>			
+						
+						<!--Scrollbar-->
+
+					
+			
+
+			
+		
+		
+	</controls>	
+		
+</window>

@@ -1,0 +1,262 @@
+<window type="dialog" id="5421">
+
+	<defaultcontrol always="true">5</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<zorder>2</zorder>
+	<onload>Control.SetFocus(5)</onload>
+<onunload>Skin.SetString(ThemeColor, )</onunload>
+<onunload>Skin.SetString(ThemeBackground, )</onunload>
+<onunload>Skin.SetString(ThemeTitle, )</onunload>
+	<controls>
+	
+			<control type="image">
+		
+			<include>Common_Dimensions</include>
+			<texture background="true">colors/color_white.png</texture>
+			<colordiffuse>FanartDiffuse</colordiffuse>
+			
+			<include>Common_Animation_Window_Dark</include>
+			<visible>!Player.HasMedia</visible>
+		</control>
+
+
+		
+		
+	
+		<!--Charm Bar Section-->
+		<control type="group">
+		
+			<posx>0</posx>
+			<posy>0</posy>
+			
+			 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="150" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+					
+
+	<control type="image">
+				 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="150" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+				
+				<posx>0</posx>
+				<posy>105</posy>
+				<width>1500</width>
+				<height>500</height>
+				<texture>demo\install\1.png</texture>
+			
+			</control>
+			<control type="image">
+				 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="150" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+					
+				<posx>0</posx>
+				<posy>105</posy>
+				<width>1500</width>
+				<height>500</height>
+				<texture>demo\install\1.png</texture>
+				<visible>Control.HasFocus(1)</visible>
+			</control>
+			<control type="image">
+				 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="150" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+					
+				<posx>0</posx>
+				<posy>105</posy>
+				<width>1500</width>
+				<height>500</height>
+				<texture>demo\install\2.png</texture>
+				<visible>Control.HasFocus(2)</visible>
+			</control>
+			<control type="label">
+				 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="150" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+					
+					<posx>180</posx>
+					<posy>85</posy>
+						<width>650</width>
+								<height>160</height>
+					<label>CONFIRMAR</label>
+					<font>DialogInfo-Label2</font>
+			<textcolor>Label_Normal</textcolor>
+					<aligny>center</aligny>
+						<alignx>center</alignx>
+				</control>
+			<control type="label">
+				 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="150" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+					
+					<posx>180</posx>
+					<posy>175</posy>
+					<width>550</width>
+					<height>48</height>
+					<label>$INFO[Skin.String(ThemeTitle)]</label>
+					<font>Charms-Date</font>
+					<textcolor>Label_Normal</textcolor>
+					<aligny>center</aligny>
+						<alignx>center</alignx>
+				</control>
+				<control type="label">
+				 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="150" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+					
+					<posx>180</posx>
+					<posy>210</posy>
+						<width>900</width>
+								<height>160</height>
+					<label>Essa transação está sujeita aos termos do Xbox Live e termos de uso.</label>
+					<font>DialogInfo-Label-install</font>
+			<textcolor>Label_Normal</textcolor>
+					<aligny>center</aligny>
+						<alignx>center</alignx>
+				</control>
+				<control type="label">
+				 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="150" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+				
+					<posx>180</posx>
+					<posy>170</posy>
+						<width>650</width>
+								<height>160</height>
+					<label>GRATUITO</label>
+					<font>DialogInfo-Label2</font>
+			<textcolor>Label_Normal</textcolor>
+					<aligny>center</aligny>
+						<alignx>center</alignx>
+				</control>
+				
+			
+				
+			
+			
+			<control type="panel" id="5">
+	
+<posx>180</posx>
+						<posy>540</posy>
+
+			<onright>6</onright>
+				<onleft>-</onleft>
+						<include>Common_AltHome_Panel390</include>
+					
+
+
+
+
+						
+						
+						<content>
+						
+
+							
+						
+							<item id="1">
+								<description>Games</description>
+								<label>  Confirmar</label>
+								<thumb></thumb>
+								<onclick>Back</onclick>
+									<onclick>Skin.SetString(gamercolor, $INFO[Skin.String(ThemeColor)])</onclick>
+									<onclick>Skin.SetString(DashBack, $INFO[Skin.String(ThemeBackground)])</onclick>
+									<onclick>ActivateWindow(0)</onclick>
+							
+						
+
+								
+							</item>
+			
+								<item id="2">
+								<description>Games</description>
+								<label>   Cancelar</label>
+								<thumb></thumb>
+													
+<onclick>Back</onclick>
+						
+							</item>
+							
+							<item id="3">
+								<description>Games</description>
+								<label>   Visualizar</label>
+								<thumb></thumb>
+													
+<onclick>Skin.SetString(GameFanart2, $INFO[Skin.String(ThemeBackground)])</onclick>
+								<onclick>activatewindow(9876)</onclick>
+						
+							</item>
+		
+							
+
+								</content>
+
+					</control>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+						<control type="panel" id="6">
+
+<posx>900</posx>
+						<posy>540</posy>
+
+			<onright>-</onright>
+				<onleft>5</onleft>
+						<include>Common_AltHome_Panel390</include>
+					
+
+
+
+
+						
+						
+						<content>
+						
+
+							
+						
+							<item id="1">
+								<description>Games</description>
+								<label>Ver os termos</label>
+								<thumb></thumb>
+									<onclick>ActivateWindow(560)</onclick>		
+							
+						
+
+								
+							</item>
+			
+							
+		
+							
+
+								</content>
+
+					</control>
+
+		</control>
+
+		
+	</controls>	
+	
+</window>

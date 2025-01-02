@@ -1,0 +1,206 @@
+<window type="dialog" id="4546">
+
+	<defaultcontrol always="true">1</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<zorder>2</zorder>
+
+<onload condition="Window.IsVisible(Home)">Dialog.Close(4546)</onload>
+	<controls>
+	
+	
+	
+		<!--Snap Bar Section-->
+		<control type="group">
+		<visible>!Window.IsVisible(Home)</visible>
+			<posx>960</posx>
+			<posy>0</posy>
+			
+		
+	
+			<animation type="WindowOpen" reversible="false">
+				<effect type="slide" start="0,0" end="0" time="0" tween="cubic" easing="out" />
+				<effect type="fade" start="0" end="100" time="350" />
+			</animation>
+			
+			<animation type="WindowClose" reversible="false">
+				<effect type="slide" start="0,0" end="320,0" time="0" tween="cubic" easing="out" />
+				<effect type="fade" start="100" end="0" time="350" />
+			</animation>
+
+
+			
+			
+						<control type="image">
+					<include>Common_Animation_Snapped2</include>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>320</width>
+				<height>720</height>
+				<texture>demo/snapper2/music.png</texture>
+			
+			</control>
+					<control type="image">
+					<include>Common_Animation_Snapped2</include>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>320</width>
+				<height>720</height>
+				<texture>demo/snapper2/1.png</texture>
+			<visible>Control.HasFocus(1)</visible>
+			</control>
+											<control type="image">
+					<include>Common_Animation_Snapped2</include>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>320</width>
+				<height>720</height>
+				<texture>demo/snapper2/2.png</texture>
+				<visible>Control.HasFocus(2)</visible>
+			</control>
+								<control type="image">
+					<include>Common_Animation_Snapped2</include>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>320</width>
+				<height>720</height>
+				<texture>demo/snapper2/3.png</texture>
+				<visible>Control.HasFocus(3)</visible>
+			</control>
+			
+			
+	
+		
+		
+				<control type="image">
+					<include>Common_Animation_Snapped2</include>
+	      <posx>0</posx>
+      <posy>205</posy>
+      <width>320</width>
+      <height>300</height>
+				<texture>$INFO[MusicPlayer.Cover]</texture>
+		
+			</control>
+					
+
+
+		
+		
+																						<control type="textbox">
+																				
+							
+			<posx>15</posx>
+								<posy>165</posy>
+			<label>$INFO[MusicPlayer.Artist] - $INFO[MusicPlayer.Title]</label>
+
+		<width>300</width>
+		<height>40</height>
+		<font>Settings-Menu-Header2</font>
+			<textcolor>Label_Normal</textcolor>
+			<scrollspeed>0</scrollspeed>
+			<autoscroll>false</autoscroll>
+			<wrapmultiline>true</wrapmultiline>
+									
+																																													
+														
+		</control>
+		
+		
+					<control type="panel" id="1">
+<posx>150</posx>
+										<posy>117</posy>
+
+						
+						<include>Common_AltHome_Panel3</include>
+<onleft condition="!Skin.HasSetting(Snapped2)">Skin.ToggleSetting(Snapped2)</onleft>
+<onleft>Dialog.Close(4546)</onleft>
+<onright>2</onright>
+
+			
+						<pagecontrol>7017</pagecontrol>
+						
+						<content>
+						
+
+							
+																					<item id="1">
+								<description>Games</description>
+								<label>Games</label>
+								<thumb>SHORT\ICO\Games.png</thumb>
+								<onclick>playercontrol(previous)</onclick>
+														
+							</item>
+						
+							
+
+
+								</content>
+
+					</control>
+					
+					<control type="panel" id="2">
+<posx>150</posx>
+										<posy>117</posy>
+
+						
+						<include>Common_AltHome_Panel3</include>
+<onleft>1</onleft>
+<onright>3</onright>
+
+			
+						<pagecontrol>7017</pagecontrol>
+						
+						<content>
+						
+
+							
+																					<item id="1">
+								<description>Games</description>
+								<label>Games</label>
+								<thumb>SHORT\ICO\Games.png</thumb>
+							<onclick>playercontrol(play)</onclick>		
+							</item>
+							
+
+
+								</content>
+
+					</control>
+					<control type="panel" id="3">
+<posx>150</posx>
+										<posy>117</posy>
+
+						
+						<include>Common_AltHome_Panel3</include>
+<onleft>2</onleft>
+
+
+			
+						<pagecontrol>7017</pagecontrol>
+						
+						<content>
+						
+
+							
+																					<item id="1">
+								<description>Games</description>
+								<label>Games</label>
+								<thumb>SHORT\ICO\Games.png</thumb>
+								<onclick>playercontrol(next)</onclick>			
+							</item>
+							
+
+
+								</content>
+
+					</control>
+			
+			
+				
+			</control>
+
+
+
+		
+	</controls>	
+	
+</window>

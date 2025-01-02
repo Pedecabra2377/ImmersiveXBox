@@ -1,0 +1,498 @@
+<window type="dialog" id="1222">
+
+	<defaultcontrol always="true">1</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<zorder>2</zorder>
+<onload condition="Skin.HasSetting(Searching)">Skin.ToggleSetting(Searching)</onload>
+	<onload>Skin.SetString(tube, )</onload>
+
+	<include>Common_Animation_gamer</include>
+	<controls>
+	
+		
+
+		
+		
+		
+		
+		<include>Common_Background_Fade</include>
+		<!--Time + Date Section-->
+
+			
+
+				<control type="image">
+
+                                        <posx>0</posx>
+                                        <posy>0</posy>
+                                        <width>1280</width>
+                                        <height>720</height>
+                                        <texture>colors\color_black-.png</texture>
+										<visible>!Skin.HasSetting(GameFanart)</visible>
+ </control>
+
+ 
+ 						<control type="image">
+					
+				      <posx>0</posx>
+                                        <posy>0</posy>
+                                        <width>1280</width>
+                                        <height>720</height>
+					<fadetime>800</fadetime>
+					<texture fallback="colors\color_black.png">$INFO[Skin.String(GameFanart)]</texture>
+			<visible>Skin.HasSetting(GameFanart)</visible>
+				</control>
+ 
+ 	<control type="image">
+	
+				<include>Common_Dimensions</include>
+				<texture>colors/color_white.png</texture>
+				<colordiffuse>FanartDiffuse</colordiffuse>
+			<visible>Skin.HasSetting(GameFanart)</visible>
+			</control>
+ 
+ 
+							
+				<control type="image">
+ <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="50" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="50" end="0" delay="50" tween="cubic" easing="out" time="600" />
+                    </animation>
+                                        <posx>60</posx>
+                                        <posy>190</posy>
+                                        <width>280</width>
+                                        <height>280</height>
+                                        <texture>$INFO[Skin.String(GamePoster)]</texture>
+					
+                                </control>
+											<control type="image">
+					
+				      <posx>937</posx>
+                                        <posy>193</posy>
+                                        <width>254</width>
+                                        <height>157</height>
+					<fadetime>800</fadetime>
+					<texture background="true">colors\color_white.png</texture>
+			<visible>Control.HasFocus(7)</visible>
+				</control>
+												<control type="image">
+					 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="150" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="50" end="0" delay="150" tween="cubic" easing="out" time="600" />
+                    </animation>
+				      <posx>939</posx>
+                                        <posy>195</posy>
+                                        <width>250</width>
+                                        <height>153</height>
+					<fadetime>800</fadetime>
+					<texture background="true">$INFO[Skin.String(GameFanart2)]</texture>
+			
+				</control>
+
+						
+
+<control type="label">
+	 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="50" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="50" end="0" delay="50" tween="cubic" easing="out" time="600" />
+                    </animation>
+						<posx>60</posx>
+		<posy>120</posy>
+		<width>470</width>
+		<height>32</height>
+		<font>Settings-Menu-Header</font>
+		<textcolor>ffffffff</textcolor>
+
+	<label>$INFO[Skin.String(GameName)]</label>
+				
+			</control>
+				<control type="image">
+					 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="50" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+				    			<posx>380</posx>
+		<posy>188</posy>
+                                        <width>100</width>
+                                        <height>25</height>
+				
+					<texture>rating4.png</texture>
+			
+				</control>
+				
+				
+				
+				
+				
+						<control type="image">
+					
+				    			<posx>1129</posx>
+		<posy>358</posy>
+                                        <width>64</width>
+                                        <height>40</height>
+				
+					<texture>colors\color_white.png</texture>
+			<visible>Control.HasFocus(8)</visible>
+				</control>
+					<control type="image">
+					 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="150" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="50" end="0" delay="150" tween="cubic" easing="out" time="600" />
+                    </animation>
+				    			<posx>1131</posx>
+		<posy>360</posy>
+                                        <width>60</width>
+                                        <height>36</height>
+				
+					<texture>colors\color_keyboard_dark.png</texture>
+			
+				</control>
+						<control type="image">
+					 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="150" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="50" end="0" delay="150" tween="cubic" easing="out" time="600" />
+                    </animation>
+				    			<posx>1126</posx>
+		<posy>364</posy>
+                                        <width>72</width>
+                                        <height>72</height>
+				
+					<texture>appbar\appbar_overflowdots.png</texture>
+			
+				</control>
+				<control type="label">
+	 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="150" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="50" end="0" delay="150" tween="cubic" easing="out" time="600" />
+                    </animation>
+						<posx>939</posx>
+		<posy>420</posy>
+		<width>257</width>
+		<height>130</height>
+		<font>DialogInfo-Label-Small</font>
+		<textcolor>ffffffff</textcolor>
+
+	<label>[B]More information[/B][CR]Name : $INFO[Skin.String(GameName)][CR]Genre : $INFO[Skin.String(GameGenre)][CR]Artist : $INFO[Skin.String(GameArtist)][CR]Released : $INFO[Skin.String(GameReleased)][CR]Length : $INFO[Skin.String(GameLength)]</label>
+				
+			</control>
+			
+			<control type="label">
+	 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="50" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+						<posx>481</posx>
+		<posy>183</posy>
+		<width>470</width>
+		<height>32</height>
+		<font>DialogInfo-Header-Small</font>
+		<textcolor>ffffffff</textcolor>
+
+	<label>(609)</label>
+				
+			</control>
+			
+
+			
+		<control type="label">
+	 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="50" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="50" end="0" delay="50" tween="cubic" easing="out" time="600" />
+                    </animation>
+						<posx>60</posx>
+		<posy>82</posy>
+		<width>257</width>
+		<height>40</height>
+		<font>DialogInfo-Header-Small</font>
+		<textcolor>ffffffff</textcolor>
+
+	<label>Game details</label>
+				
+			</control>	
+
+			
+<control type="label">
+	 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="1500" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="50" end="0" delay="150" tween="cubic" easing="out" time="600" />
+                    </animation>
+						<posx>940</posx>
+		<posy>152</posy>
+		<width>257</width>
+		<height>40</height>
+		<font>DialogInfo-Header-Small</font>
+		<textcolor>ffffffff</textcolor>
+
+	<label>IMAGES</label>
+				
+			</control>
+
+
+
+<control type="label">
+	 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="50" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+						<posx>385</posx>
+		<posy>200</posy>
+		<width>257</width>
+		<height>80</height>
+		<font>DialogInfo-Header-Small</font>
+		<textcolor>ffffffff</textcolor>
+
+	<label>Released : $INFO[Skin.String(GameReleased)][CR]Artist : $INFO[Skin.String(GameArtist)]</label>
+				
+			</control>
+
+
+
+
+
+ <control type="image">
+	 <include>Common_Animation_tiledash2</include>
+                        <description>Scrollbar background</description>
+                   	<posx>375</posx>
+		<posy>270</posy>
+		<width>310</width>
+		<height>320</height>
+                        <texture border="1">colors/color_keyboard.png</texture>
+                        <visible>Control.HasFocus(70)</visible>
+                        
+                    </control>
+
+					<control type="textbox">
+ <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="50" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+						<description>Description</description>
+				<posx>385</posx>
+		<posy>280</posy>
+		<width>257</width>
+		<height>300</height>
+		<font>DialogInfo-Label-Small</font>
+		<textcolor>ffffffff</textcolor>
+						<label fallback="We're sorry, but no details were found for this item.">$INFO[Skin.String(GameDescription)]</label>
+           
+			<pagecontrol>70</pagecontrol>
+					</control>
+					
+					                    <control type="image">
+                        <description>Scrollbar background</description>
+                     				<posx>670</posx>
+		<posy>280</posy>
+                        <width>6</width>
+                        <height>294</height>
+                        <texture border="1">colors/color_keyboard_dark.png</texture>
+                        <visible>Control.IsVisible(70)</visible>
+                        <animation effect="fade" start="25" end="10" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(70)">Conditional</animation>
+                    </control>
+					         <control type="image">
+                        <description>Scrollbar background</description>
+                     				<posx>670</posx>
+		<posy>280</posy>
+                        <width>6</width>
+                        <height>294</height>
+                        <texture border="1">colors/color_keyboard_dark.png</texture>
+                        <visible>Control.IsVisible(70) + !IsEmpty(Skin.String(GameDescription))</visible>
+                        <animation effect="fade" start="25" end="10" time="300" tween="sine" easing="inout" condition="Control.HasFocus(70)">Conditional</animation>
+                    </control>
+					                    <control type="scrollbar" id="70">
+											 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="50" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+                        <description>Scrollbar</description>
+                				<posx>670</posx>
+		<posy>280</posy>
+                        <width>6</width>
+                        <height>294</height>
+                             
+                 <onright>1</onright>
+        
+                        <texturesliderbar border="1">colors/color_white.png</texturesliderbar>
+                        <texturesliderbarfocus border="1">colors/color_white.png</texturesliderbarfocus>
+                        <orientation>vertical</orientation>
+                        <showonepage>false</showonepage>
+                        <animation effect="fade" start="80" end="35" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(70)">Conditional</animation>
+                        <visible>!IsEmpty(Skin.String(GameDescription))</visible>
+                    </control>
+
+
+
+
+
+
+
+
+
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					<control type="panel" id="7">
+
+
+						                                        <posx>310</posx>
+                                        <posy>425</posy>
+                                        <width>200</width>
+                                        <height>40</height>
+						<include>Common_AltHome_Panel3</include>
+
+						
+					<onleft>1</onleft>
+					<ondown>8</ondown>
+						<pagecontrol>7017</pagecontrol>
+						
+						<content>
+						
+
+							
+																					<item id="1">
+								<description>Games</description>
+								<label>Games</label>
+								<thumb>SHORT\ICO\Games.png</thumb>
+																			
+								<onclick>ActivateWindow(9876)</onclick>
+									
+
+							</item>
+								</content>
+
+					</control>
+					
+					
+										
+					<control type="panel" id="8">
+
+
+						                                        <posx>310</posx>
+                                        <posy>425</posy>
+                                        <width>200</width>
+                                        <height>40</height>
+						<include>Common_AltHome_Panel3</include>
+
+						
+					<onleft>1</onleft>
+					<onup>7</onup>
+						<pagecontrol>7017</pagecontrol>
+						
+						<content>
+						
+
+							
+																					<item id="1">
+								<description>Games</description>
+								<label>Games</label>
+								<thumb>SHORT\ICO\Games.png</thumb>
+									<onclick>Dialog.Close(1222)</onclick>										
+								<onclick>ActivateWindow(10002,&quot;plugin://plugin.image.500px/?mode=search&amp;page=1&amp;term=$INFO[Skin.String(GameName)]&quot;,return)</onclick>
+									
+
+							</item>
+								</content>
+
+					</control>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					<control type="panel" id="1">
+		 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="120" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="50" end="0" delay="120" tween="cubic" easing="out" time="600" />
+                    </animation>
+<posx>730</posx>
+						<posy>196</posy>
+
+				<onright>7</onright>
+				<onleft>70</onleft>
+						<include>Common_AltHome_Panel381</include>
+					
+
+
+
+
+						
+						
+						<content>
+						
+
+							
+										
+								<item id="1">
+								<description>Games</description>
+								<label>Find songs</label>
+								<thumb></thumb>
+									<onclick>Dialog.Close(1222)</onclick>				
+								<onclick condition="!Skin.HasSetting(Searching)">Skin.ToggleSetting(Searching)</onclick>
+								<onclick>Skin.SetString(tube, $INFO[Skin.String(GameArtist)])</onclick>
+<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=$INFO[Skin.String(tube)]&quot;,return)</onclick>
+														
+							</item>
+							<item id="2">
+								<description>Games</description>
+								<label>Other albums</label>
+								<thumb></thumb>
+										<onclick>Dialog.Close(1222)</onclick>			
+									<onclick condition="!Skin.HasSetting(Searching)">Skin.ToggleSetting(Searching)</onclick>
+<onclick>Skin.SetString(tube, $INFO[Skin.String(GameArtist)] albums)</onclick>
+<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=$INFO[Skin.String(tube)]&quot;,return)</onclick>		
+														
+							</item>
+									<item id="3">
+								<description>Games</description>
+								<label>Similar artists</label>
+								<thumb></thumb>
+													
+							
+
+									
+<onclick>Dialog.Close(1222)</onclick>
+<onclick condition="!Skin.HasSetting(Searching)">Skin.ToggleSetting(Searching)</onclick>
+<onclick>Skin.SetString(tube, $INFO[Skin.String(GameGenre)])</onclick>
+<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=$INFO[Skin.String(tube)]&quot;,return)</onclick>							
+														
+							</item>		
+				
+<item id="4">
+								<description>Games</description>
+								<label>Buy album</label>
+								<thumb></thumb>
+													
+									<onclick>Dialog.Close(1222)</onclick>
+							<onclick>RunPlugin(plugin://plugin.program.webbrowser/?mode=showSite&amp;showPopups=no&amp;stopPlayback=yes&amp;url=http%3a%2f%2fwww.ebay.co.uk/sch/$INFO[Skin.String(GameName)])</onclick>
+								
+							</item>
+							
+	
+												
+
+
+								</content>
+
+					</control>
+					
+					
+
+		
+	</controls>	
+	
+</window>

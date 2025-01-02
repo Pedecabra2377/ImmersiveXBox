@@ -1,0 +1,117 @@
+<window id="969">
+
+	<defaultcontrol always="true">1</defaultcontrol>
+	
+	<zorder>2</zorder>
+	
+	
+
+
+	
+	<!--Splash Screen-->
+
+
+
+
+	
+	<controls>
+
+		<!--Background Area-->
+
+		
+							
+
+			<control type="image">
+							
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1280</width>
+								<height>720</height>
+								<texture>demo/setupaudio/1.jpg</texture>
+					
+								
+							</control>
+
+							
+																			
+									<!--Top Area-->
+
+			
+			<!--Content Area-->
+			<control type="group">
+			
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+				
+				<!--Animation-->
+				<include condition="!Skin.HasSetting(disablesplash)">Common_Animation_Content_Splash</include>
+				<include condition="!Window.Previous(home)">Common_Animation_Content</include>
+				
+				<control type="grouplist">
+		
+					<include>Common_Content_Grouplist</include>
+					
+					<control type="group" id="100">
+					
+						<posx>60</posx>
+						<posy>0</posy>
+						<width>400</width>
+						<height>480</height>
+						
+						
+			
+				
+
+										<control type="panel" id="1">
+<posx>915</posx>
+						<posy>200</posy>
+
+						
+						<include>Common_AltHome_Panel3</include>
+<onleft>2</onleft>
+						<onright>2</onright>
+					
+						<pagecontrol>7017</pagecontrol>
+						
+						<content>
+						
+
+							
+																					<item id="1">
+								<description>Games</description>
+								<label>Games</label>
+								<thumb>SHORT\ICO\Games.png</thumb>
+								
+								<onclick>ActivateWindow(1741)</onclick>
+														
+							</item>
+							
+
+
+								</content>
+
+					</control>
+							
+							
+
+				
+						
+						<!--Scrollbar-->
+
+					
+					</control>
+					
+			
+					
+				</control>
+				
+			</control>
+
+			
+		
+		
+	</controls>	
+		
+</window>

@@ -1,0 +1,322 @@
+<window type="window" id="7500">
+
+	<defaultcontrol always="true">5</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<zorder>2</zorder>
+	<onload>Control.SetFocus(5)</onload>
+<onload>Skin.SetString(snapwindow, 7500)</onload>
+<onload condition="!Skin.HasSetting(snapie)">Skin.ToggleSetting(snapie)</onload>
+<onload condition="Skin.HasSetting(gaming)">Skin.ToggleSetting(gaming)</onload>
+<onload>Skin.SetString(snap, demo/sna/notepad.jpg,0)</onload>
+<onload>Skin.SetString(sn,Bloco de notas)</onload>
+<onload condition="Skin.HasSetting(SnapFeature) + Skin.HasSetting(SnapAlways)">Skin.SetString(snap, C:\Assistance\Snap\Pic\Item.jpg,0)</onload>
+<onload condition="Skin.HasSetting(SnapFeature) + Skin.HasSetting(SnapAlways)">AlarmClock(startsnap,RunScript(special://skin/system/Snap.py),00:01,silent)</onload>
+	
+<onload condition="Window.Previous(7544)">Skin.SetString(bioText, $INFO[Skin.String(bio)])</onload>
+<onload condition="Window.Previous(7544)">Skin.SetString(bioText)</onload>
+<controls>
+	
+			<control type="image">
+		
+			<include>Common_Dimensions</include>
+			<texture background="true">colors/color_white.png</texture>
+			<colordiffuse>FanartDiffuse</colordiffuse>
+			
+			<include>Common_Animation_Window_Dark</include>
+			<visible>!Player.HasMedia</visible>
+		</control>
+
+
+		
+		
+	
+		<!--Charm Bar Section-->
+		<control type="group">
+		
+			<posx>0</posx>
+			<posy>0</posy>
+			
+			 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="150" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+				
+
+	<control type="image">
+				 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="150" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+				
+				<posx>0</posx>
+				<posy>105</posy>
+				<width>1500</width>
+				<height>500</height>
+				<texture>demo\install\1.png</texture>
+			
+			</control>
+			<control type="image">
+				 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="150" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+				
+				<posx>0</posx>
+				<posy>105</posy>
+				<width>1500</width>
+				<height>500</height>
+				<texture>demo\install\1.png</texture>
+				<visible>Control.HasFocus(1)</visible>
+			</control>
+			<control type="image">
+				 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="150" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+				
+				<posx>0</posx>
+				<posy>105</posy>
+				<width>1500</width>
+				<height>500</height>
+				<texture>demo\install\2.png</texture>
+				<visible>Control.HasFocus(2)</visible>
+			</control>
+			
+			<control type="label">
+				 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="150" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+			
+					<posx>180</posx>
+					<posy>110</posy>
+					<width>550</width>
+					<height>48</height>
+					<label>Bloco de notas</label>
+					<font>Charms-Date</font>
+					<textcolor>Label_Normal</textcolor>
+					<aligny>center</aligny>
+						<alignx>center</alignx>
+						<visible>!Window.Previous(7544)</visible>
+				</control>
+				<control type="label">
+				 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="150" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+			
+					<posx>180</posx>
+					<posy>110</posy>
+					<width>550</width>
+					<height>48</height>
+					<label>Definir mensagem da Bio</label>
+					<font>Charms-Date</font>
+					<textcolor>Label_Normal</textcolor>
+					<aligny>center</aligny>
+						<alignx>center</alignx>
+						<visible>Window.Previous(7544)</visible>
+				</control>
+				<control type="textbox">
+				 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="150" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+				<visible>!Window.IsVisible(103) + !Window.Previous(7544)</visible>
+					<posx>180</posx>
+					<posy>160</posy>
+						<width>900</width>
+								<height>365</height>
+					<label>[CR]$INFO[Skin.String(NotepadText)]</label>
+					<font>DialogInfo-Label-install</font>
+			<textcolor>Label_Normal</textcolor>
+					<aligny>center</aligny>
+						<alignx>center</alignx>
+						<pagecontrol>130</pagecontrol>
+						<autoscroll delay="2000" time="1000" repeat="10000">!Control.HasFocus(130)</autoscroll>
+				</control>
+				<control type="textbox">
+				 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="150" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+				<visible>!Window.IsVisible(103) + Window.Previous(7544)</visible>
+					<posx>180</posx>
+					<posy>160</posy>
+						<width>900</width>
+								<height>365</height>
+					<label>[CR]$INFO[Skin.String(bioText)]</label>
+					<font>DialogInfo-Label-install</font>
+			<textcolor>Label_Normal</textcolor>
+					<aligny>center</aligny>
+						<alignx>center</alignx>
+						<pagecontrol>130</pagecontrol>
+						<autoscroll delay="2000" time="1000" repeat="10000">!Control.HasFocus(130)</autoscroll>
+						
+				</control>
+				
+				<control type="image">
+                        <description>Scrollbar background</description>
+                     				<posx>1100</posx>
+		<posy>160</posy>
+                        <width>6</width>
+                        <height>365</height>
+                        <texture border="1">colors/color_keyboard.png</texture>
+                        <visible>Control.IsVisible(130)</visible>
+                        <animation effect="fade" start="80" end="100" time="300" tween="sine" easing="inout" condition="Control.HasFocus(130)">Conditional</animation>
+                    </control>
+			
+				<control type="scrollbar" id="130">
+											 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="50" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+                        <description>Scrollbar</description>
+                				<posx>1100</posx>
+		<posy>160</posy>
+                        <width>6</width>
+                        <height>365</height>
+                             
+               <onright>5</onright>
+        <onleft>5</onleft>
+                        <texturesliderbar border="1">colors/color_white.png</texturesliderbar>
+                        <texturesliderbarfocus border="1">colors/color_white.png</texturesliderbarfocus>
+                        <orientation>vertical</orientation>
+                        <showonepage>false</showonepage>
+                        <animation effect="fade" start="80" end="35" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(130)">Conditional</animation>
+                   
+                    </control>
+			
+			
+			<control type="panel" id="5">
+	
+<posx>180</posx>
+						<posy>540</posy>
+
+			<onup>130</onup>
+			<onright>130</onright>
+			
+						<include>Common_AltHome_Panel390</include>
+					
+
+
+
+
+						
+						
+						<content>
+			<item id="1">
+								<description>Games</description>
+								<label>Criar</label>
+								<thumb></thumb>
+									<onclick>Skin.SetString(NotepadText, )</onclick>		
+							<onclick>Skin.SetString(NotepadText)</onclick>	
+							<visible>!Window.Previous(7544)</visible>
+
+								
+							</item>
+							<item id="2">			
+
+								<description>Games</description>
+								<label>Abrir</label>
+								<thumb></thumb>
+								
+									<onclick>Skin.SetFile(NoteFile)</onclick>		
+							<onclick>RunScript(special://skin/system/ReadNote.py)</onclick>
+						
+	<visible>!Window.Previous(7544)</visible>
+								
+							</item>
+							<item id="3">
+								<description>Games</description>
+								<label>Salvar</label>
+								<thumb></thumb>
+								<onclick>Skin.SetString(NotesName, )</onclick>
+								<onclick>Skin.SetString(NotesName)</onclick>
+									<onclick>RunScript(special://skin/system/Notepad.py)</onclick>
+									<onclick>Notification(     ,Salvo,00:59,)</onclick>	
+							
+							<visible>!Window.Previous(7544)</visible>
+
+								
+							</item>
+							<item id="1">
+								<description>Games</description>
+								<label>Save as bio</label>
+								<thumb></thumb>
+								<onclick>Skin.SetString(bio, $INFO[Skin.String(bioText)])</onclick>
+								<onclick>Notification(     ,Salvo,00:59,)</onclick>
+								<onclick>back</onclick>
+										<visible>Window.Previous(7544)</visible>
+							
+						
+
+								
+							</item>
+							<item id="5">
+								<description>Games</description>
+								<label>Deletar</label>
+								<thumb></thumb>
+									<onclick>Skin.SetString(NotepadText, )</onclick>
+								
+									<onclick>Skin.SetFile(NoteFile)</onclick>
+								<onclick>RunScript(special://skin/system/DeleteNote.py)</onclick>
+									<onclick>Notification(     ,Deletado,00:59,)</onclick>		
+							<visible>!Window.Previous(7544)</visible>
+						
+
+								
+							</item>
+							<item id="6">
+								<description>Games</description>
+								<label>Limpar</label>
+								<thumb></thumb>
+									<onclick>Skin.SetString(NotepadText, )</onclick>
+								
+											<visible>!Window.Previous(7544)</visible>
+							
+						
+
+								
+							</item>
+							
+						
+							<item id="7">
+								<description>Games</description>
+								<label>Fechar</label>
+								<thumb></thumb>
+									<onclick>Back</onclick>		
+								<visible>!Window.Previous(7544)</visible>
+						
+
+								
+							</item>
+			
+								
+		
+							
+
+								</content>
+
+					</control>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+						
+
+		</control>
+
+		
+	</controls>	
+	
+</window>

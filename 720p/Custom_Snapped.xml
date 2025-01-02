@@ -1,0 +1,167 @@
+<window type="dialog" id="4545">
+
+	<defaultcontrol always="true">1</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<zorder>2</zorder>
+<onload condition="Window.IsVisible(Home)">Dialog.Close(4545)</onload>
+
+	<controls>
+	
+	
+	
+		<!--Snap Bar Section-->
+		<control type="group">
+		<visible>!Window.IsVisible(Home)</visible>
+			<posx>960</posx>
+			<posy>0</posy>
+			
+			
+	
+			<animation type="WindowOpen" reversible="false">
+				<effect type="slide" start="0,0" end="0" time="0" tween="cubic" easing="out" />
+				<effect type="fade" start="0" end="100" time="350" />
+			</animation>
+			
+			<animation type="WindowClose" reversible="false">
+				<effect type="slide" start="0,0" end="320,0" time="0" tween="cubic" easing="out" />
+				<effect type="fade" start="100" end="0" time="350" />
+			</animation>
+
+
+			
+			
+						<control type="image">
+					<include>Common_Animation_Snapped2</include>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>320</width>
+				<height>720</height>
+				<texture>demo/snapper/snap.png</texture>
+			
+			</control>
+			<control type="image">
+					<include>Common_Animation_Snapped2</include>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>320</width>
+				<height>720</height>
+				<texture>demo/snapper/1.png</texture>
+				<visible>Control.HasFocus(1)</visible>
+			</control>
+						<control type="image">
+					<include>Common_Animation_Snapped2</include>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>320</width>
+				<height>720</height>
+				<texture>demo/snapper/2.png</texture>
+				<visible>Control.HasFocus(2)</visible>
+			</control>
+			
+			
+			<control type="videowindow" id="1">
+				<include>Common_Animation_Snapped</include>
+      <description>My first video control</description>
+      <posx>0</posx>
+      <posy>205</posy>
+      <width>320</width>
+      <height>300</height>
+ 
+            <aspectratio>stretch</aspectratio>
+            <align>center</align>
+		
+
+        </control>
+		
+		
+																						<control type="textbox">
+																				
+							
+			<posx>15</posx>
+								<posy>195</posy>
+			<label>$VAR[NowPlaying_First_Label]</label>
+
+		<width>300</width>
+		<height>40</height>
+		<font>Settings-Menu-Header2</font>
+			<textcolor>Label_Normal</textcolor>
+			<scrollspeed>0</scrollspeed>
+			<autoscroll>false</autoscroll>
+			<wrapmultiline>true</wrapmultiline>
+										<visible>Player.HasVideo</visible>
+																																													
+														
+		</control>
+		
+		
+					<control type="panel" id="1">
+<posx>150</posx>
+										<posy>117</posy>
+
+						
+						<include>Common_AltHome_Panel3</include>
+<onleft condition="!Skin.HasSetting(Snapped)">Skin.ToggleSetting(Snapped)</onleft>
+<onleft>Dialog.Close(4545)</onleft>
+<onright>2</onright>
+
+			
+						<pagecontrol>7017</pagecontrol>
+						
+						<content>
+						
+
+							
+																					<item id="1">
+								<description>Games</description>
+								<label>Games</label>
+								<thumb>SHORT\ICO\Games.png</thumb>
+								<onclick>XBMC.PlayerControl(Play)</onclick>
+														
+							</item>
+						
+							
+
+
+								</content>
+
+					</control>
+					
+					<control type="panel" id="2">
+<posx>150</posx>
+										<posy>117</posy>
+
+						
+						<include>Common_AltHome_Panel3</include>
+<onleft>1</onleft>
+
+			
+						<pagecontrol>7017</pagecontrol>
+						
+						<content>
+						
+
+							
+																					<item id="1">
+								<description>Games</description>
+								<label>Games</label>
+								<thumb>SHORT\ICO\Games.png</thumb>
+								<onclick>Fullscreen</onclick>
+										<onclick>Dialog.Close(4545)</onclick>				
+							</item>
+							
+
+
+								</content>
+
+					</control>
+			
+			
+				
+			</control>
+
+
+
+		
+	</controls>	
+	
+</window>

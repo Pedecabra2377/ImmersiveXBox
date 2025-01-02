@@ -1,0 +1,17 @@
+<window type="window" id="8163">
+
+	<controls>
+
+		<!--Background Area-->
+		<include>Common_ForumBrowser_Background</include>
+	  
+  <control type="webbrowser" id="webbrowser">
+    <posx>0</posx>
+    <posy>0</posy>
+    <width>1280</width>
+    <height>720</height>
+    <url>$INFO[Skin.String(URL)]</url>
+    <visible>true</visible>
+  </control>
+  
+</window>

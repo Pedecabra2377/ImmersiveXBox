@@ -1,0 +1,419 @@
+<window type="dialog" id="5593">
+
+	<defaultcontrol>100</defaultcontrol>
+	
+	
+	
+	
+
+	
+	<!--Splash Screen-->
+
+
+	
+
+
+	
+
+	
+	<controls>
+
+		<!--Background Area-->
+
+	
+			
+<control type="image">
+		
+			<include>Common_Dimensions</include>
+			<texture background="true">colors/color_white.png</texture>
+			<colordiffuse>FanartDiffuse</colordiffuse>
+			
+			<include>Common_Animation_Window_Dark</include>
+			<visible>!Player.HasMedia</visible>
+		</control>
+
+							
+																			
+									<!--Top Area-->
+
+	
+						
+						
+			
+				
+
+					
+
+							
+					
+					
+						
+					
+					
+					
+					
+					
+								
+					
+					
+							
+					
+					
+					
+	
+		<control type="group">
+		<include>Common_Animation_Splash_kai2</include>
+			<posx>280</posx>
+			<posy>70</posy>
+			<width>320</width>
+			<height>400</height>
+			
+		
+		
+			<!--Background-->
+				
+					<control type="image">
+			
+				<posx>-5</posx>
+				<posy>0</posy>
+				<width>700</width>
+				<height>580</height>
+				<texture background="true">colors\color_black.png</texture>
+			<colordiffuse>FFF5F5F5</colordiffuse>
+
+			</control>
+			
+			
+			<include>Common_ContextMenu_Header_Back</include>
+			
+			<control type="label">
+	
+					<posx>80</posx>
+		<posy>29</posy>
+		<width>240</width>
+		<height>32</height>
+		<font>PVR-EPG-Time2</font>
+		<textcolor>Label_Normal</textcolor>
+		<aligny>top</aligny>
+				<label>Mudanças</label>
+				
+				
+			</control>
+			
+			
+			
+			<control type="grouplist" id="100">
+			
+				<description>Control Area</description>
+				<posx>-5</posx>
+				<posy>100</posy>
+				<width>700</width>
+				<height>500</height>
+				<itemgap>0</itemgap>
+				<onup>100</onup>
+				<ondown>100</ondown>
+				<onleft>98</onleft>
+				<onright>-</onright>
+				<orientation>vertical</orientation>
+				<pagecontrol>81</pagecontrol>
+				
+				
+				<include>Common_Animation_Settings_Options</include>
+						
+
+							
+						
+						<control type="radiobutton" id="149">
+										
+					<description>Background Visualiser</description>
+					<include>Common_Settings_RadioButton</include>
+					<label>Apps da internet</label>
+					<onclick>Skin.ToggleSetting(ShowNewApps1)</onclick>
+					<onclick condition="Skin.HasSetting(ShowNewApps1)">ActivateWindow(8878)</onclick>
+		
+	
+					<selected>Skin.HasSetting(ShowNewApps1)</selected>
+				</control>
+																			
+					<control type="radiobutton" id="152">
+										
+					<description>Background Visualiser</description>
+					<include>Common_Settings_RadioButton</include>
+					<label>Ativar pesquisa global no Bing</label>
+					<onclick>Skin.ToggleSetting(Global)</onclick>
+				
+		
+	
+					<selected>Skin.HasSetting(Global)</selected>
+					
+				</control>
+	<control type="radiobutton" id="153">
+										
+					<description>Background Visualiser</description>
+					<include>Common_Settings_RadioButton</include>
+					<label>Pesquisa global no Início</label>
+					<onclick>Skin.ToggleSetting(GlobalD)</onclick>
+				
+		
+	
+					<selected>Skin.HasSetting(GlobalD)</selected>
+					
+				</control>
+							
+			
+				<control type="radiobutton" id="155">
+										
+					<description>Background Visualiser</description>
+					<include>Common_Settings_RadioButton</include>
+					<label>Ativar função de captura</label>
+					<onclick>Skin.ToggleSetting(SnapFeature)</onclick>
+			
+		
+	
+					<selected>Skin.HasSetting(SnapFeature)</selected>
+				</control>
+							<control type="radiobutton" id="156">
+					
+					<description>Background Visualiser</description>
+					<include>Common_Settings_hitme</include>
+					<label>Set Steam exe location</label>
+				<onclick>Skin.SetFile(SteamLocation)</onclick>
+					<visible>false</visible>
+				</control>
+					
+				
+<control type="radiobutton" id="157">
+										
+					<description>Background Visualiser</description>
+					<include>Common_Settings_RadioButton</include>
+					<label>Forçar saída</label>
+					<onclick>Skin.ToggleSetting(RealSignOut)</onclick>
+				
+		
+	
+					<selected>Skin.HasSetting(RealSignOut)</selected>
+					
+				</control>
+				<control type="radiobutton" id="158">
+										
+					<description>Background Visualiser</description>
+					<include>Common_Settings_RadioButton</include>
+					<label>Recursos ao invés de loja</label>
+					<onclick>Skin.ToggleSetting(LibraryStore)</onclick>
+				<visible>false</visible>		
+	
+					<selected>Skin.HasSetting(LibraryStore)</selected>
+					
+				</control>
+				
+				
+					<control type="radiobutton" id="159">
+										
+					<description>Background Visualiser</description>
+					<include>Common_Settings_RadioButton</include>
+					<label>Fechar após inicialização</label>
+					<onclick>Skin.ToggleSetting(quitboot)</onclick>
+				
+		
+	
+					<selected>Skin.HasSetting(quitboot)</selected>
+					
+				</control>
+				<control type="radiobutton" id="160">
+										
+					<description>Background Visualiser</description>
+					<include>Common_Settings_RadioButton</include>
+					<label>Contar filmes no sistema</label>
+					<onclick>Skin.ToggleSetting(moviecount)</onclick>
+				
+		
+	
+					<selected>Skin.HasSetting(moviecount)</selected>
+					
+				</control>
+				<control type="radiobutton" id="161">
+										
+					<description>Background Visualiser</description>
+					<include>Common_Settings_RadioButton</include>
+					<label>Contar programas de TV no sistema</label>
+					<onclick>Skin.ToggleSetting(showcount)</onclick>
+				
+		
+	
+					<selected>Skin.HasSetting(showcount)</selected>
+					
+				</control>
+				<control type="radiobutton" id="162">
+										
+					<description>Background Visualiser</description>
+					<include>Common_Settings_RadioButton</include>
+					<label>Contar música no sistema</label>
+					<onclick>Skin.ToggleSetting(songcount)</onclick>
+				
+		
+	
+					<selected>Skin.HasSetting(songcount)</selected>
+					
+				</control>
+				<control type="radiobutton" id="163">
+										
+					<description>Background Visualiser</description>
+					<include>Common_Settings_RadioButton</include>
+					<label>Alarme no fundo</label>
+					<onclick>Skin.ToggleSetting(AlarmBing)</onclick>
+				
+		
+	
+					<selected>Skin.HasSetting(AlarmBing)</selected>
+					
+				</control>
+				
+				<control type="radiobutton" id="164">
+										
+					<description>Background Visualiser</description>
+					<include>Common_Settings_RadioButton</include>
+					<label>Sobreposição da tela de carregamento do sistema</label>
+					<onclick>Skin.ToggleSetting(DashAppSplash)</onclick>
+				
+		
+	
+					<selected>Skin.HasSetting(DashAppSplash)</selected>
+					
+				</control>
+				<control type="radiobutton" id="165">
+										
+					<description>Background Visualiser</description>
+					<include>Common_Settings_RadioButton</include>
+					<label>Capturar todas janelas na interface</label>
+					<onclick>Skin.ToggleSetting(SnapAlways)</onclick>
+				
+		
+	
+					<selected>Skin.HasSetting(SnapAlways)</selected>
+					
+				</control>
+				
+				
+					<control type="radiobutton" id="166">
+										
+					<description>Background Visualiser</description>
+					<include>Common_Settings_RadioButton</include>
+					<label>Animação de zoom na interface</label>
+					<onclick>Skin.ToggleSetting(newdashzoom)</onclick>
+				
+		
+	
+					<selected>Skin.HasSetting(newdashzoom)</selected>
+					
+				</control>
+				
+
+
+<control type="radiobutton" id="167">
+										
+					<description>Background Visualiser</description>
+					<include>Common_Settings_RadioButton</include>
+					<label>Fundo escuro da interface</label>
+					<onclick>Skin.ToggleSetting(dark)</onclick>
+				<oncick condition="Skin.HasSetting(light)">Skin.ToggleSetting(light)</oncick>
+		<oncick condition="Skin.HasSetting(lighter)">Skin.ToggleSetting(lighter)</oncick>
+	
+					<selected>Skin.HasSetting(dark)</selected>
+					
+				</control>
+				<control type="radiobutton" id="168">
+										
+					<description>Background Visualiser</description>
+					<include>Common_Settings_RadioButton</include>
+					<label>Fundo claro da interface</label>
+					<onclick>Skin.ToggleSetting(light)</onclick>
+				
+		<oncick condition="Skin.HasSetting(dark)">Skin.ToggleSetting(dark)</oncick>
+		<oncick condition="Skin.HasSetting(lighter)">Skin.ToggleSetting(lighter)</oncick>
+	
+					<selected>Skin.HasSetting(light)</selected>
+					
+				</control>
+				<control type="radiobutton" id="169">
+										
+					<description>Background Visualiser</description>
+					<include>Common_Settings_RadioButton</include>
+					<label>Sobreposição mais clara da interface</label>
+					<onclick>Skin.ToggleSetting(lighter)</onclick>
+				<oncick condition="Skin.HasSetting(light)">Skin.ToggleSetting(light)</oncick>
+		<oncick condition="Skin.HasSetting(dark)">Skin.ToggleSetting(dark)</oncick>
+		
+	
+					<selected>Skin.HasSetting(lighter)</selected>
+					
+				</control>
+				<control type="radiobutton" id="170">
+										
+					<description>Background Visualiser</description>
+					<include>Common_Settings_RadioButton</include>
+					<label>Fundo animado</label>
+					<onclick>Skin.ToggleSetting(animation_dash)</onclick>
+				
+	
+					<selected>Skin.HasSetting(animation_dash)</selected>
+					
+				</control>
+					<control type="radiobutton" id="171">
+										
+					<description>Background Visualiser</description>
+					<include>Common_Settings_RadioButton</include>
+					<label>Checar por atualização na inicialização</label>
+					<onclick>Skin.ToggleSetting(UpdStartup)</onclick>
+				
+	
+					<selected>Skin.HasSetting(UpdStartup)</selected>
+					
+				</control>
+					<control type="radiobutton" id="172">
+										
+					<description>Background Visualiser</description>
+					<include>Common_Settings_RadioButton</include>
+					<label>fundo xperience</label>
+					<onclick>Skin.ToggleSetting(xperiencefade)</onclick>
+				
+	
+					<selected>Skin.HasSetting(xperiencefade)</selected>
+					<visible>false</visible>
+				</control>
+					<control type="radiobutton" id="173">
+										
+					<description>Background Visualiser</description>
+					<include>Common_Settings_RadioButton</include>
+					<label>sobreposição xperience</label>
+					<onclick>Skin.ToggleSetting(xperienceoverlay)</onclick>
+				
+	
+					<selected>Skin.HasSetting(xperienceoverlay)</selected>
+					<visible>false</visible>
+				</control>
+				
+				<control type="radiobutton" id="174">
+										
+					<description>Background Visualiser</description>
+					<include>Common_Settings_RadioButton</include>
+					<label>sobreposição xperience claro</label>
+					<onclick>Skin.ToggleSetting(xperiencelight)</onclick>
+				
+	
+					<selected>Skin.HasSetting(xperiencelight)</selected>
+					<visible>false</visible>
+</control>
+			
+		</control>			
+						
+						<!--Scrollbar-->
+
+					
+			
+
+			
+		
+		
+	</controls>	
+		
+</window>

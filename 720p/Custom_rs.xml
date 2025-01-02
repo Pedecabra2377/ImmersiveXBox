@@ -1,0 +1,1659 @@
+<window id="667">
+
+	<defaultcontrol always="true">9000</defaultcontrol>
+	
+	<zorder>2</zorder>
+<onclick>Skin.SetString(tube, )</onclick>
+	<onload condition="!Skin.HasSetting(disablesplash)">ActivateWindow(8170)</onload>
+<onload><script>RunScript(script.rssclient,guiless,feed=https://www.youtube.com/feeds/videos.xml?playlist_id=PLrEnWoR732-BHrPp_Pm8_VleD68f9s14-_render=rss,imagecaching=false,limit=99)</script></onload>
+	<onload condition="Skin.HasSetting(loder)">AlarmClock(loda,Skin.ToggleSetting(loder),00:10,silent,)</onload>
+	<onload condition="Container(20).HasFocus(2)">Control.Move(20,-1)</onload>
+<onload condition="Container(20).HasFocus(3)">Control.Move(20,-2)</onload>
+<onload condition="Skin.HasSetting(Searching)">Skin.ToggleSetting(Searching)</onload>
+	
+	<onload>Skin.SetString(snapwindow, 667)</onload>
+<onload condition="!Skin.HasSetting(snapie)">Skin.ToggleSetting(snapie)</onload>
+<onload condition="Skin.HasSetting(gaming)">Skin.ToggleSetting(gaming)</onload>
+<onload>Skin.SetString(snap, demo/sna/youtube.jpg,0)</onload>
+<onload>Skin.SetString(sn,Youtube)</onload>
+<onload condition="Skin.HasSetting(SnapFeature) + Skin.HasSetting(SnapAlways)">Skin.SetString(snap, C:\Assistance\Snap\Pic\Item.jpg,0)</onload>
+<onload condition="Skin.HasSetting(SnapFeature) + Skin.HasSetting(SnapAlways)">AlarmClock(startsnap,RunScript(special://skin/system/Snap.py),00:01,silent)</onload>
+
+	<!--Splash Screen-->
+
+		<!--Fetch RSS Videos from Skin Setting-->
+	
+	<!--Fetch Default if Skin Setting is empty (First Run)-->
+	<onload>XBMC.RunScript(script.rssclient,guiless,feed=https://www.youtube.com/feeds/videos.xml?playlist_id=PLrEnWoR732-BHrPp_Pm8_VleD68f9s14-_render=rss,imagecaching=false,limit=99)</onload>
+
+<onload>Skin.SetString(tube, )</onload>
+	
+	<onload condition="System.HasAddon(script.randomandlastitems) + Skin.HasSetting(ShowHistorySection_Video)">XBMC.RunScript(script.randomandlastitems,limit=10,method=Last,playlist=special://skin/playlists/History (Movies).xsp,menu=Menu1)</onload>
+	
+	<onload condition="System.HasAddon(script.extendedinfo) + Skin.HasSetting(ShowInCinemasSection_Video)">RunScript(script.extendedinfo,info=incinema)</onload>
+	<onload condition="System.HasAddon(script.extendedinfo) + Skin.HasSetting(ShowTrendingSection_Video)">RunScript(script.extendedinfo,info=TrendingMovies)</onload>
+	
+	<onload>AlarmClock(MoveFeatured,Control.Move(9001,1),00:20,silent,loop)</onload>
+	<onunload>XBMC.CancelAlarm(MoveFeatured,true)</onunload>
+	
+	<onload>AlarmClock(MoveIncinemas,Control.Move(9005,1),00:20,silent,loop)</onload>
+	<onunload>XBMC.CancelAlarm(MoveIncinemas,true)</onunload>
+	
+	<onload>AlarmClock(MoveTrakt,Control.Move(9007,1),00:20,silent,loop)</onload>
+	<onunload>XBMC.CancelAlarm(MoveTrakt,true)</onunload>
+	
+	<controls>
+
+		<!--Background Area-->
+																							<control type="image">
+																									<include>Common_Animation_Window</include>	
+											
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1280</width>
+								<height>720</height>
+								<texture>colors\color_black.png</texture>
+
+							</control>
+																														<control type="image">
+																																<include>Common_Animation_Window</include>	
+											
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1280</width>
+								<height>720</height>
+								<texture>demo\app\youtube\bg.jpg</texture>
+<visible>Skin.HasSetting(ShowFanartBackground)</visible>
+							</control>
+																					<control type="image">
+			
+				<include>Common_Dimensions</include>
+				<texture background="true">colors/color_white.png</texture>
+				<colordiffuse>FanartDiffuse</colordiffuse>
+					<include>Common_Animation_Window</include>	
+				<visible>Skin.HasSetting(ShowFanartBackground)</visible>
+				
+			</control>
+							
+		
+			  		<control type="image">
+	<posx>970</posx>
+	<posy>-40</posy>
+	<width>300</width>
+	<height>225</height>
+			<texture>demo\app\youtube\logo.png</texture>
+			<aspectratio>stretch</aspectratio>
+			<include>Common_Animation_Window</include>
+		</control>	
+
+	
+										<control type="grouplist">
+			<visible>true</visible>
+													<!--Animation-->
+				<include>Common_Animation_Window</include>		
+				<posx>128</posx>
+				<posy>100</posy>
+				<width>1100</width>
+				<height>100</height>
+				<orientation>horizontal</orientation>
+				<itemgap>20</itemgap>
+												<control type="label">
+						<visible>true</visible>
+					<width min="0" max="400">auto</width>
+					<height>100</height>
+					<label>Presenteado</label>
+					<font>Content-Label</font>
+					<textcolor>FF333333</textcolor>
+					<aligny>top</aligny>
+<animation effect="zoom" end="108" center="auto" time="200" condition="Container(20).HasFocus(1) + Skin.HasSetting(textview)">Conditional</animation>
+				</control>
+				
+				<control type="label">
+						<visible>true</visible>
+					<width min="0" max="400">auto</width>
+					<height>100</height>
+					<label>Recente</label>
+					<font>Content-Label</font>
+					<textcolor>FF333333</textcolor>
+					<aligny>top</aligny>
+<animation effect="zoom" end="108" center="auto" time="200" condition="Container(20).HasFocus(2) + Skin.HasSetting(textview)">Conditional</animation>
+				</control>
+								<control type="label">
+						<visible>true</visible>
+					<width min="0" max="400">auto</width>
+					<height>100</height>
+					<label>Meu Youtube</label>
+					<font>Content-Label</font>
+					<textcolor>FF333333</textcolor>
+					<aligny>top</aligny>
+<animation effect="zoom" end="108" center="auto" time="200" condition="Container(20).HasFocus(3) + Skin.HasSetting(textview)">Conditional</animation>
+				</control>
+				
+
+				
+
+				</control>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+										<control type="grouplist">
+			<visible>true</visible>
+													<!--Animation-->
+			<include>Common_Animation_Window</include>	
+				<posx>128</posx>
+				<posy>100</posy>
+				<width>1100</width>
+				<height>100</height>
+				<orientation>horizontal</orientation>
+				<itemgap>20</itemgap>
+												<control type="label">
+						<visible>true</visible>
+					<width min="0" max="400">auto</width>
+					<height>100</height>
+					<label>Presenteado</label>
+					<font>Content-Label</font>
+					<textcolor>FFFFFFFF</textcolor>
+					<aligny>top</aligny>
+					<animation effect="zoom" end="108" center="auto" time="200" condition="Container(20).HasFocus(1) + Skin.HasSetting(textview)">Conditional</animation>
+                       <animation effect="fade" start="0" end="100" time="200" tween="cubic" easing="inout" condition="Container(20).HasFocus(1)">Conditional</animation>
+                <animation effect="fade" start="100" end="0" time="200" tween="cubic" easing="inout" condition="!Container(20).HasFocus(1)">Conditional</animation>
+				</control>
+				
+				<control type="label">
+						<visible>true</visible>
+					<width min="0" max="400">auto</width>
+					<height>100</height>
+					<label>Recente</label>
+					<font>Content-Label</font>
+					<textcolor>FFFFFFFF</textcolor>
+					<aligny>top</aligny>
+								 <animation effect="zoom" end="108" center="auto" time="200" condition="Container(20).HasFocus(2) + Skin.HasSetting(textview)">Conditional</animation>
+                              <animation effect="fade" start="0" end="100" time="200" tween="cubic" easing="inout" condition="Container(20).HasFocus(2)">Conditional</animation>
+                <animation effect="fade" start="100" end="0" time="200" tween="cubic" easing="inout" condition="!Container(20).HasFocus(2)">Conditional</animation>
+				</control>
+				
+						<control type="label">
+						<visible>true</visible>
+					<width min="0" max="400">auto</width>
+					<height>100</height>
+					<label>Meu Youtube</label>
+					<font>Content-Label</font>
+					<textcolor>FFFFFFFF</textcolor>
+					<aligny>top</aligny>
+								 <animation effect="zoom" end="108" center="auto" time="200" condition="Container(20).HasFocus(3) + Skin.HasSetting(textview)">Conditional</animation>
+                              <animation effect="fade" start="0" end="100" time="200" tween="cubic" easing="inout" condition="Container(20).HasFocus(3)">Conditional</animation>
+                <animation effect="fade" start="100" end="0" time="200" tween="cubic" easing="inout" condition="!Container(20).HasFocus(3)">Conditional</animation>
+				</control>
+				
+	
+
+
+				</control>
+				
+		
+				        <control type="wraplist" id="20">
+            <description>Control list</description>
+            <posx>0</posx>
+            <posy>0</posy>
+            <height>3</height>
+            <width>3</width>
+            <onup>21</onup>
+            <orientation>horizontal</orientation>
+            <scrolltime>0</scrolltime>
+            <viewtype>list</viewtype>
+	    <defaultcontrol>2</defaultcontrol>
+            <itemlayout width="3" height="3"/>
+           	<focusedlayout width="3" height="3"/>
+            <content>
+            	<item id="1">
+            		<label>Fixado</label>
+            		<onclick>-</onclick>
+            	</item>
+            	<item id="2">
+            		<label>Início</label>
+            		<onclick>-</onclick>
+            	</item>
+				       	<item id="3">
+            		<label></label>
+            		<onclick>-</onclick>
+            	</item>
+
+
+            </content>
+        </control>
+	
+
+
+
+				
+	
+
+
+			
+
+		<control type="group">
+		
+			<include>Common_Dimensions</include>
+			<include>Common_Animation_Window</include>
+		
+			<!--Top Area-->
+			<include>Common_Breadcrumb</include>
+						<include>Common_Overlay</include>
+			
+			<!--Content Area-->
+			<control type="group">
+			
+				<posx>0</posx>
+				<posy>100</posy>
+				<width>1280</width>
+				<height>480</height>
+				
+				<!--Animation-->
+			
+				
+				<control type="grouplist">
+		
+									<include>Common_Content_Grouplist3</include>
+				
+					
+					
+					
+					
+					
+					<control type="group" id="8000">
+
+						<posx>50</posx>
+						<posy>0</posy>
+						<width>1200</width>
+						<height>720</height>
+<include>Common_Animation_Content</include>
+												<control type="label">
+														<include>Common_Animation_Content</include>
+														<posx>25</posx>
+			<posy>100</posy>
+						<visible>true</visible>
+					<width min="0" max="600">auto</width>
+					<height>100</height>
+					<label>Vídeos recentes do Youtube</label>
+					<font>Content-Label</font>
+					<textcolor>FFFFFFFF</textcolor>
+					<aligny>top</aligny>
+								 
+        
+				</control>
+							<!--RSS Video Feed-->
+
+		<control type="list" id="9000">
+
+			<preloaditems>3</preloaditems>
+			<posx>15</posx>
+			<posy>167</posy>
+			<width>1260</width>
+			<height>404</height>
+			<onleft>-</onleft>
+			<onright>-</onright>
+			<onup>11</onup>
+			<ondown>-</ondown>
+			<scrolltime>250</scrolltime>
+			<orientation>horizontal</orientation>
+			<itemlayout width="416" height="256">		
+				<control type="image"><!--Thumb-->
+	<include>Common_Animation_Content</include>
+					<posx>17</posx>
+					<posy>0</posy>
+					<width>384</width>
+					<height>252</height>
+					<texture background="true" fallback="fallback_homefeed.png" blend="false">$INFO[ListItem.Thumb]</texture>
+					<bordersize>8</bordersize>
+					<aspectratio>scale</aspectratio>
+					<colordiffuse>FF8E8F90</colordiffuse>
+				</control>
+			
+				<control type="textbox"><!--Label-->
+			<include>Common_Animation_Content</include>
+					<posx>40</posx>
+					<posy>246</posy>
+					<width>348</width>
+					<height>84</height>
+					<font>font22</font>
+					<align>left</align>
+					<aligny>top</aligny>
+					<label>$INFO[ListItem.Label]</label>
+					<textcolor>white_60</textcolor>
+				</control>
+			</itemlayout>
+			<focusedlayout width="416" height="256">
+				<control type="group">
+				<animation effect="zoom" end="108" center="auto" time="200">Focus</animation>
+					<control type="image"><!--Thumb No Focus-->
+			<include>Common_Animation_Content</include>
+						<posx>17</posx>
+						<posy>0</posy>
+						<width>384</width>
+						<height>252</height>
+						<texture background="true" fallback="fallback_homefeed.png" blend="false">$INFO[ListItem.Thumb]</texture>
+						<bordersize>8</bordersize>
+						<colordiffuse>FF8E8F90</colordiffuse>
+						<aspectratio>scale</aspectratio>
+					</control>
+						<control type="image"><!--Thumb Focus-->
+				<include>Common_Animation_Content</include>
+						<posx>17</posx>
+						<posy>0</posy>
+						<width>384</width>
+						<height>252</height>
+						<texture background="true" fallback="fallback_homefeed.png" blend="false">$INFO[ListItem.Thumb]</texture>
+						<bordersize>8</bordersize>
+						<aspectratio>scale</aspectratio>
+						<visible>Control.HasFocus(9000)</visible>
+					</control>
+					<control type="textbox"><!--Label No Focus-->
+		<include>Common_Animation_Content</include>
+						<posx>40</posx>
+						<posy>246</posy>
+						<width>348</width>
+						<height>84</height>
+						<font>font22</font>
+						<align>left</align>
+						<aligny>top</aligny>
+						<label>$INFO[ListItem.Label]</label>
+						<textcolor>white_60</textcolor>
+						<visible>!Control.HasFocus(9000)</visible>
+					</control>
+					<control type="textbox"><!--Label Focus-->
+			<include>Common_Animation_Content</include>
+						<posx>40</posx>
+						<posy>246</posy>
+						<width>348</width>
+						<height>84</height>
+						<font>font22</font>
+						<align>left</align>
+						<aligny>top</aligny>
+						<label>$INFO[ListItem.Label]</label>
+						<textcolor>white</textcolor>
+						<autoscroll delay="300" time="3000" repeat="4000">!Control.HasFocus(50)</autoscroll>
+						<visible>Control.HasFocus(9000)</visible>
+					</control>
+					<control type="image"><!--Selection-->
+						<posx>12</posx>
+						<posy>-4</posy>
+						<width>394</width>
+						<height>260</height>
+						<texture border="39">selection_on.png</texture>
+						<visible>Control.HasFocus(9000)</visible>
+					</control>
+				</control>
+				</focusedlayout>
+				<content>
+					<item id="1">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.1.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.1.Title)]</label>
+			           <thumb>$INFO[Window.Property(RSS.1.Image.1)]</thumb>
+					</item>
+					<item id="2">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.2.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.2.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.2.Image.1)]</thumb>
+					</item>
+					<item id="3">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.3.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.3.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.3.Image.1)]</thumb>
+					</item>
+					<item id="4">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.4.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.4.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.4.Image.1)]</thumb>
+					</item>
+					<item id="5">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.5.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.5.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.5.Image.1)]</thumb>
+					</item>
+					<item id="6">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.6.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.6.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.6.Image.1)]</thumb>
+					</item>
+					<item id="7">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.7.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.7.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.7.Image.1)]</thumb>
+					</item>
+					<item id="8">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.8.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.8.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.8.Image.1)]</thumb>
+					</item>
+					<item id="9">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.9.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.9.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.9.Image.1)]</thumb>
+					</item>
+					<item id="10">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.10.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.10.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.10.Image.1)]</thumb>
+					</item>
+					<item id="11">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.11.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.11.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.11.Image.1)]</thumb>
+					</item>
+					<item id="12">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.12.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.12.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.12.Image.1)]</thumb>
+					</item>
+					<item id="13">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.13.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.13.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.13.Image.1)]</thumb>
+					</item>
+					<item id="14">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.14.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.14.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.14.Image.1)]</thumb>
+					</item>
+					<item id="15">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.15.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.15.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.15.Image.1)]</thumb>
+					</item>
+					<item id="16">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.16.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.16.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.16.Image.1)]</thumb>
+					</item>
+					<item id="17">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.17.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.17.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.17.Image.1)]</thumb>
+					</item>
+					<item id="18">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.18.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.18.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.18.Image.1)]</thumb>
+					</item>
+					<item id="19">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.19.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.19.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.19.Image.1)]</thumb>
+					</item>
+					<item id="20">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.20.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.20.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.20.Image.1)]</thumb>
+					</item>
+					<item id="21">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.21.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.21.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.21.Image.1)]</thumb>
+					</item>
+					<item id="22">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.22.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.22.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.22.Image.1)]</thumb>
+					</item>
+					<item id="23">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.23.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.23.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.23.Image.1)]</thumb>
+					</item>
+					<item id="24">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.24.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.24.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.24.Image.1)]</thumb>
+					</item>
+					<item id="25">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.25.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.25.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.25.Image.1)]</thumb>
+					</item>
+					<item id="26">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.26.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.26.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.26.Image.1)]</thumb>
+					</item>
+					<item id="27">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.27.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.27.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.27.Image.1)]</thumb>
+					</item>
+					<item id="28">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.28.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.28.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.28.Image.1)]</thumb>
+					</item>
+					<item id="29">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.29.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.29.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.29.Image.1)]</thumb>
+					</item>
+					<item id="30">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.30.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.30.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.30.Image.1)]</thumb>
+					</item>
+					<item id="31">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.31.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.31.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.31.Image.1)]</thumb>
+					</item>
+					<item id="32">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.32.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.32.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.32.Image.1)]</thumb>
+					</item>
+					<item id="33">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.33.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.33.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.33.Image.1)]</thumb>
+					</item>
+					<item id="34">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.34.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.34.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.34.Image.1)]</thumb>
+					</item>
+					<item id="35">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.35.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.35.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.35.Image.1)]</thumb>
+					</item>
+					<item id="36">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.36.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.36.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.36.Image.1)]</thumb>
+					</item>
+					<item id="37">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.37.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.37.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.37.Image.1)]</thumb>
+					</item>
+					<item id="38">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.38.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.38.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.38.Image.1)]</thumb>
+					</item>
+					<item id="39">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.39.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.39.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.39.Image.1)]</thumb>
+					</item>
+					<item id="40">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.40.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.40.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.40.Image.1)]</thumb>
+					</item>
+					<item id="41">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.41.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.41.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.41.Image.1)]</thumb>
+					</item>
+					<item id="42">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.42.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.42.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.42.Image.1)]</thumb>
+					</item>
+					<item id="43">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.43.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.43.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.43.Image.1)]</thumb>
+					</item>
+					<item id="44">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.44.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.44.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.44.Image.1)]</thumb>
+					</item>
+					<item id="45">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.45.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.45.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.45.Image.1)]</thumb>
+					</item>
+					<item id="46">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.46.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.46.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.46.Image.1)]</thumb>
+					</item>
+					<item id="47">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.47.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.47.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.47.Image.1)]</thumb>
+					</item>
+					<item id="48">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.48.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.48.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.48.Image.1)]</thumb>
+					</item>
+					<item id="49">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.49.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.49.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.49.Image.1)]</thumb>
+					</item>
+					<item id="50">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.50.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.50.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.50.Image.1)]</thumb>
+					</item>
+					<item id="51">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.51.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.51.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.51.Image.1)]</thumb>
+					</item>
+					<item id="52">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.52.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.52.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.52.Image.1)]</thumb>
+					</item>
+					<item id="53">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.53.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.53.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.53.Image.1)]</thumb>
+					</item>
+					<item id="54">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.54.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.54.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.54.Image.1)]</thumb>
+					</item>
+					<item id="55">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.55.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.55.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.55.Image.1)]</thumb>
+					</item>
+					<item id="56">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.56.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.56.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.56.Image.1)]</thumb>
+					</item>
+					<item id="57">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.57.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.57.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.57.Image.1)]</thumb>
+					</item>
+					<item id="58">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.58.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.58.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.58.Image.1)]</thumb>
+					</item>
+					<item id="59">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.59.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.59.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.59.Image.1)]</thumb>
+					</item>
+					<item id="60">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.60.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.60.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.60.Image.1)]</thumb>
+					</item>
+					<item id="61">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.61.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.61.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.61.Image.1)]</thumb>
+					</item>
+					<item id="62">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.62.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.62.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.62.Image.1)]</thumb>
+					</item>
+					<item id="63">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.63.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.63.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.63.Image.1)]</thumb>
+					</item>
+					<item id="64">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.64.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.64.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.64.Image.1)]</thumb>
+					</item>
+					<item id="65">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.65.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.65.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.65.Image.1)]</thumb>
+					</item>
+					<item id="66">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.66.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.66.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.66.Image.1)]</thumb>
+					</item>
+					<item id="67">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.67.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.67.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.67.Image.1)]</thumb>
+					</item>
+					<item id="68">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.68.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.68.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.68.Image.1)]</thumb>
+					</item>
+					<item id="69">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.69.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.69.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.69.Image.1)]</thumb>
+					</item>
+					<item id="70">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.70.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.70.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.70.Image.1)]</thumb>
+					</item>
+					<item id="71">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.71.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.71.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.71.Image.1)]</thumb>
+					</item>
+					<item id="72">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.72.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.72.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.72.Image.1)]</thumb>
+					</item>
+					<item id="73">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.73.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.73.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.73.Image.1)]</thumb>
+					</item>
+					<item id="74">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.74.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.74.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.74.Image.1)]</thumb>
+					</item>
+					<item id="75">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.75.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.75.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.75.Image.1)]</thumb>
+					</item>
+					<item id="76">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.76.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.76.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.76.Image.1)]</thumb>
+					</item>
+					<item id="77">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.77.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.77.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.77.Image.1)]</thumb>
+					</item>
+					<item id="78">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.78.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.78.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.78.Image.1)]</thumb>
+					</item>
+					<item id="79">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.79.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.79.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.79.Image.1)]</thumb>
+					</item>
+					<item id="80">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.80.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.80.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.80.Image.1)]</thumb>
+					</item>
+					<item id="81">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.81.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.81.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.81.Image.1)]</thumb>
+					</item>
+					<item id="82">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.82.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.82.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.82.Image.1)]</thumb>
+					</item>
+					<item id="83">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.83.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.83.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.83.Image.1)]</thumb>
+					</item>
+					<item id="84">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.84.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.84.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.84.Image.1)]</thumb>
+					</item>
+					<item id="85">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.85.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.85.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.85.Image.1)]</thumb>
+					</item>
+					<item id="86">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.86.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.86.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.86.Image.1)]</thumb>
+					</item>
+					<item id="87">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.87.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.87.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.87.Image.1)]</thumb>
+					</item>
+					<item id="88">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.88.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.88.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.88.Image.1)]</thumb>
+					</item>
+					<item id="89">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.89.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.89.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.89.Image.1)]</thumb>
+					</item>
+					<item id="90">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.90.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.90.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.90.Image.1)]</thumb>
+					</item>
+					<item id="91">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.91.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.91.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.91.Image.1)]</thumb>
+					</item>
+					<item id="92">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.92.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.92.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.92.Image.1)]</thumb>
+					</item>
+					<item id="93">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.93.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.93.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.93.Image.1)]</thumb>
+					</item>
+					<item id="94">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.94.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.94.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.94.Image.1)]</thumb>
+					</item>
+					<item id="95">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.95.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.95.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.95.Image.1)]</thumb>
+					</item>
+					<item id="96">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.96.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.96.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.96.Image.1)]</thumb>
+					</item>
+					<item id="97">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.97.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.97.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.97.Image.1)]</thumb>
+					</item>
+					<item id="98">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.98.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.98.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.98.Image.1)]</thumb>
+					</item>
+					<item id="99">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.99.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.99.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.99.Image.1)]</thumb>
+					</item>
+				</content>
+			</control>
+						<control type="panel" id="11">
+<posx>1065</posx>
+						<posy>345</posy>
+
+						
+						<include>Common_AltHome_Panel3</include>
+						<onleft>Control.Move(20,-1)</onleft>
+<onleft>33</onleft>
+<onright>Control.Move(20,1)</onright>
+						<onright>22</onright>
+						<ondown>9000</ondown>
+						<pagecontrol>7017</pagecontrol>
+						
+						<content>
+						
+
+							
+																					<item id="1">
+								<description>Games</description>
+								<label>Games</label>
+								<thumb>SHORT\ICO\Games.png</thumb>
+								<onclick>Control.Setfocus(9000)</onclick>
+														
+							</item>
+							
+
+
+								</content>
+
+					</control>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+						
+						</control>
+		
+				
+
+				
+	--------------------------------------------------------------------------------------------------------------------------			
+				
+				
+				
+				
+				
+					<control type="group" id="121">
+					
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>1200</width>
+						<height>720</height>
+												<control type="panel" id="22">
+<posx>1065</posx>
+						<posy>345</posy>
+
+						
+						<include>Common_AltHome_Panel3</include>
+						<onleft>Control.Move(20,-1)</onleft>
+<onleft>11</onleft>
+<onright>Control.Move(20,1)</onright>
+						<onright>33</onright>
+						<ondown>4</ondown>
+						<pagecontrol>7017</pagecontrol>
+						
+						<content>
+						
+
+							
+																					<item id="1">
+								<description>Games</description>
+								<label>Games</label>
+								<thumb>SHORT\ICO\Games.png</thumb>
+								<onclick>Control.Setfocus(4)</onclick>
+														
+							</item>
+							
+
+
+								</content>
+
+					</control>
+																	<control type="label">
+														<include>Common_Animation_Window</include>	
+														<posx>25</posx>
+			<posy>100</posy>
+						<visible>true</visible>
+					<width min="0" max="600">auto</width>
+					<height>100</height>
+					<label>Vídeos recentes do Youtube</label>
+					<font>Content-Label</font>
+					<textcolor>FFFFFFFF</textcolor>
+					<aligny>top</aligny>
+								 
+        
+				</control>
+				<control type="list" id="4">
+			<preloaditems>3</preloaditems>
+			<posx>15</posx>
+			<posy>167</posy>
+			<width>1260</width>
+			<height>404</height>
+			<onleft>-</onleft>
+			<onright>-</onright>
+			<onup>22</onup>
+			<ondown>-</ondown>
+			<scrolltime>250</scrolltime>
+			<orientation>horizontal</orientation>
+			<itemlayout width="416" height="256">		
+				<control type="image"><!--Thumb-->
+					<posx>17</posx>
+					<posy>0</posy>
+					<width>384</width>
+					<height>252</height>
+					<texture background="true" fallback="fallback_homefeed.png" blend="false">$INFO[ListItem.Thumb]</texture>
+					<bordersize>8</bordersize>
+					<aspectratio>scale</aspectratio>
+					<colordiffuse>FF8E8F90</colordiffuse>
+				</control>
+				<control type="textbox"><!--Label-->
+					<posx>40</posx>
+					<posy>246</posy>
+					<width>348</width>
+					<height>84</height>
+					<font>font22</font>
+					<align>left</align>
+					<aligny>top</aligny>
+					<label>$INFO[ListItem.Label]</label>
+					<textcolor>white_60</textcolor>
+				</control>
+			</itemlayout>
+			<focusedlayout width="416" height="256">
+				<control type="group">
+				<animation effect="zoom" end="108" center="auto" time="200">Focus</animation>
+					<control type="image"><!--Thumb No Focus-->
+						<posx>17</posx>
+						<posy>0</posy>
+						<width>384</width>
+						<height>252</height>
+						<texture background="true" fallback="fallback_homefeed.png" blend="false">$INFO[ListItem.Thumb]</texture>
+						<bordersize>8</bordersize>
+						<colordiffuse>FF8E8F90</colordiffuse>
+						<aspectratio>scale</aspectratio>
+					</control>
+						<control type="image"><!--Thumb Focus-->
+						<posx>17</posx>
+						<posy>0</posy>
+						<width>384</width>
+						<height>252</height>
+						<texture background="true" fallback="fallback_homefeed.png" blend="false">$INFO[ListItem.Thumb]</texture>
+						<bordersize>8</bordersize>
+						<aspectratio>scale</aspectratio>
+						<visible>Control.HasFocus(4)</visible>
+					</control>
+					<control type="textbox"><!--Label No Focus-->
+						<posx>40</posx>
+						<posy>246</posy>
+						<width>348</width>
+						<height>84</height>
+						<font>font22</font>
+						<align>left</align>
+						<aligny>top</aligny>
+						<label>$INFO[ListItem.Label]</label>
+						<textcolor>white_60</textcolor>
+						<visible>!Control.HasFocus(4)</visible>
+					</control>
+					<control type="textbox"><!--Label Focus-->
+						<posx>40</posx>
+						<posy>246</posy>
+						<width>348</width>
+						<height>84</height>
+						<font>font22</font>
+						<align>left</align>
+						<aligny>top</aligny>
+						<label>$INFO[ListItem.Label]</label>
+						<textcolor>white</textcolor>
+						<autoscroll delay="300" time="3000" repeat="4000">!Control.HasFocus(50)</autoscroll>
+						<visible>Control.HasFocus(4)</visible>
+					</control>
+					<control type="image"><!--Selection-->
+						<posx>12</posx>
+						<posy>-4</posy>
+						<width>394</width>
+						<height>260</height>
+						<texture border="39">selection_on.png</texture>
+						<visible>Control.HasFocus(4)</visible>
+					</control>
+				</control>
+				</focusedlayout>
+				<content>
+
+					<item id="1">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.43.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.43.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.43.Image.1)]</thumb>
+					</item>
+					<item id="2">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.44.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.44.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.44.Image.1)]</thumb>
+					</item>
+					<item id="3">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.45.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.45.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.45.Image.1)]</thumb>
+					</item>
+					<item id="4">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.46.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.46.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.46.Image.1)]</thumb>
+					</item>
+					<item id="5">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.47.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.47.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.47.Image.1)]</thumb>
+					</item>
+					<item id="6">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.48.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.48.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.48.Image.1)]</thumb>
+					</item>
+					<item id="7">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.49.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.49.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.49.Image.1)]</thumb>
+					</item>
+					<item id="8">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.50.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.50.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.50.Image.1)]</thumb>
+					</item>
+					<item id="9">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.51.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.51.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.51.Image.1)]</thumb>
+					</item>
+					<item id="10">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.52.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.52.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.52.Image.1)]</thumb>
+					</item>
+					<item id="11">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.53.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.53.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.53.Image.1)]</thumb>
+					</item>
+					<item id="12">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.54.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.54.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.54.Image.1)]</thumb>
+					</item>
+					<item id="13">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.55.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.55.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.55.Image.1)]</thumb>
+					</item>
+					<item id="14">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.56.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.56.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.56.Image.1)]</thumb>
+					</item>
+					<item id="15">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.57.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.57.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.57.Image.1)]</thumb>
+					</item>
+					<item id="16">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.58.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.58.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.58.Image.1)]</thumb>
+					</item>
+					<item id="17">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.59.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.59.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.59.Image.1)]</thumb>
+					</item>
+					<item id="18">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.60.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.60.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.60.Image.1)]</thumb>
+					</item>
+					<item id="19">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.61.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.61.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.61.Image.1)]</thumb>
+					</item>
+					<item id="20">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.62.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.62.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.62.Image.1)]</thumb>
+					</item>
+					<item id="21">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.63.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.63.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.63.Image.1)]</thumb>
+					</item>
+					<item id="22">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.64.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.64.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.64.Image.1)]</thumb>
+					</item>
+					<item id="23">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.65.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.65.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.65.Image.1)]</thumb>
+					</item>
+					<item id="24">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.66.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.66.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.66.Image.1)]</thumb>
+					</item>
+					<item id="25">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.67.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.67.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.67.Image.1)]</thumb>
+					</item>
+					<item id="26">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.68.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.68.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.68.Image.1)]</thumb>
+					</item>
+					<item id="27">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.69.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.69.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.69.Image.1)]</thumb>
+					</item>
+					<item id="28">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.70.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.70.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.70.Image.1)]</thumb>
+					</item>
+					<item id="29">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.71.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.71.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.71.Image.1)]</thumb>
+					</item>
+					<item id="30">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.72.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.72.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.72.Image.1)]</thumb>
+					</item>
+					<item id="31">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.73.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.73.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.73.Image.1)]</thumb>
+					</item>
+					<item id="32">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.74.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.74.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.74.Image.1)]</thumb>
+					</item>
+					<item id="33">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.75.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.75.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.75.Image.1)]</thumb>
+					</item>
+					<item id="34">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.76.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.76.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.76.Image.1)]</thumb>
+					</item>
+					<item id="35">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.77.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.77.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.77.Image.1)]</thumb>
+					</item>
+					<item id="36">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.78.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.78.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.78.Image.1)]</thumb>
+					</item>
+					<item id="37">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.79.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.79.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.79.Image.1)]</thumb>
+					</item>
+					<item id="38">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.80.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.80.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.80.Image.1)]</thumb>
+					</item>
+					<item id="39">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.81.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.81.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.81.Image.1)]</thumb>
+					</item>
+					<item id="40">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.82.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.82.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.82.Image.1)]</thumb>
+					</item>
+					<item id="41">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.83.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.83.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.83.Image.1)]</thumb>
+					</item>
+					<item id="42">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.84.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.84.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.84.Image.1)]</thumb>
+					</item>
+					<item id="43">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.85.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.85.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.85.Image.1)]</thumb>
+					</item>
+					<item id="44">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.86.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.86.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.86.Image.1)]</thumb>
+					</item>
+					<item id="45">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.87.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.87.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.87.Image.1)]</thumb>
+					</item>
+					<item id="46">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.88.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.88.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.88.Image.1)]</thumb>
+					</item>
+					<item id="47">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.89.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.89.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.89.Image.1)]</thumb>
+					</item>
+					<item id="48">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.90.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.90.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.90.Image.1)]</thumb>
+					</item>
+					<item id="49">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.91.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.91.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.91.Image.1)]</thumb>
+					</item>
+					<item id="50">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.92.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.92.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.92.Image.1)]</thumb>
+					</item>
+					<item id="51">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.93.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.93.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.93.Image.1)]</thumb>
+					</item>
+					<item id="52">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.94.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.94.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.94.Image.1)]</thumb>
+					</item>
+					<item id="53">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.95.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.95.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.95.Image.1)]</thumb>
+					</item>
+					<item id="54">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.96.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.96.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.96.Image.1)]</thumb>
+					</item>
+					<item id="55">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.97.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.97.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.97.Image.1)]</thumb>
+					</item>
+					<item id="56">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.98.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.98.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.98.Image.1)]</thumb>
+					</item>
+					<item id="57">
+						<onclick>XBMC.PlayMedia($INFO[Window.Property(RSS.99.Media)])</onclick>
+						<label>$INFO[Window.Property(RSS.99.Title)]</label>
+						<thumb>$INFO[Window.Property(RSS.99.Image.1)]</thumb>
+					</item>
+				</content>
+			</control>
+						
+
+					
+
+				
+
+				
+	
+					
+				</control>		
+		
+				
+								<control type="group" id="122">
+					
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>1200</width>
+						<height>720</height>
+												<control type="panel" id="33">
+<posx>1065</posx>
+						<posy>345</posy>
+
+						
+						<include>Common_AltHome_Panel3</include>
+						<onleft>Control.Move(20,-1)</onleft>
+<onleft>22</onleft>
+<onright>Control.Move(20,1)</onright>
+						<onright>11</onright>
+						<ondown>1212</ondown>
+						<pagecontrol>7017</pagecontrol>
+						
+						<content>
+						
+
+							
+																					<item id="1">
+								<description>Games</description>
+								<label>Games</label>
+								<thumb>SHORT\ICO\Games.png</thumb>
+								<onclick>Control.Setfocus(1212)</onclick>
+														
+							</item>
+							
+
+
+								</content>
+
+					</control>
+					
+					
+					
+					
+					
+					
+					
+					
+<control type="panel" id="1212">
+<include>Common_Animation_dashboard_tab</include>
+							<posx>265</posx>
+							<posy>75</posy>
+							<width>1000</width>
+							<height>600</height>
+				
+							
+							<onup>33</onup>
+						
+							<pagecontrol>9020</pagecontrol>
+							<viewtype label="535">list</viewtype>
+							<scrolltime tween="cubic" easing="out">600</scrolltime>
+							<preloaditems>2</preloaditems>
+
+							<itemlayout width="400" height="80">
+
+								<control type="image">
+
+									<posx>0</posx>
+									<posy>0</posy>
+									<width>60</width>
+									<height>60</height>
+									<texture>colors/color_keyboard_dark.png</texture>
+
+								</control>
+
+								<control type="image">
+
+									<include>Common_Control_Image</include>
+									<texture>$INFO[ListItem.Thumb]</texture>
+
+								</control>
+
+								<control type="label">
+
+									<width min="20" max="380">auto</width>
+									<label>$INFO[ListItem.Label]</label>
+									<textcolor>Label_Normal</textcolor>
+									<include>Common_Control_Label</include>
+
+								</control>
+
+							</itemlayout>
+
+							<focusedlayout width="400" height="80">
+
+								<control type="image">
+
+									<posx>0</posx>
+									<posy>0</posy>
+									<width>60</width>
+									<height>60</height>
+									<texture>colors/color_white.png</texture>
+									<colordiffuse>Tile_Background</colordiffuse>
+									<visible>!Control.HasFocus(1212)</visible>
+
+								</control>
+
+								<control type="image">
+
+									<posx>0</posx>
+									<posy>0</posy>
+									<width>60</width>
+									<height>60</height>
+									<texture>colors/color_white.png</texture>
+									<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+
+									<visible>Control.HasFocus(1212)</visible>
+
+								</control>
+
+								<control type="image">
+
+									<include>Common_Control_Image</include>
+									<texture>$INFO[ListItem.Thumb]</texture>
+
+								</control>
+
+								<control type="image">
+
+									<posx>0</posx>
+									<posy>0</posy>
+									<width>60</width>
+									<height>60</height>
+									<texture>button_unfocus.png</texture>
+									<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+
+									<visible>Control.HasFocus(1212)</visible>
+
+								</control>
+
+								<control type="label">
+
+									<width min="20" max="380">auto</width>
+									<label>$INFO[ListItem.Label]</label>
+									<textcolor>Label_Normal</textcolor>
+									<include>Common_Control_Label</include>
+
+								</control>
+
+							</focusedlayout>
+
+							<content>
+
+
+
+								<item>
+									<description>Recomendado</description>
+									<label>Recomendado</label>
+								<thumb>home/home_videos_small.png</thumb>
+									<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.youtube/?login=true&amp;path=%2froot%2frecommended&amp;user_feed=recommended&quot;,return)</onclick>
+								</item>
+
+								<item>
+									<description>Assistir depois</description>
+									<label>Assistir depois</label>
+									<thumb>home/home_videos_small.png</thumb>
+									<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.youtube/?login=true&amp;path=%2froot%2fwatch_later&amp;user_feed=watch_later&quot;,return)</onclick>
+								</item>
+								
+								
+								
+								
+								
+										<item>
+									<description>Vídeos curtidos</description>
+									<label>Vídeos curtidos</label>
+								<thumb>home/home_videos_small.png</thumb>
+									<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.youtube/?login=true&amp;path=%2froot%2fliked&amp;scraper=liked_videos&quot;,return)</onclick>
+								</item>
+										<item>
+									<description>Meu Histórico</description>
+									<label>Meu Histórico</label>
+								<thumb>home/home_videos_small.png</thumb>
+									<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.youtube/?login=true&amp;path=%2froot%2fhistory&amp;user_feed=watch_history&quot;,return)</onclick>
+								</item>
+										<item>
+									<description>Meus Favoritos</description>
+									<label>Meus Favoritos</label>
+									<thumb>home/home_videos_small.png</thumb>
+									<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.youtube/?login=true&amp;path=%2froot%2ffavorites&amp;user_feed=favorites&quot;,return)</onclick>
+								</item>
+										<item>
+									<description>Minhas Playlists</description>
+									<label>Minhas Playlists</label>
+									<thumb>home/home_videos_small.png</thumb>
+									<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.youtube/?folder=true&amp;login=true&amp;path=%2froot%2fplaylists&amp;user_feed=playlists&quot;,return)</onclick>
+								</item>
+										<item>
+									<description>Inscrições</description>
+									<label>Inscrições</label>
+								<thumb>home/home_videos_small.png</thumb>
+									<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.youtube/?folder=true&amp;login=true&amp;path=%2froot%2fsubscriptions&amp;user_feed=subscriptions&quot;,return)</onclick>
+								</item>
+										<item>
+									<description>Meus Uploads</description>
+									<label>Meus Uploads</label>
+								<thumb>home/home_videos_small.png</thumb>
+									<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.youtube/?login=true&amp;path=%2froot%2fuploads&amp;user_feed=uploads&quot;,return)</onclick>
+								</item>
+										<item>
+									<description>Meus Downloads</description>
+									<label>Meus Downloads</label>
+								<thumb>home/home_videos_small.png</thumb>
+									<onclick>ActivateWindow(10025,&quot;G:\\Downloads\\&quot;,return)</onclick>
+								</item>
+								
+																		<item>
+									<description>Explorar YouTube</description>
+									<label>Explorar YouTube</label>
+									<thumb>home/home_videos_small.png</thumb>
+									<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.youtube/?login=false&amp;path=%2froot%2fexplore&quot;,return)</onclick>
+								</item>
+
+								<item>
+									<description>Pesquisa</description>
+									<label>Pesquisa</label>
+									<thumb>charms/charm_search.png</thumb>
+							<onclick>Skin.SetString(tube)</onclick>
+<onclick condition="!Skin.HasSetting(Searching)">Skin.ToggleSetting(Searching)</onclick>
+<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=$INFO[Skin.String(tube)]&quot;,return)</onclick>
+								</item>
+
+						
+							</content>
+							</control>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+										</control>
+						</control>
+						</control>
+						<!--Scrollbar-->
+
+					
+					</control>
+					
+					<include>ViewList_RootMenu_Featured</include>
+					<include>ViewList_RootMenu_RecentlyAdded</include>
+					<include>ViewList_RootMenu_AiringToday</include>
+					<include>ViewList_RootMenu_InCinemas</include>
+					<include>ViewList_RootMenu_NearbyEvents</include>
+					<include>ViewList_RootMenu_History</include>
+					<include>ViewList_RootMenu_Trakt</include>
+					
+			
+				
+
+			
+			<!--Scrollbar-->
+<include>Snapped_Content</include>	
+
+
+	
+		
+	</controls>	
+		
+</window>

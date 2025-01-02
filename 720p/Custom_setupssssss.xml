@@ -1,0 +1,153 @@
+<window id="9115">
+
+	<defaultcontrol always="true">1</defaultcontrol>
+	
+	<zorder>2</zorder>
+	
+	
+<onload>Fullscreen</onload>
+
+	
+	<!--Splash Screen-->
+	<onload>Skin.SetString(snap,7555)</onload>
+<onload condition="!Skin.HasSetting(snapie)">Skin.ToggleSetting(snapie)</onload>
+<onload condition="Skin.HasSetting(gaming)">Skin.ToggleSetting(gaming)</onload>
+<onload>Skin.SetString(snap, demo/sna/whatsnew.jpg,0)</onload>
+<onload>Skin.SetString(sn,O que há de novo no Xbox)</onload>
+
+
+<onload condition="!Skin.HasSetting(altosd)">Skin.ToggleSetting(altosd)</onload>
+<onload condition="Skin.HasSetting(disablealarmbk)">Skin.ToggleSetting(disablealarmbk)</onload>
+<onload condition="Skin.HasSetting(disablexboxlogo)">Skin.ToggleSetting(disablexboxlogo)</onload>
+<onload condition="Skin.HasSetting(disableprofilepic)">Skin.ToggleSetting(disableprofilepic)</onload>
+<onload condition="Skin.HasSetting(Altads)">Skin.ToggleSetting(Altads)</onload>
+<onload condition="!Skin.HasSetting(Performance)">Skin.ToggleSetting(Performance)</onload>
+<onload condition="Skin.HasSetting(gamertag)">Skin.ToggleSetting(gamertag)</onload>
+
+
+
+<onload condition="!Skin.HasSetting(hometile)">Skin.ToggleSetting(hometile)</onload>
+<onload condition="!Skin.HasSetting(altvevo)">Skin.ToggleSetting(altvevo)</onload>
+<onload condition="!Skin.HasSetting(animatebuttonmenu)">Skin.ToggleSetting(animatebuttonmenu)</onload>
+<onload condition="!Skin.HasSetting(animateosd)">Skin.ToggleSetting(animateosd)</onload>
+<onload condition="Skin.HasSetting(inflateitem)">Skin.ToggleSetting(inflateitem)</onload>
+<onload condition="Skin.HasSetting(textview)">Skin.ToggleSetting(textview)</onload>
+<onload condition="Skin.HasSetting(disablesync)">Skin.ToggleSetting(disablesync)</onload>
+<onload condition="Skin.HasSetting(disablewatch)">Skin.ToggleSetting(disablewatch)</onload>
+<onload condition="!Skin.HasSetting(altkai)">Skin.ToggleSetting(altkai)</onload>
+	<onload condition="Skin.HasSetting(altstore)">Skin.ToggleSetting(altstore)</onload>
+	<onload condition="!Skin.HasSetting(addoverlaym)">Skin.ToggleSetting(addoverlaym)</onload>
+<onload condition="!Skin.HasSetting(addoverlaytvm)">Skin.ToggleSetting(addoverlaytvm)</onload>
+
+<onload condition="!Skin.HasSetting(disablesplash)">Skin.ToggleSetting(disablesplash)</onload>
+	
+	<controls>
+
+		<!--Background Area-->
+
+		
+<control type="image">
+						
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1280</width>
+								<height>720</height>
+								<texture>demo/setup/bg.jpg</texture>
+						
+								
+							</control>
+							<control type="image">
+					
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1280</width>
+								<height>720</height>
+								<texture>demo/setup6/1.jpg</texture>
+						<visible>Control.HasFocus(1)</visible>
+								
+							</control>
+
+							
+																			
+									<!--Top Area-->
+
+			
+			<!--Content Area-->
+			<control type="group">
+			
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+				
+				<!--Animation-->
+				<include condition="!Skin.HasSetting(disablesplash)">Common_Animation_Content_Splash</include>
+				<include condition="!Window.Previous(home)">Common_Animation_Content</include>
+				
+				<control type="grouplist">
+		
+					<include>Common_Content_Grouplist</include>
+					
+					<control type="group" id="100">
+					
+						<posx>60</posx>
+						<posy>0</posy>
+						<width>400</width>
+						<height>480</height>
+						
+						
+			
+				
+
+										<control type="panel" id="1">
+<posx>915</posx>
+						<posy>200</posy>
+
+						
+						<include>Common_AltHome_Panel3</include>
+<onleft>2</onleft>
+						<onright>2</onright>
+					
+						<pagecontrol>7017</pagecontrol>
+						
+						<content>
+						
+
+							
+																					<item id="1">
+								<description>Games</description>
+								<label>Games</label>
+								<thumb>SHORT\ICO\Games.png</thumb>
+							
+								<onclick Condition="!Skin.HasSetting(FirstTimeRun)">Skin.ToggleSetting(FirstTimeRun)</onclick>
+								<onclick>ActivateWindow(0)</onclick>
+												
+							</item>
+							
+
+
+								</content>
+
+					</control>
+							
+							
+
+				
+						
+						<!--Scrollbar-->
+
+					
+					</control>
+					
+			
+					
+				</control>
+				
+			</control>
+
+			
+		
+		
+	</controls>	
+		
+</window>

@@ -1,0 +1,356 @@
+<window type="dialog" id="6595">
+
+	<defaultcontrol always="true">52</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<zorder>2</zorder>
+	<onload>Control.SetFocus(52)</onload>
+<onload condition="Skin.HasSetting(BOOTGUI)">ReplaceWindow(29)</onload>	
+
+	<controls>
+	
+			<control type="image">
+		
+			<include>Common_Dimensions</include>
+			<texture background="true">colors/color_white.png</texture>
+			<colordiffuse>FanartDiffuse</colordiffuse>
+			
+			<include>Common_Animation_Window_Dark</include>
+			<visible>!Player.HasMedia</visible>
+		</control>
+
+
+		
+		
+	
+		<!--Charm Bar Section-->
+		<control type="group">
+		
+			<posx>0</posx>
+			<posy>0</posy>
+			<control type="image">
+				 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="60" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="150" end="0" delay="60" tween="cubic" easing="out" time="600" />
+                    </animation>
+				
+				<posx>0</posx>
+				<posy>105</posy>
+				<width>1500</width>
+				<height>500</height>
+				<texture>demo\install\1.png</texture>
+			
+			</control>
+			
+			 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="150" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+
+				
+		<control type="label">
+	 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="200" />
+                        <effect type="slide" start="150" end="0" delay="100" tween="cubic" easing="out" time="500" />
+                    </animation>
+					<posx>110</posx>
+			<posy>130</posy>
+				<label>Notificações</label>
+				<include>Common_Section_Label</include>
+			
+			</control>
+					<control type="panel" id="1">
+	 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="150" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+<posx>107</posx>
+						<posy>530</posy>
+
+						<onup>52</onup>
+						<ondown>99</ondown>
+						<include>Common_AltHome_Panel382-login</include>
+				
+
+
+
+<ondown>58</ondown>
+						
+						
+						<content>
+						
+
+							
+							
+																													<item id="1">
+								<description>Games</description>
+								<label>[CR]Fechar</label>
+								<thumb></thumb>
+													
+									<onclick>Back</onclick>
+													
+							</item>
+							
+		
+												
+
+
+								</content>
+
+					</control>
+		<control type="fixedlist" id="52">
+ 
+				<posx>100</posx>
+				<posy>170</posy>
+				<width>1200</width>
+				<height>485</height>
+				
+				<ondown>1</ondown>
+			
+				<viewtype label="Square">wrap</viewtype>
+				<orientation>horizontal</orientation>
+				<pagecontrol>64</pagecontrol>
+				<scrolltime tween="cubic" easing="out">500</scrolltime>
+				<preloaditems>4</preloaditems>
+				
+								
+				<itemlayout width="330" height="330">
+
+
+					
+					<control type="group">
+		
+						<posx>5</posx>
+						<posy>40</posy>
+						<width>310</width>
+						<height>310</height>
+						
+						<control type="image">
+						
+							<posx>5</posx>
+							<posy>0</posy>
+							<width>310</width>
+							<height>310</height>
+							<texture>colors/color_keyboard_dark.png</texture>
+							<aspectratio>scale</aspectratio>
+							
+						</control>
+					
+						<control type="image">
+						
+							<posx>5</posx>
+							<posy>0</posy>
+							<width>310</width>
+							<height>310</height>
+							<texture background="true" fallback="colors/color_keyboard_dark.png">$VAR[Square_Image]</texture>
+							<aspectratio>scale</aspectratio>
+							
+						</control>
+						<control type="image">
+					
+							<posx>5</posx>
+							<posy>250</posy>
+							<width>310</width>
+							<height>60</height>
+							<texture>colors/color_white.png</texture>
+							<colordiffuse>FanartDiffuse</colordiffuse>
+							<include>Common_Animation_Pini3</include>
+						</control>
+						
+					
+						
+			<control type="label">
+							
+							<posx>18</posx>
+							<posy>258</posy>
+							<width>290</width>
+							<height>200</height>
+							<textcolor>Label_Normal</textcolor>
+							<font>Settings-Label</font>
+							<aligny>top</aligny>
+							<label>$VAR[Square_Header]</label>
+					<include>Common_Animation_Pini3</include>
+						</control>
+						
+						
+						
+					
+					</control>
+					
+				</itemlayout>
+
+				<focusedlayout width="330" height="330">
+				
+
+				
+					<control type="group">
+						
+						<posx>5</posx>
+						<posy>40</posy>
+						<width>310</width>
+						<height>310</height>
+					
+				
+						
+						<control type="image">
+						
+							<posx>5</posx>
+							<posy>0</posy>
+							<width>310</width>
+							<height>310</height>
+							<texture>colors/color_keyboard_dark.png</texture>
+							<aspectratio>scale</aspectratio>
+							
+						</control>
+									<control type="image">
+						
+							<posx>3</posx>
+							<posy>250</posy>
+							<width>314</width>
+							<height>62</height>
+							<texture>colors/color_white.png</texture>
+							<aspectratio>scale</aspectratio>
+							<include>Common_Animation_Pini2</include>
+						</control>		
+					
+						<control type="image">
+						
+							<posx>5</posx>
+							<posy>0</posy>
+							<width>310</width>
+							<height>310</height>
+							<texture background="true" fallback="colors/color_keyboard_dark.png">$VAR[Square_Image]</texture>
+							<aspectratio>scale</aspectratio>
+							
+						</control>		
+							
+						<control type="image">
+					
+							<posx>5</posx>
+							<posy>250</posy>
+							<width>310</width>
+							<height>60</height>
+							<texture>colors/color_white.png</texture>
+							<colordiffuse>FanartDiffuse</colordiffuse>
+							<include>Common_Animation_Pini2</include>
+						</control>
+								<control type="image">
+						
+							<posx>5</posx>
+							<posy>250</posy>
+							<width>310</width>
+							<height>3</height>
+							<texture>colors/color_white.png</texture>
+							<aspectratio>scale</aspectratio>
+							<include>Common_Animation_Pini2</include>
+						</control>
+							
+						<control type="label">
+							
+							<posx>15</posx>
+							<posy>268</posy>
+							<width>290</width>
+							<height>20</height>
+							<textcolor>Label_Normal</textcolor>
+							<font>Settings-Label</font>
+							<aligny>top</aligny>
+							<label>Mostrar detalhes</label>
+						<include>Common_Animation_Pini2</include>
+						</control>
+						<control type="image">
+						
+							<posx>5</posx>
+							<posy>250</posy>
+							<width>310</width>
+							<height>60</height>
+							<texture>colors/color_white.png</texture>
+							<colordiffuse>FanartDiffuse</colordiffuse>
+							<include>Common_Animation_Pini3</include>
+						</control>
+			
+						
+						
+			<control type="label">
+							
+							<posx>18</posx>
+							<posy>258</posy>
+							<width>290</width>
+							<height>200</height>
+							<textcolor>Label_Normal</textcolor>
+							<font>Settings-Label</font>
+							<aligny>top</aligny>
+							<label>$VAR[Square_Header]</label>
+					<include>Common_Animation_Pini3</include>
+						</control>
+
+					</control>
+					
+					<!--Back Side Info-->
+					<control type="group">
+					
+						<posx>0</posx>
+						<posy>40</posy>
+						<width>210</width>
+						<height>210</height>
+						
+						
+						
+						<control type="image">
+						
+							<include>Common_LiveTile_Rating</include>
+							<visible>false</visible>
+							
+						</control>
+						
+						<control type="textbox">
+							
+							<include>Common_LiveTile_Description</include>
+							<label>$VAR[Tile_Description]</label>
+							<visible>false</visible>
+				
+						</control>
+						
+					</control>
+					
+				</focusedlayout>
+<content>
+<item id="0">
+		<onclick>Dialog.Close(6595)</onclick>
+		
+		<onclick>ActivateWindow($INFO[Skin.String(snapwindow)])</onclick>
+	
+						<label>Você iniciou:[CR]$INFO[Skin.String(sn)]</label>
+						<thumb>$INFO[Skin.String(snap)]</thumb>
+						<visible>!IsEmpty(Skin.String(snap))</visible>
+					</item>
+															
+															
+	
+
+																												
+					
+					
+	
+</content>
+		</control>
+			
+			
+					
+					
+					
+					
+					
+					</control>
+					
+					
+					
+					
+					
+					
+					
+					
+						
+
+		
+	</controls>	
+	
+</window>

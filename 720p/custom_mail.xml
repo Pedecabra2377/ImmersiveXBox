@@ -1,0 +1,374 @@
+<window id="8159">
+
+	<defaultcontrol always="true">1</defaultcontrol>
+	
+	<zorder>2</zorder>
+	
+	<include condition="!Window.Next(7544) + !Window.Previous(0)">Common_Animation_WindowFriends</include>
+<include condition="Window.Previous(0)">Common_Animation_Window</include>
+<include condition="Window.Next(7544)">Common_Animation_Window</include>
+
+	
+	<!--Splash Screen-->
+
+<onload condition="Skin.HasSetting(Logger)">Skin.SetString(snapwindow, 8159)</onload>
+<onload condition="!Skin.HasSetting(snapie) + Skin.HasSetting(Logger)">Skin.ToggleSetting(snapie)</onload>
+<onload condition="Skin.HasSetting(gaming) + Skin.HasSetting(Logger)">Skin.ToggleSetting(gaming)</onload>
+<onload condition="Skin.HasSetting(Logger)">Skin.SetString(snap, demo/sna/msg.jpg,0)</onload>
+<onload condition="Skin.HasSetting(Logger)">Skin.SetString(sn,Microsoft Mail)</onload>
+	
+	
+
+
+	
+
+	
+	<controls>
+
+		<!--Background Area-->
+
+		<include condition="!Window.Next(7544) + !Window.Previous(0)">Common_Animation_WindowFriends</include>
+<include condition="Window.Previous(0)">Common_Animation_Window</include>
+<include condition="Window.Next(7544)">Common_Animation_Window</include>
+<control type="image">
+							
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1280</width>
+								<height>720</height>
+								<texture>demo/app/friends/bg.png</texture>
+							
+								
+							</control>
+							
+						
+							
+							<control type="image">
+							
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>275</width>
+								<height>720</height>
+								<texture>colors\color_white.png</texture>
+							<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+								
+							</control>
+							
+							
+							
+					
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+			<control type="textbox">
+						<include condition="!Window.Next(7544) + !Window.Previous(0)">Common_Animation_WindowFriends</include>
+<include condition="Window.Previous(0)">Common_Animation_Window</include>
+<include condition="Window.Next(7544)">Common_Animation_Window</include>												
+							
+	
+			<label>Microsoft Mail</label>
+
+		<posx>68</posx>
+								<posy>80</posy>
+								<width>550</width>
+								<height>160</height>
+		<font>Dropdown-Label3</font>
+			<textcolor>Label_Normal</textcolor>
+			<scrollspeed>0</scrollspeed>
+			<autoscroll>false</autoscroll>
+			<wrapmultiline>true</wrapmultiline>
+					
+								
+		</control>	
+							
+																			
+
+							
+									
+									<!--Top Area-->
+
+			
+			<!--Content Area-->
+			<control type="group">
+			
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+				
+				<!--Animation-->
+			<include condition="!Window.Next(7544) + !Window.Previous(0)">Common_Animation_WindowFriends</include>
+<include condition="Window.Previous(0)">Common_Animation_Window</include>
+<include condition="Window.Next(7544)">Common_Animation_Window</include>
+				
+				<control type="grouplist">
+		
+					<include>Common_Content_Grouplist</include>
+					
+					<control type="group" id="100">
+					
+						<posx>60</posx>
+						<posy>0</posy>
+						<width>400</width>
+						<height>780</height>
+						
+						
+			
+				
+
+										
+					<control type="panel" id="8">
+<posx>915</posx>
+						<posy>200</posy>
+
+						
+						<include>Common_AltHome_Panel3</include>
+<onup>10</onup>
+
+
+						<ondown>9</ondown>
+					<onleft>1</onleft>
+						<pagecontrol>7017</pagecontrol>
+						
+						<content>
+						
+
+							
+																					<item id="1">
+								<description>Games</description>
+								<label>Games</label>
+								<thumb>SHORT\ICO\Games.png</thumb>
+							<onclick>RunScript(special://skin/system/xbox.gamertag.py)</onclick>  
+														
+							</item>
+							
+
+
+								</content>
+
+					</control>
+							<control type="panel" id="9">
+<posx>915</posx>
+						<posy>200</posy>
+
+						
+						<include>Common_AltHome_Panel3</include>
+<onup>8</onup>
+
+
+						<ondown>10</ondown>
+					<onleft>3</onleft>
+						<pagecontrol>7017</pagecontrol>
+						
+						<content>
+						
+
+							
+																					<item id="1">
+								<description>Games</description>
+								<label>Games</label>
+								<thumb>SHORT\ICO\Games.png</thumb>
+							<onclick>RunScript(special://skin/system/xbox.gamertag.py)</onclick>  
+														
+							</item>
+							
+
+
+								</content>
+
+					</control>
+					<control type="panel" id="10">
+<posx>915</posx>
+						<posy>200</posy>
+
+						
+						<include>Common_AltHome_Panel3</include>
+<onup>9</onup>
+
+
+						<ondown>8</ondown>
+					<onleft>5</onleft>
+						<pagecontrol>7017</pagecontrol>
+						
+						<content>
+						
+
+							
+																					<item id="1">
+								<description>Games</description>
+								<label>Games</label>
+								<thumb>SHORT\ICO\Games.png</thumb>
+							<onclick>RunScript(special://skin/system/xbox.gamertag.py)</onclick>  
+														
+							</item>
+							
+
+
+								</content>
+
+					</control>
+					
+					
+					
+					
+					
+
+				
+	
+					
+					
+					
+					
+					
+						
+						<!--Scrollbar-->
+
+					
+					</control>
+					
+			
+					
+				</control>
+				
+			</control>
+
+			<control type="panel" id="1000">
+				
+<posx>60</posx>
+						<posy>175</posy>
+
+				<onright>1</onright>
+	
+						<include>Common_AltHome_Panel384</include>
+					
+
+
+
+
+						
+						
+						<content>
+						
+	<item id="1">
+								<description>Games</description>
+								<label>Email: $INFO[Skin.String(msgnum)]</label>
+								<thumb></thumb>
+													
+											<onclick>-</onclick>
+														
+
+														
+							</item>
+							<item id="2">
+								<description>Games</description>
+								<label>Opções</label>
+								<thumb></thumb>
+													
+								<onclick>ActivateWindow(5513)</onclick>
+							</item>
+							<item id="3">
+								<description>Games</description>
+								<label>Mensagem</label>
+								<thumb></thumb>
+													
+								<onclick>ActivateWindow(5512)</onclick>
+							</item>
+												
+
+
+								</content>
+
+					</control>	
+					
+					
+					
+					
+					<control type="panel" id="1">
+				
+<posx>320</posx>
+						<posy>185</posy>
+
+				<onright>8</onright>
+		<onleft>1000</onleft>
+						<include>Common_AltHome_Panel391</include>
+					
+
+
+
+
+						
+						
+						<content>
+						<control type="textbox">
+						
+
+						<label>$INFO[ListItem.Label]</label>
+							<font>DialogInfo-Label</font>
+							<textcolor>Label_Normal</textcolor>
+
+							
+						</control>
+									<control type="textbox">
+						
+						<label>$INFO[ListItem.Label3]</label>
+							<font>Menu-ExtendedList-Header</font>
+							<textcolor>FF000000</textcolor>
+
+							
+						</control>
+						
+				
+						
+						<control type="textbox">
+						
+							
+							<label>$INFO[ListItem.Label2]</label>
+							<font>DialogInfo-Label</font>
+							<textcolor>FF000000</textcolor>
+
+							
+						</control>
+								</content>
+
+					</control>
+		<include>Xbox_Logo</include>
+			<include>Snapped_Content</include>	
+	</controls>	
+		
+</window>

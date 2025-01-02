@@ -1,0 +1,299 @@
+<window type="dialog" id="9055">
+
+	<defaultcontrol always="true">10</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<zorder>2</zorder>
+	<onload>Skin.SetString(tube, )</onload>
+	<onload>AlarmClock(CloseCharmBar,Dialog.Close(55, force),00:30,silent)</onload>
+<onload condition="Skin.HasSetting(Searching)">Skin.ToggleSetting(Searching)</onload>
+
+<onload condition="Window.IsVisible(4)">Dialog.Close(55)</onload>
+	<controls>
+	
+			<control type="image">
+		
+			<include>Common_Dimensions</include>
+			<texture background="true">colors/color_white.png</texture>
+			<colordiffuse>FanartDiffuse</colordiffuse>
+			
+			<include>Common_Animation_Window_Dark</include>
+			<visible>!Player.HasMedia</visible>
+		</control>
+
+<control type="image">
+		
+		<posy>300</posy>
+		<posx></posx>
+		<width>1280</width>
+		<height>500</height>
+			<texture>demo\kinectcontrol.png</texture>
+		
+			
+			<include>Common_Animation_Window_Dark</include>
+	
+		</control>
+		
+		
+	
+		<!--Charm Bar Section-->
+		<control type="group">
+				<visible>false</visible>
+			<posx>440</posx>
+			<posy>150</posy>
+			
+			<include>Common_Animation_Splash_kai2</include>
+
+
+			<control type="image">
+				
+				<posx>-10</posx>
+				<posy>50</posy>
+				<width>418</width>
+				<height>270</height>
+				<texture>colors/color_keyboard_dark.png</texture>
+				
+			</control>
+			<control type="label">
+				
+					<posx>133</posx>
+					<posy>50</posy>
+					<width>400</width>
+					<height>48</height>
+					<label>$INFO[System.Time]</label>
+					<font>Charms-Date</font>
+					<textcolor>Label_Normal</textcolor>
+					<aligny>center</aligny>
+						<alignx>center</alignx>
+				</control>
+				
+				<control type="image">
+				
+				<posx>20</posx>
+				<posy>100</posy>
+				<width>360</width>
+				<height>1</height>
+				<texture>colors/color_grey.png</texture>
+				
+			</control>
+			<control type="image">
+				
+				<posx>20</posx>
+				<posy>280</posy>
+				<width>360</width>
+				<height>1</height>
+				<texture>colors/color_grey.png</texture>
+				
+			</control>
+			
+			<control type="panel" id="10">
+	
+				<posx>0</posx>
+				<posy>110</posy>
+				<width>400</width>
+				<height>300</height>
+				<onup>10</onup>
+				<ondown>10</ondown>
+				<onleft>Dialog.Close(55)</onleft>
+				<onright>Dialog.Close(55)</onright>
+		
+				<orientation>vertical</orientation>
+				<scrolltime tween="cubic" easing="out">600</scrolltime>
+				
+				
+				
+				
+				<itemlayout width="100" height="80">
+				
+					<control type="image">
+					
+						<posx>20</posx>
+						<posy>0</posy>
+						<width>60</width>
+						<height>60</height>
+						<texture>$INFO[ListItem.Icon]</texture>
+						<colordiffuse>Label_Normal</colordiffuse>
+						
+					</control>
+					
+					<control type="label">
+					
+						<posx>50</posx>
+						<posy>50</posy>
+						<width>100</width>
+						<height>20</height>
+						<label>$INFO[ListItem.Label]</label>
+						<font>Charms-Label</font>
+						<textcolor>Label_Normal</textcolor>
+						<align>center</align>
+						
+					</control>
+					
+				</itemlayout>
+
+				<focusedlayout width="100" height="80">
+				
+					<control type="image">
+					
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>100</width>
+						<height>80</height>
+						<texture>colors/color_white.png</texture>
+						<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+						
+					</control>
+				
+					<control type="image">
+					
+						<posx>20</posx>
+						<posy>0</posy>
+						<width>60</width>
+						<height>60</height>
+						<texture>$INFO[ListItem.Icon]</texture>
+						<colordiffuse>Label_Normal</colordiffuse>
+						
+					</control>
+					
+					<control type="label">
+					
+						<posx>50</posx>
+						<posy>50</posy>
+						<width>100</width>
+						<height>20</height>
+						<label>$INFO[ListItem.Label]</label>
+						<font>Charms-Label</font>
+						<textcolor>Label_Normal</textcolor>
+						<align>center</align>
+						
+					</control>
+					
+				</focusedlayout>
+				
+				<content>
+				
+					<item>
+						<description>Home</description>
+						<label>Home</label>
+						<thumb>charms/charm_home.png</thumb>
+						<onclick>Dialog.Close(55)</onclick>
+						
+						<onclick condition="!Skin.HasSetting(snapie) + !Window.IsVisible(0) + Skin.HasSetting(SnapFeature)">Skin.ToggleSetting(snapie)</onclick>
+<onclick condition="Skin.HasSetting(gaming) + !Window.IsVisible(0) + Skin.HasSetting(SnapFeature)">Skin.ToggleSetting(gaming)</onclick>
+<onclick condition="!Window.IsVisible(0) + Skin.HasSetting(SnapFeature)">SetProperty(snap,C:\Assistance\Snap\Pic\Item.jpg,0)</onclick>
+						<onclick condition="Skin.HasSetting(SnapFeature) + !Window.IsVisible(0)">AlarmClock(startsnap,RunScript(special://skin/system/Snap.py),00:01,silent)</onclick>
+		
+						<onclick condition="Skin.HasSetting(SnapFeature)">AlarmClock(startapp,ActivateWindow(0),00:02,silent)</onclick>
+						<onclick condition="!Skin.HasSetting(SnapFeature)">ActivateWindow(0)</onclick>
+				
+							<onclick>Dialog.Close(146)</onclick>
+		<onclick>Dialog.Close(134)</onclick>
+		<onclick>Dialog.Close(2003)</onclick>
+				<onclick>Dialog.Close(2001)</onclick>
+					</item>
+					
+					<item>
+						<description>Pesquisa</description>
+						<label>Pesquisa[CR]Youtube</label>
+						<thumb>charms/charm_search.png</thumb>
+																		<onclick>Dialog.Close(55)</onclick>
+<onclick>Skin.SetString(tube)</onclick>
+<onclick condition="!Skin.HasSetting(Searching)">Skin.ToggleSetting(Searching)</onclick>
+<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=$INFO[Skin.String(tube)]&quot;,return)</onclick>
+
+					</item>
+				
+					<item>
+						<description>Videos</description>
+						<label>Videos</label>
+						<thumb>charms/charm_video.png</thumb>
+						<onclick>Dialog.Close(55)</onclick>
+						<onclick>ActivateWindow(8868)</onclick>
+					</item>
+				
+					<item>
+						<description>Music</description>
+						<label>Music</label>
+						<thumb>charms/charm_music.png</thumb>
+						<onclick>Dialog.Close(55)</onclick>
+						<onclick>ActivateWindow(8869)</onclick>
+					</item>
+					
+
+					
+					<item>
+						<description>Games</description>
+						<label>Games</label>
+						<thumb>charms/charm_games.png</thumb>
+						<onclick>Dialog.Close(55)</onclick>
+					<onclick>ActivateWindow(10001,"plugin://plugin.program.advanced.launcher/?default",return)</onclick>
+					</item>
+					
+						<item>
+						<description>Snap Video</description>
+						<label>Snap</label>
+						<thumb>charms\charm_snap.png</thumb>
+						<onclick>Dialog.Close(55)</onclick>
+					<onclick condition="!Window.IsVisible(4545)">ActivateWindow(4545)</onclick>
+					<onclick condition="Window.IsVisible(4545)">Dialog.Close(4545)</onclick>
+			<visible>Player.HasVideo</visible>
+					</item>
+							<item>
+						<description>Snap Music</description>
+						<label>Snap</label>
+						<thumb>charms\charm_snap.png</thumb>
+						<onclick>Dialog.Close(55)</onclick>
+					<onclick condition="!Window.IsVisible(4546)">ActivateWindow(4546)</onclick>
+					<onclick condition="Window.IsVisible(4546)">Dialog.Close(4546)</onclick>
+			<visible>Player.HasAudio</visible>
+					</item>
+					
+											<item>
+						<description>UnSnap Video</description>
+						<label>UnSnap</label>
+						<thumb>charms\charm_unsnap.png</thumb>
+						<onclick>Dialog.Close(55)</onclick>
+		<onclick condition="Skin.HasSetting(Snapped)">Skin.ToggleSetting(Snapped)</onclick>
+					<onclick condition="Window.IsVisible(4545)">Dialog.Close(4545)</onclick>
+		<visible>Player.HasVideo</visible>
+					</item>
+													<item>
+						<description>UnSnap Music</description>
+						<label>UnSnap</label>
+						<thumb>charms\charm_unsnap.png</thumb>
+						<onclick>Dialog.Close(55)</onclick>
+		<onclick condition="Skin.HasSetting(Snapped2)">Skin.ToggleSetting(Snapped2)</onclick>
+					<onclick condition="Window.IsVisible(4546)">Dialog.Close(4546)</onclick>
+		<visible>Player.HasAudio</visible>
+					</item>
+		
+					
+					
+	
+							
+												<item>
+														<visible>Skin.HasSetting(AltSet)</visible>
+						<description>Opções</description>
+						<label>Opções</label>
+						<thumb>charms/charm_settings.png</thumb>
+						<onclick>Dialog.Close(55)</onclick>
+						<onclick>ActivateWindow(8448)</onclick>
+					</item>
+													<item>
+														<visible>!Skin.HasSetting(AltSet)</visible>
+						<description>Settings</description>
+						<label>Settings</label>
+						<thumb>charms/charm_settings.png</thumb>
+						<onclick>Dialog.Close(55)</onclick>
+						<onclick>ActivateWindow(Settings)</onclick>
+					</item>
+
+				</content>
+				
+			</control>
+
+		</control>
+
+		
+	</controls>	
+	
+</window>

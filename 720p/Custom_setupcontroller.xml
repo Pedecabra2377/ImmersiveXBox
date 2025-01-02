@@ -1,0 +1,101 @@
+<window id="5551">
+
+	<defaultcontrol always="true">1</defaultcontrol>
+	
+	<zorder>2</zorder>
+	
+	
+
+
+	
+	<!--Splash Screen-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<onload>AlarmClock(CloseSetup,ReplaceWindow(5552),00:35,silent)</onload>
+
+	
+	<controls>
+
+		<!--Background Area-->
+
+		
+
+<control type="multiimage">
+				
+				<include>Common_Dimensions</include>
+				<imagepath background="true">demo\upd</imagepath>
+				<timeperimage>2000</timeperimage>
+				<randomize>false</randomize>
+				<fadetime>1000</fadetime>
+				<loop>no</loop>
+			</control>
+
+
+							
+																			
+									<!--Top Area-->
+
+			
+			<!--Content Area-->
+			<control type="group">
+			
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+				
+				<!--Animation-->
+				<include condition="!Skin.HasSetting(disablesplash)">Common_Animation_Content_Splash</include>
+				<include condition="!Window.Previous(home)">Common_Animation_Content</include>
+				
+				<control type="grouplist">
+		
+					<include>Common_Content_Grouplist</include>
+					
+					<control type="group" id="100">
+					
+						<posx>60</posx>
+						<posy>0</posy>
+						<width>400</width>
+						<height>480</height>
+						
+						
+			
+				
+
+										
+							
+							
+
+				
+						
+						<!--Scrollbar-->
+
+					
+					</control>
+					
+			
+					
+				</control>
+				
+			</control>
+
+			
+		
+		
+	</controls>	
+		
+</window>

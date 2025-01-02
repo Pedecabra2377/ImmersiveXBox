@@ -1,0 +1,486 @@
+<window type="dialog" id="5605">
+
+	<defaultcontrol always="true">1009</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<zorder>2</zorder>
+	<onload>Control.SetFocus(1009)</onload>
+<onload>PlayMedia($INFO[Skin.String(SocialVideo)], 1)</onload>
+<onunload>Skin.SetString(SocialVideo, )</onunload>
+<onunload>PlayerControl(Stop)</onunload>
+	<controls>
+	
+			<control type="image">
+		
+			<include>Common_Dimensions</include>
+			<texture background="true">colors/color_white.png</texture>
+			<colordiffuse>FanartDiffuse</colordiffuse>
+			
+			<include>Common_Animation_Window_Dark</include>
+			
+		</control>
+
+
+		
+		
+	
+		<!--Charm Bar Section-->
+		<control type="group">
+		
+			<posx>0</posx>
+			<posy>0</posy>
+			
+			 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="150" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+				
+
+	<control type="image">
+				 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="150" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+				
+				<posx>0</posx>
+				<posy>105</posy>
+				<width>1500</width>
+				<height>500</height>
+				<texture>demo\install\1.png</texture>
+			
+			</control>
+			<control type="image">
+				 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="150" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+				
+				<posx>0</posx>
+				<posy>105</posy>
+				<width>1500</width>
+				<height>500</height>
+				<texture>demo\install\1.png</texture>
+				<visible>Control.HasFocus(1)</visible>
+			</control>
+			<control type="image">
+				 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="150" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+				
+				<posx>800</posx>
+				<posy>105</posy>
+				<width>1500</width>
+				<height>500</height>
+				<texture>colors\profile.png</texture>
+	
+			</control>
+		
+			
+			<control type="image">
+			
+				<posx>42</posx>
+				<posy>142.7</posy>
+				<width>115</width>
+				<height>114.5</height>
+					<texture>$INFO[skin.string(socialimage)]</texture>
+						<visible>!IsEmpty(Skin.String(socialimage))</visible>
+			
+			</control>
+			<control type="image">
+			
+				<posx>42</posx>
+				<posy>142.7</posy>
+				<width>115</width>
+				<height>114.5</height>
+					<texture>$INFO[System.ProfileThumb]</texture>
+						<visible>IsEmpty(Skin.String(socialimage))</visible>
+			
+			</control>
+			
+			<control type="textbox">
+																			
+							
+	
+			<label>$INFO[skin.string(socialstatus)]</label>
+
+		<posx>182</posx>
+								<posy>142.7</posy>
+								<width>700</width>
+								<height>210</height>
+		<font>DialogInfo-Label2</font>
+			<textcolor>white</textcolor>
+			<scrollspeed>0</scrollspeed>
+			<autoscroll>false</autoscroll>
+			<wrapmultiline>true</wrapmultiline>
+					
+								
+		</control>
+		<control type="textbox">
+							
+			<posx>42</posx>
+								<posy>262</posy>
+			<width>500</width>
+			<height>500</height>
+			<label>$INFO[skin.string(socialmessage)]</label>
+			<font>charms-date</font>
+			<textcolor>white</textcolor>
+			<scrollspeed>0</scrollspeed>
+			<autoscroll>false</autoscroll>
+			<wrapmultiline>false</wrapmultiline>
+			
+		</control>
+		
+			<control type="image">
+			<include condition="Window.Previous(Startup)">Common_Animation_dashboard10</include> 
+			<description>Busy animation</description>
+			<posx>335</posx>
+								<posy>310</posy>
+			<width>80</width>
+			<height>80</height>
+			<texture>buffer/buffer_progress.png</texture>
+			<aspectratio>keep</aspectratio>
+		<visible>!Player.HasVideo + IsEmpty(skin.string(socialmessage))</visible>
+	
+			<animation effect="rotate" end="-360" center="auto" time="1200" loop="true" condition="true">Conditional</animation>
+			
+		</control>
+			
+				<control type="videowindow">
+      <description>My first video control</description>
+			<posx>165</posx>
+								<posy>200</posy>
+			<width>500</width>
+			<height>300</height>
+      <visible>Player.HasVideo + !IsEmpty(skin.string(socialvideoimage))</visible>
+            
+            
+
+        </control>
+		
+			
+				
+				<control type="textbox">
+																			
+							
+	
+			<label>Comments</label>
+
+		<posx>850</posx>
+								<posy>142.7</posy>
+								<width>700</width>
+								<height>210</height>
+		<font>DialogInfo-Label2</font>
+			<textcolor>white</textcolor>
+			<scrollspeed>0</scrollspeed>
+			<autoscroll>false</autoscroll>
+			<wrapmultiline>true</wrapmultiline>
+					
+								
+		</control>
+			
+			<control type="panel" id="1009">
+				
+
+					 <include>Common_Animation_Window</include>
+				<posx>700</posx>
+				<posy>142.7</posy>
+				
+				<height>480</height>
+				<onleft>1007</onleft>
+
+							
+							<onright>1</onright>
+						<ondown>1007</ondown>
+						<onup>103</onup>
+						<include>Common_AltHome_Panel391-alt-social</include>
+					
+
+
+
+
+						
+						
+						<content>
+						
+
+							
+									
+							
+							<item id="1">
+								<description>Games</description>
+								<label>colors\color_grey.png</label>
+								<label2>Favourite</label2>
+								<thumb>demo\love.png</thumb>
+													
+											<onclick>Dialog.Close(5605)</onclick>		
+<onclick condition="!skin.hassetting(like)">Notification(     ,Liked!,00:59,)</onclick>
+<onclick condition="!skin.hassetting(like)">Skin.ToggleSetting(like)</onclick>
+	
+									
+								<visible>!skin.hassetting(like)</visible>						
+							</item>
+								<item id="1">
+								<description>Games</description>
+								<label>colors\color_grey.png</label>
+								<label2>Favourite</label2>
+								<thumb>demo\love.png</thumb>
+													
+													
+<onclick>Dialog.Close(5605)</onclick>
+   <onclick condition="skin.hassetting(like)">Notification(     ,Uniked!,00:59,)</onclick>                          
+	<onclick condition="skin.hassetting(like)">Skin.ToggleSetting(like)</onclick>		
+									
+								<visible>skin.hassetting(like)</visible>						
+							</item>
+								<item id="2">
+								<description>Games</description>
+								<label>colors\color_grey.png</label>
+								<label2>Comentar</label2>
+								<thumb>demo\message2.png</thumb>
+													
+													<onclick>Dialog.Close(5605)</onclick>
+<onclick condition="IsEmpty(Skin.String(Comment1))">Skin.Setstring(Comment1)</onclick>
+                                <onclick condition="!IsEmpty(Skin.String(Comment1)) + IsEmpty(Skin.String(Comment2))">Skin.Setstring(Comment2)</onclick>
+								<onclick condition="!IsEmpty(Skin.String(Comment2)) + IsEmpty(Skin.String(Comment3))">Skin.Setstring(Comment3)</onclick>
+								<onclick condition="!IsEmpty(Skin.String(Comment3)) + IsEmpty(Skin.String(Comment4))">Skin.Setstring(Comment4)</onclick>
+								<onclick condition="!IsEmpty(Skin.String(Comment4)) + IsEmpty(Skin.String(Comment5))">Skin.Setstring(Comment5)</onclick>
+								<onclick condition="!IsEmpty(Skin.String(Comment5)) + IsEmpty(Skin.String(Comment6))">Skin.Setstring(Comment6)</onclick>
+								<onclick condition="!IsEmpty(Skin.String(Comment6)) + IsEmpty(Skin.String(Comment7))">Skin.Setstring(Comment7)</onclick>
+								<onclick condition="!IsEmpty(Skin.String(Comment7)) + IsEmpty(Skin.String(Comment8))">Skin.Setstring(Comment8)</onclick>
+								<onclick condition="!IsEmpty(Skin.String(Comment8)) + IsEmpty(Skin.String(Comment9))">Skin.Setstring(Comment9)</onclick>
+								<onclick condition="!IsEmpty(Skin.String(Comment9)) + IsEmpty(Skin.String(Comment10))">Skin.Setstring(Comment10)</onclick>
+									
+                              
+			<onclick>activatewindow(5605)</onclick>
+									
+														
+							</item>
+								<item id="5">
+								<description>Games</description>
+								<label>colors\color_grey.png</label>
+								<label2>Share</label2>
+								<thumb>demo\share.png</thumb>
+										<visible>!IsEmpty(skin.string(socialmessage))</visible>	
+										
+											<onclick>Dialog.Close(5605)</onclick>		
+<onclick condition="IsEmpty(Skin.String(Status1))">Skin.Setstring(Status1, $INFO[skin.string(socialmessage)])</onclick>
+<onclick condition="!IsEmpty(Skin.String(Status1)) + IsEmpty(Skin.String(Status2))">Skin.Setstring(Status2, $INFO[skin.string(socialmessage)])</onclick>
+<onclick condition="!IsEmpty(Skin.String(Status2)) + IsEmpty(Skin.String(Status3))">Skin.Setstring(Status3, $INFO[skin.string(socialmessage)])</onclick>
+<onclick condition="!IsEmpty(Skin.String(Status3)) + IsEmpty(Skin.String(Status4))">Skin.Setstring(Status4, $INFO[skin.string(socialmessage)])</onclick>
+<onclick condition="!IsEmpty(Skin.String(Status4)) + IsEmpty(Skin.String(Status5))">Skin.Setstring(Status5, $INFO[skin.string(socialmessage)])</onclick>
+<onclick condition="!IsEmpty(Skin.String(Status5)) + IsEmpty(Skin.String(Status6))">Skin.Setstring(Status6, $INFO[skin.string(socialmessage)])</onclick>
+<onclick condition="!IsEmpty(Skin.String(Status6)) + IsEmpty(Skin.String(Status7))">Skin.Setstring(Status7, $INFO[skin.string(socialmessage)])</onclick>
+<onclick condition="!IsEmpty(Skin.String(Status7)) + IsEmpty(Skin.String(Status8))">Skin.Setstring(Status8, $INFO[skin.string(socialmessage)])</onclick>
+<onclick condition="!IsEmpty(Skin.String(Status8)) + IsEmpty(Skin.String(Status9))">Skin.Setstring(Status9, $INFO[skin.string(socialmessage)])</onclick>
+<onclick condition="!IsEmpty(Skin.String(Status9)) + IsEmpty(Skin.String(Status10))">Skin.Setstring(Status10, $INFO[skin.string(socialmessage)])</onclick>
+	
+
+			
+									
+														
+							</item>
+
+								</content>
+
+					</control>
+					
+					<control type="panel" id="1">
+				
+<posx>850</posx>
+						<posy>180</posy>
+
+				<onright>8</onright>
+		<onleft>1009</onleft>
+						<include>Common_AltHome_Panel391-comment</include>
+					
+
+
+
+
+						
+						
+						<content>
+							<item id="1">
+								<description>Games</description>
+								<label></label>
+								<label2>Be the first to comment.</label2>
+								<thumb>$INFO[System.ProfileThumb]</thumb>
+													
+											<onclick>-</onclick>
+									<visible>IsEmpty(Skin.String(Comment1))</visible>
+														
+							</item>
+
+							
+										<item id="1">
+								<description>Games</description>
+								<label>$INFO[Skin.string(GTAG)]</label>
+								<label2>$INFO[Skin.String(Comment1)]</label2>
+								<thumb>$INFO[System.ProfileThumb]</thumb>
+													
+											<onclick>-</onclick>
+									<visible>!IsEmpty(Skin.String(Comment1))</visible>
+														
+							</item>
+									<item id="2">
+								<description>Games</description>
+								<label>$INFO[Skin.string(GTAG)]</label>
+								<label2>$INFO[Skin.String(Comment2)]</label2>
+								<thumb>$INFO[System.ProfileThumb]</thumb>
+													
+											<onclick>-</onclick>
+									<visible>!IsEmpty(Skin.String(Comment2))</visible>
+														
+							</item>
+									<item id="3">
+								<description>Games</description>
+								<label>$INFO[Skin.string(GTAG)]</label>
+								<label2>$INFO[Skin.String(Comment3)]</label2>
+								<thumb>$INFO[System.ProfileThumb]</thumb>
+													
+											<onclick>-</onclick>
+									<visible>!IsEmpty(Skin.String(Comment3))</visible>
+														
+							</item>
+									<item id="4">
+								<description>Games</description>
+								<label>$INFO[Skin.string(GTAG)]</label>
+								<label2>$INFO[Skin.String(Comment4)]</label2>
+								<thumb>$INFO[System.ProfileThumb]</thumb>
+													
+											<onclick>-</onclick>
+									<visible>!IsEmpty(Skin.String(Comment4))</visible>
+														
+							</item>
+									<item id="5">
+								<description>Games</description>
+								<label>$INFO[Skin.string(GTAG)]</label>
+								<label2>$INFO[Skin.String(Comment5)]</label2>
+								<thumb>$INFO[System.ProfileThumb]</thumb>
+													
+											<onclick>-</onclick>
+									<visible>!IsEmpty(Skin.String(Comment5))</visible>
+														
+							</item>
+									<item id="6">
+								<description>Games</description>
+								<label>$INFO[Skin.string(GTAG)]</label>
+								<label2>$INFO[Skin.String(Comment6)]</label2>
+								<thumb>$INFO[System.ProfileThumb]</thumb>
+													
+											<onclick>-</onclick>
+									<visible>!IsEmpty(Skin.String(Comment6))</visible>
+														
+							</item>
+									<item id="7">
+								<description>Games</description>
+								<label>$INFO[Skin.string(GTAG)]</label>
+								<label2>$INFO[Skin.String(Comment7)]</label2>
+								<thumb>$INFO[System.ProfileThumb]</thumb>
+													
+											<onclick>-</onclick>
+									<visible>!IsEmpty(Skin.String(Comment7))</visible>
+														
+							</item>
+									<item id="8">
+								<description>Games</description>
+								<label>$INFO[Skin.string(GTAG)]</label>
+								<label2>$INFO[Skin.String(Comment8)]</label2>
+								<thumb>$INFO[System.ProfileThumb]</thumb>
+													
+											<onclick>-</onclick>
+									<visible>!IsEmpty(Skin.String(Comment8))</visible>
+														
+							</item>
+									<item id="9">
+								<description>Games</description>
+								<label>$INFO[Skin.string(GTAG)]</label>
+								<label2>$INFO[Skin.String(Comment9)]</label2>
+								<thumb>$INFO[System.ProfileThumb]</thumb>
+													
+											<onclick>-</onclick>
+									<visible>!IsEmpty(Skin.String(Comment9))</visible>
+														
+							</item>
+									<item id="10">
+								<description>Games</description>
+								<label>$INFO[Skin.string(GTAG)]</label>
+								<label2>$INFO[Skin.String(Comment10)]</label2>
+								<thumb>$INFO[System.ProfileThumb]</thumb>
+													
+											<onclick>-</onclick>
+									<visible>!IsEmpty(Skin.String(Comment10))</visible>
+														
+							</item>
+						
+												
+
+
+								</content>
+
+					</control>
+					
+					
+					
+					
+					
+			<control type="panel" id="1007">
+	
+<posx>180</posx>
+						<posy>540</posy>
+
+			<onup>1009</onup>
+			<onright>1009</onright>
+			<onleft>1009</onleft>
+						<include>Common_AltHome_Panel390</include>
+					
+
+
+
+
+						
+						
+						<content>
+						
+
+							
+						
+							<item id="1">
+								<description>Games</description>
+								<label>    Close</label>
+								<thumb></thumb>
+									<onclick>Back</onclick>		
+							
+						
+
+								
+							</item>
+			
+								
+		
+							
+
+								</content>
+
+					</control>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+						
+
+		</control>
+
+		
+	</controls>	
+	
+</window>

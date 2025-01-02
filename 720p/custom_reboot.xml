@@ -1,0 +1,70 @@
+<!-- Foundation -->
+<window id="5545">
+	
+	
+
+
+<onload condition="!Skin.HasSetting(lode)">Skin.ToggleSetting(lode)</onload> 
+
+
+	
+
+
+<onload>AlarmClock(CloseStartup,ActivateWindow(0),00:02,silent)</onload>
+
+	<onload condition="Skin.HasSetting(FirstTimeRun)">AlarmClock(welcome,Notification(     ,Olá $INFO[System.ProfileName],00:59,),00:4,silent,)</onload>
+
+<onload condition="Skin.HasSetting(loder) + Skin.HasSetting(RemoveSignButton)">Skin.ToggleSetting(loder)</onload> 
+
+<onload condition="!Skin.HasSetting(loder) + !Skin.HasSetting(RemoveSignButton)">Skin.ToggleSetting(loder)</onload> 
+
+<onload condition="!Skin.HasSetting(on)">Skin.ToggleSetting(on)</onload>
+
+
+
+	<controls>
+		
+		
+	
+			
+				<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+			<texture>XBOXnew.png</texture>
+			<aspectratio>stretch</aspectratio>
+	
+		</control>
+
+				
+				
+
+
+								
+		
+
+
+
+		
+				
+
+				
+				
+
+				
+				
+							
+				
+
+		
+		
+		
+		
+
+			
+
+		
+	</controls>
+	
+</window>

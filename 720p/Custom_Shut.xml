@@ -1,0 +1,224 @@
+<!-- Foundation -->
+<window id="1212">
+	
+	<defaultcontrol always="true">1</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+
+	<controls>
+
+		<include>Common_Background_Fade</include>
+<control type="image">
+		 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="150" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+								<include>Common_Animation_Window</include>
+								<posx>0</posx>
+								<posy>135</posy>
+									<width>1280</width>
+				<height>446</height>
+								<texture>demo/shut/bg.png</texture>
+						
+								
+							</control>
+							<control type="image">
+									 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="150" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+								<include>Common_Animation_Window</include>
+												<posx>0</posx>
+								<posy>135</posy>
+									<width>1280</width>
+				<height>446</height>
+								<texture>demo/shut/1.png</texture>
+						
+								<visible>Control.HasFocus(1)</visible>
+							</control>
+														<control type="image">
+								 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="150" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+											<posx>0</posx>
+									<posy>135</posy>
+									<width>1280</width>
+				<height>446</height>
+								<texture>demo/shut/2.png</texture>
+						
+								<visible>Control.HasFocus(2)</visible>
+							</control>
+							
+							<control type="label" id="4">
+									 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="150" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+			<include>Common_Animation_Window</include>
+			<description>dialog line 4</description>
+			<posx>85</posx>
+			<posy>105</posy>
+			<width>550</width>
+			<height>150</height>
+			<align>left</align>
+			<aligny>center</aligny>
+			<label>Desligar Xbox</label>
+			<font>Settings-Menu-Header3</font>
+	
+		</control>
+		
+		
+		<control type="label" id="4">
+				 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="150" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+			<include>Common_Animation_Window</include>
+			<description>dialog line 4</description>
+			<posx>85</posx>
+			<posy>180</posy>
+			<width>550</width>
+			<height>150</height>
+			<align>left</align>
+			<aligny>center</aligny>
+			<label>Tem certeza que quer desligar o Xbox?</label>
+			<font>Settings-menu-header2</font>
+	
+		</control>
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+		<control type="group">
+
+			<posx>0</posx>
+			<posy>210</posy>
+			
+			
+
+			<control type="grouplist">
+		
+					
+					
+					<control type="group" id="100">
+					
+						<posx>60</posx>
+						<posy>0</posy>
+						<width>400</width>
+						<height>480</height>
+						
+						
+			
+				
+
+										<control type="panel" id="1">
+											
+<posx>915</posx>
+						<posy>200</posy>
+
+						
+						<include>Common_AltHome_Panel3</include>
+					<onright>2</onright>
+						<pagecontrol>7017</pagecontrol>
+						
+						<content>
+						
+
+							
+																					<item id="1">
+								<description>Games</description>
+								<label>Games</label>
+								<thumb>SHORT\ICO\Games.png</thumb>
+								<visible>!Skin.HasSetting(PythonShutdown) + !Skin.HasSetting(Instant)</visible>
+												
+<onclick>XBMC.Powerdown()</onclick>
+														
+							</item>
+							
+							
+							
+							
+							
+							
+																				<item id="1">
+								<description>Games</description>
+								<label>Games</label>
+								<thumb>SHORT\ICO\Games.png</thumb>
+								<visible>Skin.HasSetting(PythonShutdown) + !Skin.HasSetting(Instant)</visible>
+												
+<onclick condition="System.Platform.Windows">RunScript(special://skin/system/Shutdown.py)</onclick>
+	<onclick condition="System.Platform.Linux">RunScript(special://skin/system/ShutdownLinux.py)</onclick>	
+	<onclick condition="System.Platform.Linux.RaspberryPi">RunScript(special://skin/system/ShutdownRaspberry.py)</onclick>
+	<onclick condition="System.Platform.Darwin">RunScript(special://skin/system/ShutdownDarwin.py)</onclick>
+	<onclick condition="System.Platform.ATV2">RunScript(special://skin/system/ShutdownATV.py)</onclick>
+							</item>
+							
+																			<item id="1">
+								<description>Games</description>
+								<label>Games</label>
+								<thumb>SHORT\ICO\Games.png</thumb>
+								<visible>Skin.HasSetting(Instant)</visible>
+							<onclick>ActivateWindow(5545)</onclick>					
+<onclick condition="!Player.Muted">Mute</onclick>
+<onclick>AlarmClock(Sus,XBMC.Suspend,00:01,silent)</onclick>
+							</item>
+							
+
+
+								</content>
+
+					</control>
+					
+					
+						<control type="panel" id="2">
+<posx>915</posx>
+						<posy>200</posy>
+
+						
+						<include>Common_AltHome_Panel3</include>
+<onleft>1</onleft>
+
+					
+						<pagecontrol>7017</pagecontrol>
+						
+						<content>
+						
+
+							
+																					<item id="1">
+								<description>Games</description>
+								<label>Games</label>
+								<thumb>SHORT\ICO\Games.png</thumb>
+									<onclick>Dialog.Close(1212)</onclick>
+					<onclick>Back</onclick>
+														
+							</item>
+							
+
+
+								</content>
+
+					</control>
+				
+				
+			</control>	
+
+		</control>
+	</control>
+	</controls>
+
+</window>

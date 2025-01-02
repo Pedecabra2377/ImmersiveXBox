@@ -1,0 +1,174 @@
+<window type="dialog" id="5590">
+
+	<defaultcontrol>100</defaultcontrol>
+	
+	
+	
+	
+
+	
+	<!--Splash Screen-->
+
+
+	
+
+
+	
+
+	
+	<controls>
+
+		<!--Background Area-->
+
+	
+			
+<control type="image">
+		
+			<include>Common_Dimensions</include>
+			<texture background="true">colors/color_white.png</texture>
+			<colordiffuse>FanartDiffuse</colordiffuse>
+			
+			<include>Common_Animation_Window_Dark</include>
+			<visible>!Player.HasMedia</visible>
+		</control>
+
+							
+																			
+									<!--Top Area-->
+
+	
+						
+						
+			
+				
+
+					
+
+							
+					
+					
+						
+					
+					
+					
+					
+					
+								
+					
+					
+							
+					
+					
+					
+	
+		<control type="group">
+		<include>Common_Animation_Splash_kai2</include>
+			<posx>280</posx>
+			<posy>70</posy>
+			<width>320</width>
+			<height>400</height>
+			
+		
+		
+			<!--Background-->
+				
+					<control type="image">
+			
+				<posx>-5</posx>
+				<posy>0</posy>
+				<width>700</width>
+				<height>580</height>
+				<texture background="true">colors\color_black.png</texture>
+			<colordiffuse>FFF5F5F5</colordiffuse>
+
+			</control>
+			
+			
+			<include>Common_ContextMenu_Header_Back</include>
+			
+			<control type="label">
+	
+					<posx>80</posx>
+		<posy>29</posy>
+		<width>240</width>
+		<height>32</height>
+		<font>PVR-EPG-Time2</font>
+		<textcolor>Label_Normal</textcolor>
+		<aligny>top</aligny>
+				<label>Inicialização</label>
+				
+				
+			</control>
+			
+			
+			
+			<control type="grouplist" id="100">
+			
+				<description>Control Area</description>
+				<posx>-5</posx>
+				<posy>100</posy>
+				<width>700</width>
+				<height>500</height>
+				<itemgap>0</itemgap>
+				<onup>100</onup>
+				<ondown>100</ondown>
+				<onleft>98</onleft>
+				<onright>-</onright>
+				<orientation>vertical</orientation>
+				<pagecontrol>81</pagecontrol>
+				
+				
+				<include>Common_Animation_Settings_Options</include>
+						
+
+							
+						
+					<control type="radiobutton" id="188">
+										
+					<description>Background Visualiser</description>
+					<include>Common_Settings_RadioButton</include>
+					<label>Inicialização rápida</label>
+					<onclick>Skin.ToggleSetting(ShortBoot)</onclick>
+			<onclick condition="Skin.HasSetting(LongBoot)">Skin.ToggleSetting(LongBoot)</onclick>
+		
+	
+					<selected>Skin.HasSetting(ShortBoot)</selected>
+			
+				</control>
+			<control type="radiobutton" id="189">
+										
+					<description>Background Visualiser</description>
+					<include>Common_Settings_hitme</include>
+					<label>Inicialização padrão</label>
+					<onclick condition="Skin.HasSetting(ShortBoot)">Skin.ToggleSetting(ShortBoot)</onclick>
+			<onclick condition="Skin.HasSetting(LongBoot)">Skin.ToggleSetting(LongBoot)</onclick>
+		
+	
+			
+				</control>
+				<control type="radiobutton" id="190">
+										
+					<description>Background Visualiser</description>
+					<include>Common_Settings_RadioButton</include>
+					<label>Inicialização Longa</label>
+					<onclick>Skin.ToggleSetting(LongBoot)</onclick>
+			<onclick condition="Skin.HasSetting(ShortBoot)">Skin.ToggleSetting(ShortBoot)</onclick>
+		
+	
+					<selected>Skin.HasSetting(LongBoot)</selected>
+			
+				</control>
+		
+		</control>			
+						
+						<!--Scrollbar-->
+
+					
+			
+
+			
+		
+		
+	</controls>	
+		
+</window>

@@ -1,0 +1,357 @@
+<window type="dialog" id="5589">
+
+	<defaultcontrol>100</defaultcontrol>
+	
+	
+	
+	
+
+	
+	<!--Splash Screen-->
+
+
+	
+
+
+	
+
+	
+	<controls>
+
+		<!--Background Area-->
+
+	
+			
+<control type="image">
+		
+			<include>Common_Dimensions</include>
+			<texture background="true">colors/color_white.png</texture>
+			<colordiffuse>FanartDiffuse</colordiffuse>
+			
+			<include>Common_Animation_Window_Dark</include>
+			<visible>!Player.HasMedia</visible>
+		</control>
+
+							
+																			
+									<!--Top Area-->
+
+	
+						
+						
+			
+				
+
+					
+
+							
+					
+					
+						
+					
+					
+					
+					
+					
+								
+					
+					
+							
+					
+					
+					
+	
+		<control type="group">
+		<include>Common_Animation_Splash_kai2</include>
+			<posx>280</posx>
+			<posy>70</posy>
+			<width>320</width>
+			<height>400</height>
+			
+		
+		
+			<!--Background-->
+				
+					<control type="image">
+			
+				<posx>-5</posx>
+				<posy>0</posy>
+				<width>700</width>
+				<height>580</height>
+				<texture background="true">colors\color_black.png</texture>
+			<colordiffuse>FFF5F5F5</colordiffuse>
+
+			</control>
+			
+			
+			<include>Common_ContextMenu_Header_Back</include>
+			
+			<control type="label">
+	
+					<posx>80</posx>
+		<posy>29</posy>
+		<width>240</width>
+		<height>32</height>
+		<font>PVR-EPG-Time2</font>
+		<textcolor>Label_Normal</textcolor>
+		<aligny>top</aligny>
+				<label>Mudanças pequenas</label>
+				
+				
+			</control>
+			
+			
+			
+			<control type="grouplist" id="100">
+			
+				<description>Control Area</description>
+				<posx>-5</posx>
+				<posy>100</posy>
+				<width>700</width>
+				<height>500</height>
+				<itemgap>0</itemgap>
+				<onup>100</onup>
+				<ondown>100</ondown>
+				<onleft>98</onleft>
+				<onright>-</onright>
+				<orientation>vertical</orientation>
+				<pagecontrol>81</pagecontrol>
+				
+				
+				<include>Common_Animation_Settings_Options</include>
+						
+
+							
+						
+					<control type="radiobutton" id="191">
+										
+					<description>Background Visualiser</description>
+					<include>Common_Settings_RadioButton</include>
+					<label>Ativar Bing e Google</label>
+					<onclick>Skin.ToggleSetting(BIG)</onclick>
+			
+		
+	
+					<selected>Skin.HasSetting(BIG)</selected>
+			
+				</control>
+			
+				
+				<control type="radiobutton" id="193">
+										
+					<description>Background Visualiser</description>
+					<include>Common_Settings_RadioButton</include>
+					<label>Ativar tempo de uso no perfil</label>
+					<onclick>Skin.ToggleSetting(Uptime)</onclick>
+			
+		
+	
+					<selected>Skin.HasSetting(Uptime)</selected>
+			
+				</control>
+				
+	<control type="radiobutton" id="194">
+										
+					<description>Background Visualiser</description>
+					<include>Common_Settings_RadioButton</include>
+					<label>Ativar navegador alternativo</label>
+					<onclick>Skin.ToggleSetting(KyloBrowser)</onclick>
+<onclick condition="Skin.HasSetting(AltBrowser)">Skin.ToggleSetting(AltBrowser)</onclick>
+	
+
+				</control>
+			
+				
+				<control type="radiobutton" id="196">
+										
+					<description>Background Visualiser</description>
+					<include>Common_Settings_RadioButton</include>
+					<label>Ativar tela de carregamento de jogos</label>
+					<onclick>Skin.ToggleSetting(GameSplash)</onclick>
+
+	
+					<selected>Skin.HasSetting(GameSplash)</selected>
+
+				</control>
+				<control type="radiobutton" id="197">
+										
+					<description>Background Visualiser</description>
+					<include>Common_Settings_RadioButton</include>
+					<label>Ativar design do último reprodutor</label>
+					<onclick>Skin.ToggleSetting(osd2014)</onclick>
+
+	
+					
+
+				</control>
+			<control type="radiobutton" id="198">
+										
+					<description>Background Visualiser</description>
+					<include>Common_Settings_RadioButton</include>
+					<label>Ativar botão de subtítulos no reprodutor</label>
+					<onclick>Skin.ToggleSetting(Subtitlesbutton)</onclick>
+
+	
+					<selected>Skin.HasSetting(Subtitlesbutton)</selected>
+
+				</control>
+					<control type="radiobutton" id="199">
+										
+					<description>Background Visualiser</description>
+					<include>Common_Settings_RadioButton</include>
+					<label>Ativar botão de opções no reprodutor</label>
+					<onclick>Skin.ToggleSetting(settingsbutton)</onclick>
+
+	
+					<selected>Skin.HasSetting(settingsbutton)</selected>
+
+				</control>
+				
+					<control type="radiobutton" id="200">
+										
+					<description>Background Visualiser</description>
+					<include>Common_Settings_RadioButton</include>
+					<label>Desativar sobreposição da tela de proteção</label>
+					<onclick>Skin.ToggleSetting(ScreenOverlay)</onclick>
+
+	
+					
+
+				</control>
+					<control type="radiobutton" id="201">
+										
+					<description>Background Visualiser</description>
+					<include>Common_Settings_RadioButton</include>
+					<label>Ativar ícone de microfone no volume</label>
+					<onclick>Skin.ToggleSetting(miclogo)</onclick>
+
+	
+					<selected>Skin.HasSetting(miclogo)</selected>
+<visible>false</visible>
+				</control>
+	
+				<control type="radiobutton" id="202">
+										
+					<description>Background Visualiser</description>
+					<include>Common_Settings_RadioButton</include>
+					<label>Ativar progresso do vídeo no sistema</label>
+					<onclick>Skin.ToggleSetting(VidProgress)</onclick>
+
+	
+					<selected>Skin.HasSetting(VidProgress)</selected>
+
+				</control>
+				<control type="radiobutton" id="203">
+										
+					<description>Background Visualiser</description>
+					<include>Common_Settings_RadioButton</include>
+					<label>Opção do reprodutor de vídeo</label>
+					<onclick>Skin.ToggleSetting(osdleaf)</onclick>
+
+	
+					<selected>Skin.HasSetting(osdleaf)</selected>
+
+				</control>
+<control type="radiobutton" id="204">
+										
+					<description>Background Visualiser</description>
+					<include>Common_Settings_RadioButton</include>
+					<label>Ativar serviço do controle</label>
+					<onclick>Skin.ToggleSetting(XboxController)</onclick>
+
+	
+					<selected>Skin.HasSetting(XboxController)</selected>
+
+				</control>
+				
+				<control type="radiobutton" id="205">
+										
+					<description>Background Visualiser</description>
+					<include>Common_Settings_RadioButton</include>
+					<label>Notificações do console com temas</label>
+					<onclick>Skin.ToggleSetting(ColorKai)</onclick>
+
+	
+					<selected>Skin.HasSetting(ColorKai)</selected>
+
+				</control>
+<control type="radiobutton" id="206">
+										
+					<description>Background Visualiser</description>
+					<include>Common_Settings_RadioButton</include>
+					<label>Anúncios atualizados da loja</label>
+					<onclick>Skin.ToggleSetting(DashStore)</onclick>
+
+	
+					<selected>Skin.HasSetting(DashStore)</selected>
+
+				</control>
+				
+<control type="radiobutton" id="207">
+										
+					<description>Background Visualiser</description>
+					<include>Common_Settings_RadioButton</include>
+					<label>Limpar arquivos temporários na inicialização</label>
+					<onclick>Skin.ToggleSetting(ClearData)</onclick>
+
+	
+					<selected>Skin.HasSetting(ClearData)</selected>
+
+				</control>
+				<control type="radiobutton" id="208">
+										
+					<description>Background Visualiser</description>
+					<include>Common_Settings_RadioButton</include>
+					<label>Desativar animação dos segundos do relógio</label>
+					<onclick>Skin.ToggleSetting(DisableTimer)</onclick>
+
+	
+					<selected>Skin.HasSetting(DisableTimer)</selected>
+
+				</control>
+	<control type="radiobutton" id="209">
+										
+					<description>Background Visualiser</description>
+					<include>Common_Settings_RadioButton</include>
+					<label>Ativar texto Kinect</label>
+					<onclick>Skin.ToggleSetting(EnableKinectText)</onclick>
+
+	
+					<selected>Skin.HasSetting(EnableKinectText)</selected>
+
+				</control>
+				
+					<control type="radiobutton" id="211">
+										
+					<description>Background Visualiser</description>
+					<include>Common_Settings_RadioButton</include>
+					<label>Mostrar FPS</label>
+					<onclick>Skin.ToggleSetting(ShowFPS)</onclick>
+<visible>!Skin.HasSetting(BETA)</visible>
+	
+					<selected>Skin.HasSetting(ShowFPS)</selected>
+
+				</control>
+					<control type="radiobutton" id="212">
+										
+					<description>Background Visualiser</description>
+					<include>Common_Settings_RadioButton</include>
+					<label>Lembrar de itens compartilhados</label>
+					<onclick>Skin.ToggleSetting(saveshare)</onclick>
+
+	
+					<selected>Skin.HasSetting(saveshare)</selected>
+</control>
+				
+	
+						<!--Scrollbar-->
+
+					
+			
+
+			
+		
+		
+	</controls>	
+		
+</window>

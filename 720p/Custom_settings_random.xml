@@ -1,0 +1,281 @@
+<window type="dialog" id="5524">
+
+	<defaultcontrol>100</defaultcontrol>
+	
+	
+	
+	
+
+	
+	<!--Splash Screen-->
+
+
+	
+
+
+	
+
+	
+	<controls>
+
+		<!--Background Area-->
+
+	
+			
+<control type="image">
+		
+			<include>Common_Dimensions</include>
+			<texture background="true">colors/color_white.png</texture>
+			<colordiffuse>FanartDiffuse</colordiffuse>
+			
+			<include>Common_Animation_Window_Dark</include>
+			<visible>!Player.HasMedia</visible>
+		</control>
+
+							
+																			
+									<!--Top Area-->
+
+	
+						
+						
+			
+				
+
+					
+
+							
+					
+					
+						
+					
+					
+					
+					
+					
+								
+					
+					
+							
+					
+					
+					
+	
+		<control type="group">
+		<include>Common_Animation_Splash_kai2</include>
+			<posx>280</posx>
+			<posy>70</posy>
+			<width>320</width>
+			<height>400</height>
+			
+		
+		
+			<!--Background-->
+				
+					<control type="image">
+			
+				<posx>-5</posx>
+				<posy>0</posy>
+				<width>700</width>
+				<height>580</height>
+				<texture background="true">colors\color_black.png</texture>
+			<colordiffuse>FFF5F5F5</colordiffuse>
+
+			</control>
+			
+			
+			<include>Common_ContextMenu_Header_Back</include>
+			
+			<control type="label">
+	
+					<posx>80</posx>
+		<posy>29</posy>
+		<width>240</width>
+		<height>32</height>
+		<font>PVR-EPG-Time2</font>
+		<textcolor>Label_Normal</textcolor>
+		<aligny>top</aligny>
+				<label>Outras opções</label>
+				
+				
+			</control>
+			
+			
+			
+			<control type="grouplist" id="100">
+			
+				<description>Control Area</description>
+				<posx>-5</posx>
+				<posy>100</posy>
+				<width>700</width>
+				<height>500</height>
+				<itemgap>0</itemgap>
+				<onup>100</onup>
+				<ondown>100</ondown>
+				<onleft>98</onleft>
+				<onright>-</onright>
+				<orientation>vertical</orientation>
+				<pagecontrol>81</pagecontrol>
+				
+				
+				<include>Common_Animation_Settings_Options</include>
+						
+
+							
+						
+								<control type="radiobutton" id="1">
+					
+					<description>Background Visualiser</description>
+					<include>Common_Settings_RadioButton</include>
+					<label>Desative para restaurar padrão de fábrica</label>
+					<onclick>Skin.ToggleSetting(FirstTimeRun)</onclick>
+					<selected>Skin.HasSetting(FirstTimeRun)</selected>
+					<visible>false</visible>
+				</control>
+																												<control type="radiobutton" id="2">
+					
+					<description>Background Visualiser</description>
+					<include>Common_Settings_RadioButton</include>
+					<label>Conectar nome de perfil Xbox</label>
+					<onclick>Skin.ToggleSetting(gamertag)</onclick>
+					<selected>Skin.HasSetting(gamertag)</selected>
+					
+				</control>
+			
+																																				<control type="radiobutton" id="3">
+					
+					<description>Background Visualiser</description>
+					<include>Common_Settings_RadioButton</include>
+					<label>Anúncios alternativos</label>
+					<onclick>Skin.ToggleSetting(Altads)</onclick>
+				</control>
+							
+							
+							
+		
+			
+																																								<control type="radiobutton" id="4">
+					
+					<description>Background Visualiser</description>
+					<include>Common_Settings_RadioButton</include>
+					<label>Desativar alarme de fundo</label>
+					<onclick>Skin.ToggleSetting(disablealarmbk)</onclick>
+				
+					<selected>Skin.HasSetting(disablealarmbk)</selected>
+					<visible>false</visible>
+				</control>
+																																												<control type="radiobutton" id="5">
+					
+					<description>Background Visualiser</description>
+					<include>Common_Settings_hitme</include>
+					<label>Definir alarme de fundo</label>
+					
+					<onclick>Skin.SetImage(alarmbk)</onclick>
+					
+					
+				</control>
+				
+																																								<control type="radiobutton" id="109">
+					
+					<description>Background Visualiser</description>
+					<include>Common_Settings_RadioButton</include>
+					<label>Alterar tela de carregamento de app</label>
+					<onclick>Skin.ToggleSetting(disablesplash)</onclick>
+				
+					
+					
+				</control>
+								
+																																								<control type="radiobutton" id="110">
+					
+					<description>Background Visualiser</description>
+					<include>Common_Settings_RadioButton</include>
+					<label>Desativar barra de assistência</label>
+					<onclick>Skin.ToggleSetting(disableappbar)</onclick>
+				
+					
+					
+				</control>
+				
+																																					<control type="radiobutton" id="111">
+					
+					<description>Background Visualiser</description>
+					<include>Common_Settings_RadioButton</include>
+					<label>Design alternativo do reprodutor</label>
+					<onclick>Skin.ToggleSetting(altosd)</onclick>
+				
+					
+					<visible>false</visible>
+				</control>
+									
+																																																																																						<control type="radiobutton" id="122">
+					
+					<description>Background Visualiser</description>
+					<include>Common_Settings_RadioButton</include>
+					<label>Desativar alarme em diálogo</label>
+					<onclick>Skin.ToggleSetting(alai)</onclick>
+				
+					<selected>Skin.HasSetting(alai)</selected>
+					
+				</control>
+																							<control type="radiobutton" id="133">
+					<description>Background Visualiser</description>
+					<include>Common_Settings_RadioButton</include>
+					<label>Ativar alternativa de TV</label>
+					<onclick>Skin.ToggleSetting(tvalt)</onclick>
+				
+					<selected>Skin.HasSetting(tvalt)</selected>
+					<visible>!Skin.HasSetting(BETA)</visible>
+				</control>
+																																																<control type="radiobutton" id="134">
+					
+					<description>Background Visualiser</description>
+					<include>Common_Settings_hitme</include>
+					<label>Definir alternativa de TV</label>
+					
+					<onclick>Skin.SetAddon(tvalt,xbmc.addon.video)</onclick>
+					<visible>!Skin.HasSetting(BETA)</visible>
+					
+				</control>
+																									
+																																												<control type="radiobutton" id="139">
+					<description>Background Visualiser</description>
+					<include>Common_Settings_RadioButton</include>
+					<label>Ativar informações do sistema nas configurações</label>
+					<onclick>Skin.ToggleSetting(ShowSysInfo)</onclick>
+		
+	
+					<selected>Skin.HasSetting(ShowSysInfo)</selected>
+					
+				</control>
+<control type="radiobutton" id="140">
+					<description>Background Visualiser</description>
+					<include>Common_Settings_RadioButton</include>
+					<label>Alterar atalho do Explorador de internet na barra de tarefas</label>
+					<onclick>Skin.ToggleSetting(charm-ie)</onclick>
+		
+	
+					<selected>Skin.HasSetting(charm-ie)</selected>
+					
+				</control>
+
+
+
+
+				
+
+					</control>
+			
+		</control>			
+						
+						<!--Scrollbar-->
+
+					
+			
+
+			
+		
+		
+	</controls>	
+		
+</window>

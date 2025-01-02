@@ -1,0 +1,55 @@
+<!-- Foundation -->
+<window type="dialog" id="9981">
+
+	<zorder>2</zorder>
+	<onload>RunScript(special://skin/system/InternetExplorer.py)</onload>
+											<onload>Skin.SetString(snapwindow, 9981)</onload>
+<onload condition="!Skin.HasSetting(snapie)">Skin.ToggleSetting(snapie)</onload>
+<onload condition="Skin.HasSetting(gaming)">Skin.ToggleSetting(gaming)</onload>
+<onload>Skin.SetString(snap, demo/sna/internetexplorer.jpg,0)</onload>
+<onload>Skin.SetString(sn,Explorador de internet)</onload>
+	<onload>AlarmClock(CloseSplash,Dialog.Close(9981, force),00:06,silent)</onload>
+
+		
+
+										
+	<controls>
+<include>Common_Animation_dashboard</include>
+		<control type="image">
+					
+			<include>Common_Dimensions</include>
+			<texture background="true">colors/aah.png</texture>
+
+			
+		</control>
+		
+		<control type="group">
+		
+			<include>Common_Animation_gamer2</include>
+	
+			<control type="image">
+					
+				<include>Common_Dimensions</include>
+				<texture>colors/eeeh.png</texture>
+
+			
+			</control>
+
+
+				
+			<control type="image">
+				
+				<animation type="WindowOpen">
+					<effect type="fade" start="0" end="100" time="500" />
+				</animation>
+				
+				<include>Common_Dimensions</include>
+				<texture>colors\ooh.png</texture>
+			
+			</control>
+			
+		</control>	
+	
+	</controls>
+
+</window>

@@ -1,0 +1,594 @@
+<window id="8861">
+
+	<defaultcontrol always="true">11</defaultcontrol>
+	
+	<zorder>2</zorder>
+
+		<onload>Skin.SetString(youtube, )</onload>
+
+<onload condition="Container(20).HasFocus(2)">Control.Move(20,-1)</onload>
+
+<onunload condition="Container(20).HasFocus(2)">Control.Move(20,-1)</onunload>
+
+	<!--Splash Screen--><onload>Skin.SetString(snapwindow, 8861)</onload>
+<onload condition="!Skin.HasSetting(snapie)">Skin.ToggleSetting(snapie)</onload>
+<onload condition="Skin.HasSetting(gaming)">Skin.ToggleSetting(gaming)</onload>
+<onload>Skin.SetString(snap, demo/sna/skydrive.jpg,0)</onload>
+<onload>Skin.SetString(sn,Onedrive)</onload>
+
+		
+	<onload condition="Skin.HasSetting(SnapFeature) + Skin.HasSetting(SnapAlways)">Skin.SetString(snap, C:\Assistance\Snap\Pic\Item.jpg,0)</onload>
+<onload condition="Skin.HasSetting(SnapFeature) + Skin.HasSetting(SnapAlways)">AlarmClock(startsnap,RunScript(special://skin/system/Snap.py),00:01,silent)</onload>
+	
+
+	
+	
+	<controls>
+
+		<!--Background Area-->
+																							<control type="image">
+											
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1280</width>
+								<height>720</height>
+								<texture>demo\skydrive\bg.png</texture>
+
+							</control>	
+									
+
+
+
+	
+				
+		
+				        <control type="wraplist" id="20">
+            <description>Control list</description>
+            <posx>0</posx>
+            <posy>0</posy>
+            <height>2</height>
+            <width>2</width>
+            <onup>21</onup>
+            <orientation>horizontal</orientation>
+            <scrolltime>0</scrolltime>
+            <viewtype>list</viewtype>
+	    <defaultcontrol>2</defaultcontrol>
+            <itemlayout width="2" height="2"/>
+           	<focusedlayout width="2" height="2"/>
+            <content>
+            	<item id="1">
+            		<label>Fixado</label>
+            		<onclick>-</onclick>
+            	</item>
+            	<item id="2">
+            		<label>Início</label>
+            		<onclick>-</onclick>
+            	</item>
+				  	
+
+
+            </content>
+        </control>
+	
+
+
+
+				
+	
+
+
+			
+
+		<control type="group">
+		
+			<include>Common_Dimensions</include>
+		
+		
+			<!--Top Area-->
+			
+			
+			<!--Content Area-->
+			<control type="group">
+			
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>480</height>
+				
+				<!--Animation-->
+			
+							
+				<control type="grouplist">
+		
+					<include>Common_Content_Grouplist2</include>
+				
+					
+					
+								
+					
+					
+					<control type="group" id="8000">
+
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>1200</width>
+						<height>720</height>
+													<control type="image">
+									
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1280</width>
+								<height>720</height>
+								<texture>demo\skydrive\bg2.png</texture>
+
+							</control>
+																				<control type="image">
+							
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1280</width>
+								<height>720</height>
+								<texture>demo\skydrive\1.png</texture>
+<visible>Control.HasFocus(1000)</visible>
+							</control>
+																		<control type="image">
+						
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1280</width>
+								<height>720</height>
+								<texture>demo\skydrive\2.png</texture>
+<visible>Control.HasFocus(1001)</visible>
+							</control>
+																	<control type="image">
+								
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1280</width>
+								<height>720</height>
+								<texture>demo\skydrive\3.png</texture>
+<visible>Control.HasFocus(1002)</visible>
+							</control>
+																		<control type="image">
+						
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1280</width>
+								<height>720</height>
+								<texture>demo\skydrive\4.png</texture>
+<visible>Control.HasFocus(1003)</visible>
+							</control>
+																	<control type="image">
+					
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1280</width>
+								<height>720</height>
+								<texture>demo\skydrive\5.png</texture>
+<visible>Control.HasFocus(1004)</visible>
+							</control>
+							
+							
+						<control type="panel" id="11">
+<posx>1065</posx>
+						<posy>345</posy>
+
+						
+						<include>Common_AltHome_Panel3</include>
+					
+<onright>ActivateWindow(1157)</onright>
+<onright>Control.Move(20,1)</onright>
+						<onright>22</onright>
+						<ondown>1000</ondown>
+						<pagecontrol>7017</pagecontrol>
+						
+						<content>
+						
+
+							
+																					<item id="1">
+								<description>Games</description>
+								<label>Games</label>
+								<thumb>SHORT\ICO\Games.png</thumb>
+								<onclick>Control.Setfocus(1000)</onclick>
+														
+							</item>
+							
+
+
+								</content>
+
+					</control>
+					
+					
+					
+					
+					
+					<control type="panel" id="1000">
+<posx>1065</posx>
+						<posy>345</posy>
+
+						
+						<include>Common_AltHome_Panel3</include>
+					
+
+<onup>11</onup>
+						<onright>1001</onright>
+					
+						<pagecontrol>7017</pagecontrol>
+						
+						<content>
+						
+
+							
+																					<item id="1">
+								<description>Games</description>
+								<label>Games</label>
+								<thumb>SHORT\ICO\Games.png</thumb>
+								<onclick>ActivateWindow(10002,&quot;plugin://plugin.image.500px/?mode=search&amp;page=1&amp;term=dogs&quot;,return)</onclick>
+														
+							</item>
+							
+
+
+								</content>
+
+					</control>
+					<control type="panel" id="1001">
+<posx>1065</posx>
+						<posy>345</posy>
+
+						
+						<include>Common_AltHome_Panel3</include>
+					
+
+<onup>11</onup>
+						<onright>1003</onright>
+					<onleft>1000</onleft>
+					<ondown>1002</ondown>
+						<pagecontrol>7017</pagecontrol>
+						
+						<content>
+						
+
+							
+																					<item id="1">
+								<description>Games</description>
+								<label>Games</label>
+								<thumb>SHORT\ICO\Games.png</thumb>
+								<onclick>ActivateWindow(10002,&quot;plugin://plugin.image.500px/?mode=search&amp;page=1&amp;term=city&quot;,return)</onclick>
+														
+							</item>
+							
+
+
+								</content>
+
+					</control>
+					
+					<control type="panel" id="1002">
+<posx>1065</posx>
+						<posy>345</posy>
+
+						
+						<include>Common_AltHome_Panel3</include>
+					
+
+<onup>1001</onup>
+						<onright>1004</onright>
+					<onleft>1000</onleft>
+			
+						<pagecontrol>7017</pagecontrol>
+						
+						<content>
+						
+
+							
+																					<item id="1">
+								<description>Games</description>
+								<label>Games</label>
+								<thumb>SHORT\ICO\Games.png</thumb>
+								<onclick>ActivateWindow(10002,&quot;plugin://plugin.image.500px/?mode=search&amp;page=1&amp;term=friends&quot;,return)</onclick>
+														
+							</item>
+							
+
+
+								</content>
+
+					</control>
+					<control type="panel" id="1003">
+<posx>1065</posx>
+						<posy>345</posy>
+
+						
+						<include>Common_AltHome_Panel3</include>
+					
+
+<onup>11</onup>
+					
+					<onleft>1001</onleft>
+			<ondown>1004</ondown>
+						<pagecontrol>7017</pagecontrol>
+						
+						<content>
+						
+
+							
+																					<item id="1">
+								<description>Games</description>
+								<label>Games</label>
+								<thumb>SHORT\ICO\Games.png</thumb>
+								<onclick>ActivateWindow(10002,&quot;addons://sources/image/&quot;,return)</onclick>
+														
+							</item>
+							
+
+
+								</content>
+
+					</control>
+					<control type="panel" id="1004">
+<posx>1065</posx>
+						<posy>345</posy>
+
+						
+						<include>Common_AltHome_Panel3</include>
+					
+
+<onup>1003</onup>
+					
+					<onleft>1002</onleft>
+		
+						<pagecontrol>7017</pagecontrol>
+						
+						<content>
+						
+
+							
+																					<item id="1">
+								<description>Games</description>
+								<label>Games</label>
+								<thumb>SHORT\ICO\Games.png</thumb>
+								<onclick>ActivateWindow(10002,&quot;plugin://plugin.image.500px/?mode=search&amp;page=1&amp;term=gardens&quot;,return)</onclick>
+														
+							</item>
+							
+
+
+								</content>
+
+					</control>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+
+						
+						</control>
+		
+				
+
+				
+				
+
+				
+				
+				
+				
+						<control type="group" id="7000">
+
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>1200</width>
+						<height>720</height>
+
+						<control type="panel" id="22">
+<posx>1065</posx>
+						<posy>345</posy>
+
+						
+						<include>Common_AltHome_Panel3</include>
+						<onleft>ActivateWindow(1157)</onleft>
+						<onleft>Control.Move(20,-1)</onleft>
+<onleft>11</onleft>
+
+				
+						<pagecontrol>7017</pagecontrol>
+						
+						<content>
+						
+
+							
+																					<item id="1">
+								<description>Games</description>
+								<label>Games</label>
+								<thumb>SHORT\ICO\Games.png</thumb>
+								<onclick>-</onclick>
+														
+							</item>
+							
+
+
+								</content>
+
+					</control>
+					
+					
+				
+					
+									<control type="image">
+										
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1280</width>
+								<height>720</height>
+								<texture>demo\skydrive\bg3.png</texture>
+
+							</control>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+	
+						
+						</control>
+						
+						
+						
+				
+			
+				</control>
+										</control>
+				
+						
+						<!--Scrollbar-->
+
+					
+					</control>
+					
+			
+											<control type="image">
+								
+								<posx>35</posx>
+								<posy>15</posy>
+								<width>170</width>
+								<height>100</height>
+								<texture>demo\skydrive\ico.png</texture>
+
+							</control>	
+							
+						
+							<control type="label">
+				
+				
+					<posx>165</posx>
+					<posy>40</posy>
+					<width>550</width>
+					<height>48</height>
+					<label>Galeria de $INFO[System.ProfileName]</label>
+					<font>Charms-Date</font>
+					<textcolor>black</textcolor>
+					<aligny>center</aligny>
+						<alignx>center</alignx>
+				</control>
+										<control type="grouplist">
+			<visible>true</visible>
+													<!--Animation-->
+					
+				<posx>128</posx>
+				<posy>100</posy>
+				<width>1100</width>
+				<height>100</height>
+				<orientation>horizontal</orientation>
+				<itemgap>20</itemgap>
+												<control type="label">
+						<visible>true</visible>
+					<width min="0" max="400">auto</width>
+					<height>100</height>
+					<label>Minhas fotos</label>
+					<font>Content-Label</font>
+					<textcolor>FFC0C0C0</textcolor>
+					<aligny>top</aligny>
+<animation effect="zoom" end="108" center="auto" time="200" condition="Container(20).HasFocus(1) + Skin.HasSetting(textview)">Conditional</animation>
+				</control>
+				
+				<control type="label">
+						<visible>true</visible>
+					<width min="0" max="400">auto</width>
+					<height>100</height>
+					<label>Compartilhado</label>
+					<font>Content-Label</font>
+					<textcolor>FFC0C0C0</textcolor>
+					<aligny>top</aligny>
+<animation effect="zoom" end="108" center="auto" time="200" condition="Container(20).HasFocus(2) + Skin.HasSetting(textview)">Conditional</animation>
+				</control>
+								
+				
+
+				</control>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+										<control type="grouplist">
+			<visible>true</visible>
+													<!--Animation-->
+				
+				<posx>128</posx>
+				<posy>100</posy>
+				<width>1100</width>
+				<height>100</height>
+				<orientation>horizontal</orientation>
+				<itemgap>20</itemgap>
+												<control type="label">
+						<visible>true</visible>
+					<width min="0" max="400">auto</width>
+					<height>100</height>
+					<label>Minhas fotos</label>
+					<font>Content-Label</font>
+					<textcolor>FF333333</textcolor>
+					<aligny>top</aligny>
+					<animation effect="zoom" end="108" center="auto" time="200" condition="Container(20).HasFocus(1) + Skin.HasSetting(textview)">Conditional</animation>
+                       <animation effect="fade" start="0" end="100" time="200" tween="cubic" easing="inout" condition="Container(20).HasFocus(1)">Conditional</animation>
+                <animation effect="fade" start="100" end="0" time="200" tween="cubic" easing="inout" condition="!Container(20).HasFocus(1)">Conditional</animation>
+				</control>
+				
+				<control type="label">
+						<visible>true</visible>
+					<width min="0" max="400">auto</width>
+					<height>100</height>
+					<label>Compartilhado</label>
+					<font>Content-Label</font>
+					<textcolor>FF333333</textcolor>
+					<aligny>top</aligny>
+								 <animation effect="zoom" end="108" center="auto" time="200" condition="Container(20).HasFocus(2) + Skin.HasSetting(textview)">Conditional</animation>
+                              <animation effect="fade" start="0" end="100" time="200" tween="cubic" easing="inout" condition="Container(20).HasFocus(2)">Conditional</animation>
+                <animation effect="fade" start="100" end="0" time="200" tween="cubic" easing="inout" condition="!Container(20).HasFocus(2)">Conditional</animation>
+				</control>
+					
+				
+	
+
+
+				</control>
+				
+
+			
+			<!--Scrollbar-->
+
+
+				
+			
+								
+			
+					
+
+
+		<include>Snapped_Content</include>	
+	</controls>	
+		
+</window>

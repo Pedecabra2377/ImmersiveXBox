@@ -1,0 +1,188 @@
+<window type="dialog" id="5594">
+
+	<defaultcontrol>100</defaultcontrol>
+	
+	
+	
+	
+
+	
+	<!--Splash Screen-->
+
+
+	
+
+
+	
+
+	
+	<controls>
+
+		<!--Background Area-->
+
+	
+			
+<control type="image">
+		
+			<include>Common_Dimensions</include>
+			<texture background="true">colors/color_white.png</texture>
+			<colordiffuse>FanartDiffuse</colordiffuse>
+			
+			<include>Common_Animation_Window_Dark</include>
+			<visible>!Player.HasMedia</visible>
+		</control>
+
+							
+																			
+									<!--Top Area-->
+
+	
+						
+						
+			
+				
+
+					
+
+							
+					
+					
+						
+					
+					
+					
+					
+					
+								
+					
+					
+							
+					
+					
+					
+	
+		<control type="group">
+		<include>Common_Animation_Splash_kai2</include>
+			<posx>280</posx>
+			<posy>70</posy>
+			<width>320</width>
+			<height>400</height>
+			
+		
+		
+			<!--Background-->
+				
+					<control type="image">
+			
+				<posx>-5</posx>
+				<posy>0</posy>
+				<width>700</width>
+				<height>580</height>
+				<texture background="true">colors\color_black.png</texture>
+			<colordiffuse>FFF5F5F5</colordiffuse>
+
+			</control>
+			
+			
+			<include>Common_ContextMenu_Header_Back</include>
+			
+			<control type="label">
+	
+					<posx>80</posx>
+		<posy>29</posy>
+		<width>240</width>
+		<height>32</height>
+		<font>PVR-EPG-Time2</font>
+		<textcolor>Label_Normal</textcolor>
+		<aligny>top</aligny>
+				<label>Dashboard tile size options</label>
+				
+				
+			</control>
+			
+			
+			
+			<control type="grouplist" id="100">
+			
+				<description>Control Area</description>
+				<posx>-5</posx>
+				<posy>100</posy>
+				<width>700</width>
+				<height>500</height>
+				<itemgap>0</itemgap>
+				<onup>100</onup>
+				<ondown>100</ondown>
+				<onleft>98</onleft>
+				<onright>-</onright>
+				<orientation>vertical</orientation>
+				<pagecontrol>81</pagecontrol>
+				
+				
+				<include>Common_Animation_Settings_Options</include>
+						
+
+							
+						
+						<control type="radiobutton" id="145">
+										<visible>!Skin.HasSetting(BOOTWIN)</visible>
+					<description>Background Visualiser</description>
+					<include>Common_Settings_RadioButton</include>
+					<label>Enable Small Tiles</label>
+					<onclick>Skin.ToggleSetting(SmallTiles)</onclick>
+		<onclick condition="Skin.HasSetting(MediumTiles)">Skin.ToggleSetting(MediumTiles)</onclick>
+			<onclick condition="Skin.HasSetting(BigTiles)">Skin.ToggleSetting(BigTiles)</onclick>
+					<selected>Skin.HasSetting(SmallTiles)</selected>
+					
+				</control>
+													<control type="radiobutton" id="146">
+										<visible>!Skin.HasSetting(BOOTWIN)</visible>
+					<description>Background Visualiser</description>
+					<include>Common_Settings_RadioButton</include>
+					<label>Enable Medium Tiles</label>
+					<onclick>Skin.ToggleSetting(MediumTiles)</onclick>
+				<onclick condition="Skin.HasSetting(SmallTiles)">Skin.ToggleSetting(SmallTiles)</onclick>
+			<onclick condition="Skin.HasSetting(BigTiles)">Skin.ToggleSetting(BigTiles)</onclick>
+	
+					<selected>Skin.HasSetting(MediumTiles)</selected>
+					
+				</control>
+																	<control type="radiobutton" id="147">
+										<visible>!Skin.HasSetting(BOOTWIN)</visible>
+					<description>Background Visualiser</description>
+					<include>Common_Settings_RadioButton</include>
+					<label>Enable Big Tiles</label>
+					<onclick>Skin.ToggleSetting(BigTiles)</onclick>
+				<onclick condition="Skin.HasSetting(MediumTiles)">Skin.ToggleSetting(MediumTiles)</onclick>
+			<onclick condition="Skin.HasSetting(SmallTiles)">Skin.ToggleSetting(SmallTiles)</onclick>
+	
+					<selected>Skin.HasSetting(BigTiles)</selected>
+					
+				</control>
+																					<control type="radiobutton" id="148">
+										<visible>!Skin.HasSetting(BOOTWIN)</visible>
+					<description>Background Visualiser</description>
+					<include>Common_Settings_RadioButton</include>
+					<label>Enable Small Tiles 3 Rows</label>
+					<onclick>Skin.ToggleSetting(SmallTiles3)</onclick>
+		
+	
+					<selected>Skin.HasSetting(SmallTiles3)</selected>
+					
+				</control>
+				
+
+					</control>
+			
+		</control>			
+						
+						<!--Scrollbar-->
+
+					
+			
+
+			
+		
+		
+	</controls>	
+		
+</window>
