@@ -1,0 +1,276 @@
+<!-- Foundation -->
+<window>
+	
+	<onload condition="!Skin.HasSetting(tvalt) + Skin.HasSetting(tvboot) + !Skin.HasSetting(bootbbc)">ActivateWindow(PVR)</onload>
+
+
+
+
+
+	<onload condition="Skin.HasSetting(snapie) + !Player.HasMedia + Skin.HasSetting(quitboot)">Skin.ToggleSetting(snapie)</onload>
+	<onload condition="Skin.HasSetting(Snapped) + !Player.HasMedia + Skin.HasSetting(quitboot)">Skin.ToggleSetting(Snapped)</onload>
+	<onload condition="Skin.HasSetting(Snapped2) + !Player.HasMedia + Skin.HasSetting(quitboot)">Skin.ToggleSetting(Snapped2)</onload>
+		<onload>Skin.SetString(fnd1, 33450)</onload>
+		<onload>Skin.SetString(fnd2, 49537)</onload>	
+		<onload>Skin.SetString(fnd3, 70412)</onload>	
+		<onload>Skin.SetString(fnd4, 179171)</onload>	
+<onload condition="!Skin.HasSetting(saveshare)">Skin.SetString(Status1, )</onload>
+<onload condition="!Skin.HasSetting(saveshare)">Skin.SetString(Status2, )</onload>
+<onload condition="!Skin.HasSetting(saveshare)">Skin.SetString(Status3, )</onload>
+<onload condition="!Skin.HasSetting(saveshare)">Skin.SetString(Status4, )</onload>
+<onload condition="!Skin.HasSetting(saveshare)">Skin.SetString(Status5, )</onload>
+<onload condition="!Skin.HasSetting(saveshare)">Skin.SetString(Status6, )</onload>
+<onload condition="!Skin.HasSetting(saveshare)">Skin.SetString(Status7, )</onload>
+<onload condition="!Skin.HasSetting(saveshare)">Skin.SetString(Status8, )</onload>
+<onload condition="!Skin.HasSetting(saveshare)">Skin.SetString(Status9, )</onload>
+<onload condition="!Skin.HasSetting(saveshare)">Skin.SetString(Status10, )</onload>
+<onload condition="!Skin.HasSetting(saveshare)">Skin.SetString(Shared1, )</onload>
+<onload condition="!Skin.HasSetting(saveshare)">Skin.SetString(Shared2, )</onload>
+<onload condition="!Skin.HasSetting(saveshare)">Skin.SetString(Shared3, )</onload>
+<onload condition="!Skin.HasSetting(saveshare)">Skin.SetString(Shared4, )</onload>
+<onload condition="!Skin.HasSetting(saveshare)">Skin.SetString(Shared5, )</onload>
+<onload condition="!Skin.HasSetting(saveshare)">Skin.SetString(Shared6, )</onload>
+<onload condition="!Skin.HasSetting(saveshare)">Skin.SetString(Shared7, )</onload>
+<onload condition="!Skin.HasSetting(saveshare)">Skin.SetString(Shared8, )</onload>
+<onload condition="!Skin.HasSetting(saveshare)">Skin.SetString(Shared9, )</onload>
+<onload condition="!Skin.HasSetting(saveshare)">Skin.SetString(Shared10, )</onload>
+<onload condition="!Skin.HasSetting(saveshare)">Skin.SetString(Shared11, )</onload>
+<onload condition="!Skin.HasSetting(saveshare)">Skin.SetString(Comment1, )</onload>
+<onload condition="!Skin.HasSetting(saveshare)">Skin.SetString(Comment2, )</onload>
+<onload condition="!Skin.HasSetting(saveshare)">Skin.SetString(Comment3, )</onload>
+<onload condition="!Skin.HasSetting(saveshare)">Skin.SetString(Comment4, )</onload>
+<onload condition="!Skin.HasSetting(saveshare)">Skin.SetString(Comment5, )</onload>
+<onload condition="!Skin.HasSetting(saveshare)">Skin.SetString(Comment6, )</onload>
+<onload condition="!Skin.HasSetting(saveshare)">Skin.SetString(Comment7, )</onload>
+<onload condition="!Skin.HasSetting(saveshare)">Skin.SetString(Comment8, )</onload>
+<onload condition="!Skin.HasSetting(saveshare)">Skin.SetString(Comment9, )</onload>
+<onload condition="!Skin.HasSetting(saveshare)">Skin.SetString(Comment10, )</onload>
+	
+	<onload condition="Skin.HasSetting(FirstTimeBooting) + !Window.Previous(29)">Skin.ToggleSetting(FirstTimeBooting)</onload>
+	
+
+		
+	<onload condition="System.InternetState + Skin.HasSetting(XBB) + Skin.HasSetting(FirstTimeRun)">RunScript(special://skin/system/Bing.py)</onload>
+	<onload condition="!Skin.HasSetting(lode)">Skin.ToggleSetting(lode)</onload> 
+<onload condition="!Skin.HasSetting(lode2)">Skin.ToggleSetting(lode2)</onload> 
+
+
+ <onload condition="Skin.HasSetting(loder) + Skin.HasSetting(RemoveSignButton)">Skin.ToggleSetting(loder)</onload> 
+
+ 
+<onload condition="!Skin.HasSetting(loder) + !Window.Previous(29) + !Skin.HasSetting(RemoveSignButton)">Skin.ToggleSetting(loder)</onload> 
+	
+	
+<onload condition="Window.Previous(29) + Skin.HasSetting(FirstTimeRun) + !Skin.HasSetting(Quickly)">AlarmClock(welcome,Notification(     ,Olá $INFO[System.ProfileName],00:59,),00:7.3,silent,)</onload>
+<onload condition="Window.Previous(29) + Skin.HasSetting(FirstTimeRun) + Skin.HasSetting(Quickly)">AlarmClock(welcome,Notification(     ,Olá $INFO[System.ProfileName],00:59,),00:2.3,silent,)</onload>
+
+ <onload condition="Skin.HasSetting(UPDS) + Skin.HasSetting(FirstTimeRun)">UpdateAddonRepos</onload>
+ <onload condition="Skin.HasSetting(UPDS) + Skin.HasSetting(FirstTimeRun)">UpdateLocalAddons</onload>
+  <onload condition="Skin.HasSetting(UPDL) + Skin.HasSetting(FirstTimeRun)">UpdateLibrary(video)</onload>
+   <onload condition="Skin.HasSetting(UPDL) + Skin.HasSetting(FirstTimeRun)">UpdateLibrary(music)</onload>
+ <onload condition="Skin.HasSetting(UPDL) + Skin.HasSetting(FirstTimeRun)">CleeanLibrary(music)</onload>
+ <onload condition="Skin.HasSetting(UPDL) + Skin.HasSetting(FirstTimeRun)">CleanLibrary(video)</onload>
+<onload condition="!System.Platform.Windows + Skin.HasSetting(SnapFeature)">Skin.ToggleSetting(SnapFeature)</onload>
+<onload condition="Skin.HasSetting(DisNotify)">Skin.ToggleSetting(DisNotify)</onload>	
+
+	<!--Splash Screen-->
+		<onunload condition="Skin.HasSetting(XBF) + Skin.HasSetting(FirstTimeRun)">RunPlugin(plugin://service.XBLFriends)</onunload>
+
+<onload condition="Skin.HasSetting(dashovid)">Skin.ToggleSetting(dashovid)</onload>	
+<onload condition="!Skin.HasSetting(on)">Skin.ToggleSetting(on)</onload>
+<onload condition="Window.Previous(29) + !Skin.HasSetting(Logger)">Skin.ToggleSetting(Logger)</onload>
+<onload condition="!Window.Previous(29) + Skin.HasSetting(Logger)">Skin.ToggleSetting(Logger)</onload>
+<onload condition="Skin.HasSetting(BOOTWIN) + Skin.HasSetting(FirstTimeRun) + Skin.HasSetting(Quickly)">ActivateWindow(home)</onload>
+<onload condition="!System.InternetState + Skin.HasSetting(gamertag)">Skin.ToggleSetting(gamertag)</onload>
+<onload condition="!Skin.HasSetting(Amount)">Skin.SetString(msgnum,0)</onload>
+<onload condition="!Skin.HasSetting(Amount)">Skin.Setstring(fndcnt,0)</onload>
+<onload condition="!Skin.HasSetting(Amount)">Skin.SetString(followers,0)</onload>
+<onload condition="Skin.HasSetting(gamertag) + System.InternetState + !Window.Previous(29) + Skin.HasSetting(FirstTimeRun)">RunScript(special://skin/system/xbox.gamertag.py)</onload>
+<onload condition="!Skin.HasSetting(online)">Skin.ToggleSetting(online)</onload>
+
+
+
+<onload condition="!Skin.HasSetting(BOOTWIN) + Skin.HasSetting(FirstTimeRun)">AlarmClock(CloseStartup,ReplaceWindow(home),00:02,silent)</onload>
+
+<onload condition="!Skin.HasSetting(FirstTimeRun)">AlarmClock(CloseStartup,ReplaceWindow(home),00:00.5,silent)</onload>
+
+<onload condition="Skin.HasSetting(BOOTWIN) + !Skin.HasSetting(Quickly) + !Skin.HasSetting(LongBoot) + !Skin.HasSetting(ShortBoot) + Skin.HasSetting(FirstTimeRun) + Window.Previous(29)">AlarmClock(CloseStartup,ReplaceWindow(home),00:05,silent)</onload>
+<onload condition="Skin.HasSetting(BOOTWIN) + !Skin.HasSetting(Quickly) + !Skin.HasSetting(LongBoot) + Skin.HasSetting(ShortBoot) + Skin.HasSetting(FirstTimeRun) + Window.Previous(29)">AlarmClock(CloseStartup,ReplaceWindow(home),00:08,silent)</onload>
+<onload condition="!Skin.HasSetting(BOOTWIN) + !Skin.HasSetting(Quickly) + !Skin.HasSetting(LongBoot) + Skin.HasSetting(ShortBoot) + Skin.HasSetting(FirstTimeRun) + Window.Previous(29)">AlarmClock(CloseStartup,ReplaceWindow(home),00:08,silent)</onload>
+<onload condition="Skin.HasSetting(BOOTWIN) + !Skin.HasSetting(Quickly) + Skin.HasSetting(LongBoot) + !Skin.HasSetting(ShortBoot) + Skin.HasSetting(FirstTimeRun) + Window.Previous(29)">AlarmClock(CloseStartup,ReplaceWindow(home),00:12,silent)</onload>
+
+	
+
+<onunload condition="Skin.HasSetting(Quickly)">Skin.ToggleSetting(Quickly)</onunload>
+	
+
+	
+
+	
+	<controls>
+		
+		
+	
+			
+				<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+			<texture>XBOXnew.png</texture>
+			<aspectratio>stretch</aspectratio>
+		<visible>Skin.HasSetting(FirstTimeRun) + !Skin.HasSetting(Quickly) + !Skin.HasSetting(tvboot)</visible>
+		</control>
+
+						<control type="image">
+					<include>Common_Animation_Startup_Slide2</include>
+			<posy>0</posy>
+			<posx>0</posx>
+			<width>1280</width>
+			<height>720</height>
+			<texture>colors\color_white.png</texture>
+			<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+			<visible>Skin.HasSetting(BOOTWIN) + Window.Previous(29) + Skin.HasSetting(FirstTimeRun) + !Skin.HasSetting(Quickly) + !Skin.HasSetting(tvboot)</visible>
+		</control>
+						<control type="image">
+				<animation type="WindowOpen" reversible="false">
+					<effect type="zoom" start="70" end="100" time="900" tween="sine" easing="out"  center="auto" delay="0" />
+					<effect type="fade" start="0" end="100" time="3000" delay="0" />
+				</animation><animation type="WindowClose" reversible="false">
+					<effect type="fade" start="100" end="80" time="1000" delay="0" />
+				</animation>
+			<posy>0</posy>
+			<posx>0</posx>
+			<width>1280</width>
+			<height>720</height>
+			<texture>splash\splash_startup.png</texture>
+			<visible>!Window.Previous(29) + Skin.HasSetting(FirstTimeRun) + !Skin.HasSetting(Quickly) + !Skin.HasSetting(tvboot)</visible>
+		</control>
+								<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+			<texture>WINnew.png</texture>
+			<aspectratio>stretch</aspectratio>
+			<visible>!Skin.HasSetting(WINBI) + !Skin.HasSetting(BOOTWIN) + Skin.HasSetting(FirstTimeRun) + !Skin.HasSetting(Quickly) + !Skin.HasSetting(tvboot)</visible>
+		</control>
+							<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+			<texture>$INFO[Skin.String(WIN)]</texture>
+			<aspectratio>stretch</aspectratio>
+			<visible>!Skin.HasSetting(BOOTWIN) + Skin.HasSetting(WINBI) + Skin.HasSetting(FirstTimeRun) + !Skin.HasSetting(Quickly) + !Skin.HasSetting(tvboot)</visible>
+		</control>
+		
+		
+						<control type="label">
+					<include>Common_Animation_Startup_Slide3</include>
+					<description>Profile Name</description>
+					<posx>670</posx>
+					<posy>280</posy>
+					<width>300</width>
+					<label>Bem-vindo,[CR]$INFO[System.ProfileName]!</label>
+					<font>Profile-Settings-Name</font>
+					<textcolor>Label_Normal</textcolor>
+						<visible>Skin.HasSetting(BOOTWIN) + Window.Previous(29) + Skin.HasSetting(FirstTimeRun) + !Skin.HasSetting(Quickly) + !Skin.HasSetting(tvboot)</visible>
+				</control>
+		
+				
+				
+				
+				<control type="image">
+					<include>Common_Animation_Startup_Slide</include>
+					<visible>Skin.HasSetting(BOOTWIN) + Window.Previous(29) + Skin.HasSetting(FirstTimeRun) + !Skin.HasSetting(Quickly) + !Skin.HasSetting(tvboot)</visible>
+			<posy>0</posy>
+			<posx>200</posx>
+			<width>800</width>
+			<height>800</height>
+			<texture background="true" fallback="overlays/default95.png">demo\fade2.png</texture>
+	
+		</control>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				<control type="image">
+					<include>Common_Animation_Startup_Slide</include>
+					<visible>!Skin.HasSetting(gpic) + Skin.HasSetting(BOOTWIN) + Window.Previous(29) + Skin.HasSetting(FirstTimeRun) + !Skin.HasSetting(Quickly) + !Skin.HasSetting(tvboot)</visible>
+			<posy>0</posy>
+			<posx>0</posx>
+			<width>640</width>
+			<height>720</height>
+			<texture background="true" fallback="overlays/default95.png">$INFO[System.ProfileThumb]</texture>
+		
+		</control>
+		
+		<control type="image">
+				<visible>Skin.HasSetting(gpic) + Skin.HasSetting(BOOTWIN) + Window.Previous(29) + Skin.HasSetting(FirstTimeRun) + !Skin.HasSetting(Quickly) + !Skin.HasSetting(tvboot)</visible>
+								<include>Common_Animation_Startup_Slide</include>																															
+														
+						<posy>0</posy>
+			<posx>0</posx>
+			<width>640</width>
+			<height>720</height>
+
+								<texture background="true" fallback="overlays/default95.png">$INFO[Skin.String(gamerpic)]</texture>
+				
+			</control>
+				
+
+
+								<control type="label">
+					<include>Common_Animation_Window</include>
+					<description>Profile Name</description>
+					<posx>460</posx>
+					<posy>300</posy>
+					<width>300</width>
+					<label>Bem-vindo,[CR]$INFO[System.ProfileName]!</label>
+					<font>Profile-Settings-Name</font>
+					<textcolor>Label_Normal</textcolor>
+						<visible>!Skin.HasSetting(BOOTWIN) + Skin.HasSetting(FirstTimeRun) + !Skin.HasSetting(Quickly) + !Skin.HasSetting(tvboot)</visible>
+				</control>
+
+		
+
+
+
+		
+				
+
+				
+				
+
+				
+				
+							
+				
+
+		
+		
+
+			<control type="image">
+			<include>Common_Animation_tvbootsplash2</include>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+			<texture>splash\tvv.png</texture>
+			<aspectratio>stretch</aspectratio>
+		<visible>Skin.HasSetting(FirstTimeRun) + Skin.HasSetting(tvboot)</visible>
+		</control>
+			
+
+		
+	</controls>
+	
+</window>

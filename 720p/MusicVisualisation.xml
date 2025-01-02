@@ -1,0 +1,94 @@
+<!-- Foundation -->
+<window id="2006">
+	<defaultcontrol always="true">-</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<onload>ActivateWindow(120)</onload>
+	<controls>
+	
+		<control type="visualisation">
+			
+			<include>Common_Dimensions</include>
+			<visible>IsEmpty(MusicPlayer.Property(Fanart_Image))</visible>
+		</control>
+
+		<control type="image">
+		
+			<include>Common_Dimensions</include>
+			<texture background="true">$INFO[MusicPlayer.Property(Fanart_Image)]</texture>
+			
+		</control>
+		
+		<control type="image">
+		
+			<include>Common_Dimensions</include>
+			<texture background="true">colors/color_white.png</texture>
+			<colordiffuse>50000000</colordiffuse>
+			
+		</control>
+		
+		
+		<!--3th Animation-->
+		<control type="label">
+				 
+			
+					<posx>100</posx>
+					<posy>50</posy>
+					<width>550</width>
+					<height>48</height>
+					<label>Xbox Música</label>
+					<font>Charms-Date-big</font>
+					<textcolor>Label_Normal</textcolor>
+					<aligny>center</aligny>
+						<alignx>center</alignx>
+				</control>
+				
+				
+				<control type="label">
+				 
+			
+					<posx>100</posx>
+					<posy>500</posy>
+					<width>550</width>
+					<height>48</height>
+					<label>$INFO[MusicPlayer.Title]</label>
+					<font>Charms-Date2</font>
+					<textcolor>Label_Normal</textcolor>
+					<aligny>center</aligny>
+						<alignx>center</alignx>
+							<visible>!Window.IsVisible(120)</visible>
+				</control>
+				<control type="label">
+				 
+			
+					<posx>100</posx>
+					<posy>540</posy>
+					<width>550</width>
+					<height>48</height>
+					<label>$INFO[MusicPlayer.Album] $INFO[MusicPlayer.Artist]</label>
+					<font>Charms-Date3</font>
+					<textcolor>Label_Normal</textcolor>
+					<aligny>center</aligny>
+						<alignx>center</alignx>
+							<visible>!Window.IsVisible(120)</visible>
+				</control>
+				<control type="label">
+				 
+			
+					<posx>100</posx>
+					<posy>580</posy>
+					<width>550</width>
+					<height>48</height>
+					<label>$INFO[MusicPlayer.Time]/$INFO[MusicPlayer.Duration]</label>
+					<font>Charms-Date3</font>
+					<textcolor>Label_Normal</textcolor>
+					<aligny>center</aligny>
+						<alignx>center</alignx>
+						<visible>!Window.IsVisible(120)</visible>
+				</control>
+		
+		<!--Top Area-->
+		
+		<include>Xbox_Logo</include>
+	</controls>
+
+</window>

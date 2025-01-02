@@ -1,0 +1,7434 @@
+<includes>
+
+	<include file="ViewList.xml" /> 				<!--50-->
+	<include file="ViewPoster.xml" />				<!--51-->
+	<include file="ViewThumbnail.xml" />			<!--52-->
+	<include file="ViewExtendedList.xml" />			<!--53-->
+	<include file="ViewSquare.xml" />				<!--54-->
+	<include file="ViewGrid.xml" />					<!--55-->
+	<include file="ViewGridEpisodes.xml" />			<!--56-->
+	<include file="ViewTall.xml" />					<!--57-->
+	<include file="ViewExtendedListAlbums.xml" />	<!--58-->
+	<include file="ViewDetails.xml" />				<!--59-->
+	<include file="ViewBanner.xml" />				<!--60-->
+	
+	<include file="Defaults.xml" />
+	<include file="Variable.xml" />
+	
+	<include file="Includes_Animation.xml" />
+	<include file="Includes_Appbar.xml" />
+	<include file="Includes_Breadcrumb.xml" />
+	<include file="Includes_Home.xml" />
+	<include file="Includes_LiveTile.xml" />
+	<include file="Includes_NextAired.xml" />
+	<include file="Includes_SortLetter.xml" />
+	<include file="Includes_Splash.xml" />
+	
+	
+	<!---------------------------------->
+	<!--
+	<!--	Debug Includes to be
+	<!--    deleted after completion
+	<!--
+	<!---------------------------------->
+	<include name="Common_AltHome_Panel391-comment">
+	<include>Common_Animation_Content_social</include>
+		<posx>6</posx>
+		<posy>300</posy>
+		<width>300</width>
+		<height>300</height>
+		<viewtype label="535">list</viewtype>
+		<scrolltime tween="cubic" easing="out">500</scrolltime>
+		<orientation>vertical</orientation>
+		<preloaditems>2</preloaditems>
+		
+		<itemlayout width="190" height="70">
+		
+		
+			
+		
+
+			<control type="image">
+			<include>Common_Animation_Content_social</include>
+				<posx>2</posx>
+				<posy>2.7</posy>
+				<width>65</width>
+				<height>64.5</height>
+					<texture>$INFO[ListItem.Thumb]</texture>
+						
+			
+			</control>
+			
+			<control type="textbox">
+					<include>Common_Animation_Content_social</include>														
+							
+	
+			<label>$INFO[ListItem.Label]</label>
+
+		<posx>72</posx>
+								<posy>2.7</posy>
+								<width>550</width>
+								<height>160</height>
+		<font>DialogInfo-Label2</font>
+			<textcolor>white</textcolor>
+			<scrollspeed>0</scrollspeed>
+			<autoscroll>false</autoscroll>
+			<wrapmultiline>true</wrapmultiline>
+					
+								
+		</control>
+		<control type="textbox">
+					<include>Common_Animation_Content_social</include>		
+			<posx>72</posx>
+								<posy>22</posy>
+			<width>180</width>
+			<height>84</height>
+			<label>$INFO[ListItem.Label2]</label>
+			<font>Menu-Similar-Plot</font>
+			<textcolor>white</textcolor>
+			<scrollspeed>0</scrollspeed>
+			<autoscroll>false</autoscroll>
+			<wrapmultiline>false</wrapmultiline>
+			
+		</control>
+		</itemlayout>
+
+	<focusedlayout width="290" height="70">
+		<control type="image">
+			<include>Common_Animation_Content_social</include>
+				<posx>0</posx>
+				<posy>0.7</posy>
+				<width>69</width>
+				<height>68.5</height>
+					<texture>colors\color_white.png</texture>
+						
+			
+			</control>
+		<control type="image">
+			<include>Common_Animation_Content_social</include>
+				<posx>2</posx>
+				<posy>2.7</posy>
+				<width>65</width>
+				<height>64.5</height>
+					<texture>$INFO[ListItem.Thumb]</texture>
+						
+			
+			</control>
+			
+			<control type="textbox">
+						<include>Common_Animation_Content_social</include>													
+							
+	
+			<label>$INFO[ListItem.Label]</label>
+
+		<posx>72</posx>
+								<posy>2.7</posy>
+								<width>550</width>
+								<height>160</height>
+		<font>DialogInfo-Label2</font>
+			<textcolor>white</textcolor>
+			<scrollspeed>0</scrollspeed>
+			<autoscroll>false</autoscroll>
+			<wrapmultiline>true</wrapmultiline>
+					
+								
+		</control>
+		<control type="textbox">
+					<include>Common_Animation_Content_social</include>		
+			<posx>72</posx>
+								<posy>22</posy>
+			<width>180</width>
+			<height>84</height>
+			<label>$INFO[ListItem.Label2]</label>
+			<font>Menu-Similar-Plot</font>
+			<textcolor>white</textcolor>
+			<scrollspeed>0</scrollspeed>
+			<autoscroll>false</autoscroll>
+			<wrapmultiline>false</wrapmultiline>
+			
+		</control>
+			
+		</focusedlayout>
+		
+	</include>
+	<include name="Common_AltHome_Panel391-social_feed">
+	<include>Common_Animation_Content_social</include>
+		<posx>6</posx>
+		<posy>300</posy>
+		<width>500</width>
+		<height>600</height>
+		<viewtype label="535">list</viewtype>
+		<scrolltime tween="cubic" easing="out">500</scrolltime>
+		<itemgap>500</itemgap>
+		<orientation>vertical</orientation>
+		<preloaditems>2</preloaditems>
+		
+		<itemlayout width="430" height="235">
+			
+			
+		<control type="image">
+			<include>Common_Animation_Content_social</include>
+			<posx>2</posx>
+				<posy>2.7</posy>
+				<width>405</width>
+				<height>229</height>
+				<texture>colors/color_friend.png</texture>
+			
+			
+			</control>
+			
+		
+
+			<control type="image">
+			<include>Common_Animation_Content_social</include>
+				<posx>2</posx>
+				<posy>2.7</posy>
+				<width>115</width>
+				<height>114.5</height>
+					<texture>$INFO[ListItem.Thumb]</texture>
+						
+			
+			</control>
+			
+			<control type="textbox">
+																			
+						<include>Common_Animation_Content_social</include>	
+	
+			<label>$INFO[ListItem.Label]</label>
+
+		<posx>142</posx>
+								<posy>12.7</posy>
+								<width>700</width>
+								<height>210</height>
+		<font>DialogInfo-Label2</font>
+			<textcolor>black</textcolor>
+			<scrollspeed>0</scrollspeed>
+			<autoscroll>false</autoscroll>
+			<wrapmultiline>true</wrapmultiline>
+					
+								
+		</control>
+		<control type="textbox">
+					<include>Common_Animation_Content_social</include>		
+			<posx>142</posx>
+								<posy>62</posy>
+			<width>250</width>
+			<height>92</height>
+			<label>$INFO[ListItem.Label2]</label>
+			<font>Menu-Similar-Plot-social</font>
+			<textcolor>black</textcolor>
+			<scrollspeed>0</scrollspeed>
+			<autoscroll>false</autoscroll>
+			<wrapmultiline>false</wrapmultiline>
+			
+		</control>
+			<control type="image">
+			<include>Common_Animation_Content_social</include>
+				<posx>121</posx>
+				<posy>-10</posy>
+				<width>280</width>
+				<height>260</height>
+					<texture>$INFO[ListItem.Label2]</texture>
+						
+			
+			</control>
+		<control type="textbox">
+				<include>Common_Animation_Content_social</include>			
+			<posx>5</posx>
+								<posy>200</posy>
+			<width>300</width>
+			<height>92</height>
+			<label></label>
+			<font>Menu-Similar-Plot</font>
+			<textcolor>FF7B7B7B</textcolor>
+			<scrollspeed>0</scrollspeed>
+			<autoscroll>false</autoscroll>
+			<wrapmultiline>false</wrapmultiline>
+			
+		</control>
+		</itemlayout>
+
+	<focusedlayout width="500" height="235">
+	
+		<control type="image">
+			<include>Common_Animation_Pini4</include>
+				<posx>411</posx>
+				<posy>0</posy>
+				<width>83</width>
+				<height>83</height>
+				<texture>demo/btn1.png</texture>
+			
+			
+			</control>
+			<control type="image">
+			<include>Common_Animation_Pini5</include>
+				<posx>411</posx>
+				<posy>88</posy>
+				<width>83</width>
+				<height>83</height>
+				<texture>demo/btn2.png</texture>
+			
+			
+			</control>
+			
+		<control type="image">
+					<include>Common_Animation_Content_social</include>
+				<posx>-2</posx>
+				<posy>0</posy>
+				<width>411</width>
+				<height>234.5</height>
+				<texture>colors/color_black-.png</texture>
+			
+			
+			</control>
+			
+			<control type="image">
+			<include>Common_Animation_Content_social</include>
+			<posx>2</posx>
+				<posy>2.7</posy>
+				<width>405</width>
+				<height>229</height>
+				<texture>colors/color_friend.png</texture>
+			
+			
+			</control>
+		
+			<control type="image">
+			<include>Common_Animation_Content_social</include>
+				<posx>2</posx>
+				<posy>2.7</posy>
+				<width>115</width>
+				<height>114.5</height>
+					<texture>$INFO[ListItem.Thumb]</texture>
+						
+			
+			</control>
+			
+			
+
+			
+			<control type="textbox">
+																			
+					<include>Common_Animation_Content_social</include>		
+	
+			<label>$INFO[ListItem.Label]</label>
+
+		<posx>142</posx>
+								<posy>12.7</posy>
+								<width>700</width>
+								<height>210</height>
+		<font>DialogInfo-Label2</font>
+			<textcolor>black</textcolor>
+			<scrollspeed>0</scrollspeed>
+			<autoscroll>false</autoscroll>
+			<wrapmultiline>true</wrapmultiline>
+					
+								
+		</control>
+		<control type="textbox">
+				<include>Common_Animation_Content_social</include>			
+			<posx>142</posx>
+								<posy>62</posy>
+			<width>250</width>
+			<height>92</height>
+			<label>$INFO[ListItem.Label2]</label>
+			<font>Menu-Similar-Plot-social</font>
+			<textcolor>black</textcolor>
+			<scrollspeed>0</scrollspeed>
+			<autoscroll>false</autoscroll>
+			<wrapmultiline>false</wrapmultiline>
+			
+		</control>
+		<control type="image">
+			<include>Common_Animation_Content_social</include>
+				<posx>121</posx>
+				<posy>-10</posy>
+				<width>280</width>
+				<height>260</height>
+					<texture>$INFO[ListItem.Label2]</texture>
+						
+			
+			</control>
+		<control type="textbox">
+					<include>Common_Animation_Content_social</include>		
+			<posx>5</posx>
+								<posy>200</posy>
+			<width>300</width>
+			<height>92</height>
+			<label></label>
+			<font>Menu-Similar-Plot</font>
+			<textcolor>FF7B7B7B</textcolor>
+			<scrollspeed>0</scrollspeed>
+			<autoscroll>false</autoscroll>
+			<wrapmultiline>false</wrapmultiline>
+			
+		</control>
+			
+		</focusedlayout>
+		
+	</include>
+	<include name="Common_AltHome_Panel391-social_feed2">
+	<include>Common_Animation_Content_social</include>
+		<posx>6</posx>
+		<posy>300</posy>
+		<width>450</width>
+		<height>300</height>
+		<viewtype label="535">list</viewtype>
+		<scrolltime tween="cubic" easing="out">500</scrolltime>
+		<itemgap>500</itemgap>
+		<orientation>vertical</orientation>
+		<preloaditems>2</preloaditems>
+		
+		<itemlayout width="430" height="130">
+		
+		
+			<control type="image">
+			<include>Common_Animation_Content_social</include>
+				<posx>0</posx>
+				<posy>122</posy>
+				<width>409</width>
+				<height>0.5</height>
+				<texture>colors/color_keyboard.png</texture>
+			
+			
+			</control>
+		
+
+			<control type="image">
+			<include>Common_Animation_Content_social</include>
+				<posx>2</posx>
+				<posy>-18</posy>
+				<width>115</width>
+				<height>151</height>
+					<texture>$INFO[ListItem.Thumb]</texture>
+						
+			
+			</control>
+			
+			<control type="textbox">
+																			
+						<include>Common_Animation_Content_social</include>	
+	
+			<label>$INFO[ListItem.Label]</label>
+
+		<posx>142</posx>
+								<posy>12.7</posy>
+								<width>700</width>
+								<height>110</height>
+		<font>DialogInfo-Label2</font>
+			<textcolor>white</textcolor>
+			<scrollspeed>0</scrollspeed>
+			<autoscroll>false</autoscroll>
+			<wrapmultiline>true</wrapmultiline>
+					
+								
+		</control>
+		<control type="textbox">
+					<include>Common_Animation_Content_social</include>		
+			<posx>142</posx>
+								<posy>62</posy>
+			<width>250</width>
+			<height>51</height>
+			<label>$INFO[ListItem.Label2]</label>
+			<font>Menu-Similar-Plot-social</font>
+			<textcolor>white</textcolor>
+			<scrollspeed>0</scrollspeed>
+			<autoscroll>false</autoscroll>
+			<wrapmultiline>false</wrapmultiline>
+			
+		</control>
+			<control type="image">
+			<include>Common_Animation_Content_social</include>
+				<posx>121</posx>
+				<posy>-10</posy>
+				<width>280</width>
+				<height>130</height>
+					<texture>$INFO[ListItem.Label2]</texture>
+						
+			
+			</control>
+		<control type="textbox">
+				<include>Common_Animation_Content_social</include>			
+			<posx>5</posx>
+								<posy>200</posy>
+			<width>300</width>
+			<height>51</height>
+			<label></label>
+			<font>Menu-Similar-Plot</font>
+			<textcolor>FF7B7B7B</textcolor>
+			<scrollspeed>0</scrollspeed>
+			<autoscroll>false</autoscroll>
+			<wrapmultiline>false</wrapmultiline>
+			
+		</control>
+		</itemlayout>
+
+	<focusedlayout width="430" height="130">
+		
+		<control type="image">
+			<include>Common_Animation_Content_social</include>
+				<posx>0</posx>
+				<posy>0.7</posy>
+				<width>409</width>
+				<height>123.5</height>
+				<texture>colors/color_white.png</texture>
+			
+			
+			</control>
+			<control type="image">
+			<include>Common_Animation_Content_social</include>
+			<posx>2</posx>
+				<posy>2.7</posy>
+				<width>405</width>
+				<height>119.5</height>
+				<texture>colors/color_keyboard_dark.png</texture>
+			
+			
+			</control>
+		
+			<control type="image">
+			<include>Common_Animation_Content_social</include>
+				<posx>2</posx>
+				<posy>-18</posy>
+				<width>115</width>
+				<height>151</height>
+					<texture>$INFO[ListItem.Thumb]</texture>
+						
+			
+			</control>
+			
+			
+
+			
+			<control type="textbox">
+																			
+					<include>Common_Animation_Content_social</include>		
+	
+			<label>$INFO[ListItem.Label]</label>
+
+		<posx>142</posx>
+								<posy>12.7</posy>
+								<width>700</width>
+								<height>110</height>
+		<font>DialogInfo-Label2</font>
+			<textcolor>white</textcolor>
+			<scrollspeed>0</scrollspeed>
+			<autoscroll>false</autoscroll>
+			<wrapmultiline>true</wrapmultiline>
+					
+								
+		</control>
+		<control type="textbox">
+				<include>Common_Animation_Content_social</include>			
+			<posx>142</posx>
+								<posy>62</posy>
+			<width>250</width>
+			<height>51</height>
+			<label>$INFO[ListItem.Label2]</label>
+			<font>Menu-Similar-Plot-social</font>
+			<textcolor>white</textcolor>
+			<scrollspeed>0</scrollspeed>
+			<autoscroll>false</autoscroll>
+			<wrapmultiline>false</wrapmultiline>
+			
+		</control>
+		<control type="image">
+			<include>Common_Animation_Content_social</include>
+				<posx>121</posx>
+				<posy>-10</posy>
+				<width>280</width>
+				<height>130</height>
+					<texture>$INFO[ListItem.Label2]</texture>
+						
+			
+			</control>
+		<control type="textbox">
+					<include>Common_Animation_Content_social</include>		
+			<posx>5</posx>
+								<posy>200</posy>
+			<width>300</width>
+			<height>51</height>
+			<label></label>
+			<font>Menu-Similar-Plot</font>
+			<textcolor>FF7B7B7B</textcolor>
+			<scrollspeed>0</scrollspeed>
+			<autoscroll>false</autoscroll>
+			<wrapmultiline>false</wrapmultiline>
+			
+		</control>
+			
+		</focusedlayout>
+		
+	</include>
+	<include name="Common_AltHome_Panel391-social_feed3">
+	<include>Common_Animation_Content_social</include>
+		<posx>6</posx>
+		<posy>300</posy>
+		<width>450</width>
+		<height>300</height>
+		<viewtype label="535">list</viewtype>
+		<scrolltime tween="cubic" easing="out">500</scrolltime>
+		<itemgap>500</itemgap>
+		<orientation>vertical</orientation>
+		<preloaditems>2</preloaditems>
+		
+		<itemlayout width="430" height="160">
+		
+		
+		
+		
+
+			<control type="image">
+			<include>Common_Animation_Content_social</include>
+				<posx>2</posx>
+				<posy>2</posy>
+				<width>405</width>
+				<height>150</height>
+					<texture>colors\color_white.png</texture>
+					<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+						<aspectratio>stretch</aspectratio>
+			
+			</control>
+			<control type="image">
+			<include>Common_Animation_Content_social</include>
+				<posx>2</posx>
+				<posy>2</posy>
+				<width>150</width>
+				<height>150</height>
+					<texture fallback="overlays\default95.png">$INFO[ListItem.Thumb]</texture>
+						<aspectratio>stretch</aspectratio>
+			
+			</control>
+			
+			
+			<control type="textbox">
+																			
+						<include>Common_Animation_Content_social</include>	
+	
+			<label>$INFO[ListItem.Label]</label>
+
+		<posx>159</posx>
+								<posy>10.7</posy>
+								<width>700</width>
+								<height>140</height>
+		<font>DialogInfo-Label2</font>
+			<textcolor>white</textcolor>
+			<scrollspeed>0</scrollspeed>
+			<autoscroll>false</autoscroll>
+			<wrapmultiline>true</wrapmultiline>
+					
+								
+		</control>
+		<control type="textbox">
+					<include>Common_Animation_Content_social</include>		
+			<posx>174</posx>
+								<posy>115</posy>
+			<width>250</width>
+			<height>51</height>
+			<label>$INFO[ListItem.Label2]</label>
+			<font>Menu-Similar-Plot-social</font>
+			<textcolor>white</textcolor>
+			<scrollspeed>0</scrollspeed>
+			<autoscroll>false</autoscroll>
+			<wrapmultiline>false</wrapmultiline>
+			
+		</control>
+			<control type="image">
+			<include>Common_Animation_Content_social</include>
+				<posx>154</posx>
+								<posy>120</posy>>
+				<width>19</width>
+				<height>19</height>
+					<texture>demo\gsc.png</texture>
+						
+			
+			</control>
+			<control type="textbox">
+					<include>Common_Animation_Content_social</include>		
+			<posx>300</posx>
+								<posy>100</posy>
+			<width>250</width>
+			<height>51</height>
+			<label>+3500</label>
+			<font>Friends-Dash-Score</font>
+			<textcolor>white</textcolor>
+			<scrollspeed>0</scrollspeed>
+			<autoscroll>false</autoscroll>
+			<wrapmultiline>false</wrapmultiline>
+			
+		</control>
+		
+		</itemlayout>
+
+	<focusedlayout width="430" height="160">
+		
+		<control type="image">
+			<include>Common_Animation_Content_social</include>
+				<posx>0</posx>
+				<posy>0.7</posy>
+				<width>409</width>
+				<height>153.5</height>
+				<texture>colors/color_white.png</texture>
+			
+			
+			</control>
+			<control type="image">
+			<include>Common_Animation_Content_social</include>
+			<posx>2</posx>
+				<posy>2.7</posy>
+				<width>405</width>
+				<height>149.5</height>
+				<texture>colors/color_keyboard_dark.png</texture>
+			
+			
+			</control>
+		
+				<control type="image">
+			<include>Common_Animation_Content_social</include>
+				<posx>2</posx>
+				<posy>2</posy>
+				<width>405</width>
+				<height>150</height>
+					<texture>colors\color_white.png</texture>
+					<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+						<aspectratio>stretch</aspectratio>
+			
+			</control>
+			<control type="image">
+			<include>Common_Animation_Content_social</include>
+				<posx>2</posx>
+				<posy>2</posy>
+				<width>150</width>
+				<height>150</height>
+					<texture fallback="overlays\default95.png">$INFO[ListItem.Thumb]</texture>
+						<aspectratio>stretch</aspectratio>
+			
+			</control>
+			
+			
+
+			
+				<control type="textbox">
+																			
+						<include>Common_Animation_Content_social</include>	
+	
+			<label>$INFO[ListItem.Label]</label>
+
+		<posx>159</posx>
+								<posy>10.7</posy>
+								<width>700</width>
+								<height>140</height>
+		<font>DialogInfo-Label2</font>
+			<textcolor>white</textcolor>
+			<scrollspeed>0</scrollspeed>
+			<autoscroll>false</autoscroll>
+			<wrapmultiline>true</wrapmultiline>
+					
+								
+		</control>
+		<control type="textbox">
+					<include>Common_Animation_Content_social</include>		
+			<posx>174</posx>
+								<posy>115</posy>
+			<width>250</width>
+			<height>51</height>
+			<label>$INFO[ListItem.Label2]</label>
+			<font>Menu-Similar-Plot-social</font>
+			<textcolor>white</textcolor>
+			<scrollspeed>0</scrollspeed>
+			<autoscroll>false</autoscroll>
+			<wrapmultiline>false</wrapmultiline>
+			
+		</control>
+			<control type="textbox">
+					<include>Common_Animation_Content_social</include>		
+			<posx>300</posx>
+								<posy>100</posy>
+			<width>250</width>
+			<height>51</height>
+			<label>+3500</label>
+			<font>Friends-Dash-Score</font>
+			<textcolor>white</textcolor>
+			<scrollspeed>0</scrollspeed>
+			<autoscroll>false</autoscroll>
+			<wrapmultiline>false</wrapmultiline>
+			
+		</control>
+			<control type="image">
+			<include>Common_Animation_Content_social</include>
+				<posx>154</posx>
+								<posy>120</posy>>
+				<width>19</width>
+				<height>19</height>
+					<texture>demo\gsc.png</texture>
+						
+			
+			</control>
+		
+			
+		</focusedlayout>
+		
+	</include>
+	
+	<include name="Common_AltHome_Panel391-social_feed4">
+	<include>Common_Animation_Content_social</include>
+		<posx>6</posx>
+		<posy>300</posy>
+		<width>450</width>
+		<height>300</height>
+		<viewtype label="535">list</viewtype>
+		<scrolltime tween="cubic" easing="out">500</scrolltime>
+		<itemgap>500</itemgap>
+		<orientation>vertical</orientation>
+		<preloaditems>2</preloaditems>
+		
+		<itemlayout width="430" height="80">
+		
+		
+		
+		
+
+				<control type="image">
+			<include>Common_Animation_Content_social</include>
+				<posx>2</posx>
+				<posy>2</posy>
+				<width>405</width>
+				<height>75.5</height>
+					<texture>demo\list2.png</texture>
+						<aspectratio>stretch</aspectratio>
+			
+			</control>
+			
+			<control type="image">
+			<include>Common_Animation_Content_social</include>
+				<posx>2</posx>
+				<posy>2</posy>
+				<width>75.5</width>
+				<height>75.5</height>
+					<texture fallback="overlays\defa.jpg">$INFO[ListItem.Thumb]</texture>
+						<aspectratio>stretch</aspectratio>
+			
+			</control>
+			
+			
+			
+			<control type="textbox">
+																			
+						<include>Common_Animation_Content_social</include>	
+	
+			<label>$INFO[ListItem.Label]</label>
+
+		<posx>82</posx>
+								<posy>12.7</posy>
+								<width>700</width>
+								<height>140</height>
+		<font>DialogInfo-Label2</font>
+			<textcolor>white</textcolor>
+			<scrollspeed>0</scrollspeed>
+			<autoscroll>false</autoscroll>
+			<wrapmultiline>true</wrapmultiline>
+					
+								
+		</control>
+			<control type="image">
+			<include>Common_Animation_Content_social</include>
+				<posx>82</posx>
+								<posy>45</posy>
+				<width>19</width>
+				<height>19</height>
+					<texture>demo\gsc.png</texture>
+						<aspectratio>stretch</aspectratio>
+			
+			</control>
+			<control type="textbox">
+					<include>Common_Animation_Content_social</include>		
+			<posx>102</posx>
+								<posy>39</posy>
+			<width>250</width>
+			<height>51</height>
+			<label>$INFO[ListItem.Label2]</label>
+			<font>Menu-Similar-Plot-social</font>
+			<textcolor>white</textcolor>
+			<scrollspeed>0</scrollspeed>
+			<autoscroll>false</autoscroll>
+			<wrapmultiline>false</wrapmultiline>
+			
+		</control>
+		<control type="textbox">
+					<include>Common_Animation_Content_social</include>		
+			<posx>322</posx>
+								<posy>39</posy>
+			<width>250</width>
+			<height>51</height>
+			<label>+1500</label>
+			<font>Menu-Similar-Plot-social</font>
+			<textcolor>white</textcolor>
+			<scrollspeed>0</scrollspeed>
+			<autoscroll>false</autoscroll>
+			<wrapmultiline>false</wrapmultiline>
+			
+		</control>
+		
+		</itemlayout>
+
+	<focusedlayout width="430" height="80">
+		
+		<control type="image">
+			<include>Common_Animation_Content_social</include>
+				<posx>-2.5</posx>
+				<posy>-0.3</posy>
+				<width>412</width>
+				<height>80</height>
+				<texture>colors/color_white.png</texture>
+			
+			
+			</control>
+			<control type="image">
+			<include>Common_Animation_Content_social</include>
+			<posx>2</posx>
+				<posy>2.7</posy>
+				<width>405</width>
+				<height>74.7</height>
+				<texture>colors/color_keyboard_dark.png</texture>
+			
+			
+			</control>
+		
+				<control type="image">
+			<include>Common_Animation_Content_social</include>
+				<posx>2</posx>
+				<posy>2</posy>
+				<width>405</width>
+				<height>75.5</height>
+					<texture>demo\list2.png</texture>
+						<aspectratio>stretch</aspectratio>
+			
+			</control>
+			<control type="image">
+			<include>Common_Animation_Content_social</include>
+				<posx>2</posx>
+				<posy>2</posy>
+				<width>75.5</width>
+				<height>75.5</height>
+					<texture fallback="overlays\defa.jpg">$INFO[ListItem.Thumb]</texture>
+						<aspectratio>stretch</aspectratio>
+			
+			</control>
+			
+			
+
+			
+				<control type="textbox">
+																			
+						<include>Common_Animation_Content_social</include>	
+	
+			<label>$INFO[ListItem.Label]</label>
+
+		<posx>82</posx>
+								<posy>12.7</posy>
+								<width>700</width>
+								<height>140</height>
+		<font>DialogInfo-Label2</font>
+			<textcolor>white</textcolor>
+			<scrollspeed>0</scrollspeed>
+			<autoscroll>false</autoscroll>
+			<wrapmultiline>true</wrapmultiline>
+					
+								
+		</control>
+		<control type="image">
+			<include>Common_Animation_Content_social</include>
+				<posx>82</posx>
+								<posy>45</posy>
+				<width>19</width>
+				<height>19</height>
+					<texture>demo\gsc.png</texture>
+						<aspectratio>stretch</aspectratio>
+			
+			</control>
+		<control type="textbox">
+					<include>Common_Animation_Content_social</include>		
+			<posx>102</posx>
+								<posy>39</posy>
+			<width>250</width>
+			<height>51</height>
+			<label>$INFO[ListItem.Label2]</label>
+			<font>Menu-Similar-Plot-social</font>
+			<textcolor>white</textcolor>
+			<scrollspeed>0</scrollspeed>
+			<autoscroll>false</autoscroll>
+			<wrapmultiline>false</wrapmultiline>
+			
+		</control>
+		<control type="textbox">
+					<include>Common_Animation_Content_social</include>		
+			<posx>322</posx>
+								<posy>39</posy>
+			<width>250</width>
+			<height>51</height>
+			<label>+1500</label>
+			<font>Menu-Similar-Plot-social</font>
+			<textcolor>white</textcolor>
+			<scrollspeed>0</scrollspeed>
+			<autoscroll>false</autoscroll>
+			<wrapmultiline>false</wrapmultiline>
+			
+		</control>
+			
+		</focusedlayout>
+		
+	</include>
+	
+	
+	<include name="Common_AltHome_Panel391-alt">
+	
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>300</width>
+		<height>500</height>
+		<viewtype label="535">list</viewtype>
+		<scrolltime tween="cubic" easing="out">500</scrolltime>
+		<orientation>vertical</orientation>
+		<preloaditems>2</preloaditems>
+		
+		<itemlayout width="190" height="70">
+		
+		
+			<control type="image">
+			
+				<posx>2</posx>
+				<posy>2.7</posy>
+				<width>65</width>
+				<height>64.5</height>
+					<texture>colors\color_white.png</texture>
+						<colordiffuse>$INFO[skin.string(gamercolor)]</colordiffuse>
+			
+			</control>
+		
+	<control type="image">
+			
+			<posx>2</posx>
+				<posy>2.7</posy>
+				<width>65</width>
+				<height>64.5</height>
+					<texture>$INFO[ListItem.Label]</texture>
+						<aspectratio>stretch</aspectratio>
+			
+			</control>
+			<control type="image">
+		
+				<posx>13</posx>
+				<posy>14.7</posy>
+				<width>42.5</width>
+				<height>43</height>
+					<texture>$INFO[ListItem.Thumb]</texture>
+						
+			
+			</control>
+			<control type="textbox">
+							
+			<posx>72</posx>
+								<posy>22</posy>
+			<width>180</width>
+			<height>42</height>
+			<label>$INFO[ListItem.Label2]</label>
+			<font>Menu-Similar-Plot</font>
+			<textcolor>white</textcolor>
+			<scrollspeed>0</scrollspeed>
+			<autoscroll>false</autoscroll>
+			<wrapmultiline>false</wrapmultiline>
+			
+		</control>
+		</itemlayout>
+
+	<focusedlayout width="290" height="70">
+		
+		<control type="image">
+			
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>179.5</width>
+				<height>70</height>
+				<texture>colors/color_white.png</texture>
+			
+			
+			</control>
+			<control type="image">
+			
+			<posx>2</posx>
+				<posy>2.7</posy>
+				<width>175</width>
+				<height>64.5</height>
+				<texture>colors/color_keyboard_dark.png</texture>
+			
+			
+			</control>
+		
+			<control type="image">
+			
+				<posx>2</posx>
+				<posy>2.7</posy>
+				<width>65</width>
+				<height>64.5</height>
+					<texture>colors\color_white.png</texture>
+						<colordiffuse>$INFO[skin.string(gamercolor)]</colordiffuse>
+			
+			</control>
+		
+
+		
+			
+		<control type="image">
+			
+			<posx>2</posx>
+				<posy>2.7</posy>
+				<width>65</width>
+				<height>64.5</height>
+					<texture>$INFO[ListItem.Label]</texture>
+						<aspectratio>stretch</aspectratio>
+			
+			</control>
+
+				<control type="image">
+			
+				<posx>13</posx>
+				<posy>14.7</posy>
+				<width>42.5</width>
+				<height>43</height>
+					<texture>$INFO[ListItem.Thumb]</texture>
+						
+			
+			</control>
+			
+		<control type="textbox">
+						
+			<posx>72</posx>
+								<posy>22</posy>
+			<width>180</width>
+			<height>42</height>
+			<label>$INFO[ListItem.Label2]</label>
+			<font>Menu-Similar-Plot</font>
+			<textcolor>white</textcolor>
+			<scrollspeed>0</scrollspeed>
+			<autoscroll>false</autoscroll>
+			<wrapmultiline>false</wrapmultiline>
+			
+		</control>
+			
+		</focusedlayout>
+		
+	</include>
+	
+	<include name="Common_AltHome_Panel391-alt-social">
+	
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>300</width>
+		<height>500</height>
+		<viewtype label="535">list</viewtype>
+		<scrolltime tween="cubic" easing="out">500</scrolltime>
+		<orientation>vertical</orientation>
+		<preloaditems>2</preloaditems>
+		
+		<itemlayout width="190" height="70">
+		
+		
+			<control type="image">
+			
+				<posx>2</posx>
+				<posy>2.7</posy>
+				<width>65</width>
+				<height>65</height>
+					<texture>colors\color_keyboard_dark.png</texture>
+						
+			
+			</control>
+		
+
+		
+			
+		
+
+				<control type="image">
+			
+				<posx>13</posx>
+				<posy>14.7</posy>
+				<width>42.5</width>
+				<height>43</height>
+					<texture>$INFO[ListItem.Thumb]</texture>
+						
+			
+			</control>
+			
+		</itemlayout>
+
+	<focusedlayout width="290" height="70">
+		
+		
+		<control type="image">
+			
+				<posx>0</posx>
+				<posy>0.7</posy>
+				<width>69</width>
+				<height>69</height>
+					<texture>colors\color_white.png</texture>
+						
+			
+			</control>
+		
+			<control type="image">
+			
+				<posx>2</posx>
+				<posy>2.7</posy>
+				<width>65</width>
+				<height>65</height>
+					<texture>colors\color_keyboard_dark.png</texture>
+						
+			
+			</control>
+		
+
+		
+			
+		
+
+				<control type="image">
+			
+				<posx>13</posx>
+				<posy>14.7</posy>
+				<width>42.5</width>
+				<height>43</height>
+					<texture>$INFO[ListItem.Thumb]</texture>
+						
+			
+			</control>
+			
+		
+			
+		</focusedlayout>
+		
+	</include>
+	
+	
+	
+	
+	
+	
+	
+	
+	<include name="Common_AltHome_Panel391">
+	
+		<posx>6</posx>
+		<posy>300</posy>
+		<width>300</width>
+		<height>500</height>
+		<viewtype label="535">list</viewtype>
+		<scrolltime tween="cubic" easing="out">500</scrolltime>
+		<orientation>vertical</orientation>
+		<preloaditems>2</preloaditems>
+		
+		<itemlayout width="190" height="70">
+		
+		
+			
+		
+
+			<control type="image">
+			
+				<posx>2</posx>
+				<posy>2.7</posy>
+				<width>65</width>
+				<height>64.5</height>
+					<texture>$INFO[ListItem.Thumb]</texture>
+						
+			
+			</control>
+			
+			<control type="textbox">
+																			
+							
+	
+			<label>$INFO[ListItem.Label]</label>
+
+		<posx>72</posx>
+								<posy>12.7</posy>
+								<width>550</width>
+								<height>160</height>
+		<font>DialogInfo-Label2</font>
+			<textcolor>black</textcolor>
+			<scrollspeed>0</scrollspeed>
+			<autoscroll>false</autoscroll>
+			<wrapmultiline>true</wrapmultiline>
+					
+								
+		</control>
+		<control type="textbox">
+							
+			<posx>72</posx>
+								<posy>32</posy>
+			<width>180</width>
+			<height>42</height>
+			<label>$INFO[ListItem.Label2]</label>
+			<font>Menu-Similar-Plot</font>
+			<textcolor>black</textcolor>
+			<scrollspeed>0</scrollspeed>
+			<autoscroll>false</autoscroll>
+			<wrapmultiline>false</wrapmultiline>
+			
+		</control>
+		</itemlayout>
+
+	<focusedlayout width="290" height="70">
+		
+		<control type="image">
+			
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>249.5</width>
+				<height>70</height>
+				<texture>colors/color_black-.png</texture>
+			
+			
+			</control>
+			<control type="image">
+			
+			<posx>2</posx>
+				<posy>2.7</posy>
+				<width>245</width>
+				<height>64.5</height>
+				<texture>colors/color_friend.png</texture>
+			
+			
+			</control>
+		
+			<control type="image">
+			
+				<posx>2</posx>
+				<posy>2.7</posy>
+				<width>65</width>
+				<height>64.5</height>
+					<texture>$INFO[ListItem.Thumb]</texture>
+						
+			
+			</control>
+			
+			
+
+			
+			<control type="textbox">
+																			
+							
+	
+			<label>$INFO[ListItem.Label]</label>
+
+		<posx>72</posx>
+								<posy>12.7</posy>
+								<width>550</width>
+								<height>160</height>
+		<font>DialogInfo-Label2</font>
+			<textcolor>black</textcolor>
+			<scrollspeed>0</scrollspeed>
+			<autoscroll>false</autoscroll>
+			<wrapmultiline>true</wrapmultiline>
+					
+								
+		</control>
+		<control type="textbox">
+							
+			<posx>72</posx>
+								<posy>32</posy>
+			<width>180</width>
+			<height>42</height>
+			<label>$INFO[ListItem.Label2]</label>
+			<font>Menu-Similar-Plot</font>
+			<textcolor>black</textcolor>
+			<scrollspeed>0</scrollspeed>
+			<autoscroll>false</autoscroll>
+			<wrapmultiline>false</wrapmultiline>
+			
+		</control>
+			
+		</focusedlayout>
+		
+	</include>
+	
+	<include name="Common_AltHome_Panel391-settings">
+	
+		<posx>6</posx>
+		<posy>300</posy>
+		<width>300</width>
+		<height>500</height>
+		<viewtype label="535">list</viewtype>
+		<scrolltime tween="cubic" easing="out">500</scrolltime>
+		<orientation>vertical</orientation>
+		<preloaditems>2</preloaditems>
+		
+		<itemlayout width="190" height="70">
+		
+		
+			
+		<control type="image">
+			
+			<posx>2.5</posx>
+				<posy>2.7</posy>
+				<width>245</width>
+				<height>64.5</height>
+				<texture>colors/color_white.png</texture>
+			<colordiffuse>$INFO[skin.string(gamercolor)]</colordiffuse>
+			
+			</control>
+
+			<control type="image">
+			
+				<posx>2.5</posx>
+				<posy>2.7</posy>
+				<width>65</width>
+				<height>64.5</height>
+					<texture>$INFO[ListItem.Thumb]</texture>
+						
+			
+			</control>
+			
+			<control type="textbox">
+																			
+							
+	
+			<label>$INFO[ListItem.Label]</label>
+
+		<posx>72.5</posx>
+								<posy>12.7</posy>
+								<width>550</width>
+								<height>160</height>
+		<font>DialogInfo-Label2</font>
+			<textcolor>white</textcolor>
+			<scrollspeed>0</scrollspeed>
+			<autoscroll>false</autoscroll>
+			<wrapmultiline>true</wrapmultiline>
+					
+								
+		</control>
+		<control type="textbox">
+							
+			<posx>72.5</posx>
+								<posy>32</posy>
+			<width>180</width>
+			<height>42</height>
+			<label>$INFO[ListItem.Label2]</label>
+			<font>Menu-Similar-Plot</font>
+			<textcolor>white</textcolor>
+			<scrollspeed>0</scrollspeed>
+			<autoscroll>false</autoscroll>
+			<wrapmultiline>false</wrapmultiline>
+			
+		</control>
+		</itemlayout>
+
+	<focusedlayout width="290" height="70">
+		
+		<control type="image">
+			
+			<posx>-1</posx>
+				<posy>0</posy>
+				<width>251</width>
+				<height>70</height>
+				<texture>colors/color_white.png</texture>
+			
+			
+			</control>
+			<control type="image">
+			
+			<posx>2.5</posx>
+				<posy>2.7</posy>
+				<width>245</width>
+				<height>64.5</height>
+				<texture>colors/color_setting.png</texture>
+			
+			
+			</control>
+		
+			<control type="image">
+			
+				<posx>2.5</posx>
+				<posy>2.7</posy>
+				<width>65</width>
+				<height>64.5</height>
+					<texture>$INFO[ListItem.Thumb]</texture>
+						
+			
+			</control>
+			
+			
+
+			
+			<control type="textbox">
+																			
+							
+	
+			<label>$INFO[ListItem.Label]</label>
+
+		<posx>72.5</posx>
+								<posy>12.7</posy>
+								<width>550</width>
+								<height>160</height>
+		<font>DialogInfo-Label2</font>
+			<textcolor>white</textcolor>
+			<scrollspeed>0</scrollspeed>
+			<autoscroll>false</autoscroll>
+			<wrapmultiline>true</wrapmultiline>
+					
+								
+		</control>
+		<control type="textbox">
+							
+			<posx>72.5</posx>
+								<posy>32</posy>
+			<width>180</width>
+			<height>42</height>
+			<label>$INFO[ListItem.Label2]</label>
+			<font>Menu-Similar-Plot</font>
+			<textcolor>white</textcolor>
+			<scrollspeed>0</scrollspeed>
+			<autoscroll>false</autoscroll>
+			<wrapmultiline>false</wrapmultiline>
+			
+		</control>
+			
+		</focusedlayout>
+		
+	</include>
+	<include name="Common_AltHome_Panel391-msg">
+	
+		<posx>6</posx>
+		<posy>300</posy>
+		<width>300</width>
+		<height>500</height>
+		<viewtype label="535">list</viewtype>
+		<scrolltime tween="cubic" easing="out">500</scrolltime>
+		<orientation>vertical</orientation>
+		<preloaditems>2</preloaditems>
+		
+		<itemlayout width="210" height="70">
+		
+		
+			<control type="image">
+			
+			<posx>2</posx>
+				<posy>2.7</posy>
+				<width>265</width>
+				<height>64.5</height>
+				<texture>colors/color_friend.png</texture>
+			
+			
+			</control>
+		
+
+			<control type="image">
+			
+				<posx>2</posx>
+				<posy>2.7</posy>
+				<width>65</width>
+				<height>64.5</height>
+					<texture>$INFO[ListItem.Thumb]</texture>
+						
+			
+			</control>
+			
+			<control type="textbox">
+																			
+							
+	
+			<label>$INFO[ListItem.Label]</label>
+
+		<posx>72</posx>
+								<posy>12.7</posy>
+								<width>550</width>
+								<height>160</height>
+		<font>DialogInfo-Label2</font>
+			<textcolor>black</textcolor>
+			<scrollspeed>0</scrollspeed>
+			<autoscroll>false</autoscroll>
+			<wrapmultiline>true</wrapmultiline>
+					
+								
+		</control>
+		<control type="textbox">
+							
+			<posx>72</posx>
+								<posy>32</posy>
+			<width>180</width>
+			<height>42</height>
+			<label>$INFO[ListItem.Label2]</label>
+			<font>Menu-Similar-Plot</font>
+			<textcolor>black</textcolor>
+			<scrollspeed>0</scrollspeed>
+			<autoscroll>false</autoscroll>
+			<wrapmultiline>false</wrapmultiline>
+			
+		</control>
+		</itemlayout>
+
+	<focusedlayout width="210" height="70">
+		
+		<control type="image">
+			
+				<posx>-2</posx>
+				<posy>0</posy>
+				<width>271</width>
+				<height>70</height>
+				<texture>colors/color_black-.png</texture>
+			
+			
+			</control>
+			<control type="image">
+			
+			<posx>2</posx>
+				<posy>2.7</posy>
+				<width>265</width>
+				<height>64.5</height>
+				<texture>colors/color_friend.png</texture>
+			
+			
+			</control>
+		
+			<control type="image">
+			
+				<posx>2</posx>
+				<posy>2.7</posy>
+				<width>65</width>
+				<height>64.5</height>
+					<texture>$INFO[ListItem.Thumb]</texture>
+						
+			
+			</control>
+			
+			
+
+			
+			<control type="textbox">
+																			
+							
+	
+			<label>$INFO[ListItem.Label]</label>
+
+		<posx>72</posx>
+								<posy>12.7</posy>
+								<width>550</width>
+								<height>160</height>
+		<font>DialogInfo-Label2</font>
+			<textcolor>black</textcolor>
+			<scrollspeed>0</scrollspeed>
+			<autoscroll>false</autoscroll>
+			<wrapmultiline>true</wrapmultiline>
+					
+								
+		</control>
+		<control type="textbox">
+							
+			<posx>72</posx>
+								<posy>32</posy>
+			<width>180</width>
+			<height>42</height>
+			<label>$INFO[ListItem.Label2]</label>
+			<font>Menu-Similar-Plot</font>
+			<textcolor>black</textcolor>
+			<scrollspeed>0</scrollspeed>
+			<autoscroll>false</autoscroll>
+			<wrapmultiline>false</wrapmultiline>
+			
+		</control>
+			
+		</focusedlayout>
+		
+	</include>
+	
+		<include name="Common_Settings_Background2">
+	
+		<control type="image">
+		
+			<include>Common_Dimensions</include>
+			<texture>demo/settings/bg2.jpg</texture>
+			
+		</control>
+	
+
+			
+	</include>
+	<include name="Xbox_Logo">
+		<control type="group">
+			<animation type="WindowOpen" condition="!Window.IsVisible(113) + !Window.IsVisible(104)">
+		<effect type="fade" start="0" end="100" time="100" delay="1500" />
+	</animation>
+		<animation type="WindowOpen" condition="!Window.IsVisible(113) + !Window.IsVisible(104)">
+		<effect type="fade" start="0" end="100" time="400" />
+	</animation>
+	
+	<animation type="WindowClose">
+		<effect type="fade" start="100" end="0" time="400" />
+	</animation>
+	
+		<animation type="Visible">
+		<effect type="fade" start="0" end="100" time="100" />
+	</animation>
+	
+	<animation type="Hidden">
+		<effect type="fade" start="100" end="0" time="400" />
+	</animation>
+	
+			<visible>!Window.IsVisible(113) + !Window.IsVisible(104) + !Skin.HasSetting(ShowFPS)</visible>
+			
+			<posx>705</posx>
+			<posy>50</posy>
+			<width>100</width>
+			<height>145</height>
+			
+		
+		
+		
+				<control type="label">
+					<animation effect="fade" start="100" end="0" time="400" condition="!System.IdleTime(5)">Conditional</animation>
+									<animation effect="fade" start="0" end="100" time="400" condition="System.IdleTime(5)">Conditional</animation>
+							
+				<posx>225</posx>
+				<posy>10</posy>
+					<width>280</width>
+					<height>20</height>
+					<label>Go ahead, say "Xbox"</label>
+					<font>Settings-Label2</font>
+					<textcolor>Label_Normal</textcolor>
+					<aligny>center</aligny>
+			<visible>Skin.HasSetting(EnableKinectText)</visible>
+				</control>
+				
+			
+		</control>
+		<control type="group">
+			<animation type="WindowOpen" condition="!Window.IsVisible(113) + !Window.IsVisible(104)">
+		<effect type="fade" start="0" end="100" time="100" delay="200" />
+	</animation>
+		<animation type="WindowOpen" condition="!Window.IsVisible(113) + !Window.IsVisible(104)">
+		<effect type="fade" start="0" end="100" time="200" />
+	</animation>
+	
+	<animation type="WindowClose">
+		<effect type="fade" start="100" end="0" time="400" />
+	</animation>
+	
+		<animation type="Visible">
+		<effect type="fade" start="0" end="100" time="100" />
+	</animation>
+	
+	<animation type="Hidden">
+		<effect type="fade" start="100" end="0" time="400" />
+	</animation>
+	
+			<visible>!Window.IsVisible(113) + !Window.IsVisible(104) + Skin.HasSetting(ShowFPS)</visible>
+			
+			<posx>705</posx>
+			<posy>50</posy>
+			<width>100</width>
+			<height>145</height>
+			
+		
+		
+		
+				<control type="label">
+						
+				<posx>224</posx>
+				<posy>10</posy>
+					<width>280</width>
+					<height>20</height>
+					<label>FPS: $INFO[System.FPS] MEM: $INFO[system.memory(used.percent)]</label>
+					<font>Settings-Label2</font>
+					<textcolor>Label_Normal</textcolor>
+					<aligny>center</aligny>
+			<visible>Skin.HasSetting(EnableKinectText)</visible>
+				</control>
+				
+			
+		</control>
+<control type="group">
+				<visible>!Skin.HasSetting(disablexboxlogo)</visible>			
+				<include condition="Skin.HasSetting(on)">Common_Animation_dashboard_pic</include>
+														<include condition="!Skin.HasSetting(on)">Common_Animation_Windows8</include>	
+													
+			<posx>750</posx>
+			<posy>50</posy>
+			<width>100</width>
+			<height>145</height>			
+			<control type="image">
+				<posx>333</posx>
+				<posy>0</posy>
+				<width>40</width>
+				<height>40</height>
+				<texture>demo/vol/xbox.png</texture>
+				<aspectratio>scale</aspectratio>
+			</control>	
+		</control>
+</include>
+<include name="Xbox_Logo_Dark">
+	<control type="group">
+			<animation type="WindowOpen" condition="!Window.IsVisible(113) + !Window.IsVisible(104) + Window.Previous(Startup)">
+		<effect type="fade" start="0" end="100" time="100" delay="1500" />
+	</animation>
+		<animation type="WindowOpen" condition="!Window.IsVisible(113) + !Window.IsVisible(104) + !Window.Previous(Startup)">
+		<effect type="fade" start="0" end="100" time="400" />
+	</animation>
+	
+	<animation type="WindowClose">
+		<effect type="fade" start="100" end="0" time="400" />
+	</animation>
+	
+		<animation type="Visible">
+		<effect type="fade" start="0" end="100" time="100" />
+	</animation>
+	
+	<animation type="Hidden">
+		<effect type="fade" start="100" end="0" time="400" />
+	</animation>
+	
+			<visible>!Window.IsVisible(113) + !Window.IsVisible(104) + !Skin.HasSetting(ShowFPS)</visible>
+			
+			<posx>705</posx>
+			<posy>50</posy>
+			<width>100</width>
+			<height>145</height>
+			
+		
+		
+		
+				<control type="label">
+					<animation effect="fade" start="100" end="0" time="400" condition="!System.IdleTime(5)">Conditional</animation>
+									<animation effect="fade" start="0" end="100" time="400" condition="System.IdleTime(5)">Conditional</animation>
+							
+				<posx>225</posx>
+				<posy>10</posy>
+					<width>280</width>
+					<height>20</height>
+					<label>Go ahead, say "Xbox"</label>
+					<font>Settings-Label2</font>
+					<textcolor>black</textcolor>
+					<aligny>center</aligny>
+			<visible>Skin.HasSetting(EnableKinectText)</visible>
+				</control>
+			
+		</control>
+		<control type="group">
+			<animation type="WindowOpen" condition="!Window.IsVisible(113) + !Window.IsVisible(104) + Window.Previous(Startup)">
+		<effect type="fade" start="0" end="100" time="100" delay="200" />
+	</animation>
+		<animation type="WindowOpen" condition="!Window.IsVisible(113) + !Window.IsVisible(104) + !Window.Previous(Startup)">
+		<effect type="fade" start="0" end="100" time="200" />
+	</animation>
+	
+	<animation type="WindowClose">
+		<effect type="fade" start="100" end="0" time="400" />
+	</animation>
+	
+		<animation type="Visible">
+		<effect type="fade" start="0" end="100" time="100" />
+	</animation>
+	
+	<animation type="Hidden">
+		<effect type="fade" start="100" end="0" time="400" />
+	</animation>
+	
+			<visible>!Window.IsVisible(113) + !Window.IsVisible(104) + Skin.HasSetting(ShowFPS)</visible>
+			
+			<posx>705</posx>
+			<posy>50</posy>
+			<width>100</width>
+			<height>145</height>
+			
+		
+		
+		
+				<control type="label">
+					
+				<posx>224</posx>
+				<posy>10</posy>
+					<width>280</width>
+					<height>20</height>
+					<label>FPS: $INFO[System.FPS] MEM: $INFO[system.memory(used.percent)]</label>
+					<font>Settings-Label2</font>
+					<textcolor>black</textcolor>
+					<aligny>center</aligny>
+			<visible>Skin.HasSetting(EnableKinectText)</visible>
+				</control>
+			
+		</control>
+<control type="group">
+					<visible>!Skin.HasSetting(disablexboxlogo)</visible>		
+					<include condition="Skin.HasSetting(on)">Common_Animation_dashboard_pic</include>
+														<include condition="!Skin.HasSetting(on)">Common_Animation_Windows8</include>	
+			<posx>750</posx>
+			<posy>50</posy>
+			<width>100</width>
+			<height>145</height>			
+			<control type="image">
+				<posx>333</posx>
+				<posy>0</posy>
+				<width>40</width>
+				<height>40</height>
+				<texture>demo/vol/xbox.png</texture>
+				<colordiffuse>FanartDiffuse</colordiffuse>
+				<aspectratio>scale</aspectratio>
+				
+			</control>	
+		</control>
+</include>
+	<include name="Snapped_Content">
+				<control type="group">
+		
+			<posx>960</posx>
+			<posy>0</posy>
+			
+		
+	
+				<animation type="WindowOpen" reversible="false">
+				<effect type="slide" start="320,0" end="0" time="400" tween="cubic" easing="out" />
+				<effect type="fade" start="0" end="100" time="350" />
+			</animation>
+			
+			<animation type="WindowClose" reversible="false">
+				<effect type="slide" start="0,0" end="320,0" time="400" tween="cubic" easing="out" />
+				<effect type="fade" start="100" end="0" time="350" />
+			</animation>
+
+	
+			
+			
+						<control type="image">
+					
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>320</width>
+				<height>720</height>
+				<texture>demo/snapper/snap.png</texture>
+			<visible>Skin.HasSetting(Snapped) + Player.HasVideo</visible>
+			</control>
+				<control type="image">
+					
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>320</width>
+				<height>720</height>
+				<texture>demo/snapper2/music.png</texture>
+			<visible>Skin.HasSetting(Snapped2) + Player.HasAudio</visible>
+			</control>
+																									<control type="textbox">
+																				
+							
+			<posx>15</posx>
+								<posy>165</posy>
+			<label>$INFO[MusicPlayer.Artist] - $INFO[MusicPlayer.Title]</label>
+
+		<width>300</width>
+		<height>40</height>
+		<font>Settings-Menu-Header2</font>
+			<textcolor>Label_Normal</textcolor>
+			<scrollspeed>0</scrollspeed>
+			<autoscroll>false</autoscroll>
+			<wrapmultiline>true</wrapmultiline>
+												<visible>Skin.HasSetting(Snapped2) + Player.HasAudio</visible>
+																																													
+														
+		</control>
+		
+		
+		
+				<control type="image">
+					
+	      <posx>0</posx>
+      <posy>205</posy>
+      <width>320</width>
+      <height>300</height>
+				<texture>$INFO[MusicPlayer.Cover]</texture>
+			<visible>Skin.HasSetting(Snapped2) + Player.HasAudio</visible>
+			</control>
+		
+
+
+			
+			
+			<control type="videowindow" id="1">
+				
+      <description>My first video control</description>
+      <posx>0</posx>
+      <posy>205</posy>
+      <width>320</width>
+      <height>300</height>
+ 
+            <aspectratio>stretch</aspectratio>
+            <align>center</align>
+				<visible>Skin.HasSetting(Snapped) + Player.HasVideo</visible>
+
+        </control>
+		
+		
+																						<control type="textbox">
+																				
+							
+			<posx>15</posx>
+								<posy>195</posy>
+			<label>$VAR[NowPlaying_First_Label]</label>
+
+		<width>300</width>
+		<height>40</height>
+		<font>Settings-Menu-Header2</font>
+			<textcolor>Label_Normal</textcolor>
+			<scrollspeed>0</scrollspeed>
+			<autoscroll>false</autoscroll>
+			<wrapmultiline>true</wrapmultiline>
+											<visible>Skin.HasSetting(Snapped) + Player.HasVideo</visible>
+																																													
+														
+		</control>
+			</control>
+	</include>
+	
+
+	<include name="Common_Dashboard_AltPin">
+		
+		<control type="panel" id="111">
+<posx>30</posx>
+						<posy>200</posy>
+
+						
+						<include>Common_AltHome_Panel3</include>
+
+						<onright>222</onright>
+						<onup>1</onup>
+						<ondown>666</ondown>
+						<pagecontrol>7017</pagecontrol>
+						
+						<content>
+						
+
+							
+																					<item id="1">
+								<description>Games</description>
+								<label>Games</label>
+								<thumb>SHORT\ICO\Games.png</thumb>
+								<onclick>ActivateWindow(818)</onclick>
+												
+							</item>
+							
+
+
+								</content>
+
+					</control>
+										<control type="panel" id="222">
+<posx>320</posx>
+						<posy>200</posy>
+
+						
+						<include>Common_AltHome_Panel3</include>
+<onleft>111</onleft>
+						<onright>333</onright>
+						<onup>1</onup>
+						<ondown>666</ondown>
+						<pagecontrol>7017</pagecontrol>
+						
+						<content>
+						
+
+							
+																					<item id="1">
+								<description>Games</description>
+								<label>Games</label>
+								<thumb>SHORT\ICO\Games.png</thumb>
+								<onclick>ActivateWindow(8868)</onclick>
+								
+							</item>
+							
+
+
+								</content>
+
+					</control>
+										<control type="panel" id="333">
+<posx>460</posx>
+						<posy>200</posy>
+
+						
+						<include>Common_AltHome_Panel3</include>
+<onleft>222</onleft>
+						<onright>444</onright>
+						<onup>1</onup>
+						<ondown>777</ondown>
+						<pagecontrol>7017</pagecontrol>
+						
+						<content>
+						
+
+							
+																					<item id="1">
+								<description>Games</description>
+								<label>Games</label>
+								<thumb>SHORT\ICO\Games.png</thumb>
+							<onclick>ActivateWindow(1899)</onclick>				
+							</item>
+							
+
+
+								</content>
+
+					</control>
+										<control type="panel" id="444">
+<posx>600</posx>
+						<posy>200</posy>
+
+						
+						<include>Common_AltHome_Panel3</include>
+<onleft>333</onleft>
+						<onright>555</onright>
+						<onup>1</onup>
+						<ondown>888</ondown>
+						<pagecontrol>7017</pagecontrol>
+						
+						<content>
+						
+
+							
+																					<item id="1">
+								<description>Games</description>
+								<label>Games</label>
+								<thumb>SHORT\ICO\Games.png</thumb>
+								<onclick>ActivateWindow(777)</onclick>
+														
+							</item>
+							
+
+
+								</content>
+
+					</control>
+										<control type="panel" id="555">
+<posx>770</posx>
+						<posy>200</posy>
+
+						
+						<include>Common_AltHome_Panel3</include>
+<onleft>444</onleft>
+					<onright>Control.Move(20,1)</onright>
+<onright>5000</onright>
+						<onup>1</onup>
+						<ondown>999</ondown>
+						<pagecontrol>7017</pagecontrol>
+						
+						<content>
+						
+
+							
+																					<item id="1">
+								<description>Games</description>
+								<label>Games</label>
+								<thumb>SHORT\ICO\Games.png</thumb>
+								<onclick condition="!Skin.HasSetting(tvalt)">ActivateWindow(PVR)</onclick>
+									<onclick condition="Skin.HasSetting(tvalt)">RunAddon($INFO[Skin.String(tvalt)])</onclick>	
+														
+									
+									<onclick condition="Skin.HasSetting(tvalt)">Skin.SetString(snap,9799)</onclick>
+									<onclick condition="!Skin.HasSetting(tvalt)">Skin.SetString(snap,PVR)</onclick>
+<onclick condition="!Skin.HasSetting(snapie)">Skin.ToggleSetting(snapie)</onclick>
+<onclick condition="Skin.HasSetting(gaming)">Skin.ToggleSetting(gaming)</onclick>
+<onclick>SetProperty(snap,demo/sna/tv.jpg,0)</onclick>
+<onclick>Skin.SetString(sn,Live Tv)</onclick>
+							</item>
+							
+
+
+								</content>
+
+					</control>
+										<control type="panel" id="666">
+<posx>915</posx>
+						<posy>200</posy>
+
+						
+						<include>Common_AltHome_Panel3</include>
+
+						<onright>777</onright>
+						<onup>222</onup>
+						<ondown>1010</ondown>
+						<pagecontrol>7017</pagecontrol>
+						
+						<content>
+						
+
+							
+																					<item id="1">
+								<description>Games</description>
+								<label>Games</label>
+								<thumb>SHORT\ICO\Games.png</thumb>
+			<onclick>Activatewindow(999)</onclick>
+														
+							</item>
+							
+
+
+								</content>
+
+					</control>
+										<control type="panel" id="777">
+<posx>1060</posx>
+						<posy>200</posy>
+
+						
+						<include>Common_AltHome_Panel3</include>
+
+<onleft>666</onleft>
+
+<onright>888</onright>
+						<onup>333</onup>
+						<ondown>1010</ondown>
+						<pagecontrol>7017</pagecontrol>
+						
+						<content>
+						
+
+							
+																					<item id="1">
+								<description>Games</description>
+								<label>Games</label>
+								<thumb>SHORT\ICO\Games.png</thumb>
+							<onclick>ActivateWindow(7544)</onclick>
+												
+							</item>
+							
+
+
+								</content>
+
+					</control>
+										<control type="panel" id="888">
+<posx>30</posx>
+						<posy>345</posy>
+
+						
+						<include>Common_AltHome_Panel3</include>
+
+						<onright>999</onright>
+						<onup>444</onup>
+						<onleft>777</onleft>
+						<ondown>1111</ondown>
+						<pagecontrol>7017</pagecontrol>
+						
+						<content>
+						
+
+							
+																					<item id="1">
+								<description>Games</description>
+								<label>Games</label>
+								<thumb>SHORT\ICO\Games.png</thumb>
+									<onclick>ActivateWindow(9899)</onclick>
+														
+							</item>
+							
+
+
+								</content>
+
+					</control>
+					
+										<control type="panel" id="999">
+<posx>170</posx>
+						<posy>345</posy>
+
+						
+						<include>Common_AltHome_Panel3</include>
+<onleft>888</onleft>
+					
+						<onup>555</onup>
+					<onright>Control.Move(20,1)</onright>
+<onright>5000</onright>
+						<ondown>1212</ondown>
+						<pagecontrol>7017</pagecontrol>
+						
+						<content>
+						
+
+							
+																					<item id="1">
+								<description>Games</description>
+								<label>Games</label>
+								<thumb>SHORT\ICO\Games.png</thumb>
+								
+								<onclick>ActivateWindow(7545)</onclick>
+														
+							</item>
+							
+
+
+								</content>
+
+					</control>
+					
+										<control type="panel" id="1010">
+<posx>460</posx>
+						<posy>345</posy>
+
+						
+						<include>Common_AltHome_Panel3</include>
+						<onright>1111</onright>
+						<onup>777</onup>
+				
+						<pagecontrol>7017</pagecontrol>
+						
+						<content>
+						
+
+							
+																					<item id="1">
+								<description>Games</description>
+								<label>Games</label>
+								<thumb>SHORT\ICO\Games.png</thumb>
+								<onclick>ActivateWindow(63,return)</onclick>
+										
+							</item>
+							
+
+
+								</content>
+
+					</control>
+										<control type="panel" id="1111">
+<posx>755</posx>
+						<posy>345</posy>
+
+						
+						<include>Common_AltHome_Panel3</include>
+<onleft>1010</onleft>
+						<onright>1212</onright>
+						<onup>888</onup>
+			
+						<pagecontrol>7017</pagecontrol>
+						
+						<content>
+						
+
+							
+																					<item id="1">
+								<description>Games</description>
+								<label>Games</label>
+								<thumb>SHORT\ICO\Games.png</thumb>
+								<onclick>ActivateWindow(settings,return)</onclick>
+														
+							</item>
+							
+
+
+								</content>
+
+					</control>
+										<control type="panel" id="1212">
+<posx>920</posx>
+						<posy>345</posy>
+
+						
+						<include>Common_AltHome_Panel3</include>
+<onleft>1111</onleft>
+					<onright>Control.Move(20,1)</onright>
+<onright>5000</onright>
+						<onup>999</onup>
+					
+						<pagecontrol>7017</pagecontrol>
+						
+						<content>
+						
+
+							
+																					<item id="1">
+								<description>Games</description>
+								<label>Games</label>
+								<thumb>SHORT\ICO\Games.png</thumb>
+
+								<onclick>ActivateWindow(761)</onclick>
+														
+							</item>
+							
+
+
+								</content>
+
+					</control>
+										
+					<!--Scrollbar-->
+							<control type="image">
+							
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1280</width>
+								<height>720</height>
+								<texture>demo/zz.jpg</texture>
+								
+							</control>
+														<control type="image">
+							
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1280</width>
+								<height>720</height>
+								<texture>demo/zz1.jpg</texture>
+								<visible>Control.HasFocus(111)</visible>
+							</control>
+																					<control type="image">
+							
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1280</width>
+								<height>720</height>
+								<texture>demo/zz2.jpg</texture>
+								<visible>Control.HasFocus(222)</visible>
+							</control>
+																					<control type="image">
+							
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1280</width>
+								<height>720</height>
+								<texture>demo/zz3.jpg</texture>
+								<visible>Control.HasFocus(333)</visible>
+							</control>
+																					<control type="image">
+							
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1280</width>
+								<height>720</height>
+								<texture>demo/zz4.jpg</texture>
+								<visible>Control.HasFocus(444)</visible>
+							</control>
+																					<control type="image">
+							
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1280</width>
+								<height>720</height>
+								<texture>demo/zz5.jpg</texture>
+								<visible>Control.HasFocus(555)</visible>
+							</control>
+																					<control type="image">
+							
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1280</width>
+								<height>720</height>
+								<texture>demo/zz6.jpg</texture>
+								<visible>Control.HasFocus(666)</visible>
+							</control>
+																					<control type="image">
+							
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1280</width>
+								<height>720</height>
+								<texture>demo/zz7.jpg</texture>
+								<visible>Control.HasFocus(777)</visible>
+							</control>
+																					<control type="image">
+							
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1280</width>
+								<height>720</height>
+								<texture>demo/zz8.jpg</texture>
+								<visible>Control.HasFocus(888)</visible>
+							</control>
+																			<control type="image">
+							
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1280</width>
+								<height>720</height>
+								<texture>demo/zz9.jpg</texture>
+								<visible>Control.HasFocus(999)</visible>
+							</control>
+																					<control type="image">
+							
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1280</width>
+								<height>720</height>
+								<texture>demo/zz10.jpg</texture>
+								<visible>Control.HasFocus(1010)</visible>
+							</control>
+														<control type="image">
+							
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1280</width>
+								<height>720</height>
+								<texture>demo/zz11.jpg</texture>
+								<visible>Control.HasFocus(1111)</visible>
+							</control>
+					
+																					<control type="image">
+							
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1280</width>
+								<height>720</height>
+								<texture>demo/zz12.jpg</texture>
+								<visible>Control.HasFocus(1212)</visible>
+							</control>
+																			
+				
+	</include>
+	
+		<include name="Common_TraktTV_ClearProperties">
+	
+		<onclick>ClearProperty(Title,58)</onclick>
+		<onclick>ClearProperty(MPAA,58)</onclick>
+		<onclick>ClearProperty(Plot,58)</onclick>
+		<onclick>ClearProperty(Tagline,58)</onclick>
+		<onclick>ClearProperty(Year,58)</onclick>
+		<onclick>ClearProperty(Genre,58)</onclick>
+		<onclick>ClearProperty(Runtime,58)</onclick>
+		<onclick>ClearProperty(Rating,58)</onclick>
+		<onclick>ClearProperty(Poster,58)</onclick>
+		<onclick>ClearProperty(Fanart,58)</onclick>
+		<onclick>ClearProperty(Trailer,58)</onclick>
+		<onclick>ClearProperty(ID,58)</onclick>
+		<onclick>ClearProperty(Type,58)</onclick>
+		<onclick>ClearProperty(Country,58)</onclick>
+		<onclick>ClearProperty(NextTime,58)</onclick>
+		
+	</include>	
+	
+	<include name="Common_TraktTV_Info_Detail">
+	
+		<width>180</width>
+		<height>18</height>
+		<font>TraktTV-Info-Detail</font>
+		<textcolor>white</textcolor>
+		<aligny>top</aligny>
+		<wrapmultiline>true</wrapmultiline>
+		
+	</include>
+	
+	<include name="Common_AltHome_Panel360">
+	
+		<posx>6</posx>
+		<posy>300</posy>
+		<width>1200</width>
+		<height>600</height>
+		<viewtype label="535">list</viewtype>
+		<scrolltime tween="cubic" easing="out">500</scrolltime>
+		<orientation>horizontal</orientation>
+		<preloaditems>2</preloaditems>
+		
+		<itemlayout width="312" height="166">
+		
+			<control type="image">
+			
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>292</width>
+				<height>136</height>
+				<texture>colors/color_keyboard_dark.png</texture>
+				
+			</control>
+			
+			<control type="image">
+			
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>292</width>
+				<height>136</height>
+				<texture>$INFO[ListItem.Thumb]</texture>
+				<aspectratio>stretch</aspectratio>
+				
+			</control>
+			
+			<include>Common_AltHome_Label</include>
+
+		</itemlayout>
+
+	<focusedlayout width="312" height="166">
+		
+			<control type="image">
+			
+				<posx>0</posx>
+				<posy>1</posy>
+				<width>292</width>
+				<height>142</height>
+				<texture>colors/color_white.png</texture>
+				<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+				<animation effect="zoom" end="110" center="auto" time="300" condition="!Container(1).HasFocus(1000)">Conditional</animation>
+			</control>
+			
+			<control type="image">
+			
+				<posx>0</posx>
+				<posy>0</posy>
+					<width>292</width>
+				<height>136</height>
+				<texture>$INFO[ListItem.Thumb]</texture>
+				<aspectratio>stretch</aspectratio>
+					<animation effect="zoom" end="110" center="auto" time="300" condition="!Container(1).HasFocus(1000)">Conditional</animation>
+			</control>
+			
+			<control type="image">
+			
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>292</width>
+				<height>136</height>
+				<texture border="6">button_unfocus.png</texture>
+				<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+				
+				<visible>Control.HasFocus(7005)</visible>
+					<animation effect="zoom" end="110" center="auto" time="300" condition="!Container(1).HasFocus(1000)">Conditional</animation>
+			</control>
+
+			
+			<include>Common_AltHome_Label2</include>
+			
+		</focusedlayout>
+		
+	</include>
+	
+	<include name="Top_Profile_Tiles">
+								<control type="image">
+				<visible>!Skin.HasSetting(gamertag) + !Skin.HasSetting(disableprofilepic)</visible>
+																																						<include condition="Skin.HasSetting(on)">Common_Animation_dashboard_pic</include>
+														<include condition="!Skin.HasSetting(on)">Common_Animation_Windows8</include>	
+				<posx>166</posx>
+				<posy>25</posy>
+				<width>45</width>
+				<height>45</height>
+
+								<texture>demo\profico.png</texture>
+				
+			</control>
+
+		<control type="image">
+				<visible>!Skin.HasSetting(gamertag) + !Skin.HasSetting(disableprofilepic)</visible>
+																																						<include condition="Skin.HasSetting(on)">Common_Animation_dashboard_pic</include>
+														<include condition="!Skin.HasSetting(on)">Common_Animation_Windows8</include>	
+				<posx>80</posx>
+				<posy>24</posy>
+				<width>45</width>
+				<height>45</height>
+
+								<texture>demo\prof.png</texture>
+				
+			</control>
+			<control type="image">
+				<visible>!Skin.HasSetting(gamertag) + !Skin.HasSetting(disableprofilepic)</visible>
+																																						<include condition="Skin.HasSetting(on)">Common_Animation_dashboard_pic</include>
+														<include condition="!Skin.HasSetting(on)">Common_Animation_Windows8</include>	
+				<posx>126</posx>
+				<posy>24</posy>
+				<width>46</width>
+				<height>45</height>
+
+								<texture background="true" fallback="overlays/default95.png">$INFO[System.ProfileThumb]</texture>
+				
+			</control>
+			
+			
+			
+
+			
+			
+			
+			
+						<control type="image">
+							<visible>Skin.HasSetting(gamertag)</visible>
+																																								<include condition="Skin.HasSetting(on)">Common_Animation_dashboard_pic</include>
+														<include condition="!Skin.HasSetting(on)">Common_Animation_Windows8</include>	
+				<posx>126</posx>
+				<posy>24</posy>
+				<width>46</width>
+				<height>45</height>
+
+								<texture background="true" fallback="overlays/default95.png">$INFO[Skin.String(XBoxLive.Gamer.Picture)]</texture>
+				
+			</control>
+						<control type="image">
+							
+																																									<include condition="Skin.HasSetting(on)">Common_Animation_dashboard_pic</include>
+														<include condition="!Skin.HasSetting(on)">Common_Animation_Windows8</include>	
+				<posx>126</posx>
+				<posy>65</posy>
+				<width>46</width>
+				<height>4</height>
+
+								<texture background="true" fallback="colors/color_green.png">colors/color_green.png</texture>
+				<visible>!Skin.HasSetting(hometile) + !Skin.HasSetting(disableprofilepic)</visible>
+			</control>
+			<control type="multiimage">
+																																		<include condition="Skin.HasSetting(on)">Common_Animation_dashboard_pic</include>
+														<include condition="!Skin.HasSetting(on)">Common_Animation_Windows8</include>	
+  
+				<posx>126</posx>
+				<posy>65</posy>
+				<width>46</width>
+				<height>4</height>
+  <imagepath background="true">colors/Tile/</imagepath> 
+  <timeperimage>1500</timeperimage> 
+  <randomize>false</randomize> 
+  <fadetime>600</fadetime> 
+<visible>Skin.HasSetting(hometile) + !Skin.HasSetting(disableprofilepic)</visible>
+  </control>	
+	</include>
+
+	
+	<include name="Common_AltHome_Panel369">
+	
+		<posx>6</posx>
+		<posy>300</posy>
+		<width>1200</width>
+		<height>600</height>
+		<viewtype label="535">list</viewtype>
+		<scrolltime tween="cubic" easing="out">500</scrolltime>
+		<orientation>vertical</orientation>
+		<preloaditems>2</preloaditems>
+		
+		<itemlayout width="312" height="166">
+		
+			<control type="image">
+			
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>292</width>
+				<height>136</height>
+				<texture>colors/color_keyboard_dark.png</texture>
+				
+			</control>
+			
+			<control type="image">
+			
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>292</width>
+				<height>136</height>
+				<texture>$INFO[ListItem.Thumb]</texture>
+				<aspectratio>stretch</aspectratio>
+				
+			</control>
+			
+			<include>Common_AltHome_Label2</include>
+
+		</itemlayout>
+
+	<focusedlayout width="312" height="166">
+		
+			<control type="image">
+			
+				<posx>0</posx>
+				<posy>1</posy>
+				<width>292</width>
+				<height>142</height>
+				<texture>colors/color_white.png</texture>
+				<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+			
+			</control>
+			
+			<control type="image">
+			
+				<posx>0</posx>
+				<posy>0</posy>
+					<width>292</width>
+				<height>136</height>
+				<texture>$INFO[ListItem.Thumb]</texture>
+				<aspectratio>stretch</aspectratio>
+				
+			</control>
+			
+			<control type="image">
+			
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>292</width>
+				<height>136</height>
+				<texture border="6">button_unfocus.png</texture>
+				<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+				
+				<visible>Control.HasFocus(7005)</visible>
+
+			</control>
+
+			
+			<include>Common_AltHome_Label2</include>
+			
+		</focusedlayout>
+		
+	</include>
+	
+	
+	
+	
+		<include name="Common_AltHome_Panel379">
+	
+		<posx>6</posx>
+		<posy>300</posy>
+		<width>1200</width>
+		<height>600</height>
+		<viewtype label="535">list</viewtype>
+		<scrolltime tween="cubic" easing="out">500</scrolltime>
+		<orientation>vertical</orientation>
+		<preloaditems>2</preloaditems>
+		
+		<itemlayout width="155" height="60">
+		
+			<control type="image">
+			
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>145</width>
+				<height>50</height>
+				<texture>colors/color_keyboard_dark.png</texture>
+				
+			</control>
+			
+			<control type="image">
+			
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>145</width>
+				<height>50</height>
+				<texture>$INFO[ListItem.Thumb]</texture>
+				<aspectratio>stretch</aspectratio>
+				
+			</control>
+			
+			<include>Common_AltHome_Label3</include>
+
+		</itemlayout>
+
+	<focusedlayout width="155" height="60">
+		
+			<control type="image">
+			
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>145</width>
+				<height>50</height>
+				<texture>colors/color_white.png</texture>
+				<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+			
+			</control>
+			
+			<control type="image">
+			
+				<posx>0</posx>
+				<posy>0</posy>
+					<width>145</width>
+				<height>50</height>
+				<texture>$INFO[ListItem.Thumb]</texture>
+				<aspectratio>stretch</aspectratio>
+				
+			</control>
+			
+			<control type="image">
+			
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>145</width>
+				<height>50</height>
+				<texture border="6">button_unfocus.png</texture>
+				<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+				
+				<visible>Control.HasFocus(7005)</visible>
+
+			</control>
+
+			
+			<include>Common_AltHome_Label3</include>
+			
+		</focusedlayout>
+		
+	</include>
+	
+	
+		<include name="Common_AltHome_Panel380">
+	
+		<posx>6</posx>
+		<posy>300</posy>
+		<width>1200</width>
+		<height>600</height>
+		<viewtype label="535">list</viewtype>
+		<scrolltime tween="cubic" easing="out">500</scrolltime>
+		<orientation>vertical</orientation>
+		<preloaditems>2</preloaditems>
+		
+		<itemlayout width="155" height="60">
+		
+			<control type="image">
+			
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>145</width>
+				<height>50</height>
+				<texture>colors/color_keyboard_dark.png</texture>
+				
+			</control>
+			
+			<control type="image">
+			
+				<posx>2</posx>
+				<posy>0</posy>
+				<width>145</width>
+				<height>50</height>
+				<texture>$INFO[ListItem.Thumb]</texture>
+				<aspectratio>stretch</aspectratio>
+				
+			</control>
+			
+			<include>Common_AltHome_Label3</include>
+
+		</itemlayout>
+
+	<focusedlayout width="155" height="60">
+		
+		<control type="image">
+			
+				<posx>0</posx>
+				<posy>-2</posy>
+				<width>149</width>
+				<height>55</height>
+				<texture>colors/color_white.png</texture>
+			
+			
+			</control>
+			<control type="image">
+			
+				<posx>2</posx>
+				<posy>1</posy>
+				<width>145</width>
+				<height>50</height>
+				<texture>colors/color_keyboard.png</texture>
+			
+			
+			</control>
+			
+			<control type="image">
+			
+				<posx>2</posx>
+				<posy>0</posy>
+					<width>145</width>
+				<height>50</height>
+				<texture>$INFO[ListItem.Thumb]</texture>
+				<aspectratio>stretch</aspectratio>
+				
+			</control>
+			
+			
+
+			
+			<include>Common_AltHome_Label3</include>
+			
+		</focusedlayout>
+		
+	</include>
+	
+	<include name="Common_AltHome_Panel381">
+	
+		<posx>6</posx>
+		<posy>300</posy>
+		<width>1200</width>
+		<height>600</height>
+		<viewtype label="535">list</viewtype>
+		<scrolltime tween="cubic" easing="out">500</scrolltime>
+		<orientation>horizontal</orientation>
+		<preloaditems>2</preloaditems>
+		
+		<itemlayout width="155" height="60">
+		
+			<control type="image">
+			
+				<posx>2</posx>
+				<posy>2</posy>
+				<width>115</width>
+				<height>50</height>
+				<texture>colors/color_keyboard_dark.png</texture>
+				
+			</control>
+			
+			<control type="image">
+			
+				<posx>2</posx>
+				<posy>2</posy>
+				<width>145</width>
+				<height>50</height>
+				<texture>$INFO[ListItem.Thumb]</texture>
+				<aspectratio>stretch</aspectratio>
+				
+			</control>
+			
+			<include>Common_AltHome_Label4</include>
+
+		</itemlayout>
+
+	<focusedlayout width="155" height="60">
+		
+		<control type="image">
+			
+				<posx>0</posx>
+				<posy>-1</posy>
+				<width>119</width>
+				<height>55</height>
+				<texture>colors/color_white.png</texture>
+			
+			
+			</control>
+			<control type="image">
+			
+				<posx>2</posx>
+				<posy>2</posy>
+				<width>115</width>
+				<height>50</height>
+				<texture>colors/color_keyboard.png</texture>
+			
+			
+			</control>
+			
+			<control type="image">
+			
+				<posx>2</posx>
+				<posy>2</posy>
+					<width>145</width>
+				<height>50</height>
+				<texture>$INFO[ListItem.Thumb]</texture>
+				<aspectratio>stretch</aspectratio>
+				
+			</control>
+			
+			
+
+			
+			<include>Common_AltHome_Label4</include>
+			
+		</focusedlayout>
+		
+	</include>
+	
+		<include name="Common_AltHome_Panel390">
+	
+		<posx>6</posx>
+		<posy>300</posy>
+		<width>1200</width>
+		<height>600</height>
+		<viewtype label="535">list</viewtype>
+		<scrolltime tween="cubic" easing="out">500</scrolltime>
+		<orientation>vertical</orientation>
+		<preloaditems>2</preloaditems>
+		
+		<itemlayout width="155" height="60">
+		<control type="image">
+			
+				<posx>1</posx>
+				<posy>0.6</posy>
+				<width>117</width>
+				<height>53</height>
+				<texture>colors/color_keyboard2.png</texture>
+			
+			
+			</control>
+			<control type="image">
+			
+				<posx>2</posx>
+				<posy>2</posy>
+				<width>115</width>
+				<height>50</height>
+				<texture>demo\install\1.png</texture>
+				
+			</control>
+			
+		
+			
+			<include>Common_AltHome_Label5</include>
+
+		</itemlayout>
+
+	<focusedlayout width="155" height="60">
+		
+		<control type="image">
+			
+				<posx>0</posx>
+				<posy>-1</posy>
+				<width>119</width>
+				<height>55</height>
+				<texture>colors/color_white.png</texture>
+			
+			
+			</control>
+			<control type="image">
+			
+				<posx>2</posx>
+				<posy>2</posy>
+				<width>115</width>
+				<height>50</height>
+				<texture>colors/color_keyboard.png</texture>
+			
+			
+			</control>
+			
+			
+			
+			
+
+			
+			<include>Common_AltHome_Label5</include>
+			
+		</focusedlayout>
+		
+	</include>
+	
+	
+	
+	
+	<include name="Common_AltHome_Panel410">
+	
+		<posx>6</posx>
+		<posy>300</posy>
+		<width>1200</width>
+		<height>600</height>
+		<viewtype label="535">list</viewtype>
+		<scrolltime tween="cubic" easing="out">500</scrolltime>
+		<orientation>vertical</orientation>
+		<preloaditems>2</preloaditems>
+		
+		<itemlayout width="156" height="60">
+		<control type="image">
+			
+				<posx>1.5</posx>
+				<posy>0.6</posy>
+				<width>118</width>
+				<height>53</height>
+				<texture>colors/color_keyboard2.png</texture>
+			
+			
+			</control>
+			<control type="image">
+			
+				<posx>3</posx>
+				<posy>2</posy>
+				<width>115</width>
+				<height>50</height>
+				<texture>colors\color_white.png</texture>
+				
+			</control>
+			
+		
+			
+			<include>Common_AltHome_Labelmsg</include>
+
+		</itemlayout>
+
+	<focusedlayout width="156" height="60">
+		
+			<control type="image">
+			
+				<posx>1.5</posx>
+				<posy>0.6</posy>
+				<width>118</width>
+				<height>53</height>
+				<texture>colors/color_black-.png</texture>
+			
+			
+			</control>
+			<control type="image">
+			
+				<posx>3</posx>
+				<posy>2</posy>
+				<width>115</width>
+				<height>50</height>
+				<texture>colors/color_keyboard.png</texture>
+			
+			
+			</control>
+			
+			
+			
+			
+
+			
+			<include>Common_AltHome_Label5</include>
+			
+		</focusedlayout>
+		
+	</include>
+	
+	
+	<include name="Common_AltHome_Panel384">
+	
+		<posx>6</posx>
+		<posy>300</posy>
+		<width>1200</width>
+		<height>9000</height>
+		<viewtype label="535">list</viewtype>
+		<scrolltime tween="cubic" easing="out">500</scrolltime>
+		<orientation>horizontal</orientation>
+		<preloaditems>2</preloaditems>
+		
+		<itemlayout width="190" height="60">
+		
+		
+			
+			<include>Common_AltHome_Label4</include>
+<control type="image">
+			
+				<posx>0</posx>
+				<posy>53.7</posy>
+				<width>149</width>
+				<height>2</height>
+				<texture>colors/color_keyboard_dark.png</texture>
+			
+			
+			</control>
+		</itemlayout>
+
+	<focusedlayout width="190" height="60">
+		<control type="image">
+		
+				<posx>0</posx>
+				<posy>53.7</posy>
+				<width>149</width>
+				<height>2</height>
+				<texture>colors/color_keyboard.png</texture>
+			
+			
+			</control>
+		<control type="image">
+			
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>149.5</width>
+				<height>55.5</height>
+				<texture>colors/color_white.png</texture>
+			
+			
+			</control>
+			<control type="image">
+			
+				<posx>2</posx>
+				<posy>2.7</posy>
+				<width>145</width>
+				<height>50</height>
+					<texture>colors\color_white.png</texture>
+							<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+			
+			</control>
+			
+			
+
+			
+			<include>Common_AltHome_Label4</include>
+			
+		</focusedlayout>
+		
+	</include>
+	<include name="Common_AltHome_Panel384-1">
+	
+		<posx>6</posx>
+		<posy>300</posy>
+		<width>1200</width>
+		<height>9000</height>
+		<viewtype label="535">list</viewtype>
+		<scrolltime tween="cubic" easing="out">500</scrolltime>
+		<orientation>horizontal</orientation>
+		<preloaditems>2</preloaditems>
+		
+		<itemlayout width="190" height="60">
+		
+		
+			
+			<include>Common_AltHome_Label4</include>
+<control type="image">
+			
+				<posx>0</posx>
+				<posy>53.7</posy>
+				<width>149</width>
+				<height>2</height>
+				<texture>colors/color_keyboard_dark.png</texture>
+			
+			
+			</control>
+		</itemlayout>
+
+	<focusedlayout width="190" height="60">
+		<control type="image">
+		
+				<posx>0</posx>
+				<posy>53.7</posy>
+				<width>149</width>
+				<height>2</height>
+				<texture>colors/color_keyboard.png</texture>
+			
+			
+			</control>
+		<control type="image">
+			
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>149.5</width>
+				<height>55.5</height>
+				<texture>colors/color_white.png</texture>
+			
+			
+			</control>
+			<control type="image">
+			
+				<posx>2</posx>
+				<posy>2.7</posy>
+				<width>145</width>
+				<height>50</height>
+					<texture>colors/color_keyboard_dark.png</texture>
+							
+			
+			</control>
+			
+			
+
+			
+			<include>Common_AltHome_Label4</include>
+			
+		</focusedlayout>
+		
+	</include>
+	<include name="Common_AltHome_Panel383">
+	
+		<posx>6</posx>
+		<posy>300</posy>
+		<width>1200</width>
+		<height>3000</height>
+		<viewtype label="535">list</viewtype>
+		<scrolltime tween="cubic" easing="out">500</scrolltime>
+		<orientation>horizontal</orientation>
+		<preloaditems>2</preloaditems>
+		
+		<itemlayout width="190" height="60">
+		
+		<control type="group">
+		<posy>1</posy>
+				<posx>1</posx>
+			<control type="textbox">
+							
+			<posx>10</posx>
+			<posy>2</posy>
+			<width>180</width>
+			<height>42</height>
+			<label>$INFO[ListItem.Label]</label>
+			<font>Menu-Similar-Plot</font>
+			<textcolor>black</textcolor>
+			<scrollspeed>0</scrollspeed>
+			<autoscroll>false</autoscroll>
+			<wrapmultiline>false</wrapmultiline>
+			
+		</control>
+<control type="image">
+			
+				<posx>0</posx>
+				<posy>52.5</posy>
+				<width>149</width>
+				<height>2</height>
+				<texture>colors/color_keyboard.png</texture>
+			
+			</control>
+			</control>
+		</itemlayout>
+
+	<focusedlayout width="190" height="60">
+		<control type="group">
+		<posy>1</posy>
+		<posx>1</posx>
+		<control type="image">
+		
+				<posx>0</posx>
+				<posy>52.5</posy>
+				<width>149</width>
+				<height>2</height>
+				<texture>colors/color_keyboard.png</texture>
+			
+			
+			</control>
+		<control type="image">
+			
+				<posx>-2</posx>
+				<posy>-1</posy>
+				<width>152</width>
+				<height>56</height>
+				<texture>colors/color_black.png</texture>
+			
+			
+			</control>
+			<control type="image">
+			
+				<posx>2</posx>
+				<posy>2</posy>
+				<width>145</width>
+				<height>50</height>
+				<texture>colors/color_white.png</texture>
+			
+			
+			</control>
+			
+			
+
+			
+			<control type="textbox">
+							
+			<posx>10</posx>
+			<posy>2</posy>
+			<width>180</width>
+			<height>42</height>
+			<label>$INFO[ListItem.Label]</label>
+			<font>Menu-Similar-Plot</font>
+			<textcolor>black</textcolor>
+			<scrollspeed>0</scrollspeed>
+			<autoscroll>false</autoscroll>
+			<wrapmultiline>false</wrapmultiline>
+			
+		</control>
+			</control>
+		</focusedlayout>
+		
+	</include>
+	
+	<include name="Common_AltHome_Panel383-alt">
+	
+		<posx>6</posx>
+		<posy>300</posy>
+		<width>1200</width>
+		<height>3000</height>
+		<viewtype label="535">list</viewtype>
+		<scrolltime tween="cubic" easing="out">500</scrolltime>
+		<orientation>horizontal</orientation>
+		<preloaditems>2</preloaditems>
+		
+		<itemlayout width="370" height="60">
+		
+		
+			
+			<include>Common_AltHome_Label4</include>
+
+		</itemlayout>
+
+	<focusedlayout width="370" height="60">
+	
+		<control type="image">
+			
+				<posx>0</posx>
+				<posy>-0.6</posy>
+				<width>330</width>
+				<height>55</height>
+				<texture>colors/color_white.png</texture>
+			
+			
+			</control>
+			<control type="image">
+			
+				<posx>2</posx>
+				<posy>2</posy>
+				<width>326</width>
+				<height>50</height>
+				<texture>colors/profile.png</texture>
+			
+			
+			</control>
+			
+			
+
+			
+			<include>Common_AltHome_Label4</include>
+			
+		</focusedlayout>
+		
+	</include>
+		<include name="Common_AltHome_Panel382">
+	
+		<posx>6</posx>
+		<posy>300</posy>
+		<width>1200</width>
+		<height>600</height>
+		<viewtype label="535">list</viewtype>
+		<scrolltime tween="cubic" easing="out">500</scrolltime>
+		<orientation>horizontal</orientation>
+		<preloaditems>2</preloaditems>
+		
+		<itemlayout width="155" height="60">
+		
+			<control type="image">
+			
+				<posx>2</posx>
+				<posy>2</posy>
+				<width>115</width>
+				<height>50</height>
+				<texture>colors/color_keyboard_dark.png</texture>
+				
+			</control>
+			
+			<control type="image">
+			
+				<posx>2</posx>
+				<posy>2</posy>
+				<width>145</width>
+				<height>50</height>
+				<texture>$INFO[ListItem.Thumb]</texture>
+				<aspectratio>stretch</aspectratio>
+				
+			</control>
+			
+			<include>Common_AltHome_Label4</include>
+
+		</itemlayout>
+
+	<focusedlayout width="155" height="60">
+		
+		<control type="image">
+			
+				<posx>-1</posx>
+				<posy>-1</posy>
+				<width>119.7</width>
+				<height>55</height>
+				<texture>colors/color_white.png</texture>
+			
+			
+			</control>
+			<control type="image">
+			
+				<posx>2</posx>
+				<posy>2</posy>
+				<width>115</width>
+				<height>50</height>
+				<texture>colors/color_keyboard.png</texture>
+			
+			
+			</control>
+			
+			<control type="image">
+			
+				<posx>2</posx>
+				<posy>2</posy>
+					<width>145</width>
+				<height>50</height>
+				<texture>$INFO[ListItem.Thumb]</texture>
+				<aspectratio>stretch</aspectratio>
+				
+			</control>
+			
+			
+
+			
+			<include>Common_AltHome_Label4</include>
+			
+		</focusedlayout>
+		
+	</include>
+	
+	<include name="Common_AltHome_Panel382-login">
+	
+		<posx>6</posx>
+		<posy>300</posy>
+		<width>1200</width>
+		<height>600</height>
+		<viewtype label="535">list</viewtype>
+		<scrolltime tween="cubic" easing="out">500</scrolltime>
+		<orientation>vertical</orientation>
+		<preloaditems>2</preloaditems>
+		
+		<itemlayout width="125" height="70">
+		
+			<control type="image">
+			
+				<posx>2</posx>
+				<posy>2</posy>
+				<width>115</width>
+				<height>60</height>
+				<texture>colors/color_keyboard_dark.png</texture>
+				
+			</control>
+			
+			<control type="image">
+			
+				<posx>2</posx>
+				<posy>2</posy>
+				<width>145</width>
+				<height>60</height>
+				<texture>$INFO[ListItem.Thumb]</texture>
+				<aspectratio>stretch</aspectratio>
+				
+			</control>
+			
+			<include>Common_AltHome_Label4-login</include>
+
+		</itemlayout>
+
+	<focusedlayout width="125" height="70">
+		
+		<control type="image">
+			
+				<posx>-1</posx>
+				<posy>-1</posy>
+				<width>119.7</width>
+				<height>65</height>
+				<texture>colors/color_white.png</texture>
+			
+			
+			</control>
+			<control type="image">
+			
+				<posx>2</posx>
+				<posy>2</posy>
+				<width>115</width>
+				<height>60</height>
+				<texture>colors/color_keyboard.png</texture>
+			
+			
+			</control>
+			
+			<control type="image">
+			
+				<posx>2</posx>
+				<posy>2</posy>
+					<width>145</width>
+				<height>60</height>
+				<texture>$INFO[ListItem.Thumb]</texture>
+				<aspectratio>stretch</aspectratio>
+				
+			</control>
+			
+			
+
+			
+			<include>Common_AltHome_Label4-login</include>
+			
+		</focusedlayout>
+		
+	</include>
+	
+	
+		<include name="Common_Content_Grouplist3">
+	
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>1280</width>
+		<height>720</height>
+		<scrolltime tween="Linear" easing="out">545</scrolltime>
+		<pagecontrol>9010</pagecontrol>
+		<itemgap>114</itemgap>
+		<orientation>horizontal</orientation>
+
+	</include>
+		<include name="Common_Content_Grouplist4">
+	
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>1280</width>
+		<height>720</height>
+		<scrolltime tween="Sine" easing="out">545</scrolltime>
+		<pagecontrol>9010</pagecontrol>
+		<itemgap>114</itemgap>
+		<orientation>horizontal</orientation>
+
+	</include>
+			<include name="Common_Content_Grouplist5">
+	
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>1280</width>
+		<height>720</height>
+		<scrolltime tween="Quadric" easing="out">545</scrolltime>
+		<pagecontrol>9010</pagecontrol>
+		<itemgap>114</itemgap>
+		<orientation>horizontal</orientation>
+
+	</include>
+				<include name="Common_Content_Grouplist6">
+	
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>1280</width>
+		<height>720</height>
+		<scrolltime tween="Cubic" easing="out">600</scrolltime>
+		<pagecontrol>9010</pagecontrol>
+		<itemgap>114</itemgap>
+		<orientation>horizontal</orientation>
+
+	</include>
+	
+	<include name="dashboard_vid">
+
+<control type="videowindow" id="1">
+      <description>My first video control</description>
+      <posx>0</posx>
+      <posy>0</posy>
+      <width>1280</width>
+      <height>720</height>
+      <visible>Skin.HasSetting(dashovid) + Player.HasMedia</visible>
+            <aspectratio>stretch</aspectratio>
+            <align>center</align>
+			<include>Common_Animation_vid</include>
+        </control>
+
+</include>
+	<include name="WindowID">
+		<width>520</width>
+		<height>14</height>
+		<textcolor>Blue</textcolor>
+		<shadowcolor>Black</shadowcolor>
+		<align>left</align>
+	</include>
+
+	<include name="DialogID">
+		<width>520</width>
+		<height>14</height>
+		<textcolor>Green</textcolor>
+		<shadowcolor>Black</shadowcolor>
+		<align>left</align>
+	</include>
+	
+	<include name="HiddenButton">
+		<posx>-20</posx>
+		<posy>-20</posy>
+		<width>1</width>
+		<height>1</height>
+		<label>-</label>
+		<texturenofocus>-</texturenofocus>
+		<texturefocus>-</texturefocus>
+	</include>
+	
+	<!---------------------------------->
+	<!--
+	<!--	Common controls and
+	<!--    attributes
+	<!--
+	<!---------------------------------->
+	
+	<include name="Common_AltHome_Label">
+	
+		<control type="textbox">
+							
+			<posx>10</posx>
+			<posy>74</posy>
+			<width>80</width>
+			<height>21</height>
+			<label>$INFO[ListItem.Label]</label>
+			<font>Menu-List-Small</font>
+			<textcolor>Label_Normal</textcolor>
+			<scrollspeed>0</scrollspeed>
+			<autoscroll>false</autoscroll>
+			<wrapmultiline>false</wrapmultiline>
+			
+		</control>
+		
+	</include>	
+		
+	<include name="Common_AltHome_Label2">
+	
+		<control type="textbox">
+							
+			<posx>10</posx>
+			<posy>74</posy>
+			<width>180</width>
+			<height>42</height>
+			<label>$INFO[ListItem.Label]</label>
+			<font>Menu-List-Small</font>
+			<textcolor>Label_Normal</textcolor>
+			<scrollspeed>0</scrollspeed>
+			<autoscroll>false</autoscroll>
+			<wrapmultiline>false</wrapmultiline>
+			
+		</control>
+		
+	</include>
+		<include name="Common_AltHome_Label3">
+	
+		<control type="textbox">
+							
+			<posx>10</posx>
+			<posy>9</posy>
+			<width>180</width>
+			<height>42</height>
+			<label>$INFO[ListItem.Label]</label>
+			<font>Menu-List</font>
+			<textcolor>Label_Normal</textcolor>
+			<scrollspeed>0</scrollspeed>
+			<autoscroll>false</autoscroll>
+			<wrapmultiline>false</wrapmultiline>
+			
+		</control>
+		</include>
+		<include name="Common_AltHome_Label4">
+	
+		<control type="textbox">
+							
+			<posx>10</posx>
+			<posy>2</posy>
+			<width>180</width>
+			<height>42</height>
+			<label>$INFO[ListItem.Label]</label>
+			<font>Menu-Similar-Plot</font>
+			<textcolor>Label_Normal</textcolor>
+			<scrollspeed>0</scrollspeed>
+			<autoscroll>false</autoscroll>
+			<wrapmultiline>false</wrapmultiline>
+			
+		</control>
+		
+	</include>
+	<include name="Common_AltHome_Label4-login">
+	
+		<control type="textbox">
+							
+			<posx>10</posx>
+			<posy>12</posy>
+			<width>180</width>
+			<height>42</height>
+			<label>$INFO[ListItem.Label]</label>
+			<font>Menu-Similar-Plot</font>
+			<textcolor>Label_Normal</textcolor>
+			<scrollspeed>0</scrollspeed>
+			<autoscroll>false</autoscroll>
+			<wrapmultiline>false</wrapmultiline>
+			
+		</control>
+		
+	</include>
+	<include name="Common_AltHome_Label5">
+	
+		<control type="textbox">
+							
+			<posx>11</posx>
+			<posy>11</posy>
+			<width>180</width>
+			<height>42</height>
+			<label>$INFO[ListItem.Label]</label>
+			<font>DialogInfo-Label-install</font>
+			<textcolor>Label_Normal</textcolor>
+			<scrollspeed>0</scrollspeed>
+			<autoscroll>false</autoscroll>
+			<wrapmultiline>false</wrapmultiline>
+			
+		</control>
+		
+	</include>
+	<include name="Common_AltHome_Labelmsg">
+	
+		<control type="textbox">
+							
+			<posx>11</posx>
+			<posy>11</posy>
+			<width>180</width>
+			<height>42</height>
+			<label>$INFO[ListItem.Label]</label>
+			<font>DialogInfo-Label-install</font>
+			<textcolor>black</textcolor>
+			<scrollspeed>0</scrollspeed>
+			<autoscroll>false</autoscroll>
+			<wrapmultiline>false</wrapmultiline>
+			
+		</control>
+		
+	</include>
+	
+	<include name="Common_AltHome_List">
+	
+								<posx>122</posx>
+								<posy>207</posy>
+								<width>574</width>
+								<height>296</height>
+		<viewtype label="535">list</viewtype>
+		<scrolltime tween="cubic" easing="out">600</scrolltime>
+		<orientation>vertical</orientation>
+		
+	</include>	
+	
+	<include name="Common_AltHome_Panel">
+	
+		<posx>6</posx>
+		<posy>300</posy>
+		<width>240</width>
+		<height>240</height>
+		<viewtype label="535">list</viewtype>
+		<scrolltime tween="cubic" easing="out">600</scrolltime>
+		<orientation>vertical</orientation>
+		<preloaditems>2</preloaditems>
+		
+		<itemlayout width="120" height="120">
+		
+			<control type="image">
+			
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>100</width>
+				<height>100</height>
+				<texture>colors/color_keyboard_dark.png</texture>
+				
+			</control>
+			
+			<control type="image">
+			
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>100</width>
+				<height>100</height>
+				<texture>$INFO[ListItem.Thumb]</texture>
+				<aspectratio>scale</aspectratio>
+				
+			</control>
+			
+			<include>Common_AltHome_Label</include>
+
+		</itemlayout>
+
+		<focusedlayout width="120" height="120">
+		
+			<control type="image">
+			
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>100</width>
+				<height>100</height>
+				<texture>colors/color_white.png</texture>
+				<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+				
+			</control>
+			
+			<control type="image">
+			
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>100</width>
+				<height>100</height>
+				<texture>$INFO[ListItem.Thumb]</texture>
+				<aspectratio>scale</aspectratio>
+				
+			</control>
+			
+			<control type="image">
+			
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>100</width>
+				<height>100</height>
+				<texture border="6">button_unfocus.png</texture>
+				<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+				
+				<visible>Control.HasFocus(7005)</visible>
+				
+			</control>
+			
+			<include>Common_AltHome_Label</include>
+			
+		</focusedlayout>
+		
+	</include>
+	
+	
+				<include name="Common_AltHome_new">
+	
+		<posx>170</posx>
+		<posy>510</posy>
+		<width>600</width>
+		<height>240</height>
+		<viewtype label="535">list</viewtype>
+		<scrolltime tween="cubic" easing="out">600</scrolltime>
+		<orientation>horizontal</orientation>
+		<preloaditems>2</preloaditems>
+		
+		<itemlayout width="125" height="130">
+		
+			<control type="image">
+			
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>100</width>
+				<height>100</height>
+				<texture>colors/color_keyboard_dark.png</texture>
+				
+			</control>
+			
+			<control type="image">
+			
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>100</width>
+				<height>100</height>
+				<texture>$INFO[ListItem.Thumb]</texture>
+				<aspectratio>scale</aspectratio>
+				
+			</control>
+			
+			<include>Common_AltHome_Label</include>
+
+		</itemlayout>
+
+		<focusedlayout width="125" height="130">
+		
+			<control type="image">
+			
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>100</width>
+				<height>100</height>
+				<texture>colors/color_white.png</texture>
+				<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+				
+			</control>
+			
+			<control type="image">
+			
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>100</width>
+				<height>100</height>
+				<texture>$INFO[ListItem.Thumb]</texture>
+				<aspectratio>scale</aspectratio>
+				
+			</control>
+			
+			<control type="image">
+			
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>100</width>
+				<height>100</height>
+				<texture border="6">button_unfocus.png</texture>
+				<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+				
+				<visible>Control.HasFocus(7005)</visible>
+				
+			</control>
+			
+			<include>Common_AltHome_Label</include>
+			
+		</focusedlayout>
+		
+	</include>
+			<include name="Common_AltHome_Panel6">
+	
+		<posx>110</posx>
+		<posy>510</posy>
+		<width>600</width>
+		<height>240</height>
+		<viewtype label="535">list</viewtype>
+		<scrolltime tween="cubic" easing="out">600</scrolltime>
+		<orientation>horizontal</orientation>
+		<preloaditems>2</preloaditems>
+		
+		<itemlayout width="125" height="130">
+		
+			<control type="image">
+			
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>100</width>
+				<height>100</height>
+				<texture>colors/color_keyboard_dark.png</texture>
+				
+			</control>
+			
+			<control type="image">
+			
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>100</width>
+				<height>100</height>
+				<texture>$INFO[ListItem.Thumb]</texture>
+				<aspectratio>scale</aspectratio>
+				
+			</control>
+			
+			<include>Common_AltHome_Label</include>
+
+		</itemlayout>
+
+		<focusedlayout width="125" height="130">
+		
+			<control type="image">
+			
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>100</width>
+				<height>100</height>
+				<texture>colors/color_white.png</texture>
+				<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+				
+			</control>
+			
+			<control type="image">
+			
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>100</width>
+				<height>100</height>
+				<texture>$INFO[ListItem.Thumb]</texture>
+				<aspectratio>scale</aspectratio>
+				
+			</control>
+			
+			<control type="image">
+			
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>100</width>
+				<height>100</height>
+				<texture border="6">button_unfocus.png</texture>
+				<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+				
+				<visible>Control.HasFocus(7005)</visible>
+				
+			</control>
+			
+			<include>Common_AltHome_Label</include>
+			
+		</focusedlayout>
+		
+	</include>
+				<include name="Common_AltHome_Panel7">
+	
+		<posx>485</posx>
+		<posy>55</posy>
+		<width>480</width>
+		<height>380</height>
+		<viewtype label="535">list</viewtype>
+		<scrolltime tween="cubic" easing="out">600</scrolltime>
+		<orientation>vertical</orientation>
+		<preloaditems>2</preloaditems>
+		
+		<itemlayout width="120" height="123">
+		
+			<control type="image">
+			
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>100</width>
+				<height>100</height>
+				<texture>colors/color_keyboard_dark.png</texture>
+				
+			</control>
+			
+			<control type="image">
+			
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>100</width>
+				<height>100</height>
+				<texture>$INFO[ListItem.Thumb]</texture>
+				<aspectratio>scale</aspectratio>
+				
+			</control>
+			
+			<include>Common_AltHome_Label</include>
+
+		</itemlayout>
+
+		<focusedlayout width="120" height="123">
+		
+			<control type="image">
+			
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>100</width>
+				<height>100</height>
+				<texture>colors/color_white.png</texture>
+				<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+				
+			</control>
+			
+			<control type="image">
+			
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>100</width>
+				<height>100</height>
+				<texture>$INFO[ListItem.Thumb]</texture>
+				<aspectratio>scale</aspectratio>
+				
+			</control>
+			
+			<control type="image">
+			
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>100</width>
+				<height>100</height>
+				<texture border="6">button_unfocus.png</texture>
+				<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+				
+				<visible>Control.HasFocus(7005)</visible>
+				
+			</control>
+			
+			<include>Common_AltHome_Label</include>
+			
+		</focusedlayout>
+		
+	</include>
+	
+	
+
+		<include name="Common_AltHome_Panel5">
+	
+		<posx>475</posx>
+		<posy>57</posy>
+		<width>480</width>
+		<height>240</height>
+		<viewtype label="535">list</viewtype>
+		<scrolltime tween="cubic" easing="out">600</scrolltime>
+		<orientation>horizontal</orientation>
+		<preloaditems>2</preloaditems>
+		
+		<itemlayout width="120" height="120">
+		
+			<control type="image">
+			
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>100</width>
+				<height>100</height>
+				<texture>colors/color_keyboard_dark.png</texture>
+				
+			</control>
+			
+			<control type="image">
+			
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>100</width>
+				<height>100</height>
+				<texture>$INFO[ListItem.Thumb]</texture>
+				<aspectratio>scale</aspectratio>
+				
+			</control>
+			
+			<include>Common_AltHome_Label</include>
+
+		</itemlayout>
+
+		<focusedlayout width="120" height="120">
+		
+			<control type="image">
+			
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>100</width>
+				<height>100</height>
+				<texture>colors/color_white.png</texture>
+				<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+				
+			</control>
+			
+			<control type="image">
+			
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>100</width>
+				<height>100</height>
+				<texture>$INFO[ListItem.Thumb]</texture>
+				<aspectratio>scale</aspectratio>
+				
+			</control>
+			
+			<control type="image">
+			
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>100</width>
+				<height>100</height>
+				<texture border="6">button_unfocus.png</texture>
+				<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+				
+				<visible>Control.HasFocus(7005)</visible>
+				
+			</control>
+			
+			<include>Common_AltHome_Label</include>
+			
+		</focusedlayout>
+		
+	</include>
+
+	<include name="Common_AltHome_Panel2">
+	
+		<posx>6</posx>
+		<posy>300</posy>
+		<width>1250</width>
+		<height>240</height>
+		<viewtype label="535">list</viewtype>
+		<scrolltime tween="cubic" easing="out">600</scrolltime>
+		<orientation>horizontal</orientation>
+		<preloaditems>2</preloaditems>
+		
+		<itemlayout width="120" height="120">
+		
+			<control type="image">
+			
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>100</width>
+				<height>100</height>
+				<texture>colors/color_keyboard_dark.png</texture>
+				
+			</control>
+			
+			<control type="image">
+			
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>100</width>
+				<height>100</height>
+				<texture>$INFO[ListItem.Thumb]</texture>
+				<aspectratio>scale</aspectratio>
+				
+			</control>
+			
+
+
+		</itemlayout>
+
+		<focusedlayout width="120" height="120">
+		
+			<control type="image">
+			
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>100</width>
+				<height>100</height>
+				<texture>colors/color_white.png</texture>
+				<colordiffuse>Background_pins</colordiffuse>
+				
+			</control>
+			
+			<control type="image">
+			
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>100</width>
+				<height>100</height>
+				<texture>$INFO[ListItem.Thumb]</texture>
+				<aspectratio>scale</aspectratio>
+				
+			</control>
+			
+			<control type="image">
+			
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>100</width>
+				<height>100</height>
+				<texture border="6">button_unfocus.png</texture>
+				<colordiffuse>Background_pins</colordiffuse>
+				
+				<visible>Control.HasFocus(7005)</visible>
+				
+			</control>
+			
+
+			
+		</focusedlayout>
+		
+	</include>
+	
+	<include name="Common_AltHome_Panel3">
+		<posx>130</posx>
+		<posy>510</posy>
+								<width>568</width>
+								<height>137</height>
+		<viewtype label="535">list</viewtype>
+		<scrolltime tween="cubic" easing="out">600</scrolltime>
+		<orientation>vertical</orientation>
+		<preloaditems>2</preloaditems>
+		
+		<itemlayout width="135" height="120">
+		
+			<control type="image">
+			
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>100</width>
+				<height>100</height>
+				<texture>colors/color_keyboard_darkerse.png</texture>
+				
+			</control>
+			
+			<control type="image">
+			
+				<posx>0</posx>
+				<posy>-7</posy>
+				<width>100</width>
+				<height>100</height>
+				<texture>1qaz.png</texture>
+				<aspectratio>scale</aspectratio>
+				
+			</control>
+			
+
+
+		</itemlayout>
+
+		<focusedlayout width="135" height="120">
+		
+			<control type="image">
+			
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>100</width>
+				<height>100</height>
+				<texture>colors/color_whitesert.png</texture>
+
+				
+			</control>
+			
+			<control type="image">
+			
+				<posx>0</posx>
+				<posy>-7</posy>
+				<width>100</width>
+				<height>100</height>
+				<texture>qazsa.jpg</texture>
+				<aspectratio>scale</aspectratio>
+				
+			</control>
+			
+			<control type="image">
+			
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>100</width>
+				<height>100</height>
+				<texture border="6">button_unfocuserser.png</texture>
+
+				
+				<visible>Control.HasFocus(7005)</visible>
+				
+			</control>
+			
+
+			
+		</focusedlayout>
+		
+	</include>
+	
+	
+		<include name="Common_AltHome_Panel57">
+		<posx>0</posx>
+		<posy>0</posy>
+								<width>0</width>
+								<height>0</height>
+		<viewtype label="535">list</viewtype>
+		<scrolltime tween="cubic" easing="out">600</scrolltime>
+		<orientation>vertical</orientation>
+		<preloaditems>2</preloaditems>
+		
+		<itemlayout width="135" height="120">
+		
+			<control type="image">
+			
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>100</width>
+				<height>100</height>
+				<texture>colors/color_keyboard_darkerse.png</texture>
+				
+			</control>
+			
+			<control type="image">
+			
+				<posx>0</posx>
+				<posy>-7</posy>
+				<width>100</width>
+				<height>100</height>
+				<texture>1qaz.png</texture>
+				<aspectratio>scale</aspectratio>
+				
+			</control>
+			
+
+
+		</itemlayout>
+
+		<focusedlayout width="135" height="120">
+		
+			<control type="image">
+			
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>100</width>
+				<height>100</height>
+				<texture>colors/color_whitesert.png</texture>
+
+				
+			</control>
+			
+			<control type="image">
+			
+				<posx>0</posx>
+				<posy>-7</posy>
+				<width>100</width>
+				<height>100</height>
+				<texture>qazsa.jpg</texture>
+				<aspectratio>scale</aspectratio>
+				
+			</control>
+			
+			<control type="image">
+			
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>100</width>
+				<height>100</height>
+				<texture border="6">button_unfocuserser.png</texture>
+
+				
+				<visible>Control.HasFocus(7005)</visible>
+				
+			</control>
+			
+
+			
+		</focusedlayout>
+		
+	</include>
+	
+		<include name="Common_AltHome_hideme">
+	
+								<posx>840</posx>
+								<posy>168</posy>
+								<width>500</width>
+								<height>800</height>
+		<viewtype label="535">list</viewtype>
+		<scrolltime tween="cubic" easing="out">600</scrolltime>
+		<orientation>horizontal</orientation>
+		<preloaditems>2</preloaditems>
+		
+		<itemlayout width="300" height="165">
+		
+			<control type="image">
+			
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>100</width>
+				<height>100</height>
+				<texture>colors/color_keyboard_darkerse.png</texture>
+				
+			</control>
+			
+			<control type="image">
+			
+				<posx>0</posx>
+				<posy>-7</posy>
+				<width>100</width>
+				<height>100</height>
+				<texture>1qaz.png</texture>
+				<aspectratio>scale</aspectratio>
+				
+			</control>
+			
+
+
+		</itemlayout>
+
+		<focusedlayout width="300" height="165">
+		
+			<control type="image">
+			
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>100</width>
+				<height>100</height>
+				<texture>colors/color_whitesert.png</texture>
+
+				
+			</control>
+			
+			<control type="image">
+			
+				<posx>0</posx>
+				<posy>-7</posy>
+				<width>100</width>
+				<height>100</height>
+				<texture>qazsa.jpg</texture>
+				<aspectratio>scale</aspectratio>
+				
+			</control>
+			
+			<control type="image">
+			
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>100</width>
+				<height>100</height>
+				<texture border="6">button_unfocuserser.png</texture>
+
+
+				
+			</control>
+			
+
+			
+		</focusedlayout>
+		
+	</include>
+	
+	<include name="Common_AltHome_Thumb">
+	
+		<control type="image">
+							
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>220</width>
+			<height>220</height>
+			<texture>$INFO[ListItem.Thumb]</texture>
+			
+		</control>
+		
+	</include>	
+	
+	<include name="Common_AltHome_Vertical_Label">
+	
+		<posx>0</posx>
+		<posy>60</posy>
+		<width>600</width>
+		<height>30</height>
+		<font>Home-Alt-Vertical</font>
+		<textcolor>Label_Normal</textcolor>
+		<aligny>top</aligny>
+		<wrapmultiline>true</wrapmultiline>
+		<scrollspeed>0</scrollspeed>
+		<angle>-90</angle>
+		
+	</include>	
+	
+	<include name="Common_AppBar_Button">
+	
+		<width>48</width>
+		<height>48</height>
+		<font>Appbar-Label-Small</font>
+		<textcolor>Label_Normal</textcolor>
+		<focusedcolor>Label_Normal</focusedcolor>
+		<disabledcolor>Label_Disabled</disabledcolor>
+		<align>center</align>
+		<aligny>top</aligny>
+		<textoffsetx>-4</textoffsetx>
+		<textoffsety>54</textoffsety>
+		<wrapmultiline>true</wrapmultiline>
+		<onclick>Skin.Reset(ShowAppBar)</onclick>
+		<onup>SetFocus(50)</onup>
+		
+	</include>
+<include name="Common_AppBar_Button5">
+	
+		<width>75</width>
+		<height>75</height>
+		<font>Appbar-Label-Small</font>
+		<textcolor>Label_Normal</textcolor>
+		<focusedcolor>Label_Normal</focusedcolor>
+		<disabledcolor>Label_Disabled</disabledcolor>
+		<align>center</align>
+		<aligny>top</aligny>
+		<textoffsetx>-4</textoffsetx>
+		<textoffsety>43</textoffsety>
+		<wrapmultiline>true</wrapmultiline>
+		<onclick>Skin.Reset(ShowAppBar)</onclick>
+		<onup>SetFocus(50)</onup>
+		
+	</include>
+	
+		<include name="Common_AppBar_Button50">
+	
+		<width>45</width>
+		<height>45</height>
+		<font>Appbar-Label-Small</font>
+		<textcolor>Label_Normal</textcolor>
+		<focusedcolor>Label_Normal</focusedcolor>
+		<disabledcolor>Label_Disabled</disabledcolor>
+		<align>center</align>
+		<aligny>top</aligny>
+		<textoffsetx>-4</textoffsetx>
+		<textoffsety>43</textoffsety>
+		<wrapmultiline>true</wrapmultiline>
+		<onclick>Skin.Reset(ShowAppBar)</onclick>
+		<onup>SetFocus(50)</onup>
+		
+	</include>
+			<include name="Common_AppBar_Button6">
+	
+		<width>87</width>
+		<height>87</height>
+		<font>Appbar-Label-Small</font>
+		<textcolor>Label_Normal</textcolor>
+		<focusedcolor>Label_Normal</focusedcolor>
+		<disabledcolor>Label_Disabled</disabledcolor>
+		<align>center</align>
+		<aligny>top</aligny>
+		<textoffsetx>-4</textoffsetx>
+		<textoffsety>49</textoffsety>
+		<wrapmultiline>true</wrapmultiline>
+		<onclick>Skin.Reset(ShowAppBar)</onclick>
+		<onup>SetFocus(50)</onup>
+		
+	</include>
+	
+	<include name="Common_AppBar_AutoUpdate">
+	
+		<control type="radiobutton" id="5">
+			
+			<include>Common_AppBar_Button</include>
+			<texturefocus>appbar/appbar_autoupdate_focus.png</texturefocus>
+			<texturenofocus>appbar/appbar_autoupdate.png</texturenofocus>
+			<textureradioon>appbar/appbar_radioon.png</textureradioon>
+			<textureradiooff>-</textureradiooff>
+			<radiowidth>48</radiowidth>
+			<radioheight>48</radioheight>
+			<radioposx>6</radioposx>
+			<label>auto[CR]update</label>
+			
+		</control>
+		
+	</include>	
+	
+	<include name="Common_AppBar_Divider">
+	
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>2</width>
+		<height>48</height>
+		<texture>colors/color_white.png</texture>
+
+	</include>
+	
+	<include name="Common_AppBar_Files">
+	
+		<control type="button" id="5">
+			
+			<include>Common_AppBar_Button</include>
+			<texturefocus>appbar/appbar_files_focus.png</texturefocus>
+			<texturenofocus>appbar/appbar_files.png</texturenofocus>
+			<label>file[CR]mode</label>
+			
+		</control>
+		
+	</include>
+	
+	<include name="Common_AppBar_Filter">
+	
+		<control type="radiobutton" id="5119">
+			
+			<include>Common_AppBar_Button</include>
+			<texturefocus>appbar/appbar_filter_focus.png</texturefocus>
+			<texturenofocus>appbar/appbar_filter.png</texturenofocus>
+			<textureradioon>appbar/appbar_radioon.png</textureradioon>
+			<textureradiooff>-</textureradiooff>
+			<selected>Container.Filtered</selected>
+			<radiowidth>48</radiowidth>
+			<radioheight>48</radioheight>
+			<radioposx>6</radioposx>
+			<label>smart[CR]filter</label>
+			<onclick>SetFocus(50)</onclick>
+			<onclick>Filter</onclick>
+			
+		</control>
+		
+	</include>
+	
+	<include name="Common_AppBar_Flatten">
+	
+		<control type="button" id="17">
+			
+			<include>Common_AppBar_Button</include>
+			<texturefocus>appbar/appbar_flatten_focus.png</texturefocus>
+			<texturenofocus>appbar/appbar_flatten.png</texturenofocus>
+			<radiowidth>48</radiowidth>
+			<radioheight>48</radioheight>
+			<radioposx>6</radioposx>
+			<label>flatten</label>
+			
+		</control>
+		
+	</include>
+	
+	<include name="Common_AppBar_LanguageFilter">
+	
+		<control type="radiobutton" id="7">
+			
+			<include>Common_AppBar_Button</include>
+			<texturefocus>appbar/appbar_languages_focus.png</texturefocus>
+			<texturenofocus>appbar/appbar_languages.png</texturenofocus>
+			<textureradioon>appbar/appbar_radioon.png</textureradioon>
+			<textureradiooff>-</textureradiooff>
+			<radiowidth>48</radiowidth>
+			<radioheight>48</radioheight>
+			<radioposx>6</radioposx>
+			<label>hide[CR]foriegn</label>
+			
+		</control>
+		
+	</include>
+	
+	<include name="Common_AppBar_Notifications">
+	
+		<control type="radiobutton" id="6">
+			
+			<include>Common_AppBar_Button</include>
+			<texturefocus>appbar/appbar_notifications_focus.png</texturefocus>
+			<texturenofocus>appbar/appbar_notifications.png</texturenofocus>
+			<textureradioon>appbar/appbar_radioon.png</textureradioon>
+			<textureradiooff>-</textureradiooff>
+			<radiowidth>48</radiowidth>
+			<radioheight>48</radioheight>
+			<radioposx>6</radioposx>
+			<label>notify[CR]me</label>
+			
+		</control>
+		
+	</include>
+	
+	<include name="Common_AppBar_PartyMode">
+	
+		<control type="button" id="16">
+			
+			<include>Common_AppBar_Button</include>
+			<texturefocus>appbar/appbar_partymode_focus.png</texturefocus>
+			<texturenofocus>appbar/appbar_partymode.png</texturenofocus>
+			<label>589</label>
+			<visible>Container.Content(musicvideos)</visible>
+			
+		</control>
+		
+	</include>
+	
+	<include name="Common_AppBar_RandomizeSlideshow">
+	
+		<control type="radiobutton" id="9">
+			
+			<include>Common_AppBar_Button</include>
+			<texturefocus>appbar/appbar_random_focus.png</texturefocus>
+			<texturenofocus>appbar/appbar_random.png</texturenofocus>
+			<textureradioon>appbar/appbar_radioon.png</textureradioon>
+			<textureradiooff>-</textureradiooff>
+			<radiowidth>48</radiowidth>
+			<radioheight>48</radioheight>
+			<radioposx>6</radioposx>
+			<label>random[CR]slideshow</label>
+			
+		</control>
+		
+	</include>
+	
+	<include name="Common_AppBar_Record">
+	
+		<control type="button" id="10">
+			
+			<include>Common_AppBar_Button</include>
+			<texturefocus>appbar/appbar_record_focus.png</texturefocus>
+			<texturenofocus>appbar/appbar_record.png</texturenofocus>
+			<label>record</label>
+			<visible>Control.IsEnabled(10)</visible>
+			
+		</control>
+		
+	</include>
+	
+	<include name="Common_AppBar_RipCD">
+	
+		<control type="button" id="11">
+			
+			<include>Common_AppBar_Button</include>
+			<texturefocus>appbar/appbar_ripcd_focus.png</texturefocus>
+			<texturenofocus>appbar/appbar_ripcd.png</texturenofocus>
+			<label>rip cd</label>
+			<visible>Control.IsEnabled(11)</visible>
+			
+		</control>
+		
+	</include>
+	
+	<include name="Common_AppBar_ScanToLibrary">
+	
+		<control type="button" id="9">
+			
+			<include>Common_AppBar_Button</include>
+			<texturefocus>appbar/appbar_scantolibrary_focus.png</texturefocus>
+			<texturenofocus>appbar/appbar_scantolibrary.png</texturenofocus>
+			<label>scan to[CR]library</label>
+			
+		</control>
+		
+	</include>
+
+	<include name="Common_AppBar_Search">
+	
+		<control type="button" id="8">
+			
+			<include>Common_AppBar_Button</include>
+			<texturefocus>appbar/appbar_search_focus.png</texturefocus>
+			<texturenofocus>appbar/appbar_search.png</texturenofocus>
+			<label>search</label>
+			
+		</control>
+		
+	</include>
+	
+	<include name="Common_AppBar_Slideshow">
+	
+		<control type="button" id="6">
+			
+			<include>Common_AppBar_Button</include>
+			<texturefocus>appbar/appbar_carousel_focus.png</texturefocus>
+			<texturenofocus>appbar/appbar_carousel.png</texturenofocus>
+			<label>start[CR]slideshow</label>
+			<visible>!ListItem.IsFolder</visible>
+			
+		</control>
+		
+	</include>
+	
+	<include name="Common_AppBar_Slideshow_Recursive">
+	
+		<control type="button" id="7">
+			
+			<include>Common_AppBar_Button</include>
+			<texturefocus>appbar/appbar_carousel_focus.png</texturefocus>
+			<texturenofocus>appbar/appbar_carousel.png</texturenofocus>
+			<label>start[CR]slideshow</label>
+			<visible>ListItem.IsFolder</visible>
+			
+		</control>
+		
+	</include>
+	
+	<include name="Common_AppBar_SortBy">
+	
+		<control type="button" id="9149">
+
+			<include>Common_AppBar_Button</include>
+			<texturefocus>appbar/appbar_sort_focus.png</texturefocus>
+			<texturenofocus>appbar/appbar_sort.png</texturenofocus>
+			<label>sort by:[CR]$INFO[Container.SortMethod]</label>
+			<onclick>Container.NextSortMethod</onclick>
+			
+		</control>	
+		
+	</include>
+
+	<include name="Common_AppBar_SortDirection">
+	
+		<control type="togglebutton" id="4">
+			
+			<include>Common_AppBar_Button</include>
+			<label>sort[CR]direction</label>
+			<altlabel>sort[CR]direction</altlabel>
+			<texturefocus>appbar/appbar_sortascending_focus.png</texturefocus>
+			<texturenofocus>appbar/appbar_sortascending.png</texturenofocus>
+			<alttexturefocus>appbar/appbar_sortdescending_focus.png</alttexturefocus>
+			<alttexturenofocus>appbar/appbar_sortdescending.png</alttexturenofocus>
+			<colordiffuse>$VAR[Appbar_SortDirection_ColorDiffuse]</colordiffuse>
+			
+		</control>
+		
+	</include>
+	
+	<include name="Common_AppBar_Stack">
+	
+		<control type="button" id="7">
+			
+			<include>Common_AppBar_Button</include>
+			<texturefocus>appbar/appbar_stack_focus.png</texturefocus>
+			<texturenofocus>appbar/appbar_stack.png</texturenofocus>
+			<label>stack[CR]files</label>
+			<visible>Control.IsEnabled(7)</visible>
+			
+		</control>
+		
+	</include>
+	
+	<include name="Common_AppBar_ToggleWatched">
+	
+		<control type="button" id="14">
+			
+			<include>Common_AppBar_Button</include>
+			<texturefocus>appbar/appbar_watched_focus.png</texturefocus>
+			<texturenofocus>appbar/appbar_watched.png</texturenofocus>
+			<label>toggle[CR]watched</label>
+			
+		</control>
+		
+	</include>
+	
+	<include name="Common_AppBar_UnlockShares">
+	
+		<control type="button" id="11">
+			
+			<include>Common_AppBar_Button</include>
+			<texturefocus>appbar/appbar_unlock_focus.png</texturefocus>
+			<texturenofocus>appbar/appbar_unlock.png</texturenofocus>
+			<label>unlock[CR]shares</label>
+			<visible>System.HasLocks</visible>
+			<onclick>Xbmc.MasterMode</onclick>
+			
+		</control>
+		
+	</include>
+	
+	<include name="Common_AppBar_View_Banner">
+			
+		<include>Common_AppBar_Button</include>
+		<texturefocus>appbar/appbar_banner_focus.png</texturefocus>
+		<texturenofocus>appbar/appbar_banner.png</texturenofocus>
+		<label>view:[CR]banner</label>
+		<onclick>Container.SetViewMode(501)</onclick>
+		
+	</include>
+	
+	<include name="Common_AppBar_View_Details">
+			
+		<include>Common_AppBar_Button</include>
+		<texturefocus>appbar/appbar_details_focus.png</texturefocus>
+		<texturenofocus>appbar/appbar_details.png</texturenofocus>
+		<label>view:[CR]details</label>
+		<onclick>Container.SetViewMode(59)</onclick>
+		
+	</include>
+	
+	<include name="Common_AppBar_View_Extended">
+	
+		<include>Common_AppBar_Button</include>
+		<texturefocus>appbar/appbar_extended_focus.png</texturefocus>
+		<texturenofocus>appbar/appbar_extended.png</texturenofocus>
+		<label>view:[CR]extended</label>
+		<onclick>Container.SetViewMode(53)</onclick>
+		
+	</include>
+	
+	<include name="Common_AppBar_View_ExtendedSqaure">
+	
+		<include>Common_AppBar_Button</include>
+		<texturefocus>appbar/appbar_extended_focus.png</texturefocus>
+		<texturenofocus>appbar/appbar_extended.png</texturenofocus>
+		<label>view:[CR]extended</label>
+		<onclick>Container.SetViewMode(58)</onclick>
+		
+	</include>
+	
+	<include name="Common_AppBar_View_Grid">
+	
+		<include>Common_AppBar_Button</include>
+		<texturefocus>appbar/appbar_grid_focus.png</texturefocus>
+		<texturenofocus>appbar/appbar_grid.png</texturenofocus>
+		<label>view:[CR]grid</label>
+		<onclick>Container.SetViewMode(55)</onclick>
+		
+	</include>
+	
+	<include name="Common_AppBar_View_GridEpisode">
+	
+		<include>Common_AppBar_Button</include>
+		<texturefocus>appbar/appbar_grid_focus.png</texturefocus>
+		<texturenofocus>appbar/appbar_grid.png</texturenofocus>
+		<label>view:[CR]grid</label>
+		<onclick>Container.SetViewMode(56)</onclick>
+		
+	</include>
+	
+	<include name="Common_AppBar_View_List">
+	
+		<include>Common_AppBar_Button</include>
+		<texturefocus>appbar/appbar_list_focus.png</texturefocus>
+		<texturenofocus>appbar/appbar_list.png</texturenofocus>
+		<label>view:[CR]list</label>
+		<onclick>Container.SetViewMode(50)</onclick>
+		
+	</include>
+	
+	<include name="Common_AppBar_View_Poster">
+	
+		<include>Common_AppBar_Button</include>
+		<texturefocus>appbar/appbar_poster_focus.png</texturefocus>
+		<texturenofocus>appbar/appbar_poster.png</texturenofocus>
+		<label>view:[CR]posters</label>
+		<onclick>Container.SetViewMode(51)</onclick>
+	
+	</include>
+	
+	<include name="Common_AppBar_View_Square">
+			
+		<include>Common_AppBar_Button</include>
+		<texturefocus>appbar/appbar_square_focus.png</texturefocus>
+		<texturenofocus>appbar/appbar_square.png</texturenofocus>
+		<label>view:[CR]square</label>
+		<onclick>Container.SetViewMode(54)</onclick>
+		
+	</include>
+	
+	<include name="Common_AppBar_View_Tall">
+	
+		<include>Common_AppBar_Button</include>
+		<texturefocus>appbar/appbar_tall_focus.png</texturefocus>
+		<texturenofocus>appbar/appbar_tall.png</texturenofocus>
+		<label>view:[CR]tall</label>
+		<onclick>Container.SetViewMode(57)</onclick>
+	
+	</include>
+	
+	<include name="Common_AppBar_View_Thumb">
+	
+		<include>Common_AppBar_Button</include>
+		<texturefocus>appbar/appbar_tile_focus.png</texturefocus>
+		<texturenofocus>appbar/appbar_tile.png</texturenofocus>
+		<label>view:[CR]thumb</label>
+		<onclick>Container.SetViewMode(52)</onclick>
+	
+	</include>
+	
+	<include name="Common_Background">
+
+		<control type="group">
+		
+			<control type="image">
+					
+				<include>Common_Dimensions</include>
+				<texture background="true">colors/color_black.png</texture>
+				
+			</control>
+			
+			<!--Personalization Background-->
+			
+			<control type="group">
+			
+				<visible>!IsEmpty(Skin.String(PersonalizeOverlay)) + StringCompare(Window.Property(xmlfile),Home.xml)</visible>
+			
+				<control type="image">
+					
+					<include>Common_Dimensions</include>
+					<texture background="true">colors/color_white.png</texture>
+					<colordiffuse>Background_Dark</colordiffuse>
+					
+				</control>
+			
+				<control type="image">
+				
+					<include>Common_Dimensions</include>
+					<texture background="true">$VAR[Personalize_Overlay_Image]</texture>
+					<colordiffuse>Background_Normal</colordiffuse>
+					
+				</control>
+				
+				<include>Common_Animation_Window</include>
+				
+			</control>
+			
+			<!--Video Background-->
+			<control type="group">
+			
+				<visible>Player.HasAudio + !Skin.HasSetting(NoBackgroundVisualiser)</visible>
+			
+				<control type="image">
+					
+					<include>Common_Dimensions</include>
+					<texture background="true">colors/color_black.png</texture>
+					
+				</control>
+			
+				<control type="visualisation">
+					<include>Common_Dimensions</include>
+				</control>
+				
+			</control>
+			
+			<!--Video Background-->
+			<control type="group">
+			
+				<visible>Player.HasVideo + !Skin.HasSetting(NoBackgroundVideo)</visible>
+			
+				<control type="image">
+					
+					<include>Common_Dimensions</include>
+					<texture background="true">colors/color_black.png</texture>
+					
+				</control>
+			
+				<control type="videowindow">
+					<include>Common_Dimensions</include>
+				</control>
+				
+			</control>
+			
+			<!--Fanart Background-->
+			<control type="group">
+			
+				<visible>[!Player.HasVideo | [Player.HasVideo + Skin.HasSetting(NoBackgroundVideo)]] + [!Player.HasAudio | [Player.HasAudio + Skin.HasSetting(NoBackgroundVisualiser)]] + Skin.HasSetting(ShowFanartBackground)</visible>
+			
+				<control type="image">
+					
+					<include>Common_Dimensions</include>
+					<fadetime>800</fadetime>
+					<texture background="true">$VAR[Fanart_Image]</texture>
+					
+				</control>
+				
+			</control>
+			
+			<!--Overlay Background-->
+			<control type="image">
+			
+				<include>Common_Dimensions</include>
+				<texture background="true">colors/color_white.png</texture>
+				<colordiffuse>FanartDiffuse</colordiffuse>
+				
+				<visible>!StringCompare(Window.Property(xmlfile),Home.xml) | StringCompare(Window.Property(xmlfile),Home.xml) + [[Player.HasVideo + !Skin.HasSetting(NoBackgroundVideo)] | [Player.HasAudio + !Skin.HasSetting(NoBackgroundVisualiser)]] | IsEmpty(Skin.String(PersonalizeOverlay))</visible>
+				
+			</control>
+			
+		</control>
+		
+	</include>
+	
+	<include name="Common_Background_Fade">
+	
+		<!--Overlay Background-->
+		<control type="image">
+		
+			<include>Common_Dimensions</include>
+			<texture background="true">colors/color_white.png</texture>
+			<colordiffuse>FanartDiffuse</colordiffuse>
+			
+		</control>
+		
+	</include>
+	
+	<include name="Common_Bottom">
+	
+		<control type="grouplist">
+			
+			<posx>60</posx>
+			<posy>20</posy>
+			<width>1160</width>
+			<height>60</height>
+			<orientation>horizontal</orientation>
+			<itemgap>40</itemgap>
+		
+			<control type="label">
+		
+				<width min="0" max="200">auto</width>
+				<height>60</height>
+				<label>$INFO[Container.NumItems,, items]</label>
+				<font>Content-Label</font>
+				<textcolor>Label_Normal</textcolor>
+				<aligny>top</aligny>
+		
+			</control>
+			
+			<control type="label">
+		
+				<width min="0" max="400">auto</width>
+				<height>60</height>
+				<label>[LOWERCASE]$INFO[Container.SortMethod,sort by: ,][/LOWERCASE]</label>
+				<font>Content-Label</font>
+				<textcolor>Label_Normal</textcolor>
+				<aligny>top</aligny>
+		
+			</control>
+		
+		</control>
+		
+	</include>
+
+	<include name="Common_Busy">
+	
+		<!--Overlay Background-->
+		<control type="image">
+		
+			<include>Common_Dimensions</include>
+			<texture background="true">colors/color_white.png</texture>
+			<colordiffuse>FanartDiffuse</colordiffuse>
+			
+			<include>Common_Animation_Window_Dark</include>
+			<visible>!Window.IsVisible(103)</visible>
+		</control>
+		<control type="image">
+		
+			<include>Common_Dimensions</include>
+			<texture>XBOXnew.png</texture>
+		
+			
+			<include>Common_Animation_Window_Dark</include>
+			<visible>Window.IsVisible(103)</visible>
+		</control>
+	
+		<control type="image">
+			
+			<description>Busy animation</description>
+			<posx>616</posx>
+			<posy>339</posy>
+			<width>85</width>
+			<height>85</height>
+			<texture>buffer/buffer_progress.png</texture>
+			<aspectratio>keep</aspectratio>
+			
+			<animation effect="rotate" end="-360" center="auto" time="1200" loop="true" condition="true">Conditional</animation>
+			
+		</control>
+		
+	</include>
+	
+
+	
+	<include name="Common_Content_Grouplist2">
+	
+
+			<posx>0</posx>
+		<posy>0</posy>
+		<width>1280</width>
+		<height>720</height>
+		<scrolltime tween="Cubic" easing="out">600</scrolltime>
+		<pagecontrol>9010</pagecontrol>
+		<itemgap>-43</itemgap>
+		<orientation>horizontal</orientation>
+
+	</include>
+	<include name="Common_Content_Grouplist8">
+	
+
+			<posx>0</posx>
+		<posy>0</posy>
+		<width>1280</width>
+		<height>720</height>
+		<scrolltime tween="Cubic" easing="out">450</scrolltime>
+		<pagecontrol>9010</pagecontrol>
+		<itemgap>-140</itemgap>
+		<orientation>horizontal</orientation>
+
+	</include>
+	<include name="Common_Content_Grouplist">
+	
+		<posx>60</posx>
+		<posy>0</posy>
+		<width>1220</width>
+		<height>600</height>
+		<scrolltime tween="cubic" easing="out">600</scrolltime>
+		<pagecontrol>9010</pagecontrol>
+		<itemgap>60</itemgap>
+		<orientation>horizontal</orientation>
+		
+	</include>
+		<include name="Common_Content_Grouplist_bing">
+	
+		<posx>60</posx>
+		<posy>0</posy>
+		<width>1220</width>
+		<height>600</height>
+		<scrolltime tween="cubic" easing="out">600</scrolltime>
+		<pagecontrol>9010</pagecontrol>
+		<itemgap>80</itemgap>
+		<orientation>vertical</orientation>
+		
+	</include>
+	
+	<include name="Common_Content_Grouplist_profile">
+	
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>1280</width>
+		<height>720</height>
+		<scrolltime tween="cubic" easing="out">600</scrolltime>
+		<pagecontrol>9010</pagecontrol>
+		<itemgap>-400</itemgap>
+		<orientation>horizontal</orientation>
+		
+	</include>
+	<include name="Common_Content_Grouplist_store">
+	
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>1280</width>
+		<height>720</height>
+		<scrolltime tween="cubic" easing="out">600</scrolltime>
+		<pagecontrol>9010</pagecontrol>
+		<itemgap>-100</itemgap>
+		<orientation>horizontal</orientation>
+		
+	</include>
+		<include name="Common_Content_Grouplist_ach">
+	
+		<posx>50</posx>
+		<posy>20</posy>
+		<width>1280</width>
+		<height>720</height>
+		<scrolltime tween="cubic" easing="out">600</scrolltime>
+		<pagecontrol>9010</pagecontrol>
+		<itemgap>-400</itemgap>
+		<orientation>horizontal</orientation>
+		
+	</include>
+	
+	<include name="Common_ContextMenu_Button">
+	
+		<width>330</width>
+		<height>60</height>
+		<texturefocus>colors/tile/texturefocus.png</texturefocus>
+		<texturenofocus>-</texturenofocus>
+	
+		<font>Menu-Similar-Plot</font>
+		<textcolor>Label_Normal</textcolor>
+		<disabledcolor>Label_Disabled</disabledcolor>
+		<textoffsetx>32</textoffsetx>
+		<align>left</align>
+		<aligny>center</aligny>
+		
+	</include>
+	
+	<include name="Common_ContextMenu_Header">
+	
+		<posx>80</posx>
+		<posy>22</posy>
+		<width>420</width>
+		<height>32</height>
+		<font>Settings-Menu-Header</font>
+		<textcolor>Label_Normal</textcolor>
+		<aligny>top</aligny>
+		
+	</include>
+	<include name="Common_ContextMenu_Header2">
+	
+		<posx>80</posx>
+		<posy>22</posy>
+		<width>240</width>
+		<height>32</height>
+		<font>Settings-Menu-Header</font>
+		<textcolor>Label_Normal</textcolor>
+		<aligny>top</aligny>
+		
+	</include>
+
+	<include name="Common_ContextMenu_Header_Back">
+	
+		<control type="button">
+					
+			<posx>30</posx>
+			<posy>32</posy>
+			<width>32</width>
+			<height>32</height>
+			<texturefocus aligny="center">breadcrumb/breadcrumb_backarrow_focus.png</texturefocus>
+			<texturenofocus aligny="center">breadcrumb/breadcrumb_backarrow.png</texturenofocus>
+			<aspectratio>keep</aspectratio>
+			<colordiffuse>Label_Normal</colordiffuse>
+			<onclick>back</onclick>
+			
+		</control>
+		
+	</include>
+	
+	<include name="Common_Control_Button">
+	
+		<width>60</width>
+		<height>60</height>
+		<texturefocus>colors/color_white.png</texturefocus>
+		<texturenofocus>colors/color_keyboard_dark.png</texturenofocus>
+		<alttexturefocus>colors/color_white.png</alttexturefocus>
+		<alttexturenofocus>colors/color_keyboard_dark.png</alttexturenofocus>
+		<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+		<disabledcolor>Label_Disabled</disabledcolor>
+		<textcolor>00FFFFFF</textcolor>
+		<visible allowhiddenfocus="true">true</visible>
+		
+	</include>
+
+	<include name="Common_Control_Image">	
+	
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>60</width>
+		<height>60</height>
+		<aspectratio>scale</aspectratio>
+	
+	</include>
+	
+	<include name="Common_Control_Label">	
+	
+		<posx>80</posx>
+		<posy>0</posy>
+		<width min="20" max="320">auto</width>
+		<height>60</height>
+		<font>Menu-Scroll</font>
+		<textcolor>Settings_Label</textcolor>
+		<disabledcolor>Label_Disabled</disabledcolor>
+		<aligny>center</aligny>
+		<wrapmultiline>true</wrapmultiline>
+		<scrollspeed>0</scrollspeed>
+	
+	</include>
+		<include name="Common_Control_LightLabel">	
+	
+		<posx>80</posx>
+		<posy>0</posy>
+		<width min="20" max="320">auto</width>
+		<height>60</height>
+		<font>Menu-Scroll</font>
+		<textcolor>ffffffff</textcolor>
+		<disabledcolor>Label_Disabled</disabledcolor>
+		<aligny>center</aligny>
+		<wrapmultiline>true</wrapmultiline>
+		<scrollspeed>0</scrollspeed>
+	
+	</include>
+	
+
+	
+	<include name="Common_Dialog_Grouplist">
+	
+		<include>Common_Animation_Dialog</include>
+
+		<control type="image">
+			
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>300</height>
+			<texture>colors/eeh.png</texture>
+		
+			
+		</control>
+	
+		<control type="grouplist">
+			
+			<posx>300</posx>
+			<posy>20</posy>
+			<width>880</width>
+			<itemgap>10</itemgap>
+			<orientation>vertical</orientation>
+			
+			<control type="label" id="1">
+				
+				<description>Heading</description>
+				<posx>200</posx>
+				<label>-</label>
+				<width>590</width>
+				<font>Dialog-Header</font>
+				
+			</control>
+
+			<control type="label" id="2">
+				
+				<description>Line 1</description>
+				<posx>200</posx>
+				<posy>72</posy>
+				<width>590</width>
+				<height>20</height>
+				<label>-</label>
+				<font>Dialog-Detail</font>
+				<visible>!IsEmpty(Control.GetLabel(2))</visible>
+				
+			</control>
+
+			<control type="label" id="3">
+				
+				<description>Line 2</description>
+				<posx>200</posx>
+				<posy>104</posy>
+				<width>590</width>
+				<height>20</height>
+				<label>-</label>
+				<font>Dialog-Detail</font>
+				<visible>!IsEmpty(Control.GetLabel(3))</visible>
+				
+			</control>
+
+			<control type="label" id="4">
+
+				<description>Line 3</description>
+				<posx>200</posx>
+				<posy>136</posy>
+				<width>590</width>
+				<height>20</height>
+				<label>-</label>
+				<font>Dialog-Detail</font>
+				<visible>!IsEmpty(Control.GetLabel(4))</visible>
+				
+			</control>
+			
+		</control>
+			
+	</include>
+	
+	<include name="Common_Dimensions">
+		
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>1280</width>
+		<height>720</height>
+		
+	</include>
+	
+	<include name="Common_ForumBrowser_Background">
+	
+		<control type="image">
+		
+			<include>Common_Dimensions</include>
+			<texture background="true">colors/color_white.png</texture>
+			<colordiffuse>Settings_Background_Light</colordiffuse>
+			
+		</control>
+		
+		<control type="image">
+		
+			<include>Common_Dimensions</include>
+			<texture background="true">forumbrowser/forumbrowser_background.png</texture>
+			<colordiffuse>AAe6e6e6</colordiffuse>
+			
+		</control>
+		
+		<control type="image" id="8001">
+				
+			<posx>1208</posx>
+			<posy>680</posy>
+			<width>72</width>
+			<height>116</height>
+			<texture>appbar/appbar_overflowdots.png</texture>
+			<aspectratio aligny="top">center</aspectratio>
+			<colordiffuse>Settings_Menu_Normal</colordiffuse>
+			
+		</control>
+		
+	</include>
+	
+	<include name="Common_ForumBrowser_Breadcrumb">
+	
+		<control type="image">
+		
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>100</height>
+			<texture background="true">colors/color_white.png</texture>
+			<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+			
+		</control>
+			
+		<control type="group">
+		
+			<posx>60</posx>
+			<posy>20</posy>
+			<width>1280</width>
+			<height>100</height>
+			
+			<control type="button">
+					
+				<posy>12</posy>
+				<width>48</width>
+				<height>48</height>
+				<texturefocus aligny="center">breadcrumb/breadcrumb_backarrow_focus.png</texturefocus>
+				<texturenofocus aligny="center">breadcrumb/breadcrumb_backarrow.png</texturenofocus>
+				<aspectratio>keep</aspectratio>
+				<colordiffuse>Label_Normal</colordiffuse>
+				<onclick>back</onclick>
+				
+			</control>
+			
+			<control type="label" id="104">
+
+				<description>Location Label</description>
+				<posx>70</posx>
+				<posy>6</posy>
+				<width>1200</width>
+				<height>20</height>
+				<label>-</label>
+				<font>Pivot-Small</font>
+				<textcolor>Label_Normal</textcolor>
+				<aligny>top</aligny>
+				
+			</control>
+			
+			<control type="grouplist">
+			
+				<posx>68</posx>
+				<posy>28</posy>
+				<width>1200</width>
+				<height>40</height>
+				<orientation>horizontal</orientation>
+				<itemgap>10</itemgap>
+				
+				<control type="label">
+				
+					<width min="10" max="200">auto</width>
+					<height>30</height>
+					<label>$VAR[ForumBrowser_Breadcrumb_Label1]</label>
+					<font>Pivot-Large</font>
+					<textcolor>Label_Normal</textcolor>
+					
+				</control>	
+				
+				<control type="label">
+				
+					<width min="10" max="200">auto</width>
+					<height>30</height>
+					<label>$VAR[ForumBrowser_Breadcrumb_Label2]</label>
+					<font>Pivot-Large</font>
+					<textcolor>White_60</textcolor>
+					
+				</control>
+				
+				<control type="label">
+				
+					<width min="10" max="200">auto</width>
+					<height>30</height>
+					<label>$VAR[ForumBrowser_Breadcrumb_Label3]</label>
+					<font>Pivot-Large</font>
+					<textcolor>White_60</textcolor>
+					
+				</control>
+				
+			</control>
+			
+		</control>
+		
+	</include>	
+	
+	<include name="Common_InfoDialog_Button">
+	
+		<width>100</width>
+		<height>40</height>
+		<texturefocus border="6">button_focus.png</texturefocus>
+		<texturenofocus border="6">button_unfocus.png</texturenofocus>
+		<font>DialogInfo-Header</font>
+		<textcolor>Label_Normal</textcolor>
+		<focusedcolor>black</focusedcolor>
+		<disabledcolor>Label_Disabled</disabledcolor>
+		<colordiffuse>white</colordiffuse>
+		<textoffsetx>0</textoffsetx>
+		<textoffsety>6</textoffsety>
+		<align>center</align>
+		<aligny>top</aligny>
+	
+	</include>
+	
+	<include name="Common_InfoDialog_ControlOptions_Button">
+	
+		<posy>20</posy>
+		<width>340</width>
+		<height>40</height>
+		<texturefocus border="6">button_focus.png</texturefocus>
+		<texturenofocus border="6">button_unfocus.png</texturenofocus>
+		<label>control options</label>
+		<font>DialogInfo-Header</font>
+		<textcolor>Label_Normal</textcolor>
+		<focusedcolor>$INFO[Skin.String(gamercolor)]</focusedcolor>
+		<disabledcolor>Label_Disabled</disabledcolor>
+		<colordiffuse>Label_Normal</colordiffuse>
+		<textoffsetx>0</textoffsetx>
+		<textoffsety>6</textoffsety>
+		<align>center</align>
+		<aligny>top</aligny>
+		
+		<visible>System.GetBool(Input.EnableMouse) | Skin.HasSetting(UseTouchInput)</visible>
+		
+	</include>	
+	
+		<include name="Common_InfoDialog_ControlOptions_Button2">
+	
+		<posy>20</posy>
+		<width>340</width>
+		<height>40</height>
+		<texturefocus border="6">button_focus.png</texturefocus>
+		<texturenofocus border="6">button_unfocus.png</texturenofocus>
+		<label>control options</label>
+		<font>DialogInfo-Header</font>
+		<textcolor>ffffffff</textcolor>
+		<focusedcolor>$INFO[Skin.String(gamercolor)]</focusedcolor>
+		<disabledcolor>Label_Disabled</disabledcolor>
+		<colordiffuse>Label_Normal</colordiffuse>
+		<textoffsetx>0</textoffsetx>
+		<textoffsety>6</textoffsety>
+		<align>center</align>
+		<aligny>top</aligny>
+		
+		<visible>System.GetBool(Input.EnableMouse) | Skin.HasSetting(UseTouchInput)</visible>
+		
+	</include>	
+	
+	<include name="Common_InfoDialog_Description">
+	
+		<posx>0</posx>
+		<posy>50</posy>
+		<font>DialogInfo-Label</font>
+		<textcolor>Settings_Label</textcolor>
+		<shadowcolor>00FFFFFF</shadowcolor>
+		<aligny>top</aligny>
+		<wrapmultiline>true</wrapmultiline>
+		<autoscroll>false</autoscroll>
+		<pagecontrol>71</pagecontrol>
+	
+	</include>
+	
+	
+		<include name="Common_tion">
+	
+		<posx>0</posx>
+		<posy>50</posy>
+		<font>DialogInfo-Label</font>
+		<textcolor>ffffffff</textcolor>
+		<shadowcolor>00FFFFFF</shadowcolor>
+		<aligny>top</aligny>
+		<wrapmultiline>true</wrapmultiline>
+		<autoscroll>false</autoscroll>
+		<pagecontrol>71</pagecontrol>
+	
+	</include>
+	
+	<include name="Common_InfoDialog_Header">
+	
+		<width>340</width>
+		<height>32</height>
+		<font>DialogInfo-Header</font>
+		<textcolor>Settings_Header</textcolor>
+		<aligny>top</aligny>
+	
+	</include>
+	
+	<include name="Common_InfoDialog_Header_Small">
+	
+		<width>360</width>
+		<height>24</height>
+		<font>DialogInfo-Header-Small</font>
+		<textcolor>Label_Normal</textcolor>
+	
+	</include>
+	
+	<include name="Common_InfoDialog_Label_Small">
+	
+		<width>360</width>
+		<height>24</height>
+		<font>DialogInfo-Label-Small</font>
+		<textcolor>Label_Normal</textcolor>
+	
+	</include>
+		<include name="Common_InfoDialog_Label_Small2">
+	
+		<width>360</width>
+		<height>24</height>
+		<font>DialogInfo-Label-Small</font>
+		<textcolor>ffffffff</textcolor>
+	
+	</include>
+	
+	<include name="Common_InfoDialog_Detail_Header">
+	
+		<width>340</width>
+		<height>16</height>
+		<font>DialogInfo-Header-Small</font>
+		<textcolor>Label_Dark</textcolor>
+		
+	</include>
+		<include name="Common_InfoDialog_Detail_Header2">
+	
+		<width>340</width>
+		<height>16</height>
+		<font>DialogInfo-Header-Small</font>
+		<textcolor>ffffffff</textcolor>
+		
+	</include>
+	
+	<include name="Common_InfoDialog_Detail_Label">
+	
+		<width>340</width>
+		<height>52</height>
+		<font>DialogInfo-Label-Small</font>
+		<textcolor>Label_Dark</textcolor>
+		<wrapmultiline>true</wrapmultiline>
+		
+	</include>
+		<include name="Common_InfoDialog_Detail_Label2">
+	
+		<width>340</width>
+		<height>52</height>
+		<font>DialogInfo-Label-Small</font>
+	<textcolor>ffffffff</textcolor>
+		<wrapmultiline>true</wrapmultiline>
+		
+	</include>
+	
+	<include name="Common_Keyboard_Button">
+	
+		<width>70</width>
+		<height>60</height>
+				
+		<texturefocus>colors/color_white.png</texturefocus>
+		<texturenofocus>colors/color_keyboard2.png</texturenofocus>
+		<font>Keyboard-Label</font>
+		<textcolor>Label_Normal</textcolor>
+		<focusedcolor>black</focusedcolor>
+		<textoffsetx>0</textoffsetx>
+		<textoffsety>0</textoffsety>
+		<align>center</align>
+		<aligny>center</aligny>
+		
+	</include>
+	
+	<include name="Common_Keyboard_Button_Dark">
+	
+		<height>60</height>
+		<texturefocus>colors/color_white.png</texturefocus>
+		<texturenofocus>colors/color_keyboard_dark2.png</texturenofocus>
+		<alttexturefocus>colors/color_white.png</alttexturefocus>
+		<alttexturenofocus>colors/color_grey.png</alttexturenofocus>
+		<font>Keyboard-Label</font>
+		<textcolor>Label_Normal</textcolor>
+		<focusedcolor>black</focusedcolor>
+		<textoffsetx>0</textoffsetx>
+		<textoffsety>0</textoffsety>
+		<align>center</align>
+		<aligny>center</aligny>
+		
+	</include>
+	
+	<include name="Common_Menu_Button">
+	
+		<width>320</width>
+		<height>60</height>
+		<visible>true</visible>
+		<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+		<texturefocus>colors/color_white.png</texturefocus>
+		<texturenofocus>-</texturenofocus>
+		<label>29</label>
+		<font>Menu-List</font>
+		<textcolor>Label_Normal</textcolor>
+		<disabledcolor>Label_Disabled</disabledcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<textoffsetx>32</textoffsetx>
+		<textoffsety></textoffsety>
+		
+	</include>
+	
+	<include name="Common_Music_SlideLabels">
+	
+		<control type="label">
+			
+			<posx>400</posx>
+			<posy>0</posy>
+			<width min="20" max="4000">auto</width>
+			<height>210</height>
+			<label>[UPPERCASE]$INFO[MusicPlayer.Title][/UPPERCASE]</label>
+			<textcolor>White_30</textcolor>
+			<font>Fullscreen-Slide-Large</font>
+			
+		</control>
+		
+		<control type="label">
+		
+			<posx>400</posx>
+			<posy>200</posy>
+			<width min="20" max="4000">auto</width>
+			<height>50</height>
+			<label>[UPPERCASE]$INFO[MusicPlayer.Album] - $INFO[MusicPlayer.Artist][/UPPERCASE]</label>
+			<textcolor>White_30</textcolor>
+			<font>Fullscreen-Slide-Small</font>
+			
+		</control>
+			
+	</include>
+	
+	<include name="Common_Overlay">
+	
+
+		
+	</include>
+	
+	<include name="Common_Power_Button">
+	
+		<width>128</width>
+		<height>128</height>
+		<texturefocus border="6">button_unfocus.png</texturefocus>
+		<texturenofocus>-</texturenofocus>
+		<alttexturefocus>-</alttexturefocus>
+		<alttexturenofocus>-</alttexturenofocus>
+		<colordiffuse>Label_Normal</colordiffuse>
+		<disabledcolor>Label_Disabled</disabledcolor>
+		<textcolor>00FFFFFF</textcolor>
+		<visible allowhiddenfocus="true">true</visible>
+		
+	</include>
+
+
+	<include name="Common_Power_Image">
+	
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>128</width>
+		<height>128</height>
+		<aspectratio>stretch</aspectratio>
+	
+	</include>
+		<include name="Common_Power_Images2">
+	
+		<posx>3</posx>
+		<posy>3</posy>
+		<width>123</width>
+		<height>123</height>
+		<aspectratio>stretch</aspectratio>
+	
+	</include>
+	
+	<include name="Common_Power_Label">
+	
+		<posx>0</posx>
+		<posy>148</posy>
+		<width>128</width>
+		<height>40</height>
+		<font>Dialog-Detail-Small</font>
+		<textcolor>Label_Normal</textcolor>
+		<disabledcolor>Label_Disabled</disabledcolor>
+		<align>center</align>
+		<aligny>top</aligny>
+		<wrapmultiline>true</wrapmultiline>
+		<scrollspeed>0</scrollspeed>
+	
+	</include>
+	
+	<include name="Common_Progress">
+	
+		<control type="grouplist">
+		
+			<posx>60</posx>
+			<posy>30</posy>
+			<width>1160</width>
+			<height>120</height>
+			<itemgap>0</itemgap>
+			<orientation>vertical</orientation>
+			
+			<control type="textbox">
+				
+				<posx>0</posx>
+				<posy>0</posy>
+				<width min="0" max="1160">auto</width>
+				<height>42</height>
+				<label>[UPPERCASE]$VAR[NowPlaying_First_Label][/UPPERCASE]</label>
+				<textcolor>Label_Normal</textcolor>
+				<font>Fullscreen-Info-Large</font>
+				<aligny>bottom</aligny>
+				<autoscroll>false</autoscroll>
+				
+			</control>
+			
+			<control type="textbox" id="4000">
+				
+				<posx>0</posx>
+				<posy>180</posy>
+				<width min="0" max="1160">auto</width>
+				<height>26</height>
+				<label>[UPPERCASE]$VAR[NowPlaying_Second_Label][/UPPERCASE]</label>
+				<textcolor>Label_Normal</textcolor>
+				<font>Fullscreen-Info</font>
+				<aligny>top</aligny>
+				<autoscroll>false</autoscroll>
+				
+			</control>
+			
+		</control>	
+		
+		<control type="group">
+		
+			<posx>60</posx>
+			<posy>120</posy>
+			<width>1160</width>
+			
+			<!--Current Time-->
+			<control type="label">
+			
+				<posx>0</posx>
+				<posy>0</posy>
+				<width min="20" max="1160">auto</width>
+				<height>40</height>
+				<label>$INFO[Player.Time]</label>
+				<textcolor>Label_Normal</textcolor>
+				<font>Fullscreen-Info-Small</font>
+			
+			</control>
+			
+			<control type="label">
+					
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1160</width>
+				<height>40</height>
+				<label>$INFO[Player.FinishTime,FINISHES AT ,]</label>
+				<textcolor>Label_Normal</textcolor>
+				<font>Fullscreen-Info-Small</font>
+				<align>center</align>
+				
+			</control>
+			
+			<!--Total Time-->
+			<control type="label">
+			
+				<posx>1160</posx>
+				<posy>0</posy>
+				<width>300</width>
+				<height>40</height>
+				<label>$INFO[Player.Duration]</label>
+				<textcolor>Label_Normal</textcolor>
+				<font>Fullscreen-Info-Small</font>
+				<align>right</align>
+			
+			</control>
+			
+			<!--Progress Bar-->
+			<control type="progress" id="12">
+			
+				<description>My first progress control</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1160</width>
+				<height>5</height>
+				<texturebg border="2">colors/color_grey.png</texturebg>
+				<lefttexture>-</lefttexture>
+				<midtexture border="2">colors/color_silver.png</midtexture>
+				<righttexture>-</righttexture>
+				<info>Player.ProgressCache</info>
+				
+			</control>
+			
+			<!--Progress Bar-->
+			<control type="progress" id="12">
+			
+				<description>My first progress control</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1160</width>
+				<height>5</height>
+				<texturebg border="2">colors/color_transparent.png</texturebg>
+				<lefttexture>-</lefttexture>
+				<midtexture border="2">colors/color_white.png</midtexture>
+				<righttexture>-</righttexture>
+				<info>Player.Progress</info>
+				<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+				
+			</control>
+			
+			<control type="slider">
+
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1160</width>
+				<height>5</height>
+				<texturesliderbar border="2">colors/color_transparent.png</texturesliderbar>
+				<textureslidernib border="2">colors/color_white.png</textureslidernib>
+				<textureslidernibfocus border="2">colors/color_white.png</textureslidernibfocus>
+				<info>Player.Progress</info>
+				<action>seek</action>
+				<controloffsetx></controloffsetx>
+				<controloffsety></controloffsety>
+				<pulseonselect></pulseonselect>
+				
+			</control>
+			
+		</control>	
+	
+	</include>
+	
+	<include name="Common_PseudoTV_Button">
+	
+		<width>700</width>
+		<height>60</height>
+		<texturefocus>colors/color_white.png</texturefocus>
+		<texturenofocus>-</texturenofocus>
+		<alttexturefocus>colors/color_white.png</alttexturefocus>
+		<alttexturenofocus>-</alttexturenofocus>
+		<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+		<disabledColorDiffuse>Label_Disabled</disabledColorDiffuse>
+		<font>Menu-List</font>
+		<textcolor>Settings_Label</textcolor>
+		<focusedcolor>Settings_Label_Highlight</focusedcolor>
+		<disabledcolor>Settings_Label_Disabled</disabledcolor>
+		<textoffsetx>32</textoffsetx>
+		<textoffsety>-10</textoffsety>
+		<align>right</align>
+		<aligny>center</aligny>
+			
+	</include>
+	
+	<include name="Common_PseudoTV_Config_Group">
+	
+		<posx>500</posx>
+		<posy>220</posy>
+		<width>700</width>
+		<height>480</height>
+		
+	</include>
+	
+	<include name="Common_PseudoTV_Highlight">
+	
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>700</width>
+		<height>60</height>
+		<texture>colors/color_white.png</texture>
+		<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+		
+	</include>
+	
+	<include name="Common_PseudoTV_Label">
+	
+		<posx>32</posx>
+		<posy>0</posy>
+		<width>700</width>
+		<height>60</height>
+		<font>Menu-List</font>
+		<textcolor>Settings_Label</textcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		
+	</include>
+	
+	<include name="Common_PseudoTV_Label_Highlight">
+	
+		<posx>32</posx>
+		<posy>0</posy>
+		<width>700</width>
+		<height>60</height>
+		<font>Menu-List</font>
+		<textcolor>Settings_Label_Highlight</textcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		
+	</include>
+	
+	<include name="Common_PseudoTV_Label_Right">
+	
+		<posx>580</posx>
+		<posy>0</posy>
+		<width>700</width>
+		<height>60</height>
+		<font>Menu-List</font>
+		<textcolor>Settings_Label</textcolor>
+		<align>right</align>
+		<aligny>center</aligny>
+		
+	</include>
+	
+	<include name="Common_PseudoTV_Label_Highlight_Right">
+	
+		<posx>580</posx>
+		<posy>0</posy>
+		<width>700</width>
+		<height>60</height>
+		<font>Menu-List</font>
+		<textcolor>Settings_Label_Highlight</textcolor>
+		<align>right</align>
+		<aligny>center</aligny>
+		
+	</include>
+	
+	<include name="Common_PseudoTV_SpinControl_Down">
+	
+		<posx>616</posx>
+		<posy>21</posy>
+		<width>25</width>
+		<height>19</height>
+		<texturefocus diffuse="colors/color_grey.png">controls/control_spinbutton_down.png</texturefocus>
+		<texturenofocus>controls/control_spinbutton_down.png</texturenofocus>
+		
+	</include>
+	
+	<include name="Common_PseudoTV_SpinControl_Up">
+	
+		<posx>643</posx>
+		<posy>21</posy>
+		<width>25</width>
+		<height>19</height>
+		<texturefocus diffuse="colors/color_grey.png">controls/control_spinbutton_up.png</texturefocus>
+		<texturenofocus>controls/control_spinbutton_up.png</texturenofocus>
+		
+	</include>
+	
+	<include name="Common_PseudoTV_EPG_Channel_Background">
+	
+		<posx>60</posx>
+		<width>300</width>
+		<height>50</height>
+		<texture>colors/color_keyboard_dark.png</texture>
+		
+	</include>	
+	
+	<include name="Common_PseudoTV_EPG_Channel_Number">
+	
+		<posx>110</posx>
+		<width>30</width>
+		<height>50</height>
+		<label>-</label>
+		<font>PseudoTV-Channel-Number</font>
+		<align>right</align>
+		<aligny>center</aligny>
+		<textcolor>$INFO[Skin.String(gamercolor)]</textcolor>
+		
+	</include>
+	
+	<include name="Common_PseudoTV_EPG_Channel_Name">
+	
+		<posx>120</posx>
+		<width>200</width>
+		<height>50</height>
+		<label>-</label>
+		<font>PseudoTV-Channel-Name</font>
+		<align>left</align>
+		<aligny>center</aligny>
+		<textcolor>Label_Normal</textcolor>
+		
+	</include>
+	
+	<include name="Common_PseudoTV_EPG_Group_Background">
+	
+		<posx>360</posx>
+		<width>860</width>
+		<height>50</height>
+		<texture>colors/color_keyboard.png</texture>
+		
+	</include>	
+	
+	<include name="Common_PseudoTV_EPG_Group">
+	
+		<posx>360</posx>
+		<width>860</width>
+		<height>50</height>
+	
+	</include>
+	
+	<include name="Common_PseudoTV_EPG_Time">
+	
+		<posy>170</posy>
+		<width>286</width>
+		<height>20</height>
+		<font>PseudoTV-Time</font>
+		<align>left</align>
+		<aligny>center</aligny>
+		<textcolor>Label_Normal</textcolor>
+	
+	</include>
+	
+	<include name="Common_RSS">
+	
+		<control type="group">
+		
+			<posx>110</posx>
+			<posy>672</posy>
+			
+			<animation type="Conditional" condition="System.GetBool(Input.EnableMouse) | Skin.HasSetting(UseTouchInput)" reversible="true">
+				<effect type="slide" start="0,0" end="0,-20" time="400" />
+			</animation>
+			
+			<!--<animation type="Conditional" condition="Skin.HasSetting(UseAltTileMenu)" reversible="true">
+				<effect type="slide" start="0,0" end="0,0" time="400" />
+			</animation>-->
+			
+			<animation type="Conditional" condition="!Skin.HasSetting(UseAltTileMenu) + Skin.HasSetting(UseTileMenu)" reversible="true">
+				<effect type="slide" start="0,0" end="-52,0" time="400" />
+			</animation>
+		
+			<visible>System.GetBool(lookandfeel.enablerssfeeds)</visible>
+	
+			<control type="image">
+			
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>48</width>
+				<height>48</height>
+				<texture>colors/color_keyboard_dark.png</texture>
+				
+			</control>
+			
+			<control type="image">
+			
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>48</width>
+				<height>48</height>
+				<texture>rss/rss_icon.png</texture>
+				
+			</control>
+			
+			<control type="image">
+			
+				<posx>48</posx>
+				<posy>0</posy>
+				<width>1180</width>
+				<height>48</height>
+				<texture>colors/color_keyboard.png</texture>
+				
+			</control>
+			
+			<control type="rss" id="1">
+			
+				<posx>60</posx>
+				<posy>10</posy>
+				<width>1180</width>
+				<height>48</height>
+				<font>RSS-Normal</font>
+				<textcolor>$INFO[Skin.String(gamercolor)]</textcolor>
+				<headlinecolor>Label_Normal</headlinecolor>
+				<titlecolor>$INFO[Skin.String(gamercolor)]</titlecolor>
+				<aligny>center</aligny>
+				<urlset>1</urlset>
+				
+			</control>
+			
+		</control>	
+ 
+	</include>
+	
+	<include name="Common_Scrollbar_Horizontal">
+	
+		<posx>0</posx>
+		<width>1180</width>
+		<height>5</height>
+		<texturesliderbackground>-</texturesliderbackground>
+		<texturesliderbar>colors/color_lightgrey.png</texturesliderbar>
+		<texturesliderbarfocus>colors/color_white.png</texturesliderbarfocus>
+		<orientation>horizontal</orientation>
+		<showonepage>false</showonepage>
+		
+	</include>
+	
+	<include name="Common_Scrollbar_Vertical">
+	
+		<width>5</width>
+		<texturesliderbackground>-</texturesliderbackground>
+		<texturesliderbar>colors/color_lightgrey.png</texturesliderbar>
+		<texturesliderbarfocus>colors/color_white.png</texturesliderbarfocus>
+		<orientation>vertical</orientation>
+		<showonepage>false</showonepage>
+		
+	</include>	
+	
+	<include name="Common_Section_Label">
+	
+		<posx>0</posx>
+		<posy>0</posy>
+		<width min="20" max="530">auto</width>
+		<height>40</height>
+		<font>Menu-Scroll</font>
+		<textcolor>Label_Normal</textcolor>
+		<aligny>top</aligny>
+		<wrapmultiline>false</wrapmultiline>
+		<scrollspeed>0</scrollspeed>
+		
+	</include>
+	<include name="Common_Section_Label9">
+	
+		<posx>0</posx>
+		<posy>0</posy>
+		<width min="20" max="530">auto</width>
+		<height>40</height>
+		<font>Menu-Scroll</font>
+		<textcolor>Label_Normal</textcolor>
+		<aligny>top</aligny>
+		<uppercase>True</uppercase>
+		<wrapmultiline>false</wrapmultiline>
+		<scrollspeed>0</scrollspeed>
+		
+	</include>
+		<include name="Common_Section_Labels">
+	
+		<posx>0</posx>
+		<posy>0</posy>
+		<width min="20" max="530">auto</width>
+		<height>40</height>
+		<font>Menu-Scroll</font>
+		<textcolor>Label_Normal</textcolor>
+		<aligny>top</aligny>
+		<wrapmultiline>false</wrapmultiline>
+		<scrollspeed>0</scrollspeed>
+		
+	</include>
+
+
+
+	<include name="Common_Section_Label2">
+	
+		<posx>0</posx>
+		<posy>0</posy>
+		<width min="20" max="530">auto</width>
+		<height>40</height>
+		<font>Menu-Scroll</font>
+		<textcolor>FF000000</textcolor>
+		<aligny>top</aligny>
+		<wrapmultiline>false</wrapmultiline>
+		<scrollspeed>0</scrollspeed>
+		
+	</include>
+	
+	<include name="Common_Section_Label_Right">
+	
+		<posx>400</posx>
+		<posy>0</posy>
+		<width>400</width>
+		<height>100</height>
+		<font>Menu-Scroll</font>
+		<textcolor>Label_Normal</textcolor>
+		<align>right</align>
+		<aligny>top</aligny>
+		<wrapmultiline>true</wrapmultiline>
+		<scrollspeed>0</scrollspeed>
+		
+	</include>
+	
+	<include name="Common_Section_Label_Dark">
+	
+		<posx>0</posx>
+		<posy>0</posy>
+		<width min="20" max="530">auto</width>
+		<height>40</height>
+		<font>Menu-Scroll</font>
+		<textcolor>Label_Normal</textcolor>
+		<aligny>top</aligny>
+		<wrapmultiline>false</wrapmultiline>
+		<scrollspeed>0</scrollspeed>
+		
+	</include>
+	
+	
+		<include name="Common_Dark">
+	
+		<posx>0</posx>
+		<posy>0</posy>
+		<width min="20" max="530">auto</width>
+		<height>40</height>
+		<font>Menu-Scroll</font>
+		<textcolor>ffffffff</textcolor>
+		<aligny>top</aligny>
+		<wrapmultiline>false</wrapmultiline>
+		<scrollspeed>0</scrollspeed>
+		
+	</include>
+
+	<include name="Common_Section_Label_Right_Darkest">
+	
+		<posx>0</posx>
+		<posy>0</posy>
+		<width min="0" max="400">auto</width>
+		<height>35</height>
+		<font>Clock-Header</font>
+		<textcolor>Label_Normal</textcolor>
+		<aligny>top</aligny>
+		<wrapmultiline>false</wrapmultiline>
+		<scrollspeed>0</scrollspeed>
+		
+	</include>
+	
+	<include name="Common_Settings_Background">
+	
+		<control type="image">
+		
+			<include>Common_Dimensions</include>
+			<texture>XBOXnow.jpg</texture>
+			
+		</control>
+	
+
+			
+	</include>
+	
+	<include name="Common_Settings_Button">
+	
+		<width>700</width>
+		<height>60</height>
+		<texturefocus>colors/color_white.png</texturefocus>
+		<texturenofocus>-</texturenofocus>
+		<alttexturefocus>colors/color_white.png</alttexturefocus>
+		<alttexturenofocus>-</alttexturenofocus>
+		<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+		<disabledColorDiffuse>Label_Disabled</disabledColorDiffuse>
+		<font>Menu-List</font>
+		<textcolor>Settings_Label_Highlight</textcolor>
+		<focusedcolor>Settings_Label_Highlight</focusedcolor>
+		<disabledcolor>Settings_Label_Highlight</disabledcolor>
+		<textoffsetx>32</textoffsetx>
+		<textoffsety>-10</textoffsety>
+		<align>left</align>
+		<aligny>center</aligny>
+			
+	</include>
+		<include name="Common_Settings_Button2">
+	
+		<width>700</width>
+		<height>60</height>
+		<texturefocus>colors/color_white.png</texturefocus>
+		<texturenofocus>-</texturenofocus>
+		<alttexturefocus>colors/color_white.png</alttexturefocus>
+		<alttexturenofocus>-</alttexturenofocus>
+		<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+		<disabledColorDiffuse>Label_Disabled</disabledColorDiffuse>
+		<font>Menu-List2</font>
+		<textcolor>Settings_Label_Highlight</textcolor>
+		<focusedcolor>Settings_Label_Highlight</focusedcolor>
+		<disabledcolor>Settings_Label_Highlight</disabledcolor>
+		<textoffsetx>32</textoffsetx>
+		<textoffsety>-10</textoffsety>
+		<align>left</align>
+		<aligny>center</aligny>
+			
+	</include>
+	
+	<include name="Common_Settings_Button_Grouplist">
+	
+		<posx>500</posx>
+		<posy>640</posy>
+		<width>700</width>
+		<height>40</height>
+		<itemgap>10</itemgap>
+		<orientation>horizontal</orientation>
+		<align>right</align>
+	
+	</include>
+	
+	<include name="Common_Settings_Control_Button">
+	
+		<width>100</width>
+		<height>40</height>
+		<texturefocus border="6">button_focus.png</texturefocus>
+		<texturenofocus border="6">button_unfocus.png</texturenofocus>
+		<font>DialogInfo-Header</font>
+		<textcolor>Settings_Label</textcolor>
+		<focusedcolor>Settings_Label_Highlight</focusedcolor>
+		<disabledcolor>Settings_Label_Disabled</disabledcolor>
+		<colordiffuse>Settings_Label</colordiffuse>
+		<textoffsetx>0</textoffsetx>
+		<textoffsety>6</textoffsety>
+		<align>center</align>
+		<aligny>top</aligny>
+			
+	</include>
+	
+	<include name="Common_Settings_Divider">
+	
+		<control type="image">
+		
+			<posx>500</posx>
+			<posy>620</posy>
+			<width>700</width>
+			<height>2</height>
+			<texture>colors/color_white.png</texture>
+			<colordiffuse>Settings_Label</colordiffuse>
+			
+		</control>	
+			
+	</include>
+	
+	<include name="Common_Settings_Edit">
+	
+		<width>700</width>
+		<height>60</height>
+		<texturefocus>colors/color_white.png</texturefocus>
+		<texturenofocus>-</texturenofocus>
+		<alttexturefocus>colors/color_white.png</alttexturefocus>
+		<alttexturenofocus>-</alttexturenofocus>
+		<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+		<disabledColorDiffuse>Label_Disabled</disabledColorDiffuse>
+		<font>Menu-List</font>
+		<textcolor>Settings_Label</textcolor>
+		<focusedcolor>Settings_Label_Highlight</focusedcolor>
+		<disabledcolor>Settings_Label_Disabled</disabledcolor>
+		<textoffsetx>32</textoffsetx>
+		<textoffsety>-10</textoffsety>
+		<align>left</align>
+		<aligny>center</aligny>
+			
+	</include>
+	
+	<include name="Common_Settings_Header">
+	
+		<posx>80</posx>
+		<posy>22</posy>
+		<width>420</width>
+		<height>32</height>
+		<font>Settings-Menu-Header</font>
+		<textcolor>Settings_Header</textcolor>
+		<aligny>top</aligny>
+		
+	</include>
+
+	<include name="Common_Settings_Header_Back">
+	
+		<control type="button">
+					
+			<posx>30</posx>
+			<posy>30</posy>
+			<posy>60</posy>
+			<width>32</width>
+			<height>32</height>
+			<texturefocus aligny="center">breadcrumb/breadcrumb_backarrow_focus.png</texturefocus>
+			<texturenofocus aligny="center">breadcrumb/breadcrumb_backarrow.png</texturenofocus>
+			<aspectratio>keep</aspectratio>
+			<colordiffuse>Settings_Menu_Normal</colordiffuse>
+			<onclick>back</onclick>
+			
+		</control>
+		
+	</include>	
+	
+	<include name="Common_Settings_Label">
+	
+		<width>520</width>
+		<height>60</height>
+		<font>Menu-List</font>
+		<textcolor>Settings_Label_Highlight</textcolor>
+		<focusedcolor>Settings_Label_Highlight</focusedcolor>
+		<disabledcolor>Settings_Label_Highlight</disabledcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+	
+	</include>
+	
+	<include name="Common_Settings_Menu">
+	
+		<width>520</width>
+		<height>60</height>
+		<texturefocus>colors/color_white.png</texturefocus>
+		<texturenofocus>-</texturenofocus>
+		<alttexturefocus>colors/color_white.png</alttexturefocus>
+		<alttexturenofocus>-</alttexturenofocus>
+		<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+		<disabledColorDiffuse>Label_Disabled</disabledColorDiffuse>
+		<font>Menu-List</font>
+		<textcolor>Settings_Label_Highlight</textcolor>
+		<focusedcolor>Settings_Label_Highlight</focusedcolor>
+		<disabledcolor>Settings_Label_Highlight</disabledcolor>
+		<textoffsetx>80</textoffsetx>
+		<align>left</align>
+		<aligny>center</aligny>
+	
+	</include>
+	
+	<include name="Common_Settings_Preview">
+	
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>500</width>
+		<height>250</height>
+		<aspectratio>stretch</aspectratio>
+		
+	</include>	
+	
+	<include name="Common_Settings_Progress">
+		
+		<posx>30</posx>
+		<posy>10</posy>
+		<width>700</width>
+		<height>5</height>
+		<texturebg>colors/color_keyboard_dark.png</texturebg>
+		<lefttexture>-</lefttexture>
+		<midtexture>colors/color_white.png</midtexture>
+		<righttexture>-</righttexture>
+		<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+		<disabledColorDiffuse>Label_Disabled</disabledColorDiffuse>
+		
+	</include>
+		<include name="Common_Settings_Progress2">
+		
+		<posx>30</posx>
+		<posy>10</posy>
+		<width>300</width>
+		<height>5</height>
+		<texturebg>colors/color_keyboard_dark.png</texturebg>
+		<lefttexture>-</lefttexture>
+		<midtexture>colors/color_white.png</midtexture>
+		<righttexture>-</righttexture>
+		<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+		<disabledColorDiffuse>Label_Disabled</disabledColorDiffuse>
+		
+	</include>
+		<include name="Common_Settings_Progresser">
+		
+		<posx>30</posx>
+		<posy>10</posy>
+		<width>600</width>
+		<height>5</height>
+		<texturebg>colors/color_keyboard_dark.png</texturebg>
+		<lefttexture>-</lefttexture>
+		<midtexture>colors/color_white.png</midtexture>
+		<righttexture>-</righttexture>
+	
+		<disabledColorDiffuse>Label_Disabled</disabledColorDiffuse>
+		
+	</include>
+	
+	<include name="Common_Settings_RadioButton">
+	
+		<width>700</width>
+		<height>60</height>
+		<textureradioon>controls/control_radiobutton_on.png</textureradioon>
+		<textureradiooff>controls/control_radiobutton_off.png</textureradiooff>
+		<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+		<disabledColorDiffuse>Label_Disabled</disabledColorDiffuse>
+		<textcolor>Settings_Label_Highlight</textcolor>
+		<focusedcolor>Settings_Label_Highlight</focusedcolor>
+		<disabledcolor>Settings_Label_Highlight</disabledcolor>
+		<radioposx>618</radioposx>
+		<radioposy>21</radioposy>
+		
+	</include>
+	
+		<include name="Common_Settings_hitme">
+	
+		<width>700</width>
+		<height>60</height>
+		<textureradioon>conthrols/cohhhntrol_radiobuuuuuutton_on.png</textureradioon>
+		<textureradiooff>cohntrols/cohhhhntrol_radiobuuuuuutton_off.png</textureradiooff>
+		<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+		<disabledColorDiffuse>Label_Disabled</disabledColorDiffuse>
+		<textcolor>Settings_Label_Highlight</textcolor>
+		<focusedcolor>Settings_Label_Highlight</focusedcolor>
+		<disabledcolor>Settings_Label_Highlight</disabledcolor>
+		<radioposx>618</radioposx>
+		<radioposy>21</radioposy>
+		
+	</include>
+	
+	<include name="Common_Settings_Scrollbar_Vertical">
+	
+		<width>5</width>
+		<texturesliderbackground>-</texturesliderbackground>
+		<texturesliderbar>colors/color_lightgrey.png</texturesliderbar>
+		<texturesliderbarfocus>colors/color_silver.png</texturesliderbarfocus>
+		<orientation>vertical</orientation>
+		<showonepage>false</showonepage>
+		
+	</include>
+	
+	<include name="Common_Settings_SliderEx">
+		
+		<width>700</width>
+		<height>60</height>
+		<texturefocus>colors/color_white.png</texturefocus>
+		<texturenofocus>-</texturenofocus>
+		<sliderwidth>160</sliderwidth>
+		<sliderheight>15</sliderheight>
+		<texturesliderbar>controls/control_slider.png</texturesliderbar>
+		<textureslidernib border="2">controls/control_slider_nib.png</textureslidernib>
+		<textureslidernibfocus border="2">controls/control_slider_nib.png</textureslidernibfocus>
+		<disabledColorDiffuse>Label_Disabled</disabledColorDiffuse>
+		<textcolor>Settings_Label_Highlight</textcolor>
+		<focusedcolor>Settings_Label_Highlight</focusedcolor>
+		<disabledcolor>Settings_Label_Highlight</disabledcolor>
+		<textoffsetx>32</textoffsetx>
+		<textoffsety>-10</textoffsety>
+		
+	</include>
+	
+	<include name="Common_Settings_SpinButton">
+	
+		<width>700</width>
+		<height>60</height>
+		<textureup>controls/control_spinbutton_up.png</textureup>
+		<textureupfocus diffuse="colors/color_grey.png">controls/control_spinbutton_up.png</textureupfocus>
+		<texturedown>controls/control_spinbutton_down.png</texturedown>
+		<texturedownfocus diffuse="colors/color_grey.png">controls/control_spinbutton_down.png</texturedownfocus>
+		<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+		<disabledColorDiffuse>Settings_Label_Highlight</disabledColorDiffuse>
+		<textcolor>Settings_Label_Highlight</textcolor>
+		<focusedcolor>Settings_Label_Highlight</focusedcolor>
+		<disabledcolor>Settings_Label_Highlight</disabledcolor>
+		<spinposx>32</spinposx>
+		<spinposy>21</spinposy>
+		<spinwidth>25</spinwidth>
+			
+	</include>
+	
+	<include name="Common_TVNextAired_FixedList">
+	
+		<posx>60</posx>
+		<posy>20</posy>
+		<width>1500</width>
+		<height>480</height>
+		<viewtype label="Extended">wrap</viewtype>
+		<orientation>horizontal</orientation>
+		<pagecontrol>63</pagecontrol>
+		<focusposition>0</focusposition>
+		<scrolltime tween="cubic" easing="out">600</scrolltime>
+		<preloaditems>2</preloaditems>
+		
+		<itemlayout width="320" height="480">
+		
+			<control type="group">
+			
+				<posx>0</posx>
+				<posy>40</posy>
+				<width>300</width>
+				<height>440</height>
+		
+				<control type="image">
+				
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>300</width>
+					<height>440</height>
+					<texture background="true">colors/color_white.png</texture>
+					<colordiffuse>Settings_Background_Dark</colordiffuse>
+					
+				</control>
+				
+				<control type="textbox">
+				
+					<posx>20</posx>
+					<posy>20</posy>
+					<width min="20" max="260">auto</width>
+					<height>76</height>
+					<label>[UPPERCASE]$INFO[ListItem.Property(NextTitle)][/UPPERCASE]</label>
+					<font>TVNextAired-Large</font>
+					<textcolor>Label_Dark</textcolor>
+					<shadowcolor>00FFFFFF</shadowcolor>
+					<aligny>top</aligny>
+					<autoscroll>false</autoscroll>
+					
+				</control>
+				
+				<control type="label">
+				
+					<posx>20</posx>
+					<posy>100</posy>
+					<width min="20" max="260">auto</width>
+					<height>20</height>
+					<label>$INFO[ListItem.Property(ShortTime)]</label>
+					<font>TVNextAired-Normal</font>
+					<textcolor>Label_Dark</textcolor>
+					<aligny>top</aligny>
+					
+				</control>
+				
+				<control type="label">
+				
+					<posx>20</posx>
+					<posy>130</posy>
+					<width min="20" max="260">auto</width>
+					<height>20</height>
+					<label>$INFO[ListItem.Label] $INFO[ListItem.Property(Network)]</label>
+					<font>TVNextAired-Small</font>
+					<textcolor>Label_Dark</textcolor>
+					<aligny>top</aligny>
+					
+				</control>
+				
+				<control type="image">
+				
+					<posx>0</posx>
+					<posy>180</posy>
+					<width>300</width>
+					<height>260</height>
+					<texture background="true" fallback="colors/color_keyboard_dark.png">$INFO[ListItem.Property(Fanart)]</texture>
+					<aspectratio aligny="top">scale</aspectratio>
+					
+				</control>
+				
+			</control>
+			
+		</itemlayout>
+
+		<focusedlayout width="320" height="480">
+		
+			<control type="group">
+			
+				<posx>0</posx>
+				<posy>40</posy>
+				<width>300</width>
+				<height>440</height>
+				
+				<visible>Control.HasFocus(207)</visible>
+		
+				<control type="image">
+				
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>300</width>
+					<height>440</height>
+					<texture background="true">colors/color_white.png</texture>
+					<colordiffuse>Settings_Background_Dark</colordiffuse>
+					
+				</control>
+				
+				<control type="textbox">
+				
+					<posx>20</posx>
+					<posy>20</posy>
+					<width min="20" max="260">auto</width>
+					<height>76</height>
+					<label>[UPPERCASE]$INFO[ListItem.Property(NextTitle)][/UPPERCASE]</label>
+					<font>TVNextAired-Large</font>
+					<textcolor>Label_Dark</textcolor>
+					<shadowcolor>00FFFFFF</shadowcolor>
+					<aligny>top</aligny>
+					<autoscroll>false</autoscroll>
+					
+				</control>
+				
+				<control type="label">
+				
+					<posx>20</posx>
+					<posy>100</posy>
+					<width min="20" max="260">auto</width>
+					<height>20</height>
+					<label>$INFO[ListItem.Property(ShortTime)]</label>
+					<font>TVNextAired-Normal</font>
+					<textcolor>Label_Dark</textcolor>
+					<aligny>top</aligny>
+					
+				</control>
+				
+				<control type="label">
+				
+					<posx>20</posx>
+					<posy>130</posy>
+					<width min="20" max="260">auto</width>
+					<height>20</height>
+					<label>$INFO[ListItem.Label] $INFO[ListItem.Property(Network)]</label>
+					<font>TVNextAired-Small</font>
+					<textcolor>Label_Dark</textcolor>
+					<aligny>top</aligny>
+					
+				</control>
+				
+				<control type="image">
+				
+					<posx>0</posx>
+					<posy>180</posy>
+					<width>300</width>
+					<height>260</height>
+					<texture background="true" fallback="colors/color_keyboard_dark.png">$INFO[ListItem.Property(Fanart)]</texture>
+					<aspectratio aligny="top">scale</aspectratio>
+					
+				</control>
+				
+			</control>
+		
+			<control type="group">
+			
+				<posx>0</posx>
+				<posy>40</posy>
+				<width>300</width>
+				<height>440</height>
+				
+				<visible>!Control.HasFocus(207)</visible>
+				
+				<control type="image">
+				
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>300</width>
+					<height>440</height>
+					<texture background="true">colors/color_white.png</texture>
+					<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+					
+				</control>
+				
+				<control type="textbox">
+				
+					<posx>20</posx>
+					<posy>20</posy>
+					<width min="20" max="260">auto</width>
+					<height>76</height>
+					<label>[UPPERCASE]$INFO[ListItem.Property(NextTitle)][/UPPERCASE]</label>
+					<font>TVNextAired-Large</font>
+					<textcolor>Label_Normal</textcolor>
+					<shadowcolor>00FFFFFF</shadowcolor>
+					<aligny>top</aligny>
+					<autoscroll>false</autoscroll>
+					
+				</control>
+				
+				<control type="label">
+				
+					<posx>20</posx>
+					<posy>100</posy>
+					<width min="20" max="260">auto</width>
+					<height>20</height>
+					<label>$INFO[ListItem.Property(ShortTime)]</label>
+					<font>TVNextAired-Normal</font>
+					<textcolor>Label_Normal</textcolor>
+					<aligny>top</aligny>
+					
+				</control>
+				
+				<control type="label">
+				
+					<posx>20</posx>
+					<posy>130</posy>
+					<width min="20" max="260">auto</width>
+					<height>20</height>
+					<label>$INFO[ListItem.Label] $INFO[ListItem.Property(Network)]</label>
+					<font>TVNextAired-Small</font>
+					<textcolor>Label_Normal</textcolor>
+					<aligny>top</aligny>
+					
+				</control>
+				
+				<control type="image">
+				
+					<posx>0</posx>
+					<posy>180</posy>
+					<width>300</width>
+					<height>260</height>
+					<texture background="true" fallback="colors/color_keyboard_dark.png">$INFO[ListItem.Property(Fanart)]</texture>
+					<aspectratio aligny="top">scale</aspectratio>
+					
+				</control>
+				
+			</control>
+			
+		</focusedlayout>
+					
+	</include>
+	
+	<include name="Common_Vertical_Label">
+	
+		<width>600</width>
+		<height>30</height>
+		<label>MANAGE</label>
+		<font>ForumBrowser-PageLabels</font>
+		<textcolor>Settings_Menu_Normal</textcolor>
+		<aligny>top</aligny>
+		<wrapmultiline>true</wrapmultiline>
+		<scrollspeed>0</scrollspeed>
+		<angle>-90</angle>
+		
+	</include>
+	
+	
+	
+		<include name="Common_vertla">
+	
+		<width>600</width>
+		<height>30</height>
+		<label>MANAGE</label>
+		<font>ForumBrowser-PageLabels</font>
+		<textcolor>ffffffff</textcolor>
+		<aligny>top</aligny>
+		<wrapmultiline>true</wrapmultiline>
+		<scrollspeed>0</scrollspeed>
+		<angle>-90</angle>
+		
+	</include>
+	
+	<include name="Common_View_Banner">
+	
+		<control type="image">
+						
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>500</width>
+			<height>86</height>
+			<texture background="true" fallback="colors/color_keyboard_dark.png">$INFO[ListItem.Art(banner)]</texture>
+			<aspectratio aligny="top">scale</aspectratio>
+			
+		</control>
+		
+		<control type="group">
+						
+			<posx>0</posx>
+			<posy>54</posy>
+			<width>32</width>
+			<height>32</height>
+
+			<include>Common_View_Overlay</include>
+
+		</control>
+		
+		<control type="textbox">
+			
+			<posx>10</posx>
+			<posy>88</posy>
+			<width>400</width>
+			<height>24</height>
+			<label>$INFO[ListItem.Label]</label>
+			<font>Menu-Banner-Header</font>
+			<textcolor>Label_Normal</textcolor>
+			<aligny>top</aligny>
+			
+		</control>
+		
+		<control type="textbox">
+			
+			<posx>10</posx>
+			<posy>110</posy>
+			<width>400</width>
+			<height>24</height>
+			<label>$INFO[ListItem.Studio]</label>
+			<font>Menu-Details</font>
+			<textcolor>Label_Normal</textcolor>
+			<aligny>top</aligny>
+			
+		</control>
+		
+		<control type="textbox">
+			
+			<posx>10</posx>
+			<posy>110</posy>
+			<width>480</width>
+			<height>24</height>
+			<label>$INFO[ListItem.Property(TotalEpisodes),, Episodes]</label>
+			<font>Menu-Details</font>
+			<textcolor>Label_Normal</textcolor>
+			<align>right</align>
+			<aligny>top</aligny>
+			
+		</control>
+		
+		<control type="image">
+			
+			<posx>362</posx>
+			<posy>92</posy>
+			<width>128</width>
+			<height>24</height>
+			<texture background="true">$INFO[ListItem.StarRating]</texture>
+			<colordiffuse>Label_Normal</colordiffuse>
+			<aspectratio align="right">keep</aspectratio>
+			
+		</control>
+	
+	</include>
+	
+	<include name="Common_View_Details">
+	
+		<control type="image">
+		
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>95</width>
+			<height>95</height>
+			<texture>colors/color_keyboard_dark.png</texture>
+			
+		</control>
+
+		<control type="image">
+		
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>95</width>
+			<height>95</height>
+			<texture background="true" fallback="colors/color_keyboard_dark.png">$VAR[Details_Image]</texture>
+			<aspectratio>scale</aspectratio>
+			
+		</control>
+		
+		<control type="group">
+						
+			<posx>0</posx>
+			<posy>63</posy>
+			<width>32</width>
+			<height>32</height>
+
+			<include>Common_View_Overlay</include>
+
+		</control>
+		
+		<control type="textbox">
+			
+			<posx>115</posx>
+			<posy>5</posy>
+			<width>285</width>
+			<height>34</height>
+			<label>$VAR[Details_Header]</label>
+			<font>Menu-Details-Header</font>
+			<textcolor>Label_Normal</textcolor>
+			<aligny>top</aligny>
+			<wrapmultiline>true</wrapmultiline>
+			<autoscroll>0</autoscroll>
+			
+		</control>
+		
+		<control type="textbox">
+			
+			<posx>115</posx>
+			<posy>40</posy>
+			<width>285</width>
+			<height>24</height>
+			<label>$VAR[Details_SubHeader]</label>
+			<font>Menu-Details</font>
+			<textcolor>Label_Normal</textcolor>
+			<aligny>top</aligny>
+			<autoscroll>0</autoscroll>
+			
+		</control>
+		
+		<control type="image">
+			
+			<posx>115</posx>
+			<posy>66</posy>
+			<width>128</width>
+			<height>16</height>
+			<texture background="true">$INFO[ListItem.StarRating]</texture>
+			<colordiffuse>Label_Normal</colordiffuse>
+			<aspectratio align="left">keep</aspectratio>
+			
+		</control>
+		
+	</include>
+	
+	<include name="Common_View_List">
+	
+		<control type="group">
+						
+			<visible>![Container.Content(episodes) + ![SubString(Container.FolderPath,addons,left) | SubString(Container.FolderPath,plugin,left)]] + !Container.Content(albums) + !Container.Content(songs)</visible>
+		
+			<control type="label">
+			
+				<posx>32</posx>
+				<posy>0</posy>
+				<width min="20" max="520">auto</width>
+				<height>60</height>
+				<label>$INFO[ListItem.Label]</label>
+				<font>Menu-List</font>
+				<textcolor>Label_Normal</textcolor>
+				<selectedcolor>$INFO[Skin.String(gamercolor)]</selectedcolor>
+				<aligny>center</aligny>
+				
+			</control>
+			
+		</control>
+		
+		<control type="group">
+		
+			<visible>[Container.Content(episodes) + ![SubString(Container.FolderPath,addons,left) | SubString(Container.FolderPath,plugin,left)]] | Container.Content(albums) | Container.Content(songs)</visible>
+			
+			<control type="multiimage">
+			
+				<posx>20</posx>
+				<posy>0</posy>
+				<width>15</width>
+				<height>60</height>
+				<imagepath>nowplaying/</imagepath>
+				<aspectratio>center</aspectratio>
+				<colordiffuse>Label_Normal</colordiffuse>
+				<timeperimage>1000</timeperimage>
+				<fadetime>400</fadetime>
+				<randomize>true</randomize>
+				<loop>yes</loop>
+				<visible>ListItem.IsPlaying</visible>
+				
+				<animation type="VisibleChange">
+					<effect type="fade" start="0" end="100" time="400" delay="200" />
+				</animation>
+				
+			</control>	
+			
+			<control type="group">
+			
+				<animation type="Conditional" condition="ListItem.IsPlaying">
+					<effect type="slide" start="0,0" end="20,0" time="400" />
+				</animation>
+				
+				<control type="label">
+				
+					<posx>62</posx>
+					<posy>0</posy>
+					<width>60</width>
+					<height>60</height>
+					<label>$VAR[List_Label_Number]</label>
+					<font>Menu-List-Large</font>
+					<textcolor>Label_Normal</textcolor>
+					<selectedcolor>$INFO[Skin.String(gamercolor)]</selectedcolor>
+					<align>right</align>
+					<aligny>center</aligny>
+					
+				</control>
+			
+				<control type="textbox">
+				
+					<posx>32</posx>
+					<posy>0</posy>
+					<width>480</width>
+					<height>36</height>
+					<label>$VAR[List_Label]</label>
+					<font>Menu-List</font>
+					<textcolor>Label_Normal</textcolor>
+					<aligny>top</aligny>
+					
+					<animation effect="slide" start="0,0" end="50,0" time="0" condition="Container.Content(episodes) | Container.Content(songs)">Conditional</animation>
+					
+				</control>
+				
+				<control type="textbox">
+				
+					<posx>32</posx>
+					<posy>30</posy>
+					<width>500</width>
+					<height>30</height>
+					<label>[UPPERCASE]$VAR[List_Detail][/UPPERCASE]</label>
+					<font>Menu-List-Small</font>
+					<textcolor>Label_Normal</textcolor>
+					<aligny>top</aligny>
+					
+					<animation effect="slide" start="0,0" end="50,0" time="0" condition="Container.Content(episodes) | Container.Content(songs)">Conditional</animation>
+					
+				</control>
+				
+			</control>	
+			
+		</control>
+		
+		<control type="image">
+		
+			<posx>595</posx>
+			<posy>17</posy>
+			<width>26</width>
+			<height>26</height>
+			<texture>$VAR[Menu_Overlay_Image]</texture>
+			<colordiffuse>Label_Normal</colordiffuse>
+			<aspectratio>center</aspectratio>
+		
+		</control>
+		
+	</include>	
+	
+	<include name="Common_View_Overlay">
+	
+		<visible>[!StringCompare(ListItem.Property(UnWatchedEpisodes),0) + Container.Content(tvshows)] | StringCompare(ListItem.Overlay,OverlayUnwatched.png) | ListItem.IsResumable</visible>
+						
+		<control type="image">
+	
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>32</width>
+			<height>32</height>
+			<texture>colors/color_white.png</texture>
+			<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+			
+		</control>
+		
+		<control type="image">
+	
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>32</width>
+			<height>32</height>
+			<texture>$VAR[Menu_Overlay_Image]</texture>
+			
+		</control>
+		
+	</include>	
+	
+	<include name="Common_Window_Scrollbar_Horizontal">
+	
+		<posx>0</posx>
+		<width>1280</width>
+		<height>20</height>
+		<texturesliderbackground>colors/color_keyboard_dark.png</texturesliderbackground>
+		<texturesliderbar>colors/color_grey.png</texturesliderbar>
+		<texturesliderbarfocus>colors/color_lightgrey.png</texturesliderbarfocus>
+		<orientation>horizontal</orientation>
+		<showonepage>false</showonepage>
+		
+		<visible>System.GetBool(Input.EnableMouse) | Skin.HasSetting(UseTouchInput)</visible>
+		
+	</include>
+	
+	<include name="Common_Window_Scrollbar_Horizontal_Dark">
+	
+		<posx>0</posx>
+		<width>1280</width>
+		<height>20</height>
+		<texturesliderbackground>colors/color_grey.png</texturesliderbackground>
+		<texturesliderbar>colors/color_lightgrey.png</texturesliderbar>
+		<texturesliderbarfocus>colors/color_silver.png</texturesliderbarfocus>
+		<orientation>horizontal</orientation>
+		<showonepage>false</showonepage>
+		
+		<visible>System.GetBool(Input.EnableMouse) | Skin.HasSetting(UseTouchInput)</visible>
+		
+	</include>
+
+</includes>

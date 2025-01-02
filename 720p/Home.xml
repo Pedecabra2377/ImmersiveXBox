@@ -1,0 +1,147 @@
+<!-- Foundation -->
+<window id="0">
+	
+	<defaultcontrol always="true">2</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+
+
+
+<onload condition="Window.Previous(Startup)">ActivateWindow(1158)</onload>	
+	<onload condition="!Skin.HasSetting(UPDW)">Weather.Refresh</onload>
+	<onload>XBMC.RunScript(script.favourites)</onload>
+<onload condition="Skin.HasSetting(dashvoid)">Skin.ToggleSetting(dashovid)</onload>
+<onload condition="!Skin.HasSetting(FirstTimeRun)">Skin.ToggleSetting(FirstTimeRun)</onload>
+<onload condition="Skin.HasSetting(EnableKinectText)">Skin.ToggleSetting(EnableKinectText)</onload>
+<onload condition="!Skin.HasSetting(gpic)">Skin.ToggleSetting(gpic)</onload>
+<onload condition="Skin.HasSetting(Lock)">Skin.ToggleSetting(Lock)</onload>
+<onload condition="Container(20).HasFocus(1)">Control.Move(20,1)</onload>
+<onload condition="Container(20).HasFocus(3)">Control.Move(20,-1)</onload>
+<onload condition="Container(20).HasFocus(4)">Control.Move(20,-2)</onload>
+<onload condition="Container(20).HasFocus(5)">Control.Move(20,-3)</onload>
+<onload condition="Container(20).HasFocus(6)">Control.Move(20,-4)</onload>
+<onload condition="Container(20).HasFocus(7)">Control.Move(20,-5)</onload>
+<onunload condition="Container(20).HasFocus(1)">Control.Move(20,1)</onunload>
+<onunload condition="Container(20).HasFocus(3)">Control.Move(20,-1)</onunload>
+<onunload condition="Container(20).HasFocus(4)">Control.Move(20,-2)</onunload>
+<onunload condition="Container(20).HasFocus(5)">Control.Move(20,-3)</onunload>
+<onunload condition="Container(20).HasFocus(6)">Control.Move(20,-4)</onunload>
+<onunload condition="Container(20).HasFocus(7)">Control.Move(20,-5)</onunload>
+<onload>Skin.SetString(outube,Pesquise vídeos)</onload>
+	<onload>Skin.SetString(tube, )</onload>
+	<onload>Skin.SetString(bingo, )</onload>
+	<onload>Dialog.Close(146)</onload>
+	<onload>Dialog.Close(929)</onload>
+		<onload>Dialog.Close(134)</onload>
+		<onload>Dialog.Close(2003)</onload>
+				<onload>Dialog.Close(2001)</onload>
+				<onload>Dialog.Close(1122)</onload>
+	<onload condition="Skin.HasSetting(on)">AlarmClock(offani,Skin.ToggleSetting(on),00:2,silent,)</onload>
+<onload condition="Skin.HasSetting(Searching)">Skin.ToggleSetting(Searching)</onload>
+<onload condition="Skin.HasSetting(lode)">AlarmClock(loda,Skin.ToggleSetting(lode),00:7,silent,)</onload>
+<onload condition="Skin.HasSetting(lode2)">AlarmClock(loda2,Skin.ToggleSetting(lode2),00:4,silent,)</onload>
+<onload condition="Skin.HasSetting(loder)">AlarmClock(lodar,Skin.ToggleSetting(loder),00:8,silent,)</onload>
+
+<onload condition="Skin.HasSetting(Quickly)">Skin.ToggleSetting(Quickly)</onload>
+
+
+
+
+		<onload condition="Skin.HasSetting(FirstTimeBooting)">AlarmClock(doneboot,Skin.ToggleSetting(FirstTimeBooting),00:03.5,silent,)</onload>
+	<controls>
+	
+		<!--Background-->
+
+				<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+			<texture>XBOXnow.jpg</texture>
+			<aspectratio>stretch</aspectratio>
+			<visible>Skin.HasSetting(BOOTWIN) + Skin.HasSetting(FirstTimeRun) + !Skin.HasSetting(CustomBack)</visible>
+		</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+			<texture>$INFO[Skin.String(DashBack)]</texture>
+			<aspectratio>stretch</aspectratio>
+			<visible>Skin.HasSetting(BOOTWIN) + Skin.HasSetting(FirstTimeRun) + Skin.HasSetting(CustomBack) + !Skin.HasSetting(DashImgs)</visible>
+		</control>
+		<control type="image">
+		
+			<include>Common_Dimensions</include>
+			<texture background="true">colors/color_white.png</texture>
+			<colordiffuse>FanartDiffuse</colordiffuse>
+			
+		
+		<visible>Skin.HasSetting(CustomBack)</visible>
+		</control>
+						<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+			<texture>XBOXnow.jpg</texture>
+			<aspectratio>stretch</aspectratio>
+			<visible>!Skin.HasSetting(BOOTWIN) + Skin.HasSetting(FirstTimeRun) + !Skin.HasSetting(CustomBack)</visible>
+		</control>
+							<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+			<texture>$INFO[Skin.String(DashBack)]</texture>
+			<aspectratio>stretch</aspectratio>
+			<visible>!Skin.HasSetting(BOOTWIN) + Skin.HasSetting(FirstTimeRun) + Skin.HasSetting(CustomBack) + !Skin.HasSetting(DashImgs)</visible>
+		</control>
+<control type="progress">
+			<description>Battery Percent</description>
+			<posx>45r</posx>
+			<posy>5</posy>
+			<width>30</width>
+			<height>15</height>
+			<texturebg>BatteryBack.png</texturebg>
+			<midtexture>BatteryFront.png</midtexture>
+			<info>System.BatteryLevel</info>
+		</control>
+	
+
+
+
+
+		<control type="group">
+			<include>Common_Dimensions</include>
+			<include>Common_Animation_XBO</include>
+	
+			<!--Top Section-->
+
+
+			
+			
+			
+			
+
+
+
+			
+			<!--Content Area-->
+		
+			<include condition="Skin.HasSetting(BOOTWIN) + Skin.HasSetting(FirstTimeRun) + Skin.HasSetting(Logger)">Home_Extreme</include>
+			<include condition="!Skin.HasSetting(BOOTWIN) + Skin.HasSetting(FirstTimeRun) + Skin.HasSetting(Logger)">Home_Normal</include>
+			<include condition="Skin.HasSetting(BOOTWIN) + Skin.HasSetting(FirstTimeRun) + !Skin.HasSetting(Logger)">Home_Extreme_SignOut</include>
+		
+			<!--RSS-->
+			
+			
+			<!--Scrollbar-->
+			
+			
+		</control>	
+	
+				<include>dashboard_vid</include>
+		
+	</controls>
+	
+</window>

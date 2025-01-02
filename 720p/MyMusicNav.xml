@@ -1,0 +1,169 @@
+<!-- Foundation -->
+<window id="502">
+	
+	<defaultcontrol always="true">54</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+<views>50,51,52,53,54,55,56,58,59,501</views>
+	
+	<!--Splash Screen-->
+	<onload condition="!Skin.HasSetting(disablesplash)">ActivateWindow(60)</onload>
+	<onload>Control.SetFocus(54)</onload>
+	<onload condition="System.HasAddon(script.randomandlastitems) + Skin.HasSetting(ShowHistorySection_Music)">XBMC.RunScript(script.randomandlastitems,limit=16,type=Music,method=Last,playlist=special://skin/playlists/History (Music).xsp,menu=Menu3)</onload>
+	
+	<onload condition="System.HasAddon(script.extendedinfo) + Skin.HasSetting(ShowNearbyEventsSection_Music)">RunScript(script.extendedinfo,info=NearEvents)</onload>
+	
+	<onload>AlarmClock(MoveFeatured,Control.Move(9001,1),00:30,silent,loop)</onload>
+	<onunload>XBMC.CancelAlarm(MoveFeatured,true)</onunload>
+	
+			<onload>Skin.SetString(snapwindow, 502)</onload>
+<onload condition="!Skin.HasSetting(snapie)">Skin.ToggleSetting(snapie)</onload>
+<onload condition="Skin.HasSetting(gaming)">Skin.ToggleSetting(gaming)</onload>
+<onload>Skin.SetString(snap, demo/sna/muse.jpg,0)</onload>
+<onload>Skin.SetString(sn,Minha coleção de músicas)</onload>
+
+		
+	<controls>
+
+		<!--Background Area-->
+															<control type="image">
+								 <include condition="!Window.Previous(Home)">Common_Animation_Window</include>
+					  <include condition="Window.Previous(Home)">Common_Animation_apps_dash</include> 	
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1280</width>
+								<height>720</height>
+								<texture>demo\xboxmusic.png</texture>
+
+							</control>	
+						
+							<control type="label">
+				
+				 <include condition="!Window.Previous(Home)">Common_Animation_Window</include>
+					  <include condition="Window.Previous(Home)">Common_Animation_apps_dash</include> 	
+					<posx>185</posx>
+					<posy>28</posy>
+					<width>550</width>
+					<height>48</height>
+					<label>Xbox Música</label>
+					<font>Charms-Date-big</font>
+					<textcolor>black</textcolor>
+					<aligny>center</aligny>
+						<alignx>center</alignx>
+				</control>
+		
+		<control type="group">
+		
+			<include>Common_Dimensions</include>
+			 <include condition="!Window.Previous(Home)">Common_Animation_Window</include>
+					  <include condition="Window.Previous(Home)">Common_Animation_apps_dash</include> 
+		
+			<!--Top Area-->
+			
+			<include>Common_Clock</include>
+			<include>Common_Overlay</include>
+			
+			<!--Content Area-->
+			<control type="group">
+			
+				<posx>0</posx>
+				<posy>100</posy>
+				<width>1280</width>
+				<height>480</height>
+				
+				<!--Animation-->
+				<include condition="!Skin.HasSetting(disablesplash)">Common_Animation_Content</include>
+				
+				<!--Available Views-->
+		 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="60" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+				<include>ViewExtendedListAlbums</include>
+<include condition="!Skin.HasSetting(List)">ViewList</include>
+				<include condition="!Skin.HasSetting(Poster)">ViewPoster</include>
+				<include condition="!Skin.HasSetting(Square)">ViewSquare</include>
+				<include condition="!Skin.HasSetting(Thumbnail)">ViewThumbnail</include>
+				<include condition="!Skin.HasSetting(ExtendedList)">ViewExtendedList</include>
+				<include condition="!Skin.HasSetting(ExtendedListSquare)">ViewExtendedList_Square</include>
+				<include condition="!Skin.HasSetting(Grid)">ViewGrid</include>
+				<include condition="!Skin.HasSetting(GridEpisodes)">ViewGrid_Episodes</include>
+				<include condition="!Skin.HasSetting(Details)">ViewDetails</include>
+				<include condition="!Skin.HasSetting(Banner)">ViewBanner</include>
+				
+			</control>
+			
+			<!--Bottom Area-->
+			<control type="group">
+			
+				<posx>0</posx>
+				<posy>620</posy>
+				<width>1280</width>
+				<height>100</height>
+			
+				<include>Common_Bottom</include>
+				
+			</control>
+			
+			
+
+			
+			<!--Context Menu-->
+			<include condition="!Skin.HasSetting(disableappbar)">Common_AppBar</include>
+			
+		</control>	
+		<control type="image">
+					<include>Common_Animation_Window</include>	
+				<visible>!Skin.HasSetting(gamertag) + !Skin.HasSetting(disableprofilepic) + !Skin.HasSetting(gpic) + Skin.HasSetting(Logger)</visible>
+																						
+				<posx>106</posx>
+				<posy>34</posy>
+				<width>46</width>
+				<height>45</height>
+
+								<texture background="true" fallback="overlays/defa.jpg">$INFO[System.ProfileThumb]</texture>
+				
+			</control>
+						<control type="image">
+				<visible>!Skin.HasSetting(gamertag) + !Skin.HasSetting(disableprofilepic) + Skin.HasSetting(gpic) + Skin.HasSetting(Logger)</visible>
+																									<include>Common_Animation_Window</include>		
+				<posx>106</posx>
+				<posy>34</posy>
+				<width>46</width>
+				<height>45</height>
+
+								<texture background="true" fallback="overlays/defa.jpg">$INFO[Skin.String(gamerpic)]</texture>
+				
+			</control>
+			
+			
+			
+				<control type="image">
+				<visible>!Skin.HasSetting(gamertag) + !Skin.HasSetting(disableprofilepic) + !Skin.HasSetting(gpic) + !Skin.HasSetting(Logger)</visible>
+																									<include>Common_Animation_Window</include>	
+				<posx>106</posx>
+				<posy>34</posy>
+				<width>46</width>
+				<height>45</height>
+
+								<texture background="true" fallback="overlays/default95.png">overlays/defa.jpg</texture>
+				
+			</control>
+						<control type="image">
+				<visible>!Skin.HasSetting(gamertag) + !Skin.HasSetting(disableprofilepic) + Skin.HasSetting(gpic) + !Skin.HasSetting(Logger)</visible>
+																													<include>Common_Animation_Window</include>	
+				<posx>106</posx>
+				<posy>34</posy>
+				<width>46</width>
+				<height>45</height>
+
+								<texture background="true" fallback="overlays/default95.png">overlays/defa.jpg</texture>
+				
+			</control>
+			
+					
+
+	<include>Xbox_Logo_Dark</include>
+	<include>Snapped_Content</include>	
+	</controls>
+
+</window>

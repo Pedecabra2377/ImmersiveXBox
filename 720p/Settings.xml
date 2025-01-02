@@ -1,0 +1,700 @@
+<window id="4">
+
+	<defaultcontrol always="true">1</defaultcontrol>
+	
+	<zorder>2</zorder>
+	
+
+	<!--Splash Screen-->
+	<onload condition="!Skin.HasSetting(disablesplash)">ActivateWindow(60)</onload>
+	
+	<onload>Skin.SetString(snapwindow, 4)</onload>
+<onload condition="!Skin.HasSetting(snapie)">Skin.ToggleSetting(snapie)</onload>
+<onload condition="Skin.HasSetting(gaming)">Skin.ToggleSetting(gaming)</onload>
+<onload>Skin.SetString(snap, demo/sna/settings.jpg,0)</onload>
+<onload>Skin.SetString(sn,Configurações)</onload>
+	<onload condition="Skin.HasSetting(SnapFeature) + Skin.HasSetting(SnapAlways)">Skin.SetString(snap, C:\Assistance\Snap\Pic\Item.jpg,0)</onload>
+<onload condition="Skin.HasSetting(SnapFeature) + Skin.HasSetting(SnapAlways)">AlarmClock(startsnap,RunScript(special://skin/system/Snap.py),00:01,silent)</onload>
+<onload condition="Skin.HasSetting(BOOTGUI)">ReplaceWindow(0)</onload>
+
+	     <include condition="Window.Previous(Home)">Common_Animation_apps_dash</include>       
+	<controls>
+                        <include condition="Window.Previous(Home)">Common_Animation_apps_dash</include> 
+		<!--Background Area-->
+
+		
+
+									<!--Top Area-->
+																							<control type="image">
+							
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1280</width>
+								<height>720</height>
+								<texture>XBOXnow.jpg</texture>
+						
+
+							</control>
+<control type="image">
+			<include>Common_Dimensions</include>
+			<texture background="true">$INFO[Skin.String(DashBack)]</texture>
+			<colordiffuse>Settings_Background_Light</colordiffuse>
+			<visible>Skin.HasSetting(CustomBackApp)</visible>
+		</control>
+			
+			<!--Content Area-->
+							<control type="label">
+                                
+										
+                                                                <posx>50</posx>
+								<posy>90</posy>
+                                                                <width min="20" max="250">auto</width>
+                                                                <height>80</height>
+                                                                <label>Configurações</label>
+                                                                <font>Charms-Date4</font>
+                                                                <textcolor>Tile_Text</textcolor>
+                                                                <aligny>center</aligny>
+                                                              
+                                                        </control>
+							<control type="label">
+                                
+										
+                                                                <posx>50</posx>
+								<posy>155</posy>
+                                                                <width min="20" max="250">auto</width>
+                                                                <height>20</height>
+                                                                <label>[UPPERCASE]$INFO[System.ProfileName][/UPPERCASE]</label>
+                                                                <font>Home-Tile-Header</font>
+                                                                <textcolor>Tile_Text</textcolor>
+                                                                <aligny>center</aligny>
+                                                              
+                                                        </control>
+							<control type="panel" id="1">
+				
+ <posx>50</posx>
+                                                <posy>190</posy>
+
+				<onright>111</onright>
+		
+						<include>Common_AltHome_Panel391-settings</include>
+					
+
+
+
+
+						
+						
+						<content>
+						
+
+							
+										<item id="1">
+								<description>Games</description>
+								<label>Sobre</label>
+								<label2> </label2>
+								<thumb>$INFO[System.ProfileThumb]</thumb>
+<onclick>Activatewindow(7544)</onclick>
+															</item>
+							<item id="2">
+								<description>Games</description>
+								<label>Entrada</label>
+								<label2> </label2>
+								<thumb>demo\1.png</thumb>
+<onclick>Skin.ToggleSetting(Logger)</onclick>
+<visible>Skin.HasSetting(BOOTWIN)</visible>
+															</item>
+															<item id="3">
+								<description>Games</description>
+								<label>Segurança</label>
+								<label2> </label2>
+								<thumb>demo\2.png</thumb>
+<onclick>ActivateWindow(186)</onclick>
+															</item>
+															<item id="4">
+								<description>Games</description>
+								<label>O que há de novo?</label>
+								<label2> </label2>
+								<thumb>demo\4.png</thumb>
+<onclick>Activatewindow(8151)</onclick>
+<visible>Skin.HasSetting(BOOTWIN)</visible>
+															</item>
+															<item id="5">
+								<description>Games</description>
+								<label>Avaliação</label>
+								<label2> </label2>
+								<thumb>demo\4.png</thumb>
+<onclick>Activatewindow(6512)</onclick>
+<visible>Skin.HasSetting(BETA)</visible>
+															</item>
+							
+												<item id="6">
+								<description>Games</description>
+								<label>Menu Iniciar</label>
+								<label2> </label2>
+								<thumb>demo\5.png</thumb>
+<onclick>Activatewindow(Skinsettings)</onclick>
+															</item>
+<item id="7">
+								<description>Games</description>
+								<label>Avançado</label>
+								<label2> </label2>
+								<thumb>demo\2.png</thumb>
+<onclick>Activatewindow(5519)</onclick>
+<visible>true</visible>
+															</item>
+
+
+								</content>
+
+					</control>
+							<control type="label">
+                                	 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="50" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="60" end="0" delay="150" tween="cubic" easing="out" time="600" />
+                    </animation>
+										
+                                                                <posx>330</posx>
+								<posy>155</posy>
+                                                                <width min="20" max="250">auto</width>
+                                                                <height>20</height>
+                                                                <label>CONSOLE</label>
+                                                                <font>Home-Tile-Header</font>
+                                                                <textcolor>Tile_Text</textcolor>
+                                                                <aligny>center</aligny>
+                                                                
+                                                        </control>
+			                        <control type="panel" id="111">
+                          			 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="50" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="60" end="0" delay="150" tween="cubic" easing="out" time="600" />
+                    </animation>
+                                                <posx>330</posx>
+                                                <posy>190</posy>
+                                                <width>500</width>
+                                                <height>460</height>
+                                               
+                                     <onleft>1</onleft>
+                                    <onright>222</onright>
+                                                <pagecontrol>9011</pagecontrol>
+                                                <viewtype label="535">list</viewtype>
+                                                <scrolltime tween="cubic" easing="out">600</scrolltime>
+                                                <orientation>vertical</orientation>
+                                                <preloaditems>3</preloaditems>
+                                              
+												  
+                                                <itemlayout width="150" height="150">
+
+                                                   <control type="image">
+                                                        
+                                                                <posx>5</posx>
+                                                                <posy>2</posy>
+                                                                <width>140</width>
+                                                                <height>140</height>
+                                                                <texture>colors/color_black.png</texture>
+                                                     
+                                                                
+                                                        </control>
+                                                        
+                                                        <control type="image">
+                                                        
+                                                                <posx>5</posx>
+                                                                <posy>2</posy>
+                                                                <width>140</width>
+                                                                <height>140</height>
+                                                                <texture>$INFO[ListItem.Thumb]</texture>
+                                                                <aspectratio>scale</aspectratio>
+                                                                
+                                                        </control>
+                                                        
+                                                        <control type="label">
+                                                        
+                                                                <posx>15</posx>
+                                                                <posy>109</posy>
+                                                                <width min="20" max="127">auto</width>
+                                                                <height>20</height>
+                                                                <label>$INFO[Listitem.Label]</label>
+                                                                <font>Home-Tile-Header</font>
+                                                                <textcolor>Tile_Text</textcolor>
+                                                                <aligny>center</aligny>
+                                                                
+                                                        </control>
+                                                        
+                                                        <control type="textbox">
+                                                                
+                                                                <posx>5</posx>
+                                                                <posy>22</posy>
+                                                                <width>120</width>
+                                                                <height>100</height>
+                                                                <label></label>
+                                                                <font>Home-Featured</font>
+                                                                <textcolor>80FFFFFF</textcolor>
+                                                                <align>left</align>
+                                                                <aligny>top</aligny>
+                                                                
+                                                                <visible>StringCompare(ListItem.Label,Now playing) + !VideoPlayer.HasMenu</visible>
+                                                                
+                                                        </control>
+                                                        
+                                                </itemlayout>
+
+                                                <focusedlayout width="150" height="150">
+
+                                                        <control type="image">
+                                                        
+                                                                <posx>5</posx>
+                                                                <posy>2</posy>
+                                                                <width>140</width>
+                                                                <height>140</height>
+                                                                <texture>colors/color_black.png</texture>
+                                                               
+                                                                
+                                                        </control>
+														            <control type="image">
+                                                        
+                                                                <posx>2</posx>
+                                                                <posy>-1</posy>
+                                                                <width>146</width>
+                                                                <height>146</height>
+                                                                <texture>colors/color_white.png</texture>
+                                                                    <include>Common_Animation_tiledash</include>
+                                                                
+                                                        </control>
+                                                        
+                                                        <control type="image">
+                                                        
+                                                                <posx>5</posx>
+                                                                <posy>2</posy>
+                                                                <width>140</width>
+                                                                <height>140</height>
+                                                                <texture>$INFO[ListItem.Thumb]</texture>
+                                                                <aspectratio>scale</aspectratio>
+                                                                
+                                                        </control>
+                                                        
+														      <control type="image">
+                                                        <include>Common_Animation_Pini</include>
+                                                                <posx>5</posx>
+                                                                <posy>102</posy>
+                                                                <width>120</width>
+                                                                <height>40</height>
+                                                                <texture>black.png</texture>
+                                                     
+                                                                
+                                                        </control>
+                                                        <control type="label">
+                                                        
+                                                                <posx>15</posx>
+                                                                <posy>109</posy>
+                                                                <width min="20" max="105">auto</width>
+                                                                <height>20</height>
+                                                                <label>$INFO[ListItem.Label]</label>
+                                                                <font>Home-Tile-Header</font>
+                                                                <textcolor>Tile_Text</textcolor>
+                                                                <aligny>center</aligny>
+                                                                
+                                                        </control>
+                                                        
+                                                        <control type="textbox">
+                                                                
+                                                                <posx>5</posx>
+                                                                <posy>22</posy>
+                                                                <width>110</width>
+                                                                <height>100</height>
+                                                                <label></label>
+                                                                <font>Home-Featured</font>
+                                                                <textcolor>80FFFFFF</textcolor>
+                                                                <align>left</align>
+                                                                <aligny>top</aligny>
+                                                                
+                                                                <visible>StringCompare(ListItem.Label,Now playing) + !VideoPlayer.HasMenu</visible>
+                                                                
+                                                        </control>
+                                                        
+                                                        <control type="group">
+                                                        
+                                                                <control type="image">
+                                                        
+                                                                        <posx>0</posx>
+                                                                        <posy>0</posy>
+                                                                        <width>140</width>
+                                                                        <height>140</height>
+                                                                        <texture>colors/color_white.png</texture>
+                                                                        <colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+                                                                        
+                                                                        <visible>false</visible>
+                                                                
+                                                                        <animation type="Visible" reversible="false" loop="true">
+                                                                                <effect type="fade" start="0" end="100" time="400" />
+                                                                                <effect type="zoom" start="100,0" end="100,100" center="90,0" time="400" />
+                                                                                <effect type="zoom" start="100,100" end="100,0" center="90,0" time="400" delay="5000" />
+                                                                                <effect type="fade" start="100" end="0" time="400" delay="5200" />
+                                                                        </animation>
+                                                                        
+                                                                </control>
+                                                                
+                                                                <control type="textbox">
+                                                                
+                                                                        <posx>20</posx>
+                                                                        <posy>20</posy>
+                                                                        <width>100</width>
+                                                                        <height>100</height>
+                                                                        <label></label>
+                                                                        <font>Home-Tile-Detail</font>
+                                                                        <textcolor>Label_Normal</textcolor>
+                                                                        <aligny>top</aligny>
+                                                                        <wrapmultiline>true</wrapmultiline>
+                                                                        <shadowcolor>00FFFFFF</shadowcolor>
+                                                                        <autoscroll>false</autoscroll>
+                                                                        
+                                                                        <visible>false</visible>
+                                                                        
+                                                                        <animation type="Visible" reversible="false" loop="true">
+                                                                                <effect type="fade" start="0" end="100" time="400" delay="800" />
+                                                                                <effect type="fade" start="100" end="0" time="400" delay="5000" />
+                                                                        </animation>
+                                                                        
+                                                                </control>
+                                                                
+                                                        </control>        
+                                                        
+                                                </focusedlayout>
+                                                
+                                                <content>
+                                                
+  <item id="1">
+                                                               <onclick>ActivateWindow(9024)</onclick>
+                                                                <thumb>demo/settings/tiles/network.png</thumb>
+                                                                <label>Internet</label>
+                                                           
+                                                        </item>
+
+                                                        <item id="2">
+                                                               		<onclick>activatewindow(PicturesSettings)</onclick>
+                                                                <thumb>demo/settings/tiles/kinect.png</thumb>
+                                                                <label>Câmera</label>
+                                                         
+                                                        </item>
+                                                        
+                                                        <item id="3">
+                                                             	<onclick>activatewindow(Skinsettings)</onclick>
+                                                                <thumb>demo/settings/tiles/Preferences.png</thumb>
+                                                                <label>Preferências</label>
+                                                     
+                                                        </item>
+                                                        
+                                                        <item id="4">
+                                                               	<onclick>ActivateWindow(PVRSettings)</onclick>
+                                                                <thumb>demo/settings/tiles/tv.png</thumb>
+                                                                <label>TV & OneGuide</label>
+                                                    
+                                                        </item>
+                                                        
+                                                        <item id="5">
+                                                               		<onclick>activatewindow(VideosSettings)</onclick>
+                                                                <thumb>demo/settings/tiles/disc.png</thumb>
+                                                                <label>Disco & Blu-ray</label>
+                                                        
+                                                        </item>
+
+                                                        <item id="6">
+                                                             <onclick>activatewindow(SystemSettings)</onclick>
+                                                                <thumb>demo/settings/tiles/system.png</thumb>
+                                                                <label>Sistema</label>
+                                             
+                                                        </item>
+                                                        
+                                                        <item id="7">
+                                                            	<onclick>activatewindow(MusicSettings)</onclick>
+                                                                <thumb>demo/settings/tiles/display.png</thumb>
+                                                                <label>Tela &[CR]som</label>
+                                                      
+                                                        </item>
+                                                        
+                                                        <item id="8">
+                                                               <onclick>activatewindow(WeatherSettings)</onclick>
+                                                                <thumb>demo/settings/tiles/Preferences.png</thumb>
+                                                                <label>Clima</label>
+                                                        
+                                                        </item>
+                                                        
+                                                        <item id="9">
+                                                            <onclick>activatewindow(8114)</onclick>
+                                                                <thumb>demo/settings/tiles/power.png</thumb>
+                                                                <label>Energia &[CR]inicialização</label>
+                                                     
+                                                        </item>
+                                                        
+                                                
+
+									
+						
+
+                                                </content>
+
+                                        </control>
+										<control type="label">
+                                           <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="60" end="0" delay="300" tween="cubic" easing="out" time="600" />
+                    </animation>
+										<visible>!Skin.HasSetting(ShowSysInfo)</visible>
+                                                                <posx>800</posx>
+								<posy>155</posy>
+                                                                <width min="20" max="250">auto</width>
+                                                                <height>20</height>
+                                                                <label>FAMÍLIA</label>
+                                                                <font>Home-Tile-Header</font>
+                                                                <textcolor>Tile_Text</textcolor>
+                                                                <aligny>center</aligny>
+                                                                
+                                                        </control>
+														<control type="label">
+                                    		 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="60" end="0" delay="200" tween="cubic" easing="out" time="600" />
+                    </animation>
+										<visible>!Skin.HasSetting(ShowSysInfo)</visible>
+                                                                <posx>800</posx>
+								<posy>200</posy>
+                                                                <width min="20" max="250">auto</width>
+                                                                <height>200</height>
+                                                                <label>Configure a família para ativar controle parental</label>
+                                                                <font>Home-Tile-Header</font>
+                                                                <textcolor>Tile_Text</textcolor>
+                                                                <aligny>center</aligny>
+                                                                
+                                                        </control>
+											<control type="panel" id="222">
+									 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="60" end="0" delay="200" tween="cubic" easing="out" time="600" />
+                    </animation>
+				<visible>!Skin.HasSetting(ShowSysInfo)</visible>
+<posx>800</posx>
+						<posy>190</posy>
+
+				<onright>53</onright>
+		<onleft>111</onleft>
+						<include>Common_AltHome_Panel384-1</include>
+					
+
+
+
+
+						
+						
+						<content>
+						
+
+							
+										<item id="1">
+								<description>Games</description>
+								<label>Adicionar</label>
+								<thumb></thumb>
+													
+										<onclick>ActivateWindow(Profiles)</onclick>
+									
+														
+							</item>
+							
+
+												
+
+
+								</content>
+
+					</control>
+					<control type="label">
+                                  <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="150" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="60" end="0" delay="250" tween="cubic" easing="out" time="600" />
+                    </animation>
+										<visible>!Skin.HasSetting(ShowSysInfo)</visible>
+                                                                <posx>1000</posx>
+								<posy>155</posy>
+                                                                <width min="20" max="250">auto</width>
+                                                                <height>20</height>
+                                                                <label>OUTRAS PESSOAS</label>
+                                                                <font>Home-Tile-Header</font>
+                                                                <textcolor>Tile_Text</textcolor>
+                                                                <aligny>center</aligny>
+                                                                
+                                                        </control>
+					<control type="panel" id="53">
+								  <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="150" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="60" end="0" delay="250" tween="cubic" easing="out" time="600" />
+                    </animation>
+				<visible>!Skin.HasSetting(ShowSysInfo)</visible>
+<posx>1000</posx>
+						<posy>190</posy>
+
+				<onright>55</onright>
+		<onleft>222</onleft>
+						<include>Common_AltHome_Panel384-1</include>
+					
+
+
+
+
+						
+						
+						<content>
+						
+
+							
+										<item id="1">
+								<description>Games</description>
+								<label>E-Mail</label>
+								<thumb></thumb>
+													
+										<onclick>ActivateWindow(5513)</onclick>
+									
+														
+							</item>
+							
+
+												
+
+
+								</content>
+
+					</control>
+										
+										<control type="group">
+											 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="60" end="0" delay="300" tween="cubic" easing="out" time="600" />
+                    </animation>
+		<visible>Skin.HasSetting(ShowSysInfo)</visible>
+			<posx>780</posx>
+			<posy>0</posy>
+			<width>495</width>
+			<height>480</height>
+			
+
+			<control type="grouplist">
+				
+				<description>Control Area</description>
+				<posx>0</posx>
+				<posy>100</posy>
+				<width>495</width>
+				<height>540</height>
+				<itemgap>0</itemgap>
+				<usecontrolcoords>true</usecontrolcoords>
+				
+				
+
+				<control type="label" id="52">
+					
+					<description>XBMC XBE BUILD Version</description>
+					<include>Common_Settings_Button</include>
+				
+				</control>
+
+				<control type="label" id="21">
+					
+					<description>CPU Text</description>
+					<include>Common_Settings_Button</include>
+					<label>$LOCALIZE[13271] $INFO[System.CPUUsage]</label>
+					
+				</control>
+
+				<control type="progress" id="22">
+					
+					<description>CPU BAR</description>
+					<include>Common_Settings_Progress2</include>
+					<info>System.CPUUsage</info>
+					
+				</control>
+
+				<control type="label" id="23">
+					
+					<description>Memory Text</description>
+					<include>Common_Settings_Button</include>
+					<label>$LOCALIZE[31030] $INFO[system.memory(used.percent)]</label>
+					
+				</control>
+
+				<control type="progress" id="24">
+					
+					<description>Memory BAR</description>
+					<include>Common_Settings_Progress2</include>
+					<info>system.memory(used)</info>
+					
+				</control>
+				<control type="label" id="53">
+					
+					<description>XBMC XBE BUILD Version</description>
+					<include>Common_Settings_Button</include>
+					<label>Build Version : $INFO[System.BuildVersion][CR]Build Date : $INFO[System.BuildDate]</label>
+				</control>
+		
+									<control type="label" id="54">
+					
+					<description>XBMC XBE BUILD Version</description>
+					<include>Common_Settings_Button</include>
+					<label>Hard drive space : $INFO[System.FreeSpace][CR]Hard drive size : $INFO[System.TotalSpace]</label>
+				</control>
+				
+									<control type="label" id="55">
+					
+					<description>XBMC XBE BUILD Version</description>
+					<include>Common_Settings_Button</include>
+					<label>Frames per second : $INFO[System.FPS][CR]Resolution : $INFO[System.ScreenWidth]x$INFO[System.ScreenHeight]</label>
+				</control>
+											<control type="label" id="56">
+					
+					<description>XBMC XBE BUILD Version</description>
+					<include>Common_Settings_Button</include>
+					<label>Current uptime : $INFO[System.Uptime][CR]Total uptime : $INFO[System.TotalUptime]</label>
+				</control>
+												<control type="label" id="57">
+					
+					<description>XBMC XBE BUILD Version</description>
+					<include>Common_Settings_Button</include>
+					<label>CPU frequency : $INFO[System.CpuFrequency][CR]I.P Address : $INFO[Network.IPAddress]</label>
+				</control>
+			
+
+				
+
+			</control>
+													
+		</control>
+					
+
+
+				
+				
+				
+				
+
+				
+						
+						<!--Scrollbar-->
+
+					
+	
+									
+		
+																									
+				
+		
+			
+			<!--Scrollbar-->
+					<include>Xbox_Logo</include>
+					<include>Snapped_Content</include>								
+	<control type="image">
+		<animation effect="fade" start="0" end="100" time="400" reversible="true">Visible</animation>
+		<animation effect="fade" start="100" end="0" time="400" reversible="true">Hidden</animation>
+			<include>Common_Animation_Window</include>
+			<include>Common_Dimensions</include>
+			<texture>demo/colors/gray.png</texture>
+			<visible>Window.IsVisible(103)</visible>
+		</control>
+
+		
+	</controls>	
+		
+</window>

@@ -1,0 +1,545 @@
+<window>
+
+  <defaultcontrol>101</defaultcontrol>
+  <coordinates>
+    <system>1</system>
+    <posx>0</posx>
+    <posy>0</posy>
+  </coordinates>
+
+  <controls>
+	  
+
+
+  <control type="image">
+				   
+								<posy>0</posy>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+				<texture>XBOXnew.png</texture>
+
+				
+			</control>
+    <control type="group">
+      <posx>100</posx>
+      <posy>50</posy>
+      
+      <!-- ** Required ** Do not change <id> or <type> -->
+
+      
+             
+
+
+      <control type="label" id="100">
+		   
+        <description>textarea</description>
+        <posx>20</posx>
+        <posy>60</posy>
+        <width>690</width>
+        <height>40</height>
+        <font>font18</font>
+        <textcolor>white</textcolor>
+        <aligny>center</aligny>
+        <align>left</align>
+        <wrapmultiline>true</wrapmultiline>
+      </control>
+      
+      <control type="label" id="101">
+
+        <description>textarea</description>
+        <posx>1060</posx>
+        <posy>60</posy>
+        <width>200</width>
+        <height>40</height>
+        <font>font18</font>
+        <textcolor>white</textcolor>
+        <aligny>center</aligny>
+        <align>right</align>
+        <label>(0) Novos e-mails</label>
+      </control>
+      
+  
+      
+      <control type="image">
+
+        <posx>20</posx>
+        <posy>110</posy>
+        <width>1060</width>
+        <height>2</height>
+        <texture>GMseparator.png</texture>
+      </control>
+    
+
+      <!-- ** Required ** Do not change <id> or <type> -->
+      <control type="list" id="120">
+		 
+      	<posx>20</posx>
+				<posy>100</posy>
+				<width>1060</width>
+				<height>480</height>
+				
+				<onup>91919</onup>
+			
+				<viewtype label="Extended">wrap</viewtype>
+				<orientation>horizontal</orientation>
+				<pagecontrol>63</pagecontrol>
+				<focusposition>0</focusposition>
+				<scrolltime tween="cubic" easing="out">600</scrolltime>
+				<preloaditems>2</preloaditems>
+				
+			
+				
+							
+				<itemlayout width="320" height="480">
+				
+					<control type="group">
+					
+						<posx>2</posx>
+						<posy>40</posy>
+						<width>300</width>
+						<height>440</height>
+						
+						<control type="image">
+						
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>300</width>
+							<height>440</height>
+							<texture background="true">colors/eeh.png</texture>
+							
+							
+						</control>
+							<control type="image">
+						
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>300</width>
+							<height>170</height>
+							<texture>colors\color_keyboard_dark.png</texture>
+							<aspectratio aligny="top">stretch</aspectratio>
+							
+						</control>
+							<control type="image">
+						
+						<posx>125</posx>
+							<posy>65</posy>
+							<width>50</width>
+							<height>50</height>
+							<texture>$INFO[ListItem.Icon]</texture>
+							<aspectratio aligny="top">scale</aspectratio>
+							
+						</control>
+						
+						<control type="textbox">
+						
+							<posx>20</posx>
+							<posy>50</posy>
+							<width>260</width>
+							<height>100</height>
+						<label>$INFO[ListItem.Label]</label>
+							<font>DialogInfo-Label</font>
+							<textcolor>Label_Normal</textcolor>
+							<aligny>top</aligny>
+							<wrapmultiline>true</wrapmultiline>
+							<shadowcolor>00FFFFFF</shadowcolor>
+							<autoscroll>false</autoscroll>
+							
+						</control>
+						
+						
+						
+			
+						
+						
+											
+							<control type="textbox">
+						
+							<posx>20</posx>
+							<posy>200</posy>
+							<width>260</width>
+							<height>125</height>
+							<label>$INFO[ListItem.Label2]</label>
+							<font>DialogInfo-Label</font>
+									<textcolor>Label_Normal</textcolor>
+							<aligny>top</aligny>
+							<wrapmultiline>true</wrapmultiline>
+							<shadowcolor>00FFFFFF</shadowcolor>
+							<autoscroll>true</autoscroll>
+							
+						</control>
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+				
+						
+					</control>	
+					
+				</itemlayout>
+
+				<focusedlayout width="320" height="480">
+				
+					<control type="group">
+					<animation effect="zoom" end="105" center="auto" time="200" condition="Skin.HasSetting(inflateitem)">Conditional</animation>
+						<posx>2</posx>
+						<posy>40</posy>
+						<width>300</width>
+						<height>440</height>
+						
+						<control type="image">
+						
+							<posx>-2</posx>
+							<posy>-2</posy>
+							<width>304</width>
+							<height>444</height>
+							<texture background="true">colors/color_white.png</texture>
+					
+							
+						</control>
+						
+						
+						
+						
+						
+						<control type="image">
+						
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>300</width>
+							<height>440</height>
+							<texture background="true">colors/color_white.png</texture>
+					
+							
+						</control>
+						
+							<control type="image">
+						
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>300</width>
+							<height>170</height>
+							<texture>colors\color_keyboard_dark.png</texture>
+							<aspectratio aligny="top">stretch</aspectratio>
+							
+						</control>
+						<control type="image">
+						
+							<posx>125</posx>
+							<posy>65</posy>
+							<width>50</width>
+							<height>50</height>
+							<texture>$INFO[ListItem.Icon]</texture>
+							<aspectratio aligny="top">scale</aspectratio>
+							
+						</control>
+						
+						<control type="textbox">
+						
+							<posx>20</posx>
+							<posy>50</posy>
+							<width>260</width>
+							<height>100</height>
+						<label>$INFO[ListItem.Label]</label>
+							<font>DialogInfo-Label</font>
+							<textcolor>Label_Normal</textcolor>
+							<aligny>top</aligny>
+							<wrapmultiline>true</wrapmultiline>
+							<shadowcolor>00FFFFFF</shadowcolor>
+							<autoscroll>false</autoscroll>
+							
+						</control>
+									<control type="textbox">
+						
+							<posx>20</posx>
+							<posy>230</posy>
+							<width>260</width>
+							<height>62</height>
+						<label>$INFO[ListItem.Label3]</label>
+							<font>Menu-ExtendedList-Header</font>
+							<textcolor>FF000000</textcolor>
+							<aligny>top</aligny>
+							<wrapmultiline>true</wrapmultiline>
+							<shadowcolor>00FFFFFF</shadowcolor>
+							<autoscroll>false</autoscroll>
+							
+						</control>
+						
+				
+						
+						<control type="textbox">
+						
+							<posx>20</posx>
+							<posy>200</posy>
+							<width>260</width>
+							<height>125</height>
+							<label>$INFO[ListItem.Label2]</label>
+							<font>DialogInfo-Label</font>
+							<textcolor>FF000000</textcolor>
+							<aligny>top</aligny>
+							<wrapmultiline>true</wrapmultiline>
+							<shadowcolor>00FFFFFF</shadowcolor>
+							<autoscroll>true</autoscroll>
+							
+						</control>
+						
+						
+						
+						
+					
+						
+					</control>	
+
+        </focusedlayout>
+      </control>
+      <control type="group">
+        <posx>1055</posx>
+        <posy>126</posy>
+        
+      </control>
+
+    </control>
+	
+	
+	
+	
+	
+	 <control type="panel" id="91919">
+	
+<posx>150</posx>
+										<posy>117</posy>
+
+						
+						<include>Common_AltHome_Panel3</include>
+
+					
+						
+				
+						<ondown>120</ondown>
+						
+					
+						<pagecontrol>7017</pagecontrol>
+						
+						<content>
+						
+
+							
+																					<item id="1">
+								<description>Games</description>
+								<label>Games</label>
+								<thumb>SHORT\ICO\Games.png</thumb>
+								<onclick>ActivateWindow(29)</onclick>
+						
+														
+							</item>
+							
+							
+							
+							
+
+
+								</content>
+
+					</control>
+	
+	
+	<control type="image">
+
+				<visible>!Skin.HasSetting(disableprofilepic)</visible>
+			
+																																					
+												
+														
+				<posx>77</posx>
+				<posy>22</posy>
+				<width>49</width>
+				<height>49</height>
+
+								<texture>colors\color_white.png</texture>
+			<visible>Control.HasFocus(91919) + Skin.HasSetting(Logger)</visible>
+			</control>
+
+<control type="image">
+
+				<visible>!Skin.HasSetting(disableprofilepic)</visible>
+																																					
+													
+				<posx>79</posx>
+				<posy>24</posy>
+				<width>45</width>
+				<height>45</height>
+
+								<texture>colors\color_white.png</texture>
+			<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+			</control>
+		<control type="image">
+
+				<visible>!Skin.HasSetting(disableprofilepic)</visible>
+																																					
+											
+				<posx>82</posx>
+				<posy>29</posy>
+				<width>40</width>
+				<height>34</height>
+
+								<texture>demo\prof.png</texture>
+			
+			</control>
+				
+			
+			<control type="image">
+			
+				<visible>!Skin.HasSetting(gamertag) + !Skin.HasSetting(disableprofilepic) + !Skin.HasSetting(gpic) + Skin.HasSetting(Logger)</visible>
+																																						
+													
+				<posx>126</posx>
+				<posy>24</posy>
+				<width>46</width>
+				<height>45</height>
+
+								<texture background="true" fallback="overlays/defa.jpg">$INFO[System.ProfileThumb]</texture>
+				
+			</control>
+						<control type="image">
+					
+				<visible>!Skin.HasSetting(gamertag) + !Skin.HasSetting(disableprofilepic) + Skin.HasSetting(gpic) + Skin.HasSetting(Logger)</visible>
+																																						
+													
+				<posx>126</posx>
+				<posy>24</posy>
+				<width>46</width>
+				<height>45</height>
+
+								<texture background="true" fallback="overlays/defa.jpg">$INFO[Skin.String(gamerpic)]</texture>
+				
+			</control>
+			
+			
+			
+				<control type="image">
+				
+				<visible>!Skin.HasSetting(gamertag) + !Skin.HasSetting(disableprofilepic) + !Skin.HasSetting(gpic) + !Skin.HasSetting(Logger)</visible>
+																																					
+												
+				<posx>126</posx>
+				<posy>24</posy>
+				<width>46</width>
+				<height>45</height>
+
+								<texture background="true" fallback="overlays/default95.png">overlays/defa.jpg</texture>
+				
+			</control>
+						<control type="image">
+					
+				<visible>!Skin.HasSetting(gamertag) + !Skin.HasSetting(disableprofilepic) + Skin.HasSetting(gpic) + !Skin.HasSetting(Logger)</visible>
+																																				
+														
+				<posx>126</posx>
+				<posy>24</posy>
+				<width>46</width>
+				<height>45</height>
+
+								<texture background="true" fallback="overlays/default95.png">overlays/defa.jpg</texture>
+				
+			</control>
+			
+						<control type="image">
+							  
+				<visible>!Skin.HasSetting(gamertag) + !Skin.HasSetting(disableprofilepic) + Skin.HasSetting(Logger)</visible>
+																																					
+											
+				<posx>172</posx>
+				<posy>24</posy>
+				<width>230</width>
+				<height>45</height>
+
+								<texture>demo\profiles\$INFO[System.ProfileCount].png</texture>
+				
+			</control>
+							<control type="image">
+								 
+				<visible>!Skin.HasSetting(gamertag) + !Skin.HasSetting(disableprofilepic) + !Skin.HasSetting(Logger)</visible>
+																																					
+												
+				<posx>175</posx>
+				<posy>24</posy>
+				<width>230</width>
+				<height>45</height>
+
+								<texture>demo\profiles\1a.png</texture>
+					<visible>!Control.HasFocus(91919)</visible>
+			</control>
+				<control type="image">
+				
+				<visible>!Skin.HasSetting(gamertag) + !Skin.HasSetting(disableprofilepic) + !Skin.HasSetting(Logger)</visible>
+																																		
+														
+				<posx>175</posx>
+				<posy>24</posy>
+				<width>230</width>
+				<height>45</height>
+
+								<texture>demo\profiles\1a2.png</texture>
+				<visible>Control.HasFocus(91919) + !Skin.HasSetting(Logger)</visible>
+			</control>
+			
+			
+			
+
+			
+			
+			
+			
+						<control type="image">
+							
+							<visible>Skin.HasSetting(gamertag) + !Skin.HasSetting(gpic) + !Skin.HasSetting(disableprofilepic) + Skin.HasSetting(Logger)</visible>
+																																							
+														
+				<posx>126</posx>
+				<posy>24</posy>
+				<width>46</width>
+				<height>45</height>
+
+								<texture background="true" fallback="overlays/defa.jpg">$INFO[Skin.String(XBoxLive.Gamer.Picture)]</texture>
+				
+			</control>
+							<control type="image">
+								
+							<visible>Skin.HasSetting(gamertag) + !Skin.HasSetting(gpic) + !Skin.HasSetting(disableprofilepic) + !Skin.HasSetting(Logger)</visible>
+																																								
+													
+				<posx>126</posx>
+				<posy>24</posy>
+				<width>46</width>
+				<height>45</height>
+
+								<texture background="true" fallback="overlays/defa.jpg">overlays/defa.jpg</texture>
+				
+			</control>
+			
+			
+						<control type="image">
+						
+							
+																																									
+															
+				<posx>126</posx>
+				<posy>65</posy>
+				<width>46</width>
+				<height>4</height>
+
+								<texture>colors/color_white.png</texture>
+								<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+				<visible>!Skin.HasSetting(disableprofilepic)</visible>
+			</control>
+	<include>Xbox_Logo</include>
+	<include>Snapped_Content</include>
+  </controls>
+</window>

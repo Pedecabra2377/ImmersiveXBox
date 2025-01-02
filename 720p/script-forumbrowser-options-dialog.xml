@@ -1,0 +1,291 @@
+<window>
+	
+	<defaultcontrol always="true">120</defaultcontrol>
+	<zorder>1</zorder>
+	<type>dialog</type>
+	
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>0</posy>
+	</coordinates>
+	
+	<controls>
+	
+		<control type="group">
+			
+			<posx>0</posx>
+			<posy>0</posy>
+			
+			<animation type="WindowOpen">
+				<effect type="fade" start="0" end="100" time="400" delay="200" />
+			</animation>
+			
+			<animation type="WindowClose">
+				<effect type="fade" start="100" end="0" time="400" delay="200" />
+			</animation>
+			
+			<control type="image">
+			
+				<include>Common_Dimensions</include>
+				<texture>colors/color_keyboard_dark.png</texture>
+				
+			</control>	
+			
+			<control type="button" id="8001">
+				
+				<posx>1208</posx>
+				<posy>0</posy>
+				<width>72</width>
+				<height>72</height>
+				<texturefocus>appbar/appbar_overflowdots.png</texturefocus>
+				<texturenofocus>appbar/appbar_overflowdots.png</texturenofocus>
+				<colordiffuse>Label_Normal</colordiffuse>
+				<aspectratio aligny="top">center</aspectratio>
+				<onclick>Dialog.Close(2000)</onclick>
+				
+				<visible>!IntegerGreaterThan(Container(3).NumItems,5)</visible>
+				
+			</control>
+			
+			<control type="label" id="300">
+								
+				<posx>32</posx>
+				<posy>20</posy>
+				<width min="20" max="1216">auto</width>
+				<height>30</height>
+				<font>Select-Large</font>
+				<textcolor>Label_Normal</textcolor>
+				<aligny>top</aligny>
+				
+			</control>
+			
+			<control type="label" id="20">
+								
+				<posx>32</posx>
+				<posy>60</posy>
+				<width min="20" max="1216">auto</width>
+				<height>30</height>
+				<label>$INFO[Container(120).NumItems] items</label>
+				<font>Select-Small</font>
+				<textcolor>Label_Normal</textcolor>
+				<aligny>top</aligny>
+				
+			</control>
+	
+			<control type="list" id="120">
+						
+				<posx>0</posx>
+				<posy>90</posy>
+				<width>1240</width>
+				<height>600</height>
+				<onup>3</onup>
+				<ondown>3</ondown>
+				<onright>5</onright>
+				<pagecontrol>60</pagecontrol>
+				<viewtype label="List">list</viewtype>
+				<scrolltime tween="cubic" easing="out">600</scrolltime>
+				<preloaditems>2</preloaditems>
+				
+				<itemlayout width="1240" height="50">
+
+					<control type="label">
+					
+						<posx>32</posx>
+						<posy>0</posy>
+						<width min="20" max="1216">auto</width>
+						<height>50</height>
+						<label>$INFO[ListItem.Label]</label>
+						<font>Menu-List</font>
+						<textcolor>Label_Normal</textcolor>
+						<selectedcolor>Background_Highlighted</selectedcolor>
+						<aligny>center</aligny>
+						
+					</control>
+					
+				</itemlayout>
+
+				<focusedlayout width="1240" height="50">
+				
+					<control type="label">
+					
+						<posx>32</posx>
+						<posy>0</posy>
+						<width min="20" max="1216">auto</width>
+						<height>50</height>
+						<label>$INFO[ListItem.Label]</label>
+						<font>Menu-List</font>
+						<textcolor>Background_Highlighted</textcolor>
+						<selectedcolor>Background_Highlighted</selectedcolor>
+						<aligny>center</aligny>
+						
+					</control>
+					
+				</focusedlayout>
+
+			</control>
+			
+			<!--Scrollbar-->
+			<control type="scrollbar" id="60">
+				
+				<posx>1260</posx>
+				<posy>90</posy>
+				<height>600</height>
+				
+				<include>Common_Scrollbar_Vertical</include>
+				
+				<animation effect="fade" start="100" end="20" time="200" reversible="true" condition="!Container(3).Scrolling">Conditional</animation>
+				
+			</control>
+			
+			<control type="textbox" id="310">
+				<posx>400</posx>
+				<posy>90</posy>
+				<width>420</width>
+				<height>580</height>
+				<font>ForumBrowser-font13</font>
+				<textcolor>white</textcolor>
+				<info>Container(120).ListItem.Label2</info>
+			</control>
+			
+		</control>
+		
+	</controls>
+
+</window>	
+	
+		<control type="label" id="300">
+			<visible>false</visible>
+		</control>
+	
+		<control type="group" id="250">
+		
+			<posx>0</posx>
+			<posy>680</posy>
+			
+			<animation type="WindowOpen">
+				<effect type="slide" start="0,0" end="0,-76" time="200" delay="200"/>
+			</animation>
+			
+			<animation type="WindowClose">
+				<effect type="slide" start="0,-76" end="0,0" time="200"/>
+			</animation>
+			
+			<control type="image" id="8000">
+				
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>116</height>
+				<texture>colors/color_white.png</texture>
+				<colordiffuse>CC000000</colordiffuse>
+				
+				<animation type="WindowClose">
+					<effect type="fade" start="100" end="0" time="200"/>
+				</animation>
+				
+			</control>
+			
+			<control type="image" id="8001">
+				
+				<posx>1208</posx>
+				<posy>0</posy>
+				<width>72</width>
+				<height>116</height>
+				<texture>appbar/appbar_overflowdots.png</texture>
+				<aspectratio aligny="top">center</aspectratio>
+				
+			</control>
+		
+			
+			<control type='panel' id="120">
+			
+				<posx>30</posx>
+				<posy>15</posy>
+				<width>1280</width>
+				<height>116</height>
+				<onleft>120</onleft>
+				<onright>120</onright>
+				<onup>120</onup>
+				<ondown>120</ondown>
+				<orientation>horizontal</orientation>
+				<scrolltime>200</scrolltime>
+				
+				<animation type="WindowOpen">
+					<effect type="fade" start="0" end="100" time="200" delay="100"/>
+				</animation>
+				
+				<itemlayout width="72" height="116">
+					
+					<control type="image">
+						
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>48</width>
+						<height>48</height>
+						<texture>$VAR[ForumBrowser_Options_Image]</texture>
+						
+					</control>
+					
+					<control type="label">
+						
+						<posx>24</posx>
+						<posy>54</posy>
+						<width>60</width>
+						<height>20</height>
+						<label>$VAR[ForumBrowser_Options_Label]</label>
+						<font>Appbar-Label-Small</font>
+						<align>center</align>
+						<aligny>top</aligny>
+						<wrapmultiline>true</wrapmultiline>
+						
+					</control>
+					
+				</itemlayout>
+				
+				<focusedlayout width="72" height="116">
+					
+					<control type="image">
+					
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>48</width>
+						<height>48</height>
+						<texture>$VAR[ForumBrowser_Options_Image_Focused]</texture>
+						
+					</control>
+					
+					<control type="label">
+						
+						<posx>24</posx>
+						<posy>54</posy>
+						<width>60</width>
+						<height>20</height>
+						<label>$VAR[ForumBrowser_Options_Label]</label>
+						<font>Appbar-Label-Small</font>
+						<align>center</align>
+						<aligny>top</aligny>
+						<wrapmultiline>true</wrapmultiline>
+						
+					</control>
+					
+				</focusedlayout>
+				
+			</control>
+			
+			<control type="textbox" id="310">
+				<posx>20</posx>
+				<posy>20</posy>
+				<width>420</width>
+				<height>580</height>
+				<font>ForumBrowser-font13</font>
+				<textcolor>white</textcolor>
+				<align>center</align>
+				<info>Container(120).ListItem.Label2</info>
+			</control>
+			
+		</control>
+		
+	</controls>
+	
+</window>

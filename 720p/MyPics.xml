@@ -1,0 +1,75 @@
+<!-- Foundation -->
+<window id="2">
+	<defaultcontrol always="true">1090</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<views>50,51,52,53,54,57</views>
+		<include>Common_Window</include>
+
+	<!--Splash Screen-->
+	<onload condition="!Skin.HasSetting(disablesplash)">ActivateWindow(8150)</onload>
+	
+			<onload>Skin.SetString(snapwindow, 2)</onload>
+<onload condition="!Skin.HasSetting(snapie)">Skin.ToggleSetting(snapie)</onload>
+<onload condition="Skin.HasSetting(gaming)">Skin.ToggleSetting(gaming)</onload>
+<onload>Skin.SetString(snap, demo/sna/piccys.jpg,0)</onload>
+<onload>Skin.SetString(sn,Galeria)</onload>
+		<onload condition="Skin.HasSetting(SnapFeature) + Skin.HasSetting(SnapAlways)">Skin.SetString(snap, C:\Assistance\Snap\Pic\Item.jpg,0)</onload>
+<onload condition="Skin.HasSetting(SnapFeature) + Skin.HasSetting(SnapAlways)">AlarmClock(startsnap,RunScript(special://skin/system/Snap.py),00:01,silent)</onload>
+
+
+
+	
+	<controls>
+
+		<!--Background Area-->
+		<include>Common_Background</include>
+		
+		<control type="group">
+		
+			<include>Common_Dimensions</include>
+			<include>Common_Animation_Window</include>
+		
+			<!--Top Area-->
+			<include>Common_Breadcrumb</include>
+			<include>Common_Clock</include>
+			<include>Common_Overlay</include>
+			
+			<!--Content Area-->
+			<control type="group">
+			
+				<posx>0</posx>
+				<posy>100</posy>
+				<width>1280</width>
+				<height>480</height>
+				
+				<!--Animation-->
+				<include>Common_Animation_Content</include>
+				
+				<!--Available Views-->
+				<include>ViewList</include>
+				<include>ViewThumbnail</include>
+				<include>ViewTall</include>
+				<include>ViewSquare</include>
+			
+			</control>
+			
+			<!--Bottom Area-->
+			<control type="group">
+			
+				<posx>0</posx>
+				<posy>620</posy>
+				<width>1280</width>
+				<height>100</height>
+			
+				<include>Common_Bottom</include>
+				
+			</control>	
+			
+			<!--Context Menu-->
+			<include>Common_AppBar</include>
+			
+		</control>	
+	
+	</controls>
+
+</window>

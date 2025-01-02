@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<includes>
+
+	<include name="ViewPoster">
+	
+		<control type="group">
+		
+			<posx>60</posx>
+			<posy>0</posy>
+		
+			<visible>Control.IsVisible(51)</visible>
+			
+		
+		
+			<control type="label">
+				
+				<width>1000</width>
+				<label></label>
+				<include>Common_Section_Label</include>
+				
+			</control>
+
+			<control type="fixedlist" id="51">
+
+				<posx>0</posx>
+				<posy>20</posy>
+				<width>1500</width>
+				<height>480</height>
+				<onup>10000</onup>
+				<ondown>9000</ondown>
+				<onleft>51</onleft>
+				<onright>51</onright>
+				<viewtype label="Poster">wrap</viewtype>
+				<orientation>horizontal</orientation>
+				<pagecontrol>61</pagecontrol>
+				<focusposition>0</focusposition>
+				<scrolltime tween="cubic" easing="out">500</scrolltime>
+				<preloaditems>2</preloaditems>
+				
+			
+				
+				<itemlayout width="320" height="480">
+				
+					<control type="image">
+					
+						<posx>0</posx>
+						<posy>40</posy>
+						<width>300</width>
+						<height>440</height>
+						<texture background="true" fallback="colors/color_keyboard_dark.png">$INFO[ListItem.Thumb]</texture>
+						<aspectratio>stretch</aspectratio>
+						
+					</control>
+					
+				</itemlayout>
+
+				<focusedlayout width="640" height="480">
+				
+					<control type="image">
+					
+						<posx>0</posx>
+						<posy>40</posy>
+						<width>300</width>
+						<height>440</height>
+						<texture background="true" fallback="colors/color_keyboard_dark.png">$INFO[ListItem.Thumb]</texture>
+						<aspectratio>stretch</aspectratio>
+						
+					</control>
+					
+					<include>Common_LiveTile</include>
+					
+				</focusedlayout>
+
+			</control>
+			
+			<!--Scrollbar-->
+			<control type="scrollbar" id="61">
+				
+				<include>Common_Scrollbar_Horizontal</include>
+				<posy>520</posy>
+				
+				<animation effect="fade" start="100" end="20" time="200" reversible="true" condition="!Container(51).Scrolling">Conditional</animation>
+				
+			</control>
+		
+		</control>
+		
+	</include>
+
+</includes>

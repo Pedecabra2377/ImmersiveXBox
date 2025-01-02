@@ -1,0 +1,1169 @@
+<!-- Foundation -->
+<window>
+	
+	<defaultcontrol always="true">98</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<onload condition="Skin.HasSetting(Terminal)">Skin.ToggleSetting(Terminal)</onload>
+	<onload condition="Skin.HasSetting(SnapFeature)">TakeScreenshot(special://skin/system/Snap.png, 1920, 1080)</onload>
+		<onload>Skin.SetString(snapwindow, SkinSettings)</onload>
+<onload condition="!Skin.HasSetting(snapie)">Skin.ToggleSetting(snapie)</onload>
+<onload condition="Skin.HasSetting(gaming)">Skin.ToggleSetting(gaming)</onload>
+<onload>Skin.SetString(snap, demo/sna/settings.jpg,0)</onload>
+<onload>Skin.SetString(sn,Configurações)</onload>
+	<onload condition="Skin.HasSetting(SnapFeature)">Skin.SetString(snap, special://skin/system/Snap.png,0)</onload>
+
+
+	<controls>
+<include>Common_Settings_Background2</include>
+<control type="image">
+			<include>Common_Dimensions</include>
+			<texture background="true">$INFO[Skin.String(DashBack)]</texture>
+			<colordiffuse>Settings_Background_Light</colordiffuse>
+			<visible>Skin.HasSetting(CustomBackApp)</visible>
+		</control>		
+		<!--Menu-->
+		<control type="group">
+		
+			<include>Common_Settings_Header_Back</include>
+			
+			<control type="label">
+	
+				<include>Common_Settings_Header</include>
+				<label>Personalizar</label>
+				
+			</control>
+			
+			<control type="list" id="98">
+				
+				<description>List</description>
+				<posx>0</posx>
+				<posy>100</posy>
+				<width>420</width>
+				<height max="600">auto</height>
+				<onup>98</onup>
+				<ondown>98</ondown>
+				<onleft>-</onleft>
+				<onright>99</onright>
+				<scrolltime>0</scrolltime>
+				<orientation>vertical</orientation>
+				<pagecontrol>-</pagecontrol>
+
+				<itemlayout width="420" height="60">
+
+					<control type="label">
+							
+						<posx>60</posx>
+						<posy>0</posy>
+						<width min="20" max="400">auto</width>
+						<height>60</height>
+						<label>$INFO[ListItem.Label]</label>
+						<font>Menu-List</font>
+						<textcolor>Settings_Label_Highlight</textcolor>
+						<aligny>center</aligny>
+						
+					</control>
+
+				</itemlayout>
+
+				<focusedlayout width="420" height="60">
+
+					<control type="image">
+					
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>420</width>
+						<height>60</height>
+						<texture>colors\color_white.png</texture>
+						<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+					
+					</control>
+
+					<control type="label">
+							
+						<posx>60</posx>
+						<posy>0</posy>
+						<width min="20" max="400">auto</width>
+						<height>60</height>
+						<label>$INFO[ListItem.Label]</label>
+						<font>Menu-List</font>
+						<textcolor>Settings_Menu_Highlight</textcolor>
+						<aligny>center</aligny>
+						<scrollspeed>0</scrollspeed>
+						
+					</control>
+
+				</focusedlayout>
+
+				<content>
+
+					<item id="1">
+						<description>Outro</description>
+						<label>Outro</label>
+						<onclick>-</onclick>
+					</item>
+					
+<item id="2">
+		<visible>false</visible>
+						<description>Customizado</description>
+						<label>Customizado</label>
+						<onclick>-</onclick>
+					</item>
+					
+					<item id="3">
+						<description>Fundo Metro</description>
+						<label>Fundo Metro</label>
+						<onclick>-</onclick>
+<visible>false</visible>
+					</item>
+					
+					<item id="4">
+						<description>Visualizações</description>
+						<label>Visualizações</label>
+						<onclick>-</onclick>
+<visible>false</visible>
+                   </item>
+					
+					<item id="5">
+						<description>Blocos da interface</description>
+						<label>Blocos da interface</label>
+						<onclick>ActivateWindow(8134)</onclick>
+<visible>false</visible>
+					</item>
+					
+					<item id="6">
+						<description>Dispositivos</description>
+						<label>Dispositivos</label>
+						<onclick>ActivateWindow(8163)</onclick>
+<visible>false</visible>
+					</item>
+					
+					<item id="7">
+						<description>Fundo de apps</description>
+						<label>Fundo de apps</label>
+						<onclick>-</onclick>
+<visible>false</visible>
+					</item>
+					
+					<item id="8">
+						<description>Notificações</description>
+						<label>test</label>
+						<onclick>-</onclick>
+<visible>false</visible>
+					</item>
+				
+		
+				<item id="9">
+						<description>Sistema</description>
+						<label>Sistema</label>
+<onclick>ActivateWindow(5519)</onclick>				
+					</item>
+<item id="10">
+											
+						<description>Armazenamento</description>
+						<label>Atualização</label>
+<onclick>ActivateWindow(8157)</onclick>
+</item>
+<item id="11">
+											
+						<description>Armazenamento</description>
+						<label>Alternar interface</label>
+<onclick>Skin.ToggleSetting(BOOTWIN)</onclick>
+		<onclick condition="!Skin.HasSetting(SmallTiles)">Skin.ToggleSetting(SmallTiles)</onclick>
+
+		
+
+</item>
+<item id="12">
+											
+						<description>Armazenamento</description>
+						<label>Tamanho de blocos</label>
+<onclick>ActivateWindow(8138)</onclick>
+<visible>!Skin.HasSetting(BOOTWIN)</visible>
+</item>
+<item id="13">
+											<visible>false</visible>
+						<description>Armazenamento</description>
+						<label>Armazenamento</label>
+<onclick>ActivateWindow(6576)</onclick>
+</item>
+<item id="14">
+											
+						<description>Armazenamento</description>
+						<label>Barra de tarefas</label>
+<onclick>ActivateWindow(8135)</onclick>
+</item>
+				</content>
+
+			</control>
+			
+		</control>	
+
+		<control type="group" id="99">
+			
+			<posx>500</posx>
+			<posy>0</posy>
+			<width>540</width>
+			<height>480</height>
+			
+			<!--Home Options-->
+			<control type="grouplist" id="100">
+			
+				<description>Control Area</description>
+				<posx>0</posx>
+				<posy>100</posy>
+				<width>700</width>
+				<height>540</height>
+				<itemgap>0</itemgap>
+				<onup>100</onup>
+				<ondown>100</ondown>
+				<onleft>98</onleft>
+				<onright>-</onright>
+				<orientation>vertical</orientation>
+				<pagecontrol>81</pagecontrol>
+				<visible>Container(98).HasFocus(1)</visible>
+				
+				<include>Common_Animation_Settings_Options</include>
+				
+
+				
+
+																	
+
+				
+																																													<control type="radiobutton" id="5">
+					
+					<description>Background Visualiser</description>
+					<include>Common_Settings_hitme</include>
+					<label>Outras opções</label>
+					
+					<onclick>ActivateWindow(5524)</onclick>
+					
+					
+				</control>
+	
+																																															<control type="radiobutton" id="6">
+					
+					<description>Background Visualiser</description>
+					<include>Common_Settings_hitme</include>
+					<label>Informações de vídeo</label>
+					
+					<onclick>ActivateWindow(5595)</onclick>
+				<visible>false</visible>	
+					
+				</control>			
+																																																	<control type="radiobutton" id="7">
+					
+					<description>Background Visualiser</description>
+					<include>Common_Settings_hitme</include>
+					<label>Tamanho de blocos</label>
+					<visible>!Skin.HasSetting(BOOTWIN)</visible>
+					<onclick>ActivateWindow(5594)</onclick>
+					
+					
+				</control>	
+																			
+							
+																																																			<control type="radiobutton" id="8">
+					
+					<description>Background Visualiser</description>
+					<include>Common_Settings_hitme</include>
+					<label>Opções da interface</label>
+					<onclick>ActivateWindow(8128)</onclick>
+					<visible>false</visible>
+					
+				</control>	
+									
+																																																				<control type="radiobutton" id="9">
+					
+					<description>Background Visualiser</description>
+					<include>Common_Settings_hitme</include>
+					<label>Instalar app</label>
+				
+					<onclick>ActivateWindow(8165)</onclick>
+					<visible>false</visible>
+					
+				</control>	
+																																																	<control type="radiobutton" id="10">
+					
+					<description>Background Visualiser</description>
+					<include>Common_Settings_hitme</include>
+					<label>Opções do console</label>
+				
+					<onclick>ActivateWindow(8129)</onclick>
+					
+					<visible>false</visible>
+				</control>	
+						
+																																													<control type="radiobutton" id="11">
+					
+					<description>Background Visualiser</description>
+					<include>Common_Settings_hitme</include>
+					<label>Inicialização</label>
+				
+					<onclick>ActivateWindow(5590)</onclick>
+					<visible>false</visible>
+					
+				</control>
+
+									
+				<control type="radiobutton" id="12">
+					
+					<description>Background Visualiser</description>
+					<include>Common_Settings_hitme</include>
+					<label>Pequenas mudanças</label>
+				
+					<onclick>ActivateWindow(5589)</onclick>
+					<visible>false</visible>
+					
+				</control>
+<control type="radiobutton" id="13">
+  <description>Background Visualiser</description>
+  <include>Common_Settings_hitme</include>
+  <label>Selecionar app</label>
+  <onclick>
+    Skin.SetFile(browser,file,.zip)
+    Skin.SetString(Path_PKG,browser)
+    Skin.SetString(ListItem.Label, Escolher documento ZIP)
+  </onclick>
+  <onselect>
+    ActivateWindow(8166)
+  </onselect>
+  <property name="showzip" value="true" />
+  <property name="filemask" value="*.zip" />
+  <property name="filter" value=".zip" />
+  <property name="include" value=".zip" />
+  <property name="image" value="false" />
+  <property name="isFolder" value="false" />
+  <property name="mediatype" value="files" />
+  <property name="exclude" value="*.jpg|*.png|*.gif|*.bmp" />
+  <property name="debug" value="true" />
+</control>
+<control type="radiobutton" id="14">
+					
+					<description>Background Visualiser</description>
+					<include>Common_Settings_hitme</include>
+					<label>Restaurar padrão</label>
+				
+					<onclick>ActivateWindow(1891)</onclick>
+					
+					
+				</control>
+
+<control type="radiobutton" id="14">
+					
+					<description>Background Visualiser</description>
+					<include>Common_Settings_hitme</include>
+					<label>Opções de energia</label>
+				
+					<onclick>ActivateWindow(8114)</onclick>
+					
+<visible>false</visible>				
+				</control>
+<control type="radiobutton" id="15">
+					
+					<description>Background Visualiser</description>
+					<include>Common_Settings_hitme</include>
+					<label>Opções de e-mail</label>
+				
+					<onclick>ActivateWindow(5513)</onclick>
+					
+					
+				</control>
+<control type="radiobutton" id="16">
+					
+					<description>Background Visualiser</description>
+					<include>Common_Settings_hitme</include>
+					<label>Mais opções</label>
+				
+					<onclick>ActivateWindow(8127)</onclick>				
+					<visible>false</visible>
+
+</control>
+<control type="radiobutton" id="17">
+					
+					<description>Background Visualiser</description>
+					<include>Common_Settings_hitme</include>
+					<label>Cor do tema</label>
+				
+					<onclick>ActivateWindow(9198)</onclick>				
+					
+				<visible>true</visible>	
+</control>
+<control type="radiobutton" id="18">
+					
+					<description>Background Visualiser</description>
+					<include>Common_Settings_hitme</include>
+					<label>Plano de fundo</label>
+				
+					<onclick>ActivateWindow(6618)</onclick>				
+				<visible>false</visible>	
+
+</control>
+<control type="radiobutton" id="19">
+					
+					<description>Background Visualiser</description>
+					<include>Common_Settings_hitme</include>
+					<label>Calibrar tela</label>
+				
+					<onclick>ActivateWindow(11)</onclick>				
+			<visible>false</visible>		
+
+</control>
+<item id="20">
+											
+						<description>Armazenamento</description>
+						<label>Plano de fundo</label>
+<onclick>ActivateWindow(6618)</onclick>
+<visible>true</visible>
+</item>
+
+				
+				
+																					
+					
+				
+			
+			
+				
+
+				
+			
+				
+				
+				
+			</control>
+			
+			<!--Hub Options-->
+			<control type="grouplist" id="200">
+			
+				<description>Control Area</description>
+				<posx>0</posx>
+				<posy>100</posy>
+				<width>700</width>
+				<height>540</height>
+				<itemgap>0</itemgap>
+				<onup>200</onup>
+				<ondown>200</ondown>
+				<onleft>98</onleft>
+				<onright>-</onright>
+				<orientation>vertical</orientation>
+				<pagecontrol>82</pagecontrol>
+				<visible>Container(98).Hasfocus(2)</visible>
+				
+				<include>Common_Animation_Settings_Options</include>
+				
+					<control type="radiobutton" id="13">
+					
+					<description>Background Visualiser</description>
+					<include>Common_Settings_hitme</include>
+					<label>Apps personalizados</label>
+				
+					<onclick>ActivateWindow(5588)</onclick>
+					
+					<visible>false</visible>
+				</control>
+
+				<control type="radiobutton" id="14">
+					
+					<description>Background Visualiser</description>
+					<include>Common_Settings_hitme</include>
+					<label>Anúncios do sistema</label>
+				
+					<onclick>ActivateWindow(5587)</onclick>
+					
+					
+				</control>
+				<control type="radiobutton" id="15">
+					
+					<description>Background Visualiser</description>
+					<include>Common_Settings_hitme</include>
+					<label>Visualização de fundo</label>
+				
+					<onclick>ActivateWindow(5586)</onclick>
+					<visible>!Skin.HasSetting(BETA)</visible>
+					
+				</control>
+				<control type="radiobutton" id="16">
+					
+					<description>Background Visualiser</description>
+					<include>Common_Settings_hitme</include>
+					<label>Blocos da interface</label>
+				
+					<onclick>ActivateWindow(5585)</onclick>
+					
+</control>
+					
+<control type="radiobutton" id="17">
+					
+					<description>Background Visualiser</description>
+					<include>Common_Settings_hitme</include>
+					<label>Alternar interface de início</label>
+				
+					<onclick>Skin.ToggleSetting(Menu2)</onclick>				
+					<visible>false</visible>
+</control>
+
+<control type="radiobutton" id="18">
+					
+					<description>Background Visualiser</description>
+					<include>Common_Settings_hitme</include>
+					<label>Alternar tema de notificação</label>
+				
+					<onclick>Skin.ToggleSetting(ColorKai)</onclick>				
+					
+				
+</control>
+				
+			
+				
+	
+				
+
+			</control>
+
+			<!--Background Options-->
+			<control type="grouplist" id="300">
+			
+				<description>Control Area</description>
+				<posx>0</posx>
+				<posy>100</posy>
+				<width>700</width>
+				<height>540</height>
+				<itemgap>0</itemgap>
+				<onleft>98</onleft>
+				<onright>-</onright>
+				<orientation>vertical</orientation>
+				<pagecontrol>83</pagecontrol>
+
+						<visible>Container(98).Hasfocus(3) + !Skin.HasSetting(BOOTWIN)</visible>		
+				<include>Common_Animation_Settings_Options</include>
+				
+				<control type="label" id="351">
+				
+					<description></description>
+					<include>Common_Settings_Label</include>
+					<label>Fundo Metro</label>
+
+				</control>
+				
+				<!--Preview-->
+				<control type="group">
+				
+					<width>700</width>
+					<height>300</height>
+					
+					<control type="image">
+					
+						<include>Common_Settings_Preview</include>
+<texture background="true" fallback="Winnew.png">$INFO[Skin.String(WIN)]</texture>
+
+						
+					</control>
+					
+	
+				</control>
+				
+				<control type="panel" id="302">
+				
+					<width>720</width>
+					<height>80</height>
+					
+					<itemlayout width="80" height="80">
+					
+						<control type="image">
+						
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>70</width>
+							<height>70</height>
+							<texture>colors/color_black.png</texture>
+
+							
+						</control>
+
+						<control type="image">
+						
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>70</width>
+							<height>70</height>
+							<texture>$INFO[ListItem.Icon]</texture>
+							<aspectratio align="left" aligny="bottom">scale</aspectratio>
+
+							
+						</control>
+					
+					</itemlayout>
+					
+					<focusedlayout width="80" height="80">
+					
+						<control type="image">
+						
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>70</width>
+							<height>70</height>
+							<texture>colors/color_white.png</texture>
+							<colordiffuse>Background_Dark</colordiffuse>
+							
+						</control>
+
+						<control type="image">
+						
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>70</width>
+							<height>70</height>
+							<texture>$INFO[ListItem.Icon]</texture>
+							<aspectratio align="left" aligny="bottom">scale</aspectratio>
+
+							
+						</control>
+						
+
+					
+					</focusedlayout>
+					
+					<content>
+					
+						<item id="1">
+								<onclick condition="!Skin.HasSetting(WINBI)">Skin.ToggleSetting(WINBI)</onclick>
+								<onclick>Skin.SetImage(WIN)</onclick>
+							<icon>home/home_pictures.png</icon>
+							<thumb>home/home_pictures.png</thumb>
+							<label>Plano de fundo</label>
+<visible>true</visible>
+						</item>
+					
+
+						
+						
+					</content>
+
+				</control>
+				
+			</control>
+			
+			<!--Visualisation Options-->
+			<control type="grouplist" id="400">
+				
+				<description>Control Area</description>
+				<posx>0</posx>
+				<posy>100</posy>
+				<width>700</width>
+				<height>540</height>
+				<itemgap>0</itemgap>
+				<onup>400</onup>
+				<ondown>400</ondown>
+				<onleft>98</onleft>
+				<onright>-</onright>
+				<orientation>vertical</orientation>
+				<pagecontrol>84</pagecontrol>
+				<visible>Container(98).Hasfocus(4)</visible>
+				
+				<include>Common_Animation_Settings_Options</include>
+
+				<control type="label" id="450">
+				
+					<description></description>
+					<include>Common_Settings_Label</include>
+					<label>Visualisations</label>
+					
+				</control>
+
+				<control type="radiobutton" id="401">
+					
+					<description>Background Visualiser</description>
+					<include>Common_Settings_RadioButton</include>
+					<label>$LOCALIZE[31023]</label>
+					<onclick>Skin.ToggleSetting(NoBackgroundVisualiser)</onclick>
+					<selected>Skin.HasSetting(NoBackgroundVisualiser)</selected>
+					
+				</control>
+
+				<control type="radiobutton" id="402">
+					
+					<description>Background Video</description>
+					<include>Common_Settings_RadioButton</include>
+					<label>$LOCALIZE[31024]</label>
+					<onclick>Skin.ToggleSetting(NoBackgroundVideo)</onclick>
+					<selected>Skin.HasSetting(NoBackgroundVideo)</selected>
+					
+				</control>
+				
+				<control type="label" id="451">
+				
+					<description></description>
+					<include>Common_Settings_Label</include>
+					<label>Imagem de jogos & apps</label>
+					
+				</control>
+
+				<control type="radiobutton" id="403">
+					
+					<description>Background Visualiser</description>
+					<include>Common_Settings_RadioButton</include>
+					<label>Usar imagem como fundo se possível</label>
+					<onclick>Skin.ToggleSetting(ShowFanartBackground)</onclick>
+					<selected>Skin.HasSetting(ShowFanartBackground)</selected>
+					
+				</control>
+				<control type="radiobutton" id="404">
+					
+					<description>Background Visualiser</description>
+					<include>Common_Settings_RadioButton</include>
+					<label>Usar imagem do jogo como fundo</label>
+					<onclick>Skin.ToggleSetting(GameFanart)</onclick>
+					<selected>Skin.HasSetting(GameFanart)</selected>
+					
+				</control>
+
+			</control>
+
+			<!--Lyrics/Subtitles Options-->
+			<control type="grouplist" id="500">
+				
+				<description>Control Area</description>
+				<posx>0</posx>
+				<posy>100</posy>
+				<width>700</width>
+				<height>540</height>
+				<itemgap>0</itemgap>
+				<onup>500</onup>
+				<ondown>500</ondown>
+				<onleft>98</onleft>
+				<onright>-</onright>
+				<orientation>vertical</orientation>
+				<pagecontrol>85</pagecontrol>
+				<visible>Container(98).Hasfocus(5)</visible>
+				
+				<include>Common_Animation_Settings_Options</include>
+
+				<control type="label" id="550">
+				
+					<description></description>
+					<include>Common_Settings_Label</include>
+					<label>Letras</label>
+					
+				</control>
+				
+				<control type="button" id="501">
+					
+					<description>Default Button</description>
+					<include>Common_Settings_Button</include>
+					<label>$LOCALIZE[31025]</label>
+					<label2>$INFO[Skin.String(LyricPath)]</label2>
+					<onclick>Skin.SetAddon(LyricPath,xbmc.python.lyrics)</onclick>
+					
+				</control>
+				
+				<control type="label" id="551">
+				
+					<description></description>
+					<include>Common_Settings_Label</include>
+					<label>Subtítulos</label>
+					
+				</control>
+				
+				<control type="button" id="502">
+					
+					<description>Default Button</description>
+					<include>Common_Settings_Button</include>
+					<label>$LOCALIZE[31026]</label>
+					<label2>$INFO[Skin.String(SubtitlePath)]</label2>
+					<onclick>Skin.SetAddon(SubtitlePath,xbmc.python.subtitles)</onclick>
+					
+				</control>
+
+			</control>
+
+			<!--Keyboard Options-->
+			<control type="grouplist" id="600">
+				
+				<description>Control Area</description>
+				<posx>0</posx>
+				<posy>100</posy>
+				<width>700</width>
+				<height>540</height>
+				<itemgap>0</itemgap>
+				<onup>600</onup>
+				<ondown>600</ondown>
+				<onleft>98</onleft>
+				<onright>-</onright>
+				<orientation>vertical</orientation>
+				<pagecontrol>86</pagecontrol>
+				<visible>Container(98).Hasfocus(6)</visible>
+				
+				<include>Common_Animation_Settings_Options</include>
+				
+				<control type="label" id="650">
+				
+					<description></description>
+					<include>Common_Settings_Label</include>
+					<label>Touch screen + mouse</label>
+					
+				</control>
+
+				<control type="radiobutton" id="601">
+					
+					<description>Usar touch screen</description>
+					<include>Common_Settings_RadioButton</include>
+					<label>Usar touch screen / mouse</label>
+					<onclick>Skin.ToggleSetting(UseTouchInput)</onclick>
+					<selected>Skin.HasSetting(UseTouchInput)</selected>
+					
+				</control>
+				
+				<control type="label" id="651">
+				
+					<description></description>
+					<include>Common_Settings_Label</include>
+					<label>Teclado</label>
+					
+				</control>
+
+				<control type="radiobutton" id="602">
+					
+					<description>Teclado alternativo</description>
+					<include>Common_Settings_RadioButton</include>
+					<label>Usar teclado alternativo</label>
+					<onclick>Skin.ToggleSetting(UseAltKeyboard)</onclick>
+					<selected>Skin.HasSetting(UseAltKeyboard)</selected>
+					
+				</control>
+								<control type="label" id="652">
+				
+					<description></description>
+					<include>Common_Settings_Label</include>
+					<label>Outras opções</label>
+					
+				</control>
+				
+								<control type="button" id="603">
+					
+					<description>Configurar controles</description>
+					<include>Common_Settings_Button</include>
+					<label>Configurações de controles</label>
+					<onclick>ActivateWindow(711)</onclick>
+
+					
+				</control>
+	
+<control type="button" id="604">
+					
+					<description>Controle de Voz</description>
+					<include>Common_Settings_Button</include>
+					<label>Controlar Xbox com a voz</label>
+					<onclick>ActivateWindow(788)</onclick>
+<visible>!Skin.HasSetting(BETA)</visible>				
+				</control>
+
+
+			
+				<control type="textbox">
+					
+					<width>700</width>
+					<height>300</height>
+					<label>[CR]O teclado alternativo desativa o modo de teclado virtual, recomendado apenas com teclado</label>
+					<font>Menu-List</font>
+					<textcolor>Settings_Label_Highlight</textcolor>
+					<align>left</align>
+					<aligny>top</aligny>
+					
+				</control>
+
+			</control>
+			
+			<!--Weather Options-->
+			<control type="grouplist" id="700">
+				
+				<description>Control Area</description>
+				<posx>0</posx>
+				<posy>100</posy>
+				<width>700</width>
+				<height>540</height>
+				<itemgap>0</itemgap>
+				<onup>700</onup>
+				<ondown>700</ondown>
+				<onleft>98</onleft>
+				<onright>-</onright>
+				<orientation>vertical</orientation>
+				<pagecontrol>87</pagecontrol>
+				<visible>Container(98).Hasfocus(7)</visible>
+				
+				<include>Common_Animation_Settings_Options</include>
+				
+				<control type="label" id="750">
+				
+					<description></description>
+					<include>Common_Settings_Label</include>
+					<label>Fundo de apps</label>
+					
+				</control>
+
+				<control type="radiobutton" id="701">
+					
+					<description>Show Weather Fanart</description>
+					<include>Common_Settings_RadioButton</include>
+					<label>Fundo customizado do app de Clima</label>
+					<onclick>Skin.ToggleSetting(ShowWeatherFanart)</onclick>
+					<selected>Skin.HasSetting(ShowWeatherFanart)</selected>
+					
+				</control>
+
+				<control type="button" id="702">
+					
+					<description>Diretório do arquivo</description>
+					<include>Common_Settings_Button</include>
+					<label>Fundo do Clima</label>
+					<label2>$INFO[Skin.String(WeatherFanartDir)]</label2>
+					<onclick>Skin.SetImage(WeatherFanartDir)</onclick>
+					<enable>Skin.HasSetting(ShowWeatherFanart)</enable>
+					
+				</control>
+
+			</control>
+			
+			<!--Notification Options-->
+			<control type="grouplist" id="800">
+				
+				<description>Control Area</description>
+				<posx>0</posx>
+				<posy>100</posy>
+				<width>700</width>
+				<height>540</height>
+				<itemgap>0</itemgap>
+				<onup>900</onup>
+				<ondown>900</ondown>
+				<onleft>98</onleft>
+				<onright>-</onright>
+				<orientation>vertical</orientation>
+				<pagecontrol>88</pagecontrol>
+				<visible>Container(98).Hasfocus(8)</visible>
+				
+				<include>Common_Animation_Settings_Options</include>
+				
+				<control type="label" id="850">
+				
+					<description></description>
+					<include>Common_Settings_Label</include>
+					<label>Opções adicionais</label>
+					
+				</control>
+				
+				<control type="radiobutton" id="801">
+					
+					<description>Enable Now Watching Grid</description>
+					<include>Common_Settings_RadioButton</include>
+					<label>Mostrar 'agora assistindo' para vídeos</label>
+					<onclick>Skin.ToggleSetting(ShowNowWatchingNotification)</onclick>
+					<selected>Skin.HasSetting(ShowNowWatchingNotification)</selected>
+					
+				</control>
+				
+				<control type="label" id="851">
+				
+					<description></description>
+					<include>Common_Settings_Label</include>
+					<label>Notificações de terceiros</label>
+					
+				</control>
+
+				<control type="radiobutton" id="802">
+					
+					<description>Ativar prévia de TV</description>
+					<include>Common_Settings_RadioButton</include>
+					<label>Mostrar 'episódio a caminho' para programas de TV</label>
+					<onclick>Skin.ToggleSetting(ShowNextAiredNotification)</onclick>
+					<selected>Skin.HasSetting(ShowNextAiredNotification)</selected>
+					<enable>System.HasAddon(script.tv.show.next.aired)</enable>
+					
+				</control>
+
+
+					
+				
+				
+				
+																					
+					
+				
+			
+			
+				
+
+				
+			
+				
+				
+				
+			
+				
+			</control>
+
+			<!--Debug Options-->
+			<control type="grouplist" id="900">
+				
+				<description>Control Area</description>
+				<posx>0</posx>
+				<posy>100</posy>
+				<width>700</width>
+				<height>540</height>
+				<itemgap>0</itemgap>
+				<onup>900</onup>
+				<ondown>900</ondown>
+				<onleft>98</onleft>
+				<onright>-</onright>
+				<orientation>vertical</orientation>
+				<pagecontrol>89</pagecontrol>
+				<visible>false</visible>
+				
+				<include>Common_Animation_Settings_Options</include>
+
+				<control type="radiobutton" id="901">
+					
+					<description>Set background picture</description>
+					<include>Common_Settings_RadioButton</include>
+					<label>Definir fundo</label>
+					<onclick>Skin.SetImage(setinb)</onclick>
+
+					
+				</control>
+<control type="radiobutton" id="902">
+					
+					<description>lode</description>
+					<include>Common_Settings_RadioButton</include>
+					<label>lode</label>
+					<onclick>Skin.ToggleSetting(lode)</onclick>
+<selected>Skin.HasSetting(lode)</selected>
+
+					
+				</control>
+
+			</control>
+
+		</control>
+		
+		<!--Scrollbar-->
+		<control type="scrollbar" id="81">
+		
+			<include>Common_Settings_Scrollbar_Vertical</include>
+			
+			<posx>1260</posx>
+			<posy>160</posy>
+			<height>480</height>
+			
+			<animation effect="fade" start="100" end="20" time="200" reversible="true" condition="!Control.HasFocus(81)">Conditional</animation>
+			
+			<visible>Container(98).Hasfocus(1)</visible>
+			
+		</control>
+		
+		<!--Scrollbar-->
+		<control type="scrollbar" id="82">
+		
+			<include>Common_Settings_Scrollbar_Vertical</include>
+			
+			<posx>1260</posx>
+			<posy>160</posy>
+			<height>480</height>
+			
+			<animation effect="fade" start="100" end="20" time="200" reversible="true" condition="!Control.HasFocus(82)">Conditional</animation>
+			
+			<visible>Container(98).Hasfocus(2)</visible>
+			
+		</control>
+		
+		<!--Scrollbar-->
+		<control type="scrollbar" id="83">
+		
+			<include>Common_Settings_Scrollbar_Vertical</include>
+			
+			<posx>1260</posx>
+			<posy>160</posy>
+			<height>480</height>
+			
+			<animation effect="fade" start="100" end="20" time="200" reversible="true" condition="!Control.HasFocus(83)">Conditional</animation>
+			
+			<visible>Container(98).Hasfocus(3)</visible>
+			
+		</control>
+		
+		<!--Scrollbar-->
+		<control type="scrollbar" id="84">
+		
+			<include>Common_Settings_Scrollbar_Vertical</include>
+			
+			<posx>1260</posx>
+			<posy>160</posy>
+			<height>480</height>
+			
+			<animation effect="fade" start="100" end="20" time="200" reversible="true" condition="!Control.HasFocus(84)">Conditional</animation>
+			
+			<visible>Container(98).Hasfocus(4)</visible>
+			
+		</control>
+		
+		<!--Scrollbar-->
+		<control type="scrollbar" id="85">
+		
+			<include>Common_Settings_Scrollbar_Vertical</include>
+			
+			<posx>1260</posx>
+			<posy>160</posy>
+			<height>480</height>
+			
+			<animation effect="fade" start="100" end="20" time="200" reversible="true" condition="!Control.HasFocus(85)">Conditional</animation>
+			
+			<visible>Container(98).Hasfocus(5)</visible>
+			
+		</control>
+		
+		<!--Scrollbar-->
+		<control type="scrollbar" id="86">
+		
+			<include>Common_Settings_Scrollbar_Vertical</include>
+			
+			<posx>1260</posx>
+			<posy>160</posy>
+			<height>480</height>
+			
+			<animation effect="fade" start="100" end="20" time="200" reversible="true" condition="!Control.HasFocus(86)">Conditional</animation>
+			
+			<visible>Container(98).Hasfocus(6)</visible>
+			
+		</control>
+		
+		<!--Scrollbar-->
+		<control type="scrollbar" id="88">
+		
+			<include>Common_Settings_Scrollbar_Vertical</include>
+			
+			<posx>1260</posx>
+			<posy>160</posy>
+			<height>480</height>
+			
+			<animation effect="fade" start="100" end="20" time="200" reversible="true" condition="!Control.HasFocus(87)">Conditional</animation>
+			
+			<visible>Container(98).Hasfocus(8)</visible>
+			
+		</control>
+		
+				<control type="image">
+							<include>Common_Animation_Window</include>
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1280</width>
+								<height>720</height>
+								<texture>XBOXnow.jpg</texture>
+						<visible>Skin.HasSetting(Terminal)</visible>
+								
+							</control>
+
+		
+		
+		<include>Xbox_Logo</include>
+<include>Snapped_Content</include>	
+	</controls>
+
+</window>

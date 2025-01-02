@@ -1,0 +1,437 @@
+<!-- Foundation -->
+<window id="34">
+	<defaultcontrol always="true">4</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+
+	
+		<onload>Skin.SetString(snapwindow, 34)</onload>
+<onload condition="!Skin.HasSetting(snapie)">Skin.ToggleSetting(snapie)</onload>
+<onload condition="Skin.HasSetting(gaming)">Skin.ToggleSetting(gaming)</onload>
+<onload>Skin.SetString(snap, demo/sna/settings.jpg,0)</onload>
+<onload>Skin.SetString(sn,Perfil)</onload>
+	<onload condition="Skin.HasSetting(SnapFeature) + Skin.HasSetting(SnapAlways)">Skin.SetString(snap, C:\Assistance\Snap\Pic\Item.jpg,0)</onload>
+<onload condition="Skin.HasSetting(SnapFeature) + Skin.HasSetting(SnapAlways)">AlarmClock(startsnap,RunScript(special://skin/system/Snap.py),00:01,silent)</onload>
+
+<onload condition="Skin.HasSetting(gpic)">Skin.ToggleSetting(gpic)</onload>
+<animation type="Conditional" condition="Window.Previous(5538)">
+				<effect type="slide" start="0,0" end="4000,0" time="0" delay="0" tween="cubic" easing="out"/>
+			</animation>
+	<controls>
+<animation type="Conditional" condition="Window.Previous(5538)">
+				<effect type="slide" start="0,0" end="4000,0" time="0" delay="0" tween="cubic" easing="out"/>
+			</animation>
+		<!--Background-->
+<include>Common_Settings_Background2</include>
+
+		<control type="group">
+<animation type="Conditional" condition="Window.Previous(5538)">
+				<effect type="slide" start="0,0" end="4000,0" time="0" delay="0" tween="cubic" easing="out"/>
+			</animation>
+			
+			<include>Common_Settings_Header_Back</include>
+
+			<control type="label" id="20">
+<animation type="Conditional" condition="Window.Previous(5538)">
+				<effect type="slide" start="0,0" end="4000,0" time="0" delay="0" tween="cubic" easing="out"/>
+			</animation>
+				<include>Common_Settings_Header</include>
+				<label>Perfis</label>
+
+			</control>
+
+			<control type="list" id="98">
+				<animation type="Conditional" condition="Window.Previous(5538)">
+				<effect type="slide" start="0,0" end="4000,0" time="0" delay="0" tween="cubic" easing="out"/>
+			</animation>
+ <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="60" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+				<description>List</description>
+				<posx>0</posx>
+				<posy>100</posy>
+				<width>420</width>
+				<height max="600">auto</height>
+				<onup>98</onup>
+				<ondown>98</ondown>
+				<onleft>-</onleft>
+				<onright>99</onright>
+				<scrolltime>0</scrolltime>
+				<orientation>vertical</orientation>
+				<pagecontrol>-</pagecontrol>
+
+				<itemlayout width="420" height="60">
+
+					<control type="label">
+
+						<posx>60</posx>
+						<posy>0</posy>
+						<width min="20" max="400">auto</width>
+						<height>60</height>
+						<label>$INFO[ListItem.Label]</label>
+						<font>Menu-List</font>
+						<textcolor>Settings_Menu_Normal</textcolor>
+						<aligny>center</aligny>
+
+					</control>
+
+				</itemlayout>
+
+				<focusedlayout width="420" height="60">
+
+					<control type="image">
+
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>420</width>
+						<height>60</height>
+						<texture>colors/color_white.png</texture>
+						<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+
+					</control>
+
+					<control type="label">
+
+						<posx>60</posx>
+						<posy>0</posy>
+						<width min="20" max="400">auto</width>
+						<height>60</height>
+						<label>$INFO[ListItem.Label]</label>
+						<font>Menu-List</font>
+						<textcolor>Settings_Menu_Highlight</textcolor>
+						<aligny>center</aligny>
+						<scrollspeed>0</scrollspeed>
+
+					</control>
+
+				</focusedlayout>
+
+				<content>
+
+					<item id="1">
+						<description>Locations</description>
+						<label>opções</label>
+						<onclick>-</onclick>
+					</item>
+			
+
+				</content>
+
+			</control>
+
+		</control>
+
+		<control type="group" id="99">
+<animation type="Conditional" condition="Window.Previous(5538)">
+				<effect type="slide" start="0,0" end="4000,0" time="0" delay="0" tween="cubic" easing="out"/>
+			</animation>
+			<posx>500</posx>
+			<posy>100</posy>
+			<width>700</width>
+			<height>480</height>
+
+			<include>Common_Animation_Settings_Options</include>
+
+			<control type="label">
+
+				<posx>0</posx>
+				<posy>0</posy>
+				<include>Common_Settings_Label</include>
+				<label>Opções</label>
+
+			</control>
+
+			<control type="radiobutton" id="4">
+
+				<description>Default Radio Button</description>
+				<include>Common_Settings_RadioButton</include>
+				<posx>0</posx>
+				<posy>60</posy>
+				<label>$LOCALIZE[20096]</label>
+				<ondown>5</ondown>
+
+			</control>
+			
+			
+			<control type="radiobutton" id="5">
+
+				<description>Default Radio Button</description>
+				<include>Common_Settings_RadioButton</include>
+				<posx>0</posx>
+				<posy>120</posy>
+				<label>Forçar entrada automática</label>
+				<onup>4</onup>
+				<ondown>6</ondown>
+					<onclick>Skin.ToggleSetting(RemoveSignButton)</onclick>
+				<visible>!Skin.HasSetting(BETA)</visible>
+					<selected>Skin.HasSetting(RemoveSignButton)</selected>
+			</control>
+			<control type="radiobutton" id="6">
+
+				<description>power</description>
+				<include>Common_Settings_hitme</include>
+				<posx>0</posx>
+				<posy>180</posy>
+				<label>Opções de energia</label>
+				<onup>5</onup>
+				<ondown>7</ondown>
+<onclick>ActivateWindow(8114)</onclick>
+
+			</control>
+			<control type="radiobutton" id="7">
+
+				<description>Default Radio Button</description>
+				<include>Common_Settings_RadioButton</include>
+				<posx>0</posx>
+				<posy>240</posy>
+				<label>Iniciar TV ao iniciar</label>
+				<onup>6</onup>
+				<ondown>2</ondown>
+					<onclick>Skin.ToggleSetting(tvboot)</onclick>
+				<visible>false</visible>
+					
+			</control>
+
+			<control type="label">
+<animation type="Conditional" condition="Window.Previous(5538)">
+				<effect type="slide" start="0,0" end="4000,0" time="0" delay="0" tween="cubic" easing="out"/>
+			</animation>
+				<posx>0</posx>
+				<posy>300</posy>
+				<include>Common_Settings_Label</include>
+				<label>Perfis disponíveis</label>
+
+			</control>
+
+			<control type="list" id="2">
+<animation type="Conditional" condition="Window.Previous(5538)">
+				<effect type="slide" start="0,0" end="4000,0" time="0" delay="0" tween="cubic" easing="out"/>
+			</animation>
+				<posx>0</posx>
+				<posy>360</posy>
+				<width>700</width>
+				<height>180</height>
+				<viewtype label="535">list</viewtype>
+				<pagecontrol>81</pagecontrol>
+				<scrolltime tween="cubic" easing="out">600</scrolltime>
+				<preloaditems>2</preloaditems>
+				<onup>7</onup>
+						
+				<ondown>-</ondown>
+				<onright>9000</onright>
+
+				<itemlayout width="700" height="60">
+
+					<control type="label">
+
+						<posx>32</posx>
+						<posy>0</posy>
+						<width min="20" max="636">auto</width>
+						<height>60</height>
+						<label>$INFO[ListItem.Label]</label>
+						<font>Menu-List</font>
+						<textcolor>Settings_Label</textcolor>
+						<aligny>center</aligny>
+
+						<visible>!ListItem.IsSelected</visible>
+
+					</control>
+
+					<control type="group">
+
+						<visible>ListItem.IsSelected</visible>
+
+						<control type="image">
+
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>700</width>
+							<height>60</height>
+							<texture>colors/color_keyboard_dark.png</texture>
+
+						</control>
+
+						<control type="label">
+
+							<posx>32</posx>
+							<posy>0</posy>
+							<width min="20" max="636">auto</width>
+							<height>60</height>
+							<label>$INFO[ListItem.Label]</label>
+							<font>Menu-List</font>
+							<textcolor>Label_Normal</textcolor>
+							<aligny>center</aligny>
+
+						</control>
+
+					</control>
+
+
+				</itemlayout>
+
+				<focusedlayout width="700" height="60">
+
+					<control type="group">
+
+						<visible>!Control.HasFocus(2)</visible>
+
+						<control type="image">
+
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>700</width>
+							<height>60</height>
+							<texture>colors/color_white.png</texture>
+							<colordiffuse>Settings_Background_Dark</colordiffuse>
+
+						</control>	
+
+						<control type="label">
+
+							<posx>32</posx>
+							<posy>0</posy>
+							<width min="20" max="636">auto</width>
+							<height>60</height>
+							<label>$INFO[ListItem.Label]</label>
+							<font>Menu-List</font>
+							<textcolor>Label_Dark</textcolor>
+							<aligny>center</aligny>
+
+						</control>
+
+					</control>
+
+					<control type="group">
+
+						<visible>Control.HasFocus(2)</visible>
+
+						<control type="image">
+
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>700</width>
+							<height>60</height>
+							<texture>colors/color_white.png</texture>
+							<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+
+						</control>
+
+						<control type="label">
+
+							<posx>32</posx>
+							<posy>0</posy>
+							<width min="20" max="636">auto</width>
+							<height>60</height>
+							<label>$INFO[ListItem.Label]</label>
+							<font>Menu-List</font>
+							<textcolor>Label_Normal</textcolor>
+							<aligny>center</aligny>
+							<scrollspeed>0</scrollspeed>
+
+						</control>
+
+					</control>
+
+				</focusedlayout>
+
+			</control>
+
+		</control>	
+
+	</controls>
+
+</window>	
+
+		<control type="group">
+			<posx>340</posx>
+			<posy>140</posy>
+<animation type="Conditional" condition="Window.Previous(5538)">
+				<effect type="slide" start="0,0" end="4000,0" time="0" delay="0" tween="cubic" easing="out"/>
+			</animation>
+			<control type="image">
+				<posx>-20</posx>
+				<posy>-20</posy>
+				<width>640</width>
+				<height>496</height>
+				<texture border="22">other_textures/ContentPanel.png</texture>
+			</control>
+
+			<control type="radiobutton" id="4">
+				<description>Ativar tela de entrada</description>
+				<posx>10</posx>
+				<posy>36</posy>
+				<width>580</width>
+				<label>20096</label>
+				<align>left</align>
+				<onright>-</onright>
+				<onleft>-</onleft>
+				<onup>-</onup>
+				<ondown>5</ondown>
+			</control>
+
+	
+
+			<control type="list" id="2">
+				<posx>10</posx>
+				<posy>106</posy>
+				<width>580</width>
+				<height>322</height>
+				<onleft>-</onleft>
+				<onright>-</onright>
+				<onup>4</onup>
+				<ondown>-</ondown>
+
+				<itemlayout height="46">
+
+					<control type="image">
+						<width>580</width>
+						<height>44</height>
+						<texture border="2">other_textures/ButtonNF.png</texture>
+					</control>
+
+					<control type="label">
+						<posx>15</posx>
+						<width>550</width>
+						<info>ListItem.Label</info>
+					</control>
+
+					<control type="label">
+						<posx>565</posx>
+						<width>550</width>
+						<align>right</align>
+						<info>ListItem.Label2</info>
+					</control>
+
+				</itemlayout>
+
+				<focusedlayout height="46">
+
+					<control type="image">
+						<width>580</width>
+						<height>44</height>
+						<texture border="5">other_textures/ButtonFO.png</texture>
+						<animation effect="fade" start="100" end="50" condition="!Control.HasFocus(2)">Conditional</animation>
+					</control>
+
+					<control type="label">
+						<posx>15</posx>
+						<width>550</width>
+						<info>ListItem.Label</info>
+					</control>
+
+					<control type="label">
+						<posx>565</posx>
+						<width>550</width>
+						<align>right</align>
+						<info>ListItem.Label2</info>
+					</control>
+
+				</focusedlayout>
+
+			</control>
+
+		</control>
+<include>Xbox_Logo</include>
+	</controls>
+
+</window>

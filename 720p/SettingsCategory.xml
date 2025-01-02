@@ -1,0 +1,117 @@
+<!-- Foundation -->
+<window id="12">
+
+	<defaultcontrol always="true">3</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	
+	
+		<onload>Skin.SetString(snapwindow, 12)</onload>
+<onload condition="!Skin.HasSetting(snapie)">Skin.ToggleSetting(snapie)</onload>
+<onload condition="Skin.HasSetting(gaming)">Skin.ToggleSetting(gaming)</onload>
+<onload>Skin.SetString(snap, demo/sna/settings.jpg,0)</onload>
+<onload>Skin.SetString(sn,Configurações)</onload>
+	<onload condition="Skin.HasSetting(SnapFeature) + Skin.HasSetting(SnapAlways)">Skin.SetString(snap, C:\Assistance\Snap\Pic\Item.jpg,0)</onload>
+<onload condition="Skin.HasSetting(SnapFeature) + Skin.HasSetting(SnapAlways)">AlarmClock(startsnap,RunScript(special://skin/system/Snap.py),00:01,silent)</onload>
+
+	<controls>
+
+<include>Common_Settings_Background2</include>
+		
+		<control type="group">
+		
+			<include>Common_Settings_Header_Back</include>
+			
+			<control type="label" id="2">
+	
+				<include>Common_Settings_Header</include>
+				
+			</control>
+
+			<control type="grouplist" id="3">
+					
+				<description>grouplist for context buttons</description>
+				<posx>0</posx>
+				<posy>100</posy>
+				<width>420</width>
+				<height max="600">auto</height>
+				<itemgap>0</itemgap>
+				<onright>5</onright>
+				
+			</control>	
+			
+		</control>
+		
+		<control type="group">
+		
+			<posx>500</posx>
+			<posy>0</posy>
+			<width>700</width>
+			<height>480</height>
+			 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="60" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+			<include>Common_Animation_Settings_Options</include>
+		
+			<control type="grouplist" id="5">
+				
+				<description>Control Area</description>
+				<posx>0</posx>
+				<posy>100</posy>
+				<width>700</width>
+				<height>540</height>
+				<itemgap>0</itemgap>
+				<onleft>3</onleft>
+				<onright>3</onright>
+				<orientation>vertical</orientation>
+				<pagecontrol>81</pagecontrol>
+				
+			</control>
+		
+		</control>
+		
+		<!--Scrollbar-->
+		<control type="scrollbar" id="81">
+		
+			<include>Common_Settings_Scrollbar_Vertical</include>
+			
+			<posx>1260</posx>
+			<posy>100</posy>
+			<height>540</height>
+			
+			<animation effect="fade" start="100" end="20" time="200" reversible="true" condition="!Control.HasFocus(81)">Conditional</animation>
+			
+		</control>
+
+		<control type="button" id="7">
+			
+			<description>Default Button</description>
+			<include>Common_Settings_Button</include>
+			
+		</control>
+
+		<control type="radiobutton" id="8">
+			
+			<description>Default Radio Button</description>
+			<include>Common_Settings_RadioButton</include>
+			
+		</control>
+
+		<control type="spincontrolex" id="9">
+		
+			<description>Default Spin Control</description>
+			<include>Common_Settings_SpinButton</include>
+			
+		</control>
+
+		<control type="button" id="10">
+			
+			<description>Default Category Button</description>
+			<include>Common_Settings_Menu</include>
+			
+		</control>
+		<include>Xbox_Logo</include>
+<include>Snapped_Content</include>	
+	</controls>
+
+</window>

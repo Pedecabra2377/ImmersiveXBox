@@ -1,0 +1,291 @@
+<!-- Foundation -->	
+<window id="6">
+
+	<defaultcontrol always="true">53</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<views>50,51,52,53,54,55,56,58,59,501</views>
+	
+	<!--Splash Screen-->
+	<onload condition="!Skin.HasSetting(disablesplash)  + Window.Previous(fullscreenvideo)">ActivateWindow(60)</onload>
+	
+
+	<onload condition="Skin.HasSetting(Searching)">AlarmClock(searcher,Skin.ToggleSetting(Searching),00:01.60,silent)</onload>
+	<onload condition="System.HasAddon(script.randomandlastitems) + Skin.HasSetting(ShowHistorySection_Video)">XBMC.RunScript(script.randomandlastitems,limit=10,method=Last,playlist=special://skin/playlists/History (Movies).xsp,menu=Menu1)</onload>
+	<onload condition="System.HasAddon(script.randomandlastitems) + Skin.HasSetting(ShowHistorySection_Video)">XBMC.RunScript(script.randomandlastitems,limit=10,method=Last,playlist=special://skin/playlists/History (TV Shows).xsp,menu=Menu2)</onload>
+	<onload condition="System.HasAddon(script.tv.show.next.aired) + Skin.HasSetting(ShowAiringTodaySection_Video)">XBMC.RunScript(script.tv.show.next.aired,backend=True)</onload>
+	
+	<onload>AlarmClock(MoveFeatured,Control.Move(9001,1),00:30,silent,loop)</onload>
+	<onunload>XBMC.CancelAlarm(MoveFeatured,true)</onunload>
+	
+	
+			<onload>Skin.SetString(snapwindow, 6)</onload>
+<onload condition="!Skin.HasSetting(snapie)">Skin.ToggleSetting(snapie)</onload>
+<onload condition="Skin.HasSetting(gaming)">Skin.ToggleSetting(gaming)</onload>
+<onload>Skin.SetString(snap, demo/sna/vid.jpg,0)</onload>
+<onload>Skin.SetString(sn,Coleção de TV e filmes)</onload>
+	<onload condition="Skin.HasSetting(SnapFeature) + Skin.HasSetting(SnapAlways)">Skin.SetString(snap, C:\Assistance\Snap\Pic\Item.jpg,0)</onload>
+<onload condition="Skin.HasSetting(SnapFeature) + Skin.HasSetting(SnapAlways)">AlarmClock(startsnap,RunScript(special://skin/system/Snap.py),00:01,silent)</onload>
+
+	<controls>
+
+		<!--Background Area-->
+
+																							<control type="image">
+									 <include condition="!Window.Previous(Home)">Common_Animation_Window</include>
+					  <include condition="Window.Previous(Home)">Common_Animation_apps_dash</include> 		
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1280</width>
+								<height>720</height>
+								<texture>colors\color_black2.png</texture>
+<visible>!Window.Previous(8869) + !Window.Previous(8862)</visible>
+							</control>	
+								
+						
+							<control type="label">
+				 <include condition="!Window.Previous(Home)">Common_Animation_Window</include>
+					  <include condition="Window.Previous(Home)">Common_Animation_apps_dash</include> 
+			
+					<posx>185</posx>
+					<posy>28</posy>
+					<width>550</width>
+					<height>48</height>
+					<label>Xbox Vídeo</label>
+					<font>Charms-Date-big</font>
+					<textcolor>FFFFFFFF</textcolor>
+					<aligny>center</aligny>
+						<alignx>center</alignx>
+						<visible>!Window.Previous(8869) + !Window.Previous(8862)</visible>
+				</control>
+				
+				
+																	<control type="image">
+									 <include condition="!Window.Previous(Home)">Common_Animation_Window</include>
+					  <include condition="Window.Previous(Home)">Common_Animation_apps_dash</include> 			
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1280</width>
+								<height>720</height>
+								<texture>demo\xboxmusic.png</texture>
+<visible>Window.Previous(8869)</visible>
+							</control>	
+							
+								<control type="label">
+					 <include condition="!Window.Previous(Home)">Common_Animation_Window</include>
+					  <include condition="Window.Previous(Home)">Common_Animation_apps_dash</include> 	
+			
+					<posx>185</posx>
+					<posy>28</posy>
+					<width>550</width>
+					<height>48</height>
+					<label>Xbox Música</label>
+					<font>Charms-Date-big</font>
+					<textcolor>black</textcolor>
+					<aligny>center</aligny>
+						<alignx>center</alignx>
+						<visible>Window.Previous(8869)</visible>
+				</control>
+				<control type="image">
+										 <include condition="!Window.Previous(Home)">Common_Animation_Window</include>
+					  <include condition="Window.Previous(Home)">Common_Animation_apps_dash</include> 		
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1280</width>
+								<height>720</height>
+								<texture>demo\xboxmusic.png</texture>
+<visible>Window.Previous(8862)</visible>
+							</control>	
+							
+								<control type="label">
+					 <include condition="!Window.Previous(Home)">Common_Animation_Window</include>
+					  <include condition="Window.Previous(Home)">Common_Animation_apps_dash</include> 
+			
+					<posx>185</posx>
+					<posy>28</posy>
+					<width>550</width>
+					<height>48</height>
+					<label>Xbox Música</label>
+					<font>Charms-Date-big</font>
+					<textcolor>black</textcolor>
+					<aligny>center</aligny>
+						<alignx>center</alignx>
+						<visible>Window.Previous(8862)</visible>
+				</control>
+		<control type="group">
+		
+			<include>Common_Dimensions</include>
+		 <include condition="!Window.Previous(Home)">Common_Animation_Window</include>
+					  <include condition="Window.Previous(Home)">Common_Animation_apps_dash</include> 
+		
+			<!--Top Area-->
+			
+
+			<include>Common_Overlay</include>
+			
+			<!--Content Area-->
+			<control type="group">
+			
+				<posx>0</posx>
+				<posy>100</posy>
+				<width>1280</width>
+				<height>480</height>
+				
+				<!--Animation-->
+			
+				<include condition="!Skin.HasSetting(disablesplash)">Common_Animation_Content</include>
+				
+				<!--Available Views-->
+
+			
+ <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="60" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+<include>ViewExtendedListAlbums</include>
+<include condition="!Skin.HasSetting(List)">ViewList</include>
+				<include condition="!Skin.HasSetting(Poster)">ViewPoster</include>
+				<include condition="!Skin.HasSetting(Square)">ViewSquare</include>
+				<include condition="!Skin.HasSetting(Thumbnail)">ViewThumbnail</include>
+				<include condition="!Skin.HasSetting(ExtendedList)">ViewExtendedList</include>
+				<include condition="!Skin.HasSetting(ExtendedListSquare)">ViewExtendedList_Square</include>
+				<include condition="!Skin.HasSetting(Grid)">ViewGrid</include>
+				<include condition="!Skin.HasSetting(GridEpisodes)">ViewGrid_Episodes</include>
+				<include condition="!Skin.HasSetting(Details)">ViewDetails</include>
+				<include condition="!Skin.HasSetting(Banner)">ViewBanner</include>
+
+				
+			</control>
+			
+			<!--Bottom Area-->
+			<control type="group">
+			
+				<posx>0</posx>
+				<posy>620</posy>
+				<width>1280</width>
+				<height>100</height>
+			
+			
+				
+			</control>
+			
+			<!--Next Aired Notification-->
+			
+			
+			<!--Sort Letter Indicator-->
+
+			
+			<!--Context Menu-->
+			<include condition="!Skin.HasSetting(disableappbar)">Common_AppBar</include>
+	
+		</control>	
+		
+			<control type="image">
+				<visible>!Skin.HasSetting(gamertag) + !Skin.HasSetting(disableprofilepic) + !Skin.HasSetting(gpic) + Skin.HasSetting(Logger)</visible>
+																										<include>Common_Animation_Window</include>	
+				<posx>106</posx>
+				<posy>34</posy>
+				<width>46</width>
+				<height>45</height>
+
+								<texture background="true" fallback="overlays/defa.jpg">$INFO[System.ProfileThumb]</texture>
+				
+			</control>
+						<control type="image">
+				<visible>!Skin.HasSetting(gamertag) + !Skin.HasSetting(disableprofilepic) + Skin.HasSetting(gpic) + Skin.HasSetting(Logger)</visible>
+																														<include>Common_Animation_Window</include>		
+				<posx>106</posx>
+				<posy>34</posy>
+				<width>46</width>
+				<height>45</height>
+
+								<texture background="true" fallback="overlays/defa.jpg">$INFO[Skin.String(gamerpic)]</texture>
+				
+			</control>
+			
+			
+			
+				<control type="image">
+				<visible>!Skin.HasSetting(gamertag) + !Skin.HasSetting(disableprofilepic) + !Skin.HasSetting(gpic) + !Skin.HasSetting(Logger)</visible>
+																												<include>Common_Animation_Window</include>		
+				<posx>106</posx>
+				<posy>34</posy>
+				<width>46</width>
+				<height>45</height>
+
+								<texture background="true" fallback="overlays/default95.png">overlays/defa.jpg</texture>
+				
+			</control>
+						<control type="image">
+				<visible>!Skin.HasSetting(gamertag) + !Skin.HasSetting(disableprofilepic) + Skin.HasSetting(gpic) + !Skin.HasSetting(Logger)</visible>
+																														<include>Common_Animation_Window</include>		
+				<posx>106</posx>
+				<posy>34</posy>
+				<width>46</width>
+				<height>45</height>
+
+								<texture background="true" fallback="overlays/default95.png">overlays/defa.jpg</texture>
+				
+			</control>
+			
+			
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+			<texture>XBOXnew.png</texture>
+			<aspectratio>stretch</aspectratio>
+		<visible>Skin.HasSetting(Searching)</visible>
+		</control>
+
+
+	
+	<!--Overlay Background-->
+		<include>Xbox_Logo</include>
+		<control type="image">
+		
+			<include>Common_Dimensions</include>
+			<texture background="true">personalization\personalization_circles.png</texture>
+			<colordiffuse>FanartDiffuse</colordiffuse>
+			
+			<include>Common_Animation_Window_Dark</include>
+			<visible>Skin.HasSetting(Searching)</visible>
+		</control>
+	
+		<control type="image">
+			
+			<description>Busy animation</description>
+			<posx>616</posx>
+			<posy>339</posy>
+			<width>85</width>
+			<height>85</height>
+			<texture>buffer/buffer_progress.png</texture>
+			<aspectratio>keep</aspectratio>
+			<visible>Skin.HasSetting(Searching)</visible>
+			<animation effect="rotate" end="-360" center="auto" time="1200" loop="true" condition="true">Conditional</animation>
+			
+		</control>
+				
+
+
+								<control type="label">
+					<include>Common_Animation_Window</include>
+					<description>Profile Name</description>
+					<posx>380</posx>
+					<posy>200</posy>
+					<width>500</width>
+					        <align>center</align>
+					<label>Procurando por $INFO[Skin.String(tube)]</label>
+					<font>Profile-Settings-Name</font>
+					<textcolor>Label_Normal</textcolor>
+						<visible>Skin.HasSetting(Searching)</visible>
+				</control>
+								
+				<inclide condition="!Window.Previous(8869) + Window.Previous(8862)">Xbox_Logo_dark</inclide>
+				<inclide condition="Window.Previous(8869) + !Window.Previous(8862)">Xbox_Logo_dark</inclide>
+				<inclide condition="!Window.Previous(8869) + !Window.Previous(8862)">Xbox_Logo</inclide>
+						<include>Snapped_Content</include>
+						
+	</controls>
+
+</window>

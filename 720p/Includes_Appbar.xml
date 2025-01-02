@@ -1,0 +1,829 @@
+<includes>
+	
+	<include name="Common_AppBar">
+		
+		<control type="group">
+		
+			<posx>0</posx>
+			<posy>680</posy>
+			
+			<visible>!Window.IsVisible(virtualkeyboard) + ![StringCompare(Container.FolderPath,videodb://1/) | StringCompare(Container.FolderPath,library://video/movies/) | StringCompare(Container.FolderPath,videodb://2/) | StringCompare(Container.FolderPath,library://video/tvshows/) | [IsEmpty(Container.FolderPath) + StringCompare(Window.Property(xmlfile),MyMusicNav.xml)]]</visible>
+			
+			<animation type="Conditional" condition="Skin.HasSetting(ShowAppBar) | ControlGroup(9000).HasFocus">
+				<effect type="slide" start="0,0" end="0,-76" time="200"/>
+			</animation>
+			
+			<control type="image" id="8000">
+				
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>116</height>
+				<texture>colors/color_white.png</texture>
+				<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+				
+				<visible>Skin.HasSetting(ShowAppBar) | ControlGroup(9000).HasFocus</visible>
+				
+				<animation type="Visible">
+					<effect type="fade" start="0" end="100" time="200"/>
+				</animation>
+				
+				<animation type="Hidden">
+					<effect type="fade" start="100" end="0" time="200"/>
+				</animation>
+				
+			</control>
+			
+			<control type="button" id="8001">
+				
+				<posx>1208</posx>
+				<posy>0</posy>
+				<width>72</width>
+				<height>72</height>
+				<texturefocus>appbar/appbar_overflowdots.png</texturefocus>
+				<texturenofocus>appbar/appbar_overflowdots.png</texturenofocus>
+				<colordiffuse>Label_Normal</colordiffuse>
+				<aspectratio aligny="top">center</aspectratio>
+				<onclick>Skin.ToggleSetting(ShowAppBar)</onclick>
+				
+			</control>
+			
+			<!--Menu Buttons-->
+			<control type="grouplist" id="9000">
+			
+				<posx>32</posx>
+				<posy>16</posy>
+				<width>1280</width>
+				<height>116</height>
+				<itemgap>16</itemgap>
+				<orientation>horizontal</orientation>
+				<usecontrolcoords>true</usecontrolcoords>
+				
+				<visible allowhiddenfocus="true">Skin.HasSetting(ShowAppBar) | ControlGroup(9000).HasFocus</visible>
+				
+				<animation type="Visible">
+					<effect type="fade" start="0" end="100" time="200"/>
+				</animation>
+				
+				<animation type="Hidden">
+					<effect type="fade" start="100" end="0" time="200"/>
+				</animation>
+				
+				<!--Addons-->
+				<include condition="SubString(Window.Property(xmlfile),script-NextAired-TVGuide)">AppBar_NextAired</include>
+				
+				<!--Windows-->
+				<include condition="StringCompare(Window.Property(xmlfile),AddonBrowser.xml)">AppBar_AddonBrowser</include>
+				<include condition="StringCompare(Window.Property(xmlfile),MyMusicNav.xml)">AppBar_MyVideoNav</include>
+				<include condition="StringCompare(Window.Property(xmlfile),MyMusicPlaylist.xml)">AppBar_MyMusicPlaylist</include>
+				<include condition="StringCompare(Window.Property(xmlfile),MyMusicSongs.xml)">AppBar_MyMusicSongs</include>
+				<include condition="StringCompare(Window.Property(xmlfile),MyPics.xml)">AppBar_MyPics</include>
+				<include condition="StringCompare(Window.Property(xmlfile),MyPrograms.xml)">AppBar_MyVideoNav</include>
+				<include condition="StringCompare(Window.Property(xmlfile),MyVideoNav.xml)">AppBar_MyVideoNav</include>
+				<include condition="StringCompare(Window.Property(xmlfile),MyVideoPlaylist.xml)">AppBar_MyVideoPlaylist</include>
+				<include condition="StringCompare(Window.Property(xmlfile),MyWeather.xml)">AppBar_MyWeather</include>
+				
+			</control>
+			
+		</control>
+
+	</include>
+	
+	<include name="AppBar_AddonBrowser">
+		
+		<!--View List-->
+		<control type="button" id="9110">
+			
+			<include>Common_AppBar_View_List</include>
+			
+		</control>
+			
+		<!--View Square Thumbnails-->
+		<control type="button" id="9115">
+			
+			<include>Common_AppBar_View_Square</include>
+			
+		</control>
+		
+		<!--View Details-->
+		<control type="button" id="9116">
+			
+			<include>Common_AppBar_View_Details</include>
+			
+		</control>
+		
+		<!--Divider-->
+		<control type="image" id="9150">
+			<include>Common_AppBar_Divider</include>
+		</control>
+		
+		<!--Sort Order-->
+		<include>Common_AppBar_SortBy</include>
+		
+		<!--Sort A-Z-->
+		<include>Common_AppBar_SortDirection</include>
+		
+		<!--Divider-->
+		<control type="image" id="9151">
+			<include>Common_AppBar_Divider</include>
+		</control>	
+		
+		<!--Filter-->
+		<include>Common_AppBar_Filter</include>
+		
+		<!--Divider-->
+		<control type="image" id="9152">
+			<include>Common_AppBar_Divider</include>
+		</control>
+		
+		<!--Updates-->
+		<include>Common_AppBar_AutoUpdate</include>
+		
+		<!--Notifications-->
+		<include>Common_AppBar_Notifications</include>
+		
+		<!--Language Filter-->
+		<include>Common_AppBar_LanguageFilter</include>
+		
+	</include>	
+	
+	<!--Appbar for MyMusicNav.xml-->
+	<include name="AppBar_MyMusicNav">
+		
+		<!--View List-->
+		<control type="button" id="9110">
+			
+			<include>Common_AppBar_View_List</include>
+			
+		</control>
+		
+		<!--View Thumbnails-->
+		<control type="button" id="9111">
+			
+			<include>Common_AppBar_View_Thumb</include>
+			<visible>![Container.Content(albums) | Container.Content(songs)]</visible>
+			
+		</control>
+		
+		<!--View Extended List-->
+		<control type="button" id="9112">
+			
+			<include>Common_AppBar_View_Extended</include>
+			<visible>Container.Content(artists)</visible>
+			
+		</control>
+		
+		<!--View Extended List-->
+		<control type="button" id="9113">
+			
+			<include>Common_AppBar_View_ExtendedSqaure</include>
+			<visible>Container.Content(albums)</visible>
+			
+		</control>
+		
+		<!--View Square Thumbnails-->
+		<control type="button" id="9114">
+			
+			<include>Common_AppBar_View_Square</include>
+			<visible>Container.Content(artists) | Container.Content(albums) | Container.Content(songs) | Container.Content(addons) | SubString(Container.FolderPath,plugin,left)</visible>
+			
+		</control>
+		
+		<!--View Details-->
+		<control type="button" id="9115">
+			
+			<include>Common_AppBar_View_Details</include>
+			
+		</control>
+		
+		<!--Divider-->
+		<control type="image" id="9150">
+			<include>Common_AppBar_Divider</include>
+		</control>
+		
+		<!--Sort Order-->
+		<include>Common_AppBar_SortBy</include>
+		
+		<!--Sort A-Z-->
+		<include>Common_AppBar_SortDirection</include>
+		
+		<!--Divider-->
+		<control type="image" id="9151">
+			<include>Common_AppBar_Divider</include>
+		</control>
+		
+		<!--Files-->
+		<include>Common_AppBar_Files</include>
+		
+		<!--Divider-->
+		<control type="image" id="9152">
+			<include>Common_AppBar_Divider</include>
+		</control>
+		
+		<!--Filter-->
+		<include>Common_AppBar_Filter</include>
+		
+		<!--Search-->
+		<include>Common_AppBar_Search</include>
+		
+	</include>
+	
+	<!--Appbar for MyMusicPlaylist.xml-->
+	<include name="AppBar_MyMusicPlaylist">
+	
+		<!--Save Button-->
+		<control type="button" id="21">
+			
+			<include>Common_AppBar_Button</include>
+			<texturefocus>appbar/appbar_save_focus.png</texturefocus>
+			<texturenofocus>appbar/appbar_save.png</texturenofocus>
+			<label>salvar[CR]playlist</label>
+			
+		</control>
+		
+		<!--Clear Button-->
+		<control type="button" id="22">
+			
+			<include>Common_AppBar_Button</include>
+			<texturefocus>appbar/appbar_clear_focus.png</texturefocus>
+			<texturenofocus>appbar/appbar_clear.png</texturenofocus>
+			<label>limpar[CR]playlist</label>
+			
+		</control>
+		
+		<!--Divider-->
+		<control type="image" id="9150">
+			<include>Common_AppBar_Divider</include>
+		</control>
+		
+		<!--Random Button-->
+		<control type="radiobutton" id="400">
+	
+			<include>Common_AppBar_Button</include>
+			<texturefocus>playercontrols/playercontrol_shuffle_focus.png</texturefocus>
+			<texturenofocus>playercontrols/playercontrol_shuffle.png</texturenofocus>
+			<textureradioon>appbar/appbar_radioon.png</textureradioon>
+			<textureradiooff>-</textureradiooff>
+			<radiowidth>48</radiowidth>
+			<radioheight>48</radioheight>
+			<radioposx>6</radioposx>
+			<label>$VAR[OSD_Random_Label]</label>
+			<onclick>playercontrol(random)</onclick>
+			
+		</control>
+		
+		<!--Skip Previous Button-->
+		<control type="button" id="401">
+			
+			<include>Common_AppBar_Button</include>
+			<texturefocus>playercontrols/playercontrol_skipback_focus.png</texturefocus>
+			<texturenofocus>playercontrols/playercontrol_skipback.png</texturenofocus>
+			<label>pular[CR]anterior</label>
+			<onclick>playercontrol(previous)</onclick>
+			
+		</control>
+		
+		<!--Play/Pause Button-->
+		<control type="togglebutton" id="403">
+			
+			<include>Common_AppBar_Button</include>
+			<texturefocus>playercontrols/playercontrol_pause_focus.png</texturefocus>
+			<texturenofocus>playercontrols/playercontrol_pause.png</texturenofocus>
+			<alttexturefocus>playercontrols/playercontrol_play_focus.png</alttexturefocus>
+			<alttexturenofocus>playercontrols/playercontrol_play.png</alttexturenofocus>
+			<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
+			<label>$VAR[OSD_PlayPause_Label]</label>
+			<onclick>playercontrol(play)</onclick>
+			
+		</control>
+		
+		<!--Skip Next Button-->
+		<control type="button" id="406">
+				
+			<include>Common_AppBar_Button</include>
+			<texturefocus>playercontrols/playercontrol_skipnext_focus.png</texturefocus>
+			<texturenofocus>playercontrols/playercontrol_skipnext.png</texturenofocus>
+			<label>pular[CR]próximo</label>
+			<onclick>playercontrol(next)</onclick>
+			
+		</control>
+		
+		<!--Repeat Button-->
+		<control type="button" id="407">
+				
+			<include>Common_AppBar_Button</include>
+			<texturefocus>playercontrols/playercontrol_repeat_focus.png</texturefocus>
+			<texturenofocus>playercontrols/playercontrol_repeat.png</texturenofocus>
+			<label>$VAR[OSD_Repeat_Label]</label>
+			<onclick>playercontrol(repeat)</onclick>
+			
+		</control>
+	
+	</include>
+	
+	<!--Appbar for MyMusicSongs.xml-->
+	<include name="AppBar_MyMusicSongs">
+		
+		<!--View List-->
+		<control type="button" id="9110">
+			
+			<include>Common_AppBar_View_List</include>
+			
+		</control>
+		
+		<!--View Thumbnails-->
+		<control type="button" id="9111">
+			
+			<include>Common_AppBar_View_Thumb</include>
+			<visible>![Container.Content(albums) | Container.Content(songs)]</visible>
+			
+		</control>
+		
+		<!--View Extended List-->
+		<control type="button" id="9112">
+			
+			<include>Common_AppBar_View_Extended</include>
+			<visible>Container.Content(artists)</visible>
+			
+		</control>
+		
+		<!--View Extended List-->
+		<control type="button" id="9113">
+			
+			<include>Common_AppBar_View_ExtendedSqaure</include>
+			<visible>Container.Content(albums)</visible>
+			
+		</control>
+		
+		<!--View Square Thumbnails-->
+		<control type="button" id="9114">
+			
+			<include>Common_AppBar_View_Square</include>
+			
+		</control>
+		
+		<!--View Details-->
+		<control type="button" id="9115">
+			
+			<include>Common_AppBar_View_Details</include>
+			
+		</control>
+		
+		<!--Divider-->
+		<control type="image" id="9150">
+			<include>Common_AppBar_Divider</include>
+		</control>
+		
+		<!--Sort Order-->
+		<include>Common_AppBar_SortBy</include>
+		
+		<!--Sort A-Z-->
+		<include>Common_AppBar_SortDirection</include>
+		
+		<!--Divider-->
+		<control type="image" id="9151">
+			<include>Common_AppBar_Divider</include>
+		</control>
+		
+		<!--Scan to Library-->
+		<include>Common_AppBar_ScanToLibrary</include>
+		
+		<!--Record-->
+		<include>Common_AppBar_Record</include>
+		
+		<!--Rip CD-->
+		<include>Common_AppBar_RipCD</include>
+		
+		<!--Divider-->
+		<control type="image" id="9152">
+			<include>Common_AppBar_Divider</include>
+		</control>
+		
+		<!--Flatten-->
+		<include>Common_AppBar_Flatten</include>
+		
+		<!--Filter-->
+		<include>Common_AppBar_Filter</include>
+		
+		<!--Search-->
+		<include>Common_AppBar_Search</include>
+		
+	</include>
+	
+	<!--Appbar for MyPics.xml-->
+	<include name="AppBar_MyPics">
+	
+		<!--View List-->
+		<control type="button" id="9110">
+			
+			<include>Common_AppBar_View_List</include>
+			
+		</control>
+		
+		<!--View Thumbnails-->
+		<control type="button" id="9112">
+			
+			<include>Common_AppBar_View_Thumb</include>
+			
+		</control>
+		
+		<!--View Tall-->
+		<control type="button" id="9113">
+			
+			<include>Common_AppBar_View_Tall</include>
+			
+		</control>
+		
+		<!--View Square-->
+		<control type="button" id="9114">
+			
+			<include>Common_AppBar_View_Square</include>
+			<include>SubString(Container.FolderPath,addons://)</include>
+			
+		</control>
+		
+		<!--Divider-->
+		<control type="image" id="9150">
+			<include>Common_AppBar_Divider</include>
+		</control>
+		
+		<!--Sort Order-->
+		<include>Common_AppBar_SortBy</include>
+		
+		<!--Sort A-Z-->
+		<include>Common_AppBar_SortDirection</include>
+		
+		<!--Divider-->
+		<control type="image" id="9151">
+			<include>Common_AppBar_Divider</include>
+		</control>
+		
+		<!--Slideshow-->
+		<include>Common_AppBar_Slideshow</include>
+		
+		<!--Slideshow-->
+		<include>Common_AppBar_Slideshow_Recursive</include>
+		
+		<!--Slideshow (Randomize)-->
+		<include>Common_AppBar_RandomizeSlideshow</include>
+		
+		<!--Divider-->
+		<control type="image" id="9152">
+			<include>Common_AppBar_Divider</include>
+		</control>	
+		
+		<!--Filter-->
+		<include>Common_AppBar_Filter</include>
+		
+	</include>
+	
+	<!--Appbar for MyPrograms.xml-->
+	<include name="AppBar_MyPrograms">
+	
+		<!--View List-->
+		<control type="button" id="9110">
+			
+			<include>Common_AppBar_View_List</include>
+			
+		</control>
+		
+		<!--View Extended List-->
+		<control type="button" id="9114">
+			
+			<include>Common_AppBar_View_ExtendedSqaure</include>
+			
+		</control>
+		
+		<!--View Square Thumbnails-->
+		<control type="button" id="9115">
+			
+			<include>Common_AppBar_View_Square</include>
+			
+		</control>
+		
+		<!--View Details-->
+		<control type="button" id="9118">
+			
+			<include>Common_AppBar_View_Details</include>
+			
+		</control>
+		
+		<!--Divider-->
+		<control type="image" id="9150">
+			<include>Common_AppBar_Divider</include>
+		</control>	
+		
+		<!--Sort Order-->
+		<include>Common_AppBar_SortBy</include>
+		
+		<!--Sort A-Z-->
+		<include>Common_AppBar_SortDirection</include>
+		
+		<!--Divider-->
+		<control type="image" id="9151">
+			<include>Common_AppBar_Divider</include>
+		</control>	
+		
+		<!--Filter-->
+		<include>Common_AppBar_Filter</include>
+		
+	</include>
+	
+	<!--Appbar for MyVideoNav.xml-->
+	<include name="AppBar_MyVideoNav">
+		
+		<!--View List-->
+		<control type="button" id="9110">
+			
+			<include>Common_AppBar_View_List</include>
+			
+		</control>
+		
+		<!--View Posters-->
+		<control type="button" id="9111">
+			
+			<include>Common_AppBar_View_Poster</include>
+		
+			
+		</control>
+		
+		<!--View Thumbnails-->
+		<control type="button" id="9112">
+			
+			<include>Common_AppBar_View_Thumb</include>
+			
+		</control>
+		
+		<!--View Extended List-->
+		<control type="button" id="9113">
+			
+			<include>Common_AppBar_View_Extended</include>
+		
+			
+		</control>
+		
+		<!--View Extended List-->
+		<control type="button" id="9114">
+			
+			<include>Common_AppBar_View_ExtendedSqaure</include>
+		
+			
+		</control>
+		
+		<!--View Square Thumbnails-->
+		<control type="button" id="9115">
+			
+			<include>Common_AppBar_View_Square</include>
+		
+			
+		</control>
+		
+		<!--View Grid-->
+		<control type="button" id="9116">
+			
+			<include>Common_AppBar_View_Grid</include>
+			
+			
+		</control>
+		
+		<!--View Episodes Grid-->
+		<control type="button" id="9117">
+			
+			<include>Common_AppBar_View_GridEpisode</include>
+			
+			
+		</control>
+		
+		<!--View Details-->
+		<control type="button" id="9118">
+			
+			<include>Common_AppBar_View_Details</include>
+			
+		</control>
+		
+		<!--View Banner-->
+		<control type="button" id="9119">
+			
+			<include>Common_AppBar_View_Banner</include>
+		
+			
+		</control>
+		
+		<!--Divider-->
+		<control type="image" id="9150">
+			<include>Common_AppBar_Divider</include>
+		</control>	
+		
+		<!--Sort Order-->
+		<include>Common_AppBar_SortBy</include>
+		
+		<!--Sort A-Z-->
+		<include>Common_AppBar_SortDirection</include>
+		
+		<!--Divider-->
+		<control type="image" id="9151">
+			<include>Common_AppBar_Divider</include>
+		</control>	
+		
+		<!--Files-->
+		<include>Common_AppBar_Files</include>
+		
+		<!--Stack-->
+		<include>Common_AppBar_Stack</include>
+			
+		<!--Unlock Shares-->
+		<include>Common_AppBar_UnlockShares</include>
+		
+		<!--Watched/Unwatched-->
+		<include>Common_AppBar_ToggleWatched</include>
+		
+		<!--PartyMode-->
+		<include>Common_AppBar_PartyMode</include>
+		
+		<!--Flatten-->
+		<include>Common_AppBar_Flatten</include>
+		
+		<!--Filter-->
+		<include>Common_AppBar_Filter</include>
+		
+		<!--Divider-->
+		<control type="image" id="9152">
+			<include>Common_AppBar_Divider</include>
+		</control>	
+		
+		<!--Search-->
+		<include>Common_AppBar_Search</include>
+		
+	</include>
+	
+	<!--Appbar for MyVideoPlaylist.xml-->
+	<include name="AppBar_MyVideoPlaylist">
+	
+		<!--Save Button-->
+		<control type="button" id="21">
+			
+			<include>Common_AppBar_Button</include>
+			<texturefocus>appbar/appbar_save_focus.png</texturefocus>
+			<texturenofocus>appbar/appbar_save.png</texturenofocus>
+			<label>salvar[CR]playlist</label>
+			
+		</control>
+		
+		<!--Clear Button-->
+		<control type="button" id="22">
+			
+			<include>Common_AppBar_Button</include>
+			<texturefocus>appbar/appbar_clear_focus.png</texturefocus>
+			<texturenofocus>appbar/appbar_clear.png</texturenofocus>
+			<label>limpar[CR]playlist</label>
+			
+		</control>
+		
+		<!--Divider-->
+		<control type="image" id="9150">
+			<include>Common_AppBar_Divider</include>
+		</control>
+		
+		<!--Random Button-->
+		<control type="radiobutton" id="400">
+	
+			<include>Common_AppBar_Button</include>
+			<texturefocus>playercontrols/playercontrol_shuffle_focus.png</texturefocus>
+			<texturenofocus>playercontrols/playercontrol_shuffle.png</texturenofocus>
+			<textureradioon>appbar/appbar_radioon.png</textureradioon>
+			<textureradiooff>-</textureradiooff>
+			<radiowidth>48</radiowidth>
+			<radioheight>48</radioheight>
+			<radioposx>6</radioposx>
+			<label>$VAR[OSD_Random_Label]</label>
+			<onclick>playercontrol(random)</onclick>
+			
+		</control>
+		
+		<!--Skip Previous Button-->
+		<control type="button" id="401">
+			
+			<include>Common_AppBar_Button</include>
+			<texturefocus>playercontrols/playercontrol_skipback_focus.png</texturefocus>
+			<texturenofocus>playercontrols/playercontrol_skipback.png</texturenofocus>
+			<label>pular[CR]anterior</label>
+			<onclick>playercontrol(previous)</onclick>
+			
+		</control>
+		
+		<!--Play/Pause Button-->
+		<control type="togglebutton" id="403">
+			
+			<include>Common_AppBar_Button</include>
+			<texturefocus>playercontrols/playercontrol_pause_focus.png</texturefocus>
+			<texturenofocus>playercontrols/playercontrol_pause.png</texturenofocus>
+			<alttexturefocus>playercontrols/playercontrol_play_focus.png</alttexturefocus>
+			<alttexturenofocus>playercontrols/playercontrol_play.png</alttexturenofocus>
+			<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
+			<label>$VAR[OSD_PlayPause_Label]</label>
+			<onclick>playercontrol(play)</onclick>
+			
+		</control>
+		
+		<!--Skip Next Button-->
+		<control type="button" id="406">
+				
+			<include>Common_AppBar_Button</include>
+			<texturefocus>playercontrols/playercontrol_skipnext_focus.png</texturefocus>
+			<texturenofocus>playercontrols/playercontrol_skipnext.png</texturenofocus>
+			<label>pular[CR]próximo</label>
+			<onclick>playercontrol(next)</onclick>
+			
+		</control>
+		
+		<!--Repeat Button-->
+		<control type="button" id="407">
+				
+			<include>Common_AppBar_Button</include>
+			<texturefocus>playercontrols/playercontrol_repeat_focus.png</texturefocus>
+			<texturenofocus>playercontrols/playercontrol_repeat.png</texturenofocus>
+			<label>$VAR[OSD_Repeat_Label]</label>
+			<onclick>playercontrol(repeat)</onclick>
+			
+		</control>
+	
+	</include>
+	
+	<!--AppBar for MyWeather.xml-->
+	<include name="AppBar_MyWeather">
+	
+		<!--Location Button-->
+		<control type="button" id="300">
+			
+			<include>Common_AppBar_Button</include>
+			<texturefocus>appbar/appbar_location_focus.png</texturefocus>
+			<texturenofocus>appbar/appbar_location.png</texturenofocus>
+			<label>alterar[CR]localização</label>
+			<onclick>Weather.LocationNext</onclick>
+			<onup>Weather_ActiveControl</onup>
+			
+		</control>
+	
+		<!--Divider-->
+		<control type="image" id="9150">
+			<include>Common_AppBar_Divider</include>
+		</control>	
+	
+		<!--Update Button-->
+		<control type="button" id="2">
+			
+			<include>Common_AppBar_Button</include>
+			<texturefocus>appbar/appbar_refresh_focus.png</texturefocus>
+			<texturenofocus>appbar/appbar_refresh.png</texturenofocus>
+			<label>forçar[CR]atualização</label>
+			<onup>Weather_ActiveControl</onup>
+			
+		</control>
+		
+		<!--Settings Button-->
+		<control type="button" id="4">
+			
+			<include>Common_AppBar_Button</include>
+			<texturefocus>appbar/appbar_settings_focus.png</texturefocus>
+			<texturenofocus>appbar/appbar_settings.png</texturenofocus>
+			<onclick>ActivateWindow(MyWeatherSettings)</onclick>
+			<label>opções</label>
+			<onup>Weather_ActiveControl</onup>
+			
+		</control>
+		
+	</include>
+	
+	<!--AppBar for Script-NextAired-TVGuide.xml-->
+	<include name="AppBar_NextAired">
+	
+		<!--Settings Button-->
+		<control type="button" id="8">
+			
+			<include>Common_AppBar_Button</include>
+			<texturefocus>appbar/appbar_settings_focus.png</texturefocus>
+			<texturenofocus>appbar/appbar_settings.png</texturenofocus>
+			<label>opções</label>
+			<onup>207</onup>
+			
+		</control>
+		
+		<!--Divider-->
+		<control type="image" id="9150">
+			<include>Common_AppBar_Divider</include>
+		</control>	
+		
+		<!--Update Button-->
+		<control type="button" id="9">
+			
+			<include>Common_AppBar_Button</include>
+			<texturefocus>appbar/appbar_refresh_focus.png</texturefocus>
+			<texturenofocus>appbar/appbar_refresh.png</texturenofocus>
+			<label>forçar[CR]atualização</label>
+			<onup>207</onup>
+			
+		</control>
+		
+	</include>
+	
+</includes>	

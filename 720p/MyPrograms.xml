@@ -1,0 +1,139 @@
+<!-- Foundation -->
+<window id="1">
+	
+	<defaultcontrol always="true">53</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<views>50,51,52,53,54,55,56,58,59,501</views>
+	
+	<!--Splash Screen-->
+	<onload condition="!Skin.HasSetting(disablesplash)">ActivateWindow(8156)</onload>
+	
+		<onload>Skin.SetString(snapwindow, 1)</onload>
+<onload condition="!Skin.HasSetting(snapie)">Skin.ToggleSetting(snapie)</onload>
+<onload condition="Skin.HasSetting(gaming)">Skin.ToggleSetting(gaming)</onload>
+<onload>Skin.SetString(snap, demo/sna/gapps.jpg,0)</onload>
+<onload>Skin.SetString(sn,Meus jogos & Apps)</onload>
+		<onload condition="Skin.HasSetting(SnapFeature) + Skin.HasSetting(SnapAlways)">Skin.SetString(snap, C:\Assistance\Snap\Pic\Item.jpg,0)</onload>
+<onload condition="Skin.HasSetting(SnapFeature) + Skin.HasSetting(SnapAlways)">AlarmClock(startsnap,RunScript(special://skin/system/Snap.py),00:01,silent)</onload>
+
+	<controls>
+
+		<!--Background Area-->
+			 <include condition="!Window.Previous(Home)">Common_Animation_Window</include>
+					  <include condition="Window.Previous(Home)">Common_Animation_apps_dash</include> 
+		
+		
+		<control type="image">
+			<visible>!Skin.HasSetting(disablexboxlogo) + !Skin.HasSetting(ShowFanartBackground)</visible>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+			<texture>XBOXnow.jpg</texture>
+			<aspectratio>stretch</aspectratio>
+		</control>
+				<control type="image">
+			<visible>Skin.HasSetting(disablexboxlogo) + !Skin.HasSetting(ShowFanartBackground)</visible>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+			<texture>XBOXnew.png</texture>
+			<aspectratio>stretch</aspectratio>
+		</control>	
+						<control type="image">
+			<visible>Skin.HasSetting(ShowFanartBackground)</visible>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+			<texture>demo\app\steamstore\feat\tc.jpg</texture>
+			<aspectratio>stretch</aspectratio>
+		</control>	
+		
+						
+			
+				<control type="image">
+					
+					<include>Common_Dimensions</include>
+					<fadetime>800</fadetime>
+					<texture background="true">$VAR[Fanart_Image]</texture>
+					<visible>Skin.HasSetting(ShowFanartBackground)</visible>
+				</control>
+							<control type="image">
+			
+				<include>Common_Dimensions</include>
+				<texture background="true">colors/color_white.png</texture>
+				<colordiffuse>FanartDiffuse</colordiffuse>
+				
+				<visible>Skin.HasSetting(ShowFanartBackground)</visible>
+				
+			</control>
+			
+		
+		
+		
+<control type="group">
+		
+			<include>Common_Dimensions</include>
+		 <include condition="!Window.Previous(Home)">Common_Animation_Window</include>
+					  <include condition="Window.Previous(Home)">Common_Animation_apps_dash</include> 
+	
+				
+			<!--Top Area-->
+			<include>Common_Breadcrumbgames</include>
+
+			<include>Common_Overlay</include>
+			
+			<!--Content Area-->
+			<control type="group">
+			
+				<posx>0</posx>
+				<posy>100</posy>
+				<width>1280</width>
+				<height>480</height>
+				
+				<!--Animation-->
+				<include condition="!Skin.HasSetting(disablesplash)">Common_Animation_Content_Splash</include>
+				
+				<!--Available Views-->
+
+			 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="60" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+				
+				<include condition="!Skin.HasSetting(ExtendedListAlbums)">ViewExtendedList_Albums</include>
+<include condition="!Skin.HasSetting(List)">ViewList</include>
+				<include condition="!Skin.HasSetting(Poster)">ViewPoster</include>
+				<include condition="!Skin.HasSetting(Square)">ViewSquare</include>
+				<include condition="!Skin.HasSetting(Thumbnail)">ViewThumbnail</include>
+				<include condition="!Skin.HasSetting(ExtendedList)">ViewExtendedList</include>
+				<include condition="!Skin.HasSetting(ExtendedListSquare)">ViewExtendedList_Square</include>
+				<include condition="!Skin.HasSetting(Grid)">ViewGrid</include>
+				<include condition="!Skin.HasSetting(GridEpisodes)">ViewGrid_Episodes</include>
+				<include condition="!Skin.HasSetting(Details)">ViewDetails</include>
+				<include condition="!Skin.HasSetting(Banner)">ViewBanner</include>
+			</control>
+			
+			<!--Bottom Area-->
+			<control type="group">
+			
+				<posx>0</posx>
+				<posy>620</posy>
+				<width>1280</width>
+				<height>100</height>
+			
+			
+				
+			</control>	
+			
+			<!--Context Menu-->
+			<include condition="!Skin.HasSetting(disableappbar)">Common_AppBar</include>
+		
+		</control>
+		<include>Xbox_Logo</include>
+	<include>Snapped_Content</include>	
+	</controls>
+
+</window>

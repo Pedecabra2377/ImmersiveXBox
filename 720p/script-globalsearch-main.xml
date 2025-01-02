@@ -1,0 +1,1581 @@
+<window>
+	
+	<allowoverlay>no</allowoverlay>
+	
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>0</posy>
+	</coordinates>
+	
+	<!--Splash Screen-->
+	<onload condition="!Skin.HasSetting(disablesplash)">ActivateWindow(60)</onload>
+	
+	<controls>
+
+		<!--Background Area-->
+	
+		
+		<control type="group">
+		
+			<include>Common_Dimensions</include>
+			<include>Common_Animation_Window</include>
+		
+						<control type="image">
+			
+				<posy>0</posy>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+				<texture background="true">XBOXnow.jpg</texture>
+
+
+			</control>
+				<control type="image">
+			
+				<posy>0</posy>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+				<texture background="true">XBOXnew.png</texture>
+
+
+			</control>
+			<!--Top Area-->
+			<include>Common_Breadcrumb</include>
+			<include>Common_Clock</include>
+			<include>Common_Overlay</include>
+			
+			<!--Content Area-->
+			<control type="group">
+			
+				<posx>0</posx>
+				<posy>120</posy>
+				<width>1280</width>
+				<height>480</height>
+				
+				<!--Animation-->
+				<include condition="!Skin.HasSetting(disablesplash)">Common_Animation_Content</include>
+				
+				<control type="grouplist" id="101">
+				
+					<include>Common_Content_Grouplist_bing</include>
+				
+					<!--Movie List-->
+					<control type="group" id="119">
+					
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>2280</width>
+						<height>1000</height>
+						
+						<control type="label">
+								
+							<include>Common_Section_Label</include>
+							<label>[LOWERCASE]$LOCALIZE[342][/LOWERCASE]</label>
+							
+						</control>
+						
+						<control type="label" id="110">
+								
+							<include>Common_Section_Label_Right</include>
+							<label>-</label>
+							
+						</control>
+						
+						<control type="panel" id="111">
+							
+							<posx>0</posx>
+							<posy>20</posy>
+							<width>1200</width>
+							<height>700</height>
+					
+							<onup>181</onup>
+							<ondown>121</ondown>
+						<viewtype label="Extended">wrap</viewtype>
+				<orientation>horizontal</orientation>
+				<pagecontrol>68</pagecontrol>
+				<focusposition>0</focusposition>
+				<scrolltime tween="cubic" easing="out">600</scrolltime>
+				<preloaditems>2</preloaditems>
+				
+		
+				
+				<itemlayout width="320" height="480">
+				
+					<control type="group">
+					
+							<posx>2</posx>
+						<posy>38</posy>
+						<width>300</width>
+						<height>440</height>
+				
+						<control type="image">
+						
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>300</width>
+							<height>440</height>
+							<texture background="true">colors/color_white.png</texture>
+							<colordiffuse>Settings_Background_Dark</colordiffuse>
+							<include>Common_Animation_XBO</include>
+						</control>
+						
+						<control type="image">
+						
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>300</width>
+							<height>440</height>
+							<texture background="true" fallback="colors/nogame.png">$VAR[ExtendedList_Image]</texture>
+							<aspectratio aligny="top">scale</aspectratio>
+							
+						</control>
+						
+						<control type="image">
+						
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>300</width>
+							<height>440</height>
+							<texture background="true">black.png</texture>
+						
+							
+						</control>
+						
+						
+					</control>	
+					
+				</itemlayout>
+
+				<focusedlayout width="320" height="480">
+				
+					<control type="group">
+					<animation effect="zoom" end="105" center="auto" time="200" condition="Skin.HasSetting(inflateitem)">Conditional</animation>
+						<posx>2</posx>
+						<posy>38</posy>
+						<width>300</width>
+						<height>440</height>
+						
+					<control type="image">
+						
+							<posx>-2</posx>
+							<posy>-2</posy>
+							<width>304.5</width>
+							<height>444.5</height>
+							<texture background="true">colors/color_white.png</texture>
+						<include>Common_Animation_tiledash</include>
+							
+						</control>
+				
+						<control type="image">
+						
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>300</width>
+							<height>440</height>
+							<texture background="true" fallback="colors/nogame.png">$VAR[ExtendedList_Image]</texture>
+							<aspectratio aligny="top">scale</aspectratio>
+							
+						</control>
+						
+					
+						
+					</control>	
+					
+				</focusedlayout>
+
+								
+						</control>
+						
+						<!--Scrollbar-->
+					
+						
+					</control>
+					
+					<!--TV Show List-->
+					<control type="group" id="129">
+					
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>1200</width>
+						<height>600</height>
+						
+						<control type="label">
+								
+							<include>Common_Section_Label</include>
+							<label>[LOWERCASE]$LOCALIZE[20343][/LOWERCASE]</label>
+							
+						</control>
+						
+						<control type="label" id="120">
+								
+							<include>Common_Section_Label_Right</include>
+							<label>-</label>
+							
+						</control>
+						
+						<control type="panel" id="121">
+							
+							<posx>0</posx>
+							<posy>20</posy>
+							<width>1200</width>
+							<height>720</height>						
+					
+							<onup>111</onup>
+							<ondown>131</ondown>
+							<viewtype label="Extended">wrap</viewtype>
+				<orientation>horizontal</orientation>
+				<pagecontrol>68</pagecontrol>
+				<focusposition>0</focusposition>
+				<scrolltime tween="cubic" easing="out">600</scrolltime>
+				<preloaditems>2</preloaditems>
+				
+		
+				
+				<itemlayout width="320" height="480">
+				
+					<control type="group">
+					
+							<posx>2</posx>
+						<posy>38</posy>
+						<width>300</width>
+						<height>440</height>
+				
+						<control type="image">
+						
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>300</width>
+							<height>440</height>
+							<texture background="true">colors/color_white.png</texture>
+							<colordiffuse>Settings_Background_Dark</colordiffuse>
+							<include>Common_Animation_XBO</include>
+						</control>
+						
+						<control type="image">
+						
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>300</width>
+							<height>440</height>
+							<texture background="true" fallback="colors/nogame.png">$VAR[ExtendedList_Image]</texture>
+							<aspectratio aligny="top">scale</aspectratio>
+							
+						</control>
+						
+						<control type="image">
+						
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>300</width>
+							<height>440</height>
+							<texture background="true">black.png</texture>
+						
+							
+						</control>
+						
+						
+					</control>	
+					
+				</itemlayout>
+
+				<focusedlayout width="320" height="480">
+				
+					<control type="group">
+					<animation effect="zoom" end="105" center="auto" time="200" condition="Skin.HasSetting(inflateitem)">Conditional</animation>
+						<posx>2</posx>
+						<posy>38</posy>
+						<width>300</width>
+						<height>440</height>
+						
+					<control type="image">
+						
+							<posx>-2</posx>
+							<posy>-2</posy>
+							<width>304.5</width>
+							<height>444.5</height>
+							<texture background="true">colors/color_white.png</texture>
+						<include>Common_Animation_tiledash</include>
+							
+						</control>
+				
+						<control type="image">
+						
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>300</width>
+							<height>440</height>
+							<texture background="true" fallback="colors/nogame.png">$VAR[ExtendedList_Image]</texture>
+							<aspectratio aligny="top">scale</aspectratio>
+							
+						</control>
+						
+					
+						
+					</control>	
+					
+				</focusedlayout>
+
+								
+						</control>
+						
+						<!--Scrollbar-->
+						
+						
+					</control>
+				
+					<!--Season List-->
+					<control type="group" id="139">
+					
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>1200</width>
+						<height>600</height>
+						
+						<control type="label">
+								
+							<label>[LOWERCASE]$LOCALIZE[33054][/LOWERCASE]</label>
+							<include>Common_Section_Label</include>
+							
+						</control>
+						
+						<control type="label" id="130">
+								
+							<include>Common_Section_Label_Right</include>
+							<label>-</label>
+							
+						</control>
+						
+						<control type="panel" id="131">
+							
+							<posx>0</posx>
+							<posy>20</posy>
+							<width>1200</width>
+							<height>720</height>
+						
+							<onup>121</onup>
+							<ondown>141</ondown>
+								<viewtype label="Extended">wrap</viewtype>
+				<orientation>horizontal</orientation>
+				<pagecontrol>68</pagecontrol>
+				<focusposition>0</focusposition>
+				<scrolltime tween="cubic" easing="out">600</scrolltime>
+				<preloaditems>2</preloaditems>
+				
+		
+				
+				<itemlayout width="320" height="480">
+				
+					<control type="group">
+					
+							<posx>2</posx>
+						<posy>38</posy>
+						<width>300</width>
+						<height>440</height>
+				
+						<control type="image">
+						
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>300</width>
+							<height>440</height>
+							<texture background="true">colors/color_white.png</texture>
+							<colordiffuse>Settings_Background_Dark</colordiffuse>
+							<include>Common_Animation_XBO</include>
+						</control>
+						
+						<control type="image">
+						
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>300</width>
+							<height>440</height>
+							<texture background="true" fallback="colors/nogame.png">$VAR[ExtendedList_Image]</texture>
+							<aspectratio aligny="top">scale</aspectratio>
+							
+						</control>
+						
+						<control type="image">
+						
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>300</width>
+							<height>440</height>
+							<texture background="true">black.png</texture>
+						
+							
+						</control>
+						
+						
+					</control>	
+					
+				</itemlayout>
+
+				<focusedlayout width="320" height="480">
+				
+					<control type="group">
+					<animation effect="zoom" end="105" center="auto" time="200" condition="Skin.HasSetting(inflateitem)">Conditional</animation>
+						<posx>2</posx>
+						<posy>38</posy>
+						<width>300</width>
+						<height>440</height>
+						
+					<control type="image">
+						
+							<posx>-2</posx>
+							<posy>-2</posy>
+							<width>304.5</width>
+							<height>444.5</height>
+							<texture background="true">colors/color_white.png</texture>
+						<include>Common_Animation_tiledash</include>
+							
+						</control>
+				
+						<control type="image">
+						
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>300</width>
+							<height>440</height>
+							<texture background="true" fallback="colors/nogame.png">$VAR[ExtendedList_Image]</texture>
+							<aspectratio aligny="top">scale</aspectratio>
+							
+						</control>
+						
+					
+						
+					</control>	
+					
+				</focusedlayout>
+								
+						</control>
+						
+						<!--Scrollbar-->
+						
+						
+					</control>
+				
+					<!--Episode List-->
+					<control type="group" id="149">
+					
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>1200</width>
+						<height>600</height>
+						
+						<control type="label">
+								
+							<include>Common_Section_Label</include>
+							<label>[LOWERCASE]$LOCALIZE[20360][/LOWERCASE]</label>
+							
+						</control>
+						
+						<control type="label" id="140">
+								
+							<include>Common_Section_Label_Right</include>
+							<label>-</label>
+							
+						</control>
+						
+						<control type="panel" id="141">
+							
+							<posx>0</posx>
+							<posy>20</posy>
+							<width>1200</width>
+							<height>480</height>
+					
+							<onup>131</onup>
+							<ondown>151</ondown>
+					<viewtype label="Square">wrap</viewtype>
+				<orientation>horizontal</orientation>
+				<pagecontrol>64</pagecontrol>
+				<scrolltime tween="cubic" easing="out">600</scrolltime>
+				<preloaditems>4</preloaditems>
+				
+			
+				
+				<itemlayout width="230" height="230">
+
+					<control type="group">
+		
+						<posx>0</posx>
+						<posy>40</posy>
+						<width>210</width>
+						<height>210</height>
+						
+						<include>Common_LiveTile_Background</include>
+						
+					</control>
+					
+					<control type="group">
+		
+						<posx>0</posx>
+						<posy>40</posy>
+						<width>210</width>
+						<height>210</height>
+						
+						<control type="image">
+						
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>210</width>
+							<height>210</height>
+							<texture>colors/color_keyboard_dark.png</texture>
+							<aspectratio>scale</aspectratio>
+							
+						</control>
+					
+						<control type="image">
+						
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>210</width>
+							<height>210</height>
+							<texture background="true" fallback="colors/color_keyboard_dark.png">$VAR[Square_Image]</texture>
+							<aspectratio>scale</aspectratio>
+							
+						</control>
+						
+						<control type="image">
+							
+							<posx>0</posx>
+							<posy>150</posy>
+							<width>210</width>
+							<height>60</height>
+							<texture>colors/color_white.png</texture>
+							<colordiffuse>FanartDiffuse</colordiffuse>
+							
+						</control>
+							
+						<control type="label">
+							
+							<posx>10</posx>
+							<posy>158</posy>
+							<width>190</width>
+							<height>20</height>
+							<textcolor>Label_Normal</textcolor>
+							<font>Menu-Square-Header</font>
+							<aligny>top</aligny>
+							<label>$VAR[Square_Header]</label>
+						
+						</control>
+						
+						<control type="label">
+							
+							<posx>10</posx>
+							<posy>178</posy>
+							<width>190</width>
+							<height>20</height>
+							<textcolor>Label_Normal</textcolor>
+							<font>Menu-Square-Detail</font>
+							<aligny>top</aligny>
+							<label>$VAR[Square_SubHeader]</label>
+						
+						</control>
+					
+					</control>
+					
+				</itemlayout>
+
+				<focusedlayout width="230" height="230">
+				
+					<control type="group">
+		
+						<posx>0</posx>
+						<posy>40</posy>
+						<width>210</width>
+						<height>210</height>
+						
+						<include>Common_Animation_LiveTile_Background</include>
+						
+						<include>Common_LiveTile_Background</include>
+						
+					</control>
+				
+					<control type="group">
+						
+						<posx>0</posx>
+						<posy>40</posy>
+						<width>210</width>
+						<height>210</height>
+					
+						<include>Common_Animation_LiveTile_Front</include>
+						
+						<control type="image">
+						
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>210</width>
+							<height>210</height>
+							<texture>colors/color_keyboard_dark.png</texture>
+							<aspectratio>scale</aspectratio>
+							
+						</control>
+					
+						<control type="image">
+						
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>210</width>
+							<height>210</height>
+							<texture background="true" fallback="colors/color_keyboard_dark.png">$VAR[Square_Image]</texture>
+							<aspectratio>scale</aspectratio>
+							
+						</control>
+						
+						<control type="image">
+						
+							<posx>0</posx>
+							<posy>150</posy>
+							<width>210</width>
+							<height>60</height>
+							<texture>colors/color_white.png</texture>
+							<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+							
+						</control>
+							
+						<control type="label">
+							
+							<posx>10</posx>
+							<posy>158</posy>
+							<width>190</width>
+							<height>20</height>
+							<textcolor>Label_Normal</textcolor>
+							<font>Menu-Square-Header</font>
+							<aligny>top</aligny>
+							<label>$VAR[Square_Header]</label>
+						
+						</control>
+						
+						<control type="label">
+							
+							<posx>10</posx>
+							<posy>178</posy>
+							<width>190</width>
+							<height>20</height>
+							<textcolor>Label_Normal</textcolor>
+							<font>Menu-Square-Detail</font>
+							<aligny>top</aligny>
+							<label>$VAR[Square_SubHeader]</label>
+						
+						</control>
+
+					</control>
+					
+					<!--Back Side Info-->
+					
+					
+				</focusedlayout>
+								
+						</control>
+						
+						<!--Scrollbar-->
+						
+						
+					</control>
+				
+					<!--Music Video List-->
+					<control type="group" id="159">
+					
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>1200</width>
+						<height>600</height>
+						
+						<control type="label">
+								
+							<include>Common_Section_Label</include>
+							<label>[LOWERCASE]$LOCALIZE[20389][/LOWERCASE]</label>
+							
+						</control>
+						
+						<control type="label" id="150">
+								
+							<include>Common_Section_Label_Right</include>
+							<label>-</label>
+							
+						</control>
+						
+						<control type="panel" id="151">
+							
+							<posx>0</posx>
+							<posy>20</posy>
+							<width>1200</width>
+							<height>480</height>
+				
+							<onup>141</onup>
+							<ondown>161</ondown>
+							<viewtype label="Square">wrap</viewtype>
+				<orientation>horizontal</orientation>
+				<pagecontrol>64</pagecontrol>
+				<scrolltime tween="cubic" easing="out">600</scrolltime>
+				<preloaditems>4</preloaditems>
+				
+			
+				
+				<itemlayout width="230" height="230">
+
+					<control type="group">
+		
+						<posx>0</posx>
+						<posy>40</posy>
+						<width>210</width>
+						<height>210</height>
+						
+						<include>Common_LiveTile_Background</include>
+						
+					</control>
+					
+					<control type="group">
+		
+						<posx>0</posx>
+						<posy>40</posy>
+						<width>210</width>
+						<height>210</height>
+						
+						<control type="image">
+						
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>210</width>
+							<height>210</height>
+							<texture>colors/color_keyboard_dark.png</texture>
+							<aspectratio>scale</aspectratio>
+							
+						</control>
+					
+						<control type="image">
+						
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>210</width>
+							<height>210</height>
+							<texture background="true" fallback="colors/color_keyboard_dark.png">$VAR[Square_Image]</texture>
+							<aspectratio>scale</aspectratio>
+							
+						</control>
+						
+						<control type="image">
+							
+							<posx>0</posx>
+							<posy>150</posy>
+							<width>210</width>
+							<height>60</height>
+							<texture>colors/color_white.png</texture>
+							<colordiffuse>FanartDiffuse</colordiffuse>
+							
+						</control>
+							
+						<control type="label">
+							
+							<posx>10</posx>
+							<posy>158</posy>
+							<width>190</width>
+							<height>20</height>
+							<textcolor>Label_Normal</textcolor>
+							<font>Menu-Square-Header</font>
+							<aligny>top</aligny>
+							<label>$VAR[Square_Header]</label>
+						
+						</control>
+						
+						<control type="label">
+							
+							<posx>10</posx>
+							<posy>178</posy>
+							<width>190</width>
+							<height>20</height>
+							<textcolor>Label_Normal</textcolor>
+							<font>Menu-Square-Detail</font>
+							<aligny>top</aligny>
+							<label>$VAR[Square_SubHeader]</label>
+						
+						</control>
+					
+					</control>
+					
+				</itemlayout>
+
+				<focusedlayout width="230" height="230">
+				
+					<control type="group">
+		
+						<posx>0</posx>
+						<posy>40</posy>
+						<width>210</width>
+						<height>210</height>
+						
+						<include>Common_Animation_LiveTile_Background</include>
+						
+						<include>Common_LiveTile_Background</include>
+						
+					</control>
+				
+					<control type="group">
+						
+						<posx>0</posx>
+						<posy>40</posy>
+						<width>210</width>
+						<height>210</height>
+					
+						<include>Common_Animation_LiveTile_Front</include>
+						
+						<control type="image">
+						
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>210</width>
+							<height>210</height>
+							<texture>colors/color_keyboard_dark.png</texture>
+							<aspectratio>scale</aspectratio>
+							
+						</control>
+					
+						<control type="image">
+						
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>210</width>
+							<height>210</height>
+							<texture background="true" fallback="colors/color_keyboard_dark.png">$VAR[Square_Image]</texture>
+							<aspectratio>scale</aspectratio>
+							
+						</control>
+						
+						<control type="image">
+						
+							<posx>0</posx>
+							<posy>150</posy>
+							<width>210</width>
+							<height>60</height>
+							<texture>colors/color_white.png</texture>
+							<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+							
+						</control>
+							
+						<control type="label">
+							
+							<posx>10</posx>
+							<posy>158</posy>
+							<width>190</width>
+							<height>20</height>
+							<textcolor>Label_Normal</textcolor>
+							<font>Menu-Square-Header</font>
+							<aligny>top</aligny>
+							<label>$VAR[Square_Header]</label>
+						
+						</control>
+						
+						<control type="label">
+							
+							<posx>10</posx>
+							<posy>178</posy>
+							<width>190</width>
+							<height>20</height>
+							<textcolor>Label_Normal</textcolor>
+							<font>Menu-Square-Detail</font>
+							<aligny>top</aligny>
+							<label>$VAR[Square_SubHeader]</label>
+						
+						</control>
+
+					</control>
+					
+					<!--Back Side Info-->
+					
+					
+				</focusedlayout>
+								
+						</control>
+						
+						<!--Scrollbar-->
+						
+						
+					</control>
+					
+					<!--Artist List-->
+					<control type="group" id="169">
+					
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>1200</width>
+						<height>600</height>
+						
+						<control type="label">
+								
+							<include>Common_Section_Label</include>
+							<label>[LOWERCASE]$LOCALIZE[133][/LOWERCASE]</label>
+							
+						</control>
+						
+						<control type="label" id="160">
+								
+							<include>Common_Section_Label_Right</include>
+							<label>-</label>
+							
+						</control>
+						
+						<control type="panel" id="161">
+							
+							<posx>0</posx>
+							<posy>20</posy>
+							<width>1200</width>
+							<height>480</height>
+					
+							<onup>151</onup>
+							<ondown>171</ondown>
+										<viewtype label="Square">wrap</viewtype>
+				<orientation>horizontal</orientation>
+				<pagecontrol>64</pagecontrol>
+				<scrolltime tween="cubic" easing="out">600</scrolltime>
+				<preloaditems>4</preloaditems>
+				
+			
+				
+				<itemlayout width="230" height="230">
+
+					<control type="group">
+		
+						<posx>0</posx>
+						<posy>40</posy>
+						<width>210</width>
+						<height>210</height>
+						
+						<include>Common_LiveTile_Background</include>
+						
+					</control>
+					
+					<control type="group">
+		
+						<posx>0</posx>
+						<posy>40</posy>
+						<width>210</width>
+						<height>210</height>
+						
+						<control type="image">
+						
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>210</width>
+							<height>210</height>
+							<texture>colors/color_keyboard_dark.png</texture>
+							<aspectratio>scale</aspectratio>
+							
+						</control>
+					
+						<control type="image">
+						
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>210</width>
+							<height>210</height>
+							<texture background="true" fallback="colors/color_keyboard_dark.png">$VAR[Square_Image]</texture>
+							<aspectratio>scale</aspectratio>
+							
+						</control>
+						
+						<control type="image">
+							
+							<posx>0</posx>
+							<posy>150</posy>
+							<width>210</width>
+							<height>60</height>
+							<texture>colors/color_white.png</texture>
+							<colordiffuse>FanartDiffuse</colordiffuse>
+							
+						</control>
+							
+						<control type="label">
+							
+							<posx>10</posx>
+							<posy>158</posy>
+							<width>190</width>
+							<height>20</height>
+							<textcolor>Label_Normal</textcolor>
+							<font>Menu-Square-Header</font>
+							<aligny>top</aligny>
+							<label>$VAR[Square_Header]</label>
+						
+						</control>
+						
+						<control type="label">
+							
+							<posx>10</posx>
+							<posy>178</posy>
+							<width>190</width>
+							<height>20</height>
+							<textcolor>Label_Normal</textcolor>
+							<font>Menu-Square-Detail</font>
+							<aligny>top</aligny>
+							<label>$VAR[Square_SubHeader]</label>
+						
+						</control>
+					
+					</control>
+					
+				</itemlayout>
+
+				<focusedlayout width="230" height="230">
+				
+					<control type="group">
+		
+						<posx>0</posx>
+						<posy>40</posy>
+						<width>210</width>
+						<height>210</height>
+						
+						<include>Common_Animation_LiveTile_Background</include>
+						
+						<include>Common_LiveTile_Background</include>
+						
+					</control>
+				
+					<control type="group">
+						
+						<posx>0</posx>
+						<posy>40</posy>
+						<width>210</width>
+						<height>210</height>
+					
+						<include>Common_Animation_LiveTile_Front</include>
+						
+						<control type="image">
+						
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>210</width>
+							<height>210</height>
+							<texture>colors/color_keyboard_dark.png</texture>
+							<aspectratio>scale</aspectratio>
+							
+						</control>
+					
+						<control type="image">
+						
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>210</width>
+							<height>210</height>
+							<texture background="true" fallback="colors/color_keyboard_dark.png">$VAR[Square_Image]</texture>
+							<aspectratio>scale</aspectratio>
+							
+						</control>
+						
+						<control type="image">
+						
+							<posx>0</posx>
+							<posy>150</posy>
+							<width>210</width>
+							<height>60</height>
+							<texture>colors/color_white.png</texture>
+							<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+							
+						</control>
+							
+						<control type="label">
+							
+							<posx>10</posx>
+							<posy>158</posy>
+							<width>190</width>
+							<height>20</height>
+							<textcolor>Label_Normal</textcolor>
+							<font>Menu-Square-Header</font>
+							<aligny>top</aligny>
+							<label>$VAR[Square_Header]</label>
+						
+						</control>
+						
+						<control type="label">
+							
+							<posx>10</posx>
+							<posy>178</posy>
+							<width>190</width>
+							<height>20</height>
+							<textcolor>Label_Normal</textcolor>
+							<font>Menu-Square-Detail</font>
+							<aligny>top</aligny>
+							<label>$VAR[Square_SubHeader]</label>
+						
+						</control>
+
+					</control>
+					
+					<!--Back Side Info-->
+					
+					
+				</focusedlayout>
+								
+						</control>
+						
+						<!--Scrollbar-->
+						
+						
+					</control>
+					
+					<!--Album List-->
+					<control type="group" id="179">
+					
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>1200</width>
+						<height>600</height>
+						
+						<control type="label">
+								
+							<include>Common_Section_Label</include>
+							<label>[LOWERCASE]$LOCALIZE[132][/LOWERCASE]</label>
+							
+						</control>
+						
+						<control type="label" id="170">
+								
+							<include>Common_Section_Label_Right</include>
+							<label>-</label>
+							
+						</control>
+						
+						<control type="panel" id="171">
+							
+							<posx>0</posx>
+							<posy>20</posy>
+							<width>1200</width>
+							<height>480</height>
+					
+							<onup>161</onup>
+							<ondown>181</ondown>
+										<viewtype label="Square">wrap</viewtype>
+				<orientation>horizontal</orientation>
+				<pagecontrol>64</pagecontrol>
+				<scrolltime tween="cubic" easing="out">600</scrolltime>
+				<preloaditems>4</preloaditems>
+				
+			
+				
+				<itemlayout width="230" height="230">
+
+					<control type="group">
+		
+						<posx>0</posx>
+						<posy>40</posy>
+						<width>210</width>
+						<height>210</height>
+						
+						<include>Common_LiveTile_Background</include>
+						
+					</control>
+					
+					<control type="group">
+		
+						<posx>0</posx>
+						<posy>40</posy>
+						<width>210</width>
+						<height>210</height>
+						
+						<control type="image">
+						
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>210</width>
+							<height>210</height>
+							<texture>colors/color_keyboard_dark.png</texture>
+							<aspectratio>scale</aspectratio>
+							
+						</control>
+					
+						<control type="image">
+						
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>210</width>
+							<height>210</height>
+							<texture background="true" fallback="colors/color_keyboard_dark.png">$VAR[Square_Image]</texture>
+							<aspectratio>scale</aspectratio>
+							
+						</control>
+						
+						<control type="image">
+							
+							<posx>0</posx>
+							<posy>150</posy>
+							<width>210</width>
+							<height>60</height>
+							<texture>colors/color_white.png</texture>
+							<colordiffuse>FanartDiffuse</colordiffuse>
+							
+						</control>
+							
+						<control type="label">
+							
+							<posx>10</posx>
+							<posy>158</posy>
+							<width>190</width>
+							<height>20</height>
+							<textcolor>Label_Normal</textcolor>
+							<font>Menu-Square-Header</font>
+							<aligny>top</aligny>
+							<label>$VAR[Square_Header]</label>
+						
+						</control>
+						
+						<control type="label">
+							
+							<posx>10</posx>
+							<posy>178</posy>
+							<width>190</width>
+							<height>20</height>
+							<textcolor>Label_Normal</textcolor>
+							<font>Menu-Square-Detail</font>
+							<aligny>top</aligny>
+							<label>$VAR[Square_SubHeader]</label>
+						
+						</control>
+					
+					</control>
+					
+				</itemlayout>
+
+				<focusedlayout width="230" height="230">
+				
+					<control type="group">
+		
+						<posx>0</posx>
+						<posy>40</posy>
+						<width>210</width>
+						<height>210</height>
+						
+						<include>Common_Animation_LiveTile_Background</include>
+						
+						<include>Common_LiveTile_Background</include>
+						
+					</control>
+				
+					<control type="group">
+						
+						<posx>0</posx>
+						<posy>40</posy>
+						<width>210</width>
+						<height>210</height>
+					
+						<include>Common_Animation_LiveTile_Front</include>
+						
+						<control type="image">
+						
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>210</width>
+							<height>210</height>
+							<texture>colors/color_keyboard_dark.png</texture>
+							<aspectratio>scale</aspectratio>
+							
+						</control>
+					
+						<control type="image">
+						
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>210</width>
+							<height>210</height>
+							<texture background="true" fallback="colors/color_keyboard_dark.png">$VAR[Square_Image]</texture>
+							<aspectratio>scale</aspectratio>
+							
+						</control>
+						
+						<control type="image">
+						
+							<posx>0</posx>
+							<posy>150</posy>
+							<width>210</width>
+							<height>60</height>
+							<texture>colors/color_white.png</texture>
+							<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+							
+						</control>
+							
+						<control type="label">
+							
+							<posx>10</posx>
+							<posy>158</posy>
+							<width>190</width>
+							<height>20</height>
+							<textcolor>Label_Normal</textcolor>
+							<font>Menu-Square-Header</font>
+							<aligny>top</aligny>
+							<label>$VAR[Square_Header]</label>
+						
+						</control>
+						
+						<control type="label">
+							
+							<posx>10</posx>
+							<posy>178</posy>
+							<width>190</width>
+							<height>20</height>
+							<textcolor>Label_Normal</textcolor>
+							<font>Menu-Square-Detail</font>
+							<aligny>top</aligny>
+							<label>$VAR[Square_SubHeader]</label>
+						
+						</control>
+
+					</control>
+					
+					<!--Back Side Info-->
+					
+					
+				</focusedlayout>
+								
+						</control>
+						
+						<!--Scrollbar-->
+						
+						
+					</control>
+					
+					<!--Song List-->
+					<control type="group" id="189">
+					
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>1200</width>
+						<height>600</height>
+						
+						<control type="label">
+								
+							<include>Common_Section_Label</include>
+							<label>[LOWERCASE]$LOCALIZE[134][/LOWERCASE]</label>
+							
+						</control>
+						
+						<control type="label" id="180">
+								
+							<include>Common_Section_Label_Right</include>
+							<label>-</label>
+							
+						</control>
+						
+						<control type="panel" id="181">
+							
+							<posx>0</posx>
+							<posy>20</posy>
+							<width>1200</width>
+							<height>480</height>
+					
+							<onup>171</onup>
+							<ondown>111</ondown>
+										<viewtype label="Square">wrap</viewtype>
+				<orientation>horizontal</orientation>
+				<pagecontrol>64</pagecontrol>
+				<scrolltime tween="cubic" easing="out">600</scrolltime>
+				<preloaditems>4</preloaditems>
+				
+			
+				
+				<itemlayout width="230" height="230">
+
+					<control type="group">
+		
+						<posx>0</posx>
+						<posy>40</posy>
+						<width>210</width>
+						<height>210</height>
+						
+						<include>Common_LiveTile_Background</include>
+						
+					</control>
+					
+					<control type="group">
+		
+						<posx>0</posx>
+						<posy>40</posy>
+						<width>210</width>
+						<height>210</height>
+						
+						<control type="image">
+						
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>210</width>
+							<height>210</height>
+							<texture>colors/color_keyboard_dark.png</texture>
+							<aspectratio>scale</aspectratio>
+							
+						</control>
+					
+						<control type="image">
+						
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>210</width>
+							<height>210</height>
+							<texture background="true" fallback="colors/color_keyboard_dark.png">$VAR[Square_Image]</texture>
+							<aspectratio>scale</aspectratio>
+							
+						</control>
+						
+						<control type="image">
+							
+							<posx>0</posx>
+							<posy>150</posy>
+							<width>210</width>
+							<height>60</height>
+							<texture>colors/color_white.png</texture>
+							<colordiffuse>FanartDiffuse</colordiffuse>
+							
+						</control>
+							
+						<control type="label">
+							
+							<posx>10</posx>
+							<posy>158</posy>
+							<width>190</width>
+							<height>20</height>
+							<textcolor>Label_Normal</textcolor>
+							<font>Menu-Square-Header</font>
+							<aligny>top</aligny>
+							<label>$VAR[Square_Header]</label>
+						
+						</control>
+						
+						<control type="label">
+							
+							<posx>10</posx>
+							<posy>178</posy>
+							<width>190</width>
+							<height>20</height>
+							<textcolor>Label_Normal</textcolor>
+							<font>Menu-Square-Detail</font>
+							<aligny>top</aligny>
+							<label>$VAR[Square_SubHeader]</label>
+						
+						</control>
+					
+					</control>
+					
+				</itemlayout>
+
+				<focusedlayout width="230" height="230">
+				
+					<control type="group">
+		
+						<posx>0</posx>
+						<posy>40</posy>
+						<width>210</width>
+						<height>210</height>
+						
+						<include>Common_Animation_LiveTile_Background</include>
+						
+						<include>Common_LiveTile_Background</include>
+						
+					</control>
+				
+					<control type="group">
+						
+						<posx>0</posx>
+						<posy>40</posy>
+						<width>210</width>
+						<height>210</height>
+					
+						<include>Common_Animation_LiveTile_Front</include>
+						
+						<control type="image">
+						
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>210</width>
+							<height>210</height>
+							<texture>colors/color_keyboard_dark.png</texture>
+							<aspectratio>scale</aspectratio>
+							
+						</control>
+					
+						<control type="image">
+						
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>210</width>
+							<height>210</height>
+							<texture background="true" fallback="colors/color_keyboard_dark.png">$VAR[Square_Image]</texture>
+							<aspectratio>scale</aspectratio>
+							
+						</control>
+						
+						<control type="image">
+						
+							<posx>0</posx>
+							<posy>150</posy>
+							<width>210</width>
+							<height>60</height>
+							<texture>colors/color_white.png</texture>
+							<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+							
+						</control>
+							
+						<control type="label">
+							
+							<posx>10</posx>
+							<posy>158</posy>
+							<width>190</width>
+							<height>20</height>
+							<textcolor>Label_Normal</textcolor>
+							<font>Menu-Square-Header</font>
+							<aligny>top</aligny>
+							<label>$VAR[Square_Header]</label>
+						
+						</control>
+						
+						<control type="label">
+							
+							<posx>10</posx>
+							<posy>178</posy>
+							<width>190</width>
+							<height>20</height>
+							<textcolor>Label_Normal</textcolor>
+							<font>Menu-Square-Detail</font>
+							<aligny>top</aligny>
+							<label>$VAR[Square_SubHeader]</label>
+						
+						</control>
+
+					</control>
+					
+					<!--Back Side Info-->
+					
+					
+				</focusedlayout>
+								
+						</control>
+						
+						<!--Scrollbar-->
+						
+						
+					</control>
+					
+				</control>
+				
+			</control>
+			
+			<!--Scrollbar-->
+			
+			
+			<control type="label" id="190">
+				<visible>false</visible>
+			</control>
+
+			<control type="label" id="191">
+				<visible>false</visible>
+			</control>
+
+			<control type="label" id="199">
+				<visible>false</visible>
+			</control>
+
+			<control type="button" id="198">
+				<visible>false</visible>
+			</control>
+			
+		</control>	
+
+	</controls>
+	
+</window>
