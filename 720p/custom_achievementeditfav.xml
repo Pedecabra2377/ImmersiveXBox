@@ -1,0 +1,541 @@
+<window id="7546">
+
+	<defaultcontrol always="true">1</defaultcontrol>
+	
+	<zorder>2</zorder>
+	
+	<include condition="!Window.Next(7544) + !Window.Previous(0)">Common_Animation_WindowFriends</include>
+<include condition="Window.Previous(0)">Common_Animation_Window</include>
+<include condition="Window.Next(7544)">Common_Animation_Window</include>
+<onload>RunScript(special://skin/system/xbox.gamertag.py)</onload>  
+<onload>RunScript(special://skin/system/0300030/Friend1.py)</onload>
+<onload>RunScript(special://skin/system/0300030/Friend2.py)</onload>
+<onload>RunScript(special://skin/system/0300030/Friend3.py)</onload>
+<onload>RunScript(special://skin/system/0300030/Friend4.py)</onload>
+<onload>RunScript(special://skin/system/0300030/Friend5.py)</onload>
+<onload>RunScript(special://skin/system/0300030/Friend6.py)</onload>
+<onload>RunScript(special://skin/system/0300030/Friend7.py)</onload>
+<onload>RunScript(special://skin/system/0300030/Friend8.py)</onload>
+<onload>RunScript(special://skin/system/0300030/Friend9.py)</onload>
+<onload>RunScript(special://skin/system/0300030/Friend10.py)</onload>
+<onload>RunScript(special://skin/system/0300030/Friend11.py)</onload>
+
+<onload condition="Skin.HasSetting(Searching)">Skin.ToggleSetting(Searching)</onload>
+	
+	<!--Splash Screen-->
+
+<onload condition="Skin.HasSetting(Logger)">Skin.SetString(snapwindow, 7546)</onload>
+<onload condition="!Skin.HasSetting(snapie) + Skin.HasSetting(Logger)">Skin.ToggleSetting(snapie)</onload>
+<onload condition="Skin.HasSetting(gaming) + Skin.HasSetting(Logger)">Skin.ToggleSetting(gaming)</onload>
+<onload condition="Skin.HasSetting(Logger)">Skin.SetString(snap, demo/sna/act.jpg,0)</onload>
+<onload condition="Skin.HasSetting(Logger)">Skin.SetString(sn,Atividade)</onload>
+	
+	
+
+
+	
+
+	
+	<controls>
+
+		<!--Background Area-->
+
+		<include condition="!Window.Next(7544) + !Window.Previous(0)">Common_Animation_WindowFriends</include>
+<include condition="Window.Previous(0)">Common_Animation_Window</include>
+<include condition="Window.Next(7544)">Common_Animation_Window</include>
+<control type="image">
+							
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1280</width>
+								<height>720</height>
+								<texture>demo/app/friends/bg.png</texture>
+							
+								
+							</control>
+							
+						
+														<control type="image">
+							
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>275</width>
+								<height>720</height>
+								<texture>colors\color_white.png</texture>
+							<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+								
+							</control>
+							
+							
+							
+					
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+			<control type="textbox">
+						<include condition="!Window.Next(7544) + !Window.Previous(0)">Common_Animation_WindowFriends</include>
+<include condition="Window.Previous(0)">Common_Animation_Window</include>
+<include condition="Window.Next(7544)">Common_Animation_Window</include>												
+							
+	
+			<label>Amigos</label>
+
+		<posx>68</posx>
+								<posy>80</posy>
+								<width>550</width>
+								<height>160</height>
+		<font>Dropdown-Label3</font>
+			<textcolor>Label_Normal</textcolor>
+			<scrollspeed>0</scrollspeed>
+			<autoscroll>false</autoscroll>
+			<wrapmultiline>true</wrapmultiline>
+					
+								
+		</control>	
+							
+																			
+
+							
+									
+									<!--Top Area-->
+
+			
+			<!--Content Area-->
+			<control type="group">
+			
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+				
+				<!--Animation-->
+			<include condition="!Window.Next(7544) + !Window.Previous(0)">Common_Animation_WindowFriends</include>
+<include condition="Window.Previous(0)">Common_Animation_Window</include>
+<include condition="Window.Next(7544)">Common_Animation_Window</include>
+				
+				<control type="grouplist">
+		
+					<include>Common_Content_Grouplist</include>
+					
+					<control type="group" id="100">
+					
+						<posx>60</posx>
+						<posy>0</posy>
+						<width>400</width>
+						<height>780</height>
+						
+						
+			
+				
+
+										
+					<control type="panel" id="8">
+<posx>915</posx>
+						<posy>200</posy>
+
+						
+						<include>Common_AltHome_Panel3</include>
+<onup>10</onup>
+
+
+						<ondown>9</ondown>
+					<onleft>1</onleft>
+						<pagecontrol>7017</pagecontrol>
+						
+						<content>
+						
+
+							
+																					<item id="1">
+								<description>Games</description>
+								<label>Games</label>
+								<thumb>SHORT\ICO\Games.png</thumb>
+							<onclick>RunScript(special://skin/system/xbox.gamertag.py)</onclick>  
+														
+							</item>
+							
+
+
+								</content>
+
+					</control>
+							<control type="panel" id="9">
+<posx>915</posx>
+						<posy>200</posy>
+
+						
+						<include>Common_AltHome_Panel3</include>
+<onup>8</onup>
+
+
+						<ondown>10</ondown>
+					<onleft>3</onleft>
+						<pagecontrol>7017</pagecontrol>
+						
+						<content>
+						
+
+							
+																					<item id="1">
+								<description>Games</description>
+								<label>Games</label>
+								<thumb>SHORT\ICO\Games.png</thumb>
+							<onclick>RunScript(special://skin/system/xbox.gamertag.py)</onclick>  
+														
+							</item>
+							
+
+
+								</content>
+
+					</control>
+					<control type="panel" id="10">
+<posx>915</posx>
+						<posy>200</posy>
+
+						
+						<include>Common_AltHome_Panel3</include>
+<onup>9</onup>
+
+
+						<ondown>8</ondown>
+					<onleft>5</onleft>
+						<pagecontrol>7017</pagecontrol>
+						
+						<content>
+						
+
+							
+																					<item id="1">
+								<description>Games</description>
+								<label>Games</label>
+								<thumb>SHORT\ICO\Games.png</thumb>
+							<onclick>RunScript(special://skin/system/xbox.gamertag.py)</onclick>  
+														
+							</item>
+							
+
+
+								</content>
+
+					</control>
+					
+					
+					
+					
+					
+
+				
+	
+					
+					
+					
+					
+					
+						
+						<!--Scrollbar-->
+
+					
+					</control>
+					
+			
+					
+				</control>
+				
+			</control>
+
+			<control type="panel" id="1000">
+				
+<posx>60</posx>
+						<posy>175</posy>
+
+				<onright>1</onright>
+	
+						<include>Common_AltHome_Panel384</include>
+					
+
+
+
+
+						
+						
+						<content>
+						
+	<item id="1">
+								<description>Games</description>
+								<label>Tudo</label>
+								<thumb></thumb>
+													
+											<onclick>ReplaceWindow(7545)</onclick>
+														
+									
+														
+							</item>
+							
+										<item id="2">
+								<description>Games</description>
+								<label>Amigos</label>
+								<thumb></thumb>
+													
+					<onclick>ActivateWindow(5152)</onclick>
+									
+														
+							</item>
+								<item id="3">
+								<description>Games</description>
+								<label>Favoritos</label>
+								<thumb></thumb>
+													
+					<onclick>ReplaceWindow(7546)</onclick>		
+	<visible>false</visible>	
+							</item>
+							<item id="4">
+								<description>Games</description>
+								<label>Seguidores</label>
+								<thumb></thumb>
+							<onclick>ReplaceWindow(7547)</onclick>		
+							</item>
+								<item id="5">
+								<description>Games</description>
+								<label>Jogadores recentes</label>
+								<thumb></thumb>
+									<onclick>ReplaceWindow(7548)</onclick>			
+	<visible>false</visible>
+							</item>
+									<item id="6">
+								<description>Games</description>
+								<label>Encontrar alguém</label>
+								<thumb></thumb>
+													
+							<onclick>Skin.SetString(tube)</onclick>
+<onclick condition="!Skin.HasSetting(Searching)">Skin.ToggleSetting(Searching)</onclick>
+<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=$INFO[Skin.String(tube)]&quot;,return)</onclick>
+							<visible>false</visible>							
+							</item>		
+				
+<item id="7">
+								<description>Games</description>
+								<label>Meu perfil</label>
+								<thumb></thumb>
+													
+						<onclick>ActivateWindow(7544)</onclick>
+<visible>false</visible>
+							</item>
+							<item id="8">
+								<description>Games</description>
+								<label>Mensagens</label>
+								<thumb></thumb>
+													
+								<onclick>ActivateWindow(5513)</onclick>
+<visible>false</visible>
+							</item>
+
+												
+
+
+								</content>
+
+					</control>	
+					
+					
+					
+					
+					<control type="panel" id="1">
+				
+<posx>320</posx>
+						<posy>185</posy>
+
+				<onright>8</onright>
+		<onleft>1000</onleft>
+						<include>Common_AltHome_Panel391</include>
+					
+
+
+
+
+						
+						
+						<content>
+						
+
+							
+										<item id="1">
+								<description>Games</description>
+								<label>$INFO[Skin.string(Friend1)]</label>
+								<label2></label2>
+								<thumb>special://skin/system/D400040/Friend/pictures/$INFO[Skin.string(Friend1)].png</thumb>
+													
+													
+                               <onclick>RunScript(special://skin/system/0300030/Friend1.py)</onclick>
+			<onclick>AlarmClock(getin,RunScript(special://skin/system/xbox.gamertag.py),00:05,silent)</onclick>	  
+									
+						<visible>Skin.HasSetting(Friend1)</visible>								
+							</item>
+							<item id="2">
+								<description>Games</description>
+								<label>$INFO[Skin.string(Friend2)]</label>
+								<label2></label2>
+								<thumb>special://skin/system/D400040/Friend/pictures/$INFO[Skin.string(Friend2)].png</thumb>
+													
+											
+                               <onclick>RunScript(special://skin/system/0300030/Friend2.py)</onclick>
+			<onclick>AlarmClock(getin,RunScript(special://skin/system/xbox.gamertag.py),00:05,silent)</onclick>	  
+									
+							<visible>Skin.HasSetting(Friend2)</visible>							
+							</item>
+							<item id="3">
+								<description>Games</description>
+								<label>$INFO[Skin.string(Friend3)]</label>
+								<label2></label2>
+								<thumb>special://skin/system/D400040/Friend/pictures/$INFO[Skin.string(Friend3)].png</thumb>
+													
+													
+                               <onclick>RunScript(special://skin/system/0300030/Friend3.py)</onclick>
+			<onclick>AlarmClock(getin,RunScript(special://skin/system/xbox.gamertag.py),00:05,silent)</onclick>	  
+									
+						<visible>Skin.HasSetting(Friend3)</visible>								
+							</item>
+							<item id="4">
+								<description>Games</description>
+								<label>$INFO[Skin.string(Friend4)]</label>
+								<label2></label2>
+								<thumb>special://skin/system/D400040/Friend/pictures/$INFO[Skin.string(Friend4)].png</thumb>
+													
+													
+                               <onclick>RunScript(special://skin/system/0300030/Friend4.py)</onclick>
+			<onclick>AlarmClock(getin,RunScript(special://skin/system/xbox.gamertag.py),00:05,silent)</onclick>	  
+									
+						<visible>Skin.HasSetting(Friend4)</visible>								
+							</item>
+							<item id="5">
+								<description>Games</description>
+								<label>$INFO[Skin.string(Friend5)]</label>
+								<label2></label2>
+								<thumb>special://skin/system/D400040/Friend/pictures/$INFO[Skin.string(Friend5)].png</thumb>
+													
+													
+                               <onclick>RunScript(special://skin/system/0300030/Friend5.py)</onclick>
+			<onclick>AlarmClock(getin,RunScript(special://skin/system/xbox.gamertag.py),00:05,silent)</onclick>	  
+									
+					<visible>Skin.HasSetting(Friend5)</visible>									
+							</item>
+							<item id="6">
+								<description>Games</description>
+								<label>$INFO[Skin.string(Friend6)]</label>
+								<label2></label2>
+								<thumb>special://skin/system/D400040/Friend/pictures/$INFO[Skin.string(Friend6)].png</thumb>
+													
+													
+                               <onclick>RunScript(special://skin/system/0300030/Friend6.py)</onclick>
+			<onclick>AlarmClock(getin,RunScript(special://skin/system/xbox.gamertag.py),00:05,silent)</onclick>	  
+									
+						<visible>Skin.HasSetting(Friend6)</visible>								
+							</item>
+							<item id="7">
+								<description>Games</description>
+								<label>$INFO[Skin.string(Friend7)]</label>
+								<label2></label2>
+								<thumb>special://skin/system/D400040/Friend/pictures/$INFO[Skin.string(Friend7)].png</thumb>
+													
+													
+                               <onclick>RunScript(special://skin/system/0300030/Friend7.py)</onclick>
+			<onclick>AlarmClock(getin,RunScript(special://skin/system/xbox.gamertag.py),00:05,silent)</onclick>	  
+									
+						<visible>Skin.HasSetting(Friend7)</visible>								
+							</item>
+						
+<item id="8">
+								<description>Games</description>
+								<label>$INFO[Skin.string(Friend8)]</label>
+								<label2></label2>
+								<thumb>special://skin/system/D400040/Friend/pictures/$INFO[Skin.string(Friend8)].png</thumb>
+													
+													
+                               <onclick>RunScript(special://skin/system/0300030/Friend8.py)</onclick>
+			<onclick>AlarmClock(getin,RunScript(special://skin/system/xbox.gamertag.py),00:05,silent)</onclick>	  
+									
+				<visible>Skin.HasSetting(Friend8)</visible>										
+							</item>
+							<item id="9">
+								<description>Games</description>
+								<label>$INFO[Skin.string(Friend9)]</label>
+								<label2></label2>
+								<thumb>special://skin/system/D400040/Friend/pictures/$INFO[Skin.string(Friend9)].png</thumb>
+													
+													
+                               <onclick>RunScript(special://skin/system/0300030/Friend9.py)</onclick>
+			<onclick>AlarmClock(getin,RunScript(special://skin/system/xbox.gamertag.py),00:05,silent)</onclick>	  
+									
+						<visible>Skin.HasSetting(Friend9)</visible>								
+							</item>
+								<item id="10">
+								<description>Games</description>
+								<label>$INFO[Skin.string(Friend10)]</label>
+								<label2></label2>
+								<thumb>special://skin/system/D400040/Friend/pictures/$INFO[Skin.string(Friend10)].png</thumb>
+													
+													
+                               <onclick>RunScript(special://skin/system/0300030/Friend10.py)</onclick>
+			<onclick>AlarmClock(getin,RunScript(special://skin/system/xbox.gamertag.py),00:05,silent)</onclick>	  
+									
+					<visible>Skin.HasSetting(Friend10)</visible>									
+							</item>
+							<item id="11">
+								<description>Games</description>
+								<label>$INFO[Skin.string(Friend11)]</label>
+								<label2></label2>
+								<thumb>special://skin/system/D400040/Friend/pictures/$INFO[Skin.string(Friend11)].png</thumb>
+													
+													
+                               <onclick>RunScript(special://skin/system/0300030/Friend11.py)</onclick>
+			<onclick>AlarmClock(getin,RunScript(special://skin/system/xbox.gamertag.py),00:05,silent)</onclick>	  
+									
+					<visible>Skin.HasSetting(Friend11)</visible>									
+							</item>
+												
+
+
+								</content>
+
+					</control>
+		<include>Xbox_Logo</include>
+			<include>Snapped_Content</include>	
+	</controls>	
+		
+</window>

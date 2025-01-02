@@ -1,0 +1,162 @@
+<!-- Foundation -->
+<window type="buttonMenu" id="798">
+	
+	<defaultcontrol always="true">3111</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+<onload>SetVolume(50)</onload>
+<onload>Playmedia(special://skin/system/alarm.wav)</onload>
+<onload>AlarmClock(notad,Playmedia(special://skin/system/alarm.wav),00:9,silent,)</onload>
+<onload>AlarmClock(notadb,Playmedia(special://skin/system/alarm.wav),00:18,silent,)</onload>
+<onload>AlarmClock(notadc,Playmedia(special://skin/system/alarm.wav),00:27,silent,)</onload>
+<onload>AlarmClock(notadd,Playmedia(special://skin/system/alarm.wav),00:36,silent,)</onload>
+<onload>AlarmClock(notade,Playmedia(special://skin/system/alarm.wav),00:45,silent,)</onload>
+<onload>AlarmClock(notadf,Playmedia(special://skin/system/alarm.wav),00:54,silent,)</onload>
+<onload>AlarmClock(notadg,Playmedia(special://skin/system/alarm.wav),01:3,silent,)</onload>
+<onload>AlarmClock(notadh,Playmedia(special://skin/system/alarm.wav),01:12,silent,)</onload>
+<onload>AlarmClock(notadi,Playmedia(special://skin/system/alarm.wav),01:21,silent,)</onload>
+<onload>AlarmClock(notadj,Playmedia(special://skin/system/alarm.wav),01:30,silent,)</onload>
+<onload>AlarmClock(notadk,Playmedia(special://skin/system/alarm.wav),01:39,silent,)</onload>
+<onload>AlarmClock(notadl,Playmedia(special://skin/system/alarm.wav),01:48,silent,)</onload>
+<onload>AlarmClock(notadm,Playmedia(special://skin/system/alarm.wav),01:57,silent,)</onload>
+<onload>AlarmClock(notadn,Playmedia(special://skin/system/alarm.wav),02:6,silent,)</onload>
+<onload>AlarmClock(notado,Playmedia(special://skin/system/alarm.wav),02:15,silent,)</onload>
+<onload>AlarmClock(notadp,Playmedia(special://skin/system/alarm.wav),02:24,silent,)</onload>
+<onload>AlarmClock(notadq,Playmedia(special://skin/system/alarm.wav),02:33,silent,)</onload>
+	<controls>
+
+		<include>Common_Background_Fade</include>
+
+		<control type="group">
+
+			<posx>0</posx>
+			<posy>210</posy>
+			
+			<include>Common_Animation_Dialog</include>
+			
+						<control type="image">
+			
+				<posy>0</posy>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>300</height>
+				<texture background="true">whites.png</texture>
+			
+
+			</control>
+											<control type="label">
+										<description>Heading</description>
+					<posx>100</posx>
+					<posy>20</posy>
+					<width min="0" max="1280">auto</width>
+					<height>70</height>
+					<label>O alarme foi disparado</label>
+					<font>Dialog-Header</font>
+					<textcolor>FF333333</textcolor>
+					
+				</control>
+								<control type="label">
+					
+
+					<posx>100</posx>
+					<posy>100</posy>
+					<width min="0" max="2000">auto</width>
+					<height>70</height>
+					<label>Pressione A para parar</label>
+					<font>Dialog-Header</font>
+					<textcolor>FF333333</textcolor>
+					
+				</control>
+			
+			<control type="grouplist">
+			
+				<posx>300</posx>
+				<posy>20</posy>
+				<width>1280</width>
+				<itemgap>20</itemgap>
+				<orientation>horizontal</orientation>
+				
+				<animation effect="slide" start="0,0" end="-64,0" time="200" condition="System.Loggedon + System.HasLoginScreen">Conditional</animation>
+				
+				<control type="label" id="1">
+					
+
+					<posx>500</posx>
+					<posy>100</posy>
+					<width min="0" max="2000">auto</width>
+					<height>70</height>
+					<label></label>
+					<font>Dialog-Header</font>
+					<textcolor>FF333333</textcolor>
+					
+				</control>
+				
+				
+
+				
+			</control>
+
+			<control type="grouplist">
+			
+				<posx>3000</posx>
+				<posy>92</posy>
+				<width>880</width>
+				<itemgap>20</itemgap>
+				<orientation>horizontal</orientation>
+				
+				<animation effect="slide" start="0,0" end="-64,0" time="200" condition="System.Loggedon + System.HasLoginScreen">Conditional</animation>
+				
+				<!--Exit Button-->
+				<control type="group" id="1">
+				
+					<width>0</width>
+					<height>0</height>
+					
+					<visible>System.ShowExitButton</visible>
+					
+					<control type="button" id="3111">
+						
+						<include></include>
+								<onclick>playercontrol(repeatoff)</onclick>
+								<onclick>Player.Stop</onclick>
+								<onclick>CancelAlarm(notad,silent)</onclick>
+								<onclick>CancelAlarm(notadb,silent)</onclick>
+								<onclick>CancelAlarm(notadc,silent)</onclick>
+								<onclick>CancelAlarm(notadd,silent)</onclick>
+								<onclick>CancelAlarm(notade,silent)</onclick>
+								<onclick>CancelAlarm(notadf,silent)</onclick>
+									<onclick>CancelAlarm(notadg,silent)</onclick>
+										<onclick>CancelAlarm(notadh,silent)</onclick>
+											<onclick>CancelAlarm(notadi,silent)</onclick>
+												<onclick>CancelAlarm(notadj,silent)</onclick>
+													<onclick>CancelAlarm(notadk,silent)</onclick>
+														<onclick>CancelAlarm(notadl,silent)</onclick>
+															<onclick>CancelAlarm(notadm,silent)</onclick>
+																<onclick>CancelAlarm(notadn,silent)</onclick>
+																	<onclick>CancelAlarm(notado,silent)</onclick>
+																		<onclick>CancelAlarm(notadp,silent)</onclick>
+																			<onclick>CancelAlarm(notadq,silent)</onclick>
+							<onclick>Dialog.Close(798)</onclick>
+
+
+<onup>1</onup>
+<ondown>1</ondown>						<onleft>1</onleft>
+						<onright>1</onright>
+						
+					</control>
+					
+
+
+					
+				</control>
+				
+
+					
+				</control>
+				
+			</control>	
+
+
+
+	</controls>
+
+</window>
