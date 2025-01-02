@@ -1,0 +1,490 @@
+<window id="818">
+
+	<defaultcontrol always="true">111</defaultcontrol>
+	
+	<zorder>2</zorder>
+	
+		
+	<!--Splash Screen-->
+
+	 
+		<onload>Skin.SetString(snapwindow, 818)</onload>
+<onload condition="!Skin.HasSetting(snapie)">Skin.ToggleSetting(snapie)</onload>
+<onload condition="Skin.HasSetting(gaming)">Skin.ToggleSetting(gaming)</onload>
+<onload>Skin.SetString(snap, demo/sna/twitch.jpg,0)</onload>
+<onload>Skin.SetString(sn,Twitch)</onload>
+	
+	
+	<onload>Skin.SetString(ube,Search)</onload>
+<onload condition="Skin.HasSetting(SnapFeature) + Skin.HasSetting(SnapAlways)">Skin.SetString(snap, C:\Assistance\Snap\Pic\Item.jpg,0)</onload>
+<onload condition="Skin.HasSetting(SnapFeature) + Skin.HasSetting(SnapAlways)">AlarmClock(startsnap,RunScript(special://skin/system/Snap.py),00:01,silent)</onload>
+	
+	<controls>
+
+		<!--Background Area-->
+
+									<!--Top Area-->
+
+			
+			<!--Content Area-->
+			<control type="group">
+			
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+				
+				<!--Animation-->
+		
+				
+				<control type="grouplist">
+		
+					<include>Common_Content_Grouplist</include>
+					
+					<control type="group" id="8000">
+					
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>1280</width>
+						<height>720</height>
+						
+						<control type="label">
+							
+							<label></label>
+						<include>Common_Section_Label</include>
+							
+							
+						</control>
+					
+
+								
+
+			
+				
+
+						
+							<!--Search Area-->
+				<control type="group">
+										<posx>0</posx>
+						<posy>0</posy>
+					<width>1280</width>
+					<height>720</height>
+					
+					<visible>true</visible>
+				
+					<control type="label">
+						<posx>10</posx>
+						<posy>-3</posy>
+						<label>search</label>
+						<include>Common_Section_Label2</include>
+						
+					</control>
+					
+
+					
+
+					
+
+	
+				
+				
+				
+									<control type="button" id="111">
+					
+						<posx>0</posx>
+						<posy>230</posy>
+						<width>400</width>
+						<height>400</height>
+
+						<label></label>
+						<font>DialogInfo-Header</font>
+						<textcolor>Label_Normal</textcolor>
+						<textoffsetx>16</textoffsetx>
+						<textoffsety>6</textoffsety>
+						<align>left</align>
+						<aligny>top</aligny>
+			
+
+				<ondown>222</ondown>
+						<onright>444</onright>
+
+<onclick>Skin.SetString(ube)</onclick>
+<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=$INFO[Skin.String(ube)]&quot;,return)</onclick>
+
+					
+					</control>
+					
+
+					
+	
+													<control type="button" id="222">
+					
+						<posx>253</posx>
+						<posy>230</posy>
+						<width>400</width>
+						<height>400</height>
+
+						<label></label>
+						<font>DialogInfo-Header</font>
+						<textcolor>Label_Normal</textcolor>
+
+						<textoffsetx>16</textoffsetx>
+						<textoffsety>6</textoffsety>
+						<align>left</align>
+						<aligny>top</aligny>
+					<onup>111</onup>
+<ondown>333</ondown>
+					
+						<onright>444</onright>
+
+<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.twitch/createListOfFeaturedStreams/&quot;,return)</onclick>
+					
+					</control>
+					
+
+
+													<control type="button" id="333">
+					
+						<posx>506</posx>
+						<posy>230</posy>
+						<width>400</width>
+						<height>400</height>
+
+						<label></label>
+						<font>DialogInfo-Header</font>
+						<textcolor>Label_Normal</textcolor>
+
+						<textoffsetx>16</textoffsetx>
+						<textoffsety>6</textoffsety>
+						<align>left</align>
+						<aligny>top</aligny>
+						<onup>222</onup>
+
+						
+						<onright>444</onright>
+
+<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.twitch/createListOfGames/0/&quot;,return)</onclick>
+				
+					</control>
+					
+
+					
+
+				
+													<control type="button" id="444">
+					
+						<posx>759</posx>
+						<posy>230</posy>
+						<width>400</width>
+						<height>400</height>
+
+						<label></label>
+						<font>DialogInfo-Header</font>
+						<textcolor>Label_Normal</textcolor>
+
+						<textoffsetx>16</textoffsetx>
+						<textoffsety>6</textoffsety>
+						<align>left</align>
+						<aligny>top</aligny>
+					
+
+<onright>555</onright>
+						<onleft>111</onleft>
+					
+
+<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.twitch/createListForGame/Dota+2/0/&quot;,return)</onclick>
+		
+					</control>
+																		<control type="button" id="555">
+					
+						<posx>759</posx>
+						<posy>230</posy>
+						<width>400</width>
+						<height>400</height>
+
+						<label></label>
+						<font>DialogInfo-Header</font>
+						<textcolor>Label_Normal</textcolor>
+
+						<textoffsetx>16</textoffsetx>
+						<textoffsety>6</textoffsety>
+						<align>left</align>
+						<aligny>top</aligny>
+					
+<onright>777</onright>
+<ondown>666</ondown>
+						<onleft>444</onleft>
+					
+
+<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.twitch/createListForGame/League+of+Legends/0/&quot;,return)</onclick>
+		
+					</control>
+
+																		<control type="button" id="666">
+					
+						<posx>759</posx>
+						<posy>230</posy>
+						<width>400</width>
+						<height>400</height>
+
+						<label></label>
+						<font>DialogInfo-Header</font>
+						<textcolor>Label_Normal</textcolor>
+
+						<textoffsetx>16</textoffsetx>
+						<textoffsety>6</textoffsety>
+						<align>left</align>
+						<aligny>top</aligny>
+						<onup>555</onup>
+<onright>888</onright>
+						<onleft>444</onleft>
+					
+
+<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.twitch/createListForGame/DayZ/0/&quot;,return)</onclick>
+		
+					</control>
+																		<control type="button" id="777">
+					
+						<posx>759</posx>
+						<posy>230</posy>
+						<width>400</width>
+						<height>400</height>
+
+						<label></label>
+						<font>DialogInfo-Header</font>
+						<textcolor>Label_Normal</textcolor>
+
+						<textoffsetx>16</textoffsetx>
+						<textoffsety>6</textoffsety>
+						<align>left</align>
+						<aligny>top</aligny>
+				<ondown>888</ondown>	
+<onright>999</onright>
+						<onleft>555</onleft>
+					
+
+<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.twitch/createListForGame/Call+of+Duty%3A+Black+Ops/0/&quot;,return)</onclick>
+		
+					</control>
+																		<control type="button" id="888">
+					
+						<posx>759</posx>
+						<posy>230</posy>
+						<width>400</width>
+						<height>400</height>
+
+						<label></label>
+						<font>DialogInfo-Header</font>
+						<textcolor>Label_Normal</textcolor>
+
+						<textoffsetx>16</textoffsetx>
+						<textoffsety>6</textoffsety>
+						<align>left</align>
+						<aligny>top</aligny>
+						<onup>777</onup>
+				
+<onright>1010</onright>
+						<onleft>666</onleft>
+					
+
+<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.twitch/createListForGame/Minecraft/0/&quot;,return)</onclick>
+		
+					</control>
+																		<control type="button" id="999">
+					
+						<posx>759</posx>
+						<posy>230</posy>
+						<width>400</width>
+						<height>400</height>
+
+						<label></label>
+						<font>DialogInfo-Header</font>
+						<textcolor>Label_Normal</textcolor>
+
+						<textoffsetx>16</textoffsetx>
+						<textoffsety>6</textoffsety>
+						<align>left</align>
+						<aligny>top</aligny>
+<ondown>1010</ondown>
+						<onleft>777</onleft>
+					
+
+<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.twitch/createListForGame/Super+Street+Fighter+IV/0/&quot;,return)</onclick>
+		
+					</control>
+																		<control type="button" id="1010">
+					
+						<posx>759</posx>
+						<posy>230</posy>
+						<width>400</width>
+						<height>400</height>
+
+						<label></label>
+						<font>DialogInfo-Header</font>
+						<textcolor>Label_Normal</textcolor>
+
+						<textoffsetx>16</textoffsetx>
+						<textoffsety>6</textoffsety>
+						<align>left</align>
+						<aligny>top</aligny>
+					
+<onup>999</onup>
+						<onleft>888</onleft>
+						
+					
+
+<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.twitch/createListForGame/XCOM%3A+Enemy+Within/0/&quot;,return)</onclick>
+		
+					</control>
+																
+					
+
+					
+
+									
+
+
+									
+					</control>					
+
+					
+
+
+				
+				
+				
+				
+
+				
+						
+						<!--Scrollbar-->
+
+					
+					</control>
+					
+
+					
+				</control>
+									
+																									<control type="image">
+							
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1280</width>
+								<height>720</height>
+								<texture>demo\twitch\bg.jpg</texture>
+						
+
+							</control>
+																												<control type="image">
+							
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1280</width>
+								<height>720</height>
+								<texture>demo\twitch\1.jpg</texture>
+								<visible>Control.Hasfocus(111)</visible>
+								
+							</control>
+																																			<control type="image">
+							
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1280</width>
+								<height>720</height>
+								<texture>demo\twitch\2.jpg</texture>
+								<visible>Control.Hasfocus(222)</visible>
+							</control>
+																																		<control type="image">
+							
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1280</width>
+								<height>720</height>
+								<texture>demo\twitch\3.jpg</texture>
+								<visible>Control.Hasfocus(333)</visible>
+							</control>
+																																					<control type="image">
+							
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1280</width>
+								<height>720</height>
+								<texture>demo\twitch\4.jpg</texture>
+								<visible>Control.Hasfocus(444)</visible>
+							</control>
+																																									<control type="image">
+							
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1280</width>
+								<height>720</height>
+								<texture>demo\twitch\5.jpg</texture>
+								<visible>Control.Hasfocus(555)</visible>
+							</control>
+																																									<control type="image">
+							
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1280</width>
+								<height>720</height>
+								<texture>demo\twitch\6.jpg</texture>
+								<visible>Control.Hasfocus(666)</visible>
+							</control>
+																																									<control type="image">
+							
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1280</width>
+								<height>720</height>
+								<texture>demo\twitch\7.jpg</texture>
+								<visible>Control.Hasfocus(777)</visible>
+							</control>
+																																									<control type="image">
+							
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1280</width>
+								<height>720</height>
+								<texture>demo\twitch\8.jpg</texture>
+								<visible>Control.Hasfocus(888)</visible>
+							</control>
+																																									<control type="image">
+							
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1280</width>
+								<height>720</height>
+								<texture>demo\twitch\9.jpg</texture>
+								<visible>Control.Hasfocus(999)</visible>
+							</control>
+																																									<control type="image">
+							
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1280</width>
+								<height>720</height>
+								<texture>demo\twitch\10.jpg</texture>
+								<visible>Control.Hasfocus(1010)</visible>
+							</control>
+																																									<control type="image">
+							
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1280</width>
+								<height>720</height>
+								<texture>demo\twitch\11.jpg</texture>
+								<visible>Control.Hasfocus(1111)</visible>
+							</control>
+				
+			</control>
+			
+			<!--Scrollbar-->
+					
+					<include>Snapped_Content</include>								
+
+
+		
+	</controls>	
+		
+</window>

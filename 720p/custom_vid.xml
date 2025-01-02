@@ -1,0 +1,29 @@
+<!-- Foundation -->
+<window id="2099">
+	<defaultcontrol always="true">1</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+
+	<controls>
+
+<control type="videowindow" id="1">
+      <description>My first video control</description>
+      <posx>0</posx>
+      <posy>0</posy>
+      <width>1280</width>
+      <height>720</height>
+      <visible>Player.Hasmedia</visible>
+            <aspectratio>stretch</aspectratio>
+            <align>center</align>
+			<include>Common_Animation_vid</include>
+
+        </control>
+
+
+<onunload condition="Skin.HasSetting(dashovid)">Skin.ToggleSetting(dashovid)</onunload>	
+<onunload>ActivateWindow(0)</onunload>
+
+
+
+	</controls>
+
+</window>

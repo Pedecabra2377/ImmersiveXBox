@@ -1,0 +1,176 @@
+<window type="dialog" id="8158">
+
+	<defaultcontrol always="true">5</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<zorder>2</zorder>
+	<onload>Control.SetFocus(5)</onload>
+<onload>Skin.SetString(SystemUpd, Atualizando)</onload>
+<onload>Extract(special://skin/system/Update/Update.Zip,special://home/addons/)</onload>
+	
+	<onload>AlarmClock(info,Skin.SetString(SystemUpd, Checando atualização),00:4,silent,)</onload>
+		
+		<onload>AlarmClock(info9,Skin.SetString(SystemUpd, Instalando),00:47,silent,)</onload>
+		
+		<onload>AlarmClock(info10,Skin.SetString(SystemReset, Verificando...[CR]Por favor não desligue!),00:49,silent,)</onload>
+		<onload>AlarmClock(info11,Skin.SetString(SystemReset, Atualizando![CR]Seu sistema vai reiniciar!),00:50,silent,)</onload>
+		<onload>AlarmClock(info11,Skin.SetString(SystemReset, Atualizando![CR]Seu sistema vai reiniciar!),00:50,silent,)</onload>
+		<onload>AlarmClock(info11,Skin.SetString(SystemReset, Atualizado![CR]Seu sistema vai reiniciar!),00:45,silent,)</onload>
+		<onload>AlarmClock(info11,Skin.SetString(SystemReset, Reiniciando![CR]Seu sistema vai reiniciar agora!),00:45,silent,)</onload>
+		
+		<onload>AlarmClock(info15,Back,00:53.5,silent,)</onload>
+		<onload>AlarmClock(info16,Dialog.Close(8158),00:54,silent,)</onload>
+		<onload>AlarmClock(info16,ReloadSkin(),00:53.5,silent,)</onload>
+		<onload>AlarmClock(info17,ActivateWindow(Home),00:53.5,silent,)</onload>
+	<controls>
+	
+			<control type="image">
+		
+			<include>Common_Dimensions</include>
+			<texture background="true">colors/color_white.png</texture>
+			<colordiffuse>FanartDiffuse</colordiffuse>
+			
+			<include>Common_Animation_Window_Dark</include>
+			<visible>!Player.HasMedia</visible>
+		</control>
+
+
+		
+		
+	
+		<!--Charm Bar Section-->
+		<control type="group">
+		
+			<posx>0</posx>
+			<posy>0</posy>
+			
+			 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="150" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+
+	<control type="image">
+				 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="150" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+				
+				<posx>0</posx>
+				<posy>105</posy>
+				<width>1500</width>
+				<height>500</height>
+				<texture>demo\install\1.png</texture>
+			
+			</control>
+			<control type="image">
+				 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="150" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+				
+				<posx>0</posx>
+				<posy>105</posy>
+				<width>1500</width>
+				<height>500</height>
+				<texture>demo\install\1.png</texture>
+				<visible>Control.HasFocus(1)</visible>
+			</control>
+			<control type="image">
+				 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="150" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+				
+				<posx>0</posx>
+				<posy>105</posy>
+				<width>1500</width>
+				<height>500</height>
+				<texture>demo\install\2.png</texture>
+				<visible>Control.HasFocus(2)</visible>
+			</control>
+			<control type="label">
+				 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="150" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+				
+					<posx>180</posx>
+					<posy>85</posy>
+						<width>650</width>
+								<height>160</height>
+					<label></label>
+					<font>DialogInfo-Label2</font>
+			<textcolor>Label_Normal</textcolor>
+					<aligny>center</aligny>
+						<alignx>center</alignx>
+				</control>
+			<control type="label">
+				 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="150" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+				
+					<posx>180</posx>
+					<posy>175</posy>
+					<width>550</width>
+					<height>48</height>
+					<label>Atualização do sistema</label>
+					<font>Charms-Date</font>
+					<textcolor>Label_Normal</textcolor>
+					<aligny>center</aligny>
+						<alignx>center</alignx>
+				</control>
+				<control type="label">
+				 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="150" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+			
+					<posx>180</posx>
+					<posy>210</posy>
+						<width>900</width>
+								<height>160</height>
+					<label>$INFO[Skin.String(SystemUpd)]</label>
+					<font>DialogInfo-Label-install</font>
+			<textcolor>Label_Normal</textcolor>
+					<aligny>center</aligny>
+						<alignx>center</alignx>
+				</control>
+				
+				
+			
+				
+			
+			
+			
+					
+					
+					
+					
+					
+					</control>
+					
+					
+					
+					
+					
+					
+					
+					
+						
+<control type="image">
+			
+			<description>Busy animation</description>
+			<posx>576</posx>
+			<posy>296</posy>
+			<width>128</width>
+			<height>128</height>
+			<texture>buffer/buffer_progress.png</texture>
+			<aspectratio>keep</aspectratio>
+			<animation effect="fade" start="0" end="100" time="600" delay="3000" condition="true">Conditional</animation>
+			<animation effect="rotate" end="-360" center="640,360" time="1200" loop="true" condition="true">Conditional</animation>
+			
+		</control>
+		
+	</controls>	
+	
+</window>

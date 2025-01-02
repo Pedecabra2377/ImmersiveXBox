@@ -1,0 +1,335 @@
+<!-- Foundation -->
+<window id="106">
+	
+	<defaultcontrol always="true">1000</defaultcontrol>
+
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>0</posy>
+	</coordinates>
+	
+	<controls>
+	
+		<control type="image">
+		
+			<include>Common_Dimensions</include>
+			<texture background="true">colors/color_white.png</texture>
+			<colordiffuse>FanartDiffuse</colordiffuse>
+			
+			<include>Common_Animation_Window_Dark</include>
+			
+		</control>
+	
+			<control type="group">
+		<include>Common_Animation_Splash_kai2</include>
+			<posx>480</posx>
+			<posy>170</posy>
+			<width>320</width>
+			<height>400</height>
+			
+		
+		
+			<!--Background-->
+				
+					<control type="image">
+			
+				<posy>0</posy>
+				<posy>0</posy>
+				<width>320</width>
+				<height>400</height>
+				<texture background="true">colors\color_black.png</texture>
+			<colordiffuse>FFF5F5F5</colordiffuse>
+
+			</control>
+			<control type="image">
+			
+				<posx>0</posx>
+				<posy>270</posy>
+				<width>320</width>
+				<height>130</height>
+				<texture background="true">colors\color_white.png</texture>
+			<colordiffuse>$INFO[Skin.String(Gamercolor)]</colordiffuse>
+
+			</control>
+			
+			<include>Common_ContextMenu_Header_Back</include>
+			
+			<control type="label">
+	
+					<posx>80</posx>
+		<posy>29</posy>
+		<width>240</width>
+		<height>32</height>
+		<font>PVR-EPG-Time2</font>
+		<textcolor>Label_Normal</textcolor>
+		<aligny>top</aligny>
+				<label fallback="Context options">$INFO[ListItem.Label]</label>
+				
+			
+			</control>
+			
+			
+			
+		<control type="grouplist" id="996">
+				
+				<description>grouplist for context buttons</description>
+				<posx>-5</posx>
+				<posy>92</posy>
+				<width>330</width>
+				<height>300</height>
+				<itemgap>0</itemgap>
+				<onright>997</onright>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				<control type="button" id="2001">
+					
+					<include>Common_ContextMenu_Button</include>
+					<label>$VAR[ContextMenu_MetaActors_Label]</label>
+					<onclick>RunScript(script.metadata.actors,$INFO[ListItem.Label])</onclick>
+					<visible>!Window.IsVisible(0) + System.HasAddon(script.metadata.actors) + [Container.Content(Actors) | Container.Content(Directors) | Container.Content(Artists)]</visible>
+					
+				</control>
+				
+
+				
+				<control type="button" id="1000">
+				
+					<description>Buttons</description>
+					<include>Common_ContextMenu_Button</include>
+		
+				</control>
+		
+				
+				<control type="button" id="2002">
+					
+					<include>Common_ContextMenu_Button</include>
+					<label>Sair</label>
+					<onclick>System.LogOff</onclick>
+					<visible>Window.IsVisible(29)</visible>
+					
+				</control>
+				
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<control type="button" id="2003">
+					
+					<include>Common_ContextMenu_Button</include>
+					<label>Share</label>
+					<onclick condition="IsEmpty(Skin.String(Shared1))">Skin.Setstring(Shared1, 1)</onclick>
+					
+					<onclick>Skin.SetString(YoutubeImage, $INFO[ListItem.Thumb])</onclick>
+					
+							<onclick>Skin.SetString(SharedVideo, $INFO[ListItem.FileNameAndPath])</onclick>
+							
+							<onclick>Notification(     ,Compartilhado!,00:59,)</onclick>
+							
+				
+					<visible>IsEmpty(Skin.String(Shared1)) + SubString(Container.FolderPath,youtube)</visible>
+				</control>
+				<control type="button" id="2004">
+					
+					<include>Common_ContextMenu_Button</include>
+					<label>Share</label>
+					<onclick condition="!IsEmpty(Skin.String(Shared1)) + IsEmpty(Skin.String(Shared2))">Skin.Setstring(Shared2, 2)</onclick>
+					
+					<onclick>Skin.SetString(YoutubeImage1, $INFO[ListItem.Thumb])</onclick>
+					
+							<onclick>Skin.SetString(SharedVideo1, $INFO[ListItem.FileNameAndPath])</onclick>
+							
+							<onclick>Notification(     ,Compartilhado!,00:59,)</onclick>
+							
+				
+					<visible>!IsEmpty(Skin.String(Shared1)) + IsEmpty(Skin.String(Shared2)) + SubString(Container.FolderPath,plugin,left)</visible>
+				</control>
+				<control type="button" id="2005">
+					
+					<include>Common_ContextMenu_Button</include>
+					<label>Share</label>
+					<onclick condition="!IsEmpty(Skin.String(Shared2)) + IsEmpty(Skin.String(Shared3))">Skin.Setstring(Shared3, 3)</onclick>
+					
+					<onclick>Skin.SetString(YoutubeImage2, $INFO[ListItem.Thumb])</onclick>
+					
+							<onclick>Skin.SetString(SharedVideo2, $INFO[ListItem.FileNameAndPath])</onclick>
+							
+							<onclick>Notification(     ,Shared!,00:59,)</onclick>
+							
+				
+					<visible>!IsEmpty(Skin.String(Shared2)) + IsEmpty(Skin.String(Shared3)) + SubString(Container.FolderPath,plugin,left)</visible>
+				</control>
+				<control type="button" id="2006">
+					
+					<include>Common_ContextMenu_Button</include>
+					<label>Share</label>
+					<onclick condition="!IsEmpty(Skin.String(Shared3)) + IsEmpty(Skin.String(Shared4))">Skin.Setstring(Shared4, 4)</onclick>
+					
+					<onclick>Skin.SetString(YoutubeImage3, $INFO[ListItem.Thumb])</onclick>
+					
+							<onclick>Skin.SetString(SharedVideo3, $INFO[ListItem.FileNameAndPath])</onclick>
+							
+							<onclick>Notification(     ,Shared!,00:59,)</onclick>
+							
+				
+					<visible>!IsEmpty(Skin.String(Shared3)) + IsEmpty(Skin.String(Shared4)) + SubString(Container.FolderPath,plugin,left)</visible>
+				</control>
+				<control type="button" id="2007">
+					
+					<include>Common_ContextMenu_Button</include>
+					<label>Share</label>
+					<onclick condition="!IsEmpty(Skin.String(Shared4)) + IsEmpty(Skin.String(Shared5))">Skin.Setstring(Shared5, 5)</onclick>
+					
+					<onclick>Skin.SetString(YoutubeImage4, $INFO[ListItem.Thumb])</onclick>
+					
+							<onclick>Skin.SetString(SharedVideo4, $INFO[ListItem.FileNameAndPath])</onclick>
+							
+							<onclick>Notification(     ,Shared!,00:59,)</onclick>
+							
+				
+					<visible>!IsEmpty(Skin.String(Shared4)) + IsEmpty(Skin.String(Shared5)) + SubString(Container.FolderPath,plugin,left)</visible>
+				</control>
+				<control type="button" id="2008">
+					
+					<include>Common_ContextMenu_Button</include>
+					<label>Share</label>
+					
+<onclick condition="!IsEmpty(Skin.String(Shared5)) + IsEmpty(Skin.String(Shared6))">Skin.Setstring(Shared6, 6)</onclick>
+					
+					<onclick>Skin.SetString(YoutubeImage5, $INFO[ListItem.Thumb])</onclick>
+					
+							<onclick>Skin.SetString(SharedVideo5, $INFO[ListItem.FileNameAndPath])</onclick>
+							
+							<onclick>Notification(     ,Shared!,00:59,)</onclick>
+							
+				
+					<visible>!IsEmpty(Skin.String(Shared5)) + IsEmpty(Skin.String(Shared6)) + SubString(Container.FolderPath,plugin,left)</visible>
+				</control>
+				<control type="button" id="2009">
+					
+					<include>Common_ContextMenu_Button</include>
+					<label>Share</label>
+					
+<onclick condition="!IsEmpty(Skin.String(Shared6)) + IsEmpty(Skin.String(Shared7))">Skin.Setstring(Shared7, 7)</onclick>
+					
+					<onclick>Skin.SetString(YoutubeImage6, $INFO[ListItem.Thumb])</onclick>
+					
+							<onclick>Skin.SetString(SharedVideo6, $INFO[ListItem.FileNameAndPath])</onclick>
+							
+							<onclick>Notification(     ,Shared!,00:59,)</onclick>
+							
+				
+					<visible>!IsEmpty(Skin.String(Shared6)) + IsEmpty(Skin.String(Shared7)) + SubString(Container.FolderPath,plugin,left)</visible>
+				</control>
+				<control type="button" id="2010">
+					
+					<include>Common_ContextMenu_Button</include>
+					<label>Share</label>
+					
+<onclick condition="!IsEmpty(Skin.String(Shared7)) + IsEmpty(Skin.String(Shared8))">Skin.Setstring(Shared8, 8)</onclick>
+					
+					<onclick>Skin.SetString(YoutubeImage7, $INFO[ListItem.Thumb])</onclick>
+					
+							<onclick>Skin.SetString(SharedVideo7, $INFO[ListItem.FileNameAndPath])</onclick>
+							
+							<onclick>Notification(     ,Shared!,00:59,)</onclick>
+							
+				
+					<visible>!IsEmpty(Skin.String(Shared7)) + IsEmpty(Skin.String(Shared8)) + SubString(Container.FolderPath,plugin,left)</visible>
+				</control>
+				<control type="button" id="2011">
+					
+					<include>Common_ContextMenu_Button</include>
+					<label>Share</label>
+					
+<onclick condition="!IsEmpty(Skin.String(Shared8)) + IsEmpty(Skin.String(Shared9))">Skin.Setstring(Shared9, 9)</onclick>
+					
+					<onclick>Skin.SetString(YoutubeImage8, $INFO[ListItem.Thumb])</onclick>
+					
+							<onclick>Skin.SetString(SharedVideo8, $INFO[ListItem.FileNameAndPath])</onclick>
+							
+							<onclick>Notification(     ,Shared!,00:59,)</onclick>
+							
+				
+					<visible>!IsEmpty(Skin.String(Shared8)) + IsEmpty(Skin.String(Shared9)) + SubString(Container.FolderPath,plugin,left)</visible>
+				</control>
+				<control type="button" id="2012">
+					
+					<include>Common_ContextMenu_Button</include>
+					<label>Share</label>
+					
+
+<onclick condition="!IsEmpty(Skin.String(Shared9)) + IsEmpty(Skin.String(Shared10))">Skin.Setstring(Shared10, 10)</onclick>
+					
+					<onclick>Skin.SetString(YoutubeImage9, $INFO[ListItem.Thumb])</onclick>
+					
+							<onclick>Skin.SetString(SharedVideo9, $INFO[ListItem.FileNameAndPath])</onclick>
+							
+							<onclick>Notification(     ,Shared!,00:59,)</onclick>
+							
+				
+					<visible>!IsEmpty(Skin.String(Shared9)) + IsEmpty(Skin.String(Shared10)) + SubString(Container.FolderPath,plugin,left)</visible>
+				</control>
+				<control type="button" id="2013">
+					
+					<include>Common_ContextMenu_Button</include>
+					<label>Share</label>
+					
+
+<onclick condition="!IsEmpty(Skin.String(Shared10)) + IsEmpty(Skin.String(Shared11))">Skin.Setstring(Shared11, 11)</onclick>
+					
+					<onclick>Skin.SetString(YoutubeImage10, $INFO[ListItem.Thumb])</onclick>
+					
+							<onclick>Skin.SetString(SharedVideo10, $INFO[ListItem.FileNameAndPath])</onclick>
+							
+							<onclick>Notification(     ,Shared!,00:59,)</onclick>
+							
+				
+					<visible>!IsEmpty(Skin.String(Shared10)) + IsEmpty(Skin.String(Shared11)) + SubString(Container.FolderPath,plugin,left)</visible>
+				</control>
+									
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			</control>	
+				</control>	
+
+	</controls>
+	
+</window>

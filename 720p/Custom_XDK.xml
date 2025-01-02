@@ -1,0 +1,235 @@
+<window id="5157">
+
+	<defaultcontrol always="true">2</defaultcontrol>
+	
+	<zorder>2</zorder>
+	
+	<include condition="!Skin.HasSetting(disablesplash)">Common_Animation_Window</include>
+	
+	<!--Splash Screen-->
+
+
+
+	
+	<controls>
+
+		<!--Background Area-->
+
+		
+
+									<!--Top Area-->
+
+			
+			<!--Content Area-->
+			<control type="group">
+			
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+				
+				<!--Animation-->
+				<include condition="!Skin.HasSetting(disablesplash)">Common_Animation_Content_Splash</include>
+				<include condition="!Window.Previous(home)">Common_Animation_Content</include>
+				
+				<control type="grouplist">
+		
+					<include>Common_Content_Grouplist</include>
+					
+					<control type="group" id="8000">
+					
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>1280</width>
+						<height>720</height>
+						
+						<control type="label">
+							
+							<label></label>
+						<include>Common_Section_Label</include>
+							
+							
+						</control>
+					
+
+								
+
+			
+				
+
+						
+							<!--Search Area-->
+				<control type="group">
+										<posx>0</posx>
+						<posy>0</posy>
+					<width>1280</width>
+					<height>720</height>
+					
+					<visible>true</visible>
+				
+					<control type="label">
+						<posx>10</posx>
+						<posy>-3</posy>
+						<label>search</label>
+						<include>Common_Section_Label2</include>
+						
+					</control>
+					
+					
+
+					
+
+	
+				
+				
+				
+									<control type="button" id="2">
+					
+						<posx>0</posx>
+						<posy>230</posy>
+						<width>400</width>
+						<height>400</height>
+
+						<label></label>
+						<font>DialogInfo-Header</font>
+						<textcolor>Label_Normal</textcolor>
+						<textoffsetx>16</textoffsetx>
+						<textoffsety>6</textoffsety>
+						<align>left</align>
+						<aligny>top</aligny>
+			
+
+					
+						<onright>3</onright>
+
+<onclick></onclick>
+					
+					</control>
+					
+
+					
+	
+													<control type="button" id="3">
+					
+						<posx>253</posx>
+						<posy>230</posy>
+						<width>400</width>
+						<height>400</height>
+
+						<label></label>
+						<font>DialogInfo-Header</font>
+						<textcolor>Label_Normal</textcolor>
+
+						<textoffsetx>16</textoffsetx>
+						<textoffsety>6</textoffsety>
+						<align>left</align>
+						<aligny>top</aligny>
+						<onup>9005</onup>
+
+						<onleft>2</onleft>
+						<onright>4</onright>
+
+<onclick></onclick>
+					
+					</control>
+					
+
+
+													<control type="button" id="4">
+					
+						<posx>506</posx>
+						<posy>230</posy>
+						<width>400</width>
+						<height>400</height>
+
+						<label></label>
+						<font>DialogInfo-Header</font>
+						<textcolor>Label_Normal</textcolor>
+
+						<textoffsetx>16</textoffsetx>
+						<textoffsety>6</textoffsety>
+						<align>left</align>
+						<aligny>top</aligny>
+						<onup>9005</onup>
+
+						<onleft>3</onleft>
+						
+
+<onclick></onclick>
+				
+					</control>
+					
+
+					
+
+					
+																									<control type="image">
+							
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1280</width>
+								<height>720</height>
+								<texture>demo\XDK\bg.png</texture>
+						
+							</control>
+																									<control type="image">
+							
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1280</width>
+								<height>720</height>
+								<texture>demo\XDK\1.png</texture>
+							<visible>Control.HasFocus(1)</visible>
+							</control>
+										
+																										<control type="image">
+							
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1280</width>
+								<height>720</height>
+								<texture>demo\XDK\2.png</texture>
+							<visible>Control.HasFocus(2)</visible>
+							</control>
+										
+																									<control type="image">
+							
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1280</width>
+								<height>720</height>
+								<texture>demo\XDK\3.png</texture>
+						<visible>Control.HasFocus(3)</visible>
+							</control>
+					</control>					
+
+					
+
+
+				
+				
+				
+				
+
+				
+						
+						<!--Scrollbar-->
+
+					
+					</control>
+					
+
+					
+				</control>
+				
+			</control>
+			
+			<!--Scrollbar-->
+					
+								
+<include>Snapped_Content</include>	
+
+		
+	</controls>	
+		
+</window>

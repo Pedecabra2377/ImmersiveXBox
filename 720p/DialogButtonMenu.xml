@@ -1,0 +1,237 @@
+<window id="111">
+
+	<defaultcontrol always="true">900</defaultcontrol>
+	
+	<zorder>2</zorder>
+	
+	
+
+	
+	<!--Splash Screen-->
+
+
+	
+
+
+	
+
+	
+	<controls>
+
+		<!--Background Area-->
+
+	
+			
+<control type="image">
+		
+			<include>Common_Dimensions</include>
+			<texture background="true">colors/color_white.png</texture>
+			<colordiffuse>FanartDiffuse</colordiffuse>
+			
+			<include>Common_Animation_Window_Dark</include>
+			
+		</control>
+
+							
+																			
+									<!--Top Area-->
+
+	
+						
+						
+			
+				
+
+					
+
+							
+					
+					
+						
+					
+					
+					
+					
+					
+								
+					
+					
+							
+					
+					
+					
+	
+		<control type="group">
+		<include>Common_Animation_Splash_kai2</include>
+			<posx>480</posx>
+			<posy>170</posy>
+			<width>320</width>
+			<height>400</height>
+			
+		
+		
+			<!--Background-->
+				
+					<control type="image">
+			
+				<posy>0</posy>
+				<posy>0</posy>
+				<width>320</width>
+				<height>450</height>
+				<texture background="true">colors\color_black.png</texture>
+			<colordiffuse>FFF5F5F5</colordiffuse>
+
+			</control>
+			<control type="image">
+			
+				<posx>0</posx>
+				<posy>330</posy>
+				<width>320</width>
+				<height>120</height>
+				<texture background="true">colors\color_white.png</texture>
+			<colordiffuse>$INFO[Skin.String(Gamercolor)]</colordiffuse>
+
+			</control>
+			
+			<include>Common_ContextMenu_Header_Back</include>
+			
+			<control type="label">
+	
+					<posx>80</posx>
+		<posy>29</posy>
+		<width>240</width>
+		<height>32</height>
+		<font>PVR-EPG-Time2</font>
+		<textcolor>Label_Normal</textcolor>
+		<aligny>top</aligny>
+				<label>Opções de energia</label>
+				
+				
+			</control>
+			
+			
+			
+			<control type="panel" id="900">
+				
+<posx>-5</posx>
+						<posy>100</posy>
+
+			<onleft>PlayMedia(&quot;plugin://plugin.program.advanced.launcher/?b2a29b158e752bf67b8751462571bb12/e3a2681785e114d07256be9c7755395c&quot;)</onleft>
+
+<onright>PlayMedia(&quot;plugin://plugin.program.advanced.launcher/?b2a29b158e752bf67b8751462571bb12/e50494d3c76f89b3d2c8bb11be467e5b&quot;)</onright>	
+			
+						<include>Common_AltHome_Panel383-alt</include>
+					
+
+
+
+
+						
+						
+						<content>
+						
+
+							
+										<item id="1">
+								<label>   Sign Out</label>
+<visible>!Skin.HasSetting(RealSignOut)</visible>
+						<onclick>Dialog.Close(all,true)</onclick>
+						<onclick>Notification(     ,Até logo $INFO[System.ProfileName],00:20,)</onclick>
+						<onclick>AlarmClock(login,ActivateWindow(29),00:3,silent,)</onclick>
+						</item>
+									<item id="1">
+								<label>   Sign Out</label>
+<visible>Skin.HasSetting(RealSignOut)</visible>
+						<onclick>Dialog.Close(all,true)</onclick>
+						<onclick>Notification(     ,Até logo $INFO[System.ProfileName],00:20,)</onclick>
+						<onclick>AlarmClock(login,System.LogOff,00:3,silent,)</onclick>
+						</item>
+						
+						
+										<item id="2">
+								<label>   Sair</label>
+
+						<onclick>XBMC.Quit</onclick>  	
+				<visible>!Skin.HasSetting(PythonLogout)</visible>
+						</item>
+						
+							<item id="2">
+								<label>   Sair</label>
+
+					<label>   Sair</label>
+						<onclick>Dialog.Close(all,true)</onclick>
+<onclick>Notification(     ,Até logo $INFO[System.ProfileName],00:20,)</onclick>
+<onclick condition="System.Platform.Windows">AlarmClock(exit,RunScript(special://skin/system/Logout.py),00:3,silent,)</onclick>
+<onclick condition="System.Platform.Linux">AlarmClock(exit,RunScript(special://skin/system/LogoutLinux.py),00:3,silent,)</onclick>
+<onclick condition="System.Platform.Linux.RaspberryPi">AlarmClock(exit,RunScript(special://skin/system/LogoutRaspberry.py),00:3,silent,)</onclick>						
+	<onclick condition="System.Platform.Darwin">AlarmClock(exit,RunScript(special://skin/system/LogoutDarwin.py),00:3,silent,)</onclick>		
+	<onclick condition="System.Platform.ATV2">AlarmClock(exit,RunScript(special://skin/system/LogoutATV.py),00:3,silent,)</onclick>		
+
+	
+
+				<visible>Skin.HasSetting(PythonLogout)</visible>
+						</item>
+						
+						
+						
+						
+						
+								<item id="3">
+								
+					<label>   Timer de desligamento</label>
+						<onclick>Dialog.Close(all,true)</onclick>
+							<onclick condition="Skin.HasSetting(Slow)">XBMC.CancelAlarm(shutdowntimer)</onclick>
+									<onclick condition="Skin.HasSetting(Slow)">XBMC.AlarmClock(shutdowntimer,XBMC.Powerdown())</onclick>
+										<onclick condition="Skin.HasSetting(Instant)">XBMC.CancelAlarm(shutdowntimer)</onclick>
+									<onclick condition="Skin.HasSetting(Instant)">XBMC.AlarmClock(shutdowntimer,XBMC.Suspend())</onclick>
+			
+							</item>
+							<item id="4">
+								<label>   Reiniciar</label>
+									<onclick>Dialog.Close(all,true)</onclick>
+<onclick>Notification(     ,Até logo $INFO[System.ProfileName],00:20,)</onclick>
+						<onclick>AlarmClock(reset,XBMC.Reset(),00:3,silent,)</onclick>
+					
+							</item>
+								
+									<item id="5">
+								<label>   Desligar</label>
+									<onclick>Dialog.Close(all,true)</onclick>
+						<onclick>ActivateWindow(1212)</onclick> 
+							</item>		
+				
+<item id="6">
+												<include>Common_ContextMenu_Button</include>
+<label>   Suspender</label>
+	<onclick>Dialog.Close(all,true)</onclick>
+<onclick>Notification(     ,Até logo $INFO[System.ProfileName],00:20,)</onclick>
+						<onclick>AlarmClock(suspend,XBMC.Suspend(),00:3,silent,)</onclick>
+					
+							</item>
+							
+							
+							
+							
+							
+	
+												
+
+
+								</content>
+
+					</control>
+			
+		</control>
+		
+						
+						<!--Scrollbar-->
+
+					
+			
+
+			
+		
+		
+	</controls>	
+		
+</window>

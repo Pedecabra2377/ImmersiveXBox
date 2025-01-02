@@ -1,0 +1,53 @@
+<!-- Foundation -->
+<window type="dialog" id="7555">
+
+	<zorder>2</zorder>
+	<onload>Skin.SetString(snapwindow, 7555)</onload>
+<onload condition="!Skin.HasSetting(snapie)">Skin.ToggleSetting(snapie)</onload>
+<onload condition="Skin.HasSetting(gaming)">Skin.ToggleSetting(gaming)</onload>
+<onload>Skin.SetString(snap, demo/sna/whatsnew.jpg,0)</onload>
+<onload>Skin.SetString(sn,O que há de novo no Xbox)</onload>
+
+		<onload>ReplaceWindow(8116)</onload>
+	<onload>AlarmClock(CloseSplash,Dialog.Close(7555, force),00:09,silent)</onload>
+										
+	<controls>
+<include>Common_Animation_dashboard</include>
+		<control type="image">
+					
+			<include>Common_Dimensions</include>
+			<texture background="true">colors/aah.png</texture>
+
+			
+		</control>
+		
+		<control type="group">
+		
+			<include>Common_Animation_gamer2</include>
+	
+			<control type="image">
+					
+				<include>Common_Dimensions</include>
+				<texture>colors/eeeh.png</texture>
+
+			
+			</control>
+
+
+				
+			<control type="image">
+				
+				<animation type="WindowOpen">
+					<effect type="fade" start="0" end="100" time="500" />
+				</animation>
+				
+				<include>Common_Dimensions</include>
+				<texture>colors\ooh.png</texture>
+			
+			</control>
+			
+		</control>	
+	
+	</controls>
+
+</window>

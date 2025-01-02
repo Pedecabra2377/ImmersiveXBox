@@ -1,0 +1,1324 @@
+<window id="668">
+
+	<defaultcontrol always="true">3</defaultcontrol>
+	
+	<zorder>2</zorder>
+
+	
+	
+	<!--Splash Screen-->
+	
+<onload condition="Container(20).HasFocus(2)">Control.Move(20,-1)</onload>
+<onload condition="Container(20).HasFocus(3)">Control.Move(20,-2)</onload>
+<onload>Skin.SetString(utube,Pesquisa Vevo)</onload>
+
+	<onload condition="System.HasAddon(script.randomandlastitems) + Skin.HasSetting(ShowHistorySection_Video)">XBMC.RunScript(script.randomandlastitems,limit=10,method=Last,playlist=special://skin/playlists/History (Movies).xsp,menu=Menu1)</onload>
+	
+	<onload condition="System.HasAddon(script.extendedinfo) + Skin.HasSetting(ShowInCinemasSection_Video)">RunScript(script.extendedinfo,info=incinema)</onload>
+	<onload condition="System.HasAddon(script.extendedinfo) + Skin.HasSetting(ShowTrendingSection_Video)">RunScript(script.extendedinfo,info=TrendingMovies)</onload>
+	
+	<onload>AlarmClock(MoveFeatured,Control.Move(9001,1),00:20,silent,loop)</onload>
+	<onunload>XBMC.CancelAlarm(MoveFeatured,true)</onunload>
+	
+	<onload>AlarmClock(MoveIncinemas,Control.Move(9005,1),00:20,silent,loop)</onload>
+	<onunload>XBMC.CancelAlarm(MoveIncinemas,true)</onunload>
+	
+	<onload>AlarmClock(MoveTrakt,Control.Move(9007,1),00:20,silent,loop)</onload>
+	<onunload>XBMC.CancelAlarm(MoveTrakt,true)</onunload>
+	
+	<onload condition="Skin.HasSetting(SnapFeature) + Skin.HasSetting(SnapAlways)">Skin.SetString(snap, C:\Assistance\Snap\Pic\Item.jpg,0)</onload>
+<onload condition="Skin.HasSetting(SnapFeature) + Skin.HasSetting(SnapAlways)">AlarmClock(startsnap,RunScript(special://skin/system/Snap.py),00:01,silent)</onload>
+		<onload>Skin.SetString(snapwindow, 668)</onload>
+<onload condition="!Skin.HasSetting(snapie)">Skin.ToggleSetting(snapie)</onload>
+<onload condition="Skin.HasSetting(gaming)">Skin.ToggleSetting(gaming)</onload>
+<onload>Skin.SetString(snap, demo/sna/vevo.jpg,0)</onload>
+<onload>Skin.SetString(sn,Vevo)</onload>
+	
+	
+	<controls>
+
+		<!--Background Area-->
+																							<control type="image">
+											
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1280</width>
+								<height>720</height>
+								<texture>colors\color_black.png</texture>
+
+							</control>	
+																														<control type="image">
+											
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1280</width>
+								<height>720</height>
+								<texture>demo\app\vevo\bg.png</texture>
+<visible>Skin.HasSetting(ShowFanartBackground) + !Skin.HasSetting(altvevo)</visible>
+							</control>	
+							<control type="multiimage">
+				
+				<include>Common_Dimensions</include>
+				<imagepath background="true">demo\app\vevo\bg\</imagepath>
+				<timeperimage>5000</timeperimage>
+				<randomize>false</randomize>
+				<fadetime>1000</fadetime>
+				<visible>Skin.HasSetting(altvevo)</visible>
+			</control>
+							
+
+		
+			  		<control type="image">
+	<posx>480</posx>
+	<posy>20</posy>
+	<width>318</width>
+	<height>56</height>
+			<texture>demo\app\vevo\logo.png</texture>
+			<aspectratio>stretch</aspectratio>
+			 <include condition="!Window.Previous(Home)">Common_Animation_Window</include>
+					  <include condition="Window.Previous(Home)">Common_Animation_apps_dash</include> 
+			<visible>!Skin.HasSetting(ShowFanartBackground)</visible>
+		</control>	
+
+	
+										<control type="grouplist">
+			<visible>true</visible>
+													<!--Animation-->
+				 <include condition="!Window.Previous(Home)">Common_Animation_Window</include>
+					  <include condition="Window.Previous(Home)">Common_Animation_apps_dash</include> 		
+				<posx>128</posx>
+				<posy>100</posy>
+				<width>1100</width>
+				<height>100</height>
+				<orientation>horizontal</orientation>
+				<itemgap>20</itemgap>
+												<control type="label">
+						<visible>true</visible>
+					<width min="0" max="400">auto</width>
+					<height>100</height>
+					<label>Featured</label>
+					<font>Content-Label</font>
+					<textcolor>FF333333</textcolor>
+					<aligny>top</aligny>
+<animation effect="zoom" end="108" center="auto" time="200" condition="Container(20).HasFocus(1) + Skin.HasSetting(textview)">Conditional</animation>
+				</control>
+				
+				<control type="label">
+						<visible>true</visible>
+					<width min="0" max="400">auto</width>
+					<height>100</height>
+					<label>My Vevo</label>
+					<font>Content-Label</font>
+					<textcolor>FF333333</textcolor>
+					<aligny>top</aligny>
+<animation effect="zoom" end="108" center="auto" time="200" condition="Container(20).HasFocus(2) + Skin.HasSetting(textview)">Conditional</animation>
+				</control>
+								<control type="label">
+						<visible>true</visible>
+					<width min="0" max="400">auto</width>
+					<height>100</height>
+					<label>Genres</label>
+					<font>Content-Label</font>
+					<textcolor>FF333333</textcolor>
+					<aligny>top</aligny>
+<animation effect="zoom" end="108" center="auto" time="200" condition="Container(20).HasFocus(3) + Skin.HasSetting(textview)">Conditional</animation>
+				</control>
+
+				
+
+				</control>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+										<control type="grouplist">
+			<visible>true</visible>
+													<!--Animation-->
+			 <include condition="!Window.Previous(Home)">Common_Animation_Window</include>
+					  <include condition="Window.Previous(Home)">Common_Animation_apps_dash</include> 
+				<posx>128</posx>
+				<posy>100</posy>
+				<width>1100</width>
+				<height>100</height>
+				<orientation>horizontal</orientation>
+				<itemgap>20</itemgap>
+												<control type="label">
+						<visible>true</visible>
+					<width min="0" max="400">auto</width>
+					<height>100</height>
+					<label>Featured</label>
+					<font>Content-Label</font>
+					<textcolor>FFFFFFFF</textcolor>
+					<aligny>top</aligny>
+					<animation effect="zoom" end="108" center="auto" time="200" condition="Container(20).HasFocus(1) + Skin.HasSetting(textview)">Conditional</animation>
+                       <animation effect="fade" start="0" end="100" time="200" tween="cubic" easing="inout" condition="Container(20).HasFocus(1)">Conditional</animation>
+                <animation effect="fade" start="100" end="0" time="200" tween="cubic" easing="inout" condition="!Container(20).HasFocus(1)">Conditional</animation>
+				</control>
+				
+				<control type="label">
+						<visible>true</visible>
+					<width min="0" max="400">auto</width>
+					<height>100</height>
+					<label>My Vevo</label>
+					<font>Content-Label</font>
+					<textcolor>FFFFFFFF</textcolor>
+					<aligny>top</aligny>
+								 <animation effect="zoom" end="108" center="auto" time="200" condition="Container(20).HasFocus(2) + Skin.HasSetting(textview)">Conditional</animation>
+                              <animation effect="fade" start="0" end="100" time="200" tween="cubic" easing="inout" condition="Container(20).HasFocus(2)">Conditional</animation>
+                <animation effect="fade" start="100" end="0" time="200" tween="cubic" easing="inout" condition="!Container(20).HasFocus(2)">Conditional</animation>
+				</control>
+					<control type="label">
+						<visible>true</visible>
+					<width min="0" max="400">auto</width>
+					<height>100</height>
+					<label>Genres</label>
+					<font>Content-Label</font>
+					<textcolor>FFFFFFFF</textcolor>
+					<aligny>top</aligny>
+								 <animation effect="zoom" end="108" center="auto" time="200" condition="Container(20).HasFocus(3) + Skin.HasSetting(textview)">Conditional</animation>
+                              <animation effect="fade" start="0" end="100" time="200" tween="cubic" easing="inout" condition="Container(20).HasFocus(3)">Conditional</animation>
+                <animation effect="fade" start="100" end="0" time="200" tween="cubic" easing="inout" condition="!Container(20).HasFocus(3)">Conditional</animation>
+				</control>
+				
+	
+
+
+				</control>
+				
+		
+				        <control type="wraplist" id="20">
+            <description>Control list</description>
+            <posx>0</posx>
+            <posy>0</posy>
+            <height>2</height>
+            <width>2</width>
+            <onup>21</onup>
+            <orientation>horizontal</orientation>
+            <scrolltime>0</scrolltime>
+            <viewtype>list</viewtype>
+	    <defaultcontrol>2</defaultcontrol>
+            <itemlayout width="2" height="2"/>
+           	<focusedlayout width="2" height="2"/>
+            <content>
+            	<item id="1">
+            		<label>My Pins</label>
+            		<onclick>-</onclick>
+            	</item>
+            	<item id="2">
+            		<label>Home</label>
+            		<onclick>-</onclick>
+            	</item>
+				  	<item id="3">
+            		<label>toyota12303</label>
+            		<onclick>-</onclick>
+            	</item>
+
+
+            </content>
+        </control>
+	
+
+
+
+				
+	
+
+
+			
+
+		<control type="group">
+		
+			<include>Common_Dimensions</include>
+		 <include condition="!Window.Previous(Home)">Common_Animation_Window</include>
+					  <include condition="Window.Previous(Home)">Common_Animation_apps_dash</include> 
+		
+			<!--Top Area-->
+			<include>Common_Breadcrumb</include>
+						<include>Common_Overlay</include>
+			
+			<!--Content Area-->
+			<control type="group">
+			
+				<posx>0</posx>
+				<posy>100</posy>
+				<width>1280</width>
+				<height>480</height>
+				
+				<!--Animation-->
+			
+				
+				<control type="grouplist">
+		
+					<include condition="!Skin.HasSetting(Linear) + !Skin.HasSetting(Sine) + !Skin.HasSetting(Quadric) + !Skin.HasSetting(Cubic)">Common_Content_Grouplist2</include>
+				<include condition="Skin.HasSetting(Linear) + !Skin.HasSetting(Sine) + !Skin.HasSetting(Quadric) + !Skin.HasSetting(Cubic)">Common_Content_Grouplist3</include>
+				<include condition="!Skin.HasSetting(Linear) + Skin.HasSetting(Sine) + !Skin.HasSetting(Quadric) + !Skin.HasSetting(Cubic)">Common_Content_Grouplist4</include>
+				<include condition="!Skin.HasSetting(Linear) + !Skin.HasSetting(Sine) + Skin.HasSetting(Quadric) + !Skin.HasSetting(Cubic)">Common_Content_Grouplist5</include>
+				<include condition="!Skin.HasSetting(Linear) + !Skin.HasSetting(Sine) + !Skin.HasSetting(Quadric) + Skin.HasSetting(Cubic)">Common_Content_Grouplist6</include>
+					
+					
+					
+					
+					
+					<control type="group" id="8000">
+
+						<posx>50</posx>
+						<posy>0</posy>
+						<width>1200</width>
+						<height>720</height>
+
+						<control type="panel" id="11">
+<posx>1065</posx>
+						<posy>345</posy>
+
+						
+						<include>Common_AltHome_Panel3</include>
+						<onleft>Control.Move(20,-1)</onleft>
+<onleft>33</onleft>
+<onright>Control.Move(20,1)</onright>
+						<onright>22</onright>
+						<ondown>3</ondown>
+						<pagecontrol>7017</pagecontrol>
+						
+						<content>
+						
+
+							
+																					<item id="1">
+								<description>Games</description>
+								<label>Games</label>
+								<thumb>SHORT\ICO\Games.png</thumb>
+								<onclick>Control.Setfocus(3)</onclick>
+														
+							</item>
+							
+
+
+								</content>
+
+					</control>
+					<control type="list" id="3">
+					
+						<include>Common_AltHome_List</include>
+
+						<onright>9000</onright>
+						<ondown>33</ondown>
+						<onup>11</onup>
+						<itemlayout width="600" height="240">
+						
+							<control type="image">
+							
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>440</width>
+								<height>220</height>
+								<texture>demo/lololo.png</texture>
+								
+							</control>
+							
+							<include>Common_AltHome_Thumb</include>
+							
+						</itemlayout>
+
+						<focusedlayout width="600" height="240">
+						
+							<control type="image">
+							
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>440</width>
+								<height>220</height>
+								<texture>demo/lololo.png</texture>
+								
+								<visible>!Control.HasFocus(8083)</visible>
+								
+							</control>
+						
+							<control type="image">
+							
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>440</width>
+								<height>220</height>
+								<texture>demo/lololo.png</texture>
+
+								
+								<visible>Control.HasFocus(8083)</visible>
+								
+							</control>
+							
+							<include>Common_AltHome_Thumb</include>
+							
+						</focusedlayout>
+						
+						<content>
+
+							<item id="1">
+								<description>trending</description>
+								<label>trending</label>
+								<thumb>lolololo.jpg</thumb>
+							<include>Common_TraktTV_ClearProperties</include>
+						<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.vevo/?mode=listFeatured&amp;page=1&amp;url=http%3a%2f%2fapi.vevo.com%2fmobile%2fv2%2ffeatured%2fcarousel.json%3f&quot;,return)</onclick>
+
+			
+							</item>
+
+							
+						</content>
+
+					</control>
+					
+		
+						<control type="panel" id="9000">
+<include>Common_Animation_dashboard_tab</include>
+							<posx>900</posx>
+							<posy>60</posy>
+							<width>400</width>
+							<height>480</height>
+							<onleft>3</onleft>
+							
+							<onup>11</onup>
+							<ondown>9000</ondown>
+							<pagecontrol>9020</pagecontrol>
+							<viewtype label="535">list</viewtype>
+							<scrolltime tween="cubic" easing="out">600</scrolltime>
+							<preloaditems>2</preloaditems>
+
+							<itemlayout width="400" height="80">
+
+								<control type="image">
+
+									<posx>0</posx>
+									<posy>0</posy>
+									<width>60</width>
+									<height>60</height>
+									<texture>colors/color_keyboard_dark.png</texture>
+
+								</control>
+
+								<control type="image">
+
+									<include>Common_Control_Image</include>
+									<texture>$INFO[ListItem.Thumb]</texture>
+
+								</control>
+
+								<control type="label">
+
+									<width min="20" max="380">auto</width>
+									<label>$INFO[ListItem.Label]</label>
+									<textcolor>Label_Normal</textcolor>
+									<include>Common_Control_Label</include>
+
+								</control>
+
+							</itemlayout>
+
+							<focusedlayout width="400" height="80">
+
+								<control type="image">
+
+									<posx>0</posx>
+									<posy>0</posy>
+									<width>60</width>
+									<height>60</height>
+									<texture>colors/color_white.png</texture>
+									<colordiffuse>Tile_Background</colordiffuse>
+									<visible>!Control.HasFocus(9000)</visible>
+
+								</control>
+
+								<control type="image">
+
+									<posx>0</posx>
+									<posy>0</posy>
+									<width>60</width>
+									<height>60</height>
+									<texture>colors/color_white.png</texture>
+									<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+
+									<visible>Control.HasFocus(9000)</visible>
+
+								</control>
+
+								<control type="image">
+
+									<include>Common_Control_Image</include>
+									<texture>$INFO[ListItem.Thumb]</texture>
+
+								</control>
+
+								<control type="image">
+
+									<posx>0</posx>
+									<posy>0</posy>
+									<width>60</width>
+									<height>60</height>
+									<texture>button_unfocus.png</texture>
+									<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+
+									<visible>Control.HasFocus(9000)</visible>
+
+								</control>
+
+								<control type="label">
+
+									<width min="20" max="380">auto</width>
+									<label>$INFO[ListItem.Label]</label>
+									<textcolor>Label_Normal</textcolor>
+									<include>Common_Control_Label</include>
+
+								</control>
+
+							</focusedlayout>
+
+							<content>
+
+
+
+									<item>
+									<description>Trending Now</description>
+									<label>Trending Now</label>
+									<thumb>hub/hub_years_small.png</thumb>
+									<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.vevo/?mode=TrendingRightNowIn&amp;page=1&amp;url&quot;,return)</onclick>
+								</item>
+								<item>
+									<description>Being Watched</description>
+									<label>Being Watched</label>
+									<thumb>hub/hub_years_small.png</thumb>
+									<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.vevo/?mode=watchingRightNowIn&amp;page=1&amp;url&quot;,return)</onclick>
+								</item>
+
+								<item>
+									<description>Favourite Artists</description>
+									<label>Favourite Artists</label>
+									<thumb>hub/hub_actors_small.png</thumb>
+									<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.vevo/?mode=favArtists&amp;page=1&amp;url&quot;,return)</onclick>
+								</item>
+
+								<item>
+									<description>Search</description>
+									<label>Search</label>
+									<thumb>charms/charm_search.png</thumb>
+															
+											<onclick>Skin.SetString(utube)</onclick>
+<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.youtube/?feed=search&amp;path=%2froot%2fsearch&amp;search=$INFO[Skin.String(utube)]&quot;,return)</onclick>
+								</item>
+								
+
+						
+							</content>
+							</control>
+																			<control type="image">
+															<include>Common_Animation_dashboard_pic</include>
+
+								<posx>47</posx>
+								<posy>57</posy>
+								<width>776</width>
+								<height>466</height>
+								<texture>demo\trend2.png</texture>
+								<visible>Control.Hasfocus(3)</visible>
+
+
+
+					
+				</control>
+									<control type="image">
+										<include>Common_Animation_dashboard_pic</include>
+														<include>Common_TraktTV_ClearProperties</include>
+								<posx>50</posx>
+								<posy>60</posy>
+								<width>770</width>
+								<height>460</height>
+								<texture>demo\app\vevo\1.jpg</texture>
+
+							</control>
+
+							
+													<control type="image">
+														<include>Common_Animation_dashboard_pic</include>
+																															
+			<posx>50</posx>
+			<posy>395</posy>
+		<width>770</width>
+		<height>125</height>
+								<texture>demo/fade.png</texture>
+									
+							</control>
+																									<control type="textbox">
+																										<include>Common_Animation_dashboard_pic</include>
+																				
+							
+			<posx>105</posx>
+			<posy>447</posy>
+			<label></label>
+
+		<width>650</width>
+		<height>50</height>
+		<font>Settings-Menu-Header</font>
+			<textcolor>Label_Normal</textcolor>
+			<scrollspeed>0</scrollspeed>
+			<autoscroll>false</autoscroll>
+			<wrapmultiline>true</wrapmultiline>
+							
+		</control>
+
+						
+						</control>
+		
+				
+
+				
+				
+				
+				
+				
+				
+				
+					<control type="group" id="121">
+					
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>1200</width>
+						<height>720</height>
+												<control type="panel" id="22">
+<posx>1065</posx>
+						<posy>345</posy>
+
+						
+						<include>Common_AltHome_Panel3</include>
+						<onleft>Control.Move(20,-1)</onleft>
+<onleft>11</onleft>
+<onright>Control.Move(20,1)</onright>
+						<onright>33</onright>
+						<ondown>4</ondown>
+						<pagecontrol>7017</pagecontrol>
+						
+						<content>
+						
+
+							
+																					<item id="1">
+								<description>Games</description>
+								<label>Games</label>
+								<thumb>SHORT\ICO\Games.png</thumb>
+								<onclick>Control.Setfocus(4)</onclick>
+														
+							</item>
+							
+
+
+								</content>
+
+					</control>
+							<control type="list" id="4">
+					
+						<include>Common_AltHome_List</include>
+
+						<onright>104</onright>
+						<ondown>33</ondown>
+						<onup>22</onup>
+						<itemlayout width="600" height="240">
+						
+							<control type="image">
+							
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>440</width>
+								<height>220</height>
+								<texture>demo/lololo.png</texture>
+								
+							</control>
+							
+							<include>Common_AltHome_Thumb</include>
+							
+						</itemlayout>
+
+						<focusedlayout width="600" height="240">
+						
+							<control type="image">
+							
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>440</width>
+								<height>220</height>
+								<texture>demo/lololo.png</texture>
+								
+								<visible>!Control.HasFocus(8083)</visible>
+								
+							</control>
+						
+							<control type="image">
+							
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>440</width>
+								<height>220</height>
+								<texture>demo/lololo.png</texture>
+
+								
+								<visible>Control.HasFocus(8083)</visible>
+								
+							</control>
+							
+							<include>Common_AltHome_Thumb</include>
+							
+						</focusedlayout>
+						
+						<content>
+
+							<item id="1">
+								<description>trending</description>
+								<label>trending</label>
+								<thumb>lolololo.jpg</thumb>
+							<include>Common_TraktTV_ClearProperties</include>
+							<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.vevo/?mode=listFeatured&amp;page=1&amp;url=http%3a%2f%2fapi.vevo.com%2fmobile%2fv2%2ffeatured%2fcarousel.json%3f&quot;,return)</onclick>
+
+				
+							</item>
+
+							
+						</content>
+
+					</control>
+					
+														<control type="image">
+
+								<posx>47</posx>
+								<posy>57</posy>
+								<width>776</width>
+								<height>466</height>
+								<texture>demo\trend2.png</texture>
+								<visible>Control.Hasfocus(4)</visible>
+
+
+
+					
+				</control>
+									<control type="image">
+														<include>Common_TraktTV_ClearProperties</include>
+								<posx>50</posx>
+								<posy>60</posy>
+								<width>770</width>
+								<height>460</height>
+								<texture>demo\app\vevo\2.jpg</texture>
+
+							</control>
+
+							
+													<control type="image">
+																															
+			<posx>50</posx>
+			<posy>395</posy>
+		<width>770</width>
+		<height>125</height>
+								<texture>demo/fade.png</texture>
+									
+							</control>
+																									<control type="textbox">
+																				
+							
+			<posx>105</posx>
+			<posy>447</posy>
+			<label></label>
+
+		<width>650</width>
+		<height>50</height>
+		<font>Settings-Menu-Header</font>
+			<textcolor>Label_Normal</textcolor>
+			<scrollspeed>0</scrollspeed>
+			<autoscroll>false</autoscroll>
+			<wrapmultiline>true</wrapmultiline>
+			
+		</control>
+															<control type="panel" id="104">
+
+							<posx>892</posx>
+							<posy>60</posy>
+							<width>400</width>
+							<height>480</height>
+							<onleft>4</onleft>
+						
+<onup>22</onup>
+							<pagecontrol>9020</pagecontrol>
+							<viewtype label="535">list</viewtype>
+							<scrolltime tween="cubic" easing="out">600</scrolltime>
+							<preloaditems>2</preloaditems>
+
+							<itemlayout width="400" height="80">
+
+								<control type="image">
+
+									<posx>0</posx>
+									<posy>0</posy>
+									<width>60</width>
+									<height>60</height>
+									<texture>colors/color_keyboard_dark.png</texture>
+
+								</control>
+
+								<control type="image">
+
+									<include>Common_Control_Image</include>
+									<texture>$INFO[ListItem.Thumb]</texture>
+
+								</control>
+
+								<control type="label">
+
+									<width min="20" max="380">auto</width>
+									<label>$INFO[ListItem.Label]</label>
+									<textcolor>Label_Normal</textcolor>
+									<include>Common_Control_Label</include>
+
+								</control>
+
+							</itemlayout>
+
+							<focusedlayout width="400" height="80">
+
+								<control type="image">
+
+									<posx>0</posx>
+									<posy>0</posy>
+									<width>60</width>
+									<height>60</height>
+									<texture>colors/color_white.png</texture>
+									<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+									<visible>!Control.HasFocus(9000)</visible>
+
+								</control>
+
+								<control type="image">
+
+									<posx>0</posx>
+									<posy>0</posy>
+									<width>60</width>
+									<height>60</height>
+									<texture>colors/color_white.png</texture>
+									<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+
+									<visible>Control.HasFocus(9000)</visible>
+
+								</control>
+
+								<control type="image">
+
+									<include>Common_Control_Image</include>
+									<texture>$INFO[ListItem.Thumb]</texture>
+
+								</control>
+
+								<control type="image">
+
+									<posx>0</posx>
+									<posy>0</posy>
+									<width>60</width>
+									<height>60</height>
+									<texture>button_unfocus.png</texture>
+									<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+
+									<visible>Control.HasFocus(9000)</visible>
+
+								</control>
+
+								<control type="label">
+
+									<width min="20" max="380">auto</width>
+									<label>$INFO[ListItem.Label]</label>
+									<textcolor>Label_Normal</textcolor>
+									<include>Common_Control_Label</include>
+
+								</control>
+
+							</focusedlayout>
+
+							<content>
+
+
+
+								<item>
+									<description>Shows</description>
+									<label>Shows</label>
+					<thumb>home/home_music_small.png</thumb>
+									<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.vevo/?mode=rootShows&amp;page=1&amp;url=http%3a%2f%2fapi.vevo.com%2fmobile%2fv1%2fshow%2flist.json%3f&quot;,return)</onclick>
+								</item>
+
+								<item>
+									<description>Artists</description>
+									<label>Artists</label>
+								<thumb>home/home_music_small.png</thumb>
+									<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.vevo/?mode=rootArtists&amp;page=1&amp;url=http%3a%2f%2fapi.vevo.com%2fmobile%2fv1%2fartist%2flist.json&quot;,return)</onclick>
+								</item>
+
+								<item>
+									<description>Videos</description>
+									<label>Videos</label>
+									<thumb>home/home_music_small.png</thumb>
+									<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.vevo/?mode=rootVideos&amp;page=1&amp;url=http%3a%2f%2fapi.vevo.com%2fmobile%2fv1%2fvideo%2flist.json&quot;,return)</onclick>
+								</item>
+
+								<item>
+									<description>Staff Picks</description>
+									<label>Staff Picks</label>
+									<thumb>home/home_music_small.png</thumb>
+									<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.vevo/?mode=listStaffPicks&amp;page=1&amp;url&quot;,return)</onclick>
+								</item>
+
+								<item>
+									<description>Featured</description>
+									<label>Featured</label>
+						<thumb>home/home_music_small.png</thumb>
+									<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.vevo/?mode=listFeatured&amp;page=1&amp;url=http%3a%2f%2fapi.vevo.com%2fmobile%2fv2%2ffeatured%2fcarousel.json%3f&quot;,return)</onclick>
+								</item>
+
+								<item>
+									<description>Being Watched</description>
+									<label>Being Watched</label>
+									<thumb>home/home_music_small.png</thumb>
+									<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.vevo/?mode=watchingRightNowIn&amp;page=1&amp;url&quot;,return)</onclick>
+								</item>
+
+								<item>
+									<description>Video Picks</description>
+									<label>Video Picks</label>
+							<thumb>home/home_music_small.png</thumb>
+									<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.vevo/?mode=listVideos&amp;page=1&amp;url=http%3a%2f%2fapi.vevo.com%2fmobile%2fv1%2ffeatured%2fTopVideos.json%3f&quot;,return)</onclick>
+								</item>
+
+								<item>
+									<description>Playlist Picks</description>
+									<label>Playlist Picks</label>
+								<thumb>home/home_music_small.png</thumb>
+									<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.vevo/?mode=listPlaylists&amp;page=1&amp;url=http%3a%2f%2fapi.vevo.com%2fmobile%2fv3%2ffeatured%2fTopPlaylists.json%3f&quot;,return)</onclick>
+								</item>
+
+								<item>
+									<description>Premiers</description>
+									<label>Premiers</label>
+										<thumb>home/home_music_small.png</thumb>
+									<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.vevo/?mode=listVideos&amp;page=1&amp;url=http%3a%2f%2fapi.vevo.com%2fmobile%2fv1%2fvideo%2flist.json%3fispremiere%3dtrue&quot;,return)</onclick>
+								</item>
+								
+												<item>
+									<description>Touring</description>
+									<label>Touring</label>
+								<thumb>home/home_music_small.png</thumb>
+									<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.vevo/?mode=toursRightNow&amp;page=1&amp;url&quot;,return)</onclick>
+								</item>
+								
+								
+
+							</content>
+							
+						</control>
+						
+
+					
+
+				
+
+				
+	
+					
+				</control>	
+				
+				<control type="group" id="122">
+					
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>1200</width>
+						<height>720</height>
+												<control type="panel" id="33">
+<posx>1065</posx>
+						<posy>345</posy>
+
+						
+						<include>Common_AltHome_Panel3</include>
+						<onleft>Control.Move(20,-1)</onleft>
+<onleft>22</onleft>
+<onright>Control.Move(20,1)</onright>
+						<onright>11</onright>
+						<ondown>5</ondown>
+						<pagecontrol>7017</pagecontrol>
+						
+						<content>
+						
+
+							
+																					<item id="1">
+								<description>Games</description>
+								<label>Games</label>
+								<thumb>SHORT\ICO\Games.png</thumb>
+								<onclick>Control.Setfocus(5)</onclick>
+														
+							</item>
+							
+
+
+								</content>
+
+					</control>
+							<control type="list" id="5">
+					
+						<include>Common_AltHome_List</include>
+
+						<onright>105</onright>
+					
+						<onup>33</onup>
+						<itemlayout width="600" height="240">
+						
+							<control type="image">
+							
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>440</width>
+								<height>220</height>
+								<texture>demo/lololo.png</texture>
+								
+							</control>
+							
+							<include>Common_AltHome_Thumb</include>
+							
+						</itemlayout>
+
+						<focusedlayout width="600" height="240">
+						
+							<control type="image">
+							
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>440</width>
+								<height>220</height>
+								<texture>demo/lololo.png</texture>
+								
+								<visible>!Control.HasFocus(8083)</visible>
+								
+							</control>
+						
+							<control type="image">
+							
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>440</width>
+								<height>220</height>
+								<texture>demo/lololo.png</texture>
+
+								
+								<visible>Control.HasFocus(8083)</visible>
+								
+							</control>
+							
+							<include>Common_AltHome_Thumb</include>
+							
+						</focusedlayout>
+						
+						<content>
+
+							<item id="1">
+								<description>trending</description>
+								<label>trending</label>
+								<thumb>lolololo.jpg</thumb>
+							<include>Common_TraktTV_ClearProperties</include>
+							<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.vevo/?mode=listFeatured&amp;page=1&amp;url=http%3a%2f%2fapi.vevo.com%2fmobile%2fv2%2ffeatured%2fcarousel.json%3f&quot;,return)</onclick>
+
+				
+							</item>
+
+							
+						</content>
+
+					</control>
+					
+														<control type="image">
+
+								<posx>47</posx>
+								<posy>57</posy>
+								<width>776</width>
+								<height>466</height>
+								<texture>demo\trend2.png</texture>
+								<visible>Control.Hasfocus(5)</visible>
+
+
+
+					
+				</control>
+									<control type="image">
+														<include>Common_TraktTV_ClearProperties</include>
+								<posx>50</posx>
+								<posy>60</posy>
+								<width>770</width>
+								<height>460</height>
+								<texture>demo\app\vevo\3.jpg</texture>
+
+							</control>
+
+							
+													<control type="image">
+																															
+			<posx>50</posx>
+			<posy>395</posy>
+		<width>770</width>
+		<height>125</height>
+								<texture>demo/fade.png</texture>
+									
+							</control>
+																									<control type="textbox">
+																				
+							
+			<posx>105</posx>
+			<posy>447</posy>
+			<label></label>
+
+		<width>650</width>
+		<height>50</height>
+		<font>Settings-Menu-Header</font>
+			<textcolor>Label_Normal</textcolor>
+			<scrollspeed>0</scrollspeed>
+			<autoscroll>false</autoscroll>
+			<wrapmultiline>true</wrapmultiline>
+			
+		</control>
+															<control type="panel" id="105">
+
+							<posx>892</posx>
+							<posy>60</posy>
+							<width>400</width>
+							<height>480</height>
+							<onleft>5</onleft>
+						
+<onup>33</onup>
+							<pagecontrol>9020</pagecontrol>
+							<viewtype label="535">list</viewtype>
+							<scrolltime tween="cubic" easing="out">600</scrolltime>
+							<preloaditems>2</preloaditems>
+
+							<itemlayout width="400" height="80">
+
+								<control type="image">
+
+									<posx>0</posx>
+									<posy>0</posy>
+									<width>60</width>
+									<height>60</height>
+									<texture>colors/color_keyboard_dark.png</texture>
+
+								</control>
+
+								<control type="image">
+
+									<include>Common_Control_Image</include>
+									<texture>$INFO[ListItem.Thumb]</texture>
+
+								</control>
+
+								<control type="label">
+
+									<width min="20" max="380">auto</width>
+									<label>$INFO[ListItem.Label]</label>
+									<textcolor>Label_Normal</textcolor>
+									<include>Common_Control_Label</include>
+
+								</control>
+
+							</itemlayout>
+
+							<focusedlayout width="400" height="80">
+
+								<control type="image">
+
+									<posx>0</posx>
+									<posy>0</posy>
+									<width>60</width>
+									<height>60</height>
+									<texture>colors/color_white.png</texture>
+									<colordiffuse>Tile_Background</colordiffuse>
+									<visible>!Control.HasFocus(105)</visible>
+
+								</control>
+
+								<control type="image">
+
+									<posx>0</posx>
+									<posy>0</posy>
+									<width>60</width>
+									<height>60</height>
+									<texture>colors/color_white.png</texture>
+									<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+
+									<visible>Control.HasFocus(105)</visible>
+
+								</control>
+
+								<control type="image">
+
+									<include>Common_Control_Image</include>
+									<texture>$INFO[ListItem.Thumb]</texture>
+
+								</control>
+
+								<control type="image">
+
+									<posx>0</posx>
+									<posy>0</posy>
+									<width>60</width>
+									<height>60</height>
+									<texture>button_unfocus.png</texture>
+									<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+
+									<visible>Control.HasFocus(105)</visible>
+
+								</control>
+
+								<control type="label">
+
+									<width min="20" max="380">auto</width>
+									<label>$INFO[ListItem.Label]</label>
+									<textcolor>Label_Normal</textcolor>
+									<include>Common_Control_Label</include>
+
+								</control>
+
+							</focusedlayout>
+
+							<content>
+
+
+
+								<item>
+									<description>All Genres</description>
+									<label>All Genres</label>
+				<thumb>home/home_music_small.png</thumb>
+									<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.vevo/?mode=sortByVideo&amp;page=1&amp;url=http%3a%2f%2fapi.vevo.com%2fmobile%2fv1%2fvideo%2flist.json%3f&quot;,return)</onclick>
+								</item>
+
+								<item>
+									<description>Pop</description>
+									<label>Pop</label>
+							<thumb>home/home_music_small.png</thumb>
+									<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.vevo/?mode=sortByVideo&amp;page=1&amp;url=http%3a%2f%2fapi.vevo.com%2fmobile%2fv1%2fvideo%2flist.json%3fgenres%3dpop&quot;,return)</onclick>
+								</item>
+
+								<item>
+									<description>Rap/Hip-Hop</description>
+									<label>Rap/Hip-Hop</label>
+								<thumb>home/home_music_small.png</thumb>
+									<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.vevo/?mode=sortByVideo&amp;page=1&amp;url=http%3a%2f%2fapi.vevo.com%2fmobile%2fv1%2fvideo%2flist.json%3fgenres%3draphip-hop&quot;,return)</onclick>
+								</item>
+
+								<item>
+									<description>Electronic/Dance</description>
+									<label>Electronic/Dance</label>
+									<thumb>home/home_music_small.png</thumb>
+									<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.vevo/?mode=sortByVideo&amp;page=1&amp;url=http%3a%2f%2fapi.vevo.com%2fmobile%2fv1%2fvideo%2flist.json%3fgenres%3delectronicdance&quot;,return)</onclick>
+								</item>
+
+								<item>
+									<description>Indie</description>
+									<label>Indie</label>
+							<thumb>home/home_music_small.png</thumb>
+									<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.vevo/?mode=sortByVideo&amp;page=1&amp;url=http%3a%2f%2fapi.vevo.com%2fmobile%2fv1%2fvideo%2flist.json%3fgenres%3dindie&quot;,return)</onclick>
+								</item>
+
+								<item>
+									<description>R & B/Soul</description>
+									<label>R & B/Soul</label>
+								<thumb>home/home_music_small.png</thumb>
+									<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.vevo/?mode=sortByVideo&amp;page=1&amp;url=http%3a%2f%2fapi.vevo.com%2fmobile%2fv1%2fvideo%2flist.json%3fgenres%3drbsoul&quot;,return)</onclick>
+								</item>
+
+								<item>
+									<description>Rock</description>
+									<label>Rock</label>
+							<thumb>home/home_music_small.png</thumb>
+									<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.vevo/?mode=sortByVideo&amp;page=1&amp;url=http%3a%2f%2fapi.vevo.com%2fmobile%2fv1%2fvideo%2flist.json%3fgenres%3drock&quot;,return)</onclick>
+								</item>
+
+								<item>
+									<description>World</description>
+									<label>World</label>
+										<thumb>home/home_music_small.png</thumb>
+									<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.vevo/?mode=sortByVideo&amp;page=1&amp;url=http%3a%2f%2fapi.vevo.com%2fmobile%2fv1%2fvideo%2flist.json%3fgenres%3dworld&quot;,return)</onclick>
+								</item>
+
+								<item>
+									<description>Jazz</description>
+									<label>Jazz</label>
+									<thumb>home/home_music_small.png</thumb>
+									<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.vevo/?mode=sortByVideo&amp;page=1&amp;url=http%3a%2f%2fapi.vevo.com%2fmobile%2fv1%2fvideo%2flist.json%3fgenres%3djazz&quot;,return)</onclick>
+								</item>
+								
+												<item>
+									<description>Comedy/Humor</description>
+									<label>Comedy/Humor</label>
+									<thumb>home/home_music_small.png</thumb>
+									<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.vevo/?mode=sortByVideo&amp;page=1&amp;url=http%3a%2f%2fapi.vevo.com%2fmobile%2fv1%2fvideo%2flist.json%3fgenres%3dcomedyhumor&quot;,return)</onclick>
+								</item>
+														<item>
+									<description>Classical</description>
+									<label>Classical</label>
+								<thumb>home/home_music_small.png</thumb>
+									<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.vevo/?mode=sortByVideo&amp;page=1&amp;url=http%3a%2f%2fapi.vevo.com%2fmobile%2fv1%2fvideo%2flist.json%3fgenres%3dclassical&quot;,return)</onclick>
+								</item>
+														<item>
+									<description>Latin Pop</description>
+									<label>Latin Pop</label>
+								<thumb>home/home_music_small.png</thumb>
+									<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.vevo/?mode=sortByVideo&amp;page=1&amp;url=http%3a%2f%2fapi.vevo.com%2fmobile%2fv1%2fvideo%2flist.json%3fgenres%3dlatin-pop&quot;,return)</onclick>
+								</item>
+														<item>
+									<description>Country</description>
+									<label>Country</label>
+								<thumb>home/home_music_small.png</thumb>
+									<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.vevo/?mode=sortByVideo&amp;page=1&amp;url=http%3a%2f%2fapi.vevo.com%2fmobile%2fv1%2fvideo%2flist.json%3fgenres%3dcountry&quot;,return)</onclick>
+								</item>
+								
+								
+
+							</content>
+							
+						</control>
+						
+
+					
+
+				
+
+				
+	
+					
+				</control>
+				</control>
+										</control>
+				
+						
+						<!--Scrollbar-->
+
+					
+					</control>
+					
+					<include>ViewList_RootMenu_Featured</include>
+					<include>ViewList_RootMenu_RecentlyAdded</include>
+					<include>ViewList_RootMenu_AiringToday</include>
+					<include>ViewList_RootMenu_InCinemas</include>
+					<include>ViewList_RootMenu_NearbyEvents</include>
+					<include>ViewList_RootMenu_History</include>
+					<include>ViewList_RootMenu_Trakt</include>
+					
+			
+				
+
+			
+			<!--Scrollbar-->
+
+<include>Xbox_Logo</include>
+<include>Snapped_Content</include>	
+	
+		
+	</controls>	
+		
+</window>

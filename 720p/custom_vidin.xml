@@ -1,0 +1,940 @@
+<!-- Foundation -->
+<window type="dialog" id="6166">
+	
+	<defaultcontrol always="true">403</defaultcontrol>
+	
+	<onunload condition="!Player.HasMedia">Skin.ToggleSetting(dashovid)</onunload>
+	<controls>
+	
+	<!--Top Area-->
+	
+			
+		
+			
+		<!--Bottom Area-->
+		<control type="group">
+		
+			<posx>0</posx>
+			<posy>615</posy>
+			
+			<visible>!Window.IsVisible(osdvideosettings) + !Window.IsVisible(osdaudiosettings) + !Window.IsVisible(videobookmarks) + !Window.IsVisible(fullscreeninfo) + Skin.HasSetting(osd2014)</visible>
+			
+			<include>Common_Animation_OSD</include>
+
+			<control type="image">
+				
+				<posx>0</posx>
+				<posy>-400</posy>
+				<width>1280</width>
+				<height>650</height>
+				<texture>demo\fade.png</texture>
+				
+				
+			</control>
+			
+		
+			
+						
+		<control type="group">
+			<visible>Skin.HasSetting(osd2014)</visible>
+			<posx>135</posx>
+			<posy>200</posy>
+			<width>968</width>
+			<include>Common_Animation_OSD</include>
+		
+			<!--Current Time-->
+			
+			<control type="label">
+			
+				<posx>0</posx>
+				<posy>-35</posy>
+				<width min="20" max="735">auto</width>
+				<height>40</height>
+				<label>$INFO[VideoPlayer.Title]</label>
+				<textcolor>Label_Normal</textcolor>
+				<font>Fullscreen-Info-Small</font>
+			<visible>!Skin.HasSetting(osdleaf)</visible>
+			</control>
+			
+			<control type="label">
+			
+				<posx>0</posx>
+				<posy>0</posy>
+				<width min="20" max="735">auto</width>
+				<height>40</height>
+				<label>$INFO[Player.Time]</label>
+				<textcolor>Label_Normal</textcolor>
+				<font>Fullscreen-Info-Small</font>
+			<visible>!Skin.HasSetting(osdleaf)</visible>
+			</control>
+			
+			<control type="label">
+			
+				<posx>0</posx>
+				<posy>0</posy>
+				<width min="20" max="200">auto</width>
+				<height>40</height>
+				<label>$INFO[VideoPlayer.Title]</label>
+				<textcolor>Label_Normal</textcolor>
+				<font>Fullscreen-Info-Small</font>
+			<visible>Skin.HasSetting(osdleaf)</visible>
+			</control>
+			
+			<control type="label">
+			
+				<posx>0</posx>
+				<posy>20</posy>
+				<width min="20" max="735">auto</width>
+				<height>40</height>
+				<label>$INFO[Player.Time]</label>
+				<textcolor>Label_Normal</textcolor>
+				<font>Fullscreen-Info-Small</font>
+			<visible>Skin.HasSetting(osdleaf)</visible>
+			</control>
+			
+			<control type="label">
+					
+				<posx>120</posx>
+				<posy>0</posy>
+				<width>735</width>
+				<height>40</height>
+				<label>$INFO[Player.FinishTime,FINISHES AT ,]</label>
+				<textcolor>Label_Normal</textcolor>
+				<font>Fullscreen-Info-Small</font>
+				<align>center</align>
+				
+			</control>
+			
+			<!--Total Time-->
+			<control type="label">
+			
+				<posx>965</posx>
+				<posy>0</posy>
+				<width>300</width>
+				<height>40</height>
+				<label>$INFO[Player.Duration]</label>
+				<textcolor>Label_Normal</textcolor>
+				<font>Fullscreen-Info-Small</font>
+				<align>right</align>
+			
+			</control>
+			
+			<!--Progress Bar-->
+			<control type="progress" id="12">
+			
+				<description>My first progress control</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>968</width>
+				<height>0.7</height>
+				<texturebg border="0.7">colors/color_grey.png</texturebg>
+				<lefttexture>-</lefttexture>
+				<midtexture border="0.7">colors/color_silver.png</midtexture>
+				<righttexture>-</righttexture>
+				<info>Player.ProgressCache</info>
+				
+			</control>
+			
+			<!--Progress Bar-->
+			<control type="progress" id="12">
+			
+				<description>My first progress control</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>968</width>
+				<height>0.7</height>
+				<texturebg border="0.7">colors/color_transparent.png</texturebg>
+				<lefttexture>-</lefttexture>
+				<midtexture border="0.7">colors/color_white.png</midtexture>
+				<righttexture>-</righttexture>
+				<info>Player.Progress</info>
+				<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+				
+			</control>
+		
+			<control type="slider">
+
+				<posx>17</posx>
+				<posy>-34</posy>
+				<width>968</width>
+				<height>10</height>
+				<texturesliderbar border="0">colors/color_transparent.png</texturesliderbar>
+					<textureslidernib>colors/leaf.png</textureslidernib>
+				<textureslidernibfocus>colors/leaf2.png</textureslidernibfocus>
+				<info>Player.Progress</info>
+				<action>seek</action>
+				<controloffsetx></controloffsetx>
+				<controloffsety></controloffsety>
+				<pulseonselect></pulseonselect>
+				<visible>Skin.HasSetting(osdleaf)</visible>
+			</control>
+	
+			<control type="slider">
+
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>968</width>
+				<height>0.7</height>
+				<texturesliderbar border="0.7">colors/color_transparent.png</texturesliderbar>
+				<textureslidernib border="0.7">colors/color_white.png</textureslidernib>
+				<textureslidernibfocus border="0.7">colors/color_white.png</textureslidernibfocus>
+				<info>Player.Progress</info>
+				<action>seek</action>
+				<controloffsetx></controloffsetx>
+				<controloffsety></controloffsety>
+				<pulseonselect></pulseonselect>
+				<visible>!Skin.HasSetting(osdleaf)</visible>
+			</control>
+		</control>	
+			
+
+			
+			<control type="grouplist" id="1">
+			<visible>Skin.HasSetting(osd2014)</visible>
+				<posx>135</posx>
+				<posy>150</posy>
+				<width>968</width>
+				<height>116</height>
+				<itemgap>110</itemgap>
+				<orientation>horizontal</orientation>
+				<usecontrolcoords>true</usecontrolcoords>
+				
+				
+						<control type="button" id="400">
+					<include>Common_Animation_tiledash_OSD</include>
+							<include>Common_AppBar_Button50</include>
+		
+										<texturefocus>osd\d\media-stop2.png</texturefocus>
+					<texturenofocus>osd\d\media-stop.png</texturenofocus>
+					<label></label>
+					<onclick>Dialog.Close(6166)</onclick>
+				<onclick>playercontrol(stop)</onclick>
+		
+					
+				</control>
+				
+				<!--Rewind Button-->
+				<control type="button" id="401">
+					<include>Common_Animation_tiledash_OSD</include>
+							<include>Common_AppBar_Button50</include>
+			
+								<texturefocus>osd\d\media-rewind2.png</texturefocus>
+					<texturenofocus>osd\d\media-rewind.png</texturenofocus>
+					<label></label>
+					<onclick>playercontrol(rewind)</onclick>
+					
+				</control>
+				<control type="button" id="402">
+					<include>Common_Animation_tiledash_OSD</include>
+							<include>Common_AppBar_Button50</include>
+			
+								<texturefocus>osd\d\media-back2.png</texturefocus>
+					<texturenofocus>osd\d\media-back.png</texturenofocus>
+					<label></label>
+					<onclick>playercontrol(previous)</onclick>
+					
+				</control>
+				<!--Play/Pause Button-->
+				<control type="togglebutton" id="403">
+				<include>Common_Animation_tiledash_OSD</include>
+							<include>Common_AppBar_Button50</include>
+				
+					<texturefocus>osd\d\media-pause2.png</texturefocus>
+					<texturenofocus>osd\d\media-pause.png</texturenofocus>
+									<alttexturefocus>osd\d\media-play2.png</alttexturefocus>
+					<alttexturenofocus>osd\b\media-play.png</alttexturenofocus>
+					<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
+					<label></label>
+					<onclick>playercontrol(play)</onclick>
+					
+				</control>
+				
+
+		
+					<control type="button" id="404">
+						<include>Common_Animation_tiledash_OSD</include>
+							<include>Common_AppBar_Button50</include>
+			
+								<texturefocus>osd\d\media-forward2.png</texturefocus>
+					<texturenofocus>osd\d\media-forward.png</texturenofocus>
+					<label></label>
+					<onclick>playercontrol(next)</onclick>
+					
+				</control>
+				<!--Fast Forward Button-->
+				<control type="button" id="405">
+						<include>Common_Animation_tiledash_OSD</include>
+							<include>Common_AppBar_Button50</include>
+			
+							<texturefocus>osd\d\media-fast-forward2.png</texturefocus>
+					<texturenofocus>osd\d\media-fast-forward.png</texturenofocus>
+					<label></label>
+					<onclick>playercontrol(forward)</onclick>
+					
+				</control>
+				
+				<control type="button" id="406">
+						<include>Common_Animation_tiledash_OSD</include>
+							<include>Common_AppBar_Button50</include>
+			
+							<texturefocus>osd\d\media-text2.png</texturefocus>
+					<texturenofocus>osd\d\media-text.png</texturenofocus>
+					<label></label>
+					<onclick>SetFocus(413)</onclick>
+						<onclick>Skin.Reset(ShowMoreOptionsMenu)</onclick>
+						<onclick>Close</onclick>
+						<onclick>ActivateWindow(SubtitleSearch)</onclick>
+					<visible>Skin.HasSetting(Subtitlesbutton)</visible>
+				</control>	
+				
+				
+				
+								<control type="button" id="407">
+						<include>Common_Animation_tiledash_OSD</include>
+							<include>Common_AppBar_Button50</include>
+					
+								<texturefocus>osd\d\snap2.png</texturefocus>
+					<texturenofocus>osd\d\snap.png</texturenofocus>
+					<label></label>
+					<onclick>Dialog.Close(6166)</onclick>
+<onclick>Skin.ToggleSetting(dashovid)</onclick> 
+					
+	
+					
+				</control>
+				
+				<control type="button" id="408">
+						<include>Common_Animation_tiledash_OSD</include>
+							<include>Common_AppBar_Button50</include>
+			
+							<texturefocus>osd\d\settings2.png</texturefocus>
+					<texturenofocus>osd\d\settings.png</texturenofocus>
+					<label></label>
+			<onclick>SetFocus(413)</onclick>
+						<onclick>Skin.Reset(ShowMoreOptionsMenu)</onclick>
+						<onclick>ActivateWindow(123)</onclick>
+					<visible>Skin.HasSetting(settingsbutton)</visible>
+				</control>	
+			</control>
+			
+			
+		</control>
+		
+		<!--Top Area-->
+		<control type="group">
+			
+			<posx>0</posx>
+			<posy>0</posy>
+			
+			<visible>!Window.IsVisible(osdvideosettings) + !Window.IsVisible(osdaudiosettings) + !Window.IsVisible(videobookmarks) + !Window.IsVisible(fullscreeninfo) + !Window.IsVisible(seekbar) + !Skin.HasSetting(osd2014)</visible>
+			
+			<include>Common_Animation_OSD_Breadcrumb</include>
+			
+
+			
+			<!--Top Area-->
+			<include>Common_Breadcrumb_Alt</include>
+			
+		</control>	
+			
+		<!--Bottom Area-->
+		<control type="group">
+		
+			<posx>0</posx>
+			<posy>715</posy>
+			
+			<visible>!Window.IsVisible(osdvideosettings) + !Window.IsVisible(osdaudiosettings) + !Window.IsVisible(videobookmarks) + !Window.IsVisible(fullscreeninfo) + !Skin.HasSetting(osd2014)</visible>
+			
+			<include>Common_Animation_OSD</include>
+
+			<control type="image">
+				
+				<posx>0</posx>
+				<posy>-50</posy>
+				<width>1280</width>
+				<height>250</height>
+				<texture>colors/color_white.png</texture>
+				<colordiffuse>FanartDiffuse</colordiffuse>
+				
+			</control>
+						<control type="textbox">
+				
+				<posx>20</posx>
+				<posy>-10</posy>
+				<width min="0" max="470">auto</width>
+				<height>42</height>
+				<label>[UPPERCASE]$VAR[NowPlaying_First_Label][/UPPERCASE]</label>
+				<textcolor>Label_Normal</textcolor>
+				<font>Fullscreen-Info-Large</font>
+				<aligny>bottom</aligny>
+				<autoscroll>false</autoscroll>
+				<visible>Skin.HasSetting(altosd) + !Skin.HasSetting(disablewatch) + !Skin.HasSetting(osd2014)</visible>
+			</control>
+			
+			<control type="textbox">
+				
+				<posx>20</posx>
+				<posy>25</posy>
+				<width min="0" max="440">auto</width>
+				<height>26</height>
+				<label>[UPPERCASE]$VAR[NowPlaying_Second_Label][/UPPERCASE]</label>
+				<textcolor>Label_Normal</textcolor>
+				<font>Fullscreen-Info</font>
+				<aligny>top</aligny>
+				<autoscroll>false</autoscroll>
+				<visible>Skin.HasSetting(altosd) + !Skin.HasSetting(disablewatch) + !Skin.HasSetting(osd2014)</visible>
+			</control>
+						<control type="textbox">
+				
+				<posx>20</posx>
+				<posy>45</posy>
+				<width min="0" max="470">auto</width>
+				<height>30</height>
+				<label>$INFO[VideoPlayer.Year] Rated:$INFO[VideoPlayer.Rating]</label>
+				<textcolor>Label_Normal</textcolor>
+				<font>Fullscreen-Info</font>
+				<aligny>top</aligny>
+				<autoscroll>false</autoscroll>
+				<visible>Skin.HasSetting(altosd) + !Skin.HasSetting(disablewatch) + !Skin.HasSetting(osd2014)</visible>
+			</control>
+		
+			
+						<control type="group">
+			<visible>!Skin.HasSetting(altosd) + !Skin.HasSetting(osd2014)</visible>
+			<posx>60</posx>
+			<posy>100</posy>
+			<width>1160</width>
+			<include>Common_Animation_OSD</include>
+		
+			<!--Current Time-->
+			<control type="label">
+			
+				<posx>0</posx>
+				<posy>0</posy>
+				<width min="20" max="1160">auto</width>
+				<height>40</height>
+				<label>$INFO[Player.Time]</label>
+				<textcolor>Label_Normal</textcolor>
+				<font>Fullscreen-Info-Small</font>
+			
+			</control>
+			
+			<control type="label">
+					
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1160</width>
+				<height>40</height>
+				<label>$INFO[Player.FinishTime,FINISHES AT ,]</label>
+				<textcolor>Label_Normal</textcolor>
+				<font>Fullscreen-Info-Small</font>
+				<align>center</align>
+				
+			</control>
+			
+			<!--Total Time-->
+			<control type="label">
+			
+				<posx>1160</posx>
+				<posy>0</posy>
+				<width>300</width>
+				<height>40</height>
+				<label>$INFO[Player.Duration]</label>
+				<textcolor>Label_Normal</textcolor>
+				<font>Fullscreen-Info-Small</font>
+				<align>right</align>
+			
+			</control>
+			
+			<!--Progress Bar-->
+			<control type="progress" id="12">
+			
+				<description>My first progress control</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1160</width>
+				<height>5</height>
+				<texturebg border="2">colors/color_grey.png</texturebg>
+				<lefttexture>-</lefttexture>
+				<midtexture border="2">colors/color_silver.png</midtexture>
+				<righttexture>-</righttexture>
+				<info>Player.ProgressCache</info>
+				
+			</control>
+			
+			<!--Progress Bar-->
+			<control type="progress" id="12">
+			
+				<description>My first progress control</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1160</width>
+				<height>5</height>
+				<texturebg border="2">colors/color_transparent.png</texturebg>
+				<lefttexture>-</lefttexture>
+				<midtexture border="2">colors/color_white.png</midtexture>
+				<righttexture>-</righttexture>
+				<info>Player.Progress</info>
+				<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+				
+			</control>
+			
+			<control type="slider">
+
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1160</width>
+				<height>5</height>
+				<texturesliderbar border="2">colors/color_transparent.png</texturesliderbar>
+				<textureslidernib border="2">colors/color_white.png</textureslidernib>
+				<textureslidernibfocus border="2">colors/color_white.png</textureslidernibfocus>
+				<info>Player.Progress</info>
+				<action>seek</action>
+				<controloffsetx></controloffsetx>
+				<controloffsety></controloffsety>
+				<pulseonselect></pulseonselect>
+				
+			</control>
+			
+		</control>	
+		<control type="group">
+			<visible>Skin.HasSetting(altosd) + !Skin.HasSetting(osd2014)</visible>
+			<posx>500</posx>
+			<posy>100</posy>
+			<width>735</width>
+			<include>Common_Animation_OSD</include>
+		
+			<!--Current Time-->
+			<control type="label">
+			
+				<posx>0</posx>
+				<posy>0</posy>
+				<width min="20" max="735">auto</width>
+				<height>40</height>
+				<label>$INFO[Player.Time]</label>
+				<textcolor>Label_Normal</textcolor>
+				<font>Fullscreen-Info-Small</font>
+			
+			</control>
+			
+			<control type="label">
+					
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>735</width>
+				<height>40</height>
+				<label>$INFO[Player.FinishTime,FINISHES AT ,]</label>
+				<textcolor>Label_Normal</textcolor>
+				<font>Fullscreen-Info-Small</font>
+				<align>center</align>
+				
+			</control>
+			
+			<!--Total Time-->
+			<control type="label">
+			
+				<posx>735</posx>
+				<posy>0</posy>
+				<width>300</width>
+				<height>40</height>
+				<label>$INFO[Player.Duration]</label>
+				<textcolor>Label_Normal</textcolor>
+				<font>Fullscreen-Info-Small</font>
+				<align>right</align>
+			
+			</control>
+			
+			<!--Progress Bar-->
+			<control type="progress" id="12">
+			
+				<description>My first progress control</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>735</width>
+				<height>5</height>
+				<texturebg border="2">colors/color_grey.png</texturebg>
+				<lefttexture>-</lefttexture>
+				<midtexture border="2">colors/color_silver.png</midtexture>
+				<righttexture>-</righttexture>
+				<info>Player.ProgressCache</info>
+				
+			</control>
+			
+			<!--Progress Bar-->
+			<control type="progress" id="12">
+			
+				<description>My first progress control</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>735</width>
+				<height>5</height>
+				<texturebg border="2">colors/color_transparent.png</texturebg>
+				<lefttexture>-</lefttexture>
+				<midtexture border="2">colors/color_white.png</midtexture>
+				<righttexture>-</righttexture>
+				<info>Player.Progress</info>
+				<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+				
+			</control>
+			
+			<control type="slider">
+
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>735</width>
+				<height>5</height>
+				<texturesliderbar border="2">colors/color_transparent.png</texturesliderbar>
+				<textureslidernib border="2">colors/color_white.png</textureslidernib>
+				<textureslidernibfocus border="2">colors/color_white.png</textureslidernibfocus>
+				<info>Player.Progress</info>
+				<action>seek</action>
+				<controloffsetx></controloffsetx>
+				<controloffsety></controloffsety>
+				<pulseonselect></pulseonselect>
+				
+			</control>
+			
+		</control>	
+			
+
+			
+			<control type="grouplist" id="1">
+			<visible>!Skin.HasSetting(altosd) + !Skin.HasSetting(osd2014)</visible>
+				<posx>19</posx>
+				<posy>26</posy>
+				<width>1247</width>
+				<height>116</height>
+				<itemgap>16</itemgap>
+				<orientation>horizontal</orientation>
+				<usecontrolcoords>true</usecontrolcoords>
+				
+				<!--Random Button-->
+				<control type="radiobutton" id="400">
+			
+					<include>Common_AppBar_Button6</include>
+					<texturefocus>osd\a\random2.png</texturefocus>
+					<texturenofocus>osd\a\random.png</texturenofocus>
+					<textureradioon>appbar/appbar_radioon.png</textureradioon>
+					<textureradiooff>-</textureradiooff>
+					<radiowidth>48</radiowidth>
+					<radioheight>48</radioheight>
+					<radioposx>6</radioposx>
+					<label>$VAR[OSD_Random_Label]</label>
+					<onclick>playercontrol(random)</onclick>
+					<visible>!Skin.HasSetting(altosd)</visible>
+				</control>
+				
+				<!--Skip Previous Button-->
+				<control type="button" id="401">
+					
+					<include>Common_AppBar_Button6</include>
+							<texturefocus>osd\a\skipb2.png</texturefocus>
+					<texturenofocus>osd\a\skipb.png</texturenofocus>
+					<label>skip[CR]previous</label>
+					<onclick>playercontrol(previous)</onclick>
+						<visible>!Skin.HasSetting(altosd)</visible>
+				</control>
+				
+				<!--Rewind Button-->
+				<control type="button" id="402">
+					
+							<include condition="Skin.HasSetting(altosd)">Common_AppBar_Button5</include>
+					<include condition="!Skin.HasSetting(altosd)">Common_AppBar_Button6</include>
+								<texturefocus>osd\a\rewind2.png</texturefocus>
+					<texturenofocus>osd\a\rewind.png</texturenofocus>
+					<label>rewind</label>
+					<onclick>playercontrol(rewind)</onclick>
+					
+				</control>
+				
+				<!--Play/Pause Button-->
+				<control type="togglebutton" id="403">
+					
+							<include condition="Skin.HasSetting(altosd)">Common_AppBar_Button5</include>
+					<include condition="!Skin.HasSetting(altosd)">Common_AppBar_Button6</include>
+					<texturefocus>osd\a\pause2.png</texturefocus>
+					<texturenofocus>osd\a\pause.png</texturenofocus>
+									<alttexturefocus>osd\a\play2.png</alttexturefocus>
+					<alttexturenofocus>osd\a\play.png</alttexturenofocus>
+					<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
+					<label>$VAR[OSD_PlayPause_Label]</label>
+					<onclick>playercontrol(play)</onclick>
+					
+				</control>
+				
+				<!--Stop Button-->
+				<control type="button" id="404">
+					
+							<include condition="Skin.HasSetting(altosd)">Common_AppBar_Button5</include>
+					<include condition="!Skin.HasSetting(altosd)">Common_AppBar_Button6</include>
+										<texturefocus>osd\a\stop2.png</texturefocus>
+					<texturenofocus>osd\a\stop.png</texturenofocus>
+					<label>stop</label>
+						<onclick>playercontrol(stop)</onclick>
+					<onclick>Dialog.Close(6166)</onclick>
+					
+				</control>
+					
+				<!--Fast Forward Button-->
+				<control type="button" id="405">
+						
+							<include condition="Skin.HasSetting(altosd)">Common_AppBar_Button5</include>
+					<include condition="!Skin.HasSetting(altosd)">Common_AppBar_Button6</include>
+							<texturefocus>osd\a\forward2.png</texturefocus>
+					<texturenofocus>osd\a\forward.png</texturenofocus>
+					<label>forward</label>
+					<onclick>playercontrol(forward)</onclick>
+					
+				</control>
+					
+				<!--Skip Next Button-->
+				<control type="button" id="406">
+						
+					<include>Common_AppBar_Button6</include>
+								<texturefocus>osd\a\skipf2.png</texturefocus>
+					<texturenofocus>osd\a\skipf.png</texturenofocus>
+					<label>skip[CR]next</label>
+					<onclick>playercontrol(next)</onclick>
+						<visible>!Skin.HasSetting(altosd)</visible>
+				</control>
+				
+				<!--Repeat Button-->
+				<control type="button" id="407">
+						
+					<include>Common_AppBar_Button6</include>
+						<texturefocus>osd\a\repeat2.png</texturefocus>
+					<texturenofocus>osd\a\repeat.png</texturenofocus>
+					<label>$VAR[OSD_Repeat_Label]</label>
+					<onclick>playercontrol(repeat)</onclick>
+						<visible>!Skin.HasSetting(altosd)</visible>
+				</control>
+				
+				<!--Divider-->
+				<control type="image" id="9150">
+					<include>Common_AppBar_Divider</include>
+						<visible>!Skin.HasSetting(altosd)</visible>
+				</control>
+				
+				<!--DVD Menu Button-->
+				<control type="button" id="408">
+						
+					<include>Common_AppBar_Button6</include>
+									<texturefocus>osd\a\dvd2.png</texturefocus>
+					<texturenofocus>osd\a\dvd.png</texturenofocus>
+					<colordiffuse>$VAR[OSD_DVDMenu_ColorDiffuse]</colordiffuse>
+					<label>DVD[CR]menu</label>
+					<onclick>PlayerControl(ShowVideoMenu)</onclick>
+					<enable>VideoPlayer.HasMenu</enable>
+						<visible>!Skin.HasSetting(altosd)</visible>
+				</control>
+				
+				<!--Divider-->
+				<control type="image" id="9151">
+					<include>Common_AppBar_Divider</include>
+						<visible>!Skin.HasSetting(altosd)</visible>
+				</control>
+				
+				<!--Subtitle Button-->
+				<control type="button" id="409">
+						
+					<include>Common_AppBar_Button6</include>
+								<texturefocus>osd\a\subtitles2.png</texturefocus>
+					<texturenofocus>osd\a\subtitles.png</texturenofocus>
+					<label>get[CR]subtitles</label>
+					<onclick>Close</onclick>
+					<onclick>XBMC.RunScript(script.xbmc.subtitles)</onclick>
+						<visible>!Skin.HasSetting(altosd)</visible>
+				</control>
+				
+				<!--Divider-->
+				<control type="image" id="9152">
+					<include>Common_AppBar_Divider</include>
+						<visible>!Skin.HasSetting(altosd)</visible>
+				</control>
+				
+				<!--Bookmark Button-->
+				<control type="button" id="410">
+						
+					<include>Common_AppBar_Button6</include>
+								<texturefocus>osd\a\bookmark2.png</texturefocus>
+					<texturenofocus>osd\a\bookmark.png</texturenofocus>
+					<label>book[CR]marks</label>
+					<colordiffuse>$VAR[OSD_Bookmark_ColorDiffuse]</colordiffuse>
+					<onclick>ActivateWindow(125)</onclick>
+					<enable>!VideoPlayer.HasMenu</enable>
+						<visible>!Skin.HasSetting(altosd)</visible>
+				</control>
+				
+				<!--Audio Settings Button-->
+				<control type="button" id="411">
+						
+					<include>Common_AppBar_Button6</include>
+								<texturefocus>osd\a\audios2.png</texturefocus>
+					<texturenofocus>osd\a\audios.png</texturenofocus>
+					<label>audio[CR]settings</label>
+					<onclick>ActivateWindow(124)</onclick>
+						<visible>!Skin.HasSetting(altosd)</visible>
+				</control>
+				
+				<!--Video Settings Button-->
+				<control type="button" id="412">
+						
+					<include>Common_AppBar_Button6</include>
+								<texturefocus>osd\a\videos2.png</texturefocus>
+					<texturenofocus>osd\a\videos.png</texturenofocus>
+					<label>video[CR]settings</label>
+					<onclick>ActivateWindow(123)</onclick>
+						<visible>!Skin.HasSetting(altosd)</visible>
+				</control>
+				
+				<!--Video Info Button-->
+				<control type="button" id="413">
+						
+					<include>Common_AppBar_Button6</include>
+						<texturefocus>osd\a\info2.png</texturefocus>
+					<texturenofocus>osd\a\info.png</texturenofocus>
+					<label>show[CR]info</label>
+					<onclick>ActivateWindow(fullscreeninfo)</onclick>
+					<visible>System.GetBool(Input.EnableMouse) | Skin.HasSetting(UseTouchInput)</visible>
+					
+				</control>
+				
+				
+								<control type="button" id="414">
+						
+							<include condition="Skin.HasSetting(altosd)">Common_AppBar_Button5</include>
+					<include condition="!Skin.HasSetting(altosd)">Common_AppBar_Button6</include>
+								<texturefocus>osd\a\snap2.png</texturefocus>
+					<texturenofocus>osd\a\snap.png</texturenofocus>
+					<label>Snap</label>
+						<onclick>Dialog.Close(6166)</onclick>
+<onclick>Skin.ToggleSetting(dashovid)</onclick> 
+					
+				
+			
+					
+				
+			
+	
+					
+					
+										
+										
+		
+							
+						
+
+					
+				</control>
+			</control>
+			<control type="grouplist" id="1">
+			<visible>Skin.HasSetting(altosd) + !Skin.HasSetting(osd2014)</visible>
+				<posx>500</posx>
+				<posy>26</posy>
+				<width>1247</width>
+				<height>116</height>
+				<itemgap>16</itemgap>
+				<orientation>horizontal</orientation>
+				<usecontrolcoords>true</usecontrolcoords>
+				
+
+				
+
+				
+				<!--Rewind Button-->
+				<control type="button" id="402">
+				
+							<include condition="Skin.HasSetting(altosd)">Common_AppBar_Button5</include>
+					<include condition="!Skin.HasSetting(altosd)">Common_AppBar_Button6</include>
+								<texturefocus>osd\a\rewind2.png</texturefocus>
+					<texturenofocus>osd\a\rewind.png</texturenofocus>
+					<label>rewind</label>
+					<onclick>playercontrol(rewind)</onclick>
+					
+				</control>
+				
+				<!--Play/Pause Button-->
+				<control type="togglebutton" id="403">
+					
+							<include condition="Skin.HasSetting(altosd)">Common_AppBar_Button5</include>
+					<include condition="!Skin.HasSetting(altosd)">Common_AppBar_Button6</include>
+					<texturefocus>osd\a\pause2.png</texturefocus>
+					<texturenofocus>osd\a\pause.png</texturenofocus>
+									<alttexturefocus>osd\a\play2.png</alttexturefocus>
+					<alttexturenofocus>osd\a\play.png</alttexturenofocus>
+					<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
+					<label>$VAR[OSD_PlayPause_Label]</label>
+					<onclick>playercontrol(play)</onclick>
+					
+				</control>
+				
+				<!--Stop Button-->
+				<control type="button" id="404">
+					
+							<include condition="Skin.HasSetting(altosd)">Common_AppBar_Button5</include>
+					<include condition="!Skin.HasSetting(altosd)">Common_AppBar_Button6</include>
+										<texturefocus>osd\a\stop2.png</texturefocus>
+					<texturenofocus>osd\a\stop.png</texturenofocus>
+					<label>stop</label>
+					<onclick>playercontrol(stop)</onclick>
+					<onclick>Dialog.Close(6166)</onclick>
+					
+				</control>
+					
+				<!--Fast Forward Button-->
+				<control type="button" id="405">
+					
+							<include condition="Skin.HasSetting(altosd)">Common_AppBar_Button5</include>
+					<include condition="!Skin.HasSetting(altosd)">Common_AppBar_Button6</include>
+							<texturefocus>osd\a\forward2.png</texturefocus>
+					<texturenofocus>osd\a\forward.png</texturenofocus>
+					<label>forward</label>
+					<onclick>playercontrol(forward)</onclick>
+					
+				</control>
+					
+	
+				
+
+				
+		
+				
+			
+				
+				
+								<control type="button" id="414">
+									
+						<posx>300</posx>
+							<include condition="Skin.HasSetting(altosd)">Common_AppBar_Button5</include>
+					<include condition="!Skin.HasSetting(altosd)">Common_AppBar_Button6</include>
+								<texturefocus>osd\a\snap2.png</texturefocus>
+					<texturenofocus>osd\a\snap.png</texturenofocus>
+					<label>Snap</label>
+				<onclick>Dialog.Close(6166)</onclick>
+<onclick>Skin.ToggleSetting(dashovid)</onclick> 
+					
+				
+			
+					
+				
+			
+	
+					
+					
+										
+										
+		
+							
+						
+
+					
+				</control>
+			</control>
+</control>
+
+	</controls>
+
+</window>
+				
+				
+

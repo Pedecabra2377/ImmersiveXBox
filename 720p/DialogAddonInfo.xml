@@ -1,0 +1,559 @@
+<!-- Foundation -->
+<window id="146">
+
+	<defaultcontrol>1</defaultcontrol>
+	
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>0</posy>
+	</coordinates>
+	<include>Common_Animation_Window</include>
+	
+	<controls>
+	
+		<control type="button" id="84">
+			<onfocus>SetFocus(1)</onfocus>
+			<visible allowhiddenfocus="true">false</visible>
+		</control>
+	
+		<control type="image">
+		
+			<include>Common_Dimensions</include>
+			<texture background="true">colors/color_black-.png</texture>
+	
+			
+		</control>
+	
+		<include>Common_Breadcrumb_addi</include>
+		
+		<!--Content Area-->
+		<control type="group">
+		
+			<posx>0</posx>
+			<posy>100</posy>
+			<width>1280</width>
+			<height>560</height>
+			
+			<!--Animation-->
+			<include>Common_Animation_Content</include>
+			
+			<control type="grouplist">
+			
+				<include>Common_Content_Grouplist</include>
+			
+				<!--Information Section-->
+				<control type="group">
+				
+					<width>380</width>
+					<height>560</height>
+					
+					<control type="label">
+					
+						<posx>0</posx>
+						<posy>20</posy>
+						<width>340</width>
+						<height>20</height>
+						<label>$INFO[Container.Property(addoncategory)]</label>
+						<font>DialogInfo-Label-Small</font>
+							<textcolor>ffffffff</textcolor>
+					
+					</control>
+				
+					<control type="group">
+					
+						<posx>0</posx>
+						<posy>60</posy>
+						<width>380</width>
+						<height>500</height>
+				
+						<control type="image">
+								
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>380</width>
+							<height>500</height>
+							<texture background="true">colors/color_keyboard_dark.png</texture>
+						
+							
+						</control>
+						
+						<control type="image">
+								
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>380</width>
+							<height>380</height>
+							<texture background="true">$INFO[ListItem.Thumb]</texture>
+							<aspectratio align="left" aligny="top">stretch</aspectratio>
+							
+						</control>
+						
+						<control type="group">
+						
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>340</width>
+							<height>48</height>
+							<visible>!IsEmpty(ListItem.Property(Addon.Broken))</visible>
+							
+							<control type="image">
+								
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>380</width>
+								<height>48</height>
+								<texture background="true">colors/color_white.png</texture>
+								<colordiffuse>$INFO[Skin.String(gamercolor)]</colordiffuse>
+								
+							</control>
+							
+							<control type="image">
+								
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>48</width>
+								<height>48</height>
+								<texture>kai/kai_warning.png</texture>
+								<colordiffuse>Label_Normal</colordiffuse>
+								
+							</control>
+							
+							<control type="label">
+							
+								<posx>54</posx>
+								<posy>0</posy>
+								<width>636</width>
+								<height>48</height>
+								<label>$INFO[ListItem.Property(Addon.Broken)]</label>
+									<textcolor>ffffffff</textcolor>
+								<font>DialogInfo-Label-Small</font>
+								
+							</control>
+							
+						</control>
+						
+						<control type="grouplist">
+						
+							<posx>20</posx>
+							<posy>180</posy>
+							<width>340</width>
+							<height>300</height>
+							<itemgap>0</itemgap>
+							<orientation>vertical</orientation>
+							<align>bottom</align>
+							
+							<control type="label">
+							
+								<include>Common_InfoDialog_Label_Small</include>
+								<label>$INFO[ListItem.Property(Addon.Status)]</label>
+								<visible>!IsEmpty(ListItem.Property(Addon.Status))</visible>
+							
+							</control>
+							
+							<control type="label">
+							
+								<include>Common_InfoDialog_Label_Small</include>
+								<label>$INFO[ListItem.Property(Addon.Version),Versão ,]</label>
+								<visible>!IsEmpty(ListItem.Property(Addon.Version))</visible>
+							
+							</control>
+						
+							<control type="label">
+							
+								<include>Common_InfoDialog_Header_Small</include>
+								<label>$INFO[ListItem.Property(Addon.Creator)]</label>
+								
+							</control>
+						
+						</control>
+						
+					</control>
+				
+				</control>
+				
+				<!--Overview Section-->
+				<control type="group">
+																<animation type="WindowOpen" reversible="false">
+					<effect type="fade" start="0" end="100" time="400"/>
+			<effect type="slide" start="1280,0" end="0,0" center="auto" time="600" delay="1200" tween="cubic" easing="out" />
+			</animation>
+					<width>360</width>
+					<height>560</height>
+				
+					<control type="label">
+						
+						<label>observação</label>
+						<include>Common_Dark</include>
+						
+					</control>
+				<control type="image">
+	 <include>Common_Animation_tiledash2</include>
+                        <description>Scrollbar background</description>
+               <posy>45</posy>
+			   <posx>-20</posx>
+		<width>395</width>
+						<height>527</height>
+                        <texture border="1">colors/color_keyboard.png</texture>
+                        <visible>Control.HasFocus(71)</visible>
+                        
+                    </control>
+				
+					<control type="textbox">
+							
+						<include>Common_tion</include>
+						<width>340</width>
+						<height>512</height>
+						<label>$VAR[Info_Description]</label>
+							<textcolor>ffffffff</textcolor>
+					</control>
+					
+					<!--Scrollbar-->
+					<control type="scrollbar" id="71">
+					
+						<include>Common_Settings_Scrollbar_Vertical</include>
+						<onright>9001</onright>
+						<posx>360</posx>
+						<posy>60</posy>
+						<height>500</height>
+						
+						<animation effect="fade" start="100" end="20" time="200" reversible="true" condition="!Control.HasFocus(71)">Conditional</animation>
+						
+					</control>	
+					
+				</control>
+				
+				<!--Control Section-->
+				<control type="group">
+																	<animation type="WindowOpen" reversible="false">
+					<effect type="fade" start="0" end="100" time="400"/>
+			<effect type="slide" start="1280,0" end="0,0" center="auto" time="600" delay="1300" tween="cubic" easing="out" />
+			</animation>
+					<width>320</width>
+					<height>480</height>
+					
+					<control type="label">
+							
+						<posx>45</posx>
+						<posy>60</posy>
+						
+						<include>Common_Vertla</include>
+						<include>Common_Animation_Vertical_Label</include>
+							<textcolor>ffffffff</textcolor>
+					</control>
+					<control type="panel" id="1">
+	
+<posx>50</posx>
+						<posy>60</posy>
+
+			<onright>-</onright>
+				<onleft>71</onleft>
+						<include>Common_AltHome_Panel381</include>
+					
+
+
+
+
+						
+						
+						<content>
+						
+
+							
+										<item id="1">
+								<description>Games</description>
+								<label>$INFO[Control.GetLabel(6)]</label>
+								<thumb></thumb>
+									<onclick>ActivateWindow(540)</onclick>		
+							
+						
+
+								<visible>Control.IsEnabled(6) + StringCompare(Control.GetLabel(6),Uninstall)</visible>	
+							</item>
+							<item id="1">
+								<description>Games</description>
+								<label>$INFO[Control.GetLabel(6)]</label>
+								<thumb></thumb>
+									<onclick>ActivateWindow(54)</onclick>		
+							
+						
+
+								<visible>Control.IsEnabled(6) + StringCompare(Control.GetLabel(6),Install)</visible>	
+							</item>
+			
+								<item id="2">
+								<description>Games</description>
+								<label>$INFO[Control.GetLabel(7)]</label>
+								<thumb></thumb>
+													
+<onclick>Sendclick(146,7)</onclick>
+							<visible>Control.IsEnabled(7)</visible>		
+							</item>
+	
+								<item id="3">
+								<description>Games</description>
+								<label>Atualizar</label>
+								<thumb></thumb>
+													
+<onclick>Sendclick(146,8)</onclick>
+							<visible>Control.IsEnabled(8)</visible>		
+							</item>				
+
+							<item id="4">
+								<description>Games</description>
+								<label>$LOCALIZE[24020]</label>
+								<thumb></thumb>
+													
+<onclick>Sendclick(146,9)</onclick>
+							<visible>Control.IsEnabled(9)</visible>		
+							</item>		
+							<item id="5">
+								<description>Games</description>
+								<label>$LOCALIZE[24036]</label>
+								<thumb></thumb>
+													
+<onclick>Sendclick(146,10)</onclick>
+							<visible>Control.IsEnabled(10)</visible>		
+							</item>		
+							<item id="6">
+								<description>Games</description>
+								<label>$LOCALIZE[24048]</label>
+								<thumb></thumb>
+													
+<onclick>Sendclick(146,11)</onclick>
+							<visible>Control.IsEnabled(11)</visible>		
+							</item>		
+							
+
+								</content>
+
+					</control>
+					<control type="grouplist" id="9001">
+
+						<posx>500000</posx>
+						<posy>60</posy>
+						<width>400</width>
+						<height>480</height>
+						<scrolltime tween="cubic" easing="out">600</scrolltime>
+						<pagecontrol>9010</pagecontrol>
+						<itemgap>10</itemgap>
+						<orientation>vertical</orientation>
+						<onup>9001</onup>
+						<ondown>9001</ondown>
+						
+						<!--Install/Uninstall Button-->
+						<control type="group">
+						
+							<width>400</width>
+							<height>60</height>
+							
+							<visible>Control.IsEnabled(6)</visible>
+							
+							<control type="button" id="6">
+								
+								<include>Common_Control_Button</include>
+								<onup>11</onup>
+								<ondown>7</ondown>
+								<onright>-</onright>
+								<onleft>71</onleft>
+								
+							</control>
+							
+							<control type="image">
+							
+								<include>Common_Control_Image</include>
+								<texture>dialoginfo/dialoginfo_install.png</texture>
+							
+							</control>
+							
+							<control type="label">
+							
+								<include>Common_Control_LightLabel</include>
+								<label>$INFO[Control.GetLabel(6)]</label>
+									
+							</control>
+							
+						</control>
+
+						<!--Disable Button-->
+						<control type="group">
+						
+							<width>400</width>
+							<height>60</height>
+							
+							<visible>Control.IsEnabled(7)</visible>
+							
+							<control type="button" id="7">
+								
+								<include>Common_Control_Button</include>
+								<onup>6</onup>
+								<ondown>8</ondown>
+								<onright>-</onright>
+								<onleft>71</onleft>
+								
+							</control>
+							
+							<control type="image">
+							
+								<include>Common_Control_Image</include>
+								<texture>dialoginfo/dialoginfo_disable.png</texture>
+							
+							</control>
+							
+							<control type="label">
+							
+								<include>Common_Control_LightLabel</include>
+								<label>$INFO[Control.GetLabel(7)]</label>
+									<textcolor>ffffffff</textcolor>
+							</control>
+							
+						</control>
+						
+						<!--Update Button-->
+						<control type="group">
+						
+							<width>400</width>
+							<height>60</height>
+							
+							<visible>Control.IsEnabled(8)</visible>
+							
+							<control type="button" id="8">
+								
+								<include>Common_Control_Button</include>
+								<onup>7</onup>
+								<ondown>9</ondown>
+								<onright>-</onright>
+								<onleft>71</onleft>
+								
+							</control>
+							
+							<control type="image">
+							
+								<include>Common_Control_Image</include>
+								<texture>dialoginfo/dialoginfo_update.png</texture>
+							
+							</control>
+							
+							<control type="label">
+							
+								<include>Common_Control_LightLabel</include>
+								<label>Atualização</label>
+									<textcolor>ffffffff</textcolor>
+							</control>
+							
+						</control>
+						
+						<!--Configure Button-->
+						<control type="group">
+						
+							<width>400</width>
+							<height>60</height>
+							
+							<visible>Control.IsEnabled(9)</visible>
+							
+							<control type="button" id="9">
+								
+								<include>Common_Control_Button</include>
+								<onup>8</onup>
+								<ondown>10</ondown>
+								<onright>-</onright>
+								<onleft>71</onleft>
+								
+							</control>
+							
+							<control type="image">
+							
+								<include>Common_Control_Image</include>
+								<texture>dialoginfo/dialoginfo_configure.png</texture>
+							
+							</control>
+							
+							<control type="label">
+							
+								<include>Common_Control_LightLabel</include>
+								<label>$LOCALIZE[24020]</label>
+									<textcolor>ffffffff</textcolor>
+							</control>
+							
+						</control>
+						
+						<!--Changelog Button-->
+						<control type="group">
+						
+							<width>400</width>
+							<height>60</height>
+							
+							<visible>Control.IsEnabled(10)</visible>
+							
+							<control type="button" id="10">
+								
+								<include>Common_Control_Button</include>
+								<onup>9</onup>
+								<ondown>11</ondown>
+								<onright>-</onright>
+								<onleft>71</onleft>
+								
+							</control>
+							
+							<control type="image">
+							
+								<include>Common_Control_Image</include>
+								<texture>dialoginfo/dialoginfo_changelog.png</texture>
+							
+							</control>
+							
+							<control type="label">
+							
+								<include>Common_Control_LightLabel</include>
+								<label>$LOCALIZE[24036]</label>
+									<textcolor>ffffffff</textcolor>
+							</control>
+							
+						</control>
+						
+						<!--Rollback Button-->
+						<control type="group">
+						
+							<width>400</width>
+							<height>60</height>
+							
+							<visible>Control.IsEnabled(11)</visible>
+							
+							<control type="button" id="11">
+								
+								<include>Common_Control_Button</include>
+								<onup>10</onup>
+								<ondown>6</ondown>
+								<onright>-</onright>
+								<onleft>71</onleft>
+								
+							</control>
+							
+							<control type="image">
+							
+								<include>Common_Control_Image</include>
+								<texture>dialoginfo/dialoginfo_rollback.png</texture>
+								
+							</control>
+							
+							<control type="label">
+							
+								<include>Common_Control_LightLabel</include>
+								<label>$LOCALIZE[24048]</label>
+									<textcolor>ffffffff</textcolor>
+							</control>
+							
+						</control>
+						
+					</control>	
+						
+				</control>
+				
+			</control>	
+			
+		</control>
+		
+		<include>Xbox_Logo</include>
+	</controls>
+	
+</window>

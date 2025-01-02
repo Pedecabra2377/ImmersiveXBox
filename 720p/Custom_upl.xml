@@ -1,0 +1,271 @@
+<window id="181">
+
+	<defaultcontrol always="true">111</defaultcontrol>
+	
+	<zorder>2</zorder>
+	
+
+	
+	<!--Splash Screen-->
+
+	<onload>Skin.SetString(snapwindow, 181)</onload>
+<onload condition="!Skin.HasSetting(snapie)">Skin.ToggleSetting(snapie)</onload>
+<onload condition="Skin.HasSetting(gaming)">Skin.ToggleSetting(gaming)</onload>
+<onload>Skin.SetString(snap, demo/sna/upl.jpg,0)</onload>
+<onload>Skin.SetString(sn,Upload Studio)</onload>
+	<onload condition="Skin.HasSetting(SnapFeature) + Skin.HasSetting(SnapAlways)">Skin.SetString(snap, C:\Assistance\Snap\Pic\Item.jpg,0)</onload>
+<onload condition="Skin.HasSetting(SnapFeature) + Skin.HasSetting(SnapAlways)">AlarmClock(startsnap,RunScript(special://skin/system/Snap.py),00:01,silent)</onload>
+
+	
+	<controls>
+
+		<!--Background Area-->
+	
+	
+									<!--Top Area-->
+
+			
+			<!--Content Area-->
+			<control type="group">
+			
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+				
+				<!--Animation-->
+			
+		
+				<control type="grouplist">
+		
+					<include>Common_Content_Grouplist</include>
+					
+					<control type="group" id="8000">
+					
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>1280</width>
+						<height>720</height>
+						
+						<control type="label">
+							
+							<label></label>
+						<include>Common_Section_Label</include>
+							
+							
+						</control>
+					
+
+								
+
+			
+				
+
+						
+							<!--Search Area-->
+				<control type="group">
+										<posx>0</posx>
+						<posy>0</posy>
+					<width>1280</width>
+					<height>720</height>
+					
+					<visible>true</visible>
+				
+					<control type="label">
+						<posx>10</posx>
+						<posy>-3</posy>
+						<label>search</label>
+						<include>Common_Section_Label2</include>
+						
+					</control>
+					<control type="button" id="111">
+					
+						<posx>0</posx>
+						<posy>230</posy>
+						<width>400</width>
+						<height>400</height>
+
+						<label></label>
+						<font>DialogInfo-Header</font>
+						<textcolor>Label_Normal</textcolor>
+						<textoffsetx>16</textoffsetx>
+						<textoffsety>6</textoffsety>
+						<align>left</align>
+						<aligny>top</aligny>
+			
+
+				
+						<onright>222</onright>
+
+<onclick>Skin.SetFile(Upload)</onclick>
+<onclick>XBMC.Playmedia($INFO[Skin.String(Upload)],1)</onclick>
+					
+					</control>
+					<control type="button" id="222">
+					
+						<posx>0</posx>
+						<posy>230</posy>
+						<width>400</width>
+						<height>400</height>
+
+						<label></label>
+						<font>DialogInfo-Header</font>
+						<textcolor>Label_Normal</textcolor>
+						<textoffsetx>16</textoffsetx>
+						<textoffsety>6</textoffsety>
+						<align>left</align>
+						<aligny>top</aligny>
+			
+
+				<onleft>111</onleft>
+						<onright>333</onright>
+
+<onclick>RunPlugin(plugin://plugin.program.webbrowser/?mode=showSite&amp;showPopups=no&amp;stopPlayback=yes&amp;url=http%3a%2f%2fwww.youtube.com/editor)</onclick>
+					
+					</control>
+					<control type="button" id="333">
+					
+						<posx>0</posx>
+						<posy>230</posy>
+						<width>400</width>
+						<height>400</height>
+
+						<label></label>
+						<font>DialogInfo-Header</font>
+						<textcolor>Label_Normal</textcolor>
+						<textoffsetx>16</textoffsetx>
+						<textoffsety>6</textoffsety>
+						<align>left</align>
+						<aligny>top</aligny>
+			
+
+				<onleft>222</onleft>
+
+<onclick>RunPlugin(plugin://plugin.program.webbrowser/?mode=showSite&amp;showPopups=no&amp;stopPlayback=yes&amp;url=http%3a%2f%2fwww.youtube.com/upload‎)</onclick>
+					
+					</control>
+					
+
+					
+
+					
+
+	
+				
+				
+				
+									
+					
+
+					
+
+									
+
+
+									
+					</control>					
+
+					
+
+
+				
+				
+				
+				
+
+				
+						
+						<!--Scrollbar-->
+
+					
+					</control>
+					
+		
+					
+				</control>
+			
+							
+																		
+				
+			</control>
+			
+			<!--Scrollbar-->
+					
+																									<control type="image">
+							
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1280</width>
+								<height>720</height>
+								<texture>colors\color_white.png</texture>
+						
+							</control>
+												
+
+																									<control type="image">
+							
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1280</width>
+								<height>720</height>
+								<texture>demo\upl\bg.jpg</texture>
+						
+							</control>
+																												<control type="image">
+						
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1280</width>
+								<height>720</height>
+								<texture>demo\upl\1.jpg</texture>
+						<visible>Control.HasFocus(111)</visible>
+							</control>
+																																<control type="image">
+							
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1280</width>
+								<height>720</height>
+								<texture>demo\upl\2.jpg</texture>
+						<visible>Control.HasFocus(222)</visible>
+							</control>
+																																<control type="image">
+							
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>1280</width>
+								<height>720</height>
+								<texture>demo\upl\3.jpg</texture>
+						<visible>Control.HasFocus(333)</visible>
+							</control>
+							
+							
+							<control type="videowindow" id="1">
+      <description>My first video control</description>
+			<posx>161</posx>
+								<posy>157</posy>
+								<width>283</width>
+								<height>723</height>
+      <visible>Player.HasVideo</visible>
+            <aspectratio>stretch</aspectratio>
+            <align>center</align>
+
+        </control>
+		
+		
+									<control type="videowindow" id="2">
+      <description>My first video control</description>
+			<posx>683</posx>
+								<posy>-8</posy>
+								<width>495</width>
+								<height>475</height>
+      <visible>Player.HasVideo</visible>
+            <aspectratio>stretch</aspectratio>
+            <align>center</align>
+
+        </control>
+<include>Snapped_Content</include>	
+<include>Xbox_Logo</include>
+	</controls>	
+		
+</window>
