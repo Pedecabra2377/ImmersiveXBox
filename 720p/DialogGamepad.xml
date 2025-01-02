@@ -1,0 +1,88 @@
+<window>
+	<defaultcontrol always="true">1</defaultcontrol>
+	
+
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>0</posy>
+	</coordinates>
+	<include>dialogeffect</include>
+	<controls>
+		<include>Common_Animation_Window</include>
+			<control type="image">
+				<include>Common_Animation_Window</include>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture>demo\keys.png</texture>
+		</control>
+		
+	
+		<control type="button">
+			<include>Common_Animation_Window</include>
+			<description>Close Window button</description>
+			<posx>520</posx>
+			<posy>15</posy>
+			<width>64</width>
+			<height>32</height>
+			<label>-</label>
+			<font>-</font>
+			<onclick>PreviousMenu</onclick>
+			<texturefocus>DialogCloseButton-focus.png</texturefocus>
+			<texturenofocus>DialogCloseButton.png</texturenofocus>
+			<onleft>10</onleft>
+			<onright>10</onright>
+			<onup>10</onup>
+			<ondown>10</ondown>
+			<visible>system.getbool(input.enablemouse)</visible>
+		</control>
+
+		
+		<control type="label" id="4">
+			<include>Common_Animation_Window</include>
+			<description>dialog line 3</description>
+			<posx>180</posx>
+			<posy>485</posy>
+			<width>550</width>
+			<height>30</height>
+			<align>left</align>
+			<aligny>center</aligny>
+			<label>-</label>
+			<font>Tile-Detail2</font>
+	
+		</control>
+		
+			<control type="label" id="4">
+			<include>Common_Animation_Window</include>
+			<description>dialog line 4</description>
+			<posx>180</posx>
+			<posy>157</posy>
+			<width>550</width>
+			<height>150</height>
+			<align>left</align>
+			<aligny>center</aligny>
+			<label>Defina seu padrão com teclas</label>
+			<font>Settings-Menu-Header3</font>
+	
+		</control>
+		<control type="label" id="4">
+			<include>Common_Animation_Window</include>
+			<description>dialog line 4</description>
+			<posx>180</posx>
+			<posy>255</posy>
+			<width>550</width>
+			<height>150</height>
+			<align>left</align>
+			<aligny>center</aligny>
+			<label>Use as teclas para formar um[CR]padrão.</label>
+			<font>Settings-Label3</font>
+	
+		</control>
+		
+		
+		
+		
+	</controls>
+</window>

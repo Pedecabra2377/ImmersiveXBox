@@ -1,0 +1,96 @@
+<!-- Foundation -->
+<window id="101">
+	<defaultcontrol always="true">10</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+
+	<controls>
+	<control type="group">
+	<visible>Window.IsVisible(Home)</visible>
+
+		<control type="image">
+				<include>Common_Animation_Dashboard</include>	
+			<include>Common_Dimensions</include>
+			<texture background="true">colors/aah.png</texture>
+
+			
+		</control>
+	
+		
+		<control type="group">
+		
+			<include>Common_Animation_gamer2</include>
+	
+			<control type="image">
+					
+				<include>Common_Dimensions</include>
+				<texture>colors/eeeh.png</texture>
+
+			
+			</control>
+			
+				
+
+
+				
+			<control type="image">
+				
+				<animation type="WindowOpen">
+					<effect type="fade" start="0" end="100" time="500" />
+				</animation>
+				
+				<include>Common_Dimensions</include>
+				<texture>colors\ooh.png</texture>
+		
+			</control>
+				
+			</control>
+			</control>
+			
+			<include condition="!Window.IsVisible(5605)">Common_Background_Fade</include>
+					<control type="image">
+			
+			<description>Busy animation</description>
+			<posx>616</posx>
+			<posy>339</posy>
+			<width>85</width>
+			<height>85</height>
+			<texture>buffer/buffer_progress.png</texture>
+			<aspectratio>keep</aspectratio>
+			<visible>!Window.IsVisible(Home)</visible>
+			<animation effect="rotate" end="-360" center="auto" time="1200" loop="true" condition="true">Conditional</animation>
+			
+		</control>
+		
+		
+
+		<control type="group">
+			<posx>0</posx>
+			<posy>100000000010</posy>
+			<animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="150" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+			<include condition="!Window.IsVisible(Home)">Common_Dialog_Grouplist</include>	
+
+			<control type="grouplist">
+			<visible>!Window.IsVisible(Home)</visible>
+				<posx>580</posx>
+				<posy>240</posy>
+				<width>400</width>
+				<itemgap>20</itemgap>
+				<orientation>horizontal</orientation>
+				<align>right</align>
+			
+				<control type="button" id ="10">
+					<description>Cancel</description>
+					<include>Common_InfoDialog_Button</include>
+					<label>222</label>
+				</control>
+
+			</control>	
+
+		</control>
+	
+	</controls>
+
+</window>

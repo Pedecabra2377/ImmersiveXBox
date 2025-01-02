@@ -1,0 +1,1246 @@
+<!-- Foundation -->
+<window id="103">
+	
+	<defaultcontrol always="true">81</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<onunload condition="Window.Previous(7540) + Skin.HasSetting(FirstTimeRun)">ReloadSkin()</onunload>
+	<onunload condition="Window.IsVisible(7540) + Skin.HasSetting(FirstTimeRun)">ReloadSkin()</onunload>
+<onload condition="Window.IsVisible(9116) + !Skin.HasSetting(hideme)">Skin.ToggleSetting(hideme)</onload>
+	
+
+
+	<controls>
+<control type="image">
+				
+				
+	
+				<include>Common_Dimensions</include>
+				<texture>colors/color_white.png</texture>
+				<colordiffuse>FanartDiffuse</colordiffuse>
+		
+		
+						<visible>!Skin.HasSetting(UseAltKeyboard) + !Window.IsVisible(7540) + !Window.IsVisible(9116) + !Window.IsVisible(29) + !Window.IsVisible(131) + !Window.IsVisible(4) + !Window.IsVisible(7500) + !Window.IsVisible(863) + !Window.IsVisible(6505)</visible>
+			</control>
+			<control type="image">
+				
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+				<texture>demo\app\sign\twit.png</texture>
+						<visible>Window.IsVisible(6707)</visible>
+			</control>
+			<control type="textbox">
+				 <animation type="WindowOpen">
+                        <effect type="fade" start="0" end="100" delay="100" tween="sine" easing="in" time="300" />
+                        <effect type="slide" start="150" end="0" delay="100" tween="cubic" easing="out" time="600" />
+                    </animation>
+				<visible>Window.IsVisible(7500)</visible>
+					<posx>180</posx>
+					<posy>160</posy>
+						<width>900</width>
+								<height>265</height>
+					<label>[CR]$INFO[Control.GetLabel(310)]</label>
+					<font>DialogInfo-Label-install</font>
+			<textcolor>Label_Normal</textcolor>
+					<aligny>center</aligny>
+						<alignx>center</alignx>
+						<pagecontrol>130</pagecontrol>
+						<autoscroll delay="2000" time="1000" repeat="10000">!Control.HasFocus(130)</autoscroll>
+				</control>
+		<control type="group">
+			<animation type="WindowOpen" condition="!Skin.HasSetting(UseAltKeyboard) + !Window.IsVisible(7540) + !Window.IsVisible(9116) + !Window.IsVisible(29) + !Window.IsVisible(131) + !Window.IsVisible(4) + !Window.IsVisible(7500) + !Window.IsVisible(863) + !Window.IsVisible(5512) + !Window.IsVisible(6505)">
+		<effect type="fade" start="0" end="100" time="400" />
+		<effect type="slide" start="0,460" end="0,0" time="400" tween="cubic" easing="out" />
+	</animation>
+	
+	<animation type="WindowClose" condition="!Skin.HasSetting(UseAltKeyboard) + !Window.IsVisible(7540) + !Window.IsVisible(9116) + !Window.IsVisible(29) + !Window.IsVisible(131) + !Window.IsVisible(4) + !Window.IsVisible(7500) + !Window.IsVisible(863) + !Window.IsVisible(5512) + !Window.IsVisible(6505)">
+		<effect type="fade" start="100" end="0" time="400" />
+		<effect type="slide" start="0,0" end="0,460" time="400" tween="cubic" easing="out" />
+	</animation>
+	
+	<animation type="WindowOpen" condition="Skin.HasSetting(UseAltKeyboard) + !Window.IsVisible(7540) + !Window.IsVisible(9116) + !Window.IsVisible(29) + !Window.IsVisible(131) + !Window.IsVisible(4) + !Window.IsVisible(7500) + !Window.IsVisible(863) + !Window.IsVisible(5512) + !Window.IsVisible(6505)">
+		<effect type="fade" start="0" end="100" time="400" />
+		<effect type="slide" start="0,460" end="0,300" time="400" tween="cubic" easing="out" />
+	</animation>
+	
+	<animation type="WindowClose" condition="Skin.HasSetting(UseAltKeyboard) + !Window.IsVisible(7540) + !Window.IsVisible(9116) + !Window.IsVisible(29) + !Window.IsVisible(131) + !Window.IsVisible(4) + !Window.IsVisible(7500) + !Window.IsVisible(863) + !Window.IsVisible(5512) + !Window.IsVisible(6505)">
+		<effect type="fade" start="100" end="0" time="400" />
+		<effect type="slide" start="0,300" end="0,460" time="400" tween="cubic" easing="out" />
+	</animation>
+			<posx>0</posx>
+			<posy>260</posy>
+			<width>1280</width>
+			<height>460</height>
+			
+			<visible>!Window.IsVisible(numericinput)</visible>
+
+			<control type="image">
+				
+				<posx>0</posx>
+				<posy>170</posy>
+				<width>1280</width>
+				<height>357</height>
+				<texture>colors/color_black-.png</texture>
+						<visible>!Window.IsVisible(7540) + !Window.IsVisible(9116) + !Window.IsVisible(29) + !Window.IsVisible(131) + !Window.IsVisible(4) + !Window.IsVisible(7500) + !Window.IsVisible(5512) + !Window.IsVisible(6505)</visible>
+			</control>
+		
+<control type="image">
+				
+				<posx>0</posx>
+				<posy>153</posy>
+				<width>1280</width>
+				<height>307</height>
+				<texture>colors/color_black-.png</texture>
+						<visible>Window.IsVisible(7540)</visible>
+			</control>
+			<control type="image">
+				
+				<posx>0</posx>
+				<posy>153</posy>
+				<width>1280</width>
+				<height>307</height>
+				<texture>colors/color_black-.png</texture>
+						<visible>!Window.IsVisible(7540) + Window.IsVisible(9116) + !Window.IsVisible(29) + !Window.IsVisible(131) + !Window.IsVisible(4) + !Window.IsVisible(7500) + !Window.IsVisible(863) + !Window.IsVisible(5512) + !Window.IsVisible(6505)</visible>
+			</control>
+			
+			<control type="image">
+				
+				<posx>0</posx>
+				<posy>153</posy>
+				<width>1280</width>
+				<height>307</height>
+				<texture>colors/color_black-.png</texture>
+						<visible>!Window.IsVisible(7540) + !Window.IsVisible(9116) + Window.IsVisible(29) + !Window.IsVisible(131) + !Window.IsVisible(4) + !Window.IsVisible(7500) + !Window.IsVisible(863) + !Window.IsVisible(5512) + !Window.IsVisible(6505)</visible>
+			</control>
+			<control type="image">
+				
+				<posx>0</posx>
+				<posy>153</posy>
+				<width>1280</width>
+				<height>307</height>
+				<texture>colors/color_black-.png</texture>
+						<visible>!Window.IsVisible(7540) + !Window.IsVisible(9116) + !Window.IsVisible(29) + Window.IsVisible(131) + !Window.IsVisible(4) + !Window.IsVisible(7500) + !Window.IsVisible(863) + !Window.IsVisible(5512) + !Window.IsVisible(6505)</visible>
+			</control>
+			<control type="image">
+				
+				<posx>0</posx>
+				<posy>153</posy>
+				<width>1280</width>
+				<height>307</height>
+				<texture>colors/color_black-.png</texture>
+						<visible>!Window.IsVisible(7540) + !Window.IsVisible(9116) + Window.IsVisible(29) + Window.IsVisible(131) + !Window.IsVisible(4) + !Window.IsVisible(7500) + !Window.IsVisible(863) + !Window.IsVisible(5512) + !Window.IsVisible(6505)</visible>
+			</control>
+				<control type="image">
+				
+				<posx>0</posx>
+				<posy>153</posy>
+				<width>1280</width>
+				<height>307</height>
+				<texture>colors/color_black-.png</texture>
+						<visible>!Window.IsVisible(7540) + !Window.IsVisible(9116) + !Window.IsVisible(29) + !Window.IsVisible(131) + Window.IsVisible(4) + !Window.IsVisible(7500) + !Window.IsVisible(863) + !Window.IsVisible(5512) + !Window.IsVisible(6505)</visible>
+			</control>
+				<control type="image">
+				
+				<posx>0</posx>
+				<posy>153</posy>
+				<width>1280</width>
+				<height>307</height>
+				<texture>colors/color_black-.png</texture>
+						<visible>!Window.IsVisible(7540) + !Window.IsVisible(9116) + !Window.IsVisible(29) + !Window.IsVisible(131) + !Window.IsVisible(4) + Window.IsVisible(7500) + !Window.IsVisible(863) + !Window.IsVisible(5512) + !Window.IsVisible(6505)</visible>
+			</control>
+			
+		<control type="image">
+				
+				<posx>0</posx>
+				<posy>153</posy>
+				<width>1280</width>
+				<height>307</height>
+				<texture>colors/color_black-.png</texture>
+						<visible>!Window.IsVisible(7540) + !Window.IsVisible(9116) + !Window.IsVisible(29) + !Window.IsVisible(131) + !Window.IsVisible(4) + !Window.IsVisible(7500) + !Window.IsVisible(863) + Window.IsVisible(5512) + !Window.IsVisible(6505)</visible>
+			</control>		
+			
+			
+			
+			
+			
+			
+				<control type="image">
+				
+				<posx>266</posx>
+				<posy>40</posy>
+				<width>748</width>
+				<height>66</height>
+				<texture>colors/color_white.png</texture>
+			
+						<visible>!Window.IsVisible(7540) + !Window.IsVisible(9116) + !Window.IsVisible(29) + !Window.IsVisible(131) + !Window.IsVisible(4) + !Window.IsVisible(7500) + !Window.IsVisible(863) + !Window.IsVisible(5512) + !Window.IsVisible(6505)</visible>
+			</control>
+			
+			<control type="image">
+				
+				<posx>268</posx>
+				<posy>42</posy>
+				<width>744</width>
+				<height>62</height>
+				<texture>colors/color_black-.png</texture>
+			
+						<visible>!Window.IsVisible(7540) + !Window.IsVisible(9116) + !Window.IsVisible(29) + !Window.IsVisible(131) + !Window.IsVisible(4) + !Window.IsVisible(7500) + !Window.IsVisible(863) + !Window.IsVisible(5512) + !Window.IsVisible(6505)</visible>
+			</control>
+			<control type="image">
+				
+				<posx>270</posx>
+				<posy>44</posy>
+				<width>740</width>
+				<height>58</height>
+				<texture>colors/color_white.png</texture>
+			
+						<visible>!Window.IsVisible(7540) + !Window.IsVisible(9116) + !Window.IsVisible(29) + !Window.IsVisible(131) + !Window.IsVisible(4) + !Window.IsVisible(7500) + !Window.IsVisible(863) + !Window.IsVisible(5512) + !Window.IsVisible(6505)</visible>
+			</control>
+				<control type="image">
+				<include>Common_Animation_tiledash2</include>
+				<posx>960</posx>
+				<posy>44</posy>
+				<width>60</width>
+				<height>60</height>
+				<texture>dialoginfo\dialoginfo_search.png</texture>
+			<colordiffuse>black</colordiffuse>
+						<visible>!Window.IsVisible(7540) + !Window.IsVisible(9116) + !Window.IsVisible(29) + !Window.IsVisible(131) + !Window.IsVisible(4) + !Window.IsVisible(7500) + !IsEmpty(Control.GetLabel(310)) + !Window.IsVisible(863) + !Window.IsVisible(5512) + !Window.IsVisible(6505)</visible>
+			</control>
+				<control type="image">
+				<include>Common_Animation_tiledash2</include>
+				<posx>960</posx>
+				<posy>44</posy>
+				<width>60</width>
+				<height>60</height>
+				<texture>dialoginfo\dialoginfo_search.png</texture>
+			<colordiffuse>FFA9A9A9</colordiffuse>
+						<visible>!Window.IsVisible(7540) + !Window.IsVisible(9116) + !Window.IsVisible(29) + !Window.IsVisible(131) + !Window.IsVisible(4) + !Window.IsVisible(7500) + Window.IsVisible(0) + System.IdleTime(3) + IsEmpty(Control.GetLabel(310)) + !Window.IsVisible(863) + !Window.IsVisible(5512) + !Window.IsVisible(6505)</visible>
+			</control>
+			
+			<control type="label" id="310">
+				
+				<description>Editar Texto</description>
+				<posx>270</posx>
+				<posy>46</posy>
+				<width>720</width>
+				<height>48</height>
+				<font>Settings-Menu-Header</font>
+				<textcolor>black</textcolor>
+				<align>left</align>
+				<aligny>center</aligny>
+				<visible>!Window.IsVisible(7540) + !Window.IsVisible(9116) + !Window.IsVisible(29) + !Window.IsVisible(131) + !Window.IsVisible(4) + !Window.IsVisible(7500) + !IsEmpty(Control.GetLabel(310)) + !Window.IsVisible(863) + !Window.IsVisible(5512) + !Window.IsVisible(6505)</visible>
+			</control>
+			<control type="label">
+				<include>Common_Animation_tiledash2</include>
+				<label>Encontre jogos, filmes, apps e TV</label>
+				<description>Editar Texto</description>
+				<posx>270</posx>
+				<posy>46</posy>
+				<width>730</width>
+				<height>48</height>
+				<font>Settings-Menu-Header</font>
+				<textcolor>FFA9A9A9</textcolor>
+				<align>left</align>
+				<aligny>center</aligny>
+				<visible>!Window.IsVisible(7540) + !Window.IsVisible(9116) + !Window.IsVisible(29) + !Window.IsVisible(131) + !Window.IsVisible(4) + !Window.IsVisible(7500) + Window.IsVisible(0) + System.IdleTime(3) + IsEmpty(Control.GetLabel(310)) + !Window.IsVisible(863) + !Window.IsVisible(5512) + !Window.IsVisible(6505)</visible>
+			</control>
+			<control type="label">
+				<include>Common_Animation_tiledash2</include>
+				<label>Digite o texto aqui</label>
+				<description>Editar Texto</description>
+				<posx>270</posx>
+				<posy>46</posy>
+				<width>730</width>
+				<height>48</height>
+				<font>Settings-Menu-Header</font>
+				<textcolor>FFA9A9A9</textcolor>
+				<align>left</align>
+				<aligny>center</aligny>
+				<visible>!Window.IsVisible(7540) + !Window.IsVisible(9116) + !Window.IsVisible(29) + !Window.IsVisible(131) + !Window.IsVisible(4) + !Window.IsVisible(7500) + !Window.IsVisible(0) + System.IdleTime(3) + IsEmpty(Control.GetLabel(310)) + !Window.IsVisible(863) + !Window.IsVisible(5512) + !Window.IsVisible(6505)</visible>
+			</control>
+			<control type="label" id="310">
+				
+				<description>Editar Texto</description>
+				<posx>200</posx>
+				<posy>10</posy>
+				<width>820</width>
+				<height>48</height>
+				<font>Settings-Menu-Header4</font>
+				<textcolor>black</textcolor>
+				<align>left</align>
+				<aligny>center</aligny>
+				<visible>!Window.IsVisible(7540) + !Window.IsVisible(9116) + !Window.IsVisible(29) + !Window.IsVisible(131) + !Window.IsVisible(4) + !Window.IsVisible(7500) + !System.IdleTime(3) + Window.IsVisible(863) + !Window.IsVisible(5512) + !Window.IsVisible(6505)</visible>
+			</control>
+			<control type="label">
+				<include>Common_Animation_tiledash2</include>
+				<label>Encontre jogos, filmes, apps e TV</label>
+				<description>Editar Texto</description>
+				<posx>200</posx>
+				<posy>10</posy>
+				<width>820</width>
+				<height>48</height>
+				<font>Settings-Menu-Header4</font>
+				<textcolor>FFA9A9A9</textcolor>
+				<align>left</align>
+				<aligny>center</aligny>
+				<visible>!Window.IsVisible(7540) + !Window.IsVisible(9116) + !Window.IsVisible(29) + !Window.IsVisible(131) + !Window.IsVisible(4) + !Window.IsVisible(7500) + !Window.IsVisible(0) + System.IdleTime(3) + IsEmpty(Control.GetLabel(310)) + Window.IsVisible(863) + !Window.IsVisible(5512) + !Window.IsVisible(6505)</visible>
+			</control>
+				<control type="label" id="310">
+				
+				<description>Editar Texto</description>
+				<posx>675</posx>
+				<posy>-188</posy>
+				<width>940</width>
+				<height>48</height>
+				<font>Keyboard-Label</font>
+				<textcolor>black</textcolor>
+				<align>left</align>
+				<aligny>center</aligny>
+				<visible>Window.IsVisible(7540) + !Window.IsVisible(9116) + !Window.IsVisible(29) + !Window.IsVisible(131) + !Window.IsVisible(4) + !Window.IsVisible(7500) + !Window.IsVisible(863) + !Window.IsVisible(5512) + !Window.IsVisible(6505)</visible>
+			</control>
+			<control type="label" id="310">
+				
+				<description>Editar Texto</description>
+				<posx>575</posx>
+				<posy>-140</posy>
+				<width>940</width>
+				<height>48</height>
+				<font>Keyboard-Label</font>
+				<textcolor>black</textcolor>
+				<align>left</align>
+				<aligny>center</aligny>
+				<visible>!Window.IsVisible(7540) + Window.IsVisible(9116) + !Window.IsVisible(29) + !Window.IsVisible(131) + !Window.IsVisible(4) + !Window.IsVisible(7500) + !Window.IsVisible(863) + !Window.IsVisible(5512) + !Window.IsVisible(6505)</visible>
+			</control>
+			<control type="label" id="310">
+				
+				<description>Editar Texto</description>
+				<posx>575</posx>
+				<posy>-140</posy>
+				<width>940</width>
+				<height>48</height>
+				<font>Keyboard-Label</font>
+				<textcolor>black</textcolor>
+				<align>left</align>
+				<aligny>center</aligny>
+				<visible>!Window.IsVisible(7540) + !Window.IsVisible(9116) + Window.IsVisible(29) + !Window.IsVisible(131) + !Window.IsVisible(4) + !Window.IsVisible(7500) + !Window.IsVisible(863) + !Window.IsVisible(5512) + !Window.IsVisible(6505)</visible>
+			</control>
+			
+			<control type="label" id="310">
+				
+				<description>Editar Texto</description>
+				<posx>575</posx>
+				<posy>-140</posy>
+				<width>940</width>
+				<height>48</height>
+				<font>Keyboard-Label</font>
+				<textcolor>black</textcolor>
+				<align>left</align>
+				<aligny>center</aligny>
+				<visible>!Window.IsVisible(7540) + !Window.IsVisible(9116) + !Window.IsVisible(29) + Window.IsVisible(131) + !Window.IsVisible(4) + !Window.IsVisible(7500) + !Window.IsVisible(863) + !Window.IsVisible(5512) + !Window.IsVisible(6505)</visible>
+			</control>
+			<control type="label" id="310">
+				
+				<description>Editar Texto</description>
+				<posx>575</posx>
+				<posy>-140</posy>
+				<width>940</width>
+				<height>48</height>
+				<font>Keyboard-Label</font>
+				<textcolor>black</textcolor>
+				<align>left</align>
+				<aligny>center</aligny>
+				<visible>!Window.IsVisible(7540) + !Window.IsVisible(9116) + Window.IsVisible(29) + Window.IsVisible(131) + !Window.IsVisible(4) + !Window.IsVisible(7500) + !Window.IsVisible(863) + !Window.IsVisible(5512) + !Window.IsVisible(6505)</visible>
+			</control>
+			
+			<control type="label" id="310">
+				
+				<description>Editar Texto</description>
+				<posx>575</posx>
+				<posy>-140</posy>
+				<width>940</width>
+				<height>48</height>
+				<font>Keyboard-Label</font>
+				<textcolor>black</textcolor>
+				<align>left</align>
+				<aligny>center</aligny>
+				<visible>!Window.IsVisible(7540) + !Window.IsVisible(9116) + !Window.IsVisible(29) + !Window.IsVisible(131) + Window.IsVisible(4) + !Window.IsVisible(7500) + !Window.IsVisible(863) + !Window.IsVisible(5512) + !Window.IsVisible(6505)</visible>
+			</control>
+			
+			<control type="label" id="310">
+				
+				<posx>220</posx>
+								<posy>1000</posy>
+								<width>800</width>
+								<height>600</height>
+			
+					<font>DialogInfo-Label</font>
+			<textcolor>black</textcolor>
+
+				<visible>!Window.IsVisible(7540) + !Window.IsVisible(9116) + !Window.IsVisible(29) + !Window.IsVisible(131) + !Window.IsVisible(4) + Window.IsVisible(7500) + !Window.IsVisible(863) + !Window.IsVisible(5512) + !Window.IsVisible(6505)</visible>
+			</control>
+			
+			
+			
+			
+			<control type="image">
+				
+				<posx>263</posx>
+				<posy>-3</posy>
+				<width>754.5</width>
+				<height>156</height>
+				<texture>colors/color_black-.png</texture>
+			
+						<visible>!Window.IsVisible(7540) + !Window.IsVisible(9116) + !Window.IsVisible(29) + !Window.IsVisible(131) + !Window.IsVisible(4) + !Window.IsVisible(7500) + !Window.IsVisible(863) + Window.IsVisible(5512) + !Window.IsVisible(6505)</visible>
+			</control>
+			
+			
+			<control type="image">
+				
+				<posx>266</posx>
+				<posy>0</posy>
+				<width>748</width>
+				<height>150</height>
+				<texture>colors/color_white.png</texture>
+			
+						<visible>!Window.IsVisible(7540) + !Window.IsVisible(9116) + !Window.IsVisible(29) + !Window.IsVisible(131) + !Window.IsVisible(4) + !Window.IsVisible(7500) + !Window.IsVisible(863) + Window.IsVisible(5512) + !Window.IsVisible(6505)</visible>
+			</control>
+			
+			
+			
+			
+			
+			<control type="textbox">
+				
+				 <posx>313</posx>
+                                                                <posy>10</posy>
+						<width>690</width>
+								<height>550</height>
+			
+					<font>DialogInfo-Label</font>
+			<textcolor>black</textcolor>
+<label>$INFO[Control.GetLabel(310)]</label>
+				<visible>!Window.IsVisible(7540) + !Window.IsVisible(9116) + !Window.IsVisible(29) + !Window.IsVisible(131) + !Window.IsVisible(4) + !Window.IsVisible(7500) + !Window.IsVisible(863) + Window.IsVisible(5512) + !Window.IsVisible(6505)</visible>
+			</control>
+			
+			
+			
+			
+			
+			
+			
+			
+				<control type="textbox">
+			
+				
+					 <posx>100</posx>
+                                                                <posy>-35</posy>
+						<width>450</width>
+								<height>222</height>
+					   <label>$INFO[Control.GetLabel(310)]</label>
+					<font>Home-Tile-Detail2</font>
+                                                                <textcolor>black</textcolor>
+		<autoscroll>True</autoscroll>
+				
+						<autoscroll delay="2000" time="1000" repeat="10000">!Control.HasFocus(345)</autoscroll>
+						<visible>!Window.IsVisible(7540) + !Window.IsVisible(9116) + !Window.IsVisible(29) + !Window.IsVisible(131) + !Window.IsVisible(4) + !Window.IsVisible(7500) + !Window.IsVisible(863) + !Window.IsVisible(5512) + Window.IsVisible(6505)</visible>
+			</control>
+			
+			
+			<control type="label" id="310">
+				
+				 <posx>100000</posx>
+                                                                <posy>-140</posy>
+						<width>450</width>
+								<height>222</height>
+			
+					<font>Home-Tile-Detail2</font>
+                                                                <textcolor>black</textcolor>
+
+				<visible>!Window.IsVisible(7540) + !Window.IsVisible(9116) + !Window.IsVisible(29) + !Window.IsVisible(131) + !Window.IsVisible(4) + !Window.IsVisible(7500) + !Window.IsVisible(863) + !Window.IsVisible(5512) + Window.IsVisible(6505)</visible>
+			</control>
+			
+			
+			
+			
+			
+			
+				<control type="label" id="310">
+				
+				<posx>220</posx>
+								<posy>1000</posy>
+								<width>800</width>
+								<height>600</height>
+			
+					<font>DialogInfo-Label</font>
+			<textcolor>black</textcolor>
+
+				<visible>!Window.IsVisible(7540) + !Window.IsVisible(9116) + !Window.IsVisible(29) + !Window.IsVisible(131) + !Window.IsVisible(4) + !Window.IsVisible(7500) + !Window.IsVisible(863) + Window.IsVisible(5512) + !Window.IsVisible(6505)</visible>
+			</control>
+			<!--Alpha Keys-->
+			<control type="group">
+				
+				<posx>80</posx>
+				<posy>170</posy>
+			
+				<!--1st Row of Keys-->
+				<control type="grouplist">
+																<animation type="WindowOpen" reversible="false">
+					<effect type="fade" start="0" end="100" time="400" delay="200"/>
+			
+			</animation>
+					<posx>0</posx>
+					<posy>10</posy>
+					<width>1280</width>
+					<height>60</height>
+					<itemgap>10</itemgap>
+					<orientation>horizontal</orientation>
+					<onleft>57</onleft>
+		
+					<control type="button" id="81">
+						<description>'Q' button</description>
+						<include>Common_Keyboard_Button</include>
+						<onup>32</onup>
+						<ondown>65</ondown>
+						<animation effect="zoom" end="110" center="auto" time="180" condition="Control.HasFocus(81) + Skin.HasSetting(inflateitem)">Conditional</animation>
+						
+					</control>
+					
+					<control type="button" id="87">
+						<description>'W' button</description>
+						<include>Common_Keyboard_Button</include>
+						<onup>32</onup>
+						<ondown>83</ondown>
+						<animation effect="zoom" end="110" center="auto" time="180" condition="Control.HasFocus(87) + Skin.HasSetting(inflateitem)">Conditional</animation>
+					</control>
+					
+					<control type="button" id="69">
+						<description>'E' button</description>
+						<include>Common_Keyboard_Button</include>
+						<onup>32</onup>
+						<ondown>68</ondown>
+						<animation effect="zoom" end="110" center="auto" time="180" condition="Control.HasFocus(69) + Skin.HasSetting(inflateitem)">Conditional</animation>
+					</control>
+					
+					<control type="button" id="82">
+						<description>'R' button</description>
+						<include>Common_Keyboard_Button</include>
+						<onup>32</onup>
+						<ondown>70</ondown>
+						<animation effect="zoom" end="110" center="auto" time="180" condition="Control.HasFocus(82) + Skin.HasSetting(inflateitem)">Conditional</animation>
+					</control>
+					
+					<control type="button" id="84">
+						<description>'T' button</description>
+						<include>Common_Keyboard_Button</include>
+						<onup>32</onup>
+						<ondown>71</ondown>
+						<animation effect="zoom" end="110" center="auto" time="180" condition="Control.HasFocus(84) + Skin.HasSetting(inflateitem)">Conditional</animation>
+					</control>
+					
+					<control type="button" id="89">
+						<description>'Y' button</description>
+						<include>Common_Keyboard_Button</include>
+						<onup>32</onup>
+						<ondown>72</ondown>
+						<animation effect="zoom" end="110" center="auto" time="180" condition="Control.HasFocus(89) + Skin.HasSetting(inflateitem)">Conditional</animation>
+					</control>
+					
+					<control type="button" id="85">
+						<description>'U' button</description>
+						<include>Common_Keyboard_Button</include>
+						<onup>32</onup>
+						<ondown>74</ondown>
+						<animation effect="zoom" end="110" center="auto" time="180" condition="Control.HasFocus(85) + Skin.HasSetting(inflateitem)">Conditional</animation>
+					</control>
+					
+					<control type="button" id="73">
+						<description>'I' button</description>
+						<include>Common_Keyboard_Button</include>
+						<onup>32</onup>
+						<ondown>75</ondown>
+						<animation effect="zoom" end="110" center="auto" time="180" condition="Control.HasFocus(73) + Skin.HasSetting(inflateitem)">Conditional</animation>
+					</control>
+					
+					<control type="button" id="79">
+						<description>'O' button</description>
+						<include>Common_Keyboard_Button</include>
+						<onup>32</onup>
+						<ondown>76</ondown>
+						<animation effect="zoom" end="110" center="auto" time="180" condition="Control.HasFocus(79) + Skin.HasSetting(inflateitem)">Conditional</animation>
+					</control>
+					
+					<control type="button" id="80">
+						<description>'P' button</description>
+						<include>Common_Keyboard_Button</include>
+						<onup>305</onup>
+						<ondown>300</ondown>
+						<onright>8</onright>
+						<animation effect="zoom" end="110" center="auto" time="180" condition="Control.HasFocus(80) + Skin.HasSetting(inflateitem)">Conditional</animation>
+					</control>
+					
+					<control type="group" id="502">
+					
+						<width>70</width>
+						
+						<control type="button" id="8">
+							
+							<description>BACKSPACE button</description>
+							<include>Common_Keyboard_Button_Dark</include>
+							<width>70</width>
+							<onup>306</onup>
+							<ondown>300</ondown>
+							<onleft>80</onleft>
+							<onright>55</onright>
+							<animation effect="zoom" end="110" center="auto" time="180" condition="Control.HasFocus(8) + Skin.HasSetting(inflateitem)">Conditional</animation>
+						</control>
+						
+						<control type="image">
+							<visible>!Control.HasFocus(8)</visible>
+							<description>BACKSPACE image</description>
+							<width>70</width>
+							<height>60</height>
+							<texture>keyboard/keyboard_clear.png</texture>
+							<aspectratio>center</aspectratio>
+							<animation effect="zoom" end="110" center="auto" time="180" condition="Control.HasFocus(8) + Skin.HasSetting(inflateitem)">Conditional</animation>
+						</control>
+						<control type="image">
+							<visible>Control.HasFocus(8)</visible>
+							<description>BACKSPACE image</description>
+							<width>70</width>
+							<height>60</height>
+							<texture>keyboard/keyboard_clear.png</texture>
+							<colordiffuse>white</colordiffuse>
+							<aspectratio>center</aspectratio>
+							<animation effect="zoom" end="110" center="auto" time="180" condition="Control.HasFocus(8) + Skin.HasSetting(inflateitem)">Conditional</animation>
+						</control>
+						
+					</control>
+					
+				</control>
+				
+				<!--2nd Row of Keys-->
+				<control type="grouplist">
+																			<animation type="WindowOpen" reversible="false">
+					<effect type="fade" start="0" end="100" time="400" delay="300"/>
+			
+			</animation>
+					<posx>0</posx>
+					<posy>80</posy>
+					<width>1280</width>
+					<height>60</height>
+					<itemgap>10</itemgap>
+					<orientation>horizontal</orientation>
+					<onleft>54</onleft>
+					
+					<control type="button" id="65">
+						<description>'A' button</description>
+						<include>Common_Keyboard_Button</include>
+						<onup>81</onup>
+						<ondown>303</ondown>
+						<animation effect="zoom" end="110" center="auto" time="180" condition="Control.HasFocus(65) + Skin.HasSetting(inflateitem)">Conditional</animation>
+					</control>
+					
+					<control type="button" id="83">
+						<description>'S' button</description>
+						<include>Common_Keyboard_Button</include>
+						<onup>87</onup>
+						<ondown>90</ondown>
+						<animation effect="zoom" end="110" center="auto" time="180" condition="Control.HasFocus(83) + Skin.HasSetting(inflateitem)">Conditional</animation>
+					</control>
+					
+					<control type="button" id="68">
+						<description>'D' button</description>
+						<include>Common_Keyboard_Button</include>
+						<onup>69</onup>
+						<ondown>88</ondown>
+						<animation effect="zoom" end="110" center="auto" time="180" condition="Control.HasFocus(68) + Skin.HasSetting(inflateitem)">Conditional</animation>
+					</control>
+					
+					<control type="button" id="70">
+						<description>'F' button</description>
+						<include>Common_Keyboard_Button</include>
+						<onup>82</onup>
+						<ondown>67</ondown>
+						<animation effect="zoom" end="110" center="auto" time="180" condition="Control.HasFocus(70) + Skin.HasSetting(inflateitem)">Conditional</animation>
+					</control>
+					
+					<control type="button" id="71">
+						<description>'G' button</description>
+						<include>Common_Keyboard_Button</include>
+						<onup>84</onup>
+						<ondown>86</ondown>
+						<animation effect="zoom" end="110" center="auto" time="180" condition="Control.HasFocus(71) + Skin.HasSetting(inflateitem)">Conditional</animation>
+					</control>
+
+					<control type="button" id="72">
+						<description>'H' button</description>
+						<include>Common_Keyboard_Button</include>
+						<onup>89</onup>
+						<ondown>66</ondown>
+						<animation effect="zoom" end="110" center="auto" time="180" condition="Control.HasFocus(72) + Skin.HasSetting(inflateitem)">Conditional</animation>
+					</control>
+
+					<control type="button" id="74">
+						<description>'J' button</description>
+						<include>Common_Keyboard_Button</include>
+						<onup>85</onup>
+						<ondown>78</ondown>
+						<animation effect="zoom" end="110" center="auto" time="180" condition="Control.HasFocus(74) + Skin.HasSetting(inflateitem)">Conditional</animation>
+					</control>
+					
+					<control type="button" id="75">
+						<description>'K' button</description>
+						<include>Common_Keyboard_Button</include>
+						<onup>73</onup>
+						<ondown>77</ondown>
+						<animation effect="zoom" end="110" center="auto" time="180" condition="Control.HasFocus(75) + Skin.HasSetting(inflateitem)">Conditional</animation>
+					</control>
+
+					<control type="button" id="76">
+						<description>'L' button</description>
+						<include>Common_Keyboard_Button</include>
+						<onup>79</onup>
+						<ondown>304</ondown>
+						<onright>300</onright>
+						<animation effect="zoom" end="110" center="auto" time="180" condition="Control.HasFocus(76) + Skin.HasSetting(inflateitem)">Conditional</animation>
+					</control>
+					
+					<control type="group" id="504">
+					
+						<width>150</width>
+						
+						<control type="button" id="300">
+							
+							<description>DONE button</description>
+							<include>Common_Keyboard_Button_Dark2</include>
+							<width>150</width>
+							<onup>8</onup>
+							<ondown>307</ondown>
+							<onleft>76</onleft>
+							<onright>52</onright>
+							<animation effect="zoom" end="110" center="auto" time="180" condition="Control.HasFocus(300) + Skin.HasSetting(inflateitem)">Conditional</animation>
+						</control>
+						
+						<control type="image">
+							<visible>!Control.HasFocus(300)</visible>
+							<description>DONE image</description>
+							<height>60</height>
+							<width>150</width>
+							<texture>keyboard/keyboard_enter.png</texture>
+							<aspectratio>center</aspectratio>
+							<animation effect="zoom" end="110" center="auto" time="180" condition="Control.HasFocus(300) + Skin.HasSetting(inflateitem)">Conditional</animation>
+						</control>
+						<control type="image">
+							<visible>Control.HasFocus(300)</visible>
+							<description>DONE image</description>
+							<height>60</height>
+							<width>150</width>
+							<texture>keyboard/keyboard_enter.png</texture>
+							<colordiffuse>white</colordiffuse>
+							<aspectratio>center</aspectratio>
+							<animation effect="zoom" end="110" center="auto" time="180" condition="Control.HasFocus(300) + Skin.HasSetting(inflateitem)">Conditional</animation>
+						</control>
+						
+					</control>
+					
+				</control>
+				
+				<!--3rd Row of Keys-->
+				<control type="grouplist">
+																			<animation type="WindowOpen" reversible="false">
+					<effect type="fade" start="0" end="100" time="400" delay="400"/>
+			
+			</animation>
+					<posx>0</posx>
+					<posy>150</posy>
+					<width>1280</width>
+					<height>60</height>
+					<itemgap>10</itemgap>
+					<orientation>horizontal</orientation>
+					<onleft>51</onleft>
+					
+					<control type="group" id="505">
+					
+						<width>70</width>
+						
+						<control type="togglebutton" id="303">
+							
+							<description>CAPS LOCK button</description>
+							<include>Common_Keyboard_Button_Dark</include>
+							<width>70</width>
+							<onup>65</onup>
+							<ondown>32</ondown>
+							<onleft>51</onleft>
+							<onright>90</onright>
+							<animation effect="zoom" end="110" center="auto" time="180" condition="Control.HasFocus(303) + Skin.HasSetting(inflateitem)">Conditional</animation>
+						</control>
+						
+						<control type="image">
+							<visible>!Control.HasFocus(303)</visible>
+							<description>CAPS LOCK button</description>
+							<width>70</width>
+							<height>60</height>
+							<texture>keyboard/keyboard_up.png</texture>
+							<aspectratio>center</aspectratio>
+							<animation effect="zoom" end="110" center="auto" time="180" condition="Control.HasFocus(303) + Skin.HasSetting(inflateitem)">Conditional</animation>
+						</control>
+						<control type="image">
+							<visible>Control.HasFocus(303)</visible>
+							<description>CAPS LOCK button</description>
+							<width>70</width>
+							<height>60</height>
+							<texture>keyboard/keyboard_up.png</texture>
+							<colordiffuse>white</colordiffuse>
+							<aspectratio>center</aspectratio>
+							<animation effect="zoom" end="110" center="auto" time="180" condition="Control.HasFocus(303) + Skin.HasSetting(inflateitem)">Conditional</animation>
+						</control>
+						
+					</control>	
+					
+					<control type="button" id="90">
+						<description>'Z' button</description>
+						<include>Common_Keyboard_Button</include>
+						<onup>83</onup>
+						<ondown>32</ondown>
+						<onleft>303</onleft>
+						<animation effect="zoom" end="110" center="auto" time="180" condition="Control.HasFocus(90) + Skin.HasSetting(inflateitem)">Conditional</animation>
+					</control>
+					
+					<control type="button" id="88">
+						<description>'X' button</description>
+						<include>Common_Keyboard_Button</include>
+						<onup>68</onup>
+						<ondown>32</ondown>
+						<animation effect="zoom" end="110" center="auto" time="180" condition="Control.HasFocus(88) + Skin.HasSetting(inflateitem)">Conditional</animation>
+					</control>
+					
+					<control type="button" id="67">
+						<description>'C' button</description>
+						<include>Common_Keyboard_Button</include>
+						<onup>70</onup>
+						<ondown>32</ondown>
+						<animation effect="zoom" end="110" center="auto" time="180" condition="Control.HasFocus(67) + Skin.HasSetting(inflateitem)">Conditional</animation>
+					</control>
+					
+					<control type="button" id="86">
+						<description>'V' button</description>
+						<include>Common_Keyboard_Button</include>
+						<onup>71</onup>
+						<ondown>32</ondown>
+						<animation effect="zoom" end="110" center="auto" time="180" condition="Control.HasFocus(86) + Skin.HasSetting(inflateitem)">Conditional</animation>
+					</control>
+					
+					<control type="button" id="66">
+						<description>'B' button</description>
+						<include>Common_Keyboard_Button</include>
+						<onup>72</onup>
+						<ondown>32</ondown>
+						<animation effect="zoom" end="110" center="auto" time="180" condition="Control.HasFocus(66) + Skin.HasSetting(inflateitem)">Conditional</animation>
+					</control>
+					
+					<control type="button" id="78">
+						<description>'N' button</description>
+						<include>Common_Keyboard_Button</include>
+						<onup>74</onup>
+						<ondown>32</ondown>
+						<animation effect="zoom" end="110" center="auto" time="180" condition="Control.HasFocus(78) + Skin.HasSetting(inflateitem)">Conditional</animation>
+					</control>
+					
+					<control type="button" id="77">
+						<description>'M' button</description>
+						<include>Common_Keyboard_Button</include>
+						<onup>75</onup>
+						<ondown>32</ondown>
+						<animation effect="zoom" end="110" center="auto" time="180" condition="Control.HasFocus(77) + Skin.HasSetting(inflateitem)">Conditional</animation>
+					</control>
+					
+					<control type="togglebutton" id="304">
+						<description>Symbols button</description>
+						<include>Common_Keyboard_Button_Dark</include>
+						<width>70</width>
+						<label>!%$</label>
+						<altlabel>abc</altlabel>
+						<onup>76</onup>
+						<ondown>32</ondown>
+						<onright>307</onright>
+						<animation effect="zoom" end="110" center="auto" time="180" condition="Control.HasFocus(304) + Skin.HasSetting(inflateitem)">Conditional</animation>
+					</control>
+					
+					<control type="group" id="506">
+					
+						<width>70</width>
+						
+						<control type="togglebutton" id="307">
+							
+							<description>IP Input button</description>
+							<include>Common_Keyboard_Button_Dark</include>
+							<width>70</width>
+							<onup>300</onup>
+							<ondown>305</ondown>
+							<onleft>304</onleft>
+							<onright>302</onright>
+							<onclick></onclick>
+							<animation effect="zoom" end="110" center="auto" time="180" condition="Control.HasFocus(307) + Skin.HasSetting(inflateitem)">Conditional</animation>
+						</control>
+						
+						<control type="image">
+							<visible>!Control.HasFocus(307)</visible>
+							<description>IP Input button</description>
+							<width>70</width>
+							<height>60</height>
+							<texture>keyboard/keyboard_ipaddress.png</texture>
+							<aspectratio>center</aspectratio>
+							<animation effect="zoom" end="110" center="auto" time="180" condition="Control.HasFocus(307) + Skin.HasSetting(inflateitem)">Conditional</animation>
+						</control>
+							<control type="image">
+							<visible>Control.HasFocus(307)</visible>
+							<description>IP Input button</description>
+							<width>70</width>
+							<height>60</height>
+							<texture>keyboard/keyboard_ipaddress.png</texture>
+							<colordiffuse>white</colordiffuse>
+							<aspectratio>center</aspectratio>
+							<animation effect="zoom" end="110" center="auto" time="180" condition="Control.HasFocus(307) + Skin.HasSetting(inflateitem)">Conditional</animation>
+						</control>
+						
+					</control>
+					
+					<control type="group" id="507">
+					
+						<width>70</width>
+						
+						<control type="button" id="302">
+							
+							<description>SHIFT button</description>
+							<include>Common_Keyboard_Button_Dark</include>
+							<width>70</width>
+							<onup>300</onup>
+							<ondown>306</ondown>
+							<onleft>307</onleft>
+							<onright>49</onright>
+							<animation effect="zoom" end="110" center="auto" time="180" condition="Control.HasFocus(302) + Skin.HasSetting(inflateitem)">Conditional</animation>
+						</control>
+						
+						<control type="image">
+							<visible>!Control.HasFocus(302)</visible>
+							<description>SHIFT button</description>
+							<width>70</width>
+							<height>60</height>
+							<texture>keyboard/keyboard_up.png</texture>
+							<aspectratio>center</aspectratio>
+							<animation effect="zoom" end="110" center="auto" time="180" condition="Control.HasFocus(302) + Skin.HasSetting(inflateitem)">Conditional</animation>
+						</control>
+							<control type="image">
+								<visible>Control.HasFocus(302)</visible>
+							<description>SHIFT button</description>
+							<width>70</width>
+							<height>60</height>
+							<texture>keyboard/keyboard_up.png</texture>
+							<colordiffuse>white</colordiffuse>
+							<aspectratio>center</aspectratio>
+							<animation effect="zoom" end="110" center="auto" time="180" condition="Control.HasFocus(302) + Skin.HasSetting(inflateitem)">Conditional</animation>
+						</control>
+						
+					</control>
+
+				</control>	
+					
+				<!--5th Row of Keys-->
+				<control type="grouplist">
+																		<animation type="WindowOpen" reversible="false">
+					<effect type="fade" start="0" end="100" time="400" delay="500"/>
+			
+			</animation>
+					<posx>0</posx>
+					<posy>220</posy>
+					<width>1280</width>
+					<height>60</height>
+					<itemgap>10</itemgap>
+					<orientation>horizontal</orientation>
+					<onleft>48</onleft>
+					
+					<control type="group">
+					
+						<width>70</width>
+						
+						<control type="button">
+							
+							<description>COLLAPSE button</description>
+							<include>Common_Keyboard_Button_Dark</include>
+							<width>70</width>
+							<ondown>8</ondown>
+							<onleft>305</onleft>
+							<onclick>Skin.ToggleSetting(UseAltKeyboard)</onclick>
+							
+						</control>
+						
+						<control type="image">
+					
+							<description>COLLAPSE button</description>
+							<width>70</width>
+							<height>60</height>
+							<texture>keyboard/keyboard_alpha.png</texture>
+							<aspectratio>center</aspectratio>
+							
+						</control>
+						
+						
+					</control>
+
+					<control type="button" id="32">
+					
+						<description>SPACE button</description>
+						<include>Common_Keyboard_Button_Dark3</include>
+						<width>630</width>
+						<label>space</label>
+						<onup>90</onup>
+						<onright>305</onright>
+						<animation effect="zoom" end="102" center="auto" time="180" condition="Control.HasFocus(32) + Skin.HasSetting(inflateitem)">Conditional</animation>
+					</control>
+					
+					<control type="group" id="500">
+					
+						<width>70</width>
+						
+						<control type="button" id="305">
+							
+							<description>PREVIOUS button</description>
+							<include>Common_Keyboard_Button_Dark</include>
+							<width>70</width>
+							<onup>307</onup>
+							<onleft>32</onleft>
+							<onright>306</onright>
+							<animation effect="zoom" end="110" center="auto" time="180" condition="Control.HasFocus(305) + Skin.HasSetting(inflateitem)">Conditional</animation>
+						</control>
+						
+						<control type="image">
+							<visible>!Control.HasFocus(305)</visible>
+							<description>PREVIOUS button</description>
+							<width>70</width>
+							<height>60</height>
+							<texture>keyboard/keyboard_left.png</texture>
+							<aspectratio>center</aspectratio>
+							<animation effect="zoom" end="110" center="auto" time="180" condition="Control.HasFocus(305) + Skin.HasSetting(inflateitem)">Conditional</animation>
+						</control>
+						<control type="image">
+							<visible>Control.HasFocus(305)</visible>
+							<description>PREVIOUS button</description>
+							<width>70</width>
+							<height>60</height>
+							<texture>keyboard/keyboard_left.png</texture>
+							<colordiffuse>white</colordiffuse>
+							<aspectratio>center</aspectratio>
+							<animation effect="zoom" end="110" center="auto" time="180" condition="Control.HasFocus(305) + Skin.HasSetting(inflateitem)">Conditional</animation>
+						</control>
+						
+					</control>
+					
+					<control type="group" id="501">
+					
+						<width>70</width>
+						
+						<control type="button" id="306">
+							
+							<description>NEXT button</description>
+							<include>Common_Keyboard_Button_Dark</include>
+							<width>70</width>
+							<onup>302</onup>
+							<onleft>305</onleft>
+							<onright>48</onright>
+							<animation effect="zoom" end="110" center="auto" time="180" condition="Control.HasFocus(306) + Skin.HasSetting(inflateitem)">Conditional</animation>
+						</control>
+						
+						<control type="image">
+							<visible>!Control.HasFocus(306)</visible>
+							<description>NEXT button</description>
+							<width>70</width>
+							<height>60</height>
+							<texture>keyboard/keyboard_right.png</texture>
+							<aspectratio>center</aspectratio>
+							<animation effect="zoom" end="110" center="auto" time="180" condition="Control.HasFocus(306) + Skin.HasSetting(inflateitem)">Conditional</animation>
+						</control>
+							<control type="image">
+							<visible>Control.HasFocus(306)</visible>
+							<description>NEXT button</description>
+							<width>70</width>
+							<height>60</height>
+							<texture>keyboard/keyboard_right.png</texture>
+							<colordiffuse>white</colordiffuse>
+							<aspectratio>center</aspectratio>
+							<animation effect="zoom" end="110" center="auto" time="180" condition="Control.HasFocus(306) + Skin.HasSetting(inflateitem)">Conditional</animation>
+						</control>
+						
+					</control>
+					
+				</control>
+				
+			</control>	
+
+			<!--NumPad Keys-->
+			<control type="group">
+				
+				<posx>970</posx>
+				<posy>170</posy>
+			
+				<!--1st Row of Num Keys-->
+				<control type="grouplist">
+																			<animation type="WindowOpen" reversible="false">
+					<effect type="fade" start="0" end="100" time="400" delay="200"/>
+			
+			</animation>
+					<posx>0</posx>
+					<posy>10</posy>
+					<width>1280</width>
+					<height>60</height>
+					<itemgap>10</itemgap>
+					<orientation>horizontal</orientation>
+					<onleft>8</onleft>
+					<onright>81</onright>
+
+					<control type="button" id="55">
+						<description>'7' button</description>
+						<include>Common_Keyboard_Button_Dark</include>
+						<width>70</width>
+						<ondown>52</ondown>
+						<animation effect="zoom" end="110" center="auto" time="180" condition="Control.HasFocus(55) + Skin.HasSetting(inflateitem)">Conditional</animation>
+					</control>
+
+					<control type="button" id="56">
+						<description>'8' button</description>
+						<include>Common_Keyboard_Button_Dark</include>
+						<width>70</width>
+						<ondown>53</ondown>
+						<animation effect="zoom" end="110" center="auto" time="180" condition="Control.HasFocus(56) + Skin.HasSetting(inflateitem)">Conditional</animation>
+					</control>
+
+					<control type="button" id="57">
+						<description>'9' button</description>
+						<include>Common_Keyboard_Button_Dark</include>
+						<width>70</width>
+						<ondown>54</ondown>
+						<onright>306</onright>
+						<animation effect="zoom" end="110" center="auto" time="180" condition="Control.HasFocus(57) + Skin.HasSetting(inflateitem)">Conditional</animation>
+					</control>
+					
+				</control>	
+
+				<!--2nd Row of Num Keys-->
+				<control type="grouplist">
+																			<animation type="WindowOpen" reversible="false">
+					<effect type="fade" start="0" end="100" time="400" delay="300"/>
+			
+			</animation>
+					<posx>0</posx>
+					<posy>80</posy>
+					<width>1280</width>
+					<height>60</height>
+					<itemgap>10</itemgap>
+					<orientation>horizontal</orientation>
+					<onleft>300</onleft>
+					<onright>65</onright>
+					
+					<control type="button" id="52">
+						<description>'4' button</description>
+						<include>Common_Keyboard_Button_Dark</include>
+						<width>70</width>
+						<onup>55</onup>
+						<ondown>49</ondown>
+						<animation effect="zoom" end="110" center="auto" time="180" condition="Control.HasFocus(52) + Skin.HasSetting(inflateitem)">Conditional</animation>
+					</control>
+
+					<control type="button" id="53">
+						<description>'5' button</description>
+						<include>Common_Keyboard_Button_Dark</include>
+						<width>70</width>
+						<onup>56</onup>
+						<ondown>50</ondown>
+						<animation effect="zoom" end="110" center="auto" time="180" condition="Control.HasFocus(53) + Skin.HasSetting(inflateitem)">Conditional</animation>
+					</control>
+
+					<control type="button" id="54">
+						<description>'6' button</description>
+						<include>Common_Keyboard_Button_Dark</include>
+						<width>70</width>
+						<onup>57</onup>
+						<ondown>51</ondown>
+						<animation effect="zoom" end="110" center="auto" time="180" condition="Control.HasFocus(54) + Skin.HasSetting(inflateitem)">Conditional</animation>
+					</control>
+					
+				</control>
+				
+				<!--3rd Row of Num Keys-->
+				<control type="grouplist">
+																			<animation type="WindowOpen" reversible="false">
+					<effect type="fade" start="0" end="100" time="400" delay="400"/>
+			
+			</animation>
+					<posx>0</posx>
+					<posy>150</posy>
+					<width>1280</width>
+					<height>60</height>
+					<itemgap>10</itemgap>
+					<orientation>horizontal</orientation>	
+					<onleft>302</onleft>
+					<onright>303</onright>
+
+					<control type="button" id="49">
+						<description>'1' button</description>
+						<include>Common_Keyboard_Button_Dark</include>
+						<width>70</width>
+						<onup>52</onup>
+						<ondown>48</ondown>
+						<animation effect="zoom" end="110" center="auto" time="180" condition="Control.HasFocus(49) + Skin.HasSetting(inflateitem)">Conditional</animation>
+					</control>
+
+					<control type="button" id="50">
+						<description>'2' button</description>
+						<include>Common_Keyboard_Button_Dark</include>
+						<width>70</width>
+						<onup>53</onup>
+						<ondown>48</ondown>
+						<animation effect="zoom" end="110" center="auto" time="180" condition="Control.HasFocus(50) + Skin.HasSetting(inflateitem)">Conditional</animation>
+					</control>
+
+					<control type="button" id="51">
+						<description>'3' button</description>
+						<include>Common_Keyboard_Button_Dark</include>
+						<width>70</width>
+						<onup>54</onup>
+						<ondown>48</ondown>
+						<animation effect="zoom" end="110" center="auto" time="180" condition="Control.HasFocus(51) + Skin.HasSetting(inflateitem)">Conditional</animation>
+					</control>
+					
+				</control>
+				
+				<!--4th Row of Keys-->
+				<control type="grouplist">
+																			<animation type="WindowOpen" reversible="false">
+					<effect type="fade" start="0" end="100" time="400" delay="500"/>
+			
+			</animation>
+					<posx>0</posx>
+					<posy>220</posy>
+					<width>1280</width>
+					<height>60</height>
+					<itemgap>10</itemgap>
+					<orientation>horizontal</orientation>
+					<onleft>306</onleft>
+					<onright>32</onright>
+				
+					<control type="button" id="48">
+						<description>'0' button</description>
+						<include>Common_Keyboard_Button_Dark</include>
+						<width>150</width>
+						<onup>49</onup>
+						<animation effect="zoom" end="110" center="auto" time="180" condition="Control.HasFocus(48) + Skin.HasSetting(inflateitem)">Conditional</animation>
+					</control>
+					
+				</control>
+
+			</control>
+			
+		</control>
+		
+	</controls>
+
+</window>
