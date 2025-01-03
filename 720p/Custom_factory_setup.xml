@@ -215,14 +215,7 @@
 								
 							</item>
 			
-								<item id="2">
-								<description>Games</description>
-								<label>   Desligar</label>
-								<thumb></thumb>
-													
-<onclick>XBMC.Powerdown()</onclick>
-						
-							</item>
+								
 		
 							
 
