@@ -4,8 +4,7 @@
 	
 
 
-<onload condition="Skin.HasSetting(BOOTWIN)">SetVolume(20)</onload>
-<onload condition="!Skin.HasSetting(BOOTWIN)">SetVolume(50)</onload>
+
 <onload>XBMC.Playmedia(special://skin/sounds/startup.wav)</onload>
 <onload>AlarmClock(CloseStartup,ReplaceWindow(9115),00:05.5,silent)</onload>
 <onload condition="!Skin.HasSetting(DashStore)">Skin.ToggleSetting(DashStore)</onload>
