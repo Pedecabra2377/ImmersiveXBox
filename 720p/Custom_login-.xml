@@ -7,7 +7,7 @@
 
 		
 <onload condition="Skin.HasSetting(BOOTGUI)">ReplaceWindow(7878)</onload>
-
+<onload condition="!Skin.HasSetting(FirstTimeRun)">ActivateWindow(8125)</onload>
 
 					
 	<controls>
