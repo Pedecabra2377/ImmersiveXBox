@@ -10,7 +10,6 @@
 <onload condition="Skin.HasSetting(BOOTWIN)">XBMC.Playmedia(special://skin/sounds/Boot-.wav)</onload>
 <onload condition="!Skin.HasSetting(BOOTWIN)">XBMC.Playmedia(special://skin/sounds/start.wav)</onload>
 <onload condition="Skin.HasSetting(BOOTGUI)">ReplaceWindow(7878)</onload>
-<onload condition="Skin.HasSetting(FirstTimeRun)">ActivateWindow(8125)</onload>
 <onload condition="Skin.HasSetting(FirstTimeBooting)">ReplaceWindow(1367)</onload>
 <onload condition="!IsEmpty(Skin.String(UpdateButton1)">AlarmClock(sistema,Notification(sistema xbox,Atualização disponível!,70,$INFO[Skin.String(gamerpic)]),00:00,silent)</onload>	
 
