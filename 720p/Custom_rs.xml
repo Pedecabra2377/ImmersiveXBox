@@ -5,7 +5,7 @@
 	<zorder>2</zorder>
 <onclick>Skin.SetString(tube, )</onclick>
 	<onload condition="!Skin.HasSetting(disablesplash)">ActivateWindow(8170)</onload>
-<onload><script>RunScript(script.rssclient,guiless,feed=https://www.youtube.com/feeds/videos.xml?playlist_id=PLrEnWoR732-BHrPp_Pm8_VleD68f9s14-_render=rss,imagecaching=false,limit=99)</script></onload>
+<onload><script>RunScript(script.rssclient,guiless,feed=https://www.youtube.com/feeds/videos.xml?channel_id=UC_x5XG1OV2P6uZZ5FSM9Ttw-_render=rss,imagecaching=false,limit=99)</script></onload>
 	<onload condition="Skin.HasSetting(loder)">AlarmClock(loda,Skin.ToggleSetting(loder),00:10,silent,)</onload>
 	<onload condition="Container(20).HasFocus(2)">Control.Move(20,-1)</onload>
 <onload condition="Container(20).HasFocus(3)">Control.Move(20,-2)</onload>
