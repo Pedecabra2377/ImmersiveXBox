@@ -53,7 +53,7 @@
 					<posy>72</posy>
 					<width>590</width>
 					<height>20</height>
-					<label>Ocorreu um erro com o seu console.</label>
+					<label>Ocorreu um erro no seu console.</label>
 					<font>Dialog-Detail</font>
 					<visible>!IsEmpty(Control.GetLabel(2))</visible>
 					
@@ -99,8 +99,8 @@
 				<control type="button" id ="10">
 					<description>Play</description>
 					<include>Common_InfoDialog_Button</include>
-					<label>Reiniciar</label>
-					<onclick>ReplaceWindow(52)</onclick>
+					<label>Avançado</label>
+					<onclick>ReplaceWindow(8112)</onclick>
 				</control>
 
 			</control>	
