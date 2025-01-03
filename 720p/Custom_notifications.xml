@@ -4,7 +4,7 @@
 	<allowoverlay>no</allowoverlay>
 	<zorder>2</zorder>
 	
-	<onload>AlarmClock(CloseSplash,Dialog.Close(5595, force),00:12,silent)</onload>
+	<onload>AlarmClock(CloseSplash,Dialog.Close(6595, force),00:12,silent)</onload>
 
 	<controls>
 	
