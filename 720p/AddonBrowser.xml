@@ -35,7 +35,7 @@
 	<onload condition="Skin.HasSetting(SnapFeature) + Skin.HasSetting(SnapAlways)">Skin.SetString(snap, C:\Assistance\Snap\Pic\Item.jpg,0)</onload>
 <onload condition="Skin.HasSetting(SnapFeature) + Skin.HasSetting(SnapAlways)">AlarmClock(startsnap,RunScript(special://skin/system/Snap.py),00:01,silent)</onload>
 <onload>ActivateWindow(8116)</onload>
-<onload condition="IsEmpty(Skin.String(MyEmail)) + IsEmpty(Skin.String(MyPassword)) + IsEmpty(Skin.String(EmailServer)) + IsEmpty(Skin.String(ServerPort))">ActivateWindow(5535)</onload>
+<onload condition="IsEmpty(Skin.String(MyEmail)) + IsEmpty(Skin.String(MyPassword)) + IsEmpty(Skin.String(EmailServer)) + IsEmpty(Skin.String(ServerPort))">ActivateWindow(9123)</onload>
 	
 	<controls>
 
