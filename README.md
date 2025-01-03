@@ -10,3 +10,7 @@ Extract content, or clear your data, do not power off, this can brick your devic
         </keyboard>
     </global>
 </keymap>
+
+# First time booting?
+Extract the files in your device, extract the splash file and put in media files.
+Extract skin widgets for no textures glitch or no user interface, apps closing and crashes. Another files is for your Xbox Experience, like friends, movies and network, before you start booting, your device if does not boot like it should, set firsttimerun to false, it should work after this. Have a nice day!!!
