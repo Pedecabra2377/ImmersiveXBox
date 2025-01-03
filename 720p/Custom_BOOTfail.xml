@@ -100,7 +100,7 @@
 					<description>Play</description>
 					<include>Common_InfoDialog_Button</include>
 					<label>Avançado</label>
-					<onclick>ReplaceWindow(8112)</onclick>
+					<onclick>ReplaceWindow(5518)</onclick>
 				</control>
 
 			</control>	
