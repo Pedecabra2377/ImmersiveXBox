@@ -471,7 +471,7 @@
 									<description>Loja</description>
 									<label>Loja</label>
 									<thumb>home/xbs.png</thumb>
-									<onclick>ActivateWindow(10040,&quot;special://repos/repository.store/&quot;,return)</onclick>
+									<onclick>ActivateWindow(8889)</onclick>
 </item>
 								
 
