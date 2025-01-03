@@ -330,7 +330,7 @@
 	
 	<item id="1">
 								<description>Games</description>
-								<label>Texto</label>
+								<label></label>
 								<thumb></thumb>
 								
 								
@@ -343,6 +343,7 @@
 <onclick>Skin.SetString(GameReleased, )</onclick>
 <onclick>Skin.SetString(GameStudio, )</onclick>
 <onclick>Skin.SetString(GameDescription, )</onclick>
+ </item>
 								
 								
 								
