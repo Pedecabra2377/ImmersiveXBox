@@ -7,24 +7,7 @@
 	<onload>AlarmClock(CloseSplash,Dialog.Close(8157, force),00:30,silent)</onload>
 
 <onload>
-  <!-- Verifica se a pasta existe -->
-  <condition>
-    <filename exists="special://skin/system/Update/Update.zip/"/>
-    <!-- Se a pasta existe, define a propriedade como verdadeira -->
-    <true>
-      <setting id="skin.xbox.UpdateAvailability" value="true" />
-      <setting id="skin.xbox.UpdateAvailabilityBase" value="true" />
-      <setting id="skin.xbox.UpdateButton1" value="" />
-      SetProperty(UpdateButton1, "true")
-    </true>
-    <!-- Se a pasta não existe, define a propriedade como falsa -->
-    <false>
-      <setting id="skin.xbox.UpdateAvailability" value="false" />
-      <setting id="skin.xbox.UpdateAvailabilityBase" value="false" />
-      <setting id="skin.xbox.UpdateButton1" value="" />
-      SetProperty(UpdateButton1, "false")
-    </false>
-  </condition>
+<ToggleSetting id="skin.xbox.UpdateAvailability" on="directory_exists(special://skin/system/Update/Update.zip/)" off="!directory_exists(special://skin/system/Update/Update.zip/)"/>
 </onload>
 
 
