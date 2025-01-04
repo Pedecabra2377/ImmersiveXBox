@@ -3,6 +3,116 @@
 	<defaultcontrol always="true">9000</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 	<onload>XBMC.Playmedia(special://skin/sounds/1.wav)</onload>
+<onload condition="!Skin.HasSetting(gamesplash)">Skin.ToggleSetting(gamesplash)</onload>
+<onload>Skin.SetString(GTAG, $INFO[System.ProfileName])</onload>
+
+	<onload condition="!Skin.HasSetting(Uptime)">Skin.ToggleSetting(Uptime)</onload>
+
+	<onload>Skin.SetString(snap,7555)</onload>
+<onload condition="!Skin.HasSetting(snapie)">Skin.ToggleSetting(snapie)</onload>
+<onload condition="Skin.HasSetting(gaming)">Skin.ToggleSetting(gaming)</onload>
+<onload>SetString(snap,demo/sna/whatsnew.jpg,0)</onload>
+<onload>Skin.SetString(sn,O que há de novo no Xbox)</onload>
+
+<onload>Skin.Setstring(gamerpic,demo/Gamerpics/Default.png)</onload>
+<onload>Skin.Setstring(gamercolor,FF00A400)</onload>
+<onload condition="Skin.HasSetting(HalfPin)">Skin.ToggleSetting(HalfPin)</onload>
+<onload condition="Skin.HasSetting(App1)">Skin.ToggleSetting(App1)</onload>
+<onload condition="Skin.HasSetting(App2)">Skin.ToggleSetting(App2)</onload>
+<onload condition="Skin.HasSetting(App3)">Skin.ToggleSetting(App3)</onload>
+<onload condition="Skin.HasSetting(App4)">Skin.ToggleSetting(App4)</onload>
+
+<onload condition="Skin.HasSetting(Library1)">Skin.ToggleSetting(Library1)</onload>
+<onload condition="Skin.HasSetting(Library2)">Skin.ToggleSetting(Library2)</onload>
+<onload condition="Skin.HasSetting(Library3)">Skin.ToggleSetting(Library3)</onload>
+<onload condition="Skin.HasSetting(OwnTile1)">Skin.ToggleSetting(OwnTile1)</onload>
+<onload condition="Skin.HasSetting(OwnTile2)">Skin.ToggleSetting(OwnTile2)</onload>
+<onload condition="Skin.HasSetting(OwnTile3)">Skin.ToggleSetting(OwnTile3)</onload>
+<onload condition="Skin.HasSetting(OwnTile4)">Skin.ToggleSetting(OwnTile4)</onload>
+
+
+<onload condition="!Skin.HasSetting(OverlayMus)">Skin.ToggleSetting(OverlayMus)</onload>
+
+<onload condition="Skin.HasSetting(PowerMenu)">Skin.ToggleSetting(PowerMenu)</onload>
+
+
+<onload condition="!Skin.HasSetting(CustomTile1)">Skin.ToggleSetting(CustomTile1)</onload>
+<onload condition="!Skin.HasSetting(CustomTile2)">Skin.ToggleSetting(CustomTile2)</onload>
+<onload condition="Skin.HasSetting(OwnTile1Fav)">Skin.ToggleSetting(OwnTile1Fav)</onload>
+<onload condition="Skin.HasSetting(OwnTile2Fav)">Skin.ToggleSetting(OwnTile2Fav)</onload>
+<onload condition="Skin.HasSetting(OwnTile3Fav)">Skin.ToggleSetting(OwnTile3Fav)</onload>
+<onload condition="Skin.HasSetting(OwnTile4Fav)">Skin.ToggleSetting(OwnTile4Fav)</onload>
+<onload condition="!Skin.HasSetting(CharmTheme)">Skin.ToggleSetting(CharmTheme)</onload>
+
+
+
+
+
+
+
+
+
+
+
+
+<onload condition="!Skin.HasSetting(RealPin)">Skin.ToggleSetting(RealPin)</onload>
+<onload condition="Skin.HasSetting(UseTouchInput)">Skin.ToggleSetting(UseTouchInput)</onload>
+
+
+<onload condition="!Skin.HasSetting(ShowFanartBackground)">Skin.ToggleSetting(ShowFanartBackground)</onload>
+
+				<onload>Dialog.Close(984)</onload>
+			 <onload condition="System.HasAddon(script.extendedinfo)">RunScript(script.extendedinfo,info=TrendingMovies)</onload>
+	<onload condition="System.HasAddon(script.extendedinfo)">RunScript(script.extendedinfo,info=TrendingShows)</onload>
+<onload condition="Skin.HasSetting(BOOTGUI)">Skin.ToggleSetting(BOOTGUI)</onload>
+<onload condition="!Skin.HasSetting(BOOTWIN)">Skin.ToggleSetting(BOOTWIN)</onload>
+<onload condition="!Skin.HasSetting(SnapFeature) + System.Platform.Windows">Skin.ToggleSetting(SnapFeature)</onload>
+<onload condition="!Skin.HasSetting(ShowSysClock)">Skin.ToggleSetting(ShowSysClock)</onload>
+<onload condition="!Skin.HasSetting(Global)">Skin.ToggleSetting(Global)</onload>
+<onload condition="Skin.HasSetting(adbing)">Skin.ToggleSetting(adbing)</onload>
+<onload condition="Skin.HasSetting(adgame)">Skin.ToggleSetting(adgame)</onload>
+<onload condition="Skin.HasSetting(adbing2)">Skin.ToggleSetting(adbing2)</onload>
+<onload condition="Skin.HasSetting(adgame2)">Skin.ToggleSetting(adgame2)</onload>
+<onload condition="Skin.HasSetting(adbing3)">Skin.ToggleSetting(adbing3)</onload>
+<onload condition="Skin.HasSetting(adgame3)">Skin.ToggleSetting(adgame3)</onload>
+
+<onload condition="!Skin.HasSetting(Banner)">Skin.ToggleSetting(Banner)</onload>
+<onload condition="!Skin.HasSetting(Details)">Skin.ToggleSetting(Details)</onload>
+<onload condition="!Skin.HasSetting(Grid)">Skin.ToggleSetting(Grid)</onload>
+<onload condition="!Skin.HasSetting(GridEpisodes)">Skin.ToggleSetting(GridEpisodes)</onload>
+<onload condition="!Skin.HasSetting(List)">Skin.ToggleSetting(List)</onload>
+<onload condition="!Skin.HasSetting(Poster)">Skin.ToggleSetting(Poster)</onload>
+<onload condition="Skin.HasSetting(Square)">Skin.ToggleSetting(Square)</onload>
+<onload condition="Skin.HasSetting(Square)">Skin.ToggleSetting(Square)</onload>
+<onload condition="!Skin.HasSetting(Tall)">Skin.ToggleSetting(Tall)</onload>
+
+
+
+<onload condition="!Skin.HasSetting(altosd)">Skin.ToggleSetting(altosd)</onload>
+<onload condition="Skin.HasSetting(disablealarmbk)">Skin.ToggleSetting(disablealarmbk)</onload>
+<onload condition="Skin.HasSetting(disablexboxlogo)">Skin.ToggleSetting(disablexboxlogo)</onload>
+<onload condition="Skin.HasSetting(disableprofilepic)">Skin.ToggleSetting(disableprofilepic)</onload>
+<onload condition="Skin.HasSetting(Altads)">Skin.ToggleSetting(Altads)</onload>
+<onload condition="!Skin.HasSetting(Performance)">Skin.ToggleSetting(Performance)</onload>
+<onload condition="Skin.HasSetting(gamertag)">Skin.ToggleSetting(gamertag)</onload>
+
+<onload condition="Skin.HasSetting(searchkat)">Skin.ToggleSetting(BOOTWIN)</onload>
+<onload condition="!Skin.HasSetting(gpic)">Skin.ToggleSetting(gpic)</onload>
+<onload condition="Skin.HasSetting(searchkat)">Skin.ToggleSetting(BOOTWIN)</onload>
+<onload condition="!Skin.HasSetting(hometile)">Skin.ToggleSetting(hometile)</onload>
+<onload condition="!Skin.HasSetting(altvevo)">Skin.ToggleSetting(altvevo)</onload>
+<onload condition="!Skin.HasSetting(animatebuttonmenu)">Skin.ToggleSetting(animatebuttonmenu)</onload>
+<onload condition="!Skin.HasSetting(animateosd)">Skin.ToggleSetting(animateosd)</onload>
+<onload condition="Skin.HasSetting(inflateitem)">Skin.ToggleSetting(inflateitem)</onload>
+<onload condition="Skin.HasSetting(textview)">Skin.ToggleSetting(textview)</onload>
+<onload condition="Skin.HasSetting(disablesync)">Skin.ToggleSetting(disablesync)</onload>
+<onload condition="Skin.HasSetting(disablewatch)">Skin.ToggleSetting(disablewatch)</onload>
+<onload condition="!Skin.HasSetting(altkai)">Skin.ToggleSetting(altkai)</onload>
+	<onload condition="Skin.HasSetting(altstore)">Skin.ToggleSetting(altstore)</onload>
+	<onload condition="!Skin.HasSetting(addoverlaym)">Skin.ToggleSetting(addoverlaym)</onload>
+<onload condition="!Skin.HasSetting(addoverlaytvm)">Skin.ToggleSetting(addoverlaytvm)</onload>
+
+<onload condition="Skin.HasSetting(disablesplash)">Skin.ToggleSetting(disablesplash)</onload>
 	<controls>
 
 				<control type="image">
@@ -61,14 +171,7 @@
 								
 							</item>
 			
-								<item id="2">
-								<description>Games</description>
-								<label>   Desligar</label>
-								<thumb></thumb>
-													
-<onclick>XBMC.Powerdown()</onclick>
-						
-							</item>
+								
 		
 							
 
