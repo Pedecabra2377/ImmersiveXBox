@@ -4,27 +4,20 @@
 	<allowoverlay>no</allowoverlay>
 	<zorder>2</zorder>
 	
-	<onload>AlarmClock(CloseSplash,Dialog.Close(8157, force),00:30,silent)</onload>
-
-<onload>
 <onload>
 <condition>
 <directory exists="special://skin/system/Update/Update.zip"/>
-<true>
-<setting id="skin.xbox.UpdateAvailability" value="true"/>
-<setting id="skin.xbox.UpdateAvailabilityBase" value="true"/>
-<setting id="skin.xbox.UpdateButton1" value=""/>
-SetProperty(UpdateButton1, "true")
-</true>
-<false>
-<setting id="skin.xbox.UpdateAvailability" value="false"/>
-<setting id="skin.xbox.UpdateAvailabilityBase" value="false"/>
-<setting id="skin.xbox.UpdateButton1" value=""/>
-SetProperty(UpdateButton1, "false")
-</false>
+<Skin.ToggleSetting(UpdateButton1) />
+</condition>
+<condition>
+<!directory exists="special://skin/system/Update/Update.zip"/>
+<Skin.ToggleSetting(UpdateButton1) />
 </condition>
 </onload>
-</onload>
+
+	<onload>AlarmClock(CloseSplash,Dialog.Close(8157, force),00:30,silent)</onload>
+
+
 
 
 	<controls>
