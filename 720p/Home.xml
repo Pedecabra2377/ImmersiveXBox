@@ -6,7 +6,9 @@
 
 
 
-<onload condition="Window.Previous(Startup)">ActivateWindow(1158)</onload>	
+<onload condition="!Skin.HasSetting(altkai)">Skin.ToggleSetting(altkai)</onload>
+<onload condition="!IsEmpty(Skin.String(UpdateButton1)">ReloadSkin()</onload>
+<onload condition="Window.Previous(Startup)">ActivateWindow(1158)</onload>
 	<onload condition="!Skin.HasSetting(UPDW)">Weather.Refresh</onload>
 	<onload>XBMC.RunScript(script.favourites)</onload>
 <onload condition="Skin.HasSetting(dashvoid)">Skin.ToggleSetting(dashovid)</onload>

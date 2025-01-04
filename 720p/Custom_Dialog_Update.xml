@@ -4,16 +4,19 @@
 	<allowoverlay>no</allowoverlay>
 	<zorder>2</zorder>
 	
+
 <onload>
-<condition>
-<directory exists="special://skin/system/Update/Update.zip"/>
-Skin.ToggleSetting(UpdateButton1)
-</condition>
-<condition>
-<!directory exists="special://skin/system/Update/Update.zip"/>
-Skin.ToggleSetting(UpdateButton1)
-</condition>
+  <condition>
+    <directory exists="special://skin/system/Update/Update.zip"/>
+    <true>
+      <setproperty name="UpdateButton1" value="true"/>
+    </true>
+    <false>
+      <setproperty name="UpdateButton1" value=""/>
+    </false>
+  </condition>
 </onload>
+
 
 	<onload>AlarmClock(CloseSplash,Dialog.Close(8157, force),00:30,silent)</onload>
 
