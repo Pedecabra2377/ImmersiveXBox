@@ -4,9 +4,25 @@
 
 	<defaultcontrol always="true">52</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
+<onload condition="Skin.HasSetting(FirstTimeRun)">ReplaceWindow(8125)</onload>
 <onload condition="!Skin.HasSetting(Lock)">Skin.ToggleSetting(Lock)</onload>
 <onload condition="Skin.HasSetting(BOOTGUI)">ReplaceWindow(7878)</onload>
 <onload condition="Skin.HasSetting(FirstTimeBooting)">ReplaceWindow(1367)</onload>
+<condition>
+<directory exists="special://skin/system/Update/Update.zip"/>
+<true>
+<setting id="skin.xbox.UpdateAvailability" value="true"/>
+<setting id="skin.xbox.UpdateAvailabilityBase" value="true"/>
+<setting id="skin.xbox.UpdateButton1" value="true"/>
+SetProperty(UpdateButton1, "true")
+</true>
+<false>
+<setting id="skin.xbox.UpdateAvailability" value="false"/>
+<setting id="skin.xbox.UpdateAvailabilityBase" value="false"/>
+<setting id="skin.xbox.UpdateButton1" value="false"/>
+SetProperty(UpdateButton1, "false")
+</false>
+</condition>
 <onload condition="!IsEmpty(Skin.String(UpdateButton1)">AlarmClock(sistema,Notification(sistema xbox,Atualização disponível!,70,$INFO[Skin.String(gamerpic)]),00:00,silent)</onload>	
 
 	<controls>

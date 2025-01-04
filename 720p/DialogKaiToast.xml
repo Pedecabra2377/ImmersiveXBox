@@ -133,7 +133,7 @@
 				<posy>6</posy>
 				<width>260</width>
 				<height>15</height>
-			   <label>Clique     para detalhes</label>
+				<label>Clique     para detalhes</label>
 				<textcolor>white</textcolor>
 				<font>Fullscreen-Info-Normal</font>
 				<scroll>false</scroll>
@@ -283,7 +283,7 @@
 				<posy>6</posy>
 				<width>260</width>
 				<height>15</height>
-				<label>Clique          para detalhes</label>
+				<label>Clique     para detalhes</label>
 				<textcolor>white</textcolor>
 				<font>Fullscreen-Info-Normal</font>
 				<scroll>false</scroll>
