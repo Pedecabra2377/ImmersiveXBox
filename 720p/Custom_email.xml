@@ -3,6 +3,7 @@
 	<defaultcontrol always="true">1</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	<zorder>2</zorder>
+<onload condition="IsEmpty(Skin.String(MyEmail)) + IsEmpty(Skin.String(MyPassword)) + IsEmpty(Skin.String(EmailServer)) + IsEmpty(Skin.String(ServerPort))">ActivateWindow(9123)</onload>
 <onload condition="!Window.Previous(5152)">Skin.SetString(EmailTo, )</onload>
 <onload condition="!Window.Previous(5152)">Skin.SetString(MySubject, )</onload>
 <onload condition="!Window.Previous(5152)">Skin.SetString(MyMessage, )</onload>
