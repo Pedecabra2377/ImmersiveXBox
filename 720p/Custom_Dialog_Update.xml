@@ -7,11 +7,11 @@
 <onload>
 <condition>
 <directory exists="special://skin/system/Update/Update.zip"/>
-<Skin.ToggleSetting(UpdateButton1) />
+Skin.ToggleSetting(UpdateButton1)
 </condition>
 <condition>
 <!directory exists="special://skin/system/Update/Update.zip"/>
-<Skin.ToggleSetting(UpdateButton1) />
+Skin.ToggleSetting(UpdateButton1)
 </condition>
 </onload>
 

@@ -5,13 +5,14 @@
 	<defaultcontrol always="true">52</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 <onload>
+<onload condition="Skin.HasSetting(FirstTimeRun)">ActivateWindow(8125)</onload>
 <condition>
 <directory exists="special://skin/system/Update/Update.zip"/>
-<Skin.ToggleSetting(UpdateButton1) />
+Skin.ToggleSetting(UpdateButton1)
 </condition>
 <condition>
 <!directory exists="special://skin/system/Update/Update.zip"/>
-<Skin.ToggleSetting(UpdateButton1) />
+Skin.ToggleSetting(UpdateButton1)
 </condition>
 </onload>
 
