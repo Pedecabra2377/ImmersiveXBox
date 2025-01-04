@@ -1,10 +1,10 @@
-<window type="dialog" id="52">
+<window type="dialog" id="9003">
 
 	<defaultcontrol always="true">10</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	<zorder>2</zorder>
 	
-	<onload>AlarmClock(CloseSplash,Dialog.Close(52, force),00:02,silent)</onload>
+	<onload>AlarmClock(CloseSplash,Dialog.Close(9003, force),00:10,silent)</onload>
 
 	<controls>
 	
