@@ -96,7 +96,7 @@
 					<texturenofocus aligny="center">breadcrumb/breadcrumb_arrow.png</texturenofocus>
 					<colordiffuse>Label_Normal</colordiffuse>
 					<aspectratio>keep</aspectratio>
-					<onclick></onclick>
+					<onclick>ActivateWindow(9234)</onclick>
 					
 				</control>
 				
