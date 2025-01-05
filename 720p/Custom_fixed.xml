@@ -6,7 +6,7 @@
 	
 
 
-
+<onload condition="Skin.HasSetting(BOOTGUI)">Skin.ToggleSetting(BOOTGUI)</onload>
 	<controls>
 	
 
