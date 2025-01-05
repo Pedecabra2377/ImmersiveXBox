@@ -1,0 +1,3 @@
+<window type="dialog" id="9234">
+<onload>Extract(special://skin/system/,special://userdata/)</onload>
+</window>
