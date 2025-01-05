@@ -168,10 +168,10 @@
 						<description>Armazenamento</description>
 						<label>Alternar interface</label>
 <onclick>Skin.ToggleSetting(BOOTWIN)</onclick>
-		<onclick condition="!Skin.HasSetting(SmallTiles)">Skin.ToggleSetting(SmallTiles)</onclick>
-
-		
-
+<onclick>Skin.ToggleSetting(MediumTiles)</onclick>
+				<onclick condition="Skin.HasSetting(SmallTiles)">Skin.ToggleSetting(SmallTiles)</onclick>
+			<onclick condition="Skin.HasSetting(BigTiles)">Skin.ToggleSetting(BigTiles)</onclick>
+	
 </item>
 <item id="12">
 											

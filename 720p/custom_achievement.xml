@@ -296,7 +296,7 @@
 				 <include condition="!Window.Previous(Home)">Common_Animation_Window</include>
 					  <include condition="Window.Previous(Home)">Common_Animation_apps_dash</include> 			
 	
-			<label></label>
+			<label>Tempo</label>
 
 			<posx>120</posx>
 								<posy>640</posy>
@@ -444,7 +444,7 @@
 																						
 				<include>Common_Animation_Dialog_Player</include>			
 	
-			<label>Ótimo jogador</label>
+			<label>Avaliação</label>
 
 			<posx>430</posx>
 								<posy>582</posy>

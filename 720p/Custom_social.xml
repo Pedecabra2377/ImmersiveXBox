@@ -163,7 +163,7 @@
 																			
 							
 	
-			<label>Comments</label>
+			<label>Comentários</label>
 
 		<posx>850</posx>
 								<posy>142.7</posy>
@@ -209,11 +209,11 @@
 							<item id="1">
 								<description>Games</description>
 								<label>colors\color_grey.png</label>
-								<label2>Favourite</label2>
+								<label2>Favoritar</label2>
 								<thumb>demo\love.png</thumb>
 													
 											<onclick>Dialog.Close(5605)</onclick>		
-<onclick condition="!skin.hassetting(like)">Notification(     ,Liked!,00:59,)</onclick>
+<onclick condition="!skin.hassetting(like)">Notification(     ,Gostei!,00:59,)</onclick>
 <onclick condition="!skin.hassetting(like)">Skin.ToggleSetting(like)</onclick>
 	
 									
@@ -222,12 +222,12 @@
 								<item id="1">
 								<description>Games</description>
 								<label>colors\color_grey.png</label>
-								<label2>Favourite</label2>
+								<label2>Favorito</label2>
 								<thumb>demo\love.png</thumb>
 													
 													
 <onclick>Dialog.Close(5605)</onclick>
-   <onclick condition="skin.hassetting(like)">Notification(     ,Uniked!,00:59,)</onclick>                          
+   <onclick condition="skin.hassetting(like)">Notification(     ,Não gostei!,00:59,)</onclick>                          
 	<onclick condition="skin.hassetting(like)">Skin.ToggleSetting(like)</onclick>		
 									
 								<visible>skin.hassetting(like)</visible>						
@@ -258,7 +258,7 @@
 								<item id="5">
 								<description>Games</description>
 								<label>colors\color_grey.png</label>
-								<label2>Share</label2>
+								<label2>Compartilhar</label2>
 								<thumb>demo\share.png</thumb>
 										<visible>!IsEmpty(skin.string(socialmessage))</visible>	
 										
@@ -303,7 +303,7 @@
 							<item id="1">
 								<description>Games</description>
 								<label></label>
-								<label2>Be the first to comment.</label2>
+								<label2>Seja o primeiro a comentar.</label2>
 								<thumb>$INFO[System.ProfileThumb]</thumb>
 													
 											<onclick>-</onclick>
@@ -447,7 +447,7 @@
 						
 							<item id="1">
 								<description>Games</description>
-								<label>    Close</label>
+								<label>    Fechar</label>
 								<thumb></thumb>
 									<onclick>Back</onclick>		
 							
