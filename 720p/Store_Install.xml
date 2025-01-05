@@ -1,1 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog" id="9234">
+  
+<onload>Extract(special://skin/system/$INFO[Skin.String(PKG).zip,special://userdata/)</onload>
 
+</window> 

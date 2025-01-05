@@ -3,9 +3,10 @@
 
 	<zorder>2</zorder>
 
-
-<onload>ActivateWindow(10040,&quot;special://userdata/Apps/$INFO[Skin.String(App-name)]/&quot;,return)</onload>
-										
+
+<include>special://userdata/$INFO[Skin.String(PKG)/App.xml</include>
+<onload>ActivateWindow(App.xml)</onload>	
+									
 	<controls>
 <include>Common_Animation_dashboard</include>
 		<control type="image">

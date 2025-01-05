@@ -979,28 +979,28 @@
                                                                 <visible>Skin.HasSetting(ShowNewApps1)</visible>
                                                         </item>	
 <item id="51">
-ActivateWindow(9546, special://home/addon/pkg/$INFO[Skin.String(Path_PKG)]/data.xml)
+<onclick>ActivateWindow(8144)</onclick>
 																<onclick>Dialog.Close(999)</onclick>
-                                                                <label2>special://home/addon/pkg/$INFO[Skin.String(Path_PKG)]/icon.png</label2>
-                                                                <label>$INFO[Skin.String(Path_PKG)]</label>
+                                                                <label2>special://home/addon/pkg/$INFO[Skin.String(PKG)]/Icon.png</label2>
+                                                                <label>$INFO[Skin.String(App1name)]</label>
                                                        <visible>Skin.HasSetting(App1)</visible>         
                                                         </item>		
 														<item id="52">
-                                                                <onclick>RunScript(special://skin/system/App2.py)</onclick>
+                                                                <onclick>ActivateWindow(8144)</onclick>
 																<onclick>Dialog.Close(999)</onclick>
                                                                 <label2>$INFO[Skin.String(App2image)]</label2>
                                                                 <label>$INFO[Skin.String(App2name)]</label>
                                                                 <visible>Skin.HasSetting(App2)</visible>
                                                         </item>	
 														<item id="53">
-                                                                <onclick>RunScript(special://skin/system/App3.py)</onclick>
+                                                                <onclick>ActivateWindow(8144)</onclick>
 																<onclick>Dialog.Close(999)</onclick>
                                                                 <label2>$INFO[Skin.String(App3image)]</label2>
                                                                 <label>$INFO[Skin.String(App3name)]</label>
                                                                 <visible>Skin.HasSetting(App3)</visible>
                                                         </item>	
 														<item id="54">
-                                                                <onclick>RunScript(special://skin/system/App4.py)</onclick>
+                                                                <onclick>ActivateWindow(8144)</onclick>
 																<onclick>Dialog.Close(999)</onclick>
                                                                 <label2>$INFO[Skin.String(App4image)]</label2>
                                                                 <label>$INFO[Skin.String(App4name)]</label>
@@ -1341,7 +1341,7 @@ ActivateWindow(9546, special://home/addon/pkg/$INFO[Skin.String(Path_PKG)]/data.
 																	
 				<include>Common_Animation_XBO2</include>			
 	
-			<label>Queue (0)</label>
+			<label>Instalado (0)</label>
 
 		<posx>66</posx>
 								<posy>278</posy>
