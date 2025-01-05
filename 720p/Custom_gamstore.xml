@@ -3,7 +3,29 @@
 	<defaultcontrol always="true">10000</defaultcontrol>
 	
 	<include>Common_Animation_Window</include>
-	
+<onload>
+  <script>
+    <![CDATA[
+      // Carrega configurações
+      xbmc.executeJSONRPC('{ "jsonrpc": "2.0", "method": "Settings.GetSettingValue", "params": { "setting": "cache.thumbnailquality" }, "id": 1 }');
+
+      // Limpa cache
+      xbmc.executeJSONRPC('{ "jsonrpc": "2.0", "method": "Addons.ExecuteAddon", "params": { "addonid": "script.module.xbmc.cache", "params": ["clean"] }, "id": 1 }');
+
+      // Baixa thumbnails do GitHub
+      var url = "https://raw.githubusercontent.com/Pedecabra2377/XBServer/main/Store/thumbnails/";
+      var pasta = "special://userdata/thumbnails/";
+
+      // Lista de arquivos
+      var arquivos = ["thumb1.jpg", "thumb2.jpg"];
+
+      // Baixa imagens
+      for (var i = 0; i < arquivos.length; i++) {
+        xbmc.downloadFile(url + arquivos[i], pasta + arquivos[i]);
+      }
+    ]]>
+  </script>
+</onload>	
 
 
 
