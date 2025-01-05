@@ -43,7 +43,7 @@
 					<posy>100</posy>
 					<width min="0" max="2000">auto</width>
 					<height>70</height>
-					<label>Press A to finish.</label>
+					<label>Pressione A para finalizar.</label>
 					<font>Dialog-Header</font>
 					<textcolor>FF333333</textcolor>
 					
